@@ -1,0 +1,83 @@
+
+save__Mol_system_name
+  _Saveframe_category                 NMR-STAR_data_tag
+
+  _Tag_name                         '_Mol_system_name'
+
+  _Tag_value_description
+;
+Brief descriptive name for the molecular system studied in the current
+entry.
+;
+
+  _Tag_value_type                              char
+  _Tag_value_units                             .
+  _Tag_value_default_value                     .
+  _Tag_value_maximum_character_length          255
+  _Tag_value_range_minimum                     .
+  _Tag_value_range_maximum                     .
+
+
+
+  loop_
+     _Tag_saveframe_category
+     _Tag_equivalent_name
+     _Tag_key_code
+     _Tag_mandatory_code
+     _Tag_conditional_mandatory_rule
+     _Tag_format_order
+     _Tag_loop_mandatory_code
+     _Tag_format_loop_order
+
+molecular_system
+     '_Mol_system_name'          ?             Yes
+      990          No             .
+
+
+  stop_
+
+  loop_
+     _Tag_value_example
+
+'p53 tetramer'
+
+  stop_
+
+#  DEPOSITION SYSTEM INFORMATION
+
+  loop_
+     _Tag_deposition_saveframe_category
+     _Tag_deposition_equivalent_tag_name
+     _Tag_deposition_mandatory_code
+     _Tag_deposition_prompt
+     _Tag_deposition_help_message
+
+     molecular_system     '_Mol_system_name'     Yes
+
+#  --PROMPT--
+
+'Provide a brief name for the system studied'
+
+# --HELP MESSAGE--
+
+;
+Provide a simple but complete name for the system studied [e.g.: ribonuclease;
+ferredoxin; holo-trp repressor DNA complex; etc.]
+;
+
+
+  stop_
+
+#  BACKWARD COMPATIBILITY
+
+  loop_
+     _Tag_previous_saveframe_category
+     _Tag_previous_name
+     _Tag_previous_dictionary_version
+
+    molecular_system    '_Mol_system_name'      2.1
+
+  stop_
+
+save_
+

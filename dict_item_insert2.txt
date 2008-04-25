@@ -1,0 +1,76 @@
+
+save_blank
+  _Saveframe_category                 NMR-STAR_data_tag
+
+  _Tag_name                         '@'
+
+  _Tag_value_description
+;
+@
+;
+
+  _Tag_value_type                              char
+  _Tag_value_units                             .
+  _Tag_value_default_value                     .
+  _Tag_value_enumeration_file                  enumerations
+  _Tag_value_enumeration_framecode             $_
+  _Tag_value_enumeration_state                 Open
+  _Tag_value_maximum_character_length          .
+  _Tag_value_range_minimum                     .
+  _Tag_value_range_maximum                     .
+
+  loop_
+     _Tag_saveframe_category
+     _Tag_equivalent_name
+     _Tag_key_code
+     _Tag_mandatory_code
+     _Tag_conditional_mandatory_rule
+     _Tag_format_order
+     _Tag_loop_mandatory_code
+     _Tag_format_loop_order
+     _Tag_rdbms_name
+
+ @   @   @   @   @   @   @   @   @
+
+  stop_
+
+  loop_
+     _Tag_value_example
+
+     @
+
+  stop_
+
+#  DEPOSITION SYSTEM INFORMATION
+
+  loop_
+     _Tag_deposition_saveframe_category
+     _Tag_deposition_equivalent_tag_name
+     _Tag_deposition_mandatory_code
+     _Tag_deposition_prompt
+     _Tag_deposition_help_message
+
+   @   @   @
+
+#  --PROMPT 
+
+    @
+
+# --HELP MESSAGE--
+
+@
+
+
+  stop_
+
+  loop_
+     _Tag_previous_saveframe_category
+     _Tag_previous_name
+     _Tag_previous_dictionary_version
+
+    @   @   @
+
+  stop_
+
+save_
+

@@ -1,0 +1,494 @@
+FrameName,SFCategory,TagName,DictionarySeq,DBTableName,DBColumnName,Type,Nullable,EnumerationID,ForeignTable,ForeignColumn,SecondaryIndex,Internal,ManDBTableName,ManDBColumnName,Loopflag,sequence
+---------,----------,-------,-------------,-----------,------------,----,--------,-------------,------------,-------------,,,,,--------,
+save_entry_information,entry_information,_Saveframe_category,10,entryInformation,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,,entryInformation,SaveframeCategory,N,10
+save_entry_information,entry_information,_Entry_title,20,entryInformation,EntryTitle,TEXT,NOT NULL, , , ,,,entryInformation,EntryTitle,N,20
+save_entry_information,entry_information,_Author_ordinal,30,enInformatAutOrdin,AuthorOrdinal,INTEGER,NOT NULL, , , ,,,EntryAuthors,AuthorOrdinal,Y,10
+save_entry_information,entry_information,_Author_family_name,40,enInformatAutOrdin,AuthorFamilyName,VARCHAR(127),NOT NULL, , , ,Y,,EntryAuthors,AuthorFamilyName,Y,20
+save_entry_information,entry_information,_Author_given_name,50,enInformatAutOrdin,AuthorGivenName,VARCHAR(127), , , , ,,,EntryAuthors,AuthorGivenName,Y,30
+save_entry_information,entry_information,_Author_middle_initials,60,enInformatAutOrdin,AuthoMiddlInitials,VARCHAR(31), , , , ,,,EntryAuthors,AuthorMidInitials,Y,40
+save_entry_information,entry_information,_Author_family_title,70,enInformatAutOrdin,AuthorFamilyTitle,VARCHAR(127), , , , ,,,EntryAuthors,AuthorFamilyTitle,Y,50
+save_entry_information,entry_information,_BMRB_accession_number,80,entryInformation,BMRBAccessioNumber,INTEGER,NOT NULL, , , ,Y,,entryInformation,BMRBAccessioNumber,N,30
+save_entry_information,entry_information,_BMRB_flat_file_name,90,entryInformation,BMRBFlatFileName,VARCHAR(31),, , , ,,,entryInformation,BMRBFlatFileName,N,40
+save_entry_information,entry_information,_Entry_type,100,entryInformation,EntryType,VARCHAR(31),NOT NULL,1, , ,,,entryInformation,EntryType,N,50
+save_entry_information,entry_information,_Submission_date,110,entryInformation,SubmissionDate,DATETIME year to day,NOT NULL, , , ,,,entryInformation,SubmissionDate,N,60
+save_entry_information,entry_information,_Accession_date,120,entryInformation,AccessionDate,DATETIME year to day,NOT NULL, , , ,,,entryInformation,AccessionDate,N,70
+save_entry_information,entry_information,_Entry_origination,130,entryInformation,EntryOrigination,VARCHAR(31),NOT NULL,2, , ,,,entryInformation,EntryOrigination,N,80
+save_entry_information,entry_information,_NMR_STAR_version,140,entryInformation,NMRSTARVersion,VARCHAR(31),NOT NULL,3, , ,,,entryInformation,NMRSTARVersion,N,90
+save_entry_information,entry_information,_Experimental_method,150,entryInformation,ExperimentalMethod,VARCHAR(127),NOT NULL,4, , ,,,entryInformation,ExperimentalMethod,N,100
+save_entry_information,entry_information,_Details,160,entryInformation,Details,TEXT, , , , ,,,entryInformation,Details,N,110
+save_entry_information,entry_information,_Saveframe_category_type,170,eInformaSavefCateT,SaveframCategorTyp,VARCHAR(127),NOT NULL,5, , ,Y,,entryInfoDataCat,SaveframCategorTyp,Y,10
+save_entry_information,entry_information,_Saveframe_category_type_count,180,eInformaSavefCateT,SavefraCategoTyCou,INTEGER,NOT NULL, , , ,,,entryInfoDataCat,SavefraCategoTyCou,Y,20
+save_entry_information,entry_information,_Data_type,190,entInformatiDatTyp,DataType,VARCHAR(127),NOT NULL,6, , ,Y,,entryInfoDataType,DataType,Y,10
+save_entry_information,entry_information,_Data_type_count,200,entInformatiDatTyp,DataTypeCount,INTEGER,NOT NULL, , , ,,,entryInfoDataType,DataTypeCount,Y,20
+save_entry_information,entry_information,_Revision_date,210,enInformatRevisiDa,RevisionDate,DATETIME year to day,, , , ,,,EntryInfoRevisions,RevisionDate,Y,10
+save_entry_information,entry_information,_Revision_keyword,220,enInformatRevisiDa,RevisionKeyword,VARCHAR(127),,7, , ,,,EntryInfoRevisions,RevisionKeyword,Y,20
+save_entry_information,entry_information,_Revision_author,230,enInformatRevisiDa,RevisionAuthor,VARCHAR(127),,24, , ,,,EntryInfoRevisions,RevisionAuthor,Y,30
+save_entry_information,entry_information,_Revision_detail,240,enInformatRevisiDa,RevisionDetail,TEXT,, , , ,,,EntryInfoRevisions,RevisionDetail,Y,40
+save_entry_information,entry_information,_Special_processing_instructions,250,entryInformation,SpeProcesInstructi,TEXT, , , , ,,Y,entryInformation,SpecialInstructions,N,120
+save_entry_information,entry_information,_Entry_ID_preference_PDB,260,InformEIDPreferPDB,EntrIDPreferencPDB,VARCHAR(127),, , , ,,Y,EntryInfoPDBpref,EntrIDPreferencPDB,Y,10
+save_entry_information,entry_information,_Related_BMRB_accession_number,270,InformReBMRBAcceNu,RelaBMRBAccessNumb,INTEGER,, ,,,,,EntryInfoRelBMRBid,RelatedBMRBAcNo,Y,10
+save_entry_information,entry_information,_Relationship,280,InformReBMRBAcceNu,Relationship,TEXT,, , , ,,,EntryInfoRelBMRBid,Relationship,Y,20
+save_entry_information,entry_information,_Revised_BMRB_accession_number,290,entryInformation,ReviBMRBAccessNumb,INTEGER, , , , ,,Y,entryInformation,RevisedBMRBAcNo,N,130
+save_entry_information,entry_information,_Replace_BMRB_accession_number,300,entryInformation,ReplBMRBAccessNumb,INTEGER, , , , ,,Y,entryInformation,ReplaceBMRBAcNo,N,140
+save_entry_information,entry_information,_Revised_PDB_accession_number,310,entryInformation,ReviPDBAccessiNumb,VARCHAR(31), , , , ,,,entryInformation,RevisedPDBAcNo,N,150
+save_entry_information,entry_information,_Replace_PDB_accession_number,320,entryInformation,ReplPDBAccessiNumb,VARCHAR(31), , , , ,,,entryInformation,ReplacePDBAcNo,N,160
+save_entry_information,entry_information,_Revision_details,330,entryInformation,RevisionDetails,TEXT, , , , ,,,entryInformation,RevisionDetails,N,170
+save_entry_information,entry_information,_Release_immediately,340,entryInformation,ReleaseImmediate,NCHAR(3),,8, , ,,Y,entryInformation,ReleaseImmediate,N,180
+save_entry_information,entry_information,_Release_on_publication,350,entryInformation,ReleasOPublication,NCHAR(3), ,8, , ,,Y,entryInformation,ReleaseOnPubl,N,190
+save_entry_information,entry_information,_Release_date_request,360,entryInformation,ReleaseDateReq,DATETIME year to day, ,, , ,,Y,entryInformation,ReleaseDateReq,N,200
+save_entry_information,entry_information,_Release_date_justification,362,entryInformation,ReleaseJust,TEXT, ,, , ,,Y,entryInformation,ReleaseJust,N,202
+save_entry_information,entry_information,_Experimental_release_date,370,entryInformation,ExperimentReleaDat,DATETIME year to day, , , , ,,Y,entryInformation,ExptReleaseDate,N,210
+save_entry_information,entry_information,_Experimental_release_on_publication,380,entryInformation,ExperimRelOPublica,NCHAR(3), ,8, , ,,Y,entryInformation,ExptReleaseOnPubl,N,220
+save_entry_information,entry_information,_Coordinates_release_date,390,entryInformation,CoordinatReleasDat,DATETIME year to day, , , , ,,Y,entryInformation,CoordReleaseDate,N,230
+save_entry_information,entry_information,_Coordinates_release_on_publication,400,entryInformation,CoordinRelOPublica,NCHAR(3), ,8, , ,,Y,entryInformation,CoordReleaseOnPubl,N,240
+save_contact_persons,contact_persons,_Saveframe_category,410,contactPersons,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,Y,contactPersonCat,SaveframeCategory,N,10
+save_contact_persons,contact_persons,_Family_name,420,contacPersonFulNam,FamilyName,VARCHAR(127),NOT NULL, , , ,,Y,contactPerson,FullName,Y,10
+save_contact_persons,contact_persons,_Given_name,430,contacPersonFulNam,GivenName,VARCHAR(127),,,,,,Y,contactPerson,GivenName,Y,20
+save_contact_persons,contact_persons,_Middle_initials,440,contacPersonFulNam,MiddleInitials,VARCHAR(127),,,,,,Y,contactPerson,MiddleInitials,Y,30
+save_contact_persons,contact_persons,_Family_title,450,contacPersonFulNam,FamilyTitle,VARCHAR(127), , , , ,,Y,contactPerson,FamilyTitle,Y,40
+save_contact_persons,contact_persons,_Department_and_Institution,460,contacPersonFulNam,DepartmeAInstituti,VARCHAR(127),NOT NULL, , , ,,Y,contactPerson,DeptInstitution,Y,50
+save_contact_persons,contact_persons,_Mailing_address,470,contacPersonFulNam,MailingAddress,TEXT,NOT NULL, , , ,,Y,contactPerson,MailingAddress,Y,60
+save_contact_persons,contact_persons,_Phone_number,480,contacPersonFulNam,PhoneNumber,VARCHAR(127),NOT NULL, , , ,,Y,contactPerson,PhoneNumber,Y,70
+save_contact_persons,contact_persons,_Email_address,490,contacPersonFulNam,EmailAddress,VARCHAR(127), , , , ,,Y,contactPerson,EmailAddress,Y,80
+save_contact_persons,contact_persons,_FAX_number,500,contacPersonFulNam,FAXNumber,VARCHAR(127), , , , ,,Y,contactPerson,FAXNumber,Y,90
+save_entry_citation,entry_citation,_Saveframe_category,510,entryCitation,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,,entryCitation,SaveframeCategory,N,10
+save_entry_citation,entry_citation,_Citation_full,520,entryCitation,CitationFull,TEXT, , , , ,,,entryCitation,CitationFull,N,20
+save_entry_citation,entry_citation,_Citation_title,530,entryCitation,CitationTitle,TEXT, , , , ,,,entryCitation,CitationTitle,N,30
+save_entry_citation,entry_citation,_Citation_status,540,entryCitation,CitationStatus,VARCHAR(127), ,12, , ,,,entryCitation,CitationStatus,N,40
+save_entry_citation,entry_citation,_Citation_type,550,entryCitation,CitationType,VARCHAR(127), ,13, , ,,,entryCitation,CitationType,N,50
+save_entry_citation,entry_citation,_CAS_abstract_code,560,entryCitation,CASAbstractCode,VARCHAR(127), , , , ,,,entryCitation,CASAbstractCode,N,60
+save_entry_citation,entry_citation,_MEDLINE_UI_code,570,entryCitation,MEDLINEUICode,VARCHAR(127), , , , ,,,entryCitation,MEDLINEUICode,N,70
+save_entry_citation,entry_citation,_Author_ordinal,580,entCitatiAuthOrdin,AuthorOrdinal,INTEGER,NOT NULL, , , ,,,entryCitAuthors,AuthorOrdinal,Y,10
+save_entry_citation,entry_citation,_Author_family_name,590,entCitatiAuthOrdin,AuthorFamilyName,VARCHAR(127),NOT NULL, , , ,Y,,entryCitAuthors,AuthorFamilyName,Y,20
+save_entry_citation,entry_citation,_Author_given_name,600,entCitatiAuthOrdin,AuthorGivenName,VARCHAR(127), , , , ,Y,,entryCitAuthors,AuthorGivenName,Y,30
+save_entry_citation,entry_citation,_Author_middle_initials,610,entCitatiAuthOrdin,AuthoMiddlInitials,VARCHAR(127), , , , ,Y,,entryCitAuthors,AuthorMidInitials,Y,40
+save_entry_citation,entry_citation,_Author_family_title,620,entCitatiAuthOrdin,AuthorFamilyTitle,VARCHAR(127), , , , ,,,entryCitAuthors,AuthorFamilyTitle,Y,50
+save_entry_citation,entry_citation,_Journal_abbreviation,630,entryCitation,JournaAbbreviation,VARCHAR(127),, , , ,,,entryCitation,JournalAbbrev,N,80
+save_entry_citation,entry_citation,_Journal_name_full,640,entryCitation,JournalNameFull,VARCHAR(127), , , , ,,,entryCitation,JournalNameFull,N,90
+save_entry_citation,entry_citation,_Journal_volume,650,entryCitation,JournalVolume,VARCHAR(31), , , , ,,,entryCitation,JournalVolume,N,100
+save_entry_citation,entry_citation,_Journal_issue,660,entryCitation,JournalIssue,VARCHAR(31), , , , ,,,entryCitation,JournalIssue,N,110
+save_entry_citation,entry_citation,_Journal_ASTM,670,entryCitation,JournalASTM,VARCHAR(127), , , , ,,,entryCitation,JournalASTM,N,120
+save_entry_citation,entry_citation,_Journal_ISSN,680,entryCitation,JournalISSN,VARCHAR(127), , , , ,,,entryCitation,JournalISSN,N,130
+save_entry_citation,entry_citation,_Journal_CSD,690,entryCitation,JournalCSD,VARCHAR(127), , , , ,,,entryCitation,JournalCSD,N,140
+save_entry_citation,entry_citation,_Book_title,700,entryCitation,BookTitle,TEXT, , , , ,,,entryCitation,BookTitle,N,150
+save_entry_citation,entry_citation,_Book_chapter_title,710,entryCitation,BookChapterTitle,TEXT, , , , ,,,entryCitation,BookChapterTitle,N,160
+save_entry_citation,entry_citation,_Book_volume,720,entryCitation,BookVolume,VARCHAR(31), , , , ,,,entryCitation,BookVolume,N,170
+save_entry_citation,entry_citation,_Book_series,730,entryCitation,BookSeries,TEXT, , , , ,,,entryCitation,BookSeries,N,180
+save_entry_citation,entry_citation,_Book_publisher,740,entryCitation,BookPublisher,VARCHAR(127), , , , ,,,entryCitation,BookPublisher,N,190
+save_entry_citation,entry_citation,_Book_publisher_city,750,entryCitation,BookPublisherCity,VARCHAR(127), , , , ,,,entryCitation,BookPublisherCity,N,200
+save_entry_citation,entry_citation,_Book_ISBN,760,entryCitation,BookISBN,VARCHAR(127), , , , ,,,entryCitation,BookISBN,N,210
+save_entry_citation,entry_citation,_Conference_title,770,entryCitation,ConferenceTitle,TEXT, , , , ,,,entryCitation,ConfTitle,N,220
+save_entry_citation,entry_citation,_Conference_site,780,entryCitation,ConferenceSite,TEXT, , , , ,,,entryCitation,ConfSite,N,230
+save_entry_citation,entry_citation,_Conference_state_province,790,entryCitation,ConferenStaProvinc,VARCHAR(127), , , , ,,,entryCitation,ConfStateProv,N,240
+save_entry_citation,entry_citation,_Conference_country,800,entryCitation,ConferenceCountry,VARCHAR(127), , , , ,,,entryCitation,ConfCountry,N,250
+save_entry_citation,entry_citation,_Conference_start_date,810,entryCitation,ConferencStartDate,DATETIME year to day, , , , ,,,entryCitation,ConfStartDate,N,260
+save_entry_citation,entry_citation,_Conference_end_date,820,entryCitation,ConferenceEndDate,DATETIME year to day, , , , ,,,entryCitation,ConfEndDate,N,270
+save_entry_citation,entry_citation,_Conference_abstract_number,830,entryCitation,ConferenAbstraNumb,VARCHAR(31), , , , ,,,entryCitation,ConfAbstractNo,N,280
+save_entry_citation,entry_citation,_Thesis_institution,840,entryCitation,ThesisInstitution,VARCHAR(127), , , , ,,,entryCitation,ThesisInstitution,N,290
+save_entry_citation,entry_citation,_Thesis_institution_city,850,entryCitation,ThesiInstitutioCit,VARCHAR(127), , , , ,,,entryCitation,ThesisInstCity,N,300
+save_entry_citation,entry_citation,_Thesis_institution_country,860,entryCitation,ThesInstitutiCount,VARCHAR(127), , , , ,,,entryCitation,ThesisInstCountry,N,310
+save_entry_citation,entry_citation,_Page_first,870,entryCitation,PageFirst,VARCHAR(31),NOT NULL, , , ,,,entryCitation,PageFirst,N,320
+save_entry_citation,entry_citation,_Page_last,880,entryCitation,PageLast,VARCHAR(31),NOT NULL, , , ,,,entryCitation,PageLast,N,330
+save_entry_citation,entry_citation,_Year,890,entryCitation,Year,INTEGER,NOT NULL, , , ,,,entryCitation,Year,N,340
+save_entry_citation,entry_citation,_Details,900,entryCitation,Details,TEXT, , , , ,,,entryCitation,Details,N,350
+save_entry_citation,entry_citation,_Keyword,910,entrCitatioKeyword,Keyword,VARCHAR(127), , , , ,,,entryCitKeywords,Keyword,Y,10
+save_entry_citation,entry_citation,_Editor_ordinal,920,entCitatiEditOrdin,EditorOrdinal,INTEGER, , , , ,,,entryCitEditors,EditorOrdinal,Y,10
+save_entry_citation,entry_citation,_Editor_family_name,930,entCitatiEditOrdin,EditorFamilyName,VARCHAR(127), , , , ,,,entryCitEditors,EditorFamilyName,Y,20
+save_entry_citation,entry_citation,_Editor_given_name,940,entCitatiEditOrdin,EditorGivenName,VARCHAR(127), , , , ,,,entryCitEditors,EditorGivenName,Y,30
+save_entry_citation,entry_citation,_Editor_middle_initials,950,entCitatiEditOrdin,EditoMiddlInitials,VARCHAR(127), , , , ,,,entryCitEditors,EditorMidInitials,Y,40
+save_entry_citation,entry_citation,_Editor_family_title,960,entCitatiEditOrdin,EditorFamilyTitle,VARCHAR(127), , , , ,,,entryCitEditors,EditorFamilyTitle,Y,50
+save_<system_abbreviation>,molecular_system,_Saveframe_category,970,molecularSystem,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,,system,SaveframeCategory,N,10
+save_<system_abbreviation>,molecular_system,_Mol_system_name,980,molecularSystem,MolSystemName,VARCHAR(255),NOT NULL, , , ,,,system,MolSystemName,N,20
+save_<system_abbreviation>,molecular_system,_Abbreviation_common,990,molecularSystem,AbbreviationCommon,VARCHAR(127),NOT NULL, , , ,Y,,system,AbbreviationCommon,N,30
+save_<system_abbreviation>,molecular_system,_Enzyme_commission_number,1000,molecularSystem,EnzyCommissioNumbe,VARCHAR(127), , , , ,,,system,ECNumber,N,40
+save_<system_abbreviation>,molecular_system,_Mol_system_component_name,1010,molecSyMSysComponN,MoSysteComponenNam,VARCHAR(127),NOT NULL, , , ,,,molSystemComp,MolSystemCompName,Y,10
+save_<system_abbreviation>,molecular_system,_Mol_label,1020,molecSyMSysComponN,MolLabel,VARCHAR(127),NOT NULL, ,,,,,molSystemComp,MolLabel,Y,20
+save_<system_abbreviation>,molecular_system,_System_molecular_weight,1030,molecularSystem,SysteMoleculaWeigh,FLOAT, , , , , ,,system,SysMolWeight,N,45
+save_<system_abbreviation>,molecular_system,_System_physical_state,1040,molecularSystem,SystePhysicalState,VARCHAR(127),NOT NULL,14, , ,Y,,system,SysPhysicalState,N,50
+save_<system_abbreviation>,molecular_system,_System_oligomer_state,1050,molecularSystem,SysteOligomerState,VARCHAR(127),NOT NULL,58, , , ,,system,SysOligmerState,N,52
+save_<system_abbreviation>,molecular_system,_System_type,1052,molecularSystem,SystemType,VARCHAR(127), ,67, , , ,,system,SystemOrder,N,54
+save_<system_abbreviation>,molecular_system,_System_paramagnetic,1060,molecularSystem,SystemParamagnetic,NCHAR(3),NOT NULL,8, , ,Y,,system,SystemParamagnetic,N,60
+save_<system_abbreviation>,molecular_system,_System_thiol_state,1062,molecularSystem,SystemThiolState,VARCHAR(31),,,,,,,system,SystemThiolState,N,62
+save_<system_abbreviation>,molecular_system,_Magnetic_equivalence_ID,1070,moleSMagnEquivalID,MagnetEquivalencID,NCHAR(3), , , , ,,,magEquivSystemComp,MagneticEquivID,Y,10
+save_<system_abbreviation>,molecular_system,_Magnetically_equivalent_system_component,1080,moleSMagnEquivalID,MagnetiEquivSCompo,VARCHAR(127), , , ,,,,magEquivSystemComp,MagneticEquivComp,Y,20
+save_<system_abbreviation>,molecular_system,_Biological_function,1090,molecSyBiologFunct,BiologicalFunction,TEXT, , , , ,,,systemBiolFunc,BiologicalFunction,Y,10
+save_<system_abbreviation>,molecular_system,_Database_query_date,1092,molecularSystem,DatabaseQueryDate,VARCHAR(31),,,,,,,system,DBQueryDate,N,64
+save_<system_abbreviation>,molecular_system,_Database_name,1100,molecuSystDatabaNa,DatabaseName,VARCHAR(127), ,16, , ,,,systemDBLinks,DBName,Y,10
+save_<system_abbreviation>,molecular_system,_Database_accession_code,1110,molecuSystDatabaNa,DatabasAccessioCod,VARCHAR(127), , , , ,,,systemDBLinks,DBAccessionCode,Y,20
+save_<system_abbreviation>,molecular_system,_Database_entry_mol_name,1120,molecuSystDatabaNa,DatabasEntrMolName,TEXT, , , , ,,,systemDBLinks,DBMolName,Y,30
+save_<system_abbreviation>,molecular_system,_Database_entry_experimental_method,1122,molecuSystDatabaNa,DatabasEntrExptMeth,VARCHAR(31),,,,,,,systemDBLinks,DBExptlMethod,Y,32
+save_<system_abbreviation>,molecular_system,_Database_entry_relation_type,1130,molecuSystDatabaNa,DatabaEntRelatiTyp,VARCHAR(31), , , , ,,,systemDBLinks,DBRelationtype,Y,40
+save_<system_abbreviation>,molecular_system,_Database_entry_details,1140,molecuSystDatabaNa,DatabasEntrDetails,TEXT, , , , ,,,systemDBLinks,DBEntryDetails,Y,50
+save_<system_abbreviation>,molecular_system,_Details,1150,molecularSystem,Details,TEXT, , , , ,,,system,Details,N,70
+save_<Mol_polymer_label>,monomeric_polymer,_Saveframe_category,1160,monomericPolymer,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,,polymerDescr,SaveframeCategory,N,10
+save_<Mol_polymer_label>,monomeric_polymer,_Mol_type,1170,monomericPolymer,MolType,VARCHAR(127),NOT NULL,17, , ,,,polymerDescr,MolType,N,20
+save_<Mol_polymer_label>,monomeric_polymer,_Mol_polymer_class,1180,monomericPolymer,MolPolymerClass,VARCHAR(127),NOT NULL,18, , ,Y,,polymerDescr,MolPolymerClass,N,30
+save_<Mol_polymer_label>,monomeric_polymer,_Name_common,1190,monomericPolymer,NameCommon,VARCHAR(127),NOT NULL, , , ,Y,,polymerDescr,NameCommon,N,40
+save_<Mol_polymer_label>,monomeric_polymer,_Name_variant,1200,monomericPolymer,NameVariant,VARCHAR(255), , , , ,,,polymerDescr,NameVariant,N,50
+save_<Mol_polymer_label>,monomeric_polymer,_Abbreviation_common,1210,monomericPolymer,AbbreviationCommon,VARCHAR(127),, , , ,,,polymerDescr,AbbreviationCommon,N,60
+save_<Mol_polymer_label>,monomeric_polymer,_Name_CAS,1220,monomericPolymer,NameCAS,VARCHAR(255), , , , ,,,polymerDescr,NameCAS,N,70
+save_<Mol_polymer_label>,monomeric_polymer,_CAS_registry_number,1230,monomericPolymer,CASRegistryNumber,VARCHAR(127), , , , ,,,polymerDescr,CASRegistryNumber,N,80
+save_<Mol_polymer_label>,monomeric_polymer,_Enzyme_commission_number,1240,monomericPolymer,EnzyCommissioNumbe,VARCHAR(127), , , , ,,,polymerDescr,ECNumber,N,90
+save_<Mol_polymer_label>,monomeric_polymer,_Molecular_mass,1250,monomericPolymer,MolecularMass,FLOAT, , , , ,,,polymerDescr,MolecularMass,N,100
+save_<Mol_polymer_label>,monomeric_polymer,_Mol_thiol_state,1252,monomericPolymer,MolThiolState,VARCHAR(31),,,,,,,polymerDescr,MolThiolState,N,102
+save_<Mol_polymer_label>,monomeric_polymer,_Biological_function,1260,monomPolBiologFunc,BiologicalFunction,TEXT, , , , ,,,polymerBioFunc,BiologicalFunction,Y,10
+save_<Mol_polymer_label>,monomeric_polymer,_Details,1270,monomericPolymer,Details,TEXT, , , , ,,,polymerDescr,Details,N,110
+save_<Mol_polymer_label>,monomeric_polymer,_Synonym,1280,monomerPolymSynony,Synonym,VARCHAR(127), , , , ,Y,,polymerSyn,Synonym,Y,10
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_citation_label,1290,monomericPolymer,SequencCitatioLabe,VARCHAR(127), , , , ,,,polymerDescr,SequenceCitLabel,N,120
+save_<Mol_polymer_label>,monomeric_polymer,_Ambiguous_sequence_features,1300,monomericPolymer,AmbiguSequenFeatur,VARCHAR(127), , , , ,,,polymerDescr,AmbigSeqFeatures,N,130
+save_<Mol_polymer_label>,monomeric_polymer,_Residue_count,1310,monomericPolymer,ResidueCount,INTEGER,NOT NULL, , , ,Y,,polymerDescr,ResidueCount,N,140
+save_<Mol_polymer_label>,monomeric_polymer,_Mol_residue_sequence,1320,monomericPolymer,MolResidueSequence,TEXT,NOT NULL, , , ,,,polymerDescr,MolResSequence,N,150
+save_<Mol_polymer_label>,monomeric_polymer,_Residue_seq_code,1330,monomePolyResidSCo,ResidueSeqCode,INTEGER,NOT NULL, , , ,,,ResidueSequence,ResSeqCode,Y,10
+save_<Mol_polymer_label>,monomeric_polymer,_Residue_author_seq_code,1340,monomePolyResidSCo,ResiduAuthoSeqCode,VARCHAR(31), , , , ,,,ResidueSequence,ResAuthorSeqCode,Y,20
+save_<Mol_polymer_label>,monomeric_polymer,_Insertion_code,1350,monomePolyResidSCo,InsertionCode,VARCHAR(31), , , , ,,,ResidueSequence,InsertionCode,Y,30
+save_<Mol_polymer_label>,monomeric_polymer,_Residue_label,1360,monomePolyResidSCo,ResidueLabel,VARCHAR(31),NOT NULL, , ,,,,ResidueSequence,ResidueLabel,Y,40
+save_<Mol_polymer_label>,monomeric_polymer,_Segment_definition_code,1370,monomePolyResidSCo,SegmenDefinitioCod,VARCHAR(31), , , , ,,,ResidueSequence,SegmenDefinitioCod,Y,50,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_homology_query_date,1372,monomericPolymer,SeqHomolQueryDate,VARCHAR(31),,,,,,,polymerDescr,SeqHomolQueryDate,N,152,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_homology_query_revised_last_date,1374,monomericPolymer,SeqQueryRevLastDate,VARCHAR(31),,,,,,,polymerDescr,SeqQueryRevLastDate,N,154,
+save_<Mol_polymer_label>,monomeric_polymer,_Database_name,1380,monomePolyDatabaNa,DatabaseName,VARCHAR(127), , , , ,Y,,polymerDBLinks,DBName,Y,10,
+save_<Mol_polymer_label>,monomeric_polymer,_Database_accession_code,1390,monomePolyDatabaNa,DatabasAccessioCod,VARCHAR(127), , , , ,,,polymerDBLinks,DBAccessionCode,Y,20,
+save_<Mol_polymer_label>,monomeric_polymer,_Database_entry_mol_name,1400,monomePolyDatabaNa,DatabasEntrMolName,VARCHAR(255), , , , ,,,polymerDBLinks,DBMolName,Y,30,
+save_<Mol_polymer_label>,monomeric_polymer,_Database_entry_experimental_method,1402,monomePolyDatabaNa,DatabasEntrExptMeth,VARCHAR(31),,,,,,,polymerDBLinks,DBExptlMethod,Y,31,
+save_<Mol_polymer_label>,monomeric_polymer,_Database_segment_ID,1420,monomePolyDatabaNa,DatabaseSegmentID,VARCHAR(127), , , , , ,,polymerDBLinks,DatabaseSegmentID,Y,32,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_homology_type,1410,monomePolyDatabaNa,SequencHomologType,VARCHAR(31), , , , ,,,polymerDBLinks,DBSeqHomologyType,Y,40,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_query_to_submitted_percentage,1412,monomePolyDatabaNa,SequencQueryPercent,VARCHAR(31),,,,,,,polymerDBLinks,SeqQueryPercent,Y,42,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_subject_length,1413,monomePolyDatabaNa,SequencSubjLength,VARCHAR(31),,,,,,,polymerDBLinks,SeqSubjectLength,Y,43,1
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_identity,1414,monomePolyDatabaNa,SequenceIdentity,VARCHAR(31),,,,,,,polymerDBLinks,SeqIdentityPercent,Y,44,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_positive,1416,monomePolyDatabaNa,SequencePositive,VARCHAR(31),,,,,,,polymerDBLinks,SeqPositivePercent,Y,46,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_homology_expectation_value,1418,monomePolyDatabaNa,SequenceHomExpVal,VARCHAR(31),,,,,,,polymerDBLinks,SeqHomolExpVal,Y,48,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_difference_details,1420,monomePolyDatabaNa,SequeDifferenDetai,TEXT, , , , ,,,polymerDBLinks,SeqDifDetails,Y,50,
+save_<Mol_polymer_label>,monomeric_polymer,_Sequence_alignment_details,1430,monomePolyDatabaNa,SequenAlignmeDetai,TEXT, , , , ,,,polymerDBLinks,SeqAlignDetails,Y,60,
+save_<polymer_residue_label>,polymer_residue,_Saveframe_category,1440,polymerResidue,SaveframeCategory,VARCHAR(127), , , , ,,,ResidueDescr,SaveframeCategory,N,10
+save_<polymer_residue_label>,polymer_residue,_Mol_type,1450,polymerResidue,MolType,VARCHAR(127), ,19, , ,,,ResidueDescr,MolType,N,20
+save_<polymer_residue_label>,polymer_residue,_Name_common,1460,polymerResidue,NameCommon,VARCHAR(255), , , , ,,,ResidueDescr,NameCommon,N,30
+save_<polymer_residue_label>,polymer_residue,_Abbreviation_common,1470,polymerResidue,AbbreviationCommon,VARCHAR(127), , , , ,Y,,ResidueDescr,AbbreviationCommon,N,40
+save_<polymer_residue_label>,polymer_residue,_Name_IUPAC,1480,polymerResidue,NameIUPAC,VARCHAR(255), , , , ,,,ResidueDescr,NameIUPAC,N,50
+save_<polymer_residue_label>,polymer_residue,_Name_CAS,1490,polymerResidue,NameCAS,VARCHAR(255), , , , ,,,ResidueDescr,NameCAS,N,60
+save_<polymer_residue_label>,polymer_residue,_CAS_registry_number,1500,polymerResidue,CASRegistryNumber,VARCHAR(127), , , , ,,,ResidueDescr,CASRegistryNumber,N,70
+save_<polymer_residue_label>,polymer_residue,_PDB_code,1510,polymerResidue,PDBCode,VARCHAR(31), , , , ,,,ResidueDescr,PDBCode,N,80
+save_<polymer_residue_label>,polymer_residue,_Standard_residue_derivative,1520,polymerResidue,StandResidDerivati,VARCHAR(255), , , , ,,,ResidueDescr,StdResDerivative,N,90
+save_<polymer_residue_label>,polymer_residue,_Mol_label,1530,polymeResiduMoLabe,MolLabel,VARCHAR(127), , ,,,,,biopolymResidMLabe,MolLabel,Y,10
+save_<polymer_residue_label>,polymer_residue,_Residue_seq_code,1540,polymeResiduMoLabe,ResidueSeqCode,INTEGER, , , ,,,,biopolymResidMLabe,ResSeqCode,Y,20
+save_<polymer_residue_label>,polymer_residue,_Mol_empirical_formula,1550,polymerResidue,MoEmpiricalFormula,VARCHAR(127), , , , ,,,ResidueDescr,MolEmpiricalForm,N,100
+save_<polymer_residue_label>,polymer_residue,_Molecular_mass,1560,polymerResidue,MolecularMass,FLOAT, , , , ,,,ResidueDescr,MolecularMass,N,110
+save_<polymer_residue_label>,polymer_residue,_Mol_paramagnetic,1570,polymerResidue,MolParamagnetic,NCHAR(3), ,8, , ,Y,,ResidueDescr,MolParamagnetic,N,120
+save_<polymer_residue_label>,polymer_residue,_Details,1580,polymerResidue,Details,TEXT, , , , ,,,ResidueDescr,Details,N,130
+save_<polymer_residue_label>,polymer_residue,_SMILES_representation,1590,polymerResidue,SMILESRepresentati,TEXT, , , , ,,,ResidueDescr,SMILESRep,N,140
+save_<polymer_residue_label>,polymer_residue,_Synonym,1600,polymeResiduSynony,Synonym,VARCHAR(255), , , , ,,,biopolymResidSynon,Synonym,Y,10
+save_<polymer_residue_label>,polymer_residue,_Topology_file_name,1610,polymerResidue,TopologyFileName,VARCHAR(255), , , , ,,,ResidueDescr,TopologyFileName,N,150
+save_<polymer_residue_label>,polymer_residue,_Mol_structure_file_name,1620,polymerResidue,MoStructurFileName,VARCHAR(255), , , , ,,,ResidueDescr,MolStructFileName,N,160
+save_<polymer_residue_label>,polymer_residue,_Mol_structure_file_format,1630,polymerResidue,MoStructurFilForma,VARCHAR(255), , , , ,,,ResidueDescr,MolStructFileForm,N,170
+save_<polymer_residue_label>,polymer_residue,_Stereochemistry_parameter_file_name,1640,polymerResidue,StereochemiParamFN,VARCHAR(255), , , , ,,,ResidueDescr,StereochemiParamFN,N,180
+save_<polymer_residue_label>,polymer_residue,_Atom_name,1650,polymeResiduAtoNam,AtomName,VARCHAR(31), , , , ,,,ResidueAtomList,AtomName,Y,10
+save_<polymer_residue_label>,polymer_residue,_Atom_type,1660,polymeResiduAtoNam,AtomType,VARCHAR(31), ,22, , ,,,ResidueAtomList,AtomType,Y,20
+save_<polymer_residue_label>,polymer_residue,_Atom_chirality,1670,polymeResiduAtoNam,AtomChirality,VARCHAR(127), , , , ,,,ResidueAtomList,AtomChirality,Y,30
+save_<polymer_residue_label>,polymer_residue,_Atom_charge,1680,polymeResiduAtoNam,AtomCharge,VARCHAR(127), , , , ,,,ResidueAtomList,AtomCharge,Y,40
+save_<polymer_residue_label>,polymer_residue,_Atom_oxidation_number,1690,polymeResiduAtoNam,AtoOxidationNumber,VARCHAR(127), , , , ,,,ResidueAtomList,AtomOxidationNum,Y,50
+save_<polymer_residue_label>,polymer_residue,_Atom_unpaired_electrons,1700,polymeResiduAtoNam,AtoUnpaireElectron,VARCHAR(127), , , , ,,,ResidueAtomList,AtomUnpairElectron,Y,60
+save_<polymer_residue_label>,polymer_residue,_Bond_order,1710,polymResiduBonOrde,BondOrder,VARCHAR(127), ,20, , ,,,ResidueBondList,BondOrder,Y,10
+save_<polymer_residue_label>,polymer_residue,_Bond_atom_one_atom_name,1720,polymResiduBonOrde,BonAtomOneAtomName,VARCHAR(127), , , , ,,,ResidueBondList,BonAtomOneAtomName,Y,20
+save_<polymer_residue_label>,polymer_residue,_Bond_atom_two_atom_name,1730,polymResiduBonOrde,BonAtomTwoAtomName,VARCHAR(127), , , , ,,,ResidueBondList,BonAtomTwoAtomName,Y,30
+save_<ligand_label>,ligand,_Saveframe_category,1740,ligand,SaveframeCategory,VARCHAR(127), , , , ,,,ligand,SaveframeCategory,N,10
+save_<ligand_label>,ligand,_Mol_type,1750,ligand,MolType,VARCHAR(127), ,21, , ,,,ligand,MolType,N,20
+save_<ligand_label>,ligand,_Name_common,1760,ligand,NameCommon,VARCHAR(127), , , , ,Y,,ligand,NameCommon,N,30
+save_<ligand_label>,ligand,_Abbreviation_common,1770,ligand,AbbreviationCommon,VARCHAR(127), , , , ,Y,,ligand,AbbreviationCommon,N,40
+save_<ligand_label>,ligand,_Name_CAS,1780,ligand,NameCAS,VARCHAR(255), , , , ,,,ligand,NameCAS,N,50
+save_<ligand_label>,ligand,_CAS_registry_number,1790,ligand,CASRegistryNumber,VARCHAR(127), , , , ,,,ligand,CASRegistryNumber,N,60
+save_<ligand_label>,ligand,_Name_IUPAC,1800,ligand,NameIUPAC,VARCHAR(255), , , , ,,,ligand,NameIUPAC,N,70
+save_<ligand_label>,ligand,_BMRB_code,1802,ligand,BMRBcode,VARCHAR(31),,,,,,,ligand,BMRBcode,Y,72
+save_<ligand_label>,ligand,_PDB_code,1810,ligand,PDBCode,VARCHAR(31), , , , ,,,ligand,PDBCode,N,80
+save_<ligand_label>,ligand,_Mol_empirical_formula,1820,ligand,MoEmpiricalFormula,VARCHAR(127), , , , ,,,ligand,MolEmpiricalForm,N,90
+save_<ligand_label>,ligand,_Molecular_mass,1830,ligand,MolecularMass,FLOAT, , , , ,,,ligand,MolecularMass,N,100
+save_<ligand_label>,ligand,_Mol_charge,1840,ligand,MolCharge,VARCHAR(31), , , , ,,,ligand,MolCharge,N,110
+save_<ligand_label>,ligand,_Mol_paramagnetic,1850,ligand,MolParamagnetic,NCHAR(3), ,8, , ,,,ligand,MolParamagnetic,N,120
+save_<ligand_label>,ligand,_Mol_aromatic,1860,ligand,MolAromatic,NCHAR(3), ,8, , ,Y,,ligand,MolAromatic,N,130
+save_<ligand_label>,ligand,_Biological_function,1870,ligaBiologicFuncti,BiologicalFunction,TEXT, , , , ,,,ligandBiolFunction,BiologicalFunction,Y,10
+save_<ligand_label>,ligand,_Details,1880,ligand,Details,TEXT, , , , ,,,ligand,Details,N,140
+save_<ligand_label>,ligand,_SMILES_representation,1890,ligand,SMILESRepresentati,TEXT, , , , ,,,ligand,SMILESRep,N,150
+save_<ligand_label>,ligand,_Synonym,1900,ligandSynonym,Synonym,VARCHAR(127), , , , ,,,ligandSynonym,Synonym,Y,10
+save_<ligand_label>,ligand,_Topology_file_name,1910,ligand,TopologyFileName,VARCHAR(255), , , , ,,,ligand,TopologyFileName,N,160
+save_<ligand_label>,ligand,_Mol_structure_file_name,1920,ligand,MoStructurFileName,VARCHAR(255), , , , ,,,ligand,MolStructFileName,N,170
+save_<ligand_label>,ligand,_Mol_structure_file_format,1930,ligand,MoStructurFilForma,VARCHAR(255), , , , ,,,ligand,MolStructFileForm,N,180
+save_<ligand_label>,ligand,_Stereochemistry_parameter_file_name,1940,ligand,StereochemiParamFN,VARCHAR(255), , , , ,,,ligand,StereochemiParamFN,N,190
+save_<ligand_label>,ligand,_Atom_name,1950,ligandAtomName,AtomName,VARCHAR(31), , , , ,,,ligandAtomList,AtomName,Y,10
+save_<ligand_label>,ligand,_PDB_atom_name,1952,ligandAtomName,PDBAtomName,VARCHAR(31),,,,,,,ligandAtomList,PDBAtomName,Y,12
+save_<ligand_label>,ligand,_Atom_type,1960,ligandAtomName,AtomType,VARCHAR(31), ,22, , ,,,ligandAtomList,AtomType,Y,20
+save_<ligand_label>,ligand,_Atom_chirality,1970,ligandAtomName,AtomChirality,VARCHAR(31), , , , ,,,ligandAtomList,AtomChirality,Y,30
+save_<ligand_label>,ligand,_Atom_charge,1980,ligandAtomName,AtomCharge,VARCHAR(31), , , , ,,,ligandAtomList,AtomCharge,Y,40
+save_<ligand_label>,ligand,_Atom_oxidation_number,1990,ligandAtomName,AtoOxidationNumber,VARCHAR(31), , , , ,,,ligandAtomList,AtomOxidationNum,Y,50
+save_<ligand_label>,ligand,_Atom_unpaired_electrons,2000,ligandAtomName,AtoUnpaireElectron,VARCHAR(31), , , , ,,,ligandAtomList,AtomUnpairElectron,Y,60
+save_<ligand_label>,ligand,_Bond_order,2010,ligandBondOrder,BondOrder,VARCHAR(127), ,20, , ,,,ligandBondList,BondOrder,Y,10
+save_<ligand_label>,ligand,_Bond_atom_one_atom_name,2020,ligandBondOrder,BonAtomOneAtomName,VARCHAR(31), , , , ,,,ligandBondList,BonAtomOneAtomName,Y,20
+save_<ligand_label>,ligand,_Bond_atom_two_atom_name,2030,ligandBondOrder,BonAtomTwoAtomName,VARCHAR(31), , , , ,,,ligandBondList,BonAtomTwoAtomName,Y,30
+save_<ligand_label>,ligand,_PDB_bond_atom_one_atom_name,2032,ligandBondOrder,PDBBAtoneAtomName,VARCHAR(31),,,,,,,ligandBondList,PDBBAtoneAtomName,Y,40
+save_<ligand_label>,ligand,_PDB_bond_atom_two_atom_name,2034,ligandBondOrder,PDBBAttwoAtomName,VARCHAR(31),,,,,,,ligandBondList,PDBBAttwoAtomName,Y,50
+save_<ligand_label>,ligand,_Database_name,2040,ligandDatabaseName,DatabaseName,VARCHAR(127), , , , ,,,ligandDBLinks,DBName,Y,10
+save_<ligand_label>,ligand,_Database_accession_code,2050,ligandDatabaseName,DatabasAccessioCod,VARCHAR(127), , , , ,,,ligandDBLinks,DBAccessionCode,Y,20
+save_<ligand_label>,ligand,_Database_entry_mol_name,2060,ligandDatabaseName,DatabasEntrMolName,TEXT, , , , ,,,ligandDBLinks,DBMolName,Y,30
+save_<ligand_label>,ligand,_Database_entry_details,2070,ligandDatabaseName,DatabasEntrDetails,TEXT, , , , ,,,ligandDBLinks,DBEntryDetails,Y,40
+save_crosslink_bond_definitions,crosslink_bonds,_Saveframe_category,2080,crosslinkBonds,SaveframeCategory,VARCHAR(127), , , , ,,,crosslinkBonds,SaveframeCategory,N,10
+save_crosslink_bond_definitions,crosslink_bonds,_Bond_order,2090,crossliBondBonOrde,BondOrder,VARCHAR(127), ,20, , ,,,crosslinkBondList,BondOrder,Y,10
+save_crosslink_bond_definitions,crosslink_bonds,_Bond_type,2100,crossliBondBonOrde,BondType,VARCHAR(127), , , , ,,,crosslinkBondList,BondType,Y,20
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_one_mol_system_component_name,2110,crossliBondBonOrde,AtOMSystComponeNam,VARCHAR(127), , , ,,,,crosslinkBondList,AtmOneSysCompName,Y,30
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_one_residue_seq_code,2120,crossliBondBonOrde,AtoOnResiduSeqCode,INTEGER, , , ,,,,crosslinkBondList,AtoOnResiduSeqCode,Y,40
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_one_residue_label,2130,crossliBondBonOrde,AtoOneResidueLabel,VARCHAR(31), , ,,,,,crosslinkBondList,AtmOneResLabel,Y,50
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_one_atom_name,2140,crossliBondBonOrde,AtomOneAtomName,VARCHAR(31), , , , ,,,crosslinkBondList,AtmOneAtmName,Y,60
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_two_mol_system_component_name,2150,crossliBondBonOrde,AtTMSystComponeNam,VARCHAR(127), , , ,,,,crosslinkBondList,AtmTwoSysCompName,Y,70
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_two_residue_seq_code,2160,crossliBondBonOrde,AtoTwResiduSeqCode,INTEGER, , , ,,,,crosslinkBondList,AtmTwoResSeqCode,Y,80
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_two_residue_label,2170,crossliBondBonOrde,AtoTwoResidueLabel,VARCHAR(31), , ,,,,,crosslinkBondList,AtmTwoResLabel,Y,90
+save_crosslink_bond_definitions,crosslink_bonds,_Atom_two_atom_name,2180,crossliBondBonOrde,AtomTwoAtomName,VARCHAR(31), , , , ,,,crosslinkBondList,AtmTwoAtmName,Y,100
+save_crosslink_bond_definitions,crosslink_bonds,_Details,2190,crossliBondBonOrde,Details,TEXT, , , , ,,,crosslinkBondList,Details,Y,110
+save_crosslink_bond_definitions,crosslink_bonds,_Deleted_atom_mol_system_component_name,2200,crosBDelAMSyCompoN,DeleAMSysComponeNa,VARCHAR(127), , , ,,,,DeletedAtomList,DeleAMSysComponeNa,Y,10
+save_crosslink_bond_definitions,crosslink_bonds,_Deleted_atom_residue_seq_code,2210,crosBDelAMSyCompoN,DeletAtResiduSeCod,INTEGER, , ,,,,,DeletedAtomList,DeletAtResiduSeCod,Y,20
+save_crosslink_bond_definitions,crosslink_bonds,_Deleted_atom_residue_label,2220,crosBDelAMSyCompoN,DeletAtoResiduLabe,VARCHAR(31), , ,,,,,DeletedAtomList,DeletAtoResiduLabe,Y,30
+save_crosslink_bond_definitions,crosslink_bonds,_Deleted_atom_name,2230,crosBDelAMSyCompoN,DeletedAtomName,VARCHAR(31), , , , ,,,DeletedAtomList,DeletedAtomName,Y,40
+save_<macromolecular_system>,biol_func_molecular_system,_Saveframe_category,2240,biFunMoleculaSyste,SaveframeCategory,VARCHAR(127), , , , ,,,biolFuncMolSystem,SaveframeCategory,N,10
+save_<macromolecular_system>,biol_func_molecular_system,_Name_common,2250,biFunMoleculaSyste,NameCommon,VARCHAR(255), , , , ,,,biolFuncMolSystem,NameCommon,N,20
+save_<macromolecular_system>,biol_func_molecular_system,_Abbreviation_common,2260,biFunMoleculaSyste,AbbreviationCommon,VARCHAR(127), , , , ,,,biolFuncMolSystem,AbbreviationCommon,N,30
+save_<macromolecular_system>,biol_func_molecular_system,_Enzyme_commission_number,2270,biFunMoleculaSyste,EnzyCommissioNumbe,VARCHAR(31), , , , ,,,biolFuncMolSystem,ECNumber,N,40
+save_<macromolecular_system>,biol_func_molecular_system,_Details,2280,biFunMoleculaSyste,Details,TEXT, , , , ,,,biolFuncMolSystem,Details,N,50
+save_<macromolecular_system>,biol_func_molecular_system,_Mol_system_component_name,2290,FMolecSyMSyComponN,MoSysteComponenNam,VARCHAR(127), , , ,,,,SysMolComponents,MolSysCompName,Y,10
+save_<macromolecular_system>,biol_func_molecular_system,_Biological_function,2300,FMolecSyBiologFunc,BiologicalFunction,VARCHAR(255), , , , ,,,BiolFuncList,BiologicalFunction,Y,10
+save_<macromolecular_system>,biol_func_molecular_system,_Database_name,2310,bFMolecuSysDatabNa,DatabaseName,VARCHAR(127), , , , ,,,biolMolDBLinks,DBName,Y,10
+save_<macromolecular_system>,biol_func_molecular_system,_Database_accession_code,2320,bFMolecuSysDatabNa,DatabasAccessioCod,VARCHAR(127), , , , ,,,biolMolDBLinks,DBAccessionCode,Y,20
+save_<macromolecular_system>,biol_func_molecular_system,_Database_entry_mol_name,2330,bFMolecuSysDatabNa,DatabasEntrMolName,VARCHAR(255), , , , ,,,biolMolDBLinks,DBMolName,Y,30
+save_<macromolecular_system>,biol_func_molecular_system,_Database_entry_details,2340,bFMolecuSysDatabNa,DatabasEntrDetails,TEXT, , , , ,,,biolMolDBLinks,DBEntryDetails,Y,40
+save_natural_source,natural_source,_Saveframe_category,2350,naturalSource,SaveframeCategory,VARCHAR(127),, , , ,,,naturalSourceSFC,SaveframeCategory,N,10
+save_natural_source,natural_source,_Mol_label,2360,naturaSourcMoLabel,MolLabel,VARCHAR(127), , ,,,,,naturalSource,MolLabel,Y,10
+save_natural_source,natural_source,_Organism_name_common,2370,naturaSourcMoLabel,OrganismNameCommon,VARCHAR(127), , , , ,Y,,naturalSource,OrganismNameCommon,Y,20
+save_natural_source,natural_source,_Organism_acronym,2372,naturaSourcMoLabel,OrganismAcronym,VARCHAR(127), , , , , ,,naturalSource,OrganismAcronym,Y,22
+save_natural_source,natural_source,_ICTVdb_decimal_code,2373,naturaSourcMoLabel,ICTVdbDecimalCode,VARCHAR(127), , , , , ,,naturalSource,ICTVdbDecimalCode,Y,24
+save_natural_source,natural_source,_NCBI_taxonomy_ID,2374,naturaSourcMoLabel,NCBITaxonomyID,VARCHAR(127), , , , , ,,naturalSource,NCBITaxonomyID,Y,25
+save_natural_source,natural_source,_Superkingdom,2375,naturaSourcMoLabel,Superkingdom,VARCHAR(127), ,72, , , ,,naturalSource,Superkingdom,Y,26
+save_natural_source,natural_source,_Kingdom,2376,naturaSourcMoLabel,Kingdom,VARCHAR(127), ,73, , , ,,naturalSource,Kingdom,Y,27
+save_natural_source,natural_source,_Genus,2380,naturaSourcMoLabel,Genus,VARCHAR(127), , , , ,Y,,naturalSource,Genus,Y,30
+save_natural_source,natural_source,_Species,2390,naturaSourcMoLabel,Species,VARCHAR(127), , , , ,Y,,naturalSource,Species,Y,40
+save_natural_source,natural_source,_Strain,2400,naturaSourcMoLabel,Strain,VARCHAR(127), , , , ,,,naturalSource,Strain,Y,50
+save_natural_source,natural_source,_Variant,2410,naturaSourcMoLabel,Variant,VARCHAR(127), , , , ,,,naturalSource,Variant,Y,60
+save_natural_source,natural_source,_Subvariant,2420,naturaSourcMoLabel,Subvariant,VARCHAR(127), , , , ,,,naturalSource,Subvariant,Y,70
+save_natural_source,natural_source,_Organ,2430,naturaSourcMoLabel,Organ,VARCHAR(127), , , , ,,,naturalSource,Organ,Y,80
+save_natural_source,natural_source,_Tissue,2440,naturaSourcMoLabel,Tissue,VARCHAR(127), , , , ,,,naturalSource,Tissue,Y,90
+save_natural_source,natural_source,_Cell_line,2450,naturaSourcMoLabel,CellLine,VARCHAR(127), , , , ,,,naturalSource,CellLine,Y,100
+save_natural_source,natural_source,_Cell_type,2460,naturaSourcMoLabel,CellType,VARCHAR(127), , , , ,,,naturalSource,CellType,Y,110
+save_natural_source,natural_source,_ATCC_number,2470,naturaSourcMoLabel,ATCCNumber,VARCHAR(127), , , , ,,,naturalSource,ATCCNumber,Y,120
+save_natural_source,natural_source,_Organelle,2480,naturaSourcMoLabel,Organelle,VARCHAR(127), , , , ,,,naturalSource,Organelle,Y,130
+save_natural_source,natural_source,_Fraction,2490,naturaSourcMoLabel,Fraction,VARCHAR(127), , , , ,,,naturalSource,Fraction,Y,140
+save_natural_source,natural_source,_Secretion,2500,naturaSourcMoLabel,Secretion,VARCHAR(127), , , , ,,,naturalSource,Secretion,Y,150
+save_natural_source,natural_source,_Plasmid,2502,naturaSourcMoLabel,Plasmid,VARCHAR(127), , , , ,,,naturalSource,Plasmid,Y,152
+save_natural_source,natural_source,_Gene_mnemonic,2510,naturaSourcMoLabel,GeneMnemonic,VARCHAR(127), , , , ,,,naturalSource,GeneMnemonic,Y,160
+save_natural_source,natural_source,_Details,2530,naturaSourcMoLabel,Details,TEXT, , , , ,,,naturalSource,Details,Y,180
+save_experimental_source,experimental_source,_Saveframe_category,2540,experimentalSource,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,,exptSourceSFC,SaveframeCategory,N,10
+save_experimental_source,experimental_source,_Mol_label,2550,experimentSourMLab,MolLabel,VARCHAR(127),NOT NULL, ,,,,,experimentalSource,MolLabel,Y,10
+save_experimental_source,experimental_source,_Production_method,2560,experimentSourMLab,ProductionMethod,VARCHAR(127),NOT NULL, , , ,Y,,experimentalSource,ProductionMethod,Y,20
+save_experimental_source,experimental_source,_Host_organism_name_common,2570,experimentSourMLab,HosOrganisNamCommo,VARCHAR(127), , , , ,Y,,experimentalSource,HosOrganisNamCommo,Y,30
+save_experimental_source,experimental_source,_Genus,2580,experimentSourMLab,Genus,VARCHAR(127), , , , ,,,experimentalSource,Genus,Y,40
+save_experimental_source,experimental_source,_Species,2590,experimentSourMLab,Species,VARCHAR(127), , , , ,,,experimentalSource,Species,Y,50
+save_experimental_source,experimental_source,_Strain,2600,experimentSourMLab,Strain,VARCHAR(127), , , , ,,,experimentalSource,Strain,Y,60
+save_experimental_source,experimental_source,_Variant,2610,experimentSourMLab,Variant,VARCHAR(127), , , , ,,,experimentalSource,Variant,Y,70
+save_experimental_source,experimental_source,_Organ,2620,experimentSourMLab,Organ,VARCHAR(127), , , , ,,,experimentalSource,Organ,Y,80
+save_experimental_source,experimental_source,_Tissue,2630,experimentSourMLab,Tissue,VARCHAR(127), , , , ,,,experimentalSource,Tissue,Y,90
+save_experimental_source,experimental_source,_Cell_line,2640,experimentSourMLab,CellLine,VARCHAR(127), , , , ,,,experimentalSource,CellLine,Y,100
+save_experimental_source,experimental_source,_Cell_type,2650,experimentSourMLab,CellType,VARCHAR(127), , , , ,,,experimentalSource,CellType,Y,110
+save_experimental_source,experimental_source,_ATCC_number,2660,experimentSourMLab,ATCCNumber,VARCHAR(127), , , , ,,,experimentalSource,ATCCNumber,Y,120
+save_experimental_source,experimental_source,_Vector_type,2670,experimentSourMLab,VectorType,VARCHAR(127), , , , ,,,experimentalSource,VectorType,Y,130
+save_experimental_source,experimental_source,_Vector_name,2680,experimentSourMLab,VectorName,VARCHAR(127), , , , ,,,experimentalSource,VectorName,Y,140
+save_experimental_source,experimental_source,_Vendor_name,2690,experimentSourMLab,VendorName,VARCHAR(127), , , , ,,,experimentalSource,VendorName,Y,150
+save_experimental_source,experimental_source,_Gene_source,2700,experimentSourMLab,GeneSource,VARCHAR(127), , , , ,,,experimentalSource,GeneSource,Y,160
+save_experimental_source,experimental_source,_Details,2710,experimentSourMLab,Details,TEXT, , , , ,,,experimentalSource,Details,Y,170
+save_<sample_label>,sample,_Saveframe_category,2720,sample,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,,sampleDescr,SaveframeCategory,N,10
+save_<sample_label>,sample,_Sample_type,2730,sample,SampleType,VARCHAR(127),NOT NULL, , , ,,,sampleDescr,SampleType,N,20
+save_<sample_label>,sample,_Details,2740,sample,Details,TEXT, , , , ,,,sampleDescr,Details,N,30
+save_<sample_label>,sample,_Mol_label,2750,sampleMolLabel,MolLabel,VARCHAR(127),NOT NULL, ,,,,,sampleContents,MolLabel,Y,10
+save_<sample_label>,sample,_Concentration_value,2760,sampleMolLabel,ConcentrationValue,FLOAT, , , , ,,,sampleContents,ConcValue,Y,20
+save_<sample_label>,sample,_Concentration_value_units,2770,sampleMolLabel,ConcentratiValUnit,VARCHAR(127),NOT NULL, , , ,,,sampleContents,ConcValueUnit,Y,30
+save_<sample_label>,sample,_Concentration_min_value,2780,sampleMolLabel,ConcentratioMiValu,FLOAT, , , , ,,,sampleContents,ConcMinValue,Y,40
+save_<sample_label>,sample,_Concentration_max_value,2790,sampleMolLabel,ConcentratioMaValu,FLOAT, , , , ,,,sampleContents,ConcMaxValue,Y,50
+save_<sample_label>,sample,_Isotopic_labeling,2800,sampleMolLabel,IsotopicLabeling,VARCHAR(127), , , , ,,,sampleContents,IsotopicLabeling,Y,60
+save_sample_mol_purity,sample_mol_purity,_Saveframe_category,2810,sampleMolPurity,SaveframeCategory,VARCHAR(127), , , , ,,,SamplePurityDescr,SaveframeCategory,N,10
+save_sample_mol_purity,sample_mol_purity,_Details,2820,sampleMolPurity,Details,TEXT, , , , ,,,SamplePurityDescr,Details,N,20
+save_sample_mol_purity,sample_mol_purity,_Sample_label,2830,sampleMolPurity,SampleLabel,VARCHAR(127), , ,,,,,SamplePurityDescr,SampleLabel,N,30
+save_sample_mol_purity,sample_mol_purity,_Mol_label,2840,samplMoPuritMoLabe,MolLabel,VARCHAR(127), , ,,,,,molPurityDescr,MolLabel,Y,10
+save_sample_mol_purity,sample_mol_purity,_Mol_purity_value,2850,samplMoPuritMoLabe,MolPurityValue,FLOAT, , , , ,,,molPurityDescr,MolPurityValue,Y,20
+save_sample_mol_purity,sample_mol_purity,_Mol_purity_value_units,2860,samplMoPuritMoLabe,MoPurityValueUnits,VARCHAR(31), , , , , ,,molPurityDescr,MolPurityValueUnit,Y,25
+save_sample_mol_purity,sample_mol_purity,_Mol_purity_measurement_method,2870,samplMoPuritMoLabe,MPuriMeasuremeMeth,VARCHAR(127), , , , ,,,molPurityDescr,PurityMeasMethod,Y,30
+save_<software_label>,software,_Saveframe_category,2880,software,SaveframeCategory,VARCHAR(127), , , , ,,,software,SaveframeCategory,N,10
+save_<software_label>,software,_Name,2890,software,Name,VARCHAR(127), , , , ,,,software,Name,N,20
+save_<software_label>,software,_Version,2900,software,Version,VARCHAR(127), , , , ,,,software,Version,N,30
+save_<software_label>,software,_Vendor,2910,softwareVendor,Vendor,VARCHAR(127), , , , ,,,softwareVendor,Vendor,Y,10
+save_<software_label>,software,_Address,2920,softwareVendor,Address,TEXT, , , , ,,,softwareVendor,Address,Y,20
+save_<software_label>,software,_Electronic_address,2930,softwareVendor,ElectronicAddress,TEXT, , , , ,,,softwareVendor,ElectronicAddress,Y,30
+save_<software_label>,software,_Task,2940,softwareTask,Task,VARCHAR(127), , , , ,,,softwareTask,Task,Y,10
+save_<software_label>,software,_Platform_vendor,2950,softwaPlatforVendo,PlatformVendor,VARCHAR(127), , , , ,,,softPlatformVendor,PlatformVendor,Y,10
+save_<software_label>,software,_Platform_model,2960,softwaPlatforVendo,PlatformModel,VARCHAR(127), , , , ,,,softPlatformVendor,PlatformModel,Y,20
+save_<software_label>,software,_Operating_system,2970,softwaPlatforVendo,OperatingSystem,VARCHAR(127), , , , ,,,softPlatformVendor,OperatingSystem,Y,30
+save_<software_label>,software,_Operating_system_version,2980,softwaPlatforVendo,OperatiSysteVersio,VARCHAR(127), , , , ,,,softPlatformVendor,OSVersion,Y,40
+save_<software_label>,software,_Hardware_code,2990,softwaPlatforVendo,HardwareCode,VARCHAR(127), , , , ,,,softPlatformVendor,HardwareCode,Y,50
+save_<software_label>,software,_Details,2992,software,Details,TEXT,,,,,,,software,Details,N,38
+save_<software_label>,software,_Citation_label,3000,software,CitationLabel,VARCHAR(127), , , , ,,,software,CitationLabel,N,40
+save_<NMR_spectrometer_label>,NMR_spectrometer,_Saveframe_category,3010,NMRSpectrometer,SaveframeCategory,VARCHAR(127), , , , ,,,NMRSpectrometer,SaveframeCategory,N,10
+save_<NMR_spectrometer_label>,NMR_spectrometer,_Manufacturer,3020,NMRSpectrometer,Manufacturer,VARCHAR(127), , , , ,,,NMRSpectrometer,Manufacturer,N,20
+save_<NMR_spectrometer_label>,NMR_spectrometer,_Model,3030,NMRSpectrometer,Model,VARCHAR(127), , , , ,,,NMRSpectrometer,Model,N,30
+save_<NMR_spectrometer_label>,NMR_spectrometer,_Field_strength,3040,NMRSpectrometer,FieldStrength,VARCHAR(127), , , , ,,,NMRSpectrometer,FieldStrength,N,40
+save_<NMR_spectrometer_label>,NMR_spectrometer,_Software_version_number,3050,NMRSpectrometer,SoftwarVersioNumbe,VARCHAR(127), , , , ,,,NMRSpectrometer,SoftVersionNumber,N,50
+save_<NMR_spectrometer_label>,NMR_spectrometer,_Details,3060,NMRSpectrometer,Details,TEXT, , , , ,,,NMRSpectrometer,Details,N,60
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Saveframe_category,3070,NMRApplieExperimen,SaveframeCategory,VARCHAR(127), , , , ,,,NMRExperimental,SaveframeCategory,N,10
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Experiment_name,3080,NMRApplieExperimen,ExperimentName,VARCHAR(127), , , , ,,,NMRExperimental,ExperimentName,N,20
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Sample_label,3082,NMRApplieExperimen,SampleLabel,VARCHAR(127), , , , , ,,NMRExperimental,SampleLabel,N,22
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_BMRB_pulse_sequence_accession_number,3090,NMRApplieExperimen,BMRBPSequAccessNum,VARCHAR(31), , , , ,,,NMRExperimental,BMRBPSequAccessNum,N,30
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Pulse_sequence_file_name,3100,NMRApplieExperimen,PulsSequencFilName,TEXT, , , , ,,,NMRExperimental,PulsSequencFilName,N,40
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Pulse_sequence_parameter_file_name,3110,NMRApplieExperimen,PuSequeParametFiNa,TEXT, , , , ,,,NMRExperimental,PuSequeParametFiNa,N,50
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Pulse_sequence_schematic_file_name,3120,NMRApplieExperimen,PuSequeSchematFiNa,TEXT, , , , ,,,NMRExperimental,PuSequeSchematFiNa,N,60
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Pulse_sequence_schematic_file_format,3130,NMRApplieExperimen,PuSequeSchemaFForm,VARCHAR(127), , , , ,,,NMRExperimental,PuSequeSchemaFForm,N,70
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Citation_label,3140,NMRAppExperiCitaLa,CitationLabel,VARCHAR(127), , , , ,,,NMRExptCit,CitationLabel,Y,10
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Details,3150,NMRApplieExperimen,Details,TEXT, , , , ,,,NMRExperimental,Details,N,80
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Acquisition_dimension_ID,3200,NMRAExpeAcquiDimID,AcquisitiDimensiID,VARCHAR(31), , , , ,,,NMRSpecAcqPar,AcquisitiDimensiID,Y,10
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Detected_atom_type,3210,NMRAExpeAcquiDimID,DetectedAtomType,VARCHAR(31), , , , ,,,NMRSpecAcqPar,DetectedAtomType,Y,20
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Spectrometer_carrier_frequency,3220,NMRAExpeAcquiDimID,SpectromCarrFreque,FLOAT, , , , ,,,NMRSpecAcqPar,SpectromCarrFreque,Y,30
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Acquisition_time,3230,NMRAExpeAcquiDimID,AcquisitionTime,FLOAT, , , , ,,,NMRSpecAcqPar,AcquisitionTime,Y,40
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Mixing_time,3240,NMRAExpeAcquiDimID,MixingTime,FLOAT, , , , ,,,NMRSpecAcqPar,MixingTime,Y,50
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Spectral_width,3250,NMRAExpeAcquiDimID,SpectralWidth,FLOAT, , , , ,,,NMRSpecAcqPar,SpectralWidth,Y,60
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Spectral_folding,3260,NMRAExpeAcquiDimID,SpectralFolding,VARCHAR(31), , , , ,,,NMRSpecAcqPar,SpectralFolding,Y,70
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Data_point_number,3270,NMRAExpeAcquiDimID,DataPointNumber,INTEGER, , , , ,,,NMRSpecAcqPar,DataPointNumber,Y,80
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Data_point_type,3280,NMRAExpeAcquiDimID,DataPointType,VARCHAR(31), , , , ,,,NMRSpecAcqPar,DataPointType,Y,90
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Data_point_spacing,3290,NMRAExpeAcquiDimID,DataPointSpacing,VARCHAR(31), , , , ,,,NMRSpecAcqPar,DataPointSpacing,Y,100
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Processing_dimension_ID,3300,NMRAExpeProcDimeID,ProcessiDimensioID,VARCHAR(31), , , , ,,,NMRSpecProcPar,ProcessiDimensioID,Y,10
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Exponential_factor,3310,NMRAExpeProcDimeID,ExponentialFactor,FLOAT, , , , ,,,NMRSpecProcPar,ExponentialFactor,Y,20
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Gaussian_factor,3320,NMRAExpeProcDimeID,GaussianFactor,FLOAT, , , , ,,,NMRSpecProcPar,GaussianFactor,Y,30
+save_<NMR_applied_experiment_label>,NMR_applied_experiment,_Processed_real_points,3330,NMRAExpeProcDimeID,ProcesseRealPoints,INTEGER, , , , ,,,NMRSpecProcPar,ProcesseRealPoints,Y,40
+save_<sample_conditions_label>,sample_conditions,_Saveframe_category,3340,sampleConditions,SaveframeCategory,VARCHAR(127),NOT NULL, , , ,,,sampleCondDescr,SaveframeCategory,N,10
+save_<sample_conditions_label>,sample_conditions,_Details,3350,sampleConditions,Details,TEXT, , , , ,,,sampleCondDescr,Details,N,20
+save_<sample_conditions_label>,sample_conditions,_Variable_type,3360,samConditiVariabTy,VariableType,VARCHAR(127),NOT NULL,23, , ,Y,,sampleConditions,VariableType,Y,10
+save_<sample_conditions_label>,sample_conditions,_Variable_value,3370,samConditiVariabTy,VariableValue,FLOAT,NOT NULL, , , ,Y,,sampleConditions,VariableValue,Y,20
+save_<sample_conditions_label>,sample_conditions,_Variable_value_error,3380,samConditiVariabTy,VariableValueError,FLOAT, , , , ,,,sampleConditions,VariableValueError,Y,30
+save_<sample_conditions_label>,sample_conditions,_Variable_value_units,3390,samConditiVariabTy,VariableValueUnits,VARCHAR(31),NOT NULL, , , ,,,sampleConditions,VariableValueUnits,Y,40
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Saveframe_category,3400,chemicShifReferenc,SaveframeCategory,VARCHAR(127), , , , ,,,chemShiftRefDescr,SaveframeCategory,N,10
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Details,3410,chemicShifReferenc,Details,TEXT, , , , ,,,chemShiftRefDescr,Details,N,20
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Mol_common_name,3420,chemiShRefereMComN,MolCommonName,VARCHAR(127), ,24, , ,Y,,chemShiftReferences,MolCommonName,Y,10
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Atom_type,3430,chemiShRefereMComN,AtomType,VARCHAR(31), , , , ,,,chemShiftReferences,AtomType,Y,20
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Atom_isotope_number,3440,chemiShRefereMComN,AtomIsotopeNumber,INTEGER, , , , ,,,chemShiftReferences,AtomIsotopeNumber,Y,30
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Atom_group,3450,chemiShRefereMComN,AtomGroup,VARCHAR(31), , , , ,,,chemShiftReferences,AtomGroup,Y,40
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Chem_shift_units,3460,chemiShRefereMComN,ChemShiftUnits,VARCHAR(127), , , , ,,,chemShiftReferences,ChemShiftUnits,Y,50
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Chem_shift_value,3470,chemiShRefereMComN,ChemShiftValue,FLOAT, , , , ,,,chemShiftReferences,ChemShiftValue,Y,60
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Reference_method,3480,chemiShRefereMComN,ReferenceMethod,VARCHAR(127), ,25, , ,,,chemShiftReferences,ReferenceMethod,Y,70
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Reference_type,3490,chemiShRefereMComN,ReferenceType,VARCHAR(127), ,26, , ,,,chemShiftReferences,ReferenceType,Y,80
+save_<chemical_shift_reference_label>,chemical_shift_reference,_External_reference_sample_geometry,3500,chemiShRefereMComN,ExteRefereSamGeome,VARCHAR(127), ,27, , ,,,chemShiftReferences,ExtRefSampGeometry,Y,90
+save_<chemical_shift_reference_label>,chemical_shift_reference,_External_reference_location,3510,chemiShRefereMComN,ExterReferenLocati,VARCHAR(127), ,28, , ,,,chemShiftReferences,ExtRefLocation,Y,100
+save_<chemical_shift_reference_label>,chemical_shift_reference,_External_reference_axis,3520,chemiShRefereMComN,ExternaReferencAxi,VARCHAR(127), ,29, , ,,,chemShiftReferences,ExtRefAxis,Y,110
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Indirect_shift_ratio,3530,chemiShRefereMComN,IndirectShiftRatio,FLOAT, , , , ,,,chemShiftReferences,IndirectShiftRatio,Y,120
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Indirect_shift_ratio_citation_label,3540,chemiShRefereMComN,IndirShRaCitatiLab,VARCHAR(127), , ,,,,,chemShiftReferences,ShiftRatioCitLabel,Y,130
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Reference_correction_type,3550,chemiShRefereMComN,ReferenCorrectiTyp,VARCHAR(127), ,30, , ,,,chemShiftReferences,RefCorrectionType,Y,140
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Correction_value,3560,chemiShRefereMComN,CorrectionValue,FLOAT, , , , ,,,chemShiftReferences,CorrectionValue,Y,150
+save_<chemical_shift_reference_label>,chemical_shift_reference,_Correction_value_citation_label,3570,chemiShRefereMComN,CorrectVaCitatiLab,VARCHAR(127), , ,,,,,chemShiftReferences,CorrectValCitLabel,Y,160
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Saveframe_category,3580,assignChemicaShift,SaveframeCategory,VARCHAR(127), , , , ,,,assignChemicaShift,SaveframeCategory,N,10
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Details,3590,assignChemicaShift,Details,TEXT, , , , ,,,assignChemicaShift,Details,N,20
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Software_label,3600,assiChemShiSoftwLa,SoftwareLabel,VARCHAR(127), , , ,,,,chemShiftSoftList,SoftwareLabel,Y,10
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Experiment_label,3610,assiChemShExperiLa,ExperimentLabel,VARCHAR(127), , , ,,,,chemShiftExptList,ExperimentLabel,Y,10
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Sample_label,3620,assigChemiShiSamLa,SampleLabel,VARCHAR(127), , , ,,,,chemShiftSampList,SampleLabel,Y,10
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Sample_conditions_label,3630,assignChemicaShift,SamplConditionLabe,VARCHAR(127), , , ,,,,assignChemicaShift,SampleCondLabel,N,30
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Chem_shift_reference_set_label,3640,assignChemicaShift,ChShiReferenSeLabe,VARCHAR(127), , , ,,,,assignChemicaShift,ChemShiftRefLabel,N,40
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Mol_system_component_name,3650,assignChemicaShift,MoSysteComponenNam,VARCHAR(127), , , ,,,,assignChemicaShift,SysCompName,N,50
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Text_data_format,3660,assignChemicaShift,TextDataFormat,VARCHAR(127), , , , , ,,assignChemicaShift,TextDataFormat,N,52
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Text_data,3670,assignChemicaShift,TextData,TEXT, , , , , ,,assignChemicaShift,TextData,N,54
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Nucleus,3680,assigChemShiErr,Nucleus,VARCHAR(31), ,99, , ,,,ChemicalShiftErr,Nucleus,Y,10
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Chemical_shift_error,3690,assigChemShiErr,ChemicalShiftErr,FLOAT, , , , ,,,ChemicalShiftErr,ChemicalShiftErr,Y,20
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Atom_shift_assign_ID,3720,assiChemShAShAssID,AtomShiftAssignID,INTEGER, , , , ,,,ChemicalShifts,AtomShiftAssignID,Y,10
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Residue_seq_code,3730,assiChemShAShAssID,ResidueSeqCode,INTEGER, , , ,,,,ChemicalShifts,ResidueSeqCode,Y,20
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Residue_label,3740,assiChemShAShAssID,ResidueLabel,VARCHAR(31), , , ,,Y,,ChemicalShifts,ResidueLabel,Y,30
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Atom_name,3750,assiChemShAShAssID,AtomName,VARCHAR(31), , , , ,Y,,ChemicalShifts,AtomName,Y,40
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Atom_type,3760,assiChemShAShAssID,AtomType,VARCHAR(31), ,22, , ,,,ChemicalShifts,AtomType,Y,50
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Chem_shift_value,3770,assiChemShAShAssID,ChemShiftValue,FLOAT, , , , ,,,ChemicalShifts,ChemShiftValue,Y,60
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Chem_shift_value_error,3780,assiChemShAShAssID,CheShiftValueError,FLOAT, , , , ,,,ChemicalShifts,ChemShiftValError,Y,70
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Chem_shift_ambiguity_code,3790,assiChemShAShAssID,CheShifAmbiguitCod,VARCHAR(2), ,31, , ,,,ChemicalShifts,ChemShiftAmbCode,Y,80
+save_<assigned_chemical_shifts_label>,assigned_chemical_shifts,_Atom_shift_assign_ID_ambiguity,3800,assCheSASAsIDAmbig,AtShiAssiIDAmbigui,VARCHAR(127), , , ,,,,chemShiftAmbgLinks,AtmShiftAssgnAmb,Y,10
+save_<coupling_constants_label>,coupling_constants,_Saveframe_category,3810,couplingConstants,SaveframeCategory,VARCHAR(127), , , , ,,,JConstantDescr,SaveframeCategory,N,10
+save_<coupling_constants_label>,coupling_constants,_Details,3820,couplingConstants,Details,TEXT, , , , ,,,JConstantDescr,Details,N,20
+save_<coupling_constants_label>,coupling_constants,_Software_label,3830,couplConstaSoftwLa,SoftwareLabel,VARCHAR(127), , , ,,,,JConstantSoftList,SoftwareLabel,Y,10
+save_<coupling_constants_label>,coupling_constants,_Experiment_label,3840,coupConstExperimLa,ExperimentLabel,VARCHAR(127), , , ,,,,JConstantExptList,ExperimentLabel,Y,10
+save_<coupling_constants_label>,coupling_constants,_Sample_label,3850,couplConstaSampLab,SampleLabel,VARCHAR(127), , , ,,,,JConstantSampList,SampleLabel,Y,10
+save_<coupling_constants_label>,coupling_constants,_Sample_conditions_label,3860,couplingConstants,SamplConditionLabe,VARCHAR(127), , , ,,,,JConstantDescr,SampleCondLabel,N,30
+save_<coupling_constants_label>,coupling_constants,_Spectrometer_frequency_1H,3870,couplingConstants,SpectromeFrequen1H,FLOAT, , , , ,,,JConstantDescr,SpectromeFrequen1H,N,40
+save_<coupling_constants_label>,coupling_constants,_Mol_system_component_name,3880,couplingConstants,MoSysteComponenNam,VARCHAR(127), , , ,,,,JConstantDescr,SysCompName,N,50
+save_<coupling_constants_label>,coupling_constants,_Text_data_format,3890,couplingConstants,TextDataFormat,VARCHAR(127), , , , , ,,JConstantDescr,TextDataFormat,N,52
+save_<coupling_constants_label>,coupling_constants,_Text_data,3900,couplingConstants,TextData,TEXT, , , , , ,,JConstantDescr,TextData,N,54
+save_<coupling_constants_label>,coupling_constants,_Coupling_constant_ID,3906,coupConstaAOResiSC,CouplingConstantID,INTEGER,,,,,,,Jconstants,CouplingConstantID,Y,10
+save_<coupling_constants_label>,coupling_constants,_Coupling_constant_code,3908,coupConstaAOResiSC,CouplinConstanCode,VARCHAR(31), ,80, , ,,,Jconstants,Jcode,Y,12
+save_<coupling_constants_label>,coupling_constants,_Atom_one_residue_seq_code,3910,coupConstaAOResiSC,AtoOnResiduSeqCode,INTEGER, , , ,,,,Jconstants,AtomOneResSeqCode,Y,14
+save_<coupling_constants_label>,coupling_constants,_Atom_one_residue_label,3920,coupConstaAOResiSC,AtoOneResidueLabel,VARCHAR(31), , , ,,Y,,Jconstants,AtomOneResLabel,Y,20
+save_<coupling_constants_label>,coupling_constants,_Atom_one_name,3930,coupConstaAOResiSC,AtomOneName,VARCHAR(31), , , , ,Y,,Jconstants,AtomOneName,Y,30
+save_<coupling_constants_label>,coupling_constants,_Atom_two_residue_seq_code,3940,coupConstaAOResiSC,AtoTwResiduSeqCode,INTEGER, , , ,,,,Jconstants,AtomTwoResSeqCode,Y,40
+save_<coupling_constants_label>,coupling_constants,_Atom_two_residue_label,3950,coupConstaAOResiSC,AtoTwoResidueLabel,VARCHAR(31), , , ,,,,Jconstants,AtomTwoResLabel,Y,50
+save_<coupling_constants_label>,coupling_constants,_Atom_two_name,3960,coupConstaAOResiSC,AtomTwoName,VARCHAR(31), , , , ,,,Jconstants,AtomTwoName,Y,60
+save_<coupling_constants_label>,coupling_constants,_Coupling_constant_value,3970,coupConstaAOResiSC,CouplinConstanValu,FLOAT, , , , ,,,Jconstants,Jvalue,Y,70
+save_<coupling_constants_label>,coupling_constants,_Coupling_constant_min_value,3980,coupConstaAOResiSC,CoupliConstaMiValu,FLOAT, , , , ,,,Jconstants,JMinValue,Y,80
+save_<coupling_constants_label>,coupling_constants,_Coupling_constant_max_value,3990,coupConstaAOResiSC,CoupliConstaMaValu,FLOAT, , , , ,,,Jconstants,JMaxValue,Y,90
+save_<coupling_constants_label>,coupling_constants,_Coupling_constant_value_error,4000,coupConstaAOResiSC,CoupliConstaValErr,FLOAT, , , , ,,,Jconstants,JValueError,Y,100
+save_<citation_label>,citation,_Saveframe_category,4040,citation,SaveframeCategory,VARCHAR(127), , , , , ,,citation,SaveframeCategory,N,10
+save_<citation_label>,citation,_MEDLINE_UI_code,4050,citation,MEDLINEUICode,VARCHAR(127), , , , , ,,citation,MEDLINEUICode,N,20
+save_<citation_label>,citation,_Citation_full,4060,citation,CitationFull,TEXT, , , , , ,,citation,CitationFull,N,30
+save_<citation_label>,citation,_Citation_title,4070,citation,CitationTitle,TEXT, , , , , ,,citation,CitationTitle,N,40
+save_<citation_label>,citation,_Citation_type,4080,citation,CitationType,VARCHAR(127), , , , , ,,citation,CitationType,N,50
+save_<citation_label>,citation,_CAS_abstract_code,4090,citation,CASAbstractCode,VARCHAR(127), , , , , ,,citation,CASAbstractCode,N,60
+save_<citation_label>,citation,_Author_ordinal,4100,citatioAuthoOrdina,AuthorOrdinal,INTEGER, , , , , ,,CitAuthors,AuthorOrdinal,Y,10
+save_<citation_label>,citation,_Author_family_name,4110,citatioAuthoOrdina,AuthorFamilyName,VARCHAR(127), , , , , ,,CitAuthors,AuthorFamilyName,Y,20
+save_<citation_label>,citation,_Author_given_name,4120,citatioAuthoOrdina,AuthorGivenName,VARCHAR(127), , , , , ,,CitAuthors,AuthorGivenName,Y,30
+save_<citation_label>,citation,_Author_middle_initials,4130,citatioAuthoOrdina,AuthoMiddlInitials,VARCHAR(127), , , , , ,,CitAuthors,AuthorMidInitials,Y,40
+save_<citation_label>,citation,_Author_family_title,4140,citatioAuthoOrdina,AuthorFamilyTitle,VARCHAR(127), , , , , ,,CitAuthors,AuthorFamilyTitle,Y,50
+save_<citation_label>,citation,_Journal_abbreviation,4150,citation,JournaAbbreviation,VARCHAR(127), , , , , ,,citation,JournalAbbrev,N,70
+save_<citation_label>,citation,_Journal_name_full,4160,citation,JournalNameFull,VARCHAR(127), , , , , ,,citation,JournalNameFull,N,80
+save_<citation_label>,citation,_Journal_volume,4170,citation,JournalVolume,VARCHAR(31), , , , , ,,citation,JournalVolume,N,90
+save_<citation_label>,citation,_Journal_issue,4180,citation,JournalIssue,VARCHAR(31), , , , , ,,citation,JournalIssue,N,100
+save_<citation_label>,citation,_Journal_ASTM,4190,citation,JournalASTM,VARCHAR(127), , , , , ,,citation,JournalASTM,N,110
+save_<citation_label>,citation,_Journal_ISSN,4200,citation,JournalISSN,VARCHAR(127), , , , , ,,citation,JournalISSN,N,120
+save_<citation_label>,citation,_Journal_CSD,4210,citation,JournalCSD,VARCHAR(127), , , , , ,,citation,JournalCSD,N,130
+save_<citation_label>,citation,_Book_title,4220,citation,BookTitle,TEXT, , , , , ,,citation,BookTitle,N,140
+save_<citation_label>,citation,_Book_chapter_title,4230,citation,BookChapterTitle,TEXT, , , , , ,,citation,BookChapterTitle,N,150
+save_<citation_label>,citation,_Book_volume,4240,citation,BookVolume,VARCHAR(31), , , , , ,,citation,BookVolume,N,160
+save_<citation_label>,citation,_Book_series,4250,citation,BookSeries,TEXT, , , , , ,,citation,BookSeries,N,170
+save_<citation_label>,citation,_Book_publisher,4260,citation,BookPublisher,VARCHAR(127), , , , , ,,citation,BookPublisher,N,180
+save_<citation_label>,citation,_Book_publisher_city,4270,citation,BookPublisherCity,VARCHAR(127), , , , , ,,citation,BookPublisherCity,N,190
+save_<citation_label>,citation,_Book_ISBN,4280,citation,BookISBN,VARCHAR(127), , , , , ,,citation,BookISBN,N,200
+save_<citation_label>,citation,_Conference_title,4290,citation,ConferenceTitle,TEXT, , , , , ,,citation,ConfTitle,N,210
+save_<citation_label>,citation,_Conference_site,4300,citation,ConferenceSite,TEXT, , , , , ,,citation,ConfSite,N,220
+save_<citation_label>,citation,_Conference_state_province,4310,citation,ConferenStaProvinc,VARCHAR(127), , , , , ,,citation,ConfStateProv,N,230
+save_<citation_label>,citation,_Conference_country,4320,citation,ConferenceCountry,VARCHAR(127), , , , , ,,citation,ConfCountry,N,240
+save_<citation_label>,citation,_Conference_start_date,4330,citation,ConferencStartDate,DATETIME year to day, , , , , ,,citation,ConfStartDate,N,250
+save_<citation_label>,citation,_Conference_end_date,4340,citation,ConferenceEndDate,DATETIME year to day, , , , , ,,citation,ConfEndDate,N,260
+save_<citation_label>,citation,_Conference_abstract_number,4350,citation,ConferenAbstraNumb,VARCHAR(31), , , , , ,,citation,ConfAbstractNo,N,270
+save_<citation_label>,citation,_Thesis_institution,4360,citation,ThesisInstitution,VARCHAR(127), , , , , ,,citation,ThesisInstitution,N,280
+save_<citation_label>,citation,_Thesis_institution_city,4370,citation,ThesiInstitutioCit,VARCHAR(127), , , , , ,,citation,ThesisInstCity,N,290
+save_<citation_label>,citation,_Thesis_institution_country,4380,citation,ThesInstitutiCount,VARCHAR(127), , , , , ,,citation,ThesisInstCountry,N,300
+save_<citation_label>,citation,_Page_first,4390,citation,PageFirst,VARCHAR(31), , , , , ,,citation,PageFirst,N,310
+save_<citation_label>,citation,_Page_last,4400,citation,PageLast,VARCHAR(31), , , , , ,,citation,PageLast,N,320
+save_<citation_label>,citation,_Year,4410,citation,Year,INTEGER, , , , , ,,citation,Year,N,330
+save_<citation_label>,citation,_Details,4420,citation,Details,TEXT, , , , , ,,citation,Details,N,340
+save_<citation_label>,citation,_Keyword,4430,citationKeyword,Keyword,VARCHAR(127), , , , , ,,citKeyword,Keyword,Y,10
+save_<citation_label>,citation,_Editor_ordinal,4440,citatioEditoOrdina,EditorOrdinal,INTEGER, , , , , ,,CitEditors,EditorOrdinal,Y,10
+save_<citation_label>,citation,_Editor_family_name,4450,citatioEditoOrdina,EditorFamilyName,VARCHAR(127), , , , , ,,CitEditors,EditorFamilyName,Y,20
+save_<citation_label>,citation,_Editor_given_name,4460,citatioEditoOrdina,EditorGivenName,VARCHAR(127), , , , , ,,CitEditors,EditorGivenName,Y,30
+save_<citation_label>,citation,_Editor_middle_initials,4470,citatioEditoOrdina,EditoMiddlInitials,VARCHAR(127), , , , , ,,CitEditors,EditorMidInitials,Y,40
+save_<citation_label>,citation,_Editor_family_title,4480,citatioEditoOrdina,EditorFamilyTitle,VARCHAR(127), , , , , ,,CitEditors,EditorFamilyTitle,Y,50
+save_author_atom_nomenclature_maps,author_atom_nomenclature_maps,_Saveframe_category,4490,authAtNomenclatuMa,SaveframeCategory,VARCHAR(127), , , , , ,,AuthAtmNomCat,SaveframeCategory,N,10
+save_author_atom_nomenclature_maps,author_atom_nomenclature_maps,_Mol_system_component_name,4500,aANomenclMMSCompoN,MoSysteComponenNam,VARCHAR(127), , , , , ,,AuthorAtomNom,SysCompName,Y,10
+save_author_atom_nomenclature_maps,author_atom_nomenclature_maps,_Residue_seq_code,4510,aANomenclMMSCompoN,ResidueSeqCode,VARCHAR(31), , , , , ,,AuthorAtomNom,ResidueSeqCode,Y,20
+save_author_atom_nomenclature_maps,author_atom_nomenclature_maps,_Residue_label,4520,aANomenclMMSCompoN,ResidueLabel,VARCHAR(31), , , , , ,,AuthorAtomNom,ResidueLabel,Y,30
+save_author_atom_nomenclature_maps,author_atom_nomenclature_maps,_Atom_name,4530,aANomenclMMSCompoN,AtomName,VARCHAR(31), , , , , ,,AuthorAtomNom,AtomName,Y,40
+save_author_atom_nomenclature_maps,author_atom_nomenclature_maps,_Author_atom_name,4540,aANomenclMMSCompoN,AuthorAtomName,VARCHAR(31), , , , , ,,AuthorAtomNom,AuthorAtomName,Y,50
+save_<database_sequence_alignments>,sequence_alignments,_Saveframe_category,4550,sequenceAlignments,SaveframeCategory,VARCHAR(127), , , , , ,,SequenceAlignments,SaveframeCategory,N,10
+save_<database_sequence_alignments>,sequence_alignments,_Mol_system_component_name,4560,sequenceAlignments,MoSysteComponenNam,VARCHAR(127), , , , , ,,SequenceAlignments,SysCompName,N,20
+save_<database_sequence_alignments>,sequence_alignments,_Database_name,4570,sequenceAlignments,DatabaseName,VARCHAR(127), , , , , ,,SequenceAlignments,DatabaseName,N,30
+save_<database_sequence_alignments>,sequence_alignments,_Database_accession_code,4580,sequenceAlignments,DatabasAccessioCod,VARCHAR(127), , , , , ,,SequenceAlignments,DatabasAccessioCod,N,40
+save_<database_sequence_alignments>,sequence_alignments,_Sequence_homology_type,4590,sequenceAlignments,SequencHomologType,VARCHAR(127), ,87, , , ,,SequenceAlignments,SequencHomologType,N,50
+save_<database_sequence_alignments>,sequence_alignments,_PDB_SEQRES_seq_location,4600,seAligPDBSEQRESSLo,PDBSEQRESSeLocatio,VARCHAR(31), , , , , ,,SeqAlignmentTable,PDBSEQRESLocation,Y,10
+save_<database_sequence_alignments>,sequence_alignments,_PDB_SEQRES_residue_label,4610,seAligPDBSEQRESSLo,PDBSEQRESResidLabe,VARCHAR(31), , , , , ,,SeqAlignmentTable,PDBSEQRESResLabel,Y,20
+save_<database_sequence_alignments>,sequence_alignments,_DB_residue_seq_code,4620,seAligPDBSEQRESSLo,DBResidueSeqCode,VARCHAR(31), , , , , ,,SeqAlignmentTable,DBResSeqCode,Y,30
+save_<database_sequence_alignments>,sequence_alignments,_DB_residue_seq_insertion_code,4630,seAligPDBSEQRESSLo,DBResidSInsertiCod,VARCHAR(31), , , , , ,,SeqAlignmentTable,DBResInsertCode,Y,40
+save_<database_sequence_alignments>,sequence_alignments,_DB_residue_label,4640,seAligPDBSEQRESSLo,DBResidueLabel,VARCHAR(31), , , , , ,,SeqAlignmentTable,DBResidueLabel,Y,50
+save_<database_sequence_alignments>,sequence_alignments,_DB_chain_ID,4650,seAligPDBSEQRESSLo,DBChainID,VARCHAR(31), , , , , ,,SeqAlignmentTable,DBChainID,Y,60
+save_<database_sequence_alignments>,sequence_alignments,_Residue_seq_code,4660,seAligPDBSEQRESSLo,ResidueSeqCode,VARCHAR(31), , , , , ,,SeqAlignmentTable,ResSeqCode,Y,70
+save_<database_sequence_alignments>,sequence_alignments,_Residue_author_seq_code,4670,seAligPDBSEQRESSLo,ResiduAuthoSeqCode,VARCHAR(31), , , , , ,,SeqAlignmentTable,ResAuthorSeqCode,Y,80
+save_<database_sequence_alignments>,sequence_alignments,_Residue_label,4680,seAligPDBSEQRESSLo,ResidueLabel,VARCHAR(31), , , , , ,,SeqAlignmentTable,ResidueLabel,Y,90
+save_<database_sequence_alignments>,sequence_alignments,_Assigned_chem_shifts,4690,seAligPDBSEQRESSLo,AssignedChemShifts,VARCHAR(31), , , , , ,,SeqAlignmentTable,AssignedChemShifts,Y,100
+save_<database_sequence_alignments>,sequence_alignments,_Coupling_constants,4700,seAligPDBSEQRESSLo,CouplingConstants,VARCHAR(31), , , , , ,,SeqAlignmentTable,CouplingConstants,Y,110
+save_BMRB_verification_warnings,BMRB_verification_warnings,_Saveframe_category,4710,BMRBVerificatWarni,SaveframeCategory,VARCHAR(127), , , , , ,,BMRBWarningCat,SaveframeCategory,N,10
+save_BMRB_verification_warnings,BMRB_verification_warnings,_Warning,4720,BMRBVerificWarnWar,Warning,VARCHAR(127), , , , , ,,BMRBverifywarning,Warning,Y,10
+save_BMRB_verification_warnings,BMRB_verification_warnings,_Warning_value,4730,BMRBVerificWarnWar,WarningValue,VARCHAR(31), ,88, , , ,,BMRBverifywarning,WarningValue,Y,20

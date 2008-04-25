@@ -1,0 +1,1325 @@
+
+
+                ##########################################
+                #           NMR-STAR Schema              #
+                #             Version 3.0                #
+                #             2001-06-04                 #
+                #                                        #
+                #   This file is under construction!!    #
+                # Your help and suggestions are welcome. #
+                #                                        #
+                ##########################################
+
+
+
+data_4001_new
+
+#######################
+#  Study description  #
+#######################
+
+save_<study_ID>
+    _Saveframe_category   study_description
+    _Entry_ID                   4001
+    _Saveframe_ID               1
+    _Saveframe_framecode        study_description
+
+
+    _Study_ID                   @
+    _Study_name                 @
+    _Study_type                 @
+    _Details                    @
+
+   loop_
+      _Keyword_entry_ID
+      _Keyword_saveframe_ID
+
+      _Keyword 
+
+     @ @ @
+
+   stop_
+
+   loop_
+     _Study_entry_ID
+     _Study_entry_saveframe_ID
+
+     _Study_entry_BMRB_accession_number
+     _Study_entry_relationship
+     _Study_entry_details
+
+    @ @ @ @ @
+
+   stop_
+
+save_
+
+
+########################                     
+#   Entry information  #
+########################
+
+save_entry_information
+  _Saveframe_category         entry_information
+  _Entry_ID                        4001
+  _Saveframe_ID                    2
+  _Saveframe_framecode             entry_information
+
+  _Entry_title               
+;
+1H, 13C, and 15N resonance assignments for reduced apo-S100beta
+;
+
+   loop_
+      _Author_entry_ID
+      _Author_saveframe_ID
+
+      _Author_ordinal
+      _Author_family_name 
+      _Author_given_name
+      _Author_first_initial
+      _Author_middle_initials
+      _Author_family_title
+
+ 4001      2      1   Amburgey    Judith  C.  . 
+ 4001      2      2   Abildgaard  Frits   .   . 
+ 4001      2      3   Starich     Mary    R.  . 
+ 4001      2      4   Shah        Sanjiv  .   . 
+ 4001      2      5   Hilt        Dana    C.  . 
+ 4001      2      6   Weber       David   J.  . 
+
+   stop_           
+                                        
+  _BMRB_accession_number                     4001
+  _Entry_ID                                  4001
+  _Entry_type                                Reformat
+  _Submission_date                           1995-06-15
+  _Accession_date                            1996-03-05
+  _Latest_release_date                       @
+  _Original_release_date                     @
+  _Entry_origination                         Author
+  _NMR_STAR_version                          3.0
+  _Experimental_method                       NMR
+  _Details                                   
+;
+  In this study, multiple chemical shifts were observed for amino acid nuclei
+  in two segments of apo-S100beta.  The submitted chemical shifts have been
+  grouped into seven categories; 1) resonances from amino acids that did not
+  exhibit multiple shifts (chemical shift save frame 'constant_shifts'), 2)
+  three sets of resonances related to amino acids in the first 15 residues of
+  the protein (chemical shift save frames set_a, set_b, and set_c), and 3)
+  three sets of resonances for several amino acids in the region from
+  approximately residues 41 to 46 (chemical shift save frames set_d, set_e,
+  and set_f).
+;
+
+
+  loop_
+     _Saveframe_category_entry_ID
+     _Saveframe_category_saveframe_ID
+
+     _Saveframe_category_type
+     _Saveframe_category_type_count
+
+ 4001   2      assigned_chemical_shifts  7  
+
+  stop_
+
+  loop_
+     _Data_type_entry_ID
+     _Data_type_saveframe_ID
+
+     _Data_type
+     _Data_type_count
+
+ 4001   2      '1H chemical shifts'   597  
+ 4001   2      '13C chemical shifts'  452  
+ 4001   2      '15N chemical shifts'  114  
+
+  stop_
+
+  loop_
+     _Release_entry_ID
+     _Release_entry_saveframe_ID
+
+     _Release_ID
+     _Release_date
+     _Release_submission_date
+     _Release_type
+     _Release_author
+     _Release_detail
+
+ 4001   2  1996-01-29  original  BMRB 'Original entry generated.'         
+ 4001   2  1996-03-05  reformat  BMRB 
+;
+  Converted to the BMRB 1996-03-01 export file format.  Accession number
+  changed from BMRB0001 to 4001.
+; 
+ 4001   2  1997-08-01  revised   BMRB 'chemical shift counts added to header'  
+ 4001   2  1999-10-18  reformat  BMRB 'Format updated to NMR-STAR version 2.1' 
+
+  stop_
+
+  _Special_processing_instructions                @
+
+  loop_
+     _Related_entries_entry_ID
+     _Related_entries_saveframe_ID
+                                 
+     _Related_BMRB_accession_number
+     _Relationship
+
+     @ @ @ @
+
+  stop_
+
+  _Update_BMRB_accession_number                   @
+  _Replace_BMRB_accession_number                  @
+  _Update_PDB_accession_number                    @
+  _Replace_PDB_accession_number                   @
+  _Update_details                                 @
+
+  _Release_immediately                            @
+  _Release_on_publication                         @
+  _Release_date_request                           @
+  _Release_date_justification                     @
+
+save_
+
+######################
+#   Contact persons  #
+######################
+
+save_contact_persons
+  _Saveframe_category   contact_persons
+  _Entry_ID               4001
+  _Saveframe_ID           3
+  _Saveframe_framecode    contact_persons                                      
+          
+  loop_
+    _Contact_person_entry_ID
+    _Contact_person_saveframe_ID
+
+    _Contact_person_BMRB_ID
+    _Family_name
+    _Given_name
+    _Middle_initials
+    _Family_title
+    _Department_and_Institution
+    _Mailing_address
+    _Phone_number
+    _Email_address
+    _FAX_number
+
+   @ @ @ @ @   @ @ @ @ @   @ @
+
+   stop_
+
+save_
+
+###############################
+#   Citations for this entry  #
+###############################
+
+save_entry_citation
+  _Saveframe_category     citation
+  _Entry_ID               4001
+  _Saveframe_ID           4
+  _Saveframe_framecode    entry_citation
+
+  _Citation_class                     entry
+  _Citation_full                      .
+  _Citation_title
+;
+1H, 13C and 15N NMR Assignments and Solution Secondary Structure of Rat 
+Apo-S100beta
+;
+
+  _Citation_status                    published
+  _Citation_type                      journal
+  _CAS_abstract_code                  ?
+  _MEDLINE_UI_code                    96173091
+  _PubMed_ID                          ?
+
+
+    loop_
+      _Author_entry_ID
+      _Author_saveframe_ID
+
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_first_initial
+      _Author_middle_initials
+      _Author_family_title
+
+ 4001 4       1   Amburgey    Judith  C.  . 
+ 4001 4       2   Abildgaard  Frits   .   . 
+ 4001 4       3   Starich     Mary    R.  . 
+ 4001 4       4   Shah        Sanjiv  .   . 
+ 4001 4       5   Hilt        Dana    C.  . 
+ 4001 4       6   Weber       David   J.  . 
+
+    stop_
+
+    _Journal_abbreviation                    'J. Biomol. NMR'
+    _Journal_name_full                       ?
+    _Journal_volume                          6
+    _Journal_issue                           ?
+
+    _Page_first                              171
+    _Page_last                               179
+    _Year                                    1995
+
+    loop_
+      _Keyword_entry_ID
+      _Keyword_saveframe_ID
+
+      _Keyword
+
+ 4001 4       S100beta             
+ 4001 4      'secondary structure' 
+ 4001 4       EF-hands             
+ 4001 4      'S100 proteins'       
+
+    stop_
+
+save_
+
+
+
+###################################
+#   Molecular system description  #
+###################################
+
+save_system_apo-S100beta
+    _Saveframe_category   molecular_system
+    _Entry_ID                   4001
+    _Saveframe_ID               5
+    _Saveframe_framecode        system_apo-S100beta
+                    
+    _Mol_system_ID                  1
+    _Mol_system_BMRB_ID             1
+    _Mol_system_name                apo-S100beta
+    _Abbreviation_common            apo-S100beta
+    _Mol_system_author_name         apo-S100beta
+    _Author_abbreviation            apo-S100beta
+   
+
+   _Enzyme_commission_number               .
+   _Mol_system_molecular_mass              ?
+   _Mol_system_paramagnetic                no
+   _Mol_system_thiol_state                 unknown
+   _Details                                .
+
+
+   loop_
+     _Mol_system_type_entry_ID
+     _Mol_system_type_saveframe_ID
+
+     _Mol_system_type           
+
+      4001   5    'monomeric polymer'
+
+   stop_
+
+   loop_
+     _Mol_system_component_entry_ID
+     _Mol_system_component_saveframe_ID
+
+     _Mol_system_component_ID
+     _Mol_system_component_mol_ID
+     _Mol_system_component_label
+     _Mol_system_component_name
+     _Mol_system_component_code
+     _Mol_system_component_type
+     _Mol_system_component_experimental_data_reported
+     _Mol_system_component_physical_state
+     _Mol_system_component_exchange_averaged
+     _Mol_system_conformational_isomer
+     _Mol_system_chemical_modification
+     _Mol_system_chemical_exchange_state
+     _Mol_system_component_details
+
+4001   5   1    1  $S100beta     'apo-S100beta conformer 1' prot-1  
+polymer  yes  native   no  possible   possible   .  .
+4001   5   2    1  $S100beta     'apo-S100beta conformer 2' prot-2  
+polymer  yes  native no  possible   possible   .    .
+4001   5   3    1  $S100beta     'apo-S100beta conformer 3' prot-3  
+polymer  yes  native no  possible   possible   .    .
+4001   5   4    1  $S100beta     'apo-S100beta conformer 4' prot-4  
+polymer  yes  native no  possible   possible   .    .
+4001   5   5    1  $S100beta     'apo-S100beta conformer 5' prot-5  
+polymer  yes  native no  possible   possible   .    .
+4001   5   6    1  $S100beta     'apo-S100beta conformer 6' prot-6  
+polymer  yes  native no  possible   possible   .    .
+4001   5   7    1  $S100beta     'apo-S100beta conformer 7' prot-7  
+polymer  yes  native no  possible   possible   .    .
+
+   stop_
+
+   loop_
+     _Biological_function_entry_ID
+     _Biological_function_saveframe_ID
+
+     _Biological_function
+
+  4001   5   'calcium-binding protein' 
+
+   stop_
+
+   loop_
+      _Fixed_matched_database_entry_ID
+      _Fixed_matched_database_saveframe_ID
+
+      _Fixed_matched_database_name
+      _Fixed_matched_database_code
+      _Fixed_matched_database_entry_mol_name
+      _Fixed_matched_database_entry_details
+
+ 4001   5      PDB  1DT7 "A Chain A, Solution Structure Of The C-Terminal
+Negative Regulatory Domain Of P53 In A Complex With Ca2+-Bound S100b(Bb)"  . 
+ 4001   5      PDB  1QLK "A Chain A, Solution Structure Of Ca(2+)-Loaded Rat
+S100b (Betabeta) Nmr, 20 Structures"                                    . 
+ 4001   5      PDB  1B4C "A Chain A, Solution Structure Of Rat Apo-S100b Using
+Dipolar Couplings"                                                    . 
+ 4001   5      PDB  1SYM "A Chain A, 3-D Solution Structure Of Reduced
+Apo-S100b From Rat, Nmr, 20 Structures"                                      
+. 
+
+   stop_
+
+save_
+
+#########################################
+#   Author molecular system annotation  #
+#########################################
+
+save_<author_annotation>
+  _Saveframe_category     author_mol_system_annotation
+  _Entry_ID                    @
+  _Saveframe_ID                @
+  _Saveframe_framecode         @
+
+  _Details                     @
+  
+# Need to be able to annotate at the system level, subsystem level, 
+# component level, residue level, and atom level
+
+   loop_
+     _Author_annotation_entry_ID
+     _Author_annotation_saveframe_ID
+
+     _Author_annotation_ID
+     _Mol_subsystem_ID
+     _Mol_system_component_ID
+     _Chemical_moiety_index_ID
+     _Residue_seq_code
+     _Residue_start_seq_code
+     _Residue_end_seq_code
+     _Residue_label
+     _Atom_name
+     _Residue_author_seq_code
+     _Residue_author_code
+     _Atom_author_atom_name
+     _Chain_PDB_code
+     _Residue_PDB_code
+     _Residue_PDB_seq_code
+     _Atom_PDB_atom_name
+     _Annotation_code
+
+   @ @ @ @ @    @ @ @ @ @    @ @ @ @ @    @ @ @ @
+
+   stop_
+
+save_
+
+    #################
+    #   Molecules   #
+    #################
+
+save_S100beta
+  _Saveframe_category         molecule
+  _Entry_ID                   4001
+  _Saveframe_ID               6
+  _Saveframe_framecode        S100beta
+
+  _Mol_ID                           1
+  _Mol_BMRB_library_ID              1
+  _Mol_class                        polymer
+  _Mol_polymer_class                protein
+  _Mol_non_polymer_class            .
+  _Name_BMRB                        S100beta
+  _Name_common                      S100beta
+
+  _Name_variant                                             @
+  _Abbreviation_common                                      S100beta
+  _CAS_name                                                 @
+  _CAS_registry_number                                      @
+  _Mol_polymer_enzyme_commission_number                     @
+  _IUPAC_name                                               @
+
+  _Mol_polymer_sequence_citation_ID                         @
+  _Mol_polymer_Sequence_citation_label                      @
+  _Mol_polymer_Ambiguous_sequence_features                  @
+  _Mol_polymer_author_sequence_numbering_scheme_details     @
+  _Mol_polymer_non_standard_residue                         @
+  _Mol_polymer_non_standard_chirality                       @
+  _Mol_polymer_non_standard_linkage                         @
+  _Mol_polymer_residue_count                                92
+  _Mol_polymer_standard_derivative_residue_sequence         @
+  _Mol_polymer_residue_sequence                             
+;
+MSELEKAMVALIDVFHQYSG
+REGDKHKLKKSELKELINNE
+LSHFLEEIKEQEVVDKVMET
+LDEDGDGECDFQEFMAFVSM
+VTTACHEFFEHE
+;
+
+
+  _Mol_non_polymer_empirical_formula                        @
+  _Mol_mass                                                 @
+  _Mol_paramagnetic                                         @
+  _Mol_thiol_state                                          @
+  _Mol_theoretical_isoelectric_point                        @
+  _Mol_non_polymer_charge                                   @
+  _Mol_non_polymer_aromatic                     @
+
+  _Details                                      @
+  _Mol_non_polymer_SMILES_representation        @
+  _Topology_file_name                           @
+  _Topology_file_format                         @
+  _Topology_file_location                       @
+  _Structure_file_name                          @
+  _Structure_file_format                        @
+  _Structure_file_location                      @
+  _Stereochemistry_parameter_file_name          @
+  _Stereochemistry_parameter_file_format        @
+  _Stereochemistry_parameter_file_location      @
+
+   loop_
+     _Synonym_entry_ID
+     _Synonym_saveframe_ID
+
+     _Synonym
+
+   @ @ @
+
+   stop_
+
+   loop_
+     _Keyword_entry_ID
+     _Keyword_saveframe_ID
+
+     _Keyword
+
+     @ @ @
+
+   stop_
+
+    loop_
+      _Biological_function_entry_ID
+      _Biological_function_saveframe_ID
+
+
+      _Biological_function
+
+     @ @ @
+
+    stop_
+
+    loop_
+      _Chemical_moiety_index_entry_ID
+      _Chemical_moiety_index_saveframe_ID
+
+      _Chemical_moiety_index_ID
+      _Chemical_compound_ID
+
+      _Residue_seq_code
+      _Residue_label
+      _Residue_BMRB_code
+      _Residue_author_seq_code
+
+4001   6   1   .  1    0   MET   MET   0
+4001   6   2   .  2    1   SER   SER   1
+4001   6   3   .  3    2   GLU   GLU   2
+4001   6   4   .  4    3   LEU   LEU   3
+4001   6   5   .  5    4   GLU   GLU   4
+
+        6    5   LYS    7    6   ALA    8    7   MET    9    8   VAL   10    9 
+ ALA 
+       11   10   LEU   12   11   ILE   13   12   ASP   14   13   VAL   15   14 
+ PHE 
+       16   15   HIS   17   16   GLN   18   17   TYR   19   18   SER   20   19 
+ GLY 
+       21   20   ARG   22   21   GLU   23   22   GLY   24   23   ASP   25   24 
+ LYS 
+       26   25   HIS   27   26   LYS   28   27   LEU   29   28   LYS   30   29 
+ LYS 
+       31   30   SER   32   31   GLU   33   32   LEU   34   33   LYS   35   34 
+ GLU 
+       36   35   LEU   37   36   ILE   38   37   ASN   39   38   ASN   40   39 
+ GLU 
+       41   40   LEU   42   41   SER   43   42   HIS   44   43   PHE   45   44 
+ LEU 
+       46   45   GLU   47   46   GLU   48   47   ILE   49   48   LYS   50   49 
+ GLU 
+       51   50   GLN   52   51   GLU   53   52   VAL   54   53   VAL   55   54 
+ ASP 
+       56   55   LYS   57   56   VAL   58   57   MET   59   58   GLU   60   59 
+ THR 
+       61   60   LEU   62   61   ASP   63   62   GLU   64   63   ASP   65   64 
+ GLY 
+       66   65   ASP   67   66   GLY   68   67   GLU   69   68   CYS   70   69 
+ ASP 
+       71   70   PHE   72   71   GLN   73   72   GLU   74   73   PHE   75   74 
+ MET 
+       76   75   ALA   77   76   PHE   78   77   VAL   79   78   SER   80   79 
+ MET 
+       81   80   VAL   82   81   THR   83   82   THR   84   83   ALA   85   84 
+ CYS 
+       86   85   HIS   87   86   GLU   88   87   PHE   89   88   PHE   90   89 
+ GLU 
+       91   90   HIS   92   91   GLU 
+
+    stop_
+
+
+   _Database_query_date                            2001-02-12
+   _Database_query_revised_last_date               2001-02-12
+
+
+save_
+
+
+    #####################
+    #   Natural source  #
+    #####################
+
+save_natural_source
+  _Saveframe_category   natural_source
+  _Entry_ID               4001
+  _Saveframe_ID           7
+  _Saveframe_framecode    natural_source
+     
+  loop_
+    _Mol_natural_source_entry_ID
+    _Mol_natural_saveframe_ID
+
+    _Mol_natural_source_list_ID
+    _Mol_system_ID
+    _Mol_ID
+    _Mol_label
+    _Organism_name_common
+    _Organism_acronym
+    _ICTVdb_decimal_code
+    _NCBI_taxonomy_ID
+    _Superkingdom
+    _Kingdom
+    _Genus
+    _Species
+    _Organ
+
+ 4001  7  1  1  1    $apo-S100beta  rat ? ? 10116   Eukaryota  Metazoa  Rattus 
+norvegicus  brain 
+
+  stop_
+
+  loop_
+    _Database_natural_source_entry_ID
+    _Database_saveframe_ID
+    _Database_list_ID
+
+    _Database_mol_ID
+    _Database_name
+    _Database_ORF_code
+    _Database_gene_locus_code
+    _Database_gene_cDNA_code
+
+    @ @ @ @ @   @ @ @
+
+  stop_
+
+save_
+
+
+    ###########################
+    #   Experimental source   #
+    ###########################
+
+save_experimental_source
+    _Saveframe_category   experimental_source
+    _Entry_ID                 4001
+    _Saveframe_ID             8
+    _Saveframe_framecode      experimental_source
+
+  loop_
+    _Mol_experimental_source_entry_ID
+    _Mol_experimental_saveframe_ID
+    _Mol_experimental_source_ID
+    _Mol_system_ID
+    _Mol_ID
+    _Mol_label
+    _Production_method
+    _Host_organism_name_common
+    _Genus
+    _Species
+    _Strain
+    _Vector_type
+    _Vector_name
+    _Details
+
+4001 8 1 1 1      $apo-S100beta 'recombinant technology' 'E.coli'  Escherichia 
+coli 'HMS174 (DE3)'  plasmid 'pET11b containing the S100beta gene'  . 
+
+  stop_
+
+save_
+
+
+#############################
+#   Sample characteristics  #
+#############################
+
+    #########################
+    #   Sample description  #
+    #########################
+
+save_sample_one
+  _Saveframe_category      sample
+  _Entry_ID                4001
+  _Saveframe_ID            9
+  _Saveframe_framecode     sample_one
+     
+  _Sample_ID                     1
+  _Sample_type                   solution
+  _Details                       ?
+
+    loop_
+       _Sample_contents_entry_ID
+       _Sample_contents_saveframe_ID
+       _Mol_ID
+       _Mol_label
+       _Mol_common_name
+       _Concentration_value
+       _Concentration_value_units
+       _Concentration_min_value
+       _Concentration_max_value
+       _Isotopic_labeling
+
+4001 9 1 $apo-S100beta   ?                       .  mM   3      6    
+4001 9 ? ?               EDTA                    .  mM   0.34   0.34 
+4001 9 ? ?               beta-mercaptoethanol    .  mM   2     10    
+4001 9 ? ?               d11-Tris-HCl            .  mM   6     10    
+4001 9 ? ?               NaCl                    .  mM  17     20    
+4001 9 ? ?               H2O                   90   %     .      .   
+4001 9 ? ?               D2O                   10   %     .      .   
+
+    stop_
+
+save_
+
+    ########################
+    #   Sample conditions  #
+    ########################
+
+save_sample_conditions_one
+  _Saveframe_category       sample_conditions
+  _Entry_ID                 4001
+  _Saveframe_ID             10
+  _Saveframe_framecode      sample_conditions_one
+
+  _Sample_conditions_ID     1
+  _Details                  ?
+
+   loop_
+      _Sample_conditions_variable_entry_ID
+      _Sample_conditions_variable_saveframe_ID
+
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+4001   10       pH             6.5  .  n/a 
+4001   10       temperature  310    .  K  
+
+   stop_
+
+save_
+
+
+#####################
+#   NMR parameters  #
+#####################
+
+    ###############################
+    #   Assigned chemical shifts  #
+    ###############################
+
+        #################################
+        #   Chemical shift referencing  #
+        #################################
+
+save_<chemical_shift_reference_label>
+  _Saveframe_category   chemical_shift_reference
+  _Entry_ID                    4001
+  _Saveframe_ID                11
+  _Saveframe_framecode         chemical_shift_reference
+
+  _Chem_shift_reference_set_library_ID        3
+  _Details                                    .
+
+  loop_
+    _Chem_shift_entry_ID
+    _Chem_shift_saveframe_ID
+
+    _Mol_common_name
+    _Atom_type
+    _Atom_isotope_number
+    _Atom_group
+    _Chem_shift_units
+    _Chem_shift_value
+    _Reference_method
+    _Reference_type
+    _External_reference_sample_geometry
+    _External_reference_location
+    _External_reference_axis
+    _Indirect_shift_ratio
+    _Indirect_shift_ratio_citation_ID
+    _Indirect_shift_ratio_citation_label
+
+4001   ?       TSP  H   1  'methyl protons'  ppm  0.0  external  direct     .  
+       .            
+4001   ?       H2O  C  13   protons          ppm  0.0  .         indirect 
+0.25144953 $citation_two 
+4001   ?       H2O  N  15   protons          ppm  0.0  .         indirect 
+0.10132905 $citation_one 
+
+  
+  stop_
+
+save_
+
+     ###################################
+     #  Assigned chemical shift lists  #
+     ###################################
+
+
+save_assigned_chemical_shifts_set_one
+  _Saveframe_category               assigned_chemical_shifts
+  _Entry_ID                    4001
+  _Saveframe_ID                12
+  _Saveframe_framecode         assigned_chemical_shifts_set_one
+
+   _Details                         
+;
+  The residue chemical shifts recorded for prot-1 are from amino acids
+  where multiple chemical shifts were not reported.
+;
+
+   loop_
+      _Sample_ID
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_ID            1
+   _Sample_conditions_label         $sample_conditions_one
+   _Chem_shift_reference_set_ID     1
+   _Chem_shift_reference_set_label  $chemical_shift_reference_one
+
+  loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+    _Atom_shift_assign_ID
+    _Mol_system_component_ID
+    _Mol_system_component_code
+    _Chemical_moiety_index_ID
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Atom_type
+
+    _Residue_author_seq_code
+    _Chem_shift_value
+    _Chem_shift_value_error
+    _Chem_shift_ambiguity_code
+
+4001   12   1  prot-1  1   MET  HA    H   0    3.86  .  1  
+4001   12   2  prot-1  1   MET  C     C   0  173.73  .  1  
+4001   12   3  prot-1  1   MET  CA    C   0   55.1   .  1  
+4001   12   4  prot-1  1   MET  CB    C   0   35.03  .  1  
+4001   12   5  prot-1  3   GLU  HA    H   2    4.04  .  1  
+4001   12   6  prot-1  3   GLU  HB2   H   2    2.08  .  1  
+4001   12   7  prot-1  3   GLU  HB3   H   2    2.08  .  1  
+4001   12   8  prot-1  3   GLU  HG2   H   2    2.46  .  1  
+4001   12   9  prot-1  3   GLU  HG3   H   2    2.46  .  1  
+4001   12  10  prot-1  3   GLU  H     H   2    8.93  .  1  
+4001   12  11  prot-1  3   GLU  C     C   2  179.68  .  1  
+4001   12  12  prot-1  3   GLU  CA    C   2   59.79  .  1  
+4001   12  13  prot-1  3   GLU  CB    C   2   29.04  .  1  
+4001   12  14  prot-1  3   GLU  CG    C   2   36.31  .  1  
+4001   12  15  prot-1  3   GLU  N     N   2  120.4   .  1  
+4001   12  16  prot-1  8   MET  HA    H   7    4.8   .  1  
+4001   12  17  prot-1  8   MET  HB2   H   7    2.54  .  2  
+4001   12  18  prot-1  8   MET  HB3   H   7    2.11  .  2  
+4001   12  19  prot-1  8   MET  HG2   H   7    2.85  .  1  
+4001   12  20  prot-1  8   MET  HG3   H   7    2.85  .  1  
+
+  stop_
+
+save_
+
+
+save_chemical_shift_assignment_set_two
+   _Saveframe_category               assigned_chemical_shifts
+  _Entry_ID                    4001
+  _Saveframe_ID                13
+  _Saveframe_framecode         @
+
+   _Details                         
+;
+  This save frame contains one set of peak assignments for the protein segment
+  from residues 1 to 15. Multiple resonances were not reported for all
+  residues in this segment.
+;
+
+   loop_
+      _Sample_ID
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_ID                      @
+   _Sample_conditions_label         $sample_conditions_one
+   _Chem_shift_reference_set_ID               @
+   _Chem_shift_reference_set_label  $chemical_shift_reference_one
+
+   loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+      _Atom_shift_assign_ID
+      _Mol_system_component_ID
+      _Mol_system_component_code
+      _Chemical_moiety_index_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+4001   16        1   prot-2   2  2  SER  HA    H    4.66  .  1  
+        2    2   SER  H     H   10.23  .  1  
+        3    2   SER  C     C  174.7   .  1  
+        4    2   SER  CA    C   57.05  .  1  
+        5    2   SER  CB    C   65.36  .  1  
+        6    4   LEU  HA    H    4.04  .  1  
+        7    4   LEU  HB2   H    1.89  .  2  
+        8    4   LEU  HB3   H    1.75  .  2  
+        9    4   LEU  HG    H    1.21  .  1  
+       10    4   LEU  HD1   H    0.99  .  2  
+       11    4   LEU  HD2   H    0.75  .  2  
+       12    4   LEU  H     H    8.94  .  1  
+       13    4   LEU  C     C  178.46  .  1  
+       14    4   LEU  CA    C   58.62  .  1  
+       15    4   LEU  CB    C   41.93  .  1  
+       16    4   LEU  CG    C   29.00  .  1  
+       17    4   LEU  CD1   C   26.92  .  1  
+       18    4   LEU  CD2   C   26.4   .  1  
+       19    4   LEU  N     N  121.37  .  1  
+       20    5   GLU  HA    H    3.28  .  1  
+
+   stop_
+
+save_
+
+save_chemical_shift_assignment_set_three
+   _Saveframe_category               assigned_chemical_shifts
+  _Entry_ID                    4001
+  _Saveframe_ID                14
+  _Saveframe_framecode         @
+
+   _Details                         
+;
+  This save frame contains one set of peak assignments for the protein segment
+  from residues 1 to 15. Multiple resonances were not reported for all
+  residues in this segment.
+;
+
+   loop_
+      _Sample_ID
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_ID                      @
+   _Sample_conditions_label         $sample_conditions_one
+   _Chem_shift_reference_set_ID               @
+   _Chem_shift_reference_set_label  $chemical_shift_reference_one
+
+   loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+      _Atom_shift_assign_ID
+      _Mol_system_component_ID
+      _Mol_system_component_code
+      _Chemical_moiety_index_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+4001   17   1 3 prot-3  2  2   SER  HA    H    4.66  .  1  
+        2    2   SER  H     H    9.95  .  1  
+        3    2   SER  C     C  174.7   .  1  
+        4    2   SER  CA    C   57.44  .  1  
+        5    2   SER  CB    C   65.36  .  1  
+        6    2   SER  N     N  120.73  .  1  
+        7    4   LEU  HA    H    4.04  .  1  
+        8    4   LEU  HB2   H    1.89  .  2  
+        9    4   LEU  HB3   H    1.78  .  2  
+       10    4   LEU  HG    H    1.21  .  1  
+       11    4   LEU  HD1   H    0.99  .  2  
+       12    4   LEU  HD2   H    0.75  .  2  
+       13    4   LEU  H     H    9.01  .  1  
+       14    4   LEU  C     C  178.46  .  1  
+       15    4   LEU  CA    C   58.62  .  1  
+       16    4   LEU  CB    C   41.47  .  1  
+       17    4   LEU  CG    C   29.00  .  1  
+       18    4   LEU  CD1   C   26.92  .  2  
+       19    4   LEU  CD2   C   26.4   .  2  
+       20    4   LEU  N     N  121.93  .  1  
+
+   stop_
+
+save_
+
+
+save_chemical_shift_assignment_set_four
+   _Saveframe_category               assigned_chemical_shifts
+  _Entry_ID                    4001
+  _Saveframe_ID                15
+  _Saveframe_framecode         @
+
+   _Details                         
+;
+  This save frame contains one set of peak assignments for the protein segment
+  from residues 1 to 15. Multiple resonances were not reported for all
+  residues in this segment.
+;
+
+   loop_
+      _Sample_ID
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_ID                      @
+   _Sample_conditions_label         $sample_conditions_one
+   _Chem_shift_reference_set_ID               @
+   _Chem_shift_reference_set_label  $chemical_shift_reference_one
+
+   loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+      _Atom_shift_assign_ID
+      _Mol_system_component_ID
+      _Mol_system_component_code
+      _Chemical_moiety_index_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+4001 18        1 4 prot-4 4 4   LEU  HA   H    4.04  .  1  
+        2   4   LEU  HB2  H    1.89  .  2  
+        3   4   LEU  HB3  H    1.75  .  2  
+        4   4   LEU  HG   H    1.21  .  1  
+        5   4   LEU  HD1  H    0.99  .  2  
+        6   4   LEU  HD2  H    0.75  .  2  
+        7   4   LEU  H    H    8.92  .  1  
+        8   4   LEU  C    C  178.46  .  1  
+        9   4   LEU  CA   C   58.62  .  1  
+       10   4   LEU  CB   C   41.93  .  1  
+       11   4   LEU  CG   C   29.00  .  1  
+       12   4   LEU  CD1  C   26.92  .  2  
+       13   4   LEU  CD2  C   26.4   .  2  
+       14   4   LEU  N    N  121.62  .  1  
+       15   6   LYS  HA   H    3.9   .  1  
+       16   6   LYS  HB2  H    1.89  .  1  
+       17   6   LYS  HB3  H    1.89  .  1  
+       18   6   LYS  HG2  H    1.48  .  1  
+       19   6   LYS  HG3  H    1.48  .  1  
+       20   6   LYS  HD2  H    1.73  .  1  
+
+   stop_
+
+save_
+
+
+save_chemical_shift_assignment_set_five
+   _Saveframe_category               assigned_chemical_shifts
+  _Entry_ID                    4001
+  _Saveframe_ID                16
+  _Saveframe_framecode         @
+
+   _Details                         
+;
+  This save frame contains one set of peak assignments reported for residues
+  in the protein segment from residues 41 to 46.  
+;
+
+   loop_
+      _Sample_ID
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_ID                      @
+   _Sample_conditions_label         $sample_conditions_one
+   _Chem_shift_reference_set_ID               @
+   _Chem_shift_reference_set_label  $chemical_shift_reference_one
+
+   loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+      _Atom_shift_assign_ID
+      _Mol_system_component_ID
+      _Mol_system_component_code
+      _Chemical_moiety_index_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+4001 19 1  5 prot-5   42   42   SER  HA   H    4.01  .  1  
+        2   42   SER  HB2  H    3.85  .  1  
+        3   42   SER  HB3  H    3.85  .  1  
+        4   42   SER  H    H    6.7   .  1  
+        5   42   SER  C    C  176.52  .  1  
+        6   42   SER  CA   C   62.68  .  1  
+        7   42   SER  CB   C   61.92  .  1  
+        8   42   SER  N    N  111.79  .  1  
+        9   43   HIS  HA   H    4.64  .  1  
+       10   43   HIS  HB2  H    3.6   .  2  
+       11   43   HIS  HB3  H    3.33  .  2  
+       12   43   HIS  H    H    9.71  .  1  
+       13   43   HIS  C    C  179.07  .  1  
+       14   43   HIS  CA   C   59.4   .  1  
+       15   43   HIS  CB   C   27.2   .  1  
+       16   43   HIS  N    N  122.9   .  1  
+       17   44   PHE  HA   H    4.64  .  1  
+       18   44   PHE  HB2  H    3.41  .  1  
+       19   44   PHE  HB3  H    3.41  .  1  
+       20   44   PHE  H    H    8.47  .  1  
+
+   stop_
+
+save_
+
+
+save_chemical_shift_assignment_set_six
+   _Saveframe_category               assigned_chemical_shifts
+  _Entry_ID                    4001
+  _Saveframe_ID                17
+  _Saveframe_framecode         @
+
+   _Details                         
+;
+  This save frame contains one set of peak assignments reported for residues
+  in the protein segment from residues 41 to 46.  
+;
+
+   loop_
+      _Sample_ID
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_ID                      @
+   _Sample_conditions_label         $sample_conditions_one
+   _Chem_shift_reference_set_ID               @
+   _Chem_shift_reference_set_label  $chemical_shift_reference_one
+
+   loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+      _Atom_shift_assign_ID
+      _Mol_system_component_ID
+      _Mol_system_component_code
+      _Chemical_moiety_index_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+4001   20   1 6 prot-6 42  42   SER  HA   H    3.96  .  1  
+        2   42   SER  HB2  H    3.79  .  1  
+        3   42   SER  HB3  H    3.79  .  1  
+        4   42   SER  H    H    6.71  .  1  
+        5   42   SER  C    C  176.28  .  1  
+        6   42   SER  CA   C   62.68  .  1  
+        7   42   SER  CB   C   61.9   .  1  
+        8   42   SER  N    N  112.27  .  1  
+        9   43   HIS  HA   H    4.61  .  1  
+       10   43   HIS  HB2  H    3.49  .  2  
+       11   43   HIS  HB3  H    3.36  .  2  
+       12   43   HIS  H    H    9.57  .  1  
+       13   43   HIS  C    C  179.31  .  1  
+       14   43   HIS  CA   C   59.79  .  1  
+       15   43   HIS  CB   C   26.74  .  1  
+       16   43   HIS  N    N  122.25  .  1  
+       17   44   PHE  HA   H    4.64  .  1  
+       18   44   PHE  HB2  H    3.44  .  1  
+       19   44   PHE  HB3  H    3.44  .  1  
+       20   44   PHE  H    H    8.33  .  1  
+
+   stop_
+
+save_
+
+
+save_chemical_shift_assignment_set_seven
+   _Saveframe_category               assigned_chemical_shifts
+  _Entry_ID                    4001
+  _Saveframe_ID                17
+  _Saveframe_framecode         @
+
+   _Details                         
+;
+  This save frame contains one set of peak assignments reported for residues
+  in the protein segment from residues 41 to 46. Multiple resonances were not
+  reported for all residues in this segment.
+;
+
+   loop_
+      _Sample_ID
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_ID                      @
+   _Sample_conditions_label         $sample_conditions_one
+   _Chem_shift_reference_set_ID               @
+   _Chem_shift_reference_set_label  $chemical_shift_reference_one
+
+   loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+      _Atom_shift_assign_ID
+      _Mol_system_component_ID
+      _Mol_system_component_code
+      _Chemical_moiety_index_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+4001 21  1 7 prot-7 42  42   SER  HA   H    4.04  .  1  
+        2   42   SER  HB2  H    3.88  .  1  
+        3   42   SER  HB3  H    3.88  .  1  
+        4   42   SER  H    H    6.78  .  1  
+        5   42   SER  C    C  176.4   .  1  
+        6   42   SER  CA   C   62.68  .  1  
+        7   42   SER  CB   C   61.9   .  1  
+        8   42   SER  N    N  112.75  .  1  
+        9   43   HIS  HA   H    4.69  .  1  
+       10   43   HIS  HB2  H    3.49  .  2  
+       11   43   HIS  HB3  H    3.33  .  2  
+       12   43   HIS  H    H    9.46  .  1  
+       13   43   HIS  C    C  179.31  .  1  
+       14   43   HIS  CA   C   59.4   .  1  
+       15   43   HIS  CB   C   27.2   .  1  
+       16   43   HIS  N    N  121.37  .  1  
+       17   45   LEU  HA   H    4.07  .  1  
+       18   45   LEU  HB2  H    1.75  .  1  
+       19   45   LEU  HB3  H    1.75  .  1  
+       20   45   LEU  HG   H    1.62  .  1  
+
+   stop_
+
+save_
+
+
+
+#######################################
+#  Cited references within the entry  #
+#######################################
+
+
+save_citation_one
+   _Saveframe_category   citation
+
+   _Citation_full       
+;
+ Live, D.H., Davis, D.G., Agosta, W.C. and Cowburn, D.  
+ J. Am. Chem. Soc. 106, 1939-1941(1984)
+;
+
+save_
+
+
+save_citation_two
+   _Saveframe_category   citation
+
+   _Citation_full       
+;
+ 
+ Spera, S. and Bax, A. 
+ J. Am. Chem. Soc. 113, 5490-5492(1991)
+;
+
+save_
+
+
+save_citation_three
+   _Saveframe_category   citation
+
+   _Citation_full       
+;
+Edison, A.S., Abildgaard, F., Westler,W.M., Mooberry, E.S. and Markley,J.L. 
+Methods Enzymol. 239, 3-79(1994)
+;
+
+save_
+

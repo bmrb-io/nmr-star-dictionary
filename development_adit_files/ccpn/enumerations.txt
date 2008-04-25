@@ -1,0 +1,1836 @@
+
+##########################################
+#                                        #
+#   This file is under constructions!!   #
+# Your help and suggestions are welcome. #
+#                                        #
+##########################################
+
+
+data_NMR-STAR_tag_enumerations
+
+    _Revision_date      2003-03-30
+
+
+save__Atom_chem_shift.Chem_shift_ambiguity_code
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+           1                'Unique, not ambiguous'
+           2 
+;
+Ambiguity of geminal atoms or geminal groups 
+;
+           3
+;
+Aromatic atoms on opposite sides of the ring (e.g. Tyr HE1 and HE2 protons)    
+;
+           4
+;
+Intraresidue ambiguities (e.g. Lys HG and HD protons)
+;
+           5                'Interresidue ambiguities (Lys 12 vs. Lys 27)'
+           9                'Ambiguous, but specific ambiguity not defined'
+
+     stop_
+
+save_
+
+save__Entry_author.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      
+
+    stop_
+
+save_
+
+save__NMR_spectrometer_experiment.NMR_tube_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'cylindrical microcell'       .
+       Shegami                      .
+      'spherical microcell'         .
+      'standard cylindrical'        .
+ 
+    stop_
+
+save_
+
+save__NMR_experiment.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'NOE'         .
+      'COSY'        .
+
+    stop_
+
+save_
+
+save__NMR_experiment_file.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'Time-domain (raw spectral data)'         .
+      'Pulse sequence'                          .
+      'NMR experiment directory'
+;
+Contains variety of files for acquiring and processing the NMR experimental data
+;
+      'Pulse field gradient'                    .       
+
+    stop_
+
+save_
+
+save__Contact_person.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      
+
+    stop_
+
+save_
+
+save__Citation_author.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      
+
+    stop_
+
+save_
+
+save__Citation_editor.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      
+
+    stop_
+
+save_
+
+save__Bond.Order
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  sing            . 
+  doub            . 
+  trip            .
+  arom            .
+  partial-double  .
+  directed        .
+
+     stop_
+
+save_
+
+save__Chem_comp_bond.Value_order
+
+# Take from the mif definitions
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  sing            . 
+  doub            . 
+  trip            .
+  arom            .
+  partial-double  .
+  directed        .
+
+     stop_
+
+save_
+
+save__Spectral_processing_param.Name
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+        Exponential_factor                .
+        Gaussian_factor                   .
+        Zero_filling                      .
+        Lnear_prediction                  .
+        Processed_real_points             .
+        Submatrix_block_size              .
+        Full_spectrum_width_points        .
+        Spectrum_offset                   .
+        Data_type                         .
+
+     stop_
+
+save_
+
+save__Spectral_acq_param.Name
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+          spectrometer_carrier_frequency         .
+          spectrometer_offset_frequency          .
+          acquisition_time                       .
+          mixing_time                            .
+          spectral_width                         .
+          spectral_folding                       . 
+          data_point_number                      .
+          data_point_type                        .
+          data_point_spacing                     .
+
+     stop_
+
+save_
+
+save__Representative_conformer.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     experimental                         'Derived directly from experimental data'
+    'derived experimental'          'Derived from conformers that fit experimental data'
+      theoretical                             
+;
+The coordinates represent a theoretical chemical system.   They may be derived
+from an experimental coordinate set, but have been constructed for use in
+carrying out theoretical calculations or for other purposes that have specific requirements
+that necessitate the use of non-standard atoms or other conditions.
+;
+     stop_
+
+save_
+
+save__Bond.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        directed               .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+
+    stop_
+
+save_
+
+save__Chem_comp_bond.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        directed               .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+
+    stop_
+
+save_
+
+save__Chem_comp.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    complete      'Full chemically complete molecule'
+    fragment      'Fragment of a chemical compound'
+
+   stop_
+
+save_
+
+save__Chem_comp_systematic_name.Naming_system
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    IUPAC                                        .
+   'CAS name'                                    .
+   'CAS registry number'                         .
+    BMRB                                         .
+   'One letter code'                             .
+   'Three letter code'                           .
+
+   stop_
+
+save_
+
+save__Chem_shift_ref.Ref_type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   internal     .
+   external     .
+
+   stop_
+
+save_
+
+save__Chem_shift_ref.External_ref_sample_geometry
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   cylindrical     .
+   spherical       .
+
+   stop_
+
+save_
+
+save__Chem_shift_ref.External_ref_loc
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'in sample'        .
+   'outside sample'   .
+
+   stop_
+
+save_
+
+save__Chem_shift_ref.External_ref_axis
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'parallel'        .
+   'perpendicular'   .
+
+   stop_
+
+save_
+
+save__Chem_shift_ref.Ref_method
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   direct     .
+   indirect   .
+
+   stop_
+
+save_
+
+save__Chem_shift_ref.Atom_group
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+     'methyl carbon'                    .
+     'methyl carbons'                   .
+     'methyl protons'                   .
+     'methylene protons'                .
+
+      nitrogen                        
+;
+There is only one nitrogen nucleus or all nitrogen nuclei are magnetically 
+equivalent
+;
+     protons                         
+;
+There is only one proton nucleus or all proton nuclei are magnetically 
+equivalent
+;
+
+
+# find more values from existing database
+
+    stop_
+
+save_
+
+save__Chem_shift_ref.Chem_shift_units
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+      ppm                 'parts per million'
+      Hz                  Hertz
+
+     stop_
+
+save_
+
+
+save__Citation.Class
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    'entry citation'       'Citation where the reported data are described'
+    'reference citation'   'Citation used as a reference in the entry'
+
+     stop_
+
+save_
+
+save__Citation.Status
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+     'in preparation'        
+;
+A manuscript is being prepared but has not been submitted for publication.
+;
+     submitted
+;
+A manuscript has been submitted for publication.
+;
+     'in press'
+;
+A manuscript has been accepted for publication, but has not yet appeared in
+press.
+;
+     published
+;
+A published article exists that contains or describes the data in the entry.
+;
+     retracted
+;
+A published article has been retracted by the authors or journal.
+;
+
+
+    stop_
+
+save_
+
+save__Citation.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  journal     .
+  book        .
+  thesis
+;
+A document written and published as a requirement for a degree or other
+scholarly endeavor (e.g., senior, masters, or doctoral thesis)
+;
+  abstract    
+;
+A brief text describing the contents of a presentation, oral, poster, or
+other, given at a conference or other formal gathering.          
+;
+ 'personal communication'  
+;
+The BMRB entry is the only known published source for the data.
+;
+  Internet    
+;
+The data were only found published on the internet and no other publication is 
+available.
+;
+     'BMRB only'
+;
+The only publication related to the data submitted will be the BMRB entry.
+;
+     stop_
+
+save_
+
+
+#save__Conformer_ensemble.Statistics_value_type
+#
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#  all_distance_rms_dev                             . M
+#  intraresidue_distance_rms_dev                    . O
+#  sequential_distance_rms_dev                      . O
+#  short_range_distance_rms_dev                     . O
+#  long_range_distance_rms_dev                      . O
+#  unambiguous_inter-molecular_distance_rms_dev     . O
+#  ambiguous_inter-molecular_distance_rms_dev       . O
+#  ambiguous_intra-molecular_distance_rms_dev       . O
+#  hydrogen_bond_rms_dev                            . O
+#  dihedral_angles_rms_dev                          . O
+#  dipolar_1H-1H_coupling_rms_dev                   . O
+#  dipolar_1H-15N_coupling_rms_dev                  . O
+#  dipolar_1H-13C_coupling_rms_dev                  . O
+#  dipolar_13C-13C_coupling_rms_dev                 . O
+#  total_energy_value                               . M 
+#  bond_energy_value                                . O
+
+#Collapse the energy terms into an additive term covering the ones marked with
+#A.
+
+#Include an energy term for each type of restraint applied.
+
+#  angle_energy_value                               . o
+#  improper_energy_value                            . o
+#  van_der_Waals_energy_value                       . o
+#  NOE_energy_value                                 . MC, etc.
+
+#  torsional_angle_energy_value                     O o (not including target
+function)
+#  ncs_energy_value                                 O 
+#  Lennard-Jones_energy_value                       O
+# 
+#  covalent_bond_rms_dev                            O 
+#  bond_angle_rms_dev                               O 
+#  impropers_rms_dev                                O 
+#  peptide_planarity_rms_dev                        O 
+
+#  stop_
+
+#save_
+
+#save__Constraint_statistic.Type
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#  NOE_constraints_total_count                                   O
+#  NOE_intraresidue_constraints_total_count                      O
+#  NOE_sequential_constraints_total_count                        O
+#  NOE_medium_range_constraints_total_count                      O
+#  NOE_long_range_constraints_total_count                        O
+#  NOE_constraints_unique_total_count                            MC
+#  NOE_intraresidue_unique_constraints_total_count               MC
+#  NOE_sequential_unique_constraints_total_count                 MC
+#  NOE_medium_range_unique_constraints_total_count               MC
+#  NOE_long_range_unique_constraints_total_count                 MC
+#  NOE_unambiguous_intramolecular_constraints_total_count        O? 
+#  NOE_unambiguous_intermolecular_constraints_total_count        O?
+#  NOE_ambiguous_intramolecular_constraints_total_count          O?
+#  NOE_ambiguous_intermolecular_constraints_total_count          O?
+
+#! INCLUDE AN OTHER COUNT FOR EACH OF THE FOLLOWING CATEGORIES.
+
+        ###########################
+        #  ROE values (proteins)  #
+        ###########################
+
+#  ROE_constraints_total_count                                   .
+#  ROE_intraresidue_constraints_total_count                      .
+#  ROE_sequential_constraints_total_count                        .
+#  ROE_medium_range_constraints_total_count                      .
+#  ROE_long_range_constraints_total_count                        .
+#  ROE_unambiguous_intramolecular_constraints_total_count        .
+#  ROE_unambiguous_intermolecular_constraints_total_count        .
+#  ROE_ambiguous_intramolecular_constraints_total_count          .
+#  ROE_ambiguous_intermolecular_constraints_total_count          .
+
+
+        ##################################
+        #  Dipolar coupling constraints  #
+        ##################################
+
+#  Dipolar_constraints_total_count                               MC
+#  Dipolar_constraints_1H_1H_total_count                         MC
+#  Dipolar_constraints_1H_13C_total_count                        MC
+#  Dipolar_constraints_1H_15N_total_count                        MC
+#  Dipolar_constraints_13C_13C_total_count                       MC
+#  Dipolar_constraints_13C_15N_total_count                       MC
+#  Dipolar_intraresidue_constraints_total_count                  O
+#  Dipolar_sequential_constraints_total_count                    O
+#  Dipolar_medium_range_constraints_total_count                  O
+#  Dipolar_long_range_constraints_total_count                    O  
+
+#! Could be another category
+#  Dipolar_unambiguous_intramolecular_constraints_total_count    O
+#  Dipolar_unambiguous_intermolecular_constraints_total_count    O
+#  Dipolar_ambiguous_intramolecular_constraints_total_count      O
+#  Dipolar_ambiguous_intermolecular_constraints_total_count      O
+
+        ##########################################
+        #  Torsion angle constraints (proteins)  #
+        ##########################################
+
+#  Protein_phi_angle_constraints_total_count                     .
+#  Protein_psi_angle_constraints_total_count                     .
+#  Protein_chi_one_angle_constraints_total_count                 .
+#  Protein_other_angle_constraints_total_count                   .
+#  Protein_ambiguous_torsion_angle_constraints_total_count       .
+
+        #########################################################
+        #  Torsion angle and other constraints (nucleic acids)  #
+        #########################################################
+
+#  NA_alpha_angle_constraints_total_count                        .
+#  NA_beta_angle_constraints_total_count                         .
+#  NA_gamma_angle_constraints_total_count                        .
+#  NA_delta_angle_constraints_total_count                        .
+#  NA_epsilon_angle_constraints_total_count                      .
+#  NA_chi_angle_constraints_total_count                          .
+#  NA_sugar_pucker_constraints_total_count                       .
+#  NA_other_angle_constraints_total_count                        .
+#  NA_ambiguous_torsion_angle_constraints_total_count            .
+
+        ###############################
+        #  Hydrogen bond constraints  #
+        ###############################
+
+#  Hydrogen_bonds_constrained_total_count                        .
+#  Constraints_defining_hydrogen_bonds_total_count               .
+
+        ################################
+        #  Disulfide bond constraints  #
+        ################################
+
+#  Disulfide_bonds_constrained_total_count                       .
+#  Constraints_defining_disulfide_bonds_total_count              .
+
+        #######################
+        #  Other constraints  #
+        #######################
+
+#  Derived_coupling_constant_constraints_total_count             .
+#  Derived_CA_CB_chem_shift_constraints_total_count              .
+#  Derived_1H_chem_shift_constraints_total_count                 .
+#  Derived_photo_cidnp_constraints_total_count                   .
+#  Derived_paramagnetic_relaxation_constraints_total_count       .
+#  Assumed_distance_constraints_total_count                      .
+#  Assumed_angle_constraints_total_count                         .
+
+#  stop_
+
+#save_
+
+
+save__Datum.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     '1H chemical shifts'                       .
+     '13C chemical shifts'                      .
+     '15N chemical shifts'                      .
+     'coupling constants'                       .
+     'T1 relaxation values'                     .
+     'T1rho relaxation values'                  .
+     'T2 relaxation values'                     .
+     'chemical shift anisotropy values'         .
+     'heteronuclear NOE values'                 .
+     'homonuclear NOE values'                   .
+     'spectral peak  values'                    .
+     'S2 parameters'                            .
+     'spectral density values'                  .
+     'H exchange rates'                         .
+     'H exchange protection factors'            .
+     'pKa values'                               .
+     'pH NMR parameter  values'                 .
+     'D/H fractionation factors'                .
+     'secondary structure values'               .
+     'deduced hydrogen bonds'                   .
+     'representative conformers'                .
+     'conformer coordinate sets'                .
+     'NOE distance constraints'                  
+;
+NOE distance constraints between two sets of atoms in which each set has at
+least one atom. Multiple atoms in one set should be represented by a standard
+single
+pseudoatom. If this is not possible then the constraint having such a set of 
+atoms should be considered an ambiguous NOE distance constraints for this 
+purpose.
+E.g. restaint between
+( Chain A Residue number 1 Residue name LEU Atom name QD) and
+( Chain A Residue number 1 Residue name LEU Atom name HA)
+;
+
+     'ambiguous NOE distance constraints'
+;
+Any NOE distance constraint that has at least one set of atoms that can not
+be represented by a standard single pseudoatom.
+E.g. restaint between
+( Chain (A or B) Residue number 1 Residue name LEU Atom name HB2) and
+( Chain A        Residue number 1 Residue name LEU Atom name HA)
+;
+     'hydrogen bond distance constraints'        
+;
+Distance constraints to constraint a hydrogen bond.
+Often two distance constraints for one hydrogen bond in order to set the bond 
+length as well as the directionality of the bond.
+;
+     'torsion angle constraints'                 
+;
+Dihedral angle constraint
+;
+    'chemical shift constraints'                
+;
+Chemical shift of e.g. a proton or carbon nucleus implemented as a constraint.
+;
+     'symmetry constraints'                      
+;
+Restraining (or constraining) symmetry between multiple copies of (part of) 
+similar structures.
+;
+     
+    stop_
+
+save_
+
+
+save__Entry.Version_type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  original           
+;
+The molecular system and reported data have not been deposited in the past by
+these authors.
+;
+
+  update
+;
+The existing data in the entry with this BMRB accession number has been
+updated.
+;
+
+  obsolete
+;
+The entry is no longer released by BMRB to the public.
+;
+  stop_
+
+save_
+
+save__Entry_interview.Structural_genomics
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_
+
+save__Entry_interview.Assigned_chem_shifts
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_
+
+save__Entry_interview.Coupling_constants
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+
+   stop_
+
+save_
+
+save__Entry_interview.Spectral_peak_lists
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no         .
+
+   stop_
+
+save_
+
+save__Entry_interview.Coordinates
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no         .
+
+   stop_
+
+save_
+
+save__Entry_interview.Constraints
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no         .
+
+   stop_
+
+save_
+
+save__Entry_interview.Timedomain_data
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no         .
+
+   stop_
+
+save_
+
+save__Entry_interview.T1rho_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no         .
+
+   stop_
+
+save_
+
+save__Entry_interview.Residual_dipolar_couplings
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no         .
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_chem_shifts
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entry_interview.D/H_fractionation_factors
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no    .
+
+   stop_
+
+save_
+
+save__Entry_interview.H_exchange_protection_factors
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no     .
+
+   stop_
+
+save_
+
+save__Entry_interview.H_exchange_rate
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no      .
+
+   stop_
+
+save_
+
+save__Entry_interview.PH_NMR_parameter_list
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no     .
+
+   stop_
+
+save_
+
+save__Entry_interview.PKa_value_data_set
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+save__Entry_interview.T1_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entry_interview.T2_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no       .
+
+   stop_
+
+save_
+
+save__Entry_interview.Heteronuclear_NOE
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no       .
+
+   stop_
+
+save_
+
+save__Entry_interview.S2_parameters
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no     .
+
+   stop_
+
+save_
+
+save__Entry_interview.Spectral_density_values
+                                   
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entity_natural_src.Nonexistent
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entity_natural_src.Common
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Assembly_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      'Single polypeptide'                 .
+      'Protein multimer'                   .
+      'Single strand RNA'                  .
+      'Single strand DNA'                  .
+      'Double strand DNA'                  .
+      'Double strand RNA'                  .
+      'DNA-RNA hybrid'                     .
+      'Protein-nucleic acid complex'       .
+
+   stop_
+      
+save_
+
+save__Entry_interview.Ligands
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes     .
+      no      .
+
+   stop_
+      
+save_
+
+save__Entry_interview.Non_standard_residues
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes     .
+      no      .
+
+   stop_
+      
+save_
+
+save__Entry.Release_request
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+
+     'Immediately'                 
+;
+Release the entry as soon as processing is complete.
+;
+     'On publication'              
+;
+Release the entry at the time therelated manuscript is published.
+;
+     'In one year'                 
+;Release the entry one year from the BMRB submission date.
+;
+     'At a specific future date'   
+;
+Release the entry on the date specified but not later than one year from submission.
+;
+   stop_
+
+save_
+
+save__Entry_src.Organization
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    BSGC          'Berkeley Structural Genomics Center'
+    CESG          'Center for Eukaryotic Structural Genomics'
+    JCSG          'Joint Center for Structural Genomics'                       
+          
+    MCSG          'Midwest Center for Structural Genomics'
+    NYSGRC        'New York Structural Genomics Research Consortium'
+    NESGC         'Northeast Structural Genomics'
+    SECSG         'Southeast Collaboratory for Structural Genomics'        
+    SGPPC         'Structural Genomics of Pathogenic Protozoa Consortium'
+    TBSGC         'TB Structural Genomics Consortium'
+    PSF           'Protein Structure Factory'
+    YSG           'Yeast Structural Genomics'
+    NWSGC         'North West Structural Genomics Centre'
+    ASG           'Architecture and Function of BiologicalMacromolecules Structure Genomics'
+
+  stop_
+
+save_
+
+save__Entity_experimental_src.Production_method
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'recombinant technology'
+;
+?
+;
+
+     'Purified from the natural source'
+;
+Obtained from the native organism that produces the biomolecule in nature.
+;
+
+         'chemical synthesis'
+;
+Select this option if the molecule was generated primarily by chemical
+synthesis techniques.
+;
+
+     'cell free synthesis'
+;
+?
+;
+
+     'enzymatic semisynthesis'
+;
+?
+;
+
+     'obtained from a vendor'
+;
+Select this button if the molecule was obtained from a
+commercial vendor or academic unit that produces materials
+as a service.  DO NOT select this button if the material was provided
+by an academic or industrial research collaborator.
+;
+
+
+  stop_
+
+save_
+
+save__Experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+
+  stop_
+
+save_
+
+save__Force_constant.Term
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'distance term'                                      .
+    'torsion angle term'                                 .
+    'J coupling term'                                    .
+    '13C shift term'                                     .
+    '1H shift term'                                      .
+    'dipolar couplings term'                             .
+    '2H isotope shift term'                              .
+    'covalent geometry bond term'                        .
+    'covalent geometry angles term'                      .
+    'covalent geometry impropers term'                   .
+    'non-bonded van der Waals interaction term'          .
+    'non-bonded radius of gyration interaction term'     .
+
+  stop_
+
+save_
+
+save__Upload_data.Data_file_Sf_category
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'NMR-STAR 3.0 deposition file'           'NMR-STAR 3.0 deposition file'
+   'Assigned chemical shifts'               'Assigned chemical shifts'
+   'Coupling constants'                     'Coupling constants'
+   'D/H fractionation factors'              'D/H fractionation factors'
+   'H-exchange protection factors'          'H-exchange protection factors'
+   'H-exchange rates'                       'H-exchange rates'
+   'pH NMR parameter list'                  'pH NMR parameter list'
+   'pKa values'                             'pKa values'
+#   'Representative conformer'               'Representative conformer'
+   'Order parameters'                       'Order parameters'
+   'Spectral density values'                'Spectral density values'
+#   'Conformer family coordinate set'        'Conformer family coordinate set'
+   'T1 relaxation values'                   'T1 relaxation values'
+   'T1rho relaxation values'              'T1rho relaxation values'
+   'T2 relaxation values'                 'T2 relaxation values'
+   'Residual dipolar couplings'           'Residual dipolar couplings'
+#   'Conformer statistical characteristics'  'Conformer statistical characteristics'
+#   'Constraint statistics'                  'Constraint statistics'
+#   'Distance constraints'                   'Distance constraints'
+   'Heteronuclear NOE values'                        'Heteronuclear NOE values'
+   'Homonuclear NOE values'                          'Homonuclear NOE values'
+   'New kinds of data'                         'New kinds of data'
+#   'Torsion angle constraints'              'Torsion angle constraints'
+   'Methods'                                'Methods'
+
+   stop_
+
+save_
+
+save__Upload_data.Data_file_syntax
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'NMR-STAR 3.0'     .
+    'NMR-STAR 2.1'     .
+#     NMRIF             .
+#     mmCIF             .
+#     PDB               .
+
+  stop_
+
+save_
+
+save__Assembly_db_link.Database_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    PDB    'Protein Data Bank'
+
+  stop_
+
+save_
+
+save__Entity_db_link.Database_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    PDB            'Protein Data Bank'
+    SWISS-PROT     .
+    GenBank        .
+    PIR            .
+    DBJ            'Data Bank of Japan'
+    EMBL           .
+    GI             .
+    PRF            .
+    REF            .
+
+  stop_
+
+save_
+
+save__Chem_comp_db_link.Database_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    CDDC         .
+
+  stop_
+
+save_
+
+save__Assembly_interaction.Mol_interaction_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'Extremely slow exchange'      'Components are very tightly bound'
+    'Slow exchange'                
+;
+Would expect to observe separate resonances for the bound and free components
+of the system.
+;
+    'Intermediate exchange'        
+;
+May not observe signals from the component or signals may be quite broad.
+;
+    'Fast exchange'
+;
+On the NMR time scale, a single averaged signal will be observed for the
+components in the bound and free state.
+;
+    'No interaction'
+;
+The components exist in the sample but do not interact (i.e., a molecule that
+is exchanging between a native and an unfolded conformation).
+;
+
+  stop_
+
+save_
+
+save__Assembly.Thiol_state
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'all disulfide bound'       .
+     'all other bound'           .
+     'all free'                  .
+     'free and bound'            . 
+     'not present'               'Thiols are not present in the system.'
+     'not available'    
+;
+The oxidation state of the thiols could not be extracted from the literature
+or was not provided by the authors of the entry.
+;
+     unkown     
+;
+The author reported that the oxidation state of the thiols is
+unknown.
+;
+     'not reported'                 .
+     'free and disulfide bound'     .
+     'free and other bound'         .
+     'free disulfide and other bound'    .
+     'disulfide and other bound'         .
+
+    stop_
+
+save_
+
+save__Entity_natural_src.Kingdom
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      Animalia      "multi-cellular motile organisms that feed heterotrophically"
+      Fungi            .
+      Plantae         "multi-cellular organisms that feed by photosynthesis"
+      Protista         "protozoa and single-celled eucaryotic algae"
+      "Not applicable"    .
+
+  stop_
+
+save_
+
+save__Entity_natural_src.Superkingdom
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     Archaea              .
+     Eubacteria           prokaryotes
+     Eukaryota            .
+     Viroid               .
+     Viruses              .
+     Other                .
+     Unclassified         .
+               
+  stop_
+
+save_
+     
+save__Entity.Thiol_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'all disulfide bound'       .
+     'all other bound'           .
+     'all free'                  .
+     'not present'               'Thiols are not present in the system.'
+     'not available'    
+;
+The oxidation state of the thiols could not be extracted from the literature
+or was not provided by the authors of the entry.
+;
+     'free and bound'               .
+     unkown     
+;
+The author reported that the oxidation state of the thiols is
+unknown.
+;
+     'not reported'                 .
+     'free and disulfide bound'     .
+     'free and other bound'         .
+     'free disulfide and other bound'    .
+     'disulfide and other bound'         .
+
+    stop_
+
+save_
+
+
+save__Entity_assembly.Physical_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  native               .
+  denatured            .
+  'molten globule'     .
+  unfolded             .
+ 
+  stop_
+
+save_
+
+save__Assembly_systematic_name.Naming_system
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    IUPAC                                        .
+   'CAS name'                                    .
+   'CAS registry number'                         .
+    BMRB                                         .
+
+   stop_
+
+save_
+
+
+save__Entity.Polymer_type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'polypeptide(D)'             'A polypeptide with a majority of amino acids in the D configuration'
+    'polypeptide(L)'             'A polypeptide with a majority of amino acids in the L configuration'
+    'polydeoxyribonucleotide'                    DNA
+    'polyribonucleotide'                         RNA
+    'polysaccharide(D)'   'A carbohydrate with the majority of the monomers having a D configuration'
+    'polysaccharide(L)'   'A carbohydrate with the majority of the monomers having an L configuration'
+    'DNA/RNA hybrid'      'A nucleic acid containing a combination of DNA and RNA monomers'
+
+   stop_
+
+save_
+
+
+save__Entity.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    polymer                                      .
+    non-polymer                                  .
+    water                                        .
+
+   stop_
+
+save_
+
+save__Chem_comp.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    simple                                      .
+    complex                                  .
+
+   stop_
+
+save_
+
+
+save__Entity_systematic_name.Naming_system
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    IUPAC                                        .
+   'CAS name'                                    .
+   'CAS registry number'                         .
+    BMRB                                         .
+   'Three letter code'                           .
+
+   stop_
+
+save_
+
+save__NMR_spectrometer_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    anisotropic          .
+    isotropic            .
+
+  stop_
+
+save_
+
+save__NMR_spectrometer_probe.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'room temperature'                .
+   'cryogenically cooled'            .
+
+  stop_
+
+save_
+
+save__NMR_spectrometer_probe.Diameter
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   '5 mm'            .
+   '8 mm'            .
+   '10 mm'           .
+   '20 mm'           .
+
+  stop_
+
+save_
+
+
+save__Computer.Operating_system
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      IRIX            'Version of UNIX developed by SGI'
+      UNIX            'Originally developed by AT&T and UC Berkeley'
+      Linux           'Linux Is Not Unix; but closely resembles it'
+      DOS             
+;
+Operating system used on many IBM and IBM compatible personal computers
+;
+      NT              'Windows New Technology operating system'
+     'Windows 2000'   .
+     'Windows XP      .
+
+     stop_
+
+save_
+
+
+save__Sample.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    bicelle                           .
+    emulsion                          .
+    'filamentous virus'               .
+    gel                               .
+    liposome                          .
+    membrane                          .
+    micelle                           .
+    powder                            .
+   'reverse micelle'                  .
+   'single crystal'                   .
+    solution                          .
+    solid                             .
+
+    stop_
+
+save_
+
+
+save__Sample_component.Concentration_value_units
+
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+           M            Molar
+           mM           millimolar
+           uM           micromolar
+           nM           nanomolar
+           %            percent
+           v/v          'volume to volume'
+           w/v          'weight to volume'
+
+    stop_
+
+save_
+
+
+save__Sample_condition_variable.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  pH                    
+;
+Glass electrode pH meter reading for solution in water.
+No unit is required
+;
+
+  pH*                   
+;
+Uncorrected pH meter reading for solution in D2O
+No unit is required
+;
+
+  pD                    
+;
+Reading for a D2O solution measured with a glass electrode filled with D2O
+No unit is required
+;
+
+  temperature           
+;
+Preferred unit is Kelvin (K)
+;
+
+  pressure         
+;
+Preferred unit is bar (10^5 Pa)
+;
+
+  'ionic strength' 
+;
+I = 1/2 of the summation of C(i) times Z(i)^2, where the 
+summation is taken over all of the different ions (i) in a 
+solution, multiplying the molarity C(i) by the square of 
+the charge Z(i). 
+Preferred unit is M (mol/l)
+;
+
+  viscosity
+;
+Preferred unit is kg.m^-1.s^-1.
+1 centipoise (cP) is 10^-3 kg.m^-1.s^-1
+;
+
+  'dielectric constant' 
+;
+Also called the relative permitittivity. Pure water at 298 K has a dielectric 
+constant of 78.54.
+No unit is required.
+;
+ 
+  stop_
+
+save_
+
+
+save__Sample_condition_variable.Val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+           Pa           "Pascal, 1 Pa = 1 N m^-2"
+           bar          "bar, 1 bar = 10^5 Pa"
+           atm          
+"atmosphere, 1 atm = 1.01325 * 10^5 Pa, atm is not a SI unit"
+
+           mmHg          
+"millimetres of mercury, 1 mmHg = 133.3224 Pa, mmHg is not a SI unit"
+
+           Torr          
+"Torricelli, 1 Torr = 133.322 Pa, Torr is not a SI unit"
+           mbar         millibar
+           K            Kelvin
+           C            
+;
+Celsius
+1 degree Celcius equals 1 K but is always 273.150 lower.
+E.g. 25.000 C equals 298.150 K.
+;
+            pH
+;
+unit of pH
+;
+             M
+;
+Molar, concentration unit BMRB is using for ionic strength
+;
+
+  stop_
+
+save_
+
+save__Data_set.Type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   assigned_chemical_shifts             .
+   coupling_constants                   .
+   RDCs                                 .
+   order_parameters                     .
+   spectral_density_values              .
+   H_exchange_rate                      .
+   H_exchange_protection_factors        .
+   pKa_value_data_set                   .
+   pH_NMR_parameter_list                .
+   D/H_fractionation_factors            .
+   secondary_structure                  .
+   deduced_hydrogen_bonds               .
+   representative_conformer             .
+   conformer_family_coord_set           .
+   T1_relaxation                        .
+   T2_relaxation                        .
+   heteronuclear_NOE                    .
+
+    stop_
+
+save_
+
+
+save__Study.Type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'Structure analysis'                       .
+    'Mutant comparison'                        .
+    'Interactions with different ligands'      .
+    
+  stop_
+
+save_
+
+save__Assembly_type.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     protein                                 .
+     'protein-inhibitor complex'             .
+     'protein-drug complex'                  .
+     'protein-ligand system'                 .
+     'protein-protein complex'               .
+     'protein-DNA complex'                   .
+     'protein-DNA-ligand complex'            .
+     'protein-DNA-inhibitor complex'         .
+     'protein-RNA complex'                   .
+     'protein-RNA-ligand complex'            .
+     'protein-RNA-inhibitor complex'         .
+     'single stranded DNA'                   .
+     'double stranded DNA'                   .
+     'DNA-drug complex'                      .
+     'DNA-RNA complex'                       .
+     'DNA-RNA hybrid'                        .
+     'double stranded RNA'                   .
+     'single stranded RNA'                   .
+     'RNA-drug complex'                      .
+
+    stop_
+
+save_

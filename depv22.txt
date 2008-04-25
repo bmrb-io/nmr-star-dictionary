@@ -1,0 +1,3398 @@
+
+
+                    ###################################
+                    ##    BMRB NMR-STAR Schema       ##
+                    ##         Version 2.2           ##
+                    ##         1999-10-18            ##
+                    ###################################
+
+data_<BMRB_accession_number>
+
+########################
+#   Entry information  #
+########################
+
+save_entry_information
+  _Saveframe_category         entry_information
+
+  _Entry_title
+
+   loop_
+        _Author_ordinal
+        _Author_family_name
+        _Author_given_name
+        _Author_first_initial
+        _Author_middle_initials
+        _Author_family_title
+
+    stop_
+
+  _BMRB_accession_number
+  _Entry_type
+  _Submission_date
+  _Accession_date
+  _Latest_release_date
+  _Original_release_date
+  _Entry_origination
+  _NMR_STAR_version          2.2
+  _Experimental_method
+  _Details
+
+  loop_
+     _Saveframe_category_type
+     _Saveframe_category_type_count
+
+  stop_
+
+  loop_
+     _Data_type
+     _Data_type_count
+
+  stop_
+
+  loop_
+     _Release_date
+     _Release_type
+     _Release_author
+     _Release_detail
+
+  stop_
+
+  _Special_processing_instructions
+
+  loop_
+     _Related_BMRB_accession_number
+     _Relationship
+
+  stop_
+
+  _Updated_BMRB_accession_number
+  _Replace_BMRB_accession_number
+  _Updated_PDB_accession_number
+  _Replace_PDB_accession_number
+  _Revision_details
+
+  _Release_immediately
+  _Release_on_publication
+  _Release_date_request
+  _Release_date_justification
+  _Experimental_release_date
+  _Experimental_release_on_publication
+  _Coordinates_release_date
+  _Coordinates_release_on_publication
+
+save_
+
+######################
+#   Contact persons  #
+######################
+save_contact_persons
+    _Saveframe_category   contact_persons
+
+  loop_
+    _Family_name
+    _Given_name
+    _Middle_initials
+    _Family_title
+    _Department_and_Institution
+    _Mailing_address
+    _Phone_number
+    _Email_address
+    _FAX_number
+
+   stop_
+
+save_
+
+##############################
+#   Citation for this entry  #
+##############################
+
+save_entry_citation
+    _Saveframe_category   entry_citation
+
+    _Citation_full
+    _Citation_title
+    _Citation_status
+    _Citation_type
+    _CAS_abstract_code
+    _MEDLINE_UI_code
+
+    loop_
+        _Author_ordinal
+        _Author_family_name
+        _Author_given_name
+        _Author_first_initial
+        _Author_middle_initials
+        _Author_family_title
+
+    stop_
+
+    _Journal_abbreviation
+    _Journal_name_full
+    _Journal_volume
+    _Journal_issue
+    _Journal_ASTM
+    _Journal_ISSN
+    _Journal_CSD
+
+    _Book_title
+    _Book_chapter_title
+    _Book_volume
+    _Book_series
+    _Book_publisher
+    _Book_publisher_city
+    _Book_ISBN
+
+    _Conference_title
+    _Conference_site
+    _Conference_state_province
+    _Conference_country
+    _Conference_start_date
+    _Conference_end_date
+    _Conference_abstract_number
+
+    _Thesis_institution
+    _Thesis_institution_city
+    _Thesis_institution_country
+
+    _Page_first
+    _Page_last
+    _Year
+
+    _Details
+
+    loop_
+        _Keyword
+
+    stop_
+
+    loop_
+        _Editor_ordinal
+        _Editor_family_name
+        _Editor_given_name
+        _Editor_middle_initials
+        _Editor_family_title
+
+    stop_
+
+save_
+
+
+###################################
+#   Molecular system description  #
+###################################
+
+save_<system_abbreviation>
+    _Saveframe_category   molecular_system
+
+    _Mol_system_name
+
+    loop_
+        _Synonym
+
+    stop_
+
+    _Abbreviation_common
+    _Enzyme_commission_number
+
+  loop_
+     _Mol_system_component_ID
+     _Mol_system_component_name
+     _Mol_label
+     _Mol_label_category
+
+  stop_
+
+   _System_mass
+   _System_physical_state
+   _System_oligomer_state
+   _System_type
+   _System_paramagnetic
+   _System_thiol_state
+
+   loop_
+      _Magnetic_equivalence_ID
+      _Magnetically_equivalent_system_component_ID
+      _Magnetically_equivalent_system_component_name
+
+   stop_
+
+   loop_
+      _Biological_function
+
+   stop_
+
+   _Details
+   _Database_query_date
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_experimental_method
+      _Database_entry_relation_type
+      _Database_entry_details
+
+   stop_
+
+  loop_
+     _Keyword
+
+  stop_
+
+
+    ###########################################################
+    #   Molecular system component bond linkage definitions   #
+    ###########################################################
+
+
+    loop_
+        _Bond_order
+        _Bond_type
+        _Bond_configuration
+        _Atom_one_mol_system_component_ID
+        _Atom_one_mol_system_component_name
+        _Atom_one_residue_seq_code
+        _Atom_one_residue_label
+        _Atom_one_atom_name
+        _Atom_one_residue_author_seq_code
+        _Atom_one_residue_author_label
+        _Atom_one_atom_author_name
+        _Atom_two_mol_system_component_ID
+        _Atom_two_mol_system_component_name
+        _Atom_two_residue_seq_code
+        _Atom_two_residue_label
+        _Atom_two_atom_name
+        _Atom_two_residue_author_seq_code
+        _Atom_two_residue_author_label
+        _Atom_two_atom_author_name
+        _Details
+
+    stop_
+
+    loop_
+        _Deleted_atom_mol_system_component_ID
+        _Deleted_atom_mol_system_component_name
+        _Deleted_atom_residue_seq_code
+        _Deleted_atom_residue_label
+        _Deleted_atom_name
+        _Deleted_atom_residue_author_seq_code
+        _Deleted_atom_residue_author_label
+        _Deleted_atom_author_name
+
+    stop_
+
+save_
+
+    ########################
+    #   Monomeric polymers #
+    ########################
+
+save_<Mol_polymer_label>
+    _Saveframe_category   monomeric_polymer
+
+    _Mol_type             polymer
+    _Mol_polymer_class
+    _Name_common
+    _Name_variant
+    _Abbreviation_common
+    _Name_CAS
+    _CAS_registry_number
+    _Enzyme_commission_number
+
+    loop_
+        _Synonym
+
+    stop_
+
+    _Molecular_mass
+    _Mol_thiol_state
+
+  loop_
+     _Keyword
+
+  stop_
+
+   loop_
+      _Biological_function
+
+   stop_
+
+    _Details
+
+        ################################
+        #   Polymer residue sequence   #
+        ################################
+
+    _Sequence_citation_label
+    _Ambiguous_sequence_features
+    _Residue_count
+    _Mol_standard_derivative_residue_sequence
+    _Mol_residue_sequence
+
+    loop_
+        _Residue_seq_code
+        _Residue_label
+        _Residue_author_seq_code
+        _Residue_author_label
+        _Insertion_code
+        _Segment_definition_code
+
+    stop_
+
+        ################################
+        #   Polymer residue linkages   #
+        ################################
+
+    loop_
+        _Bond_order
+        _Bond_type
+        _Bond_configuration
+        _Atom_one_residue_seq_code
+        _Atom_one_residue_label
+        _Atom_one_atom_name
+        _Atom_one_residue_author_seq_code
+        _Atom_one_residue_author_label
+        _Atom_one_author_name
+        _Atom_one_atom_type
+        _Atom_two_residue_seq_code
+        _Atom_two_residue_label
+        _Atom_two_atom_name
+        _Atom_two_residue_author_seq_code
+        _Atom_two_residue_author_label
+        _Atom_two_author_name
+        _Atom_two_atom_type
+
+    stop_
+
+   _Sequence_homology_query_date
+
+   loop_
+     _Database_name
+     _Database_accession_code
+     _Database_entry_mol_name
+     _Database_entry_experimental_method
+     _Database_segment_ID
+     _Sequence_homology_type
+     _Sequence_query_to_submitted_percentage
+     _Sequence_identity
+     _Sequence_positive
+     _Sequence_homology_expectation_value
+     _Sequence_difference_details
+     _Sequence_alignment_details
+
+   stop_
+
+save_
+
+    #######################
+    #   Polymer residues  #
+    #######################
+
+save_<polymer_residue_label>
+    _Saveframe_category        polymer_residue
+
+    _Mol_type                  non-polymer
+    _Name_common
+    _Abbreviation_common
+    _Name_IUPAC
+    _Name_CAS
+    _CAS_registry_number
+    _PDB_code
+
+    loop_
+        _Synonym
+
+    stop_
+
+    loop_
+      _Keyword
+
+    stop_
+
+    _Standard_residue_derivative
+    _Mol_empirical_formula
+    _Molecular_mass
+    _Mol_paramagnetic
+    _Details
+    _SMILES_representation
+    _Topology_file_name
+    _Topology_file_format
+    _Topology_file_location
+    _Mol_structure_file_name
+    _Mol_structure_file_format
+    _Mol_structure_file_location
+    _Stereochemistry_parameter_file_name
+    _Stereochemistry_parameter_file_format
+    _Stereochemistry_parameter_file_location
+
+    loop_
+        _Atom_name
+        _Atom_author_name
+        _Atom_type
+        _Atom_chirality
+        _Atom_charge
+        _Atom_oxidation_number
+        _Atom_unpaired_electrons
+
+    stop_
+
+    loop_
+        _Bond_order
+        _Bond_type
+        _Bond_configuration
+        _Atom_one_atom_name
+        _Atom_one_atom_author_name
+        _Atom_two_atom_name
+        _Atom_two_atom_author_name
+
+    stop_
+
+   _Database_query_date
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+   stop_
+
+save_
+
+    ##############
+    #   Ligands  #
+    ##############
+
+save_<ligand_label>
+    _Saveframe_category           ligand
+    _Mol_type                     non-polymer
+    _Name_common
+    _Abbreviation_common
+    _Name_CAS
+    _CAS_registry_number
+    _Name_IUPAC
+    _PDB_code
+
+    loop_
+        _Synonym
+
+    stop_
+
+    _Mol_empirical_formula
+    _Mol_charge
+    _Mol_paramagnetic
+    _Mol_aromatic
+    _Molecular_mass
+    _Mol_binding_category
+
+  loop_
+     _Keyword
+
+  stop_
+
+  loop_
+    _Biological_function
+
+  stop_
+
+    _Details
+    _SMILES_representation
+    _Topology_file_name
+    _Topology_file_format
+    _Topology_file_location
+    _Mol_structure_file_name
+    _Mol_structure_file_format
+    _Mol_structure_file_location
+    _Stereochemistry_parameter_file_name
+    _Stereochemistry_parameter_file_format
+    _Stereochemistry_parameter_file_location
+
+    loop_
+        _Atom_name
+        _Atom_author_name
+        _Atom_type
+        _Atom_chirality
+        _Atom_charge
+        _Atom_oxidation_number
+        _Atom_unpaired_electrons
+
+    stop_
+
+    loop_
+        _Bond_order
+        _Bond_type
+        _Bond_configuration
+        _Atom_one_atom_name
+        _Atom_one_atom_author_name
+        _Atom_two_atom_name
+        _Atom_two_atom_author_name
+
+    stop_
+  
+   _Database_query_date
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+   stop_
+
+save_
+
+    ##########################
+    #  Solvent molecule sets #
+    ##########################
+
+save_<solvent_solute_molecule_set>
+   _Saveframe_category          solvent_solute_molecule_set
+
+   _Mol_common_name
+   _Details
+  
+  loop_
+    _Keyword
+
+  stop_
+
+  loop_
+    _Solvent_solute_set_member_ID
+    _Solvent_solute_mol_abbreviation_common
+    
+  stop_
+
+    loop_
+        _Atom_name
+        _Atom_author_name
+        _Atom_type
+        _Atom_chirality
+        _Atom_charge
+        _Atom_oxidation_number
+        _Atom_unpaired_electrons
+
+    stop_
+
+    loop_
+        _Bond_order
+        _Bond_type
+        _Bond_configuration
+        _Atom_one_atom_name
+        _Atom_two_atom_name
+        _Atom_one_atom_author_name
+        _Atom_two_atom_author_name
+
+    stop_
+
+save_
+
+
+    ####################################################
+    #   Biologically functional molecule descriptions  #
+    ####################################################
+
+save_<functional molecular_system>
+   _Saveframe_category          functional_molecular_system
+
+   _Name_common
+   _Name_variant
+   _Abbreviation_common
+
+   loop_
+      _Synonym
+
+   stop_
+
+   _Enzyme_commission_number
+   _Details
+
+   loop_
+      _Mol_system_component_ID
+      _Mol_system_component_name
+
+   stop_
+
+   loop_
+      _Biological_function
+
+   stop_
+
+   loop_
+      _Keyword
+
+   stop_
+
+   _Database_query_date
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_experimental_method
+      _Database_entry_details
+
+   stop_
+
+save_
+
+
+    #####################
+    #   Natural source  #
+    #####################
+
+save_natural_source
+    _Saveframe_category   natural_source
+
+  loop_
+    _Mol_label
+    _Mol_label_category
+    _Organism_name_common
+    _Organism_acronym
+    _ICTVdb_decimal_code
+    _NCBI_taxonomy_ID
+    _Superkingdom
+    _Kingdom
+    _Genus
+    _Species
+    _Strain
+    _Variant
+    _Subvariant
+    _Organ
+    _Tissue
+    _Cell_line
+    _Cell_type
+    _ATCC_number
+    _Organelle
+    _Fraction
+    _Secretion
+    _Plasmid
+    _Gene_mnemonic
+    _Details
+
+  stop_
+
+save_
+
+    ###########################
+    #   Experimental source   #
+    ###########################
+
+save_experimental_source
+    _Saveframe_category   experimental_source
+
+  loop_
+    _Mol_label
+    _Mol_label_category
+    _Production_method
+    _Host_organism_name_common
+    _Genus
+    _Species
+    _Strain
+    _Variant
+    _Organ
+    _Tissue
+    _Cell_line
+    _Cell_type
+    _ATCC_number
+    _Vector_type
+    _Vector_name
+    _Vendor_name
+    _Gene_source
+    _Details
+
+  stop_
+
+save_
+
+#############################
+#   Sample characteristics  #
+#############################
+
+    #########################
+    #   Sample description  #
+    #########################
+
+save_<sample_label>
+    _Saveframe_category         sample
+
+    _Sample_type
+    _Details
+
+    loop_
+        _Mol_label
+        _Mol_label_category
+        _Mol_common_name
+        _Concentration_value
+        _Concentration_value_units
+        _Concentration_min_value
+        _Concentration_max_value
+        _Isotopic_labeling
+
+    stop_
+
+save_
+
+    ########################
+    #   Sample conditions  #
+    ########################
+
+save_<sample_conditions_label>
+    _Saveframe_category       sample_conditions
+
+    _Details
+
+    loop_
+        _Variable_type
+        _Variable_value
+        _Variable_value_error
+        _Variable_value_units
+
+    stop_
+
+save_
+
+    ##############################
+    #   Purity of the molecules  #
+    ##############################
+
+save_sample_mol_purity
+    _Saveframe_category   sample_mol_purity
+
+  _Details
+
+  loop_
+    _Sample_label
+    _Mol_label
+    _Mol_label_category
+    _Mol_purity_value
+    _Mol_purity_value_units
+    _Mol_purity_measurement_method
+
+  stop_
+
+save_
+
+#####################
+#   NMR parameters  #
+#####################
+
+    ###############################
+    #   Assigned chemical shifts  #
+    ###############################
+
+        #################################
+        #   Chemical shift referencing  #
+        #################################
+
+save_<chemical_shift_reference_label>
+  _Saveframe_category   chemical_shift_reference
+
+  _Details
+
+  loop_
+    _Mol_common_name
+    _Atom_type
+    _Atom_isotope_number
+    _Atom_group
+    _Chem_shift_units
+    _Chem_shift_value
+    _Reference_method
+    _Reference_type
+    _External_reference_sample_geometry
+    _External_reference_location
+    _External_reference_axis
+    _Indirect_shift_ratio
+    _Indirect_shift_ratio_citation_label
+    _Reference_correction_type
+    _Correction_value
+    _Correction_value_citation_label
+
+  stop_
+
+save_
+
+        ####################################
+        #   Assigned chemical shift lists  #
+        ####################################
+
+save_<assigned_chemical_shifts_label>
+  _Saveframe_category   assigned_chemical_shifts
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+    _Sample_label
+
+  stop_
+
+  _Sample_conditions_label
+  _Chem_shift_reference_set_label
+
+  _Text_data_format
+  _Text_data
+
+  loop_
+    _Atom_shift_assign_ID
+    _Mol_system_component_ID
+    _Mol_system_component_name
+**    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+    _Atom_type
+    _Chem_shift_value
+    _Chem_shift_value_error
+    _Chem_shift_ambiguity_code
+
+  stop_
+
+save_
+
+save_Ambiguous_chemical_shift_correlations
+     _Saveframe_category              Ambiguous_chemical_shift_correlations
+
+  loop_
+    _Ambiguity_chem_shift_set
+    _Assigned_chemical_shift_saveframe_label
+    _Ambiguity_atom_shift_assign_ID
+
+  stop_
+
+save_
+
+
+
+
+     
+        ############################################
+        #  Chemical shifts calculated from theory  #
+        ############################################
+
+save_<theoretical_chemical_shifts_label>
+  _Saveframe_category   theoretical_chemical_shifts
+
+  _Details
+
+  _Calculation_type_label
+  _Model_atomic_coordinates_label
+  _Chemical_shift_tensors_label
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+#########################################################################
+   _1H_chemical_shift_error
+   _13C_chemical_shift_error
+   _15N_chemical_shift_error
+   _31P_chemical_shift_error
+   _19F_chemical_shift_error
+#########################################################################
+
+  loop_
+    _Theoretical_atom_shift_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+    _Atom_type
+    _Chem_shift_value
+    _Chem_shift_value_error
+
+  stop_
+
+save_
+
+        ###############################################
+        #  Computational methods for chemical shifts  #
+        ###############################################
+
+save_<shifts_calculation_type_label>
+   _Saveframe_category             shifts_calculation_type
+
+  loop_
+    _Software_label
+
+  stop_
+
+  _Calculation_level
+  _Quantum_mechanical_method
+  _Quantum_mechanical_theory_level
+  _Chemical_shift_type
+  _Sample_conditions_modeled
+  _Chem_shift_reference_set_label
+
+save_
+
+        ################################
+        #  Chemical shift tensor data  #
+        ################################
+
+save_<Chemical_shift_tensors>
+   _Saveframe_category             chemical_shift_tensors
+
+     _Details
+
+   loop_
+       _Theoretical_atom_shift_ID
+       _Chi_x_x
+       _Chi_x_x_cosine_x
+       _Chi_x_x_cosine_y
+       _Chi_x_x_cosine_z
+       _Chi_y_y
+       _Chi_y_y_cosine_x
+       _Chi_y_y_cosine_y
+       _Chi_y_y_cosine_z
+       _Chi_z_z
+       _Chi_z_z_cosine_x
+       _Chi_z_z_cosine_y
+       _Chi_z_z_cosine_z
+
+   stop_
+
+save_
+
+    ########################
+    #   Coupling constants #
+    ########################
+
+save_<coupling_constants_label>
+  _Saveframe_category   coupling_constants
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+    _Sample_label
+
+  stop_
+
+  _Sample_conditions_label
+  _Spectrometer_frequency_1H
+
+  _Text_data_format
+  _Text_data
+
+  loop_
+    _Coupling_constant_ID
+    _Coupling_constant_code
+    _Atom_ome_mol_system_component_ID
+    _Atom_one_mol_system_component_name
+    _Atom_one_residue_seq_code
+    _Atom_one_residue_label
+    _Atom_one_name
+    _Atom_one_residue_author_seq_code
+    _Atom_one_residue_author_label
+    _Atom_one_author_name
+    _Atom_two_mol_system_component_ID
+    _Atom_two_mol_system_component_name
+    _Atom_two_residue_seq_code
+    _Atom_two_residue_label
+    _Atom_two_name
+    _Atom_two_residue_author_seq_code
+    _Atom_two_residue_author_label
+    _Atom_two_author_name
+
+    _Coupling_constant_value
+    _Coupling_constant_min_value
+    _Coupling_constant_max_value
+    _Coupling_constant_value_error
+
+  stop_
+
+save_
+
+    ###################
+    #  T1 relaxation  #
+    ###################
+
+save_<relaxation_data_label>
+  _Saveframe_category   Heteronuclear_T1_relaxation
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+    _Sample_label
+
+  stop_
+
+  _Sample_conditions_label
+  _Spectrometer_frequency_1H
+  _T1_coherence_type
+  _T1_value_units
+
+
+  _Text_data_format
+  _Text_data
+
+  loop_
+    _T1_ID
+    _Mol_system_component_ID
+    _Mol_system_component_name
+
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+
+    _T1_value
+    _T1_value_error
+
+  stop_
+
+save_
+
+    ######################
+    #  T1rho relaxation  #
+    ######################
+
+save_<T1rho_relaxation_label>
+  _Saveframe_category   Heteronuclear_T1rho_relaxation
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+  _Sample_label
+
+  stop_
+
+  _Sample_conditions_label
+  _Spectrometer_frequency_1H
+
+  _T1rho_coherence_type
+  _T1rho_value_units
+  _Rex_units
+
+
+  _Text_data_format
+  _Text_data
+
+  loop_
+    _T1rho_ID
+    _Mol_system_component_ID
+    _Mol_system_component_name
+
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+    _T1rho_value
+    _T1rho_value_error
+    _Rex_value
+    _Rex_error
+
+
+  stop_
+
+save_
+
+    ###################
+    #  T2 relaxation  #
+    ###################
+
+save_<T2_relaxation_label>
+  _Saveframe_category   Heteronuclear_T2_relaxation
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+  _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _Spectrometer_frequency_1H
+
+  _T2_coherence_type
+
+  _T2_value_units
+
+  _Rex_units
+
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _T2_ID
+    _Mol_system_component_ID
+    _Mol_system_component_name
+
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+
+    _T2_value
+    _T2_value_error
+    _Rex_value
+    _Rex_error
+
+  stop_
+
+save_
+
+    ###############################
+    #  Chemical shift anisotropy  #
+    ###############################
+
+save_<chemical_shift anisotropy_label>
+  _Saveframe_category   chemical_shift_anisotropy
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+  _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _Spectrometer_frequency_1H
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Chem_shift_anisotropy_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+
+    _Chem_shift_anisotropy_value
+    _Chem_shift_anisotropy_value_error
+
+  stop_
+
+save_
+
+    #######################
+    #  Heteronuclear NOE  #
+    #######################
+
+save_<heteronuclear_NOE_label>
+  _Saveframe_category   heteronuclear_NOE
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+  _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _Spectrometer_frequency_1H
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Heteronuclear_NOE_value_type
+
+  _NOE_reference_value
+
+  _NOE_reference_description
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Heteronuclear_NOE_ID
+    _Atom_one_mol_solvent_solute_set_member_ID
+    _Atom_one_mol_solvent_solute_abbreviation_common
+    _Atom_one_residue_seq_code
+    _Atom_one_residue_label
+    _Atom_one_atom_name
+    _Atom_one_residue_author_seq_code
+    _Atom_one_residue_author_label
+    _Atom_one_atom_author_name
+    _Atom_two_mol_solvent_solute_set_member_ID
+    _Atom_two_mol_solvent_solute_abbreviation_common
+    _Atom_two_residue_seq_code
+    _Atom_two_residue_label
+    _Atom_two_atom_name
+    _Atom_two_residue_author_seq_code
+    _Atom_two_residue_author_label
+    _Atom_two_atom_author_name
+
+    _Heteronuclear_NOE_value
+    _Heteronuclear_NOE_value_error
+
+
+  stop_
+
+save_
+
+    #####################
+    #  Homonuclear NOE  #
+    #####################
+
+save_<homonuclear_NOE_label>
+  _Saveframe_category   homonuclear_NOE
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+    _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _Homonuclear_NOE_value_type
+
+  _NOE_reference_value
+
+  _NOE_reference_description
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Homonuclear_NOE_ID
+    _Atom_one_mol_system_component_ID
+    _Atom_one_mol_system_component_name
+    _Atom_one_mol_solvent_solute_set_member_ID
+    _Atom_one_mol_solvent_solute_abbreviation_common
+    _Atom_one_residue_seq_code
+    _Atom_one_residue_label
+    _Atom_one_atom_name
+    _Atom_one_residue_author_seq_code
+    _Atom_one_residue_author_label
+    _Atom_one_atom_author_name
+    _Atom_two_mol_system_component_ID
+    _Atom_two_mol_system_component_name
+    _Atom_two_mol_solvent_solute_set_member_ID
+    _Atom_two_mol_solvent_solute_abbreviation_common
+    _Atom_two_residue_seq_code
+    _Atom_two_residue_label
+    _Atom_two_atom_name
+    _Atom_two_residue_author_seq_code
+    _Atom_two_residue_author_label
+    _Atom_two_atom_author_name
+
+    _Homonuclear_NOE_value
+    _Homonuclear_NOE_value_error
+
+  stop_
+
+save_
+
+    ########################
+    #  Spectral peak list  #
+    ########################
+
+save_<spectral_peak_list_label>
+  _Saveframe_category   spectral_peak_list
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  _Experiment_label
+
+  _Number_of_spectral_dimensions
+
+  loop_
+   _Spectral_dimension_ID
+   _Atom_type
+   _Spectral_region
+
+  stop_
+
+  _Sample_label
+
+  _Sample_conditions_label
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Peak_ID
+    _Intensity
+    _Intensity_error
+    _Intensity_measurement_method
+
+     loop_
+        _Spectral_dimension
+        _Atom_shift_assign_ID
+        _Mol_system_component_ID
+        _Mol_system_component_name
+        _Mol_solvent_solute_set_member_ID
+        _Residue_seq_code
+        _Residue_label
+        _Atom_name
+        _Residue_author_seq_code
+        _Residue_author_code
+        _Atom_author_name
+
+        _Chem_shift_value
+        _Line_width
+        _Phase
+        _Decay_rate
+
+    stop_
+
+  stop_
+
+save_
+
+########################
+#  Kinetic parameters  #
+########################
+
+    ######################
+    #  Order parameters  #
+    ######################
+
+save_<S2_parameters_label>
+  _Saveframe_category   S2_parameters
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+    _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Tau_e_value_units
+  _Tau_s_value_units
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _S2_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_code
+    _Atom_author_name
+
+    _S2_value
+    _S2_value_fit_error
+    _Tau_e_value
+    _Tau_e_value_fit_error
+    _Rex_value
+    _Rex_value_error
+    _Model_free_sum_squared_errors
+    _Model_fit
+    _S2f_value
+    _S2f_value_fit_error
+    _S2s_value
+    _S2s_value_fit_error
+    _Tau_s_value
+    _Tau_s_value_fit_error
+    _S2H_value
+    _S2H_value_fit_error
+    _S2N_value
+    _S2N_value_fit_error
+
+######################################################
+#      Additional Potentially Useful Data Tags       #
+#                                                    #
+#                                                    #
+######################################################
+
+  stop_
+
+save_
+
+    #############################
+    #  Spectral density values  #
+    #############################
+
+save_<spectral_density_value_label>
+  _Saveframe_category   spectral_density_values
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+    _Sample_label
+  stop_
+
+  _Sample_conditions_label
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Spectral_density_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_code
+    _Atom_author_name
+
+    _Spectral_density_w_zero_value
+    _Spectral_density_w_zero_value_error
+    _Spectral_density_w_1H_value
+    _Spectral_density_w_1H_value_error
+    _Spectral_density_w_13C_value
+    _Spectral_density_w_13C_value_error
+    _Spectral_density_w_15N_value
+    _Spectral_density_w_15N_value_error
+
+  stop_
+
+save_
+
+    ######################
+    #  H-exchange rates  #
+    ######################
+
+save_<H_exch_rate_label>
+  _Saveframe_category   H_exchange_rate
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+  _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _H_exchange_rate_units
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+ loop_
+    _H_exchange_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_code
+    _Atom_author_name
+
+    _H_exchange_rate_value
+    _H_exchange_rate_min_value
+    _H_exchange_rate_max_value
+    _H_exchange_rate_value_error
+
+  stop_
+
+save_
+
+    ###################################
+    #  H-exchange protection factors  #
+    ###################################
+
+save_<protection_factors_label>
+  _Saveframe_category   H_exchange_protection_factors
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  _Sample_label
+
+  _Sample_conditions_label
+
+  _Standard_values_source_citation_label
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _H_exchange_protection_factor_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_code
+    _Atom_author_name
+
+    _H_exchange_calculated_intrinsic_rate
+    _H_exchange_protection_factor_value
+    _H_exchange_protection_factor_value_error
+
+  stop_
+
+save_
+
+##############################
+#  Thermodynamic parameters  #
+##############################
+
+    ################
+    #  pKa values  #
+    ################
+
+save_<pKa_value_data_set_label>
+  _Saveframe_category   pKa_value_data_set
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+     _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _Expt_observed_parameter
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+   loop_
+    _pKa_ID
+    _Atom_observed_mol_solvent_solute_set_member_ID
+    _Atom_observed_mol_solvent_solute_abbreviation_common
+    _Atom_observed_residue_seq_code
+    _Atom_observed_residue_label
+    _Atom_observed_atom_name
+    _Atom_observed_residue_author_seq_code
+    _Atom_observed_residue_author_code
+    _Atom_observed_atom_author_name
+
+    _pKa_hill_coeff_value
+    _pKa_hill_coeff_value_fit_error
+    _High_pH_parameter_fit_value
+    _High_pH_parameter_fit_value_error
+    _Low_pH_parameter_fit_value
+    _Low_pH_parameter_fit_value_error
+    _pKa_value
+    _pKa_value_fit_error
+
+    _Atom_titr_residue_seq_code
+    _Atom_titr_residue_label
+    _Atom_titr_atom_name
+
+  stop_
+
+save_
+
+        ##################################
+        #  pH versus NMR parameter list  #
+        ##################################
+
+save_<pH_NMR_parameter_list_label>
+  _Saveframe_category   pH_NMR_parameter_list
+
+  _pKa_value_data_set_label
+
+  _Details
+
+  _Text_data_format
+
+  _Text_data
+
+    loop_
+        _pKa_ID
+        _pH_value
+        _pH_value_error
+        _Observed_NMR_parameter_value
+        _Observed_NMR_parameter_value_error
+
+    stop_
+
+save_
+
+    ###############################
+    #  D/H-fractionation factors  #
+    ###############################
+
+save_<fractionation_factor_label>
+  _Saveframe_category   D/H_fractionation_factors
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+  _Sample_label
+  stop_
+
+  _Sample_conditions_label
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _H_fractionation_factor_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_code
+    _Atom_author_name
+
+    _H_fractionation_factor_value
+    _H_fractionation_factor_value_error
+
+  stop_
+
+save_
+
+##################################
+#  Secondary structure features  #
+##################################
+
+    #####################################################
+    #  Structure features derived from chemical shifts  #
+    #####################################################
+
+save_<secondary_structure_label>
+  _Saveframe_category   secondary_structure
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+  _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  loop_
+    _Expt_applied_data_set_label
+
+  stop_
+
+  _Residue_struct_value_details
+
+  loop_
+     _Protocol_citation_label
+
+  stop_
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Residue_secondary_struct_ID
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_code
+    _Atom_author_name
+
+    _Residue_struct_value
+    _Residue_struct_element_type
+
+  stop_
+
+save_
+
+    ############################
+    #  Deduced hydrogen bonds  #
+    ############################
+
+save_<deduced_hydrogen_bonds_label>
+  _Saveframe_category   deduced_hydrogen_bonds
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+     _Protocol_citation_label
+
+  stop_
+
+  loop_
+  _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Deduced_hydrogen_bond_ID
+    _Mol_system_component_ID
+    _Mol_system_component_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Heavy_atom_one_residue_seq_code
+    _Heavy_atom_one_residue_label
+    _Heavy_atom_one_atom_name
+    _Heavy_atom_one_residue_author_seq_code
+    _Heavy_atom_one_residue_author_code
+    _Heavy_atom_one_atom_author_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Heavy_atom_two_residue_seq_code
+    _Heavy_atom_two_residue_label
+    _Heavy_atom_two_atom_name
+    _Heavy_atom_two_residue_author_seq_code
+    _Heavy_atom_two_residue_author_code
+    _Heavy_atom_two_atom_author_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Hydrogen_atom_residue_seq_code
+    _Hydrogen_atom_residue_label
+    _Hydrogen_atom_atom_name
+    _Hydrogen_atom_residue_author_seq_code
+    _Hydrogen_atom_residue_author_code
+    _Hydrogen_atom_atom_author_name
+
+
+  stop_
+
+save_
+
+    ###################
+    #  New data type  #
+    ###################
+
+save_<new_data_type_label>
+  _Saveframe_category   new_data_type
+
+  _Details
+
+  loop_
+    _Software_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+     _Protocol_citation_label
+
+  stop_
+
+  loop_
+     _Sample_label
+
+  stop_
+
+  _Sample_conditions_label
+
+  _Text_data_format
+
+  _Text_data
+
+save_
+###################################################
+#  Atomic coordinates in three dimensional space  #
+###################################################
+
+    ###########################################
+    #  Structure statistical characteristics  #
+    ###########################################
+
+save_<conformer_statistical_characteristics_label>
+  _Saveframe_category   conformer_statistical_characteristics
+
+  _Details
+
+  _Text_data_format
+
+  _Text_data
+
+   _Original_conformer_statistics_file_ID
+
+   _Conformer_family_label
+
+   _Representative_conformer_label
+
+   _Conformer_calculated_total_number
+
+   _Conformer_submitted_total_number
+
+   _Conformer_selection_criteria
+
+  _Rep_structure_conformer_number
+  _Rep_structure_selection_criteria
+
+  loop_
+      _Constraint_list_label
+
+  stop_
+
+  loop_
+
+    _Software_label
+
+    _Software_protocol_file_name
+
+    _Software_parameter_file_name
+
+  stop_
+
+ _Conformer_ensemble_all_distance_rms_dev
+ _Conformer_ensemble_all_distance_rms_dev_error
+
+ _Conformer_ensemble_intraresidue_distance_rms_dev
+ _Conformer_ensemble_intraresidue_distance_rms_dev_error
+
+ _Conformer_ensemble_sequential_rms_dev
+ _Conformer_ensemble_sequential_rms_dev_error
+
+ _Conformer_ensemble_short_range_rms_dev
+ _Conformer_ensemble_short_range_rms_dev_error
+
+ _Conformer_ensemble_long_range_rms_dev
+ _Conformer_ensemble_long_range_rms_dev_error
+
+ _Conformer_ensemble_unambiguous_inter-molecular_rms_dev
+ _Conformer_ensemble_unambiguous_inter-molecular_rms_dev_error
+
+ _Conformer_ensemble_ambiguous_inter-molecular_rms_dev
+ _Conformer_ensemble_ambiguous_inter-molecular_rms_dev_error
+
+ _Conformer_ensemble_ambiguous_intra-molecular_rms_dev
+ _Conformer_ensemble_ambiguous_intra-molecular_rms_dev_error
+
+ _Conformer_ensemble_hydrogen_bond_rms_dev
+ _Conformer_ensemble_hydrogen_bond_rms_dev_error
+
+ _Conformer_ensemble_dihedral_angles_rms_dev
+ _Conformer_ensemble_dihedral_angles_rms_dev_error
+
+ _Conformer_ensemble_dipolar_1H-1H_coupling_rms_dev
+ _Conformer_ensemble_dipolar_1H-1H_coupling_rms_dev_error
+
+ _Conformer_ensemble_dipolar_1H-15N_coupling_rms_dev
+ _Conformer_ensemble_dipolar_1H-15N_coupling_rms_dev_error
+
+ _Conformer_ensemble_dipolar_1H-13C_coupling_rms_dev
+ _Conformer_ensemble_dipolar_1H-13C_coupling_rms_dev_error
+
+ _Conformer_ensemble_dipolar_13C-13C_coupling_rms_dev
+ _Conformer_ensemble_dipolar_13C-13C_coupling_rms_dev_error
+
+ _Conformer_ensemble_total_energy
+ _Conformer_ensemble_total_energy_error
+
+ _Conformer_ensemble_bond_energy
+ _Conformer_ensemble_bond_energy_error
+
+ _Conformer_ensemble_angle_energy
+ _Conformer_ensemble_angle_energy_error
+
+ _Conformer_ensemble_improper_energy
+ _Conformer_ensemble_improper_energy_error
+
+ _Conformer_ensemble_van_der_Waals_energy
+ _Conformer_ensemble_van_der_Waals_energy_error
+
+ _Conformer_ensemble_NOE_energy
+ _Conformer_ensemble_NOE_energy_error
+
+ _Conformer_ensemble_torsional_angle_potential_energy
+ _Conformer_ensemble_torsional_angle_potential_energy_error
+
+ _Conformer_ensemble_noncrystallographic_symmetry_potential_energy
+ _Conformer_ensemble_noncrystallographic_symmetry_potential_energy_error
+
+ _Conformer_ensemble_Lennard-Jones_potential_energy
+ _Conformer_ensemble_Lennard-Jones_potential_energy_error
+
+ _Conformer_ensemble_covalent_bond_rms_dev
+ _Conformer_ensemble_covalent_bond_rms_dev_error
+
+ _Conformer_ensemble_bond_angle_rms_dev
+ _Conformer_ensemble_bond_angle_rms_dev_error
+
+ _Conformer_ensemble_impropers_rms_dev
+ _Conformer_ensemble_impropers_rms_dev_error
+
+ _Conformer_ensemble_peptide_planarity_rms_dev
+ _Conformer_ensemble_peptide_planarity_rms_dev_error
+
+ _Representative_conformer_intraresidue_distance_rms_dev
+ _Representative_conformer_sequential_rms_dev
+ _Representative_conformer_short_range_rms_dev
+ _Representative_conformer_long_range_rms_dev
+ _Representative_conformer_unambiguous_inter-molecular_rms_dev
+ _Representative_conformer_ambiguous_inter-molecular_rms_dev
+ _Representative_conformer_ambiguous_intra-molecular_rms_dev
+ _Representative_conformer_hydrogen_bond_rms_dev
+ _Representative_conformer_dihedral_angles_rms_dev
+ _Representative_conformer_dipolar_1H-1H_coupling_rms_dev
+ _Representative_conformer_dipolar_1H-13C_coupling_rms_dev
+ _Representative_conformer_dipolar_1H-15N_coupling_rms_dev
+ _Representative_conformer_dipolar_13C-13C_coupling_rms_dev
+ _Representative_conformer_total_energy
+ _Representative_conformer_bond_energy
+ _Representative_conformer_angle_energy
+ _Representative_conformer_improper_energy
+ _Representative_conformer_van_der_Waals_energy
+ _Representative_conformer_NOE_energy
+ _Representative_conformer_torsional_angle_potential_energy
+ _Representative_conformer_noncrystallographic_symmetry_potential_energy
+ _Representative_conformer_Lennard-Jones_potential_energy
+ _Representative_conformer_covalent_bond_rms_dev
+ _Representative_conformer_bond_angle_rms_dev
+ _Representative_conformer_impropers_rms_dev
+ _Representative_conformer_peptide_planarity_rms_dev
+
+  _Statistical_structure_parameter_details
+
+   _Distance_constraint_violation_stat_calc_method
+
+   _Maximum_distance_constraint_violation
+
+   _Average_distance_constraint_violation
+
+   _Sum_of_all_distance_constraint_violations
+
+   _RMSD_over_all_distance_constraint_violations
+
+   _Maximum_upper_distance_constraint_violation
+
+   _Maximum_lower_distance_constraint_violation
+
+   _Representative_conformer_maximum_upper_distance_bound_violation
+
+   _Torsion_angle_constraint_stat_calc_method
+
+   _Maximum_torsion_angle_constraint_violation
+
+   _Average_torsion_angle_constraint_violation
+
+   _Std_dev_over_all_torsion_angle_constraint_violations
+
+   _Average_constraints_per_residue
+
+   _Average_constraint_violations_per_residue
+
+   _Atom_coord_avg_rmsd_calc_method
+
+   _Backbone_heavy_atom_residues_included
+   _Backbone_heavy_atom_coord_avg_rmsd
+
+   _Backbone_heavy_atom_coord_std_dev
+
+   _Sidechain_heavy_atom_residues_included
+   _Sidechain_heavy_atom_coord_avg_rmsd
+
+   _Sidechain_heavy_atom_coord_std_dev
+
+   _All_heavy_atom_residues_included
+   _All_heavy_atom_coord_avg_rmsd
+
+   _All_heavy_atom_coord_std_dev
+
+   _Struct_figure_of_merit
+
+   _Struct_figure_of_merit_func_form
+
+save_
+
+        ##############################
+        #  Angular order parameters  #
+        ##############################
+
+save_angular_order_parameters
+  _Saveframe_category       angular_order_parameters
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Text_data_format
+
+  _Text_data
+
+  loop_
+    _Angular_order_parameter_ID
+    _Residue_seq_code
+    _Residue_author_seq_code
+    _Phi_S_angle_value
+    _Psi_S_angle_value
+    _Chi_one_S_angle_value
+    _Chi_two_S_angle_value
+
+  stop_
+
+save_
+
+    #################################
+    #  Constraint value statistics  #
+    #################################
+
+save_constraint_statistics
+  _Saveframe_category   constraint_statistics
+
+  loop_
+
+      _Constraint_list_label
+
+  stop_
+
+  _Text_data_format
+
+  _Text_data
+
+        ###########################
+        #  NOE values (proteins)  #
+        ###########################
+
+  _NOE_constraints_total_count
+  _NOE_intraresidue_constraints_total_count
+  _NOE_sequential_constraints_total_count
+  _NOE_medium_range_constraints_total_count
+  _NOE_long_range_constraints_total_count
+  _NOE_unambiguous_intermolecular_constraints_total_count
+  _NOE_ambiguous_intramolecular_constraints_total_count
+  _NOE_ambiguous_intermolecular_constraints_total_count
+
+        ###########################
+        #  ROE values (proteins)  #
+        ###########################
+
+  _ROE_constraints_total_count
+  _ROE_intraresidue_constraints_total_count
+  _ROE_sequential_constraints_total_count
+  _ROE_medium_range_constraints_total_count
+  _ROE_long_range_constraints_total_count
+  _ROE_unambiguous_intermolecular_constraints_total_count
+  _ROE_ambiguous_intramolecular_constraints_total_count
+  _ROE_ambiguous_intermolecular_constraints_total_count
+
+        #################################################
+        #  Methods used to quantify NOE and ROE values  #
+        #################################################
+
+  _NOE_interproton_distance_evaluation
+
+  _NOE_pseudoatom_corrections
+
+  _NOE_motional_averaging_correction
+
+  _ROE_interproton_distance_evaluation
+
+  _ROE_pseudoatom_corrections
+
+  _ROE_motional_averaging_correction
+
+        ##################################
+        #  Dipolar coupling constraints  #
+        ##################################
+
+  _Dipolar_constraints_calibration_method
+
+  _Molecular_align_tensor_axial_symmetric_component
+  _Molecular_align_tensor_rhombic_component
+  _Generalized_order_parameter_for_internal_motions_S
+
+  _Assumed_proton_nitrogen_bond_length
+  _Assumed_proton_carbon_bond_length
+  _Assumed_carbon_nitrogen_bond_length
+  _Dipolar_constraints_total_count
+  _Dipolar_constraints_1H_1H_total_count
+  _Dipolar_constraints_1H_13C_total_count
+  _Dipolar_constraints_1H_15N_total_count
+  _Dipolar_constraints_13C_13C_total_count
+  _Dipolar_constraints_13C_15N_total_count
+  _Dipolar_intraresidue_constraints_total_count
+  _Dipolar_sequential_constraints_total_count
+  _Dipolar_medium_range_constraints_total_count
+  _Dipolar_long_range_constraints_total_count
+  _Dipolar_unambiguous_intermolecular_constraints_total_count
+  _Dipolar_ambiguous_intramolecular_constraints_total_count
+  _Dipolar_ambiguous_intermolecular_constraints_total_count
+
+        ##########################################
+        #  Torsion angle constraints (proteins)  #
+        ##########################################
+
+  _Protein_phi-angle_constraints_total_count
+  _Protein_psi-angle_constraints_total_count
+  _Protein_chi_one-angle_constraints_total_count
+  _Protein_other_angle_constraints_total_count
+
+        #########################################################
+        #  Torsion angle and other constraints (nucleic acids)  #
+        #########################################################
+
+  _NA_beta-angle_constraints_total_count
+  _NA_gamma-angle_constraints_total_count
+  _NA_delta-angle_constraints_total_count
+  _NA_epsilon-angle_constraints_total_count
+  _NA_chi-angle_constraints_total_count
+  _NA_sugar_pucker_constraints_total_count
+  _NA_other_angle_constraints_total_count
+
+        ###############################
+        #  Hydrogen bond constraints  #
+        ###############################
+
+  _Hydrogen_bonds_constrained_total_count
+  _Constraints_defining_hydrogen_bonds_total_count
+
+        ################################
+        #  Disulfide bond constraints  #
+        ################################
+
+  _Disulfide_bonds_constrained_total_count
+  _Constraints_defining_disulfide_bonds_total_count
+
+        #######################
+        #  Other constraints  #
+        #######################
+
+  _Derived_coupling_constant_constraints_total_count
+  _Derived_CA_CB_chemical_shift_constraints_total_count
+  _Derived_1H_chemical_shift_constraints_total_count
+  _Derived_photo_cidnp_constraints_total_count
+  _Derived_paramagnetic_relaxation_constraints_total_count
+  _Assumed_distance_constraints_total_count
+  _Assumed_angle_constraints_total_count
+
+save_
+
+    ########################
+    #  Structure features  #
+    ########################
+
+        #########################
+        #  Secondary structure  #
+        #########################
+
+save_secondary_structure_features
+  _Saveframe_category   secondary_structure_features
+
+  loop_
+    _Selection_method_ID
+    _Selection_method
+    _Selection_method_citation
+
+  stop_
+
+  loop_
+     _Secondary_structure_ID
+     _Mol_system_component_ID
+     _Mol_system_component_name
+     _Beginning_residue_seq_code
+     _Last_residue_seq_code
+     _Beginning_residue_author_seq_code
+     _Last_residue_author_seq_code
+     _Secondary_structure_name
+     _Secondary_structure_type
+     _Selection_method_set
+     _Details
+
+  stop_
+
+save_
+
+        #################################
+        #  Tertiary structure elements  #
+        #################################
+
+save_tertiary_structure_elements
+  _Saveframe_category   tertiary_structure_elements
+
+  _Selection_method
+
+  loop_
+     _Citation_label
+
+  stop_
+
+  loop_
+     _Tertiary_structure_element_ID
+     _Tertiary_structure_code
+     _Mol_system_component_ID
+     _Mol_system_component_name
+     _Residue_seq_code
+     _Residue_label
+     _Atom_name
+     _Residue_author_seq_code
+     _Residue_author_label
+     _Atom_author_name
+
+     _Details
+
+  stop_
+
+save_
+
+        ####################################################
+        #  Covalent and other types of bonds and linkages  #
+        ####################################################
+
+              ####################
+              #  Hydrogen bonds  #
+              ####################
+
+save_hydrogen_bonds
+  _Saveframe_category   hydrogen_bonds
+
+  loop_
+     _Selection_method_hydrogen_bond_ID
+     _Selection_method
+
+  stop_
+
+  loop_
+    _Hydrogen_bond_ID
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Heavy_atom_one_residue_seq_code
+    _Heavy_atom_one_residue_label
+    _Heavy_atom_one_atom_name
+    _Heavy_atom_one_type
+    _Heavy_atom_one_residue_author_seq_code
+    _Heavy_atom_one_residue_author_code
+    _Heavy_atom_one_atom_author_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Heavy_atom_two_residue_seq_code
+    _Heavy_atom_two_residue_label
+    _Heavy_atom_two_atom_name
+    _Heavy_atom_two_type
+    _Heavy_atom_two_residue_author_seq_code
+    _Heavy_atom_two_residue_author_code
+    _Heavy_atom_two_atom_author_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Hydrogen_atom_residue_seq_code
+    _Hydrogen_atom_residue_label
+    _Hydrogen_atom_atom_name
+    _Hydrogen_atom_residue_author_seq_code
+    _Hydrogen_atom_residue_author_code
+    _Hydrogen_atom_atom_author_name
+
+  stop_
+
+  loop_
+     _Observed_conformer_hydrogen_bond_ID
+     _Observed_conformer_ID
+
+  stop_
+
+save_
+
+              #####################
+              #  Disulfide bonds  #
+              #####################
+
+save_disulfide_bonds
+  _Saveframe_category   disulfide_bonds
+
+  loop_
+    _Selection_method_hydrogen_bond_ID
+    _Selection_method
+ 
+  stop_
+
+  loop_
+     _Disulfide_bond_ID
+     _Atom_one_mol_system_component_ID
+     _Atom_one_mol_system_component_name
+     _Atom_one_residue_seq_code
+     _Atom_one_residue_label
+     _Atom_one_atom_name
+     _Atom_one_residue_author_seq_code
+     _Atom_one_residue_author_label
+     _Atom_one_atom_author_name
+     _Atom_two_mol_system_component_ID
+     _Atom_two_mol_system_component_name
+     _Atom_two_residue_seq_code
+     _Atom_two_residue_label
+     _Atom_two_atom_name
+     _Atom_two_residue_author_seq_code
+     _Atom_two_residue_author_label
+     _Atom_two_atom_author_name
+
+     _Disulfide_bond_conformation
+
+     _Details
+
+  stop_
+
+  loop_
+     _Observed_conformer_disulfide_bond_ID
+     _Observed_conformer_ID
+
+  stop_
+
+save_
+
+              ##################
+              #  Salt bridges  #
+              ##################
+
+save_<salt_bridge_set>
+  _Saveframe_category   salt_bridge
+
+  loop_
+     _Selection_method_salt_bridge_ID
+     _Selection_method
+
+  stop_
+
+  loop_
+     _Salt_bridge_ID
+     _Mol_system_component_ID
+     _Mol_system_component_name
+     _Residue_seq_code
+     _Residue_label
+     _Atom_name
+
+  stop_
+
+  loop_
+     _Details_salt_bridge_ID
+     _Details
+
+  stop_
+
+  loop_
+     _Observed_conformer_salt_bridge_ID
+     _Observed_conformer_ID
+
+  stop_
+
+save_
+
+              ##########################
+              #  Other types of bonds  #
+              ##########################
+
+save_<user_supplied_label_for_other_types_of_bonds>
+  _Saveframe_category   other_bonds
+
+  _Selection_method
+
+  loop_
+     _Bond_ID
+     _Bond_type
+     _Bond_configuration
+     _Bond_atom_one_mol_system_component_ID
+     _Bond_atom_one_mol_system_component_name
+     _Bond_atom_one_mol_solvent_solute_set_member_ID
+     _Bond_atom_one_mol_solvent_solute_abbreviation_common
+
+     _Bond_atom_one_residue_seq_code
+     _Bond_atom_one_residue_label
+     _Bond_atom_one_atom_name
+     _Bond_atom_two_mol_system_component_ID
+     _Bond_atom_two_mol_system_component_name
+     _Bond_atom_two_mol_solvent_solute_set_member_ID
+     _Bond_atom_two_mol_solvent_solute_abbreviation_common
+
+     _Bond_atom_two_residue_seq_code
+     _Bond_atom_two_residue_label
+     _Bond_atom_two_atom_name
+     _Details
+
+  stop_
+
+  loop_
+     _Observed_conformer_Bond_ID
+     _Observed_conformer_ID
+
+  stop_
+
+save_
+
+              #######################
+              #  Cis peptide bonds  #
+              #######################
+
+save_cis_peptide_bonds
+  _Saveframe_category   cis_peptide_bonds
+
+  _Selection_method
+
+  loop_
+     _Cis_peptide_bond_ID
+     _Mol_system_component_ID
+     _Mol_system_component_name
+     _Residue_one_residue_seq_code
+     _Residue_two_residue_seq_code
+     _Residue_one_residue_author_seq_code
+     _Residue_two_residue_author_seq_code
+
+  stop_
+
+  loop_
+     _Observed_conformer_cis_peptide_bond_ID
+     _Observed_conformer_ID
+
+  stop_
+
+save_
+
+        ##############################
+        #  Other structure features  #
+        ##############################
+
+save_<user_supplied_label_for_additional_structure_features>
+  _Saveframe_category   other_structure_features
+
+  _Details
+
+  _Selection_method
+
+  loop_
+     _Mol_system_component_ID
+     _Mol_system_component_name
+     _Residue_seq_code
+     _Residue_author_seq_code
+
+  stop_
+
+save_
+
+    #######################################################
+    #  Atomic coordinates for a representative conformer  #
+    #######################################################
+
+save_<representative_structure_label>
+  _Saveframe_category   representative_structure
+
+    _Details
+
+    _Rep_structure_derivation
+
+    _Rep_structure_file_name
+
+    _Rep_structure_original_file
+
+  loop_
+     _Terminal_residue_mol_system_component_ID
+     _Terminal_residue_mol_system_component_name
+     _Terminal_residue_residue_seq_code
+     _Terminal_residue_residue_label
+
+  stop_
+
+    _Conformer_family_label
+
+  loop_
+    _Atom_ID
+    _Mol_system_component_ID
+    _Mol_system_component_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+    _Atom_type
+
+    _Atom_cartn_x
+    _Atom_cartn_y
+    _Atom_cartn_z
+    _Atom_pairwise_cartn_rmsd
+
+ stop_
+
+save_
+
+    ###################################################
+    #  Atomic coordinates for a family of structures  #
+    ###################################################
+
+save_<structure_coordinate_set_label>
+  _Saveframe_category   structure_coordinate_set
+
+  _Details
+
+  _Conformer_family_original_file_ID
+
+  loop_
+    _Software_label
+    _Software_protocol_file_name
+    _Software_parameter_file_name
+
+  stop_
+
+  loop_
+    _Energetic_penalty_function
+    _Energetic_penalty_function_description
+
+  stop_
+
+  loop_
+    _Applied_data_set_label
+
+  stop_
+
+  loop_
+    _Experiment_label
+
+  stop_
+
+  loop_
+    _Sample_label
+  stop_
+
+  _Sample_conditions_label
+
+  loop_
+     _Constraint_list_label
+  stop_
+
+  loop_
+    _Structure_image_file_name
+    _Structure_image_file_format
+    _Structure_image_details
+
+  stop_
+
+  _Conformer_file_name
+
+  _Constraints_original_file_ID
+
+  loop_
+    _Atom_ID
+    _Conformer_number
+    _Mol_system_component_ID
+    _Mol_system_component_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+    _Atom_type
+
+    _Atom_cartn_x
+    _Atom_cartn_y
+    _Atom_cartn_z
+
+  stop_
+
+save_
+
+    ##################################################################
+    #  Atomic coordinates for pseudoatoms in a family of structures  #
+    ##################################################################
+
+save_<structure_coordinate_set_label>
+  _Saveframe_category   pseudoatom_coordinate_set
+
+  _Details
+
+  _Conformer_family_original_file_ID
+
+  loop_
+     _Constraint_list_label
+  stop_
+
+  _Conformer_file_name
+
+  _Constraints_original_file_ID
+
+  loop_
+    _Atom_ID
+    _Conformer_number
+    _Mol_system_component_ID
+    _Mol_system_component_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Residue_author_seq_code
+    _Residue_author_label
+    _Atom_author_name
+    _Atom_type
+
+    _Atom_cartn_x
+    _Atom_cartn_y
+    _Atom_cartn_z
+
+  stop_
+
+save_
+
+    ###########################
+    #  Structure constraints  #
+    ###########################
+
+        ##########################
+        #  Distance constraints  #
+        ##########################
+
+save_<distance_constraints_label>
+  _Saveframe_category   distance_constraints
+
+  loop_
+    _Atom_one_mol_system_component_ID
+    _Atom_one_mol_system_component_name
+    _Atom_one_mol_solvent_solute_set_member_ID
+    _Atom_one_mol_solvent_solute_abbreviation_common
+
+    _Atom_one_residue_seq_code
+    _Atom_one_atom_name
+
+    _Atom_two_mol_system_component_ID
+    _Atom_two_mol_system_component_name
+    _Atom_two_mol_solvent_solute_set_member_ID
+    _Atom_two_mol_solvent_solute_abbreviation_common
+
+    _Atom_two_residue_seq_code
+    _Atom_two_atom_name
+
+    _Distance_value
+    _Distance_upper_bound_value
+    _Distance_lower_bound_value
+    _Distance_default_lower_bound_value
+    _Distance_default_upper_bound_value
+    _Derivation_code
+    _Source_experiment_label
+
+  stop_
+
+save_
+
+save_<distance_ambiguous_constraints_label>
+  _Saveframe_category   distance_ambiguous_constraints
+
+  loop_
+    _Constraint_ID
+    _Related_constraint_ID
+    _Atom_one_mol_system_component_ID
+    _Atom_one_mol_system_component_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Atom_one_residue_seq_code
+    _Atom_one_atom_name
+
+    _Atom_two_mol_system_component_ID
+    _Atom_two_mol_system_component_name
+    _Mol_solvent_solute_set_member_ID
+    _Mol_solvent_solute_abbreviation_common
+
+    _Atom_two_residue_seq_code
+    _Atom_two_atom_name
+
+    _Distance_value
+    _Distance_upper_bound_value
+    _Distance_lower_bound_value
+    _Distance_default_lower_bound_value
+    _Distance_default_upper_bound_value
+
+    _Derivation_code
+    _Source_experiment_label
+
+  stop_
+
+save_
+
+        #############################################
+        #  Constraints expressed as torsion angles  #
+        #############################################
+
+save_<torsion_angle_constraints_label>
+  _Saveframe_category   torsion_angle_constraints
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  loop_
+      _Torsion_angle_name
+      _Karplus_equation_citation_label
+
+  stop_
+
+  loop_
+      _Atom_one_residue_seq_code
+      _Atom_one_atom_name
+      _Atom_two_residue_seq_code
+      _Atom_two_atom_name
+      _Atom_three_residue_seq_code
+      _Atom_three_atom_name
+      _Atom_four_residue_seq_code
+      _Atom_four_atom_name
+
+      _Angle_upper_bound_value
+      _Angle_lower_bound_value
+
+      _Derivation_code
+      _Source_experiment_label
+
+  stop_
+
+save_
+
+        ###################################################
+        #  Combined CA and CB chemical shift constraints  #
+        ###################################################
+
+save_<chem_shift_CA_CB_constraints_label>
+  _Saveframe_category   chem_shift_CA_CB_constraints
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  loop_
+     _CA_CB_constraint_ID
+     _Atom_one_residue_seq_code
+     _Atom_one_atom_name
+     _Atom_two_residue_seq_code
+     _Atom_two_atom_name
+     _Atom_three_residue_seq_code
+     _Atom_three_atom_name
+     _Atom_four_residue_seq_code
+     _Atom_four_atom_name
+     _Atom_five_residue_seq_code
+     _Atom_five_atom_name
+
+     _CA_chemical_shift_value
+     _CB_chemical_shift_value
+
+     _Derivation_code
+     _Source_experiment_label
+
+  stop_
+
+save_
+
+        ##################################
+        #  H chemical shift constraints  #
+        ##################################
+
+save_<chem_shift_H_constraints_label>
+  _Saveframe_category   chem_shift_H_constraints
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  loop_
+     _Chem_shift_H_constraint_ID
+     _Residue_seq_code
+     _Atom_name
+     _Chem_shift_value
+     _Chem_shift_value_error
+
+     _Derivation_code
+     _Source_experiment_label
+
+  stop_
+
+save_
+
+        ##############################
+        #  J three bond constraints  #
+        ##############################
+
+save_<J_three_bond_constraints_label>
+  _Saveframe_category   J_three_bond_constraints
+
+  loop_
+     _J_three_bond_constraint_ID
+     _Atom_one_mol_system_component_ID
+     _Atom_one_mol_system_component_name
+     _Atom_one_residue_seq_code
+     _Atom_one_atom_name
+     _Atom_two_mol_system_component_ID
+     _Atom_two_mol_system_component_name
+     _Atom_two_residue_seq_code
+     _Atom_two_atom_name
+     _Atom_three_mol_system_component_ID
+     _Atom_three_mol_system_component_name
+     _Atom_three_residue_seq_code
+     _Atom_three_atom_name
+     _Atom_four_mol_system_component_ID
+     _Atom_four_mol_system_component_name
+     _Atom_four_residue_seq_code
+     _Atom_four_atom_name
+
+     _Coupling_constant_value
+     _Coupling_constant_lower_bound
+     _Coupling_constant_upper_bound
+     _Coupling_constant_error
+
+     _Derivation_code
+     _Source_experiment_label
+
+  stop_
+
+save_
+
+        ##################################
+        #  Dipolar coupling constraints  #
+        ##################################
+
+save_<dipolar_coupling_constraints_label>
+  _Saveframe_category   dipolar_coupling_constraints
+
+  loop_
+     _Dipolar_coupling_constraint_ID
+     _Atom_one_mol_system_component_ID
+     _Atom_one_mol_system_component_name
+     _Atom_one_residue_seq_code
+     _Atom_one_atom_name
+
+     _Atom_two_mol_system_component_ID
+     _Atom_two_mol_system_component_name
+     _Atom_two_residue_seq_code
+     _Atom_two_atom_name
+
+     _Dipolar_coupling_value
+
+     _Derivation_code
+     _Source_experiment_label
+
+  stop_
+
+save_
+
+        #######################
+        #  Other constraints  #
+        #######################
+
+save_<other_constraints_label>
+  _Saveframe_category   other_constraints
+
+  _Mol_system_component_ID
+  _Mol_system_component_name
+
+  _Constraint_other_type
+  _Constraint_other_software_format
+  _Constraint_other_list
+
+save_
+
+    ############################################
+    #  Representative  NMR spectral data file  #
+    ############################################
+
+save_expt_NMR_primary_data
+  _Saveframe_category     NMR_primary_data
+
+  _Atomic_coordinate_set_label
+
+  _Expt_NMR_primary_data_file_name
+
+save_
+
+    ############################
+    #  Atom nomenclature maps  #
+    ############################
+
+save_<conformer_atom_nom_map_label>
+  _Saveframe_category   conformer_atom_nom_map
+
+  _Structure_coordinate_set_label
+
+    loop_
+        _Conformer_number
+        _Mol_system_component_ID
+        _Mol_system_component_name
+        _Mol_solvent_solute_set_member_ID
+        _Mol_solvent_solute_abbreviation_common
+
+        _Residue_seq_code
+        _Residue_label
+        _Atom_name_input_data
+        _Atom_name_alternate
+
+    stop_
+
+save_
+
+save_<rep_struct_atom_nom_map_label>
+   _Saveframe_category   rep_struct_atom_nom_map
+
+   _Structure_coordinate_set_label
+
+   _Representative_structure_label
+
+    loop_
+        _Mol_system_component_ID
+        _Mol_system_component_name
+        _Mol_solvent_solute_set_member_ID
+        _Mol_solvent_solute_abbreviation_common
+
+        _Residue_seq_code
+        _Residue_label
+        _Atom_name_input_data
+        _Atom_name_alternate
+
+    stop_
+
+save_
+
+#############################
+#   Computer software used  #
+#############################
+
+save_<software_label>
+    _Saveframe_category   software
+
+    _Name
+    _Version
+
+    loop_
+        _Vendor
+        _Address
+        _Electronic_address
+
+    stop_
+
+    loop_
+      _Task
+
+    stop_
+
+    loop_
+        _Platform_vendor
+        _Platform_model
+        _Operating_system
+        _Operating_system_version
+        _Hardware_code
+
+    stop_
+
+    _Details
+
+  loop_
+    _Citation_label
+
+   stop_
+
+save_
+##########################
+#   Experimental detail  #
+##########################
+
+    ###################################
+    #   NMR Spectrometer definitions  #
+    ###################################
+
+save_<NMR_spectrometer_label>
+  _Saveframe_category   NMR_spectrometer
+
+  _Manufacturer
+  _Model
+  _Field_strength
+  _Software_label
+  _Details
+
+save_
+
+    ###############################
+    #   NMR applied experiments   #
+    ###############################
+
+save_NMR_spectrometer_experiments
+ _Saveframe_category       NMR_spectrometer_experiments
+
+   loop_
+      _Experiment_ID
+      _Experiment_name
+
+   stop_
+
+  _Details
+
+save_
+
+save_<NMR_applied_experiment_label>
+  _Saveframe_category   NMR_applied_experiment_details
+
+  _Experiment_ID
+  _Experiment_name
+  _Sample_label
+  _Sample_conditions_label
+  _NMR_spectrometer_label
+  _BMRB_pulse_sequence_accession_number
+  _Pulse_sequence_file_name
+  _Pulse_sequence_parameter_file_name
+  _Pulse_sequence_schematic_file_name
+  _Pulse_sequence_schematic_file_format
+
+  loop_
+    _Citation_label
+
+  stop_
+
+  _Details
+
+        ##########################################
+        #   NMR spectral acquisition parameters  #
+        ##########################################
+
+  loop_
+    _Acquisition_dimension_ID
+    _Detected_nucleus
+    _Spectrometer_carrier_frequency
+    _Acquisition_time
+    _Mixing_time
+    _Spectral_width
+    _Spectral_folding
+    _Data_point_number
+    _Data_point_type
+    _Data_point_spacing
+
+  stop_
+
+        ########################################
+        #  NMR spectral processing parameters  #
+        ########################################
+
+  loop_
+    _Processing_dimension_ID
+    _Exponential_factor
+    _Gaussian_factor
+    _Processed_real_points
+
+  stop_
+
+save_
+
+###################################
+#  Author atom nomenclature maps  #
+###################################
+
+save_author_atom_nomenclature_maps
+   _Saveframe_category         author_atom_nomenclature_maps
+
+  loop_
+     _Mol_system_component_ID
+     _Mol_system_component_name
+     _Mol_solvent_solute_set_member_ID
+     _Mol_solvent_solute_abbreviation_common
+
+     _Residue_seq_code
+     _Residue_label
+     _Atom_name
+     _Author_atom_name
+     _Pseudoatom
+
+  stop_
+
+save_
+
+#######################################
+#   Cited references within the entry #
+#######################################
+
+save_<citation_label>
+    _Saveframe_category      citation
+
+    _Citation_full
+    _Citation_title
+    _Citation_type
+    _MEDLINE_UI_code
+    _CAS_abstract_code
+
+    loop_
+        _Author_ordinal
+        _Author_family_name
+        _Author_given_name
+        _Author_middle_initials
+        _Author_family_title
+
+    stop_
+
+    _Journal_abbreviation
+    _Journal_name_full
+    _Journal_volume
+    _Journal_issue
+    _Journal_ASTM
+    _Journal_ISSN
+    _Journal_CSD
+
+    _Book_title
+    _Book_chapter_title
+    _Book_volume
+    _Book_series
+    _Book_publisher
+    _Book_publisher_city
+    _Book_ISBN
+
+    _Conference_title
+    _Conference_site
+    _Conference_state_province
+    _Conference_country
+    _Conference_start_date
+    _Conference_end_date
+    _Conference_abstract_number
+
+    _Thesis_institution
+    _Thesis_institution_city
+    _Thesis_institution_country
+
+    _Page_first
+    _Page_last
+    _Year
+
+    _Details
+
+    loop_
+        _Keyword
+
+    stop_
+
+    loop_
+        _Editor_ordinal
+        _Editor_family_name
+        _Editor_given_name
+        _Editor_middle_initials
+        _Editor_family_title
+
+    stop_
+
+save_
+
+###################################################################
+#   Residue sequence alignments between BMRB and other databases  #
+###################################################################
+
+save_<database_sequence_alignments>
+   _Saveframe_category         sequence_alignments
+
+   _Mol_system_component_ID
+   _Mol_system_component_name
+   _Database_name
+   _Database_accession_code
+   _Sequence_homology_type
+   _Secondary_structure_derivation
+
+   loop_
+     _PDB_SEQRES_seq_location
+     _PDB_SEQRES_residue_label
+     _DB_residue_seq_code
+     _DB_residue_seq_insertion_code
+     _DB_residue_label                                      
+     _DB_chain_ID
+     _Residue_secondary_structure_code
+     _Residue_seq_code
+     _Residue_author_seq_code
+     _Residue_label
+     _Assigned_chem_shifts
+     _Coupling_constants
+
+   stop_                         
+
+save_
+

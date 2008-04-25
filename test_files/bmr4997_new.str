@@ -1,0 +1,2429 @@
+
+
+                ##########################################
+                #           NMR-STAR Schema              #
+                #             Version 3.0                #
+                #             2001-06-04                 #
+                #                                        #
+                #   This file is under construction!!    #
+                # Your help and suggestions are welcome. #
+                #                                        #
+                ##########################################
+
+
+
+data_4997_new
+
+#######################
+#  Study description  #
+#######################
+
+save_study_2
+    _Saveframe_category   study_description
+    _Entry_ID                   4997
+    _Saveframe_ID               1
+    _Saveframe_framecode        study_2
+
+
+    _Study_ID                   2
+    _Study_name                 insulin
+    _Study_type                 @
+    _Details                    @
+
+   loop_
+      _Keyword_entry_ID
+      _Keyword_saveframe_ID
+
+      _Keyword 
+
+     @ @ @
+
+   stop_
+
+   loop_
+     _Study_entry_ID
+     _Study_entry_saveframe_ID
+
+     _Study_entry_BMRB_accession_number
+     _Study_entry_relationship
+     _Study_entry_details
+
+    4997   1   4997  @ @
+
+   stop_
+
+save_
+
+
+########################                     
+#   Entry information  #
+########################
+
+save_entry_information
+  _Saveframe_category         entry_information
+  _Entry_ID                        4997
+  _Saveframe_ID                    2
+  _Saveframe_framecode             entry_information
+
+  _Entry_title
+;
+1H, 13C Chemical Shift Assignment of PT-insulin in H2O and 35% TFE
+;
+
+   loop_
+      _Author_entry_ID                            
+      _Author_saveframe_ID
+
+      _Author_ordinal
+      _Author_family_name 
+      _Author_given_name
+      _Author_first_initial
+      _Author_middle_initials
+      _Author_family_title
+
+   4997   2    1   Keller    Danielle  .   .   .
+   4997   2    2   Josefsen  Knud      .   .   .
+   4997   2    3   Led       Jens      J.  .   .
+
+
+   stop_           
+                                        
+  _BMRB_accession_number                     4997
+  _Entry_ID                                  4997
+  _Entry_type                                reformat
+  _Submission_date                           2001-04-23
+  _Accession_date                            2001-04-23
+  _Latest_release_date                       2001-05-29
+  _Original_release_date                     @
+  _Entry_origination                         author
+  _NMR_STAR_version                          3.0
+  _Experimental_method                       NMR
+  _Details                                   @
+
+
+  loop_
+     _Saveframe_category_entry_ID
+     _Saveframe_category_saveframe_ID
+
+     _Saveframe_category_type
+     _Saveframe_category_type_count
+
+     4997   2    assigned_chemical_shifts   1
+
+  stop_
+
+  loop_
+     _Data_type_entry_ID
+     _Data_type_saveframe_ID
+
+     _Data_type
+     _Data_type_count
+
+     4997    2   '1H chemical shifts'   456  
+     4997    2   '13C chemical shifts'  109  
+
+  stop_
+
+  loop_
+     _Release_entry_ID
+     _Release_entry_saveframe_ID
+
+     _Release_ID
+     _Release_date
+     _Release_submission_date
+     _Release_type
+     _Release_author
+     _Release_detail
+
+     @ @ @ @ @   @ @ @
+
+  stop_
+
+  _Special_processing_instructions                @
+
+  loop_
+     _Related_entries_entry_ID
+     _Related_entries_saveframe_ID
+                                 
+     _Related_BMRB_accession_number
+     _Relationship
+
+     @ @ @ @
+
+  stop_
+
+  _Update_BMRB_accession_number                   @
+  _Replace_BMRB_accession_number                  @
+  _Update_PDB_accession_number                    @
+  _Replace_PDB_accession_number                   @
+  _Update_details                                 @
+
+  _Release_immediately                            @
+  _Release_on_publication                         @
+  _Release_date_request                           @
+  _Release_date_justification                     @
+
+save_
+
+######################
+#   Contact persons  #
+######################
+
+save_contact_persons
+  _Saveframe_category   contact_persons
+  _Entry_ID               @
+  _Saveframe_ID           @
+  _Saveframe_framecode    @                                      
+          
+  loop_
+    _Contact_person_entry_ID
+    _Contact_person_saveframe_ID
+
+    _Contact_person_BMRB_ID
+    _Family_name
+    _Given_name
+    _Middle_initials
+    _Family_title
+    _Department_and_Institution
+    _Mailing_address
+    _Phone_number
+    _Email_address
+    _FAX_number
+
+   @ @ @ @ @   @ @ @ @ @   @ @
+
+   stop_
+
+save_
+
+###############################
+#   Citations for this entry  #
+###############################
+
+save_<citation_label>
+  _Saveframe_category        citation
+  _Entry_ID               @
+  _Saveframe_ID           @
+  _Saveframe_framecode    @
+
+  _Citation_class                     @
+  _Citation_full                      @
+  _Citation_title                     @
+  _Citation_status                    @
+  _Citation_type                      @
+  _CAS_abstract_code                  @
+  _MEDLINE_UI_code                    @
+  _PubMed_ID                          @
+
+
+    loop_
+      _Author_entry_ID
+      _Author_saveframe_ID
+
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_first_initial
+      _Author_middle_initials
+      _Author_family_title
+
+   @ @ @ @ @   @ @ @
+
+    stop_
+
+    _Journal_abbreviation                    @
+    _Journal_name_full                       @
+    _Journal_volume                          @
+    _Journal_issue                           @
+    _Journal_ASTM                            @
+    _Journal_ISSN                            @
+    _Journal_CSD                             @
+
+    _Book_title                              @
+    _Book_chapter_title                      @
+    _Book_volume                             @
+    _Book_series                             @
+    _Book_publisher                          @
+    _Book_publisher_city                     @
+    _Book_ISBN                               @
+
+
+    _Page_first                              @
+    _Page_last                               @
+    _Year                                    @
+                                             
+    _Details                                 @
+
+    loop_
+      _Keyword_entry_ID
+      _Keyword_saveframe_ID
+
+      _Keyword
+
+       @ @ @
+
+    stop_
+
+save_
+
+
+
+###################################
+#   Molecular system description  #
+###################################
+
+save_PT-insulin
+    _Saveframe_category   molecular_system
+    _Entry_ID                   4997
+    _Saveframe_ID               @
+    _Saveframe_framecode        PT-insulin
+                    
+    _Mol_system_ID                  1
+    _Mol_system_BMRB_ID             2
+    _Mol_system_name                [Thr(B27)->Pro,Pro(B28)->Thr]-insulin
+    _Abbreviation_common            PT-insulin
+    _Mol_system_author_name         [Thr(B27)->Pro,Pro(B28)->Thr]-insulin
+    _Author_abbreviation            PT-insulin
+   
+   loop_
+     _Synonym_entry_ID
+     _Synonym_saveframe_ID
+
+     _Synonym
+
+     @ @ @
+
+   stop_
+     
+
+   _Enzyme_commission_number               @
+   _Mol_system_molecular_mass              @
+   _Mol_system_paramagnetic                no
+   _Mol_system_thiol_state                 'all disulfide bound'
+   _Details                                @
+
+
+   loop_
+     _Mol_system_type_entry_ID
+     _Mol_system_type_saveframe_ID
+
+     _Mol_system_type           
+
+      @ @ @
+
+   stop_
+
+   loop_
+     _Mol_system_component_entry_ID
+     _Mol_system_component_saveframe_ID
+
+     _Mol_system_component_ID
+     _Mol_system_component_mol_ID
+     _Mol_system_component_label
+     _Mol_system_component_name
+     _Mol_system_component_code
+     _Mol_system_component_type
+     _Mol_system_component_experimental_data_reported
+     _Mol_system_component_physical_state
+     _Mol_system_conformational_isomer
+     _Mol_system_chemical_modification
+     _Mol_system_chemical_exchange_state
+     _Mol_system_component_details
+
+     4997  ?  1   1   $PT-insulin_A_chain  'PT-insulin A chain'   prot-1
+         polymer   yes   native   no   no   ?   ?
+     4997  ?  2   2   $PT-insulin_B_chain  'PT-insulin B chain'   prot-2
+         polymer   yes   native   no   no   ?   ?
+
+   stop_
+
+   loop_
+     _Solvent_excipient_entry_ID
+     _Solvent_excipient_saveframe_ID
+
+     _Solvent_excipient_mol_system_component_ID
+     _Solvent_excipient_mol_system_component_code
+     _Solvent_excipient_set_type
+     _Solvent_excipient_set_first_member_ID
+     _Solvent_excipient_set_last_member_ID
+
+   @ @ @ @ @   @ @
+
+   stop_
+
+
+   loop_
+     _Pairwise_interaction_entry_ID
+     _Pairwise_interaction_saveframe_ID
+
+     _Pairwise_interaction_ID
+     _Pairwise_interaction_component_one_ID
+     _Pairwise_interaction_component_one_code
+     _Pairwise_interaction_component_two_ID
+     _Pairwise_interaction_component_two_code
+     _Pairwise_interaction_type
+
+     4997   ?   1   1   prot-1    2   prot-2   'covalent link'
+
+   stop_
+
+   loop_
+     _Conformation_entry_ID
+     _Conformation_saveframe_ID
+
+     _Conformation_mol_system_component_ID
+     _Conformation_mol_system_component_code
+     _Conformation_mol_system_component_segment_ID
+     _Conformation_chemical_moiety_index_ID
+     _Conformation_residue_seq_code
+     _Conformation_residue_label
+     _Conformation_type
+
+    @ @ @ @ @   @ @ @ @
+
+   stop_
+
+   loop_
+     _Exchange_mol_system_entry_ID
+     _Exchange_mol_system_saveframe_ID
+
+     _Exchange_mol_system_pair_ID
+     _Exchange_mol_system_component_one_ID
+     _Exchange_mol_system_component_one_code
+     _Exchange_mol_system_component_two_ID
+     _Exchange_mol_system_component_two_code
+     _Exchange_mol_system_exchange_type
+
+    @ @ @ @ @   @ @ @
+
+   stop_
+     
+# The following conformational heterogeniety loop appears to be unnecessary. 
+# If multiple conformations of a molecule are known to exist and are in slow
+# exchange then multiple components should be listed and the characteristics
+# of each can be given in the above conformation loop.  How to handle multiple
+# conformations in fast exchange?  How to define that the data represent an
+# average of the two or more states?
+
+   loop_
+     _Exchange_average_entry_ID
+     _Exchange_average_saveframe_ID
+
+     _Exchange_average_ID
+     _Exchange_average_type
+     _Exchange_average_mol_component_ID
+     _Exchange_average_mol_component_code
+     _Exchange_average_mol_component_segment
+     _Exchange_average_chemical_moiety_index_ID
+     _Exchange_average_residue_seq_code
+     _Exchange_average_residue_label
+     _Exchange_average_state
+
+    @ @ @ @ @   @ @ @ @ @   @
+
+   stop_
+
+   loop_
+     _Atom_list_entry_ID
+     _Atom_list_saveframe_ID
+
+     _Atom_ID
+     _Atom_mol_system_component_ID
+     _Atom_mol_system_component_code
+     _Atom_chemical_moiety_index_ID
+     _Atom_residue_seq_code
+     _Atom_residue_label
+     _Atom_name
+
+    @ @ @ @ @   @ @ @ @
+
+   stop_
+
+   loop_
+     _Bond_entry_ID
+     _Bond_saveframe_ID
+
+     _Bond_ID
+     _Bond_type
+     _Bond_order
+     _Bond_configuration
+
+     _Atom_one_mol_system_component_ID
+     _Atom_one_mol_system_component_code
+     _Atom_one_chemical_moiety_index_ID
+     _Atom_one_residue_seq_code
+     _Atom_one_residue_label
+     _Atom_one_atom_name
+
+     _Atom_one_mol_system_component_author_abbreviation
+     _Atom_one_residue_author_seq_code
+     _Atom_one_residue_author_code
+     _Atom_one_atom_author_name
+
+     _Atom_one_chain_PDB_code
+     _Atom_one_insertion_PDB_code
+     _Atom_one_residue_PDB_seq_code
+     _Atom_one_residue_PDB_code
+     _Atom_one_atom_PDB_name
+
+     _Atom_two_mol_system_component_ID
+     _Atom_two_mol_system_component_code
+     _Atom_two_chemical_moiety_index_ID
+     _Atom_two_residue_seq_code
+     _Atom_two_residue_label
+     _Atom_two_atom_name
+
+     _Atom_two_mol_system_component_author_abbreviation
+     _Atom_two_residue_author_seq_code
+     _Atom_two_residue_author_code
+     _Atom_two_atom_author_name
+
+     _Atom_two_chain_PDB_code
+     _Atom_two_insertion_PDB_code
+     _Atom_two_residue_PDB_seq_code
+     _Atom_two_residue_PDB_code
+     _Atom_two_atom_PDB_name
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @
+
+   stop_
+
+   loop_
+     _Magnetic_equivalence_entry_ID
+     _Magnetic_equivalence_saveframe_ID
+
+     _Magnetic_equivalence_ID
+     _Magnetically_equivalent_system_component_ID
+     _Magnetically_equivalent_system_component_code
+     _Magnetically_equivalent_system_component_author_abbreviation
+
+     @ @ @ @ @   @
+
+   stop_
+
+   loop_
+     _Mol_subsystem_entry_ID
+     _Mol_subsystem_saveframe_ID
+
+     _Mol_subsystem_ID
+     _Mol_subsystem_label
+     _Mol_subsystem_abbreviation
+     _Mol_subsystem_author_abbreviation
+
+    @ @ @ @ @   @
+
+   stop_
+
+   loop_
+     _Keyword_entry_ID
+     _Keyword_saveframe_ID
+
+     _Keyword
+
+     @ @ @
+
+   stop_
+
+   loop_
+     _Biological_function_entry_ID
+     _Biological_function_saveframe_ID
+
+     _Biological_function
+
+     @ @ @
+
+   stop_
+
+   loop_
+      _Fixed_matched_database_entry_ID
+      _Fixed_matched_database_saveframe_ID
+
+      _Fixed_matched_database_name
+      _Fixed_matched_database_code
+      _Fixed_matched_database_entry_mol_name
+      _Fixed_matched_database_entry_details
+
+     @ @ @ @ @    @
+
+   stop_
+
+   _Database_query_date                      @
+   _Database_query_revised_last_date         @
+
+   loop_
+     _Database_entry_ID
+     _Database_saveframe_ID
+
+     _Database_name
+     _Database_accession_code
+     _Database_entry_mol_name
+     _Database_entry_experimental_method
+     _Database_entry_relation_type
+     _Database_entry_details
+
+     @ @ @ @ @   @ @ @
+
+   stop_
+
+   loop_
+     _Citation_entry_ID
+     _Citation_saveframe_ID
+
+     _Citation_ID
+     _Citation_label
+
+     @ @ @ @
+
+   stop_
+
+save_
+
+#########################################
+#   Author molecular system annotation  #
+#########################################
+
+save_<author_annotation>
+  _Saveframe_category     author_mol_system_annotation
+  _Entry_ID                    @
+  _Saveframe_ID                @
+  _Saveframe_framecode         @
+
+  _Details                     @
+  
+# Need to be able to annotate at the system level, subsystem level, 
+# component level, residue level, and atom level
+
+   loop_
+     _Author_annotation_entry_ID
+     _Author_annotation_saveframe_ID
+
+     _Author_annotation_ID
+     _Mol_subsystem_ID
+     _Mol_system_component_ID
+     _Chemical_moiety_index_ID
+     _Residue_seq_code
+     _Residue_start_seq_code
+     _Residue_end_seq_code
+     _Residue_label
+     _Atom_name
+     _Residue_author_seq_code
+     _Residue_author_code
+     _Atom_author_atom_name
+     _Chain_PDB_code
+     _Residue_PDB_code
+     _Residue_PDB_seq_code
+     _Atom_PDB_atom_name
+     _Annotation_code
+
+   @ @ @ @ @    @ @ @ @ @    @ @ @ @ @    @ @ @ @
+
+   stop_
+
+    loop_
+      _Mol_segment_entry_ID
+      _Mol_segment_saveframe_ID
+          
+      _Mol_segment_mol_system_component_ID
+      _Mol_segment_mol_ID
+      _Mol_segment_ID
+      _Mol_segment_code
+      _Mol_segment_chemical_moiety_index_ID
+      _Mol_segment_residue_seq_code
+      _Mol_segment_residue_label
+      _Mol_segment_atom_name
+      _Mol_segment_Residue_author_seq_code
+      _Mol_segment_Residue_author_code
+      _Mol_segment_atom_author_atom_name
+      _Mol_segment_Chain_PDB_code
+      _Mol_segment_Residue_PDB_code
+      _Mol_segment_Residue_PDB_seq_code
+      _Mol_segment_atom_PDB_atom_name
+ 
+    @ @ @ @ @    @ @ @ @ @    @ @ @ @ @   @ @
+
+    stop_
+
+    loop_
+      _Mol_segment_description_entry_ID
+      _Mol_segment_description_saveframe_ID
+
+      _Mol_segment_description_molecule_segment_ID
+      _Mol_segment_description
+
+    @ @ @ @
+
+    stop_
+
+save_
+
+
+#########################################
+#   BMRB molecular system annotation    #
+#########################################
+
+save_<BMRB_annotation>
+  _Saveframe_category     BMRB_mol_system_annotation
+  _Entry_ID                    @
+  _Saveframe_ID                @
+  _Saveframe_framecode         @
+
+  _Details                     @
+  
+# Need to be able to annotate at the system level, subsystem level, 
+# component level, residue level, and atom level
+
+   loop_
+     _BMRB_annotation_entry_ID
+     _BMRB_annotation_saveframe_ID
+
+     _BMRB_annotation_ID
+     _Mol_subsystem_ID
+     _Mol_system_component_ID
+     _Chemical_moiety_index_ID
+     _Residue_seq_code
+     _Residue_start_seq_code
+     _Residue_end_seq_code
+     _Residue_label
+     _Atom_name
+     _Residue_author_seq_code
+     _Residue_author_code
+     _Atom_author_atom_name
+     _Chain_PDB_code
+     _Residue_PDB_code
+     _Residue_PDB_seq_code
+     _Atom_PDB_atom_name
+     _Annotation_code
+
+   @ @ @ @ @    @ @ @ @ @    @ @ @ @ @    @ @ @ @
+
+   stop_
+
+    loop_
+      _Mol_segment_entry_ID
+      _Mol_segment_saveframe_ID
+          
+      _Mol_segment_mol_system_component_ID
+      _Mol_segment_mol_ID
+      _Mol_segment_ID
+      _Mol_segment_code
+      _Mol_segment_chemical_moiety_index_ID
+      _Mol_segment_residue_seq_code
+      _Mol_segment_residue_label
+      _Mol_segment_atom_name
+      _Mol_segment_Residue_author_seq_code
+      _Mol_segment_Residue_author_code
+      _Mol_segment_atom_author_atom_name
+      _Mol_segment_Chain_PDB_code
+      _Mol_segment_Residue_PDB_code
+      _Mol_segment_Residue_PDB_seq_code
+      _Mol_segment_atom_PDB_atom_name
+ 
+    @ @ @ @ @    @ @ @ @ @    @ @ @ @ @   @ @
+
+    stop_
+
+    loop_
+      _Mol_segment_description_entry_ID
+      _Mol_segment_description_saveframe_ID
+
+      _Mol_segment_description_molecule_segment_ID
+      _Mol_segment_description
+
+    @ @ @ @
+
+    stop_
+
+save_
+
+
+
+    ##################
+    #   Subsystems   #
+    ##################
+
+save_<Subsystem_label>
+  _Saveframe_category   molecular_subsystem
+  _Entry_ID                   @
+  _Saveframe_ID               @
+  _Saveframe_framecode        @
+
+  _Mol_subsystem_ID                 @
+  _Name_common                      @
+  _Abbreviation_common              @
+  _CAS_name                         @
+  _CAS_registry_number              @
+  _Enzyme_commission_number         @
+  _Molecular_mass                   @
+
+   loop_
+     _Mol_subsystem_entry_ID
+     _Mol_subsystem_type_saveframe_ID
+
+     _Mol_subsystem_type
+
+    @ @ @
+
+   stop_
+
+   loop_
+     _Synonym_entry_ID
+     _Synonym_saveframe_ID
+
+     _Synonym
+
+     @ @ @
+
+   stop_
+
+   loop_
+     _Subsystem_mol_system_component_entry_ID
+     _Subsystem_mol_system_component_saveframe_ID
+
+     _Subsystem_mol_system_component_ID
+     _Subsystem_mol_system_component_label
+     _Subsystem_mol_system_component_code
+
+     @ @ @ @ @
+
+   stop_
+
+   loop_
+     _Keyword_entry_ID
+     _Keyword_saveframe_ID
+
+     _Keyword
+
+     @ @ @
+
+   stop_
+
+   loop_
+     _Biological_function_entry_ID
+     _Biological_function_saveframe_ID
+
+     _Biological_function
+
+     @ @ @
+
+   stop_
+
+    _Details                          @
+
+   loop_
+     _Fixed_matched_database_entry_ID
+     _Fixed_matched_database_saveframe_ID
+
+     _Fixed_matched_database_name
+     _Fixed_matched_database_code
+
+     @ @ @ @
+
+   stop_
+
+   _Database_query_date                                @
+   _Database_last_query_revised_last_date              @
+
+   loop_
+      _Database_entry_ID
+      _Database_saveframe_ID
+
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+   @ @ @ @ @   @ @
+
+   stop_
+
+   loop_
+     _Citation_entry_ID
+     _Citation_saveframe_ID
+
+     _Citation_ID
+     _Citation_label
+
+     @ @ @ @
+
+   stop_
+
+save_
+
+    #################
+    #   Molecules   #
+    #################
+
+save_<Molecule_label>
+  _Saveframe_category         molecule
+  _Entry_ID                   @
+  _Saveframe_ID               @
+  _Saveframe_framecode        @
+
+  _Mol_ID                           @
+  _Mol_BMRB_library_ID              @
+  _Mol_class                        @
+  _Mol_polymer_class                @
+  _Mol_non_polymer_class            @
+  _Name_BMRB                        @
+  _Name_common                      @
+
+  _Name_variant                                             @
+  _Abbreviation_common                                      @
+  _CAS_name                                                 @
+  _CAS_registry_number                                      @
+  _Mol_polymer_enzyme_commission_number                     @
+  _IUPAC_name                                               @
+
+  _Mol_polymer_sequence_citation_ID                         @
+  _Mol_polymer_Sequence_citation_label                      @
+  _Mol_polymer_Ambiguous_sequence_features                  @
+  _Mol_polymer_author_sequence_numbering_scheme_details     @
+  _Mol_polymer_non_standard_residue                         @
+  _Mol_polymer_non_standard_chirality                       @
+  _Mol_polymer_non_standard_linkage                         @
+  _Mol_polymer_residue_count                                @
+  _Mol_polymer_standard_derivative_residue_sequence         @
+  _Mol_polymer_residue_sequence                             @
+
+  _Mol_non_polymer_empirical_formula                        @
+  _Mol_mass                                                 @
+  _Mol_paramagnetic                                         @
+  _Mol_thiol_state                                          @
+  _Mol_theoretical_isoelectric_point                        @
+  _Mol_non_polymer_charge                                   @
+  _Mol_non_polymer_aromatic                     @
+
+  _Details                                      @
+  _Mol_non_polymer_SMILES_representation        @
+  _Topology_file_name                           @
+  _Topology_file_format                         @
+  _Topology_file_location                       @
+  _Structure_file_name                          @
+  _Structure_file_format                        @
+  _Structure_file_location                      @
+  _Stereochemistry_parameter_file_name          @
+  _Stereochemistry_parameter_file_format        @
+  _Stereochemistry_parameter_file_location      @
+
+   loop_
+     _Synonym_entry_ID
+     _Synonym_saveframe_ID
+
+     _Synonym
+
+   @ @ @
+
+   stop_
+
+   loop_
+     _Keyword_entry_ID
+     _Keyword_saveframe_ID
+
+     _Keyword
+
+     @ @ @
+
+   stop_
+
+    loop_
+      _Biological_function_entry_ID
+      _Biological_function_saveframe_ID
+
+
+      _Biological_function
+
+     @ @ @
+
+    stop_
+
+    loop_
+      _Chemical_moiety_index_entry_ID
+      _Chemical_moiety_index_saveframe_ID
+
+      _Chemical_moiety_index_ID
+      _Chemical_compound_ID
+
+      _Residue_seq_code
+      _Residue_label
+      _Residue_BMRB_code
+      _Residue_standard_derivative_one_letter_code
+      _Residue_standard_derivative_code
+      _Residue_author_chain_ID
+      _Residue_author_seq_code
+      _Residue_author_code
+      _Residue_Chain_PDB_ID
+      _Residue_PDB_seq_code
+      _Residue_PDB_code
+      _Residue_PDB_insertion_code
+      _Residue_PDB_segment_definition_code
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @
+
+    stop_
+
+# This loop is an attempt to make it easier to define heterogeneity within the
+# polymer,
+# but may cause problems in sections like the assigned chemical shifts.
+# It might be better to define two or more different system components and
+# provide the full sequence for each component.  Will be most useful in cases 
+# where there is heterogeneity at more than one site and the exact chemical
+# sequence of all polymers present in the sample is not known.
+
+    loop_
+      _Heterogeneous_residue_entry_ID
+      _Heterogeneous_residue_saveframe_ID
+
+      _Heterogeneous_residue_chemical_moiety_index_ID
+      _Heterogeneous_residue_seq_code
+      _Heterogeneous_residue_alternate_chemical_compound_ID
+      _Heterogeneous_residue_alternate_chemical_compound_code
+      _Heterogeneous_residue_alternate_chemical_compound_BMRB_code
+      _Heterogeneous_residue_alternate_chemical_compound_PDB_code
+      _Heterogeneous_residue_alternate_chemical_compound_author_code
+      _Heterogeneous_residue_alternate_chemical_compound_percentage
+
+   @ @ @ @ @   @ @ @ @ @
+
+    stop_
+
+   loop_
+      _Fixed_matched_database_entry_ID
+      _Fixed_matched_database_saveframe_ID
+     
+      _Fixed_matched_database_code
+      _Fixed_matched_database_entry_code
+
+     @ @ @ @
+
+   stop_
+
+   _Database_query_date                            @
+   _Database_query_revised_last_date               @
+
+   loop_
+     _Database_entry_ID
+     _Database_saveframe_ID
+
+     _Database_name
+     _Database_accession_code
+     _Database_entry_mol_code
+     _Database_entry_mol_name
+     _Database_entry_experimental_method
+     _Polymer_database_segment_code
+     _Polymer_sequence_homology_type
+     _Polymer_sequence_query_to_submitted_percentage
+     _Polymer_sequence_subject_length
+     _Polymer_sequence_identity
+     _Polymer_sequence_positive
+     _Polymer_sequence_homology_expectation_value
+     _Polymer_sequence_difference_details
+     _Polymer_sequence_alignment_details
+
+
+ @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @
+
+   stop_
+
+   loop_
+     _Linked_bond_entry_ID
+     _Linked_bond_saveframe_ID
+
+     _Linked_bond_ID
+     _Linked_bond_type                                                  
+     _Linked_bond_order
+     _Linked_bond_configuration
+     _Atom_one_chemical_moiety_index_ID
+     _Atom_one_residue_seq_code
+     _Atom_one_residue_label
+     _Atom_one_atom_name
+     _Atom_one_residue_author_seq_code
+     _Atom_one_residue_author_code
+     _Atom_one_atom_author_name
+     _Atom_one_residue_PDB_code
+     _Atom_one_residue_PDB_seq_code
+     _Atom_one_atom_PDB_name
+     _Atom_two_chemical_moiety_index_ID
+     _Atom_two_residue_seq_code
+     _Atom_two_residue_label
+     _Atom_two_atom_name
+     _Atom_two_residue_author_seq_code
+     _Atom_two_residue_author_code
+     _Atom_two_atom_author_name
+     _Atom_two_residue_PDB_seq_code
+     _Atom_two_residue_PDB_code
+     _Atom_two_atom_PDB_name
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @
+   @ @ @ @ @   @              
+
+   stop_
+  
+    loop_
+      _Linked_angle_entry_ID
+      _Linked_angle_saveframe_ID
+
+      _Linked_angle_ID
+      _Linked_angle_name
+
+      _Angle_atom_one_chemical_moiety_index_ID
+      _Angle_atom_one_residue_seq_code
+      _Angle_atom_one_atom_name
+      _Angle_atom_one_atom_PDB_name
+      _Angle_atom_one_atom_author_name
+
+      _Angle_atom_two_chemical_moiety_index_ID
+      _Angle_atom_two_residue_seq_code
+      _Angle_atom_two_atom_name
+      _Angle_atom_two_atom_PDB_name
+      _Angle_atom_two_atom_author_name
+
+      _Angle_atom_three_chemical_moiety_index_ID
+      _Angle_atom_three_residue_seq_code
+      _Angle_atom_three_atom_name
+      _Angle_atom_three_atom_PDB_name
+      _Angle_atom_three_atom_author_name
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @
+
+    stop_
+
+    loop_
+      _Linked_torsion_angle_entry_ID
+      _Linked_torsion_angle_saveframe_ID
+
+      _Linked_torsion_angle_ID
+      _Linked_torsion_angle_name
+
+      _Torsion_angle_atom_one_chemical_moiety_index_ID
+      _Torsion_angle_atom_one_residue_seq_code
+      _Torsion_angle_atom_one_atom_name
+      _Torsion_angle_atom_one_atom_PDB_name
+      _Torsion_angle_atom_one_atom_author_name
+
+      _Torsion_angle_atom_two_chemical_moiety_index_ID
+      _Torsion_angle_atom_two_residue_seq_code
+      _Torsion_angle_atom_two_atom_name
+      _Torsion_angle_atom_two_atom_PDB_name
+      _Torsion_angle_atom_two_atom_author_name
+
+      _Torsion_angle_atom_three_chemical_moiety_index_ID
+      _Torsion_angle_atom_three_residue_seq_code
+      _Torsion_angle_atom_three_atom_name
+      _Torsion_angle_atom_three_atom_PDB_name
+      _Torsion_angle_atom_three_atom_author_name
+
+      _Torsion_angle_atom_four_chemical_moiety_index_ID
+      _Torsion_angle_atom_four_residue_seq_code
+      _Torsion_angle_atom_four_atom_name
+      _Torsion_angle_atom_four_atom_PDB_name
+      _Torsion_angle_atom_four_atom_author_name
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @
+   @ @ @ @
+
+    stop_
+
+   loop_
+     _Citation_entry_ID
+     _Citation_saveframe_ID
+
+     _Citation_ID
+     _Citation_label
+
+     @ @ @ @
+
+   stop_
+
+save_
+
+
+    ########################
+    #   Chemical compound  #
+    ########################
+
+save_<chemical_compound_label>
+  _Saveframe_category        chemical_compound
+  _Entry_ID                     @
+  _Saveframe_ID                 @
+  _Saveframe_framecode          @
+
+  _Chemical_compound_ID                                 @
+  _Chemical_compound_BMRB_library_ID                    @
+  _Chemical_compound_type                               @
+
+  _Name_common                                          @
+  _Abbreviation_common                                  @
+  _BMRB_code                                            @
+  _One_letter_code                                      @
+  _Three_letter_code                                    @
+  _Standard_derivative_one_letter_code                  @
+  _Standard_derivative_three_letter_code                @
+  _Standard_derivative_BMRB_code                        @
+  _Standard_derivative_PDB_code                         @
+  _Standard_derivative_chem_comp_name                   @
+  _Standard_derivative_chem_comp_BMRB_library_ID        @
+  _Details                                              @
+
+    loop_
+      _Fixed_database_entry_ID
+      _Fixed_database_saveframe_ID
+
+      _Fixed_database_list_ID       
+      _Fixed_database_name
+      _Fixed_database_code
+ 
+     @ @ @ @ @
+
+    stop_
+
+    loop_
+      _Synonym_entry_ID
+      _Synonym_saveframe_ID
+
+      _Synonym
+
+     @ @ @
+
+    stop_
+
+    loop_
+      _Keyword_entry_ID
+      _Keyword_saveframe_ID
+     
+      _Keyword
+
+     @ @ @
+
+    stop_
+
+    _Empirical_formula                            @
+    _Molecular_mass                               @
+    _Paramagnetic_state                           @
+    _SMILES_representation                        @
+    _Topology_file_name                           @
+    _Topology_file_format                         @
+    _Topology_file_location                       @
+    _Structure_file_name                          @
+    _Structure_file_format                        @
+    _Structure_file_location                      @
+    _Stereochemistry_parameter_file_name          @
+    _Stereochemistry_parameter_file_format        @
+    _Stereochemistry_parameter_file_location      @
+
+    loop_
+      _Atom_list_entry_ID
+      _Atom_list_saveframe_ID
+
+      _Chemical_compound_atom_ID
+      _Atom_name
+      _Atom_PDB_name
+      _Atom_author_name
+      _Atom_type
+      _Atom_chirality
+      _Atom_charge
+      _Atom_oxidation_number
+      _Atom_unpaired_electrons
+      _Atom_ionizable
+      _Atom_details
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @
+
+    stop_
+
+    loop_
+      _Atom_isotope_entry_ID
+      _Atom_isotope_saveframe_ID
+
+      _Atom_isotope_chemical_compound_atom_ID
+      _Atom_isotope
+      _Atom_isotope_percent
+
+   @ @ @ @ @
+
+    stop_
+     
+    loop_
+      _Chemical_compound_characteristic_entry_ID
+      _Chemical_compound_characteristic_saveframe_ID
+     
+      _Chemical_compound_characteristic_ID
+      _Chemical_compound_characteristic_atom_ID
+      _Chemical_compound_chemical_group
+      _Chemical_compound_literature_pKa_value
+      _Chemical_compound_literature_redox_potential
+      _Chemical_compound_literature_absorption_wavelength
+      _Chemical_compound_literature_melting_point
+      _Chemical_compound_literature_boiling_point
+      _Chemical_compound_citation_ID
+      _Chemical_compound_citation_label
+      _Chemical_compound_characteristic_details
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @
+
+    stop_
+
+    loop_
+      _Bond_entry_ID
+      _Bond_saveframe_ID
+
+      _Bond_ID
+      _Bond_order
+      _Bond_type
+      _Bond_configuration
+
+      _Atom_one_chemical_compound_atom_ID
+      _Atom_one_atom_name
+      _Atom_one_atom_PDB_name
+      _Atom_one_atom_author_name
+
+      _Atom_two_chemical_compound_atom_ID
+      _Atom_two_atom_name
+      _Atom_two_atom_PDB_name
+      _Atom_two_atom_author_name
+      _Bond_details
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @
+
+    stop_          
+                                        
+    loop_
+      _Torsion_angle_entry_ID
+      _Torsion_angle_saveframe_ID
+
+      _Torsion_angle_ID
+      _Torsion_angle_name
+
+      _Torsion_angle_atom_one_chemical_compound_atom_ID
+      _Torsion_angle_atom_one_atom_name
+      _Torsion_angle_atom_one_atom_PDB_name
+      _Torsion_angle_atom_one_author_atom_name
+
+      _Torsion_angle_atom_two_chemical_compound_atom_ID
+      _Torsion_angle_atom_two_atom_name
+      _Torsion_angle_atom_two_atom_PDB_name
+      _Torsion_angle_atom_two_author_atom_name
+
+      _Torsion_angle_atom_three_chemical_compound_atom_ID
+      _Torsion_angle_atom_three_atom_name
+      _Torsion_angle_atom_three_atom_PDB_name
+      _Torsion_angle_atom_three_author_atom_name
+
+      _Torsion_angle_atom_four_chemical_compound_atom_ID
+      _Torsion_angle_atom_four_atom_name
+      _Torsion_angle_atom_four_atom_PDB_name
+      _Torsion_angle_atom_four_atom_author_name
+
+      _Torsion_angle_details
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @
+   @
+
+    stop_
+                                        
+    loop_
+      _Angle_entry_ID
+      _Angle_saveframe_ID
+
+      _Angle_ID
+      _Angle_name
+
+      _Angle_atom_one_chemical_compound_atom_ID
+      _Angle_atom_one_atom_name
+      _Angle_atom_one_atom_PDB_name
+      _Angle_atom_one_atom_author_name
+
+      _Angle_atom_two_chemical_compound_atom_ID
+      _Angle_atom_two_atom_name
+      _Angle_atom_two_atom_PDB_name
+      _Angle_atom_two_atom_author_name
+
+      _Angle_atom_three_chemical_compound_atom_ID
+      _Angle_atom_three_atom_name
+      _Angle_atom_three_atom_PDB_name
+      _Angle_atom_three_atom_author_name
+
+      _Angle_details
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @
+
+    stop_
+
+   _Database_query_date                                @
+   _Database_last_query_revised_last_date              @
+
+   loop_
+     _Database_entry_ID
+     _Database_saveframe_ID
+
+     _Database_name
+     _Database_accession_code
+     _Database_entry_mol_code
+     _Database_entry_mol_name
+     _Database_entry_details
+
+   @ @ @ @ @   @ @
+
+   stop_
+
+   loop_
+     _Citation_entry_ID
+     _Citation_saveframe_ID
+
+     _Citation_ID
+     _Citation_label
+
+     @ @ @ @
+
+   stop_
+
+save_
+
+    #####################
+    #   Natural source  #
+    #####################
+
+save_natural_source
+  _Saveframe_category   natural_source
+  _Entry_ID               @
+  _Saveframe_ID           @
+  _Saveframe_framecode    @
+     
+  loop_
+    _Mol_natural_source_entry_ID
+    _Mol_natural_saveframe_ID
+
+    _Mol_natural_source_list_ID
+    _Mol_system_ID
+    _Mol_system_component_ID
+    _Mol_label
+    _Mol_category
+    _Organism_name_common
+    _Organism_acronym
+    _ICTVdb_decimal_code
+    _NCBI_taxonomy_ID
+    _Superkingdom
+    _Kingdom
+    _Genus
+    _Species
+    _Strain
+    _Variant
+    _Subvariant
+    _Organ
+    _Tissue
+    _Cell_line
+    _Cell_type
+    _ATCC_number
+    _Organelle
+    _Fraction
+    _Secretion
+    _Plasmid
+    _Gene_mnemonic
+    _Details
+    _Citation_ID
+    _Citation_label
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @
+   @ @ @ @ @   @ @ @ @ @   @
+
+  stop_
+
+  loop_
+    _Database_natural_source_entry_ID
+    _Database_saveframe_ID
+    _Database_list_ID
+
+    _Database_name
+    _Database_BMRB_ID
+    _Database_entry_ID
+    _Database_entry_type
+    _Database_ORF_code
+    _Database_gene_locus_code
+    _Database_gene_cDNA_code
+
+    @ @ @ @ @   @ @ @ @ @
+
+  stop_
+
+  loop_
+    _Database_type_natural_source_entry_ID
+    _Database_type_saveframe_ID
+
+    _Database_type_database_BMRB_ID
+    _Database_type
+
+    @ @ @ @
+
+   stop_
+
+save_
+
+
+    ###########################
+    #   Experimental source   #
+    ###########################
+
+save_experimental_source
+    _Saveframe_category   experimental_source
+    _Entry_ID                 @
+    _Saveframe_ID             @
+    _Saveframe_framecode      @
+
+  loop_
+    _Mol_experimental_source_entry_ID
+    _Mol_experimental_saveframe_ID
+    _Mol_experimental_source_ID
+    _Mol_system_ID
+    _Mol_system_component_ID
+    _Mol_label
+    _Mol_category
+    _Production_method
+    _Host_organism_name_common
+    _Genus
+    _Species
+    _Strain
+    _Variant
+    _Organ
+    _Tissue
+    _Cell_line
+    _Cell_type
+    _ATCC_number
+    _Vector_type
+    _Vector_name
+    _Vendor_name
+    _Gene_source
+    _Details
+    _Citation_ID
+    _Citation_label
+
+   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   
+   @ @ @ @ @
+
+  stop_
+
+save_
+
+
+#############################
+#   Sample characteristics  #
+#############################
+
+    #########################
+    #   Sample description  #
+    #########################
+
+save_<sample_label>
+  _Saveframe_category         sample
+  _Entry_ID                @
+  _Saveframe_ID            @
+  _Saveframe_framecode     @
+     
+  _Sample_ID                     @
+  _Sample_type                   @
+  _Details                       @
+
+    _Sample_location                                   @
+    _Sample_preparation_date                           @
+    _Sample_preparation_expiration_date                @
+    _Sample_preparation_person_name                    @
+    _Sample_preparation_protocol                       @
+    _Sample_preparation_protocol_file_name             @
+    _Sample_preparation_protocol_file_location         @
+    _Sample_storage_protocol                           @
+
+    loop_
+      _Sample_development_entry_ID
+      _Sample_development_saveframe_ID
+
+      _Sample_development_experiment_ID
+      _Sample_development_experiment_label
+
+   @ @ @ @
+
+    stop_
+
+    loop_
+       _Sample_contents_entry_ID
+       _Sample_contents_saveframe_ID
+       _Mol_ID
+       _Mol_label
+       _Mol_category
+       _Mol_common_name
+       _Mol_preparation_ID
+       _Concentration_value
+       _Concentration_value_units
+       _Concentration_min_value
+       _Concentration_max_value
+       _Isotopic_labeling
+
+    @ @ @ @ @   @ @ @ @ @   @ @
+
+    stop_
+
+   loop_
+     _Citation_entry_ID
+     _Citation_saveframe_ID
+
+     _Citation_ID
+     _Citation_label
+
+     @ @ @ @
+
+   stop_
+
+save_
+
+    ########################
+    #   Sample conditions  #
+    ########################
+
+save_<sample_conditions_label>
+  _Saveframe_category       sample_conditions
+  _Entry_ID                 @
+  _Saveframe_ID             @
+  _Saveframe_framecode      @
+
+  _Sample_conditions_ID     @
+  _Details                  @
+
+   loop_
+      _Sample_conditions_development_entry_ID
+      _Sample_conditions_development_saveframe_ID
+
+      _Sample_conditions_development_experiment_ID
+      _Sample_conditions_development_experiment_label
+
+     @ @ @ @
+
+   stop_
+
+    _Sample_conditions_protocol                        @
+    _Sample_conditions_protocol_file_name              @
+    _Sample_conditions_protocol_file_location          @
+
+   loop_
+      _Sample_conditions_variable_entry_ID
+      _Sample_conditions_variable_saveframe_ID
+
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+     @ @ @ @ @   @
+
+   stop_
+
+   loop_
+     _Citation_entry_ID
+     _Citation_saveframe_ID
+
+     _Citation_ID
+     _Citation_label
+
+     @ @ @ @
+
+   stop_
+
+save_
+
+    ##############################
+    #   Purity of the molecules  #
+    ##############################
+
+save_sample_mol_purity
+  _Saveframe_category   sample_mol_purity
+  _Entry_ID                   @
+  _Saveframe_ID               @
+  _Saveframe_framecode        @
+
+  _Details                    @
+
+  loop_
+    _Mol_purity_entry_ID
+    _Mol_purity_saveframe_ID
+
+    _Sample_ID
+    _Sample_label
+    _Mol_ID
+    _Mol_label
+    _Mol_category
+    _Mol_purity_value
+    _Mol_purity_value_units
+    _Mol_purity_measurement_method
+
+   @ @ @ @ @   @ @ @ @ @
+
+  stop_
+
+   loop_
+     _Citation_entry_ID
+     _Citation_saveframe_ID
+
+     _Citation_ID
+     _Citation_label
+
+     @ @ @ @
+
+   stop_
+
+save_
+
+
+#####################
+#   NMR parameters  #
+#####################
+
+    ###############################
+    #   Assigned chemical shifts  #
+    ###############################
+
+        #################################
+        #   Chemical shift referencing  #
+        #################################
+
+save_<chemical_shift_reference_label>
+  _Saveframe_category   chemical_shift_reference
+  _Entry_ID                    @
+  _Saveframe_ID                @
+  _Saveframe_framecode         @
+
+  _Chem_shift_reference_set_library_ID        @
+  _Details                                    @
+
+  loop_
+    _Chem_shift_entry_ID
+    _Chem_shift_saveframe_ID
+
+    _Mol_common_name
+    _Atom_type
+    _Atom_isotope_number
+    _Atom_group
+    _Chem_shift_units
+    _Chem_shift_value
+    _Reference_method
+    _Reference_type
+    _External_reference_sample_geometry
+    _External_reference_location
+    _External_reference_axis
+    _Indirect_shift_ratio
+    _Indirect_shift_ratio_citation_ID
+    _Indirect_shift_ratio_citation_label
+    _Reference_correction_type
+    _Correction_value
+    _Correction_value_citation_ID
+    _Correction_value_citation_label
+
+  @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @
+  
+  stop_
+
+save_
+
+        ####################################
+        #   Assigned chemical shift lists  #
+        ####################################
+
+save_<assigned_chemical_shifts_label>
+  _Saveframe_category   assigned_chemical_shifts
+  _Entry_ID                    @
+  _Saveframe_ID                @
+  _Saveframe_framecode         @
+
+  _Assigned_chemical_shift_set_id      @
+  _Details                             @
+
+  loop_
+    _Software_entry_ID
+    _Software_saveframe_ID
+
+    _Software_ID
+    _Software_label
+
+     @ @ @ @
+
+  stop_
+
+  loop_
+    _Experiment_entry_ID
+    _Experiment_saveframe_ID
+
+    _Experiment_ID
+    _Experiment_label
+    _Experiment_processing_protocol_ID
+    _Experiment_processing_protocol_label
+
+     @ @ @ @ @   @
+
+  stop_
+
+  loop_
+    _Sample_entry_ID
+    _Sample_saveframe_ID
+
+    _Sample_ID
+    _Sample_label
+
+     @ @ @ @
+
+  stop_
+
+  loop_
+    _Systematic_chem_shift_offset_entry_ID
+    _Systematic_chem_shift_offset_saveframe_ID
+
+    _Systematic_chem_shift_offset_type
+    _Systematic_chem_shift_offset_atom_type   # May need to be atom name
+                                              # specific?
+     @ @ @ @
+
+   stop_
+     
+
+  _Sample_conditions_ID                      @
+  _Sample_conditions_label                   @
+  _Chem_shift_reference_set_ID               @
+  _Chem_shift_reference_set_label            @
+
+   _1H_chem_shift_error                      @
+   _2H_chem_shift_error                      @
+   _13C_chem_shift_error                     @
+   _15N_chem_shift_error                     @
+   _31P_chem_shift_error                     @
+   _19F_chem_shift_error                     @
+
+
+  _Text_data_format                          @
+  _Text_data                                 @
+
+  loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+    _Atom_shift_assign_ID
+    _Mol_system_component_ID
+    _Mol_system_component_code
+    _Chemical_moiety_index_ID
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Atom_type
+    _Residue_author_seq_code
+
+    _Chem_shift_value
+    _Chem_shift_value_error
+    _Chem_shift_ambiguity_code
+
+  4997    ?     1    1    prot-1    2    2   ILE     H     H    2     8.58  0.02  1  
+  2    2   ILE  HA    H  3.95  0.02  1  
+  3    2   ILE  HB    H  1.42  0.02  1  
+  4    2   ILE  HG12  H  1.17  0.02  2  
+  5    2   ILE  HG13  H  0.87  0.02  2  
+  6    2   ILE  HG2   H  0.63  0.02  1  
+  7    2   ILE  HD1   H  0.52  0.02  1  
+  8    3   VAL  H     H  8.21  0.02  1  
+  9    3   VAL  HA    H  3.69  0.02  1  
+ 10    3   VAL  HB    H  1.95  0.02  1  
+ 11    3   VAL  HG1   H  1.00  0.02  2  
+ 12    3   VAL  HG2   H  0.92  0.02  2  
+ 13    4   GLU  H     H  8.32  0.02  1  
+ 14    4   GLU  HA    H  4.01  0.02  1  
+ 15    5   GLN  HB2   H  2.01  0.02  2  
+ 16    5   GLN  HB3   H  2.08  0.02  2  
+ 17    5   GLN  HG2   H  2.34  0.02  2  
+ 18    5   GLN  HG3   H  2.43  0.02  2  
+ 19    5   GLN  HE21  H  7.45  0.02  2  
+ 20    5   GLN  HE22  H  6.84  0.02  2  
+ 21    6   CYS  H     H  8.32  0.02  1  
+ 22    6   CYS  HA    H  4.85  0.02  1  
+ 23    6   CYS  HB2   H  3.35  0.02  2  
+ 24    7   CYS  HA    H  4.82  0.02  1  
+ 25    8   THR  H     H  8.36  0.02  1  
+ 26    8   THR  HA    H  3.96  0.02  1  
+ 27    8   THR  HB    H  4.34  0.02  1  
+ 28    8   THR  HG2   H  1.24  0.02  1  
+ 29    9   SER  HA    H  4.09  0.02  1  
+ 30    9   SER  HB2   H  4.03  0.02  2  
+ 31    9   SER  HB3   H  3.87  0.02  2  
+ 32   10   ILE  H     H  7.87  0.02  1  
+ 33   10   ILE  HA    H  4.36  0.02  1  
+ 34   10   ILE  HB    H  1.55  0.02  1  
+ 35   10   ILE  HG12  H  1.05  0.02  2  
+ 36   10   ILE  HG13  H  1.23  0.02  2  
+ 37   10   ILE  HG2   H  0.61  0.02  1  
+ 38   10   ILE  HD1   H  0.43  0.02  1  
+ 39   11   CYS  H     H  9.79  0.02  1  
+ 40   11   CYS  HA    H  4.95  0.02  1  
+ 41   12   SER  H     H  8.73  0.02  1  
+ 42   12   SER  HA    H  4.57  0.02  1  
+ 43   12   SER  HB2   H  4.25  0.02  2  
+ 44   12   SER  HB3   H  3.98  0.02  2  
+ 45   13   LEU  H     H  8.62  0.02  1  
+ 46   13   LEU  HA    H  3.73  0.02  1  
+ 47   13   LEU  HB2   H  1.33  0.02  2  
+ 48   13   LEU  HB3   H  1.21  0.02  2  
+ 49   13   LEU  HG    H  0.93  0.02  1  
+ 50   13   LEU  HD1   H  0.78  0.02  1  
+ 51   13   LEU  HD2   H  0.71  0.02  1  
+ 52   14   TYR  H     H  7.56  0.02  1  
+ 53   14   TYR  HA    H  4.11  0.02  1  
+ 54   14   TYR  HB2   H  2.99  0.02  2  
+ 55   14   TYR  HB3   H  2.94  0.02  2  
+ 56   14   TYR  HD1   H  6.89  0.02  3  
+ 57   14   TYR  HE1   H  7.05  0.02  3  
+ 58   15   GLN  H     H  7.51  0.02  1  
+ 59   15   GLN  HA    H  3.94  0.02  1  
+ 60   15   GLN  HB2   H  2.01  0.02  2  
+ 61   15   GLN  HG2   H  2.33  0.02  2  
+ 62   15   GLN  HG3   H  2.38  0.02  2  
+ 63   15   GLN  HE21  H  6.84  0.02  2  
+ 64   15   GLN  HE22  H  7.05  0.02  2  
+ 65   16   LEU  H     H  7.90  0.02  1  
+ 66   16   LEU  HA    H  4.11  0.02  1  
+ 67   16   LEU  HB2   H  1.71  0.02  2  
+ 68   17   GLU  H     H  8.07  0.02  1  
+ 69   17   GLU  HA    H  4.28  0.02  1  
+ 70   17   GLU  HB2   H  2.06  0.02  2  
+ 71   17   GLU  HG2   H  2.29  0.02  2  
+ 72   17   GLU  HG3   H  2.54  0.02  2  
+ 73   18   ASN  H     H  7.36  0.02  1  
+ 74   18   ASN  HA    H  4.48  0.02  1  
+ 75   18   ASN  HB2   H  2.62  0.02  2  
+ 76   18   ASN  HB3   H  2.53  0.02  2  
+ 77   18   ASN  HD21  H  6.58  0.02  2  
+ 78   18   ASN  HD22  H  7.15  0.02  2  
+ 79   19   TYR  H     H  7.90  0.02  1  
+ 80   19   TYR  HA    H  4.38  0.02  1  
+ 81   19   TYR  HB2   H  2.93  0.02  2  
+ 82   19   TYR  HB3   H  3.51  0.02  2  
+ 83   19   TYR  HD1   H  6.74  0.02  3  
+ 84   19   TYR  HE1   H  7.23  0.02  3  
+ 85   20   CYS  H     H  7.29  0.02  1  
+ 86   20   CYS  HA    H  5.23  0.02  1  
+ 87   20   CYS  HB2   H  3.32  0.02  2  
+ 88   20   CYS  HB3   H  2.18  0.02  2  
+ 89   21   ASN  HD21  H  6.27  0.02  2  
+ 90   21   ASN  HD22  H  7.48  0.02  2  
+
+   4997     ?    91    2    prot-2   1   1    PHE     HA    H    ?      4.19     0.02  1  
+   2    1   PHE  HB2   H  3.13  0.02  1  
+   3    1   PHE  HB3   H  3.08  0.02  2  
+   4    1   PHE  HD1   H  7.18  0.02  2  
+   5    1   PHE  HE1   H  7.3   0.02  3  
+   6    1   PHE  HZ    H  7.21  0.02  1  
+   7    2   VAL  H     H  7.99  0.02  1  
+   8    2   VAL  HA    H  4.01  0.02  1  
+   9    2   VAL  HB    H  1.99  0.02  1  
+  10    2   VAL  HG1   H  0.78  0.02  2  
+  11    3   ASN  H     H  8.45  0.02  1  
+  12    3   ASN  HA    H  4.64  0.02  1  
+  13    3   ASN  HB2   H  2.66  0.02  2  
+  14    3   ASN  HD21  H  6.82  0.02  2  
+  15    3   ASN  HD22  H  7.49  0.02  2  
+  16    4   GLN  H     H  8.36  0.02  1  
+  17    4   GLN  HA    H  4.43  0.02  1  
+  18    4   GLN  HB2   H  2.04  0.02  2  
+  19    4   GLN  HB3   H  1.87  0.02  2  
+  20    4   GLN  HG2   H  2.21  0.02  2  
+  21    4   GLN  HE21  H  7.37  0.02  2  
+  22    4   GLN  HE22  H  6.76  0.02  2  
+  23    5   HIS  H     H  8.69  0.02  1  
+  24    5   HIS  HA    H  4.43  0.02  1  
+  25    5   HIS  HB2   H  3.55  0.02  2  
+  26    5   HIS  HB3   H  3.24  0.02  2  
+  27    5   HIS  HD2   H  7.34  0.02  1  
+  28    5   HIS  HE1   H  8.56  0.02  1  
+  29    6   LEU  H     H  9.08  0.02  1  
+  30    6   LEU  HA    H  4.47  0.02  1  
+  31    6   LEU  HB2   H  1.75  0.02  2  
+  32    6   LEU  HB3   H  1.56  0.02  2  
+  33    6   LEU  HG    H  0.87  0.02  1  
+  34    6   LEU  HD1   H  0.73  0.02  2  
+  35    6   LEU  HD2   H  0.66  0.02  2  
+  36    7   CYS  H     H  8.52  0.02  1  
+  37    7   CYS  HA    H  4.97  0.02  1  
+  38    7   CYS  HB2   H  3.23  0.02  2  
+  39    7   CYS  HB3   H  2.94  0.02  2  
+  40    8   GLY  H     H  9.43  0.02  1  
+  41    8   GLY  HA2   H  3.95  0.02  2  
+  42    8   GLY  HA3   H  3.85  0.02  2  
+  43    9   SER  H     H  9.15  0.02  1  
+  44    9   SER  HA    H  3.72  0.02  1  
+  45   10   HIS  H     H  7.92  0.02  1  
+  46   10   HIS  HA    H  4.38  0.02  1  
+  47   10   HIS  HB2   H  3.51  0.02  2  
+  48   10   HIS  HB3   H  3.23  0.02  2  
+  49   10   HIS  HD2   H  7.44  0.02  1  
+  50   10   HIS  HE1   H  8.58  0.02  1  
+  51   12   VAL  HA    H  3.55  0.02  1  
+  52   12   VAL  HB    H  1.9   0.02  1  
+  53   12   VAL  HG1   H  0.86  0.02  2  
+  54   14   ALA  HA    H  4.05  0.02  1  
+  55   14   ALA  HB    H  1.42  0.02  1  
+  56   15   LEU  H     H  7.83  0.02  1  
+  57   15   LEU  HA    H  3.61  0.02  1  
+  58   15   LEU  HB2   H  1.98  0.02  2  
+  59   15   LEU  HG    H  1.28  0.02  1  
+  60   15   LEU  HD1   H  0.48  0.02  2  
+  61   15   LEU  HD2   H  0.02  0.02  2  
+  62   17   LEU  H     H  7.74  0.02  1  
+  63   17   LEU  HA    H  3.9   0.02  1  
+  64   17   LEU  HB2   H  1.85  0.02  2  
+  65   17   LEU  HB3   H  1.56  0.02  2  
+  66   18   VAL  H     H  8.51  0.02  1  
+  67   18   VAL  HA    H  3.74  0.02  1  
+  68   18   VAL  HB    H  1.99  0.02  1  
+  69   18   VAL  HG1   H  0.78  0.02  2  
+  70   18   VAL  HG2   H  0.93  0.02  2  
+  71   19   CYS  H     H  8.7   0.02  1  
+  72   19   CYS  HA    H  4.76  0.02  1  
+  73   19   CYS  HB2   H  2.92  0.02  2  
+  74   19   CYS  HB3   H  3.35  0.02  2  
+  75   20   GLY  H     H  7.74  0.02  1  
+  76   20   GLY  HA2   H  3.77  0.02  2  
+  77   20   GLY  HA3   H  3.91  0.02  2  
+  78   21   GLU  H     H  8.98  0.02  1  
+  79   21   GLU  HA    H  4.19  0.02  1  
+  80   21   GLU  HB2   H  2.25  0.02  2  
+  81   21   GLU  HB3   H  1.99  0.02  2  
+  82   21   GLU  HG2   H  2.54  0.02  2  
+  83   21   GLU  HG3   H  2.11  0.02  2  
+  84   22   ARG  H     H  8.13  0.02  1  
+  85   22   ARG  HA    H  4.15  0.02  1  
+  86   22   ARG  HG2   H  1.84  0.02  4  
+  87   22   ARG  HE    H  7.15  0.02  1  
+  88   23   GLY  HA2   H  4.38  0.02  2  
+  89   23   GLY  HA3   H  4.1   0.02  2  
+  90   24   PHE  H     H  8.39  0.02  1  
+  91   24   PHE  HA    H  4.99  0.02  1  
+  92   24   PHE  HB2   H  2.93  0.02  2  
+  93   24   PHE  HB3   H  3.22  0.02  2  
+  94   24   PHE  HD1   H  6.89  0.02  3  
+  95   25   PHE  H     H  9.58  0.02  1  
+  96   25   PHE  HB2   H  3.92  0.02  2  
+  97   25   PHE  HB3   H  3.8   0.02  2  
+  98   28   THR  H     H  8.13  0.02  1  
+  99   28   THR  HA    H  4.15  0.02  1  
+ 100   28   THR  HG2   H  1.24  0.02  1  
+ 101   29   LYS  H     H  8.29  0.02  1  
+ 102   29   LYS  HA    H  4.38  0.02  1  
+ 103   29   LYS  HB2   H  1.88  0.02  2  
+ 104   29   LYS  HG2   H  1.46  0.02  2  
+ 105   29   LYS  HD2   H  1.68  0.02  4  
+ 106   29   LYS  HE2   H  3     0.02  2  
+ 107   29   LYS  HZ    H  7.52  0.02  1  
+ 108   30   THR  HA    H  4.28  0.02  1  
+ 109   30   THR  HB    H  4.23  0.02  1  
+ 110   30   THR  HG2   H  1.15  0.02  1  
+
+stop_
+
+save_
+
+
+save_CS_2
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_2 
+      
+
+   stop_
+
+   _Sample_conditions_label         $cond_TFE
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+
+  loop_
+    _Atom_shift_assign_entry_ID
+    _Atom_shift_assign_saveframe_ID
+
+  _Atom_shift_assign_ID
+    _Mol_system_component_ID
+    _Mol_system_component_code
+    _Chemical_moiety_index_ID
+    _Residue_seq_code
+    _Residue_label
+    _Atom_name
+    _Atom_type
+    _Residue_author_seq_code
+
+    _Chem_shift_value
+    _Chem_shift_value_error
+    _Chem_shift_ambiguity_code
+
+   4997    ?    1    1    prot-1    1    1   GLY  HA2   H      ?      4.09  .  2  
+   2    1   GLY  HA3   H    4.01  .  2  
+   3    1   GLY  CA    C   43.75  .  1  
+   4    2   ILE  H     H    8.52  .  1  
+   5    2   ILE  HA    H    3.95  .  1  
+   6    2   ILE  HB    H    0.95  .  1  
+   7    2   ILE  HG12  H    1.30  .  2  
+   8    2   ILE  HG13  H    1.23  .  2  
+   9    2   ILE  HG2   H    0.76  .  1  
+  10    2   ILE  HD1   H    0.68  .  1  
+  11    2   ILE  CA    C   63.31  .  1  
+  12    2   ILE  CG2   C   17.08  .  1  
+  13    2   ILE  CD1   C   12.59  .  1  
+  14    3   VAL  H     H    8.11  .  1  
+  15    3   VAL  HA    H    3.38  .  1  
+  16    3   VAL  HB    H    1.95  .  1  
+  17    3   VAL  HG1   H    0.95  .  2  
+  18    3   VAL  HG2   H    0.91  .  2  
+  19    3   VAL  CA    C   66.15  .  1  
+  20    3   VAL  CB    C   27.34  .  1  
+  21    4   GLU  H     H    8.19  .  1  
+  22    4   GLU  HA    H    4.11  .  1  
+  23    4   GLU  HB2   H    2.18  .  2  
+  24    4   GLU  HB3   H    2.07  .  2  
+  25    4   GLU  HG2   H    2.58  .  2  
+  26    4   GLU  HG3   H    2.40  .  2  
+  27    4   GLU  CA    C   61.49  .  1  
+  28    4   GLU  CG    C   34.94  .  1  
+  29    5   GLN  H     H    8.26  .  1  
+  30    5   GLN  HA    H    4.05  .  1  
+  31    5   GLN  HB2   H    2.88  .  2  
+  32    5   GLN  HB3   H    2.10  .  2  
+  33    5   GLN  HG2   H    2.49  .  2  
+  34    5   GLN  HG3   H    2.42  .  2  
+  35    5   GLN  HE21  H    7.54  .  2  
+  36    5   GLN  CA    C   59.08  .  1  
+  37    5   GLN  CG    C   33.17  .  1  
+  38    6   CYS  H     H    8.38  .  1  
+  39    6   CYS  HA    H    4.95  .  1  
+  40    6   CYS  HB2   H    3.37  .  2  
+  41    6   CYS  HB3   H    2.96  .  2  
+  42    6   CYS  CA    C   55.37  .  1  
+  43    7   CYS  H     H    8.29  .  1  
+  44    7   CYS  HA    H    4.89  .  1  
+  45    7   CYS  HB2   H    3.73  .  2  
+  46    7   CYS  HB3   H    3.32  .  2  
+  47    7   CYS  CA    C   57.41  .  1  
+  48    8   THR  HA    H    4.20  .  1  
+  49    8   THR  HB    H    4.44  .  1  
+  50    8   THR  HG2   H    1.27  .  1  
+  51    8   THR  CA    C   60.47  .  1  
+  52    8   THR  CB    C   69.45  .  1  
+  53    8   THR  CG2   C   21.99  .  1  
+  54    9   SER  HA    H    4.76  .  1  
+  55    9   SER  HB2   H    4.08  .  2  
+  56    9   SER  HB3   H    3.92  .  2  
+  57    9   SER  CA    C   53.44  .  1  
+  58   10   ILE  H     H    7.92  .  1  
+  59   10   ILE  HA    H    4.53  .  1  
+  60   10   ILE  HB    H    1.69  .  1  
+  61   10   ILE  HG12  H    1.30  .  2  
+  62   10   ILE  HG2   H    0.77  .  1  
+  63   10   ILE  HD1   H    0.66  .  1  
+  64   10   ILE  CA    C   56.59  .  1  
+  65   10   ILE  CB    C   39.46  .  1  
+  66   10   ILE  CG2   C   17.48  .  1  
+  67   10   ILE  CD1   C   14.19  .  1  
+  68   11   CYS  H     H    9.37  .  1  
+  69   11   CYS  HA    H    5.08  .  1  
+  70   11   CYS  CA    C   53.62  .  1  
+  71   12   SER  H     H    8.71  .  1  
+  72   12   SER  HA    H    4.66  .  1  
+  73   12   SER  HB2   H    4.29  .  2  
+  74   12   SER  HB3   H    4.03  .  2  
+  75   12   SER  CB    C   66.11  .  1  
+  76   13   LEU  H     H    8.59  .  1  
+  77   13   LEU  HA    H    4.08  .  1  
+  78   13   LEU  HB2   H    1.51  .  2  
+  79   13   LEU  HB3   H    1.46  .  2  
+  80   13   LEU  HG    H    1.57  .  1  
+  81   13   LEU  HD1   H    0.90  .  2  
+  82   13   LEU  HD2   H    0.82  .  2  
+  83   13   LEU  CA    C   59.37  .  1  
+  84   13   LEU  CB    C   41.88  .  1  
+  85   14   TYR  H     H    7.42  .  1  
+  86   14   TYR  HA    H    4.19  .  1  
+  87   14   TYR  HB2   H    3.03  .  2  
+  88   14   TYR  HB3   H    2.96  .  2  
+  89   14   TYR  HD1   H    7.12  .  3  
+  90   14   TYR  HE1   H    6.89  .   . 
+  91   14   TYR  CA    C   60.47  .  1  
+  92   14   TYR  CB    C   37.89  .  1  
+  93   14   TYR  CD1   C  132.90  .  3  
+  94   14   TYR  CE1   C  118.59  .  3  
+  95   15   GLN  H     H    7.57  .  1  
+  96   15   GLN  HA    H    4.01  .  1  
+  97   15   GLN  HG2   H    2.48  .  2  
+  98   15   GLN  HG3   H    2.41  .  2  
+  99   15   GLN  HE21  H    7.49  .  2  
+ 100   15   GLN  HE22  H    6.95  .  2  
+ 101   15   GLN  CA    C   58.65  .  1  
+ 102   15   GLN  CB    C   28.00  .  1  
+ 103   16   LEU  H     H    7.98  .  1  
+ 104   16   LEU  HA    H    4.18  .  1  
+ 105   16   LEU  HB2   H    1.98  .  2  
+ 106   16   LEU  HB3   H    1.79  .  2  
+ 107   16   LEU  HG    H    1.59  .  1  
+ 108   16   LEU  HD1   H    0.88  .  2  
+ 109   16   LEU  HD2   H    0.83  .  2  
+ 110   16   LEU  CA    C   58.48  .  1  
+ 111   17   GLU  H     H    8.21  .  1  
+ 112   17   GLU  HA    H    4.20  .  1  
+ 113   17   GLU  HB2   H    2.14  .  2  
+ 114   17   GLU  HB3   H    2.08  .  2  
+ 115   17   GLU  HG2   H    2.57  .  2  
+ 116   17   GLU  HG3   H    2.43  .  2  
+ 117   17   GLU  CA    C   58.43  .  1  
+ 118   17   GLU  CG    C   33.41  .  1  
+ 119   18   ASN  H     H    7.48  .  1  
+ 120   18   ASN  HA    H    4.47  .  1  
+ 121   18   ASN  HB2   H    2.65  .  2  
+ 122   18   ASN  HB3   H    2.57  .  2  
+ 123   18   ASN  HD21  H    7.20  .  2  
+ 124   18   ASN  CA    C   60.49  .  1  
+ 125   18   ASN  CB    C   39.06  .  1  
+ 126   19   TYR  H     H    8.01  .  1  
+ 127   19   TYR  HA    H    4.51  .  1  
+ 128   19   TYR  HB2   H    3.39  .  2  
+ 129   19   TYR  HB3   H    3.06  .  2  
+ 130   19   TYR  HD1   H    7.34  .  3  
+ 131   19   TYR  HE1   H    6.83  .  3  
+ 132   19   TYR  CA    C   55.42  .  1  
+ 133   19   TYR  CB    C   38.52  .  1  
+ 134   19   TYR  CD1   C  130.76  .  3  
+ 135   19   TYR  CE1   C  118.27  .  3  
+ 136   20   CYS  H     H    7.46  .  1  
+ 137   20   CYS  HA    H    4.87  .  1  
+ 138   20   CYS  HB2   H    3.28  .  2  
+ 139   20   CYS  HB3   H    2.89  .  2  
+ 140   20   CYS  CA    C   54.93  .  1  
+ 141   21   ASN  H     H    8.13  .  1  
+ 142   21   ASN  HA    H    4.66  .  1  
+ 143   21   ASN  HB2   H    2.87  .  2  
+ 144   21   ASN  HB3   H    2.76  .  2  
+ 145   21   ASN  HD21  H    7.48  .  2  
+ 146   21   ASN  CA    C   56.82  .  1  
+ 147   21   ASN  CB    C   39.27  .  1  
+
+   4997    ?   148   2   prot-2   1   1   PHE  HA    H     ?    4.33  .  1  
+   2    1   PHE  HB2   H    3.27  .  2  
+   3    1   PHE  HB3   H    3.2   .  2  
+   4    1   PHE  HD1   H    7.32  .  3  
+   5    1   PHE  HE1   H    7.38  .  3  
+   6    1   PHE  HZ    H    7.42  .  1  
+   7    1   PHE  CA    C   57.41  .  1  
+   8    1   PHE  CB    C   39.85  .  1  
+   9    1   PHE  CD1   C  132.24  .  3  
+  10    1   PHE  CE1   C  131.97  .  3  
+  11    2   VAL  H     H    8.17  .  1  
+  12    2   VAL  HA    H    4.14  .  1  
+  13    2   VAL  HB    H    2.01  .  1  
+  14    2   VAL  HG1   H    0.92  .  2  
+  15    2   VAL  CA    C   62.51  .  1  
+  16    3   ASN  H     H    8.37  .  1  
+  17    3   ASN  HA    H    4.73  .  1  
+  18    3   ASN  HB2   H    2.83  .  2  
+  19    3   ASN  HB3   H    2.78  .  2  
+  20    3   ASN  HD21  H    7.57  .  2  
+  21    3   ASN  HD22  H    6.88  .  2  
+  22    3   ASN  CA    C   56.63  .  1  
+  23    3   ASN  CB    C   39.03  .  1  
+  24    4   GLN  H     H    8.39  .  1  
+  25    4   GLN  HA    H    4.41  .  1  
+  26    4   GLN  HB2   H    2.15  .  2  
+  27    4   GLN  HB3   H    1.92  .  2  
+  28    4   GLN  HG2   H    2.32  .  2  
+  29    4   GLN  HG3   H    2.26  .  2  
+  30    4   GLN  HE21  H    7.27  .  2  
+  31    4   GLN  HE22  H    6.69  .  2  
+  32    4   GLN  CA    C   56.5   .  1  
+  33    4   GLN  CB    C   31.86  .  1  
+  34    5   HIS  H     H    8.57  .  1  
+  35    5   HIS  HA    H    4.58  .  1  
+  36    5   HIS  HB2   H    3.58  .  2  
+  37    5   HIS  HB3   H    3.32  .  2  
+  38    5   HIS  HD2   H    7.42  .  1  
+  39    5   HIS  HE1   H    8.56  .  1  
+  40    5   HIS  CA    C   57.7   .  1  
+  41    5   HIS  CB    C   28.57  .  1  
+  42    5   HIS  CD2   C  120.72  .  1  
+  43    5   HIS  CE1   C  136.23  .  1  
+  44    6   LEU  H     H    8.76  .  1  
+  45    6   LEU  HA    H    4.48  .  1  
+  46    6   LEU  HB2   H    1.78  .  2  
+  47    6   LEU  HB3   H    1.62  .  2  
+  48    6   LEU  HG    H    1.2   .  1  
+  49    6   LEU  HD1   H    0.83  .  2  
+  50    6   LEU  HD2   H    0.93  .  2  
+  51    6   LEU  CA    C   59.42  .  1  
+  52    7   CYS  H     H    8.25  .  1  
+  53    7   CYS  HA    H    4.46  .  1  
+  54    7   CYS  HB2   H    3.18  .  2  
+  55    7   CYS  HB3   H    3.07  .  2  
+  56    7   CYS  CA    C   56.01  .  1  
+  57    8   GLY  H     H    8.92  .  1  
+  58    8   GLY  HA2   H    3.99  .  2  
+  59    8   GLY  HA3   H    3.79  .  2  
+  60    8   GLY  CA    C   45.41  .  1  
+  61    9   SER  H     H    8.75  .  1  
+  62    9   SER  HA    H    4.08  .  1  
+  63    9   SER  HB2   H    3.92  .  2  
+  64    9   SER  CA    C   59.64  .  1  
+  65    9   SER  CB    C   64.33  .  1  
+  66   10   HIS  H     H    7.93  .  1  
+  67   10   HIS  HA    H    4.55  .  1  
+  68   10   HIS  HB2   H    3.53  .  2  
+  69   10   HIS  HB3   H    3.33  .  2  
+  70   10   HIS  HD2   H    7.77  .  1  
+  71   10   HIS  HE1   H    8.66  .  1  
+  72   10   HIS  CA    C   58.06  .  1  
+  73   10   HIS  CB    C   28.19  .  1  
+  74   10   HIS  CD2   C  119.93  .  1  
+  75   10   HIS  CE1   C  136.53  .  1  
+  76   11   LEU  HA    H    3.94  .  1  
+  77   11   LEU  CA    C   58.25  .  1  
+  78   12   VAL  H     H    7.16  .  1  
+  79   12   VAL  HA    H    3.41  .  1  
+  80   12   VAL  HB    H    2.07  .  1  
+  81   12   VAL  HG1   H    0.96  .  2  
+  82   12   VAL  CA    C   67.17  .  1  
+  83   12   VAL  CB    C   28.21  .  1  
+  84   13   GLU  H     H    7.88  .  1  
+  85   13   GLU  HA    H    4.01  .  1  
+  86   13   GLU  HB2   H    2.24  .  2  
+  87   13   GLU  HB3   H    2.11  .  2  
+  88   13   GLU  HG2   H    2.6   .  2  
+  89   13   GLU  HG3   H    2.44  .  2  
+  90   13   GLU  CA    C   59.01  .  1  
+  91   13   GLU  CB    C   29.45  .  1  
+  92   14   ALA  H     H    7.86  .  1  
+  93   14   ALA  HA    H    4.09  .  1  
+  94   14   ALA  HB    H    1.52  .  1  
+  95   14   ALA  CA    C   55.66  .  1  
+  96   14   ALA  CB    C   18.52  .  1  
+  97   15   LEU  H     H    8.23  .  1  
+  98   15   LEU  HA    H    3.94  .  1  
+  99   15   LEU  HB2   H    1.54  .  2  
+ 100   15   LEU  HB3   H    1.5   .  2  
+ 101   15   LEU  HG    H    1.6   .  1  
+ 102   15   LEU  HD1   H    0.76  .  2  
+ 103   15   LEU  HD2   H    0.61  .  2  
+ 104   15   LEU  CA    C   62.8   .  1  
+ 105   15   LEU  CD1   C   24.34  .  2  
+ 106   15   LEU  CD2   C   25.58  .  2  
+ 107   16   TYR  H     H    8.36  .  1  
+ 108   16   TYR  HA    H    4.2   .  1  
+ 109   16   TYR  HB2   H    3.19  .  2  
+ 110   16   TYR  HD1   H    7.14  .  3  
+ 111   16   TYR  HE1   H    6.9   .  3  
+ 112   16   TYR  CA    C   61.85  .  1  
+ 113   16   TYR  CB    C   38.09  .  1  
+ 114   16   TYR  CD1   C  133     .  3  
+ 115   16   TYR  CE1   C  118.14  .  3  
+ 116   17   LEU  H     H    8.12  .  1  
+ 117   17   LEU  HA    H    4.07  .  1  
+ 118   17   LEU  HB2   H    1.98  .  2  
+ 119   17   LEU  HB3   H    1.92  .  2  
+ 120   17   LEU  HG    H    1.63  .  1  
+ 121   17   LEU  HD1   H    0.93  .  2  
+ 122   17   LEU  CA    C   58.14  .  1  
+ 123   18   VAL  H     H    8.82  .  1  
+ 124   18   VAL  HA    H    3.77  .  1  
+ 125   18   VAL  HB    H    2.13  .  1  
+ 126   18   VAL  HG1   H    1.06  .  2  
+ 127   18   VAL  HG2   H    0.91  .  2  
+ 128   18   VAL  CA    C   66     .  1  
+ 129   18   VAL  CB    C   32.65  .  1  
+ 130   19   CYS  H     H    8.82  .  1  
+ 131   19   CYS  HA    H    4.83  .  1  
+ 132   19   CYS  HB2   H    3.26  .  2  
+ 133   19   CYS  HB3   H    3.03  .  2  
+ 134   19   CYS  CA    C   54.27  .  1  
+ 135   20   GLY  H     H    7.82  .  1  
+ 136   20   GLY  HA2   H    3.94  .  2  
+ 137   20   GLY  CA    C   46.76  .  1  
+ 138   21   GLU  H     H    8.43  .  1  
+ 139   21   GLU  HA    H    4.23  .  1  
+ 140   21   GLU  HB2   H    2.24  .  2  
+ 141   21   GLU  HB3   H    2.13  .  2  
+ 142   21   GLU  HG2   H    2.56  .  2  
+ 143   21   GLU  HG3   H    2.51  .  2  
+ 144   21   GLU  CA    C   57.17  .  1  
+ 145   21   GLU  CB    C   28.23  .  1  
+ 146   22   ARG  H     H    7.96  .  1  
+ 147   22   ARG  HA    H    4.22  .  1  
+ 148   22   ARG  HB2   H    2.06  .  2  
+ 149   22   ARG  HB3   H    2.03  .  2  
+ 150   22   ARG  HG2   H    1.84  .  2  
+ 151   22   ARG  HG3   H    1.78  .  2  
+ 152   22   ARG  HD2   H    3.29  .  2  
+ 153   22   ARG  HE    H    7.32  .  1  
+ 154   22   ARG  CA    C   57.58  .  1  
+ 155   22   ARG  CD    C   43.82  .  1  
+ 156   23   GLY  H     H    7.75  .  1  
+ 157   23   GLY  HA2   H    3.99  .  2  
+ 158   23   GLY  HA3   H    3.87  .  2  
+ 159   23   GLY  CA    C   47.05  .  1  
+ 160   24   PHE  H     H    7.68  .  1  
+ 161   24   PHE  HA    H    4.77  .  1  
+ 162   24   PHE  HB2   H    3.15  .  2  
+ 163   24   PHE  HB3   H    2.99  .  2  
+ 164   24   PHE  HD1   H    7.16  .  3  
+ 165   24   PHE  HE1   H    7     .  3  
+ 166   24   PHE  CB    C   40.46  .  1  
+ 167   24   PHE  CD1   C  132.21  .  3  
+ 168   24   PHE  CE1   C  131.21  .  3  
+ 169   25   PHE  H     H    8.13  .  1  
+ 170   25   PHE  HA    H    4.63  .  1  
+ 171   25   PHE  HB2   H    3.07  .  2  
+ 172   25   PHE  HB3   H    3.02  .  2  
+ 173   25   PHE  HD1   H    7.23  .  3  
+ 174   25   PHE  HE1   H    7.32  .  3  
+ 175   25   PHE  HZ    H    7.27  .  1  
+ 176   25   PHE  CA    C   56.97  .  1  
+ 177   25   PHE  CB    C   40.1   .  1  
+ 178   25   PHE  CD1   C  131.97  .  3  
+ 179   25   PHE  CE1   C  133.58  .  3  
+ 180   26   TYR  H     H    7.86  .  1  
+ 181   26   TYR  HA    H    4.76  .  1  
+ 182   26   TYR  HB2   H    3.02  .  2  
+ 183   26   TYR  HB3   H    2.86  .  2  
+ 184   26   TYR  CA    C   56.01  .  1  
+ 185   26   TYR  CB    C   39.2   .  1  
+ 186   26   TYR  CE1   C  118.08  .  3  
+ 187   27   PRO  HA    H    4.45  .  1  
+ 188   27   PRO  HB2   H    2.22  .  2  
+ 189   27   PRO  HG2   H    1.97  .  2  
+ 190   27   PRO  HG3   H    1.92  .  2  
+ 191   27   PRO  HD2   H    3.51  .  2  
+ 192   27   PRO  HD3   H    3.26  .  2  
+ 193   27   PRO  CA    C   55.44  .  1  
+ 194   27   PRO  CD    C   50.54  .  1  
+ 195   28   THR  H     H    7.89  .  1  
+ 196   28   THR  HA    H    4.4   .  1  
+ 197   28   THR  HB    H    4.29  .  1  
+ 198   28   THR  HG2   H    1.27  .  1  
+ 199   28   THR  CA    C   61.86  .  1  
+ 200   28   THR  CB    C   70.14  .  1  
+ 201   28   THR  CG2   C   21.64  .  1  
+ 202   29   LYS  H     H    8.16  .  1  
+ 203   29   LYS  HA    H    4.49  .  1  
+ 204   29   LYS  HB2   H    1.95  .  2  
+ 205   29   LYS  HB3   H    1.82  .  2  
+ 206   29   LYS  HG2   H    1.51  .  2  
+ 207   29   LYS  HD2   H    1.74  .  2  
+ 208   29   LYS  HE2   H    3.01  .  2  
+ 209   29   LYS  HZ    H    7.57  .  1  
+ 210   29   LYS  CA    C   55.44  .  1  
+ 211   29   LYS  CB    C   33.53  .  1  
+ 212   29   LYS  CG    C   42.38  .  1  
+ 213   30   THR  H     H    7.98  .  1  
+ 214   30   THR  HA    H    4.38  .  1  
+ 215   30   THR  HG2   H    1.22  .  1  
+ 216   30   THR  CA    C   61.85  .  1  
+ 217   30   THR  CB    C   70.52  .  1  
+ 218   30   THR  CG2   C   21.85  .  1  
+
+stop_
+
+save_
+
+

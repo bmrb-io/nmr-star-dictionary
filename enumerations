@@ -1,0 +1,1281 @@
+
+data_NMR-STAR_tag_enumerations
+
+    _Revision_date      1999-10-20
+
+save__Atom_group
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+     'methyl carbons'                   .
+     'methyl protons'                   .
+     'methylene protons'                .
+     'nitrogen'                         .
+     'protons'                          .
+
+
+# find more values from existing database
+
+    stop_
+
+save_
+
+
+save__Atom_type
+ 
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   Ac   Actinium       Al   Aluminum        Am   Americium      
+   Sb   Antimony       Ar   Argon           As   Arsenic
+   At   Astatine       Ba   Barium          Bk   Berkelium
+   Be   Beryllium      Bi   Bismuth         B    Boron
+   Br   Bromine        Cd   Cadmium         Ca   Calcium
+   Cf   Californium    C    Carbon          Ce   Cerium
+   Cs   Cesium         Cl   Chlorine        Cr   Chromium
+   Co   Cobalt         Cu   Copper          Cm   Curium
+   Dy   Dysprosium     Es   Einsteinium     Er   Erbium
+   Eu   Europium       Fm   Fermium         F    Fluorine
+   Fr   Francium       Gd   Gadolinium      Ga   Gallium
+   Ge   Germanium      Au   Gold            Hf   Hafnium
+   He   Helium         Ho   Holmium         H    Hydrogen
+   In   Indium         I    Iodine          Ir   Iridium
+   Fe   Iron           Kr   Krypton         La   Lanthanum
+   Lr   Lawrencium     Pb   Lead            Li   Lithium
+   Lu   Lutetium       Mg   Magnesium       Mn   Manganese
+   Md   Mendelevium    Hg   Mercury         Mo   Molybdenum
+   Nd   Neodymium      Ne   Neon            Np   Neptunium
+   Ni   Nickel         Nb   Niobium         N    Nitrogen
+   No   Nobelium       Os   Osmium          O    Oxygen
+   Pd   Palladium      P    Phosphorus      Pt   Platinum
+   Pu   Plutonium      Po   Polonium        K    Potassium
+   Pr   Praseodymium   Pm   Promethium      Pa   Protactinium
+   Ra   Radium         Rn   Radon           Re   Rhenium
+   Rh   Rhodium        Rb   Rubidium        Ru   Ruthenium
+   Sm   Samarium       Sc   Scandium        Se   Selenium
+   Si   Silicon        Ag   Silver          Na   Sodium
+   Sr   Strontium      S    Sulfur          Ta   Tantalum
+   Tc   Technetium     Te   Tellurium       Tb   Terbium
+   Tl   Thallium       Th   Thorium         Tm   Thulium
+   Sn   Tin            Ti   Titanium        W    Tungsten
+   Unq  Unnilquadium   Unp  Unnilpentium    Unh  Unnilhexium
+   Uns  Unnilseptium   U    Uranium         V    Vanadium
+   Xe   Xenon          Yb   Ytterbium       Y    Yttrium
+   Zn   Zinc           Zr   Zirconium
+
+
+    stop_
+
+save_
+
+save__Author_family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      
+
+    stop_
+
+save_
+
+
+save__Bond_order
+
+# Take from the mif definitions
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  single          . 
+  double          .
+  triple          .
+  aromatic        .
+  partial-double  .
+
+     stop_
+
+save_
+
+save__Bond_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        directed        .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+
+    stop_
+
+save_
+
+save__Chem_shift_ambiguity_code
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+           1                Unique
+           2 
+;
+Ambiguity of geminal atoms or geminal methyl proton groups 
+;
+           3
+;
+Aromatic atoms on opposite sides of the ring (e.g. Tyr HE1 and HE2 protons)    
+;
+           4
+;
+Intraresidue ambiguities (e.g. Lys HG and HD protons)
+;
+           5                'Interresidue ambiguities (Lys 12 vs. Lys 27)'
+           9                'Ambiguous, specific ambiguity not defined'
+
+     stop_
+
+save_
+
+save__Chem_shift_units
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+      ppm                 'parts per million'
+      Hz                  Hertz
+
+     stop_
+
+save_
+
+save__Citation_status
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+     'in preparation'        
+;
+A manuscript is being prepared but has not been submitted for publication.
+;
+     submitted
+;
+A manuscript has been submitted for publication.
+;
+     'in press'
+;
+A manuscript has been accepted for publication, but has not yet appeared in
+press.
+;
+     published
+;
+A published article exists that contains or describes the data in the entry.
+;
+
+    stop_
+
+save_
+
+save__Citation_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  journal     .
+  book        .
+  thesis
+;
+A document written and published as a requirement for a degree or other
+scholarly endeavor (e.g., senior, masters, or doctoral thesis)
+;
+  abstract    
+;
+A brief text describing the contents of a presentation, oral, poster, or
+other, given at a conference or other formal gathering.
+;
+ 'BMRB only'  
+;
+The BMRB entry is the only known published source for the data.
+;
+  Internet    
+;
+The data were found on the internet and no other publication is available.
+;
+     stop_
+
+save_
+
+save__Concentration_value_units
+
+# follow SI units
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+           M            Molar
+           mM           millimolar
+           uM           micromolar
+           nM           nanomolar
+           %            percent
+           v/v          'volume to volume'
+           w/v          'weight to volume'
+
+    stop_
+
+save_
+
+save__Coordinates_release_on_publication
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  yes    .
+  no     .
+
+  stop_
+
+save_
+
+
+save__Coupling_constant_code
+
+# List needs to be extended
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  3JHNHA        .
+  3JHAHB        .
+  3JHAHB2       .
+  3JHAHB3       .
+  3JNHB         .
+  3JNHB2        .
+  3JNHB3        .
+
+  stop_
+
+save_
+
+
+save__Database_entry_experimental_method
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+       NMR
+       'X-ray diffraction'
+       'neutron diffraction'
+       'mass spectrometry'
+      'theoretical calculation'
+
+    stop_
+
+save_
+
+
+save__Database_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_saveframe_category
+     _item_enumeration_description
+
+        EBI      molecular_system          'European Bioinformatics Institute'
+        PDB      molecular_system          'Protein Data Bank'
+        NDB      molecular_system          'Nucleic Acid Database'
+        RCSB     molecular_system 
+                          'Research Collaboratorium for Structural Biology'
+        GenBank      monomeric_polymer     'GenBank'
+        SWISS-PROT   monomeric_polymer     SWISS-PROT
+        PIR          monomeric_polymer     'Protein Identification Resource'
+        DDBJ         monomeric_polymer     'DNA Database of Japan
+        EMBL         monomeric_polymer             .
+
+# There are others to add
+
+    stop_
+
+save_
+
+save__Data_point_spacing
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      linear           'equal spacing'
+      non-linear       'non-equal spacing'
+
+    stop_
+
+save_
+
+
+save__Data_point_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+       real             .
+       complex          .
+
+     stop_
+
+save_
+
+
+
+save__Data_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     '1H chemical shifts'                       .
+     '13C chemical shifts'                      .
+     '15N chemical shifts'                      .
+     'coupling constants'                       .
+     'T1 relaxation values'                     .
+     'T1rho relaxation values'                  .
+     'T2 relaxation values'                     .
+     'chemical shift anisotropy values'         .
+     'heteronuclear NOE values'                 .
+     'homonuclear NOE values'                   .
+     'spectral peak  values'                    .
+     'S2 parameters'                            .
+     'spectral density values'                  .
+     'H exchange rates'                         .
+     'H exchange protection factors             .
+     'pKa values'                               .
+     'pH NMR parameter  values                  .
+     'D/H_fractionation_factors'                .
+     'secondary structure values'               .
+     'deduced hydrogen bonds                    .
+     'representative structures'                .
+     'structure coordinate sets'                .
+
+    stop_
+
+save_
+
+save__Detected_nucleus
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  1H               .
+  2H               .
+  13C              .
+  15N              .
+  17O              .
+  23Na             .
+  33S              .
+  31P              .
+  111Cd            .
+  113Cd            .
+  19F              .
+  43Ca             . 
+
+   
+  stop_
+
+save_
+
+save__Entry_origination
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  author     .  
+  BMRB       .
+  PDB        .
+  NDB        .
+  EBI        .
+
+  
+  stop_
+
+save_
+
+save__Entry_type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  original           
+;
+The molecular system and reported data have not been deposited in the past by
+these authors.
+;
+
+  update
+;
+The existing data in the entry with this BMRB accession number has been
+updated.
+;
+
+  stop_
+
+save_
+
+save__Experimental_method
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  NMR
+  'theoretical calculation'
+
+   stop_
+
+save_
+
+
+save__External_reference_location
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+
+  'in the sample'
+;
+The external reference compound was located in the sample.
+;
+  'external to the sample'
+;
+The external reference compound was in a capillary or another NMR tube and was
+not located in the same solution as the system studied.
+;
+
+  stop_
+
+save_
+
+save__External_reference_sample_geometry
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  cylindrical     .
+  spherical       .
+  other           .
+ 
+  stop_
+
+save_
+
+
+save__Fraction
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      ?      ?
+
+# gather from current entries
+
+    stop_
+
+save_
+
+
+save__Kingdom
+
+#Update using NCBI lists
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  Metazoa        .
+  Plantae        .
+  Eubacteria     .
+  Fungi          .
+
+ 
+  stop_
+
+save_
+
+save__Manufacturer
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     Bruker                   .
+     'Chem Magnetics'         .
+     'General Electric'       .
+     'home built'             .
+     JEOL                     .
+     Nicolet                  .
+     Varian                   .
+
+     stop_
+
+save_
+
+
+save__Model
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?       ?
+
+# take from file used by NMR-Dep
+
+    stop_
+
+save_
+
+
+
+save__Mol_aromatic
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  yes    .
+  no     .
+
+  stop_
+
+save_
+
+
+save__Mol_binding_category
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+  tight             
+;
+The ligand forms a strong complex with its receptor, where the equilibrium
+dissociation constant is very small (Kd <= 10E-9).
+;
+
+  intermediate
+;
+The equilibrium dissociation constant for the bound ligand is intermediate
+between that of a tightly bound ligand and a loosely bound ligand(10E-3 > Kd
+>10E-9).
+;
+
+  loose
+;
+The ligand binds loosely to the receptor and exchanges rapidly with ligand
+free in solution (Kd >10E-3).
+;
+
+  mixed             
+;
+The ligand has one or more tight and one or more loose or intermediate binding
+sites on the receptor.
+;
+
+    stop_
+
+save_
+
+
+save__Mol_common_name
+
+# extract other names from current database
+# need items for 13P
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  Acetone     .
+  Dioxane     .
+  DMSO        .
+  DSS         .
+  'liquid ammonia'   'Use NH3?'
+  TMS         .
+  TSP         .
+
+  
+  stop_
+
+save_
+
+save__Mol_label_category
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+       functional_molecular_system     .
+       ligand                          .
+       molecular_system                .
+       monomeric_polymer               .
+       polymer_residue                 .
+       solvent_solute_molecule_set     .
+
+     stop_
+
+save_
+
+
+
+save__Mol_paramagnetic
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  yes    .
+  no     .
+
+ 
+  stop_
+
+save_
+
+save__Mol_polymer_class
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  protein            .
+  DNA                .
+  RNA                .
+  carbohydrate       .
+  'RNA-DNA hybrid'   .
+ 
+  stop_
+
+save_
+
+save__Mol_purity_value_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      %              .
+
+    stop_
+
+save_
+
+
+
+save__Mol_thiol_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'not present'                        'No thiol groups exist.'
+    reduced                 'All thiol groups are in the reduced state.'
+    oxidized                'All thiol groups are in the oxidized state.'
+    'reduced and oxidized present'
+;
+Thiol groups are present and a fraction are in an oxidized state, while the
+others are in a reduced state.
+;
+    unknown  
+;
+The oxidation state of the thiol groups is not known.
+;
+    stop_
+
+save_
+
+save__Mol_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_saveframe_category
+     _item_enumeration_description
+
+      polymer         monomeric_polymer             .
+      non-polymer     ligand                        .
+      non-polymer     polymer_residue               .
+
+     stop_
+
+save_
+
+save__NMR_STAR_version
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     1.0         .
+     1.1         .
+     2.0         .
+     2.1         .
+     2.2         .
+
+   stop_
+
+save_
+
+save__Nucleus
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     1H       .
+     2H       .
+     3H       .
+     13C      .
+     14N
+     15N      .
+     19F      .
+     31P      .
+     43Ca     .
+     111Cd    .
+     113Cd    .
+
+# add other NMR active nuclei
+
+    stop_
+
+save_
+
+
+save__Operating_system
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      IRIX            'Version of UNIX developed by SGI.'
+      UNIX            .
+      Linux           .
+      DOS             
+;
+Operating system used on IBM and IBM compatible personal computers.
+;
+      NT              'Windows NT'
+
+
+     stop_
+
+save_
+
+
+
+
+
+save__Organ
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      brain         .
+      heart         .
+      intestine     .
+      kidney        .
+      liver         .
+      lung          .
+      pancreas      .
+      skin          .
+      testicle      .
+
+# Many more needed
+
+    stop_
+
+save_
+
+save__Organelle
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    chloroplast             .
+    'endoplamic reticulum'   .
+
+    golgi                   .
+    mitochondria            .
+    nucleus                 .
+   
+# need more here
+
+     stop_
+
+save_
+
+
+
+save__Platform_vendor
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     Sun                  .
+     SGI                  .
+     Dell                 .
+     Compaq               .
+     'Hewlett Packard'    .
+     IBM                  .
+     Gateway              .
+     DEC                  .
+
+    stop_
+
+save_
+
+
+save__Reference_correction_type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  temperature      .
+  pH               .
+ 
+  stop_
+
+save_
+
+save__Reference_method
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  internal      .
+  external      .
+
+ 
+  stop_
+
+save_
+
+save__Reference_type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  direct        .
+  indirect      .
+
+ 
+  stop_
+
+save_
+
+save__Release_immediately
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  yes     .
+  no      .
+
+ 
+  stop_
+
+save_
+
+
+
+save__Release_on_publication
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  yes      .
+  no       .
+   
+  stop_
+
+save_
+
+save__Release_author
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  BMRB      BioMagResBank
+  author    'Author(s) of the entry'
+
+  stop_
+
+save_
+
+save__Release_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    'author update'       'The entry has been updated by the author.'
+    'BMRB update'         'The entry has been updated by BMRB.'
+    'original completed'           
+;
+The current entry represents the original entry fully processed at BMRB and
+released to the public.
+;
+
+    'original preliminary'
+;
+The current entry is a preliminary version in which the quantitative data have
+not yet been converted to the NMR-STAR format and checked for consistency.
+;
+    reformat 
+;
+The entry has been reformatted to meet the most recent BMRB entry format
+specifications.
+;
+
+     stop_
+
+save_
+
+save__Residue_secondary_structure_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   ?     ?
+# take from mmCIF definitions
+
+    stop_
+
+save_
+
+_save__Sample_type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    bicelle                           .
+    emulsion                          .
+    'filamentous virus'               .
+    gel                               .
+    liposome                          .
+    membrane                          .
+    micelle                           .
+    'reverse micelle'                 .
+    solution                          .
+    solid                             .
+
+    stop_
+
+save_
+
+
+save__Saveframe_category
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   entry_information                    .
+   contact_person                       .
+   entry_citation                       .
+   molecular_system                     .
+   monomeric_polymer                    .
+   polymer_residue                      .
+   ligand                               .
+   bond_definitions                     .
+   functional_molecular_system          .
+   natural_source                       .
+   experimental_source                  .
+   sample                               .
+   sample_mol_purity                    .
+   software                             .
+   NMR_spectrometer                     .
+   NMR_spectrometer_experiments         .
+   NMR_applied_experiment_details       .
+   sample_conditions                    .
+   chemical_shift_reference             .
+   assigned_chemical_shifts             .
+   coupling_constants                   .
+   citation                             .
+   sequence_alignments                  .
+   S2_parameters                        .
+   spectral_density_values              .
+   H_exchange_rate                      .
+   H_exchange_protection_factors        .
+   pKa_value_data_set                   .
+   pH_NMR_parameter_list                .
+   D/H_fractionation_factors            .
+   secondary_structure                  .
+   deduced_hydrogen_bonds               .
+   representative_structure             .
+   structure_coordinate_set             .
+
+    stop_
+
+save_
+
+save__Saveframe_category_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   assigned_chemical_shifts             .
+   coupling_constants                   .
+   S2_parameters                        .
+   spectral_density_values              .
+   H_exchange_rate                      .
+   H_exchange_protection_factors        .
+   pKa_value_data_set                   .
+   pH_NMR_parameter_list                .
+   D/H_fractionation_factors            .
+   secondary_structure                  .
+   deduced_hydrogen_bonds               .
+   representative_structure             .
+   structure_coordinate_set             .
+
+    stop_
+
+save_
+
+save__Secretion
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+       saliva            .
+       venom             .
+
+# gather more from entries
+
+    stop_
+
+save_
+
+save__Segment_definition_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   ?          ?
+
+    stop_
+
+save_
+
+
+save__Sequence_homology_type
+
+
+# tag is not intended to be used in the future
+
+save_
+
+
+save__Superkingdom
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  Eucaryota              'NCBI names for superkingdoms'
+  Eubacteria             .
+  Archaea                .
+  Virus                  .
+  Viroids                .
+  Other                  'specific value used by NCBI'
+
+
+   stop_
+
+save_
+
+save__System_oligomer_state
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    monomer            .
+    dimer              .
+    trimer             .
+    tetramer           .
+    pentamer           .
+    hexamer            .
+
+   stop_
+
+save_
+
+save__System_paramagnetic
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  yes     .
+  no      .
+
+   stop_
+
+save_
+
+
+save__System_physical_state
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  native               .
+  denatured            .
+  'molten globule'     .
+  unfolded             .
+ 
+  stop_
+
+save_
+
+save__System_thiol_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'fully oxidized'                             .
+     'fully reduced'                              .
+     'not present'                              'Thiols are not present in the
+system.'
+     'not reported'                                'The author did not report
+the oxidation state of the thiols.'
+     'reduced and oxidized present'               .
+     unkown     'The author reported that the oxidation state of the thiols is
+unknown.'
+
+    stop_
+
+save_
+
+save__System_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     protein                                 .
+     'protein-inhibitor complex'             .
+     'protein-drug complex'                  .
+     'protein-ligand system'                 .
+     'protein-protein complex'               .
+     'protein-DNA complex'                   .
+     'protein-DNA-ligand complex'            .
+     'protein-DNA-inhibitor complex'         .
+     'protein-RNA complex'                   .
+     'protein-RNA-ligand complex'            .
+     'protein-RNA-inhibitor complex'         .
+     'single stranded DNA'                   .
+     'double stranded DNA'                   .
+     'DNA-drug complex'                      .
+     'DNA-RNA complex'                       .
+     'DNA-RNA hybrid'                        .
+     'double stranded RNA'                 .
+     'single stranded RNA'                   .
+     'RNA-drug complex'                      .
+
+    stop_
+
+save_
+
+save__Tissue
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?          ?
+# gather from current entries 
+
+ 
+    stop_
+
+save_
+
+save__Variable_type
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  pH                    .
+  pH*                   .
+  pD                    .
+  temperature           .
+  pressure              .
+  'ionic strength'      .
+  viscosity             .
+  'dielectric constant' .
+
+ 
+  stop_
+
+save_
+
+
+
