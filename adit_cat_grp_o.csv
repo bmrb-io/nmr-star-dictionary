@@ -1,0 +1,77 @@
+category_super_group_ID,category_super_group,category_group_ID,saveframe_category,mandatory_number,ADIT replicable,allowed_user_defined_framecode,validateFlgs,viewFlags,category_group_view_name,group_view_help
+,-------------------------------,----------------,--------------,---------,-----------,---------,public,public,-----------,------------
+TBL_BEGIN,,,,,,,validate,viewFlags,,?
+-1,entry_summary,-10,entry_interview,1,N,N,IMMIOO,NHHHHH,Entry interview,The entry interview is used to establish the overall information content of the entry
+1,entry_information,8,deposited_data_files,1,N,N,IMMIMO,NHHHHH,Deposit data files,Select a data file from your local directory system and define the type of data in the file if appropriate.
+1,entry_information,10,study_list,,N,Y,OOOOOO,NHHHHH,Studies,A study is made up of one or more entries.  The depositor may define a name and type of study conducted and provide the entry(s) that compose the study.  If a study is not defined by the depositor it will be assumed that the entry is the only member of a study and information provided for the entry will be used to poplulate corresponding tags in the study section to produce the final entry.
+1,entry_information,20,entry_information,1,N,N,MMMMMO,NHHHHH,Entry information,Provide information that describes the entry.
+2,citations,40,citations,1,Y,Y,MMMMMO,NHHHHH,Citations,The information in a reference for the current entry if available is entered here.  Additional citations referenced in other portions of the entry also can be entered. Select the publication type click on Save then complete the resulting section.
+3,assembly_supercategory,50,assembly,1,N,Y,MMMMMO,NHHHHH,Molecular assembly,Provide a description of the molecular assembly studied including a complete list of the molecules that make up the assembly.
+3,assembly_supercategory,60,assembly_annotation,,N,Y,OOOOOO,HHHHHH,Molecular assembly annotation,Authors may use this section to provide unique annotation for the molecular assembly studied.
+3,assembly_supercategory,70,assembly_subsystems,,Y,Y,OOOOOO,HHHHHH,Molecular assembly subsystem descriptions,Subsystems of the complete molecular assembly may be defined using this section.
+3,assembly_supercategory,80,entity,1,Y,Y,MMMMMO,NHHHHH,Molecular entity description,Enter a complete description for each unique molecule (entity) in the system studied.
+3,assembly_supercategory,100,natural_source,1,N,N,MMMMMO,NHHHHH,Natural source,Provide the natural source for all biopolymers studied.
+3,assembly_supercategory,110,experimental_source,1,N,N,MMMMMO,NHHHHH,Experimental source,Enter the source used to produce the biopolymers studied in this entry.
+3,assembly_supercategory,120,chem_comp,,Y,Y,OOOOOO,HHHHHH,Chemical components,The descriptions of all ligands and non-standard monomers found in the biopolymers studied are entered in these sections.
+4,experimental_details,130,sample,,Y,Y,MMMMMO,NHHHHH,Sample,Enter the complete contents for each sample used in the study.  This includes buffers salts and additives such as DTT etc.
+4,experimental_details,140,sample_conditions,,Y,Y,MMMMMO,NHHHHH,Sample conditions,Provide each set of conditions used to collect the data listed in the entry.
+4,experimental_details,150,molecule_purity,,Y,N,OOOMMO,HHHHHH,Sample content purity,Enter the measured purity of each unique biopolymer in the samples and define the method used to measure purity.
+5,NMR_parameters,160,chem_shift_reference,,Y,Y,OOOOOO,HHHHHH,Chemical shift references,For entries containing assigned chemical shift data please define the chemical shift referencing used.
+5,NMR_parameters,170,assigned_chemical_shifts,,Y,Y,OOOOOO,HHHHHH,Assigned chemical shifts,Supply specific information about the assigned chemical shift data deposited with this entry.
+5,NMR_parameters,172,coupling_constants,,Y,Y,OOOOOO,HHHHHH,Coupling constants,Experimental details for the scalar coupling constants provided in the entry are entered here.
+5,NMR_parameters,174,spectral_peak_list,,Y,Y,OOOOOO,HHHHHH,Spectral peak lists,Lists of peaks from individual spectra with chemical shift coordinates
+5,NMR_parameters,180,chem_shift_spect_derivation,,Y,N,OOOOOO,HHHHHH,Spectral peaks used to derive assigned chemical shifts,help text
+5,NMR_parameters,190,chem_shift_isotope_effect,,Y,Y,OOOOOO,HHHHHH,Chemical shift isotope effects,help text
+5,NMR_parameters,200,chem_shift_interaction_diff,,Y,Y,OOOOOO,HHHHHH,Chemical shift interactions,help text
+5,NMR_parameters,210,chem_shift_anisotropy,,Y,Y,OOOOOO,HHHHHH,Chemical shift anisotropy,help text
+5,NMR_parameters,220,theoretical_chem_shifts,,Y,Y,OOOOOO,HHHHHH,Theoretical calculated chemical shifts,help text
+5,NMR_parameters,230,chem_shifts_calc_type,,Y,Y,OOOOOO,HHHHHH,Chemical shift calculation type,help text
+5,NMR_parameters,240,chem_shift_tensors,,Y,Y,OOOOOO,HHHHHH,Chemical shift tensors,help text
+5,NMR_parameters,270,RDCs,,Y,Y,OOOOOO,HHHHHH,Residual dipolar couplings,help text
+5,NMR_parameters,274,dipolar_couplings,,Y,Y,OOOOOO,HHHHHH,Dipolar couplings,help text
+5,NMR_parameters,280,spectral_density_values,,Y,Y,OOOOOO,HHHHHH,Spectral density values,help text
+5,NMR_parameters,320,new_data_types,,Y,Y,OOOOOO,HHHHHH,New types of Data,help text
+6,kinetics,330,H_exch_rates,,Y,Y,OOOOOO,HHHHHH,H-exchange rates,help text
+6,kinetics,340,H_exch_protection_factors,,Y,Y,OOOOOO,HHHHHH,H-exchange protection factors,help text
+6,kinetics,350,homonucl_NOEs,,Y,Y,OOOOOO,HHHHHH,Homonuclear NOEs,help text
+6,kinetics,360,heteronucl_NOEs,,Y,Y,OOOOOO,HHHHHH,Heteronuclear NOEs,help text
+6,kinetics,400,heteronucl_T1_relaxation,,Y,Y,OOOOOO,HHHHHH,Heteronuclear T1 relaxation values,help text
+6,kinetics,410,heteronucl_T1rho_relaxation,,Y,Y,OOOOOO,HHHHHH,Heteronuclear T1rho relaxation values,help text
+6,kinetics,420,heteronucl_T2_relaxation,,Y,Y,OOOOOO,HHHHHH,Heteronuclear T2 relaxation values,help text
+6,kinetics,430,dipole_dipole_relaxation,,Y,Y,OOOOOO,HHHHHH,Dipole-Dipole relaxation values,help text
+6,kinetics,440,cross_correlations,,Y,Y,OOOOOO,HHHHHH,Cross correlation relaxation values,help text
+7,thermodynamics,470,order_parameters,,Y,Y,OOOOOO,HHHHHH,Order parameters,help text
+7,thermodynamics,480,pH_titration,,Y,Y,OOOOOO,HHHHHH,pKa values,help text
+7,thermodynamics,490,pH_param_list,,Y,Y,OOOOOO,HHHHHH,pKa parameter data sets,help text
+7,thermodynamics,500,D_H_fractionation_factors,,Y,Y,OOOOOO,HHHHHH,D/H fractionation factors,help text
+8,structure,550,secondary_struct_features,,Y,Y,OOOOOO,HHHHHH,Secondary structure features,help text
+8,structure,560,deduced_hydrogen_bonds,,Y,Y,OOOOOO,HHHHHH,Deduced hydrogen bonds,help text
+8,structure,570,conformer_statistics,,Y,Y,OOOOOO,HHHHHH,Conformer statistical characteristics,help text
+8,structure,580,constraint_statistics,,Y,Y,OOOOOO,HHHHHH,Constraint statistics,help text
+8,structure,590,representative_conformer,,Y,Y,OOOOOO,HHHHHH,Representative conformer coordinate set,help text
+8,structure,600,conformer_family_coord_set,,Y,Y,OOOOOO,HHHHHH,Conformer family coordinate set,help text
+8,structure,620,force_constants,,Y,Y,OOOOOO,HHHHHH,Force constants,help text
+8,structure,630,angular_order_parameters,,Y,Y,OOOOOO,HHHHHH,Angular order parameters,help text
+8,structure,640,tertiary_struct_elements,,Y,Y,OOOOOO,HHHHHH,Tertiary structure elements,help text
+8,structure,650,secondary_structs,,Y,Y,OOOOOO,HHHHHH,Secondary structure features,help text
+8,structure,660,bond_annotation,,Y,Y,OOOOOO,HHHHHH,Bond annotations,List of bonds of special interest and their annotation
+8,structure,670,structure_interactions,,Y,Y,OOOOOO,HHHHHH,Structural interactions,List of hydrophobic salt bridge and other possible interactions of special note observed in the structures.
+8,structure,710,other_struct_features,,Y,Y,OOOOOO,HHHHHH,Other secondary structure features,help text
+8,structure,720,distance_constraints,,Y,Y,OOOOOO,HHHHHH,Distance constraints,help text
+8,structure,740,floating_chiral_stereo_assign,,Y,Y,OOOOOO,HHHHHH,Floating chirality stereoassignments,help text
+8,structure,760,torsion_angle_constraints,,Y,Y,OOOOOO,HHHHHH,Torsion angle constraints,help text
+8,structure,770,RDC_constraints,,Y,Y,OOOOOO,HHHHHH,Residual dipolar coupling constraints,help text
+8,structure,790,J_three_bond_constraints,,Y,Y,OOOOOO,HHHHHH,J three bond constraints,help text
+8,structure,800,CA_CB_chem_shift_constraints,,Y,Y,OOOOOO,HHHHHH,CA/CB chemical shift constraints,help text
+8,structure,810,H_chem_shift_constraints,,Y,Y,OOOOOO,HHHHHH,Proton chemical shift constraints,help text
+8,structure,820,other_constraints,,Y,Y,OOOOOO,HHHHHH,Other constraints,help text
+8,structure,830,violated_constraints,,Y,Y,OOOOOO,HHHHHH,Violated constraints,help text
+4,experimental_details,840,NMR_spectrometer_expt_list,,N,N,OOOMMO,NHHHHH,NMR spectrometer experiment list,A list of the NMR experiments carried our is provided in this section.  Specific details regarding the experiments can be provide in the section on NMR spectrometer experiemnts.
+4,experimental_details,850,NMR_spectrometer_expt,,Y,Y,OOOMMO,NHHHHH,NMR spectrometer experiment,Specific details regarding each NMR experiment are given here.
+4,experimental_details,860,NMR_spectral_processing,,Y,Y,OOOMMO,HHHHHH,NMR spectral processing protocols,Protocols used to process the raw NMR spectral data sets are described in this section.
+4,experimental_details,880,NMR_spectrometer,,Y,Y,OOOMMO,NHHHHH,NMR Spectrometers used,A brief description for each NMR spectrometer used is entered here.
+4,experimental_details,890,NMR_spectrometer_probe,,Y,Y,OOOMMO,HHHHHH,NMR probe descriptions,NMR spectrometer probes are listed and described in this section.
+4,experimental_details,900,software,,Y,Y,OOOMMO,NHHHHH,Software descriptions,A description of each software application used is provided in this section.
+4,experimental_details,910,method,,Y,Y,OOOOOO,HHHHHH,Methods,Details about general methods used to analyze data are given in this section.
+4,experimental_details,920,computer,,Y,Y,OOOOOO,HHHHHH,Computer hardware description,Computer hardware used in to process and analyze data is described in this section.
+TBL_END,,,,,,,,,,?
