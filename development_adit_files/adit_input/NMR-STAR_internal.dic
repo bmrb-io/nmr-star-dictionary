@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-04-25
+#  version date -  2008-05-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -56276,30 +56276,6 @@ Pointer to '_Peak.ID'
 
 save_
 
-save__Peak_char.Peak_contribution_ID
-
-   _item_description.description
-;
-Pointer to '_Peak_contribution.ID'
-;
-
-   _item.name                  '_Peak_char.Peak_contribution_ID'
-   _item.category_id              'Peak_char'
-   _item.mandatory_code            no
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Peak_char.Spectral_dim_ID
 
    _item_description.description
@@ -56804,7 +56780,7 @@ to a peak ID.
       _item.mandatory_code
 
   '_Peak_contribution.ID'                                'Peak_contribution'             yes
-  '_Peak_char.Peak_contribution_ID'                      'Peak_char'                     yes
+  '_Assigned_peak_chem_shift.Peak_contribution_ID'                          'Peak_char'                     yes
 
   stop_
 
@@ -56812,7 +56788,7 @@ to a peak ID.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Peak_char.Peak_contribution_ID'                      '_Peak_contribution.ID'
+  '_Assigned_peak_chem_shift.Peak_contribution_ID'                          '_Peak_contribution.ID'
 
   stop_
 
@@ -57007,6 +56983,110 @@ Pointer to '_Spectral_dim.ID'
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save_Assigned_peak_chem_shift
+   _category.description
+;
+Items in the assigned_peak_chem_shift category define the atom(s) assigned to individual peaks in the spectral peak list.
+;
+   _category.id                   'Assigned_peak_chem_shift'
+
+   loop_
+     _category_key.name
+
+     '_Assigned_peak_chem_shift.Peak_ID'
+     '_Assigned_peak_chem_shift.Spectral_dim_ID'
+     '_Assigned_peak_chem_shift.Entry_ID'
+     '_Assigned_peak_chem_shift.Spectral_peak_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'spectral_peak_list'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__Assigned_peak_chem_shift.Peak_contribution_ID
+
+   _item_description.description
+;
+Pointer to '_Peak_contribution.ID'
+;
+
+   _item.name                  '_Assigned_peak_chem_shift.Peak_contribution_ID'
+   _item.category_id              'Assigned_peak_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_Assigned_peak_chem_shift
+   _category.description
+;
+Items in the assigned_peak_chem_shift category define the atom(s) assigned to individual peaks in the spectral peak list.
+;
+   _category.id                   'Assigned_peak_chem_shift'
+
+   loop_
+     _category_key.name
+
+     '_Assigned_peak_chem_shift.Peak_ID'
+     '_Assigned_peak_chem_shift.Spectral_dim_ID'
+     '_Assigned_peak_chem_shift.Entry_ID'
+     '_Assigned_peak_chem_shift.Spectral_peak_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'spectral_peak_list'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
 ;
 
    stop_
@@ -57928,30 +58008,6 @@ Pointer to '_Spectral_dim.ID'
 
 save_
 
-save__Spectral_transition_char.Spectral_transition_contrib_ID
-
-   _item_description.description
-;
-Pointer to '_Spectral_transition_contrib.ID'
-;
-
-   _item.name                  '_Spectral_transition_char.Spectral_transition_contrib_ID'
-   _item.category_id              'Spectral_transition_char'
-   _item.mandatory_code            no
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Spectral_transition_char.Chem_shift_val
 
    _item_description.description
@@ -58370,7 +58426,7 @@ to a peak ID.
       _item.mandatory_code
 
   '_Spectral_transition_contrib.ID'                      'Spectral_transition_contrib'        yes
-  '_Spectral_transition_char.Spectral_transition_contrib_ID'                'Spectral_transition_char'      yes
+  '_Assigned_spectral_transition.Spectral_transition_contrib_ID'            'Spectral_transition_char'      yes
 
   stop_
 
@@ -58378,7 +58434,7 @@ to a peak ID.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Spectral_transition_char.Spectral_transition_contrib_ID'                '_Spectral_transition_contrib.ID'
+  '_Assigned_spectral_transition.Spectral_transition_contrib_ID'            '_Spectral_transition_contrib.ID'
 
   stop_
 
@@ -58573,6 +58629,110 @@ Pointer to '_Spectral_dim.ID'
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save_Assigned_spectral_transition
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Assigned_spectral_transition'
+
+   loop_
+     _category_key.name
+
+     '_Assigned_spectral_transition.Spectral_transition_ID'
+     '_Assigned_spectral_transition.Spectral_dim_ID'
+     '_Assigned_spectral_transition.Entry_ID'
+     '_Assigned_spectral_transition.Spectral_peak_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'spectral_peak_list'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__Assigned_spectral_transition.Spectral_transition_contrib_ID
+
+   _item_description.description
+;
+Pointer to '_Spectral_transition_contrib.ID'
+;
+
+   _item.name                  '_Assigned_spectral_transition.Spectral_transition_contrib_ID'
+   _item.category_id              'Assigned_spectral_transition'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_Assigned_spectral_transition
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Assigned_spectral_transition'
+
+   loop_
+     _category_key.name
+
+     '_Assigned_spectral_transition.Spectral_transition_ID'
+     '_Assigned_spectral_transition.Spectral_dim_ID'
+     '_Assigned_spectral_transition.Entry_ID'
+     '_Assigned_spectral_transition.Spectral_peak_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'spectral_peak_list'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
 ;
 
    stop_

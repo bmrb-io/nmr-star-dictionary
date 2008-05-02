@@ -2616,7 +2616,6 @@ save_<spectral_peak_list>
 
   loop_
      _Peak_char.Peak_ID                         
-     _Peak_char.Peak_contribution_ID            
      _Peak_char.Spectral_dim_ID                 
      _Peak_char.Chem_shift_val                  
      _Peak_char.Chem_shift_val_err              
@@ -2636,7 +2635,7 @@ save_<spectral_peak_list>
      _Peak_char.Entry_ID                        
      _Peak_char.Spectral_peak_list_ID           
 
-    2  2  2  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  "Short string value"  110.234  110.234  110.234    "Possible multiline text"  2  2  1  2    
+    2  2  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    "Short string value"  110.234  110.234  110.234  "Possible multiline text"    2  2  1  2  
 
   stop_
 
@@ -2654,6 +2653,7 @@ save_<spectral_peak_list>
   loop_
      _Assigned_peak_chem_shift.Peak_ID                              
      _Assigned_peak_chem_shift.Spectral_dim_ID                      
+     _Assigned_peak_chem_shift.Peak_contribution_ID                 
      _Assigned_peak_chem_shift.Set_ID                               
      _Assigned_peak_chem_shift.Magnetization_linkage_ID             
      _Assigned_peak_chem_shift.Assembly_atom_ID                     
@@ -2672,7 +2672,7 @@ save_<spectral_peak_list>
      _Assigned_peak_chem_shift.Entry_ID                             
      _Assigned_peak_chem_shift.Spectral_peak_list_ID                
 
-    2  2  2  2  2    110.234  110.234  2  2  2    2  2  1  1  2    "Possible multiline text"  2  1  2  
+    2  2  2  2  2    2  110.234  110.234  2  2    2  2  2  1  1    2  "Possible multiline text"  2  1  2    
 
   stop_
 
@@ -2702,26 +2702,25 @@ save_<spectral_peak_list>
   stop_
 
   loop_
-     _Spectral_transition_char.Spectral_transition_ID                  
-     _Spectral_transition_char.Spectral_dim_ID                         
-     _Spectral_transition_char.Spectral_transition_contrib_ID          
-     _Spectral_transition_char.Chem_shift_val                          
-     _Spectral_transition_char.Chem_shift_val_err                      
-     _Spectral_transition_char.Line_width_val                          
-     _Spectral_transition_char.Line_width_val_err                      
-     _Spectral_transition_char.Phase_val                               
-     _Spectral_transition_char.Phase_val_err                           
-     _Spectral_transition_char.Decay_rate_val                          
-     _Spectral_transition_char.Decay_rate_val_err                      
-     _Spectral_transition_char.Bounding_box_upper_val                  
-     _Spectral_transition_char.Bounding_box_lower_val                  
-     _Spectral_transition_char.Bounding_box_width_val                  
-     _Spectral_transition_char.Derivation_method_ID                    
-     _Spectral_transition_char.Sf_ID                                   
-     _Spectral_transition_char.Entry_ID                                
-     _Spectral_transition_char.Spectral_peak_list_ID                   
+     _Spectral_transition_char.Spectral_transition_ID          
+     _Spectral_transition_char.Spectral_dim_ID                 
+     _Spectral_transition_char.Chem_shift_val                  
+     _Spectral_transition_char.Chem_shift_val_err              
+     _Spectral_transition_char.Line_width_val                  
+     _Spectral_transition_char.Line_width_val_err              
+     _Spectral_transition_char.Phase_val                       
+     _Spectral_transition_char.Phase_val_err                   
+     _Spectral_transition_char.Decay_rate_val                  
+     _Spectral_transition_char.Decay_rate_val_err              
+     _Spectral_transition_char.Bounding_box_upper_val          
+     _Spectral_transition_char.Bounding_box_lower_val          
+     _Spectral_transition_char.Bounding_box_width_val          
+     _Spectral_transition_char.Derivation_method_ID            
+     _Spectral_transition_char.Sf_ID                           
+     _Spectral_transition_char.Entry_ID                        
+     _Spectral_transition_char.Spectral_peak_list_ID           
 
-    2  2  2  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  2    2  1  2  
+    2  2  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  2  2    1  2  
 
   stop_
 
@@ -2737,28 +2736,29 @@ save_<spectral_peak_list>
   stop_
 
   loop_
-     _Assigned_spectral_transition.Spectral_transition_ID               
-     _Assigned_spectral_transition.Spectral_dim_ID                      
-     _Assigned_spectral_transition.Peak_ID                              
-     _Assigned_spectral_transition.Set_ID                               
-     _Assigned_spectral_transition.Magnetization_linkage_ID             
-     _Assigned_spectral_transition.Assembly_atom_ID                     
-     _Assigned_spectral_transition.Val                                  
-     _Assigned_spectral_transition.Assigned_chem_shift_list_ID          
-     _Assigned_spectral_transition.Atom_chem_shift_ID                   
-     _Assigned_spectral_transition.Entity_assembly_ID                   
-     _Assigned_spectral_transition.Entity_ID                            
-     _Assigned_spectral_transition.Comp_index_ID                        
-     _Assigned_spectral_transition.Comp_ID                              
-     _Assigned_spectral_transition.Atom_ID                              
-     _Assigned_spectral_transition.Figure_of_merit                      
-     _Assigned_spectral_transition.Resonance_ID                         
-     _Assigned_spectral_transition.Details                              
-     _Assigned_spectral_transition.Sf_ID                                
-     _Assigned_spectral_transition.Entry_ID                             
-     _Assigned_spectral_transition.Spectral_peak_list_ID                
+     _Assigned_spectral_transition.Spectral_transition_ID                  
+     _Assigned_spectral_transition.Spectral_dim_ID                         
+     _Assigned_spectral_transition.Spectral_transition_contrib_ID          
+     _Assigned_spectral_transition.Peak_ID                                 
+     _Assigned_spectral_transition.Set_ID                                  
+     _Assigned_spectral_transition.Magnetization_linkage_ID                
+     _Assigned_spectral_transition.Assembly_atom_ID                        
+     _Assigned_spectral_transition.Val                                     
+     _Assigned_spectral_transition.Assigned_chem_shift_list_ID             
+     _Assigned_spectral_transition.Atom_chem_shift_ID                      
+     _Assigned_spectral_transition.Entity_assembly_ID                      
+     _Assigned_spectral_transition.Entity_ID                               
+     _Assigned_spectral_transition.Comp_index_ID                           
+     _Assigned_spectral_transition.Comp_ID                                 
+     _Assigned_spectral_transition.Atom_ID                                 
+     _Assigned_spectral_transition.Figure_of_merit                         
+     _Assigned_spectral_transition.Resonance_ID                            
+     _Assigned_spectral_transition.Details                                 
+     _Assigned_spectral_transition.Sf_ID                                   
+     _Assigned_spectral_transition.Entry_ID                                
+     _Assigned_spectral_transition.Spectral_peak_list_ID                   
 
-    2  2  2  2  2    2  110.234  2  2  2    2  2  1  1  110.234    2  "Possible multiline text"  2  1  2    
+    2  2  2  2  2    2  2  110.234  2  2    2  2  2  1  1    110.234  2  "Possible multiline text"  2  1    2  
 
   stop_
 
