@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-05-22
+#  version date -  2008-05-23
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.8.121
+    _dictionary.version         3.0.8.122
 
      loop_
        _dictionary_history.version
@@ -33,7 +33,7 @@ data_mmcif_nmr-star.dic
        ?
 ;
 
-     3.0.8.121         ?
+     3.0.8.122         ?
 ;
      ?
 ;
@@ -4508,7 +4508,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.8.121'
+   _item_default.value            '3.0.8.122'
    _item_type.code                'line'
 
    loop_
@@ -56780,7 +56780,7 @@ to a peak ID.
       _item.mandatory_code
 
   '_Peak_contribution.ID'                                'Peak_contribution'             yes
-  '_Assigned_peak_chem_shift.Peak_contribution_ID'                          'Peak_char'                     yes
+  '_Assigned_peak_chem_shift.Peak_contribution_ID'                          'Assigned_peak_chem_shift'      yes
 
   stop_
 
@@ -56989,46 +56989,6 @@ Pointer to '_Spectral_dim.ID'
 
 save_
 
-save_Assigned_peak_chem_shift
-   _category.description
-;
-Items in the assigned_peak_chem_shift category define the atom(s) assigned to individual peaks in the spectral peak list.
-;
-   _category.id                   'Assigned_peak_chem_shift'
-
-   loop_
-     _category_key.name
-
-     '_Assigned_peak_chem_shift.Peak_ID'
-     '_Assigned_peak_chem_shift.Spectral_dim_ID'
-     '_Assigned_peak_chem_shift.Entry_ID'
-     '_Assigned_peak_chem_shift.Spectral_peak_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__Assigned_peak_chem_shift.Peak_contribution_ID
 
    _item_description.description
@@ -57047,46 +57007,6 @@ Pointer to '_Peak_contribution.ID'
 
 ;
 ?
-;
-
-   stop_
-
-save_
-
-save_Assigned_peak_chem_shift
-   _category.description
-;
-Items in the assigned_peak_chem_shift category define the atom(s) assigned to individual peaks in the spectral peak list.
-;
-   _category.id                   'Assigned_peak_chem_shift'
-
-   loop_
-     _category_key.name
-
-     '_Assigned_peak_chem_shift.Peak_ID'
-     '_Assigned_peak_chem_shift.Spectral_dim_ID'
-     '_Assigned_peak_chem_shift.Entry_ID'
-     '_Assigned_peak_chem_shift.Spectral_peak_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_
@@ -58426,7 +58346,7 @@ to a peak ID.
       _item.mandatory_code
 
   '_Spectral_transition_contrib.ID'                      'Spectral_transition_contrib'        yes
-  '_Assigned_spectral_transition.Spectral_transition_contrib_ID'            'Spectral_transition_char'      yes
+  '_Assigned_spectral_transition.Spectral_transition_contrib_ID'            'Assigned_spectral_transition'       yes
 
   stop_
 
@@ -58635,46 +58555,6 @@ Pointer to '_Spectral_dim.ID'
 
 save_
 
-save_Assigned_spectral_transition
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'Assigned_spectral_transition'
-
-   loop_
-     _category_key.name
-
-     '_Assigned_spectral_transition.Spectral_transition_ID'
-     '_Assigned_spectral_transition.Spectral_dim_ID'
-     '_Assigned_spectral_transition.Entry_ID'
-     '_Assigned_spectral_transition.Spectral_peak_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__Assigned_spectral_transition.Spectral_transition_contrib_ID
 
    _item_description.description
@@ -58693,46 +58573,6 @@ Pointer to '_Spectral_transition_contrib.ID'
 
 ;
 ?
-;
-
-   stop_
-
-save_
-
-save_Assigned_spectral_transition
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'Assigned_spectral_transition'
-
-   loop_
-     _category_key.name
-
-     '_Assigned_spectral_transition.Spectral_transition_ID'
-     '_Assigned_spectral_transition.Spectral_dim_ID'
-     '_Assigned_spectral_transition.Entry_ID'
-     '_Assigned_spectral_transition.Spectral_peak_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_
@@ -59297,7 +59137,7 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Resonance_linker_list.Sf_ID'                         'Resonance_linker_list'         no
-  '_Resonance_atom_set.Sf_ID'                            '?'                             no
+  '_Resonance_atom_set.Sf_ID'                            'Resonance_atom_set'            no
 
   stop_
 
@@ -59339,7 +59179,7 @@ information from other saveframes of this category in an entry.
   '_Resonance.Resonance_linker_list_ID'                  'Resonance'                     yes
   '_Resonance_covalent_link.Resonance_linker_list_ID'                       'Resonance_covalent_link'       yes
   '_Resonance_assignment.Resonance_linker_list_ID'                          'Resonance_assignment'          yes
-  '_Resonance_atom_set.Resonance_linker_list_ID'         '?'                             yes
+  '_Resonance_atom_set.Resonance_linker_list_ID'         'Resonance_atom_set'            yes
   '_Spin_system.Resonance_linker_list_ID'                'Spin_system'                   yes
   '_Spin_system_link.Resonance_linker_list_ID'           'Spin_system_link'              yes
 
@@ -60332,45 +60172,6 @@ or any of its related tags.
 
 save_
 
-save_Resonance_atom_set
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'Resonance_atom_set'
-
-   loop_
-     _category_key.name
-
-     '_Resonance_atom_set.Entity_assembly_ID'
-     '_Resonance_atom_set.Comp_index_ID'
-     '_Resonance_atom_set.Atom_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'resonance_linker'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__Resonance_atom_set.Sf_ID
 
    _item_description.description
@@ -60404,7 +60205,7 @@ Pointer to '_Entry.ID'
 
    _item.name                  '_Resonance_atom_set.Entry_ID'
    _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'code'
 
@@ -60428,7 +60229,7 @@ Pointer to '_Resonance_linker_list.ID'
 
    _item.name                  '_Resonance_atom_set.Resonance_linker_list_ID'
    _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
