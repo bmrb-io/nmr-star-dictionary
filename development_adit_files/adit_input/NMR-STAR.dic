@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-05-02
+#  version date -  2008-05-22
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -17634,7 +17634,7 @@ assembly components.
   '_subsystem_keyword.assembly_subsystem_id'             'subsystem_keyword'             yes
   '_subsystem_biological_function.assembly_subsystem_id'                    'subsystem_biological_function'      yes
   '_subsystem_db_link.assembly_subsystem_id'             'subsystem_db_link'             yes
-  '_subsystem_citation.assembly_subsystem_list_id'                          'subsystem_citation'            yes
+  '_subsystem_citation.assembly_subsystem_id'            'subsystem_citation'            yes
 
   stop_
 
@@ -17649,7 +17649,7 @@ assembly components.
   '_subsystem_keyword.assembly_subsystem_id'             '_assembly_subsystem.id'
   '_subsystem_biological_function.assembly_subsystem_id'                    '_assembly_subsystem.id'
   '_subsystem_db_link.assembly_subsystem_id'             '_assembly_subsystem.id'
-  '_subsystem_citation.assembly_subsystem_list_id'                          '_assembly_subsystem.id'
+  '_subsystem_citation.assembly_subsystem_id'            '_assembly_subsystem.id'
 
   stop_
 
@@ -18770,7 +18770,7 @@ Items in the subsystem_citation category define the pointers to citations provid
 
      '_subsystem_citation.citation_id'
      '_subsystem_citation.entry_id'
-     '_subsystem_citation.assembly_subsystem_list_id'
+     '_subsystem_citation.assembly_subsystem_id'
 
    stop_
 
@@ -18869,14 +18869,14 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__subsystem_citation.assembly_subsystem_list_id
+save__subsystem_citation.assembly_subsystem_id
 
    _item_description.description
 ;
 Pointer to '_Assembly_subsystem.ID'
 ;
 
-   _item.name                  '_subsystem_citation.assembly_subsystem_list_id'
+   _item.name                  '_subsystem_citation.assembly_subsystem_id'
    _item.category_id              'subsystem_citation'
    _item.mandatory_code            yes
 
@@ -52859,6 +52859,7 @@ information from other saveframes of this category in an entry.
   '_resonance.resonance_linker_list_id'                  'resonance'                     yes
   '_resonance_covalent_link.resonance_linker_list_id'                       'resonance_covalent_link'       yes
   '_resonance_assignment.resonance_linker_list_id'                          'resonance_assignment'          yes
+  '_resonance_atom_set.resonance_linker_list_id'         ''                              yes
   '_spin_system.resonance_linker_list_id'                'spin_system'                   yes
   '_spin_system_link.resonance_linker_list_id'           'spin_system_link'              yes
 
@@ -52871,6 +52872,7 @@ information from other saveframes of this category in an entry.
   '_resonance.resonance_linker_list_id'                  '_resonance_linker_list.id'
   '_resonance_covalent_link.resonance_linker_list_id'                       '_resonance_linker_list.id'
   '_resonance_assignment.resonance_linker_list_id'                          '_resonance_linker_list.id'
+  '_resonance_atom_set.resonance_linker_list_id'         '_resonance_linker_list.id'
   '_spin_system.resonance_linker_list_id'                '_resonance_linker_list.id'
   '_spin_system_link.resonance_linker_list_id'           '_resonance_linker_list.id'
 
@@ -53762,6 +53764,117 @@ or any of its related tags.
 ;
 
    _item.name                  '_resonance_atom_set.atom_isotope_number'
+   _item.category_id              'resonance_atom_set'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_resonance_atom_set
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'resonance_atom_set'
+
+   loop_
+     _category_key.name
+
+     '_resonance_atom_set.entity_assembly_id'
+     '_resonance_atom_set.comp_index_id'
+     '_resonance_atom_set.atom_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'resonance_linker'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__resonance_atom_set.sf_id
+
+   _item_description.description
+;
+Pointer to '_Resonance_linker_list.Sf_ID'
+;
+
+   _item.name                  '_resonance_atom_set.sf_id'
+   _item.category_id              'resonance_atom_set'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__resonance_atom_set.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_resonance_atom_set.entry_id'
+   _item.category_id              'resonance_atom_set'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__resonance_atom_set.resonance_linker_list_id
+
+   _item_description.description
+;
+Pointer to '_Resonance_linker_list.ID'
+;
+
+   _item.name                  '_resonance_atom_set.resonance_linker_list_id'
    _item.category_id              'resonance_atom_set'
    _item.mandatory_code            no
 
