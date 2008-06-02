@@ -5767,8 +5767,10 @@ Preferred unit is M (mol/l)
 
   viscosity
 ;
-Preferred unit is kg.m^-1.s^-1.
+dynamic viscosity is Pa.s which equals (kg) x (m^-1) x (s^-1)
+1 poise (P) is (g) x (cm^-1) x (s^-1) 
 1 centipoise (cP) is 10^-3 kg.m^-1.s^-1
+kinematic viscosity is m^2/s or (m^2) x (s^-1)
 ;
 
   'dielectric constant' 
@@ -5835,6 +5837,26 @@ Molar, concentration unit for ionic strength
             mM
 ;
 milimolar, concentration unit for ionic strength
+;
+            P
+;
+Poise
+;
+           cP
+;
+Centipoise
+;
+           m^2/s
+;
+kinematic viscosity
+;
+           Pa.s
+;
+dynamic viscosity
+;
+           'Not defined'
+;
+Used for variables that do not have units like dielectric constant.
 ;
 
   stop_

@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-05-23
+#  version date -  2008-06-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.8.122
+    _dictionary.version         3.0.8.124
 
      loop_
        _dictionary_history.version
@@ -33,7 +33,7 @@ data_mmcif_nmr-star.dic
        ?
 ;
 
-     3.0.8.122         ?
+     3.0.8.124         ?
 ;
      ?
 ;
@@ -4508,7 +4508,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.8.122'
+   _item_default.value            '3.0.8.124'
    _item_type.code                'line'
 
    loop_
@@ -13043,7 +13043,10 @@ save__Entity_deleted_atom.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                  '_Entity_deleted_atom.Auth_entity_assembly_ID'
@@ -13067,7 +13070,10 @@ save__Entity_deleted_atom.Auth_seq_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Seq_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
 ;
 
    _item.name                  '_Entity_deleted_atom.Auth_seq_ID'
@@ -13091,7 +13097,8 @@ save__Entity_deleted_atom.Auth_comp_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Comp_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
 ;
 
    _item.name                  '_Entity_deleted_atom.Auth_comp_ID'
@@ -13115,7 +13122,8 @@ save__Entity_deleted_atom.Auth_atom_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Atom_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
 ;
 
    _item.name                  '_Entity_deleted_atom.Auth_atom_ID'
@@ -14958,6 +14966,31 @@ Items in the chem_comp_assembly category provide chemical component level nomenc
 
 save_
 
+save__Chem_comp_assembly.Assembly_chem_comp_ID
+
+   _item_description.description
+;
+A sequence number from a sequence numbering scheme employed because of 
+a requirement of a software applications.
+;
+
+   _item.name                  '_Chem_comp_assembly.Assembly_chem_comp_ID'
+   _item.category_id              'Chem_comp_assembly'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Chem_comp_assembly.Entity_assembly_ID
 
    _item_description.description
@@ -15038,31 +15071,6 @@ Pointer to '_Chem_comp.ID'
 ;
 
    _item.name                  '_Chem_comp_assembly.Comp_ID'
-   _item.category_id              'Chem_comp_assembly'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Chem_comp_assembly.Assembly_chem_comp_ID
-
-   _item_description.description
-;
-A sequence number from a sequence numbering scheme employed because of 
-a requirement of a software applications.
-;
-
-   _item.name                  '_Chem_comp_assembly.Assembly_chem_comp_ID'
    _item.category_id              'Chem_comp_assembly'
    _item.mandatory_code            no
 
@@ -15364,7 +15372,7 @@ save__PDBX_poly_seq_scheme.Seq_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity_poly_seq.Num'
 ;
 
    _item.name                  '_PDBX_poly_seq_scheme.Seq_ID'
@@ -25953,7 +25961,7 @@ save__Entity_chimera_segment.ID
 
    _item_description.description
 ;
-The value of _Entity_fragment.id must uniquely identify a record in the 
+The value of '_Entity_fragment.id' must uniquely identify a record in the 
 Entity_fragment list.
 ;
 
@@ -26439,7 +26447,8 @@ save__Entity_atom_list.ID
 
    _item_description.description
 ;
-?
+The value of '_Entity_atom_list.ID' must uniquely identify an atom in the 
+entity.
 ;
 
   loop_
@@ -26477,7 +26486,7 @@ save__Entity_atom_list.Comp_index_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity_comp_index.ID'
 ;
 
    _item.name                  '_Entity_atom_list.Comp_index_ID'
@@ -26501,7 +26510,7 @@ save__Entity_atom_list.Comp_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Chem_comp.ID'
 ;
 
    _item.name                  '_Entity_atom_list.Comp_ID'
@@ -26525,14 +26534,14 @@ save__Entity_atom_list.Atom_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Chem_comp_atom.Atom_ID'
 ;
 
    _item.name                  '_Entity_atom_list.Atom_ID'
    _item.category_id              'Entity_atom_list'
    _item.mandatory_code            no
 
-   _item_type.code                'code'
+   _item_type.code                'atcode'
 
    loop_
      _item_examples.case
@@ -26549,7 +26558,7 @@ save__Entity_atom_list.Sf_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity.Sf_ID'
 ;
 
    _item.name                  '_Entity_atom_list.Sf_ID'
@@ -26573,7 +26582,7 @@ save__Entity_atom_list.Entry_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entry.ID'
 ;
 
    _item.name                  '_Entity_atom_list.Entry_ID'
@@ -26597,7 +26606,7 @@ save__Entity_atom_list.Entity_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity.ID'
 ;
 
    _item.name                  '_Entity_atom_list.Entity_ID'
@@ -26662,7 +26671,7 @@ save__Entity_chem_comp_deleted_atom.Comp_index_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity_comp_index.ID'
 ;
 
    _item.name                  '_Entity_chem_comp_deleted_atom.Comp_index_ID'
@@ -26686,7 +26695,7 @@ save__Entity_chem_comp_deleted_atom.Comp_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Chem_comp.ID'
 ;
 
    _item.name                  '_Entity_chem_comp_deleted_atom.Comp_ID'
@@ -26710,14 +26719,14 @@ save__Entity_chem_comp_deleted_atom.Atom_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Chem_comp_atom.Atom_ID'
 ;
 
    _item.name                  '_Entity_chem_comp_deleted_atom.Atom_ID'
    _item.category_id              'Entity_chem_comp_deleted_atom'
    _item.mandatory_code            yes
 
-   _item_type.code                'code'
+   _item_type.code                'atcode'
 
    loop_
      _item_examples.case
@@ -26734,7 +26743,7 @@ save__Entity_chem_comp_deleted_atom.Sf_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity.Sf_ID'
 ;
 
    _item.name                  '_Entity_chem_comp_deleted_atom.Sf_ID'
@@ -26758,7 +26767,7 @@ save__Entity_chem_comp_deleted_atom.Entry_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entry.ID'
 ;
 
    _item.name                  '_Entity_chem_comp_deleted_atom.Entry_ID'
@@ -26782,7 +26791,7 @@ save__Entity_chem_comp_deleted_atom.Entity_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity.ID'
 ;
 
    _item.name                  '_Entity_chem_comp_deleted_atom.Entity_ID'
@@ -37516,7 +37525,10 @@ save__Sample_component_atom_isotope.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                  '_Sample_component_atom_isotope.Auth_entity_assembly_ID'
@@ -37540,7 +37552,10 @@ save__Sample_component_atom_isotope.Auth_entity_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not need to 
+correspond to the value for Entity_ID.
 ;
 
    _item.name                  '_Sample_component_atom_isotope.Auth_entity_ID'
@@ -37564,7 +37579,10 @@ save__Sample_component_atom_isotope.Auth_seq_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Seq_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
 ;
 
    _item.name                  '_Sample_component_atom_isotope.Auth_seq_ID'
@@ -37588,7 +37606,8 @@ save__Sample_component_atom_isotope.Auth_comp_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Comp_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
 ;
 
    _item.name                  '_Sample_component_atom_isotope.Auth_comp_ID'
@@ -37612,7 +37631,8 @@ save__Sample_component_atom_isotope.Auth_atom_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Atom_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
 ;
 
    _item.name                  '_Sample_component_atom_isotope.Auth_atom_ID'
@@ -54936,6 +54956,7 @@ Spectral peak list ID
   '_Spectral_transition_char.Spectral_peak_list_ID'                         'Spectral_transition_char'      yes
   '_Spectral_transition_contrib.Spectral_peak_list_ID'                      'Spectral_transition_contrib'        yes
   '_Assigned_spectral_transition.Spectral_peak_list_ID'                     'Assigned_spectral_transition'       yes
+  '_Dist_constraint_value.Spectral_peak_list_ID'         'Dist_constraint_value'         yes
 
   stop_
 
@@ -54955,6 +54976,7 @@ Spectral peak list ID
   '_Spectral_transition_char.Spectral_peak_list_ID'                         '_Spectral_peak_list.ID'
   '_Spectral_transition_contrib.Spectral_peak_list_ID'                      '_Spectral_peak_list.ID'
   '_Assigned_spectral_transition.Spectral_peak_list_ID'                     '_Spectral_peak_list.ID'
+  '_Dist_constraint_value.Spectral_peak_list_ID'         '_Spectral_peak_list.ID'
 
   stop_
 
@@ -58607,7 +58629,7 @@ save__Assigned_spectral_transition.Set_ID
 
    _item_description.description
 ;
-?
+Set ID
 ;
 
    _item.name                  '_Assigned_spectral_transition.Set_ID'
@@ -58631,7 +58653,7 @@ save__Assigned_spectral_transition.Magnetization_linkage_ID
 
    _item_description.description
 ;
-?
+Magnetization linkage ID
 ;
 
    _item.name                  '_Assigned_spectral_transition.Magnetization_linkage_ID'
@@ -58655,7 +58677,7 @@ save__Assigned_spectral_transition.Assembly_atom_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Atom.Assembly_atom_ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Assembly_atom_ID'
@@ -58679,7 +58701,7 @@ save__Assigned_spectral_transition.Val
 
    _item_description.description
 ;
-?
+The quantitative chemical shift value assigned to the transition.
 ;
 
    _item.name                  '_Assigned_spectral_transition.Val'
@@ -58703,7 +58725,7 @@ save__Assigned_spectral_transition.Assigned_chem_shift_list_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Assigned_chem_shift_list.ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Assigned_chem_shift_list_ID'
@@ -58727,7 +58749,7 @@ save__Assigned_spectral_transition.Atom_chem_shift_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Atom_chem_shift.ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Atom_chem_shift_ID'
@@ -58751,7 +58773,7 @@ save__Assigned_spectral_transition.Entity_assembly_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Entity_assembly_ID'
@@ -58775,7 +58797,7 @@ save__Assigned_spectral_transition.Entity_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity.ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Entity_ID'
@@ -58799,7 +58821,7 @@ save__Assigned_spectral_transition.Comp_index_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Entity_comp_index.ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Comp_index_ID'
@@ -58823,7 +58845,7 @@ save__Assigned_spectral_transition.Comp_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Chem_comp.ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Comp_ID'
@@ -58847,14 +58869,14 @@ save__Assigned_spectral_transition.Atom_ID
 
    _item_description.description
 ;
-?
+Pointer to '_Chem_comp_atom.Atom_ID'
 ;
 
    _item.name                  '_Assigned_spectral_transition.Atom_ID'
    _item.category_id              'Assigned_spectral_transition'
    _item.mandatory_code            no
 
-   _item_type.code                'code'
+   _item_type.code                'atcode'
 
    loop_
      _item_examples.case
@@ -66654,7 +66676,7 @@ Unique identifier for the list of chemical shift tensors.
 
   '_Shielding_tensor_list.ID'                            'Shielding_tensor_list'         yes
   '_Shielding_tensor.Shielding_tensor_list_ID'           'Shielding_tensor'              yes
-  '_Theoretical_chem_shift_list.Chem_shielding_tensor_list_ID'              'Theoretical_chem_shift_list'        yes
+  '_Theoretical_chem_shift_list.Shielding_tensor_list_ID'                   'Theoretical_chem_shift_list'        yes
 
   stop_
 
@@ -66663,7 +66685,7 @@ Unique identifier for the list of chemical shift tensors.
       _item_linked.parent_name
 
   '_Shielding_tensor.Shielding_tensor_list_ID'           '_Shielding_tensor_list.ID'
-  '_Theoretical_chem_shift_list.Chem_shielding_tensor_list_ID'              '_Shielding_tensor_list.ID'
+  '_Theoretical_chem_shift_list.Shielding_tensor_list_ID'                   '_Shielding_tensor_list.ID'
 
   stop_
 
@@ -68013,14 +68035,14 @@ to calculate the theoretical chemical shifts are located.
 
 save_
 
-save__Theoretical_chem_shift_list.Chem_shielding_tensor_list_ID
+save__Theoretical_chem_shift_list.Shielding_tensor_list_ID
 
    _item_description.description
 ;
 Pointer to '_Shielding_tensor_list.ID'
 ;
 
-   _item.name                  '_Theoretical_chem_shift_list.Chem_shielding_tensor_list_ID'
+   _item.name                  '_Theoretical_chem_shift_list.Shielding_tensor_list_ID'
    _item.category_id              'Theoretical_chem_shift_list'
    _item.mandatory_code            yes
 
@@ -68037,7 +68059,7 @@ Pointer to '_Shielding_tensor_list.ID'
 
 save_
 
-save__Theoretical_chem_shift_list.Chem_shielding_tensor_list_label
+save__Theoretical_chem_shift_list.Shielding_tensor_list_label
 
    _item_description.description
 ;
@@ -68045,7 +68067,7 @@ Pointer to a saveframe of category 'Chem_shift_tensors.'  This is the label
 assigned by the depositor to the set of chemical sift tensors.
 ;
 
-   _item.name                  '_Theoretical_chem_shift_list.Chem_shielding_tensor_list_label'
+   _item.name                  '_Theoretical_chem_shift_list.Shielding_tensor_list_label'
    _item.category_id              'Theoretical_chem_shift_list'
    _item.mandatory_code            no
 
@@ -83558,7 +83580,8 @@ save__Heteronucl_T1rho_list.Temp_calibration_method
 
    _item_description.description
 ;
-?
+Method used to calibrate the temperature unit on the NMR spectrometer used 
+to collect the experimental data.
 ;
 
    _item.name                  '_Heteronucl_T1rho_list.Temp_calibration_method'
@@ -83589,7 +83612,8 @@ save__Heteronucl_T1rho_list.Temp_control_method
 
    _item_description.description
 ;
-?
+Method used to control the temperature of the sample to eliminate heating 
+caused by the long spin-lock pulse.
 ;
 
    _item.name                  '_Heteronucl_T1rho_list.Temp_control_method'
@@ -85101,7 +85125,8 @@ save__Heteronucl_T2_list.Temp_calibration_method
 
    _item_description.description
 ;
-?
+Method used to calibrate the temperature unit on the NMR spectrometer used 
+to collect the experimental data.
 ;
 
    _item.name                  '_Heteronucl_T2_list.Temp_calibration_method'
@@ -85132,7 +85157,8 @@ save__Heteronucl_T2_list.Temp_control_method
 
    _item_description.description
 ;
-?
+Method used to control the temperature of the sample to eliminate heating 
+caused by the long spin-lock pulse.
 ;
 
    _item.name                  '_Heteronucl_T2_list.Temp_control_method'
@@ -110440,7 +110466,10 @@ save__Rep_conf.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for entity_assembly_ID.
 ;
 
    _item.name                  '_Rep_conf.Auth_entity_assembly_ID'
@@ -117122,7 +117151,9 @@ save__Angular_order_param.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Angular_order_param.Auth_entity_assembly_ID'
@@ -118027,7 +118058,9 @@ save__Tertiary_struct.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Tertiary_struct.Auth_entity_assembly_ID'
@@ -119908,7 +119941,9 @@ save__Bond_annotation.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Bond_annotation.Auth_entity_assembly_ID_1'
@@ -120009,7 +120044,9 @@ save__Bond_annotation.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Bond_annotation.Auth_entity_assembly_ID_2'
@@ -121117,7 +121154,9 @@ save__Structure_interaction.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Structure_interaction.Auth_entity_assembly_ID_1'
@@ -121218,7 +121257,9 @@ save__Structure_interaction.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Structure_interaction.Auth_entity_assembly_ID_2'
@@ -123923,7 +123964,9 @@ save__Dist_constraint.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Dist_constraint.Auth_entity_assembly_ID'
@@ -124213,6 +124256,30 @@ Pointer to '_Peak.ID'
 ;
 
    _item.name                  '_Dist_constraint_value.Spectral_peak_ID'
+   _item.category_id              'Dist_constraint_value'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Dist_constraint_value.Spectral_peak_list_ID
+
+   _item_description.description
+;
+Pointer to '_Spectral_peak_list.ID'
+;
+
+   _item.name                  '_Dist_constraint_value.Spectral_peak_list_ID'
    _item.category_id              'Dist_constraint_value'
    _item.mandatory_code            no
 
@@ -126404,7 +126471,9 @@ save__Floating_chirality.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Floating_chirality.Auth_entity_assembly_ID_1'
@@ -126529,7 +126598,9 @@ save__Floating_chirality.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Floating_chirality.Auth_entity_assembly_ID_2'
@@ -128801,7 +128872,9 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_entity_assembly_ID_1'
@@ -128926,7 +128999,9 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_entity_assembly_ID_2'
@@ -129051,7 +129126,9 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_3
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_entity_assembly_ID_3'
@@ -129176,7 +129253,9 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_4
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_entity_assembly_ID_4'
@@ -132086,7 +132165,9 @@ save__RDC_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_RDC_constraint.Auth_entity_assembly_ID_1'
@@ -132211,7 +132292,9 @@ save__RDC_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_RDC_constraint.Auth_entity_assembly_ID_2'
@@ -135240,7 +135323,9 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_entity_assembly_ID_1'
@@ -135365,7 +135450,9 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_entity_assembly_ID_2'
@@ -135490,7 +135577,9 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_3
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_entity_assembly_ID_3'
@@ -135615,7 +135704,9 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_4
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_entity_assembly_ID_4'
@@ -137969,7 +138060,9 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_entity_assembly_ID_1'
@@ -138094,7 +138187,9 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_entity_assembly_ID_2'
@@ -138219,7 +138314,9 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_3
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_entity_assembly_ID_3'
@@ -138344,7 +138441,9 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_4
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_entity_assembly_ID_4'
@@ -138469,7 +138568,9 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_5
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_entity_assembly_ID_5'
@@ -139937,7 +140038,9 @@ save__H_chem_shift_constraint.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-?
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
 ;
 
    _item.name                  '_H_chem_shift_constraint.Auth_entity_assembly_ID'

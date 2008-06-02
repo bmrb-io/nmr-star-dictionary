@@ -620,17 +620,17 @@ save_<assembly>
   stop_
 
   loop_
+     _Chem_comp_assembly.Assembly_chem_comp_ID          
      _Chem_comp_assembly.Entity_assembly_ID             
      _Chem_comp_assembly.Entity_ID                      
      _Chem_comp_assembly.Comp_index_ID                  
      _Chem_comp_assembly.Comp_ID                        
-     _Chem_comp_assembly.Assembly_chem_comp_ID          
      _Chem_comp_assembly.Seq_ID                         
      _Chem_comp_assembly.Sf_ID                          
      _Chem_comp_assembly.Entry_ID                       
      _Chem_comp_assembly.Assembly_ID                    
 
-    2  2  2  1  1    2  2  1  2  
+    1  2  2  2  1    2  2  1  2  
 
   stop_
 
@@ -3204,8 +3204,8 @@ save_<theoretical_chem_shifts>
   _Theoretical_chem_shift_list.Chem_shifts_calc_type_label               "Long string value"
   _Theoretical_chem_shift_list.Model_atomic_coordinates_ID               2
   _Theoretical_chem_shift_list.Model_atomic_coordinates_label            "Long string value"
-  _Theoretical_chem_shift_list.Chem_shielding_tensor_list_ID             2
-  _Theoretical_chem_shift_list.Chem_shielding_tensor_list_label          "Long string value"
+  _Theoretical_chem_shift_list.Shielding_tensor_list_ID                  2
+  _Theoretical_chem_shift_list.Shielding_tensor_list_label               "Long string value"
   _Theoretical_chem_shift_list.Fermi_contact_spin_density_units          "String value"
   _Theoretical_chem_shift_list.Chem_shift_1H_err                         110.234
   _Theoretical_chem_shift_list.Chem_shift_2H_err                         110.234
@@ -5925,6 +5925,7 @@ save_<distance_constraints>
      _Dist_constraint_value.Tree_node_ID                         
      _Dist_constraint_value.Source_experiment_ID                 
      _Dist_constraint_value.Spectral_peak_ID                     
+     _Dist_constraint_value.Spectral_peak_list_ID                
      _Dist_constraint_value.Intensity_val                        
      _Dist_constraint_value.Intensity_lower_val_err              
      _Dist_constraint_value.Intensity_upper_val_err              
@@ -5935,7 +5936,7 @@ save_<distance_constraints>
      _Dist_constraint_value.Entry_ID                             
      _Dist_constraint_value.Distance_constraint_list_ID          
 
-    2  2  2  2  110.234    110.234  110.234  110.234  110.234  110.234    2  1  2  
+    2  2  2  2  2    110.234  110.234  110.234  110.234  110.234    110.234  2  1  2  
 
   stop_
 

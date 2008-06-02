@@ -584,11 +584,11 @@ save_<assembly>
   stop_
 
   loop_
+     _Chem_comp_assembly.Assembly_chem_comp_ID          
      _Chem_comp_assembly.Entity_assembly_ID             
      _Chem_comp_assembly.Entity_ID                      
      _Chem_comp_assembly.Comp_index_ID                  
      _Chem_comp_assembly.Comp_ID                        
-     _Chem_comp_assembly.Assembly_chem_comp_ID          
      _Chem_comp_assembly.Seq_ID                         
      _Chem_comp_assembly.Sf_ID                          
      _Chem_comp_assembly.Entry_ID                       
@@ -3116,8 +3116,8 @@ save_<theoretical_chem_shifts>
   _Theoretical_chem_shift_list.Chem_shifts_calc_type_label               @
   _Theoretical_chem_shift_list.Model_atomic_coordinates_ID               @
   _Theoretical_chem_shift_list.Model_atomic_coordinates_label            @
-  _Theoretical_chem_shift_list.Chem_shielding_tensor_list_ID             @
-  _Theoretical_chem_shift_list.Chem_shielding_tensor_list_label          @
+  _Theoretical_chem_shift_list.Shielding_tensor_list_ID                  @
+  _Theoretical_chem_shift_list.Shielding_tensor_list_label               @
   _Theoretical_chem_shift_list.Fermi_contact_spin_density_units          @
   _Theoretical_chem_shift_list.Chem_shift_1H_err                         @
   _Theoretical_chem_shift_list.Chem_shift_2H_err                         @
@@ -5801,6 +5801,7 @@ save_<distance_constraints>
      _Dist_constraint_value.Tree_node_ID                               
      _Dist_constraint_value.Source_experiment_ID                       
      _Dist_constraint_value.Spectral_peak_ID                           
+     _Dist_constraint_value.Spectral_peak_list_ID                      
      _Dist_constraint_value.Intensity_val                              
      _Dist_constraint_value.Intensity_lower_val_err                    
      _Dist_constraint_value.Intensity_upper_val_err                    
@@ -5842,7 +5843,7 @@ save_<distance_constraints>
      _Dist_constraint_conv_err.Entry_ID                                
      _Dist_constraint_conv_err.Distance_constraint_list_ID             
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   
 
   stop_
 
