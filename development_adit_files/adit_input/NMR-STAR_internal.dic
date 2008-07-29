@@ -1,9 +1,10 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-06-09
+#  version date -  2008-07-29
 
 
-# The majority of the following item type definitions and descriptions for units
+# The majority of the following item type definitions and descriptions for
+units
 # have been taken from the pdbx and mmCIF dictionaries.
 
 # The NMR-STAR dictionary has been constructed to be congruent with the pdbx
@@ -30,8 +31,14 @@ data_mmcif_nmr-star.dic
                     
       3.0.6.22          ?
 ;
-       ?
+     ?
 ;
+
+      3.0.8.127         ?
+;
+     ?
+;
+
 
      3.0.8.127         ?
 ;
@@ -532,10 +539,10 @@ Categories that capture values for other kinds of constraints not specifically d
 save_item_types
 
      loop_
-    _item_type_list.code
-    _item_type_list.primitive_code
-    _item_type_list.construct
-    _item_type_list.detail
+       _item_type_list.code
+       _item_type_list.primitive_code
+       _item_type_list.construct
+       _item_type_list.detail
 
                code      char
                '[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*'
@@ -681,8 +688,8 @@ save_item_types
 #####################
 
      loop_
-    _item_units_list.code
-    _item_units_list.detail
+       _item_units_list.code
+       _item_units_list.detail
 #
      'metres'                 'metres'
      'centimetres'            'centimetres (meters * 10^( -2))'
@@ -33649,6 +33656,8 @@ The chiral configuration of the atom that is a chiral center.
    R    'rectus - right handed configuration'
    S    'sinister - left handed configuration'
    N    'atom is not a chiral center'
+   E    '(E)- alkene (German$ entgegen = opposite)'
+   Z    '(Z)- alkene (German$ zusammen = together)'
 
    stop_
 
@@ -39948,36 +39957,36 @@ Commercial or academic supplier of the software product.
    '(NUTS) - Acorn NMR Inc.'    ?
    '(OPAL) - Luginbuhl$ Guntert$ Billeter and Wuthrich'    ?
    '(PECAN) - Eghbalnia$ Wang$ Bahrami$ Assadi$ and Markley'    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
+   '(PINE) - Bahrami$ Markley$ Assadi$ and Eghbalnia'    ?
+   '(PIPP) - Garrett'    ?
+   '(PISTACHIO) - Eghbalnia$ Bahrami$ Wang$ Assadi and Markley'    ?
+   '(Procheck) - Laskowski$ MacArthur$ Smith$ Jones$ Hutchinson$ Morris$ Moss and Thornton'    ?
+   '(ProcheckNMR) - Laskowski and MacArthur'    ?
+   '(P-ROI) - Kohda'    ?
+   '(PRONTO) - Kjur$ Andersen and Poulsen'    ?
+   '(PROSA) - Guntert'    ?
+   '(PSVS) - Bhattacharya and Montelione'    ?
+   '(QUEEN) - Nabuurs$ Spronk$ Krieger$ Maassen$ Vriend and Vuister'    ?
+   '(RESCUE) - Pons and Delsuc'    ?
+   '(SANE) - Duggan$ Legge$ Dyson & Wright'    ?
+   '(SPARKY) - Goddard'    ?
+   '(SPSCAN) - Glaser'    ?
+   '(STAPP) - Garrett'    ?
+   '(Surflex-Dock) - Tripos'    ?
+   '(SYBYL) - Tripos'    ?
+   '(TALOS) - Cornilescu$ Delaglio and Bax'    ?
+   '(TINKER) - Ponder'    ?
+   '(TOPSPIN) - Bruker Biospin'    ?
+   '(TRIAD) - Tripos'    ?
+   '(TRIPOS) - Tripos'    ?
+   '(UXNMR) - Bruker Biospin'    ?
+   '(VNMR) - Varian'    ?
+   '(WhatIF) - Vriend'    ?
+   '(Wattos) - Doreleijers'    ?
+   '(XEASY) - Bartels et al.'    ?
+   '(X-PLOR) - Brunger'    ?
+   '(X-PLOR NIH) - Schwieters$ Kuszewski$ Tjandra and Clore'    ?
+   '(xwinnmr) - Bruker Biospin'    ?
 
    stop_
 
