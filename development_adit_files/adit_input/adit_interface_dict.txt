@@ -19406,7 +19406,7 @@ What is the state of the thiol groups in the molecule
      _Example
 
 ;
-?
+all disulfide bound
 ;
 
    stop_
@@ -25393,7 +25393,7 @@ Please enter the PDB three-letter chemical component ID for the ligand or other 
 
    _Adit_item_view_name
 ;
-<p align='left'><FONT SIZE=3 COLOR='#000000'>Please check the PDB <a href='http://ligand-depot.rutgers.edu/' TARGET='_blank'>Ligand Depot</a> for a <BR>chemical component ID. Enter the three-letter ID <BR> in the field below and save the form. </p></td><td colspan='99'></tr><tr><td class='category_cell_nonmandatory_label'>PDB chemical component ID
+<p align='left'><FONT SIZE=3 COLOR='#000000'>Please check the PDB <a href='http://ligand-expo.rcsb.org/' TARGET='_blank'>Ligand Depot</a> for a <BR>chemical component ID. Enter the three-letter ID <BR> in the field below and save the form. </p></td><td colspan='99'></tr><tr><td class='category_cell_nonmandatory_label'>PDB chemical component ID
 ;
 
    loop_
@@ -83754,6 +83754,114 @@ Tau e val fit err
 
 save_
 
+save__Order_param.Tau_f_val
+
+   _Tag                  '_Order_param.Tau_f_val'
+
+   _Category              'Order_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Tau f val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Order_param.Tau_f_val_fit_err
+
+   _Tag                  '_Order_param.Tau_f_val_fit_err'
+
+   _Category              'Order_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Tau f val fit err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Order_param.Tau_s_val
+
+   _Tag                  '_Order_param.Tau_s_val'
+
+   _Category              'Order_param'
+
+   _Description
+;
+The value for the fitted effective correlation time value for the 'slow' motion in the molecule.
+;
+
+   _Adit_item_view_name
+;
+Tau s val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Order_param.Tau_s_val_fit_err
+
+   _Tag                  '_Order_param.Tau_s_val_fit_err'
+
+   _Category              'Order_param'
+
+   _Description
+;
+The estimated error in the fitted effective correlation time value for the the 'slow' motion in the molecule.
+;
+
+   _Adit_item_view_name
+;
+Tau s val fit err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Order_param.Rex_val
 
    _Tag                  '_Order_param.Rex_val'
@@ -83957,60 +84065,6 @@ The estimated error in the fitted order parameter for the 'slow' motion in the m
    _Adit_item_view_name
 ;
 Ss2 val fit err
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Order_param.Tau_s_val
-
-   _Tag                  '_Order_param.Tau_s_val'
-
-   _Category              'Order_param'
-
-   _Description
-;
-The value for the fitted effective correlation time value for the 'slow' motion in the molecule.
-;
-
-   _Adit_item_view_name
-;
-Tau s val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Order_param.Tau_s_val_fit_err
-
-   _Tag                  '_Order_param.Tau_s_val_fit_err'
-
-   _Category              'Order_param'
-
-   _Description
-;
-The estimated error in the fitted effective correlation time value for the the 'slow' motion in the molecule.
-;
-
-   _Adit_item_view_name
-;
-Tau s val fit err
 ;
 
    loop_

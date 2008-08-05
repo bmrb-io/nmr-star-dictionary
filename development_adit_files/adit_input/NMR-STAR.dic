@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-07-29
+#  version date -  2008-08-05
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.8.127
+    _dictionary.version         3.0.9.1
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.8.127         ?
+     3.0.9.1         ?
 ;
      ?
 ;
@@ -2369,7 +2369,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.8.127'
+   _item_default.value            '3.0.9.1'
    _item_type.code                'line'
 
    loop_
@@ -6508,7 +6508,7 @@ save__citation.journal_astm
 
    _item_description.description
 ;
-ASTM identification code for the journal
+ASTM identification code for the journal.
 ;
 
    _item.name                  '_citation.journal_astm'
@@ -6532,7 +6532,8 @@ save__citation.journal_issn
 
    _item_description.description
 ;
-ISSN identification code for the journal
+An International Standard Serial Number (ISSN) is a unique eight-digit 
+number used to identify a print or electronic periodical publication.
 ;
 
    _item.name                  '_citation.journal_issn'
@@ -6556,7 +6557,7 @@ save__citation.journal_csd
 
    _item_description.description
 ;
-CSD identification code for the journal
+CSD identification code for the journal.
 ;
 
    _item.name                  '_citation.journal_csd'
@@ -20003,7 +20004,7 @@ A keyword that describes the state of the thiol groups in the entity.
      _item_examples.case
 
 ;
-?
+all disulfide bound
 ;
 
    stop_
@@ -85711,6 +85712,104 @@ The estimated error in the fitted effective correlation time value.
 
 save_
 
+save__order_param.tau_f_val
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                  '_order_param.tau_f_val'
+   _item.category_id              'order_param'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__order_param.tau_f_val_fit_err
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                  '_order_param.tau_f_val_fit_err'
+   _item.category_id              'order_param'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__order_param.tau_s_val
+
+   _item_description.description
+;
+The value for the fitted effective correlation time value for the 'slow' 
+motion in the molecule.
+;
+
+   _item.name                  '_order_param.tau_s_val'
+   _item.category_id              'order_param'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__order_param.tau_s_val_fit_err
+
+   _item_description.description
+;
+The estimated error in the fitted effective correlation time value for 
+the the 'slow' motion in the molecule.
+;
+
+   _item.name                  '_order_param.tau_s_val_fit_err'
+   _item.category_id              'order_param'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__order_param.rex_val
 
    _item_description.description
@@ -85890,56 +85989,6 @@ in the molecule.
 ;
 
    _item.name                  '_order_param.ss2_val_fit_err'
-   _item.category_id              'order_param'
-   _item.mandatory_code            no
-
-   _item_type.code                'float'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__order_param.tau_s_val
-
-   _item_description.description
-;
-The value for the fitted effective correlation time value for the 'slow' 
-motion in the molecule.
-;
-
-   _item.name                  '_order_param.tau_s_val'
-   _item.category_id              'order_param'
-   _item.mandatory_code            no
-
-   _item_type.code                'float'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__order_param.tau_s_val_fit_err
-
-   _item_description.description
-;
-The estimated error in the fitted effective correlation time value for 
-the the 'slow' motion in the molecule.
-;
-
-   _item.name                  '_order_param.tau_s_val_fit_err'
    _item.category_id              'order_param'
    _item.mandatory_code            no
 
