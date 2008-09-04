@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-08-05
+#  version date -  2008-09-04
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.9.1
+    _dictionary.version         3.0.9.2
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.9.1         ?
+     3.0.9.2         ?
 ;
      ?
 ;
@@ -3899,6 +3899,7 @@ BMRB accession number for this entry
   '_Coupling_constant_list.Entry_ID'                     'Coupling_constant_list'        yes
   '_Spectral_peak_list.Entry_ID'                         'Spectral_peak_list'            yes
   '_Resonance_linker_list.Entry_ID'                      'Resonance_linker_list'         yes
+  '_Resonance_assignment.Entry_ID'                       'Resonance_assignment'          yes
   '_Chem_shift_isotope_effect_list.Entry_ID'             'Chem_shift_isotope_effect_list'     yes
   '_Mol_interaction_chem_shift_diff.Entry_ID'            'Mol_interaction_chem_shift_diff'    yes
   '_Chem_shift_anisotropy.Entry_ID'                      'Chem_shift_anisotropy'         yes
@@ -4128,6 +4129,7 @@ BMRB accession number for this entry
   '_Coupling_constant_list.Entry_ID'                     '_Entry.ID'
   '_Spectral_peak_list.Entry_ID'                         '_Entry.ID'
   '_Resonance_linker_list.Entry_ID'                      '_Entry.ID'
+  '_Resonance_assignment.Entry_ID'                       '_Entry.ID'
   '_Chem_shift_isotope_effect_list.Entry_ID'             '_Entry.ID'
   '_Mol_interaction_chem_shift_diff.Entry_ID'            '_Entry.ID'
   '_Chem_shift_anisotropy.Entry_ID'                      '_Entry.ID'
@@ -4518,7 +4520,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.9.1'
+   _item_default.value            '3.0.9.2'
    _item_type.code                'line'
 
    loop_
@@ -7962,8 +7964,13 @@ A type of quantitative data found in the entry.
      _item_enumeration.detail
 
    '1H chemical shifts'    ?
+   '2H chemical shifts'    ?
+   '3H chemical shifts'    ?
    '13C chemical shifts'    ?
    '15N chemical shifts'    ?
+   '31P chemical shifts'    ?
+   '111Cd chemical shifts'    ?
+   '113Cd chemical shifts'    ?
    'coupling constants'    ?
    'chemical shift isotope effects'    ?
    'molecule interaction chemical shift values'    ?
@@ -11381,7 +11388,7 @@ Unique identifier for each component in the entity assembly.
   '_Coupling_constant.Entity_assembly_ID_2'              'Coupling_constant'             yes
   '_Assigned_peak_chem_shift.Entity_assembly_ID'         'Assigned_peak_chem_shift'      yes
   '_Assigned_spectral_transition.Entity_assembly_ID'                        'Assigned_spectral_transition'       yes
-  '_Resonance_atom_set.Entity_assembly_ID'               'Resonance_atom_set'            yes
+  '_Resonance_assignment.Entity_assembly_ID'             'Resonance_assignment'          yes
   '_Spin_system.Entity_assembly_ID'                      'Spin_system'                   yes
   '_Isotope_effect.Entity_assembly_ID'                   'Isotope_effect'                yes
   '_Isotope_label_pattern.Entity_assembly_ID'            'Isotope_label_pattern'         yes
@@ -11486,7 +11493,7 @@ Unique identifier for each component in the entity assembly.
   '_Coupling_constant.Entity_assembly_ID_2'              '_Entity_assembly.ID'
   '_Assigned_peak_chem_shift.Entity_assembly_ID'         '_Entity_assembly.ID'
   '_Assigned_spectral_transition.Entity_assembly_ID'                        '_Entity_assembly.ID'
-  '_Resonance_atom_set.Entity_assembly_ID'               '_Entity_assembly.ID'
+  '_Resonance_assignment.Entity_assembly_ID'             '_Entity_assembly.ID'
   '_Spin_system.Entity_assembly_ID'                      '_Entity_assembly.ID'
   '_Isotope_effect.Entity_assembly_ID'                   '_Entity_assembly.ID'
   '_Isotope_label_pattern.Entity_assembly_ID'            '_Entity_assembly.ID'
@@ -16520,7 +16527,7 @@ assembly.
   '_Coupling_constant.Assembly_atom_ID_2'                'Coupling_constant'             yes
   '_Assigned_peak_chem_shift.Assembly_atom_ID'           'Assigned_peak_chem_shift'      yes
   '_Assigned_spectral_transition.Assembly_atom_ID'                          'Assigned_spectral_transition'       yes
-  '_Resonance_atom_set.Assembly_atom_ID'                 'Resonance_atom_set'            yes
+  '_Resonance_assignment.Assembly_atom_ID'               'Resonance_assignment'          yes
   '_Isotope_effect.Assembly_atom_ID'                     'Isotope_effect'                yes
   '_Isotope_label_pattern.Assembly_atom_ID'              'Isotope_label_pattern'         yes
   '_Mol_interaction_chem_shift.Assembly_atom_ID'         'Mol_interaction_chem_shift'         yes
@@ -16612,7 +16619,7 @@ assembly.
   '_Coupling_constant.Assembly_atom_ID_2'                '_Atom.Assembly_atom_ID'
   '_Assigned_peak_chem_shift.Assembly_atom_ID'           '_Atom.Assembly_atom_ID'
   '_Assigned_spectral_transition.Assembly_atom_ID'                          '_Atom.Assembly_atom_ID'
-  '_Resonance_atom_set.Assembly_atom_ID'                 '_Atom.Assembly_atom_ID'
+  '_Resonance_assignment.Assembly_atom_ID'               '_Atom.Assembly_atom_ID'
   '_Isotope_effect.Assembly_atom_ID'                     '_Atom.Assembly_atom_ID'
   '_Isotope_label_pattern.Assembly_atom_ID'              '_Atom.Assembly_atom_ID'
   '_Mol_interaction_chem_shift.Assembly_atom_ID'         '_Atom.Assembly_atom_ID'
@@ -22691,7 +22698,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Coupling_constant.Entity_ID_2'                       'Coupling_constant'             yes
   '_Assigned_peak_chem_shift.Entity_ID'                  'Assigned_peak_chem_shift'      yes
   '_Assigned_spectral_transition.Entity_ID'              'Assigned_spectral_transition'       yes
-  '_Resonance_atom_set.Entity_ID'                        'Resonance_atom_set'            yes
+  '_Resonance_assignment.Entity_ID'                      'Resonance_assignment'          yes
   '_Spin_system.Entity_ID'                               'Spin_system'                   yes
   '_Isotope_effect.Entity_ID'                            'Isotope_effect'                yes
   '_Isotope_label_pattern.Entity_ID'                     'Isotope_label_pattern'         yes
@@ -22818,7 +22825,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Coupling_constant.Entity_ID_2'                       '_Entity.ID'
   '_Assigned_peak_chem_shift.Entity_ID'                  '_Entity.ID'
   '_Assigned_spectral_transition.Entity_ID'              '_Entity.ID'
-  '_Resonance_atom_set.Entity_ID'                        '_Entity.ID'
+  '_Resonance_assignment.Entity_ID'                      '_Entity.ID'
   '_Spin_system.Entity_ID'                               '_Entity.ID'
   '_Isotope_effect.Entity_ID'                            '_Entity.ID'
   '_Isotope_label_pattern.Entity_ID'                     '_Entity.ID'
@@ -25193,7 +25200,7 @@ Unique ID for the compound in the entity
   '_Coupling_constant.Comp_index_ID_2'                   'Coupling_constant'             yes
   '_Assigned_peak_chem_shift.Comp_index_ID'              'Assigned_peak_chem_shift'      yes
   '_Assigned_spectral_transition.Comp_index_ID'          'Assigned_spectral_transition'       yes
-  '_Resonance_atom_set.Comp_index_ID'                    'Resonance_atom_set'            yes
+  '_Resonance_assignment.Comp_index_ID'                  'Resonance_assignment'          yes
   '_Spin_system.Comp_index_ID'                           'Spin_system'                   yes
   '_Isotope_effect.Comp_index_ID'                        'Isotope_effect'                yes
   '_Isotope_label_pattern.Comp_index_ID'                 'Isotope_label_pattern'         yes
@@ -25308,7 +25315,7 @@ Unique ID for the compound in the entity
   '_Coupling_constant.Comp_index_ID_2'                   '_Entity_comp_index.ID'
   '_Assigned_peak_chem_shift.Comp_index_ID'              '_Entity_comp_index.ID'
   '_Assigned_spectral_transition.Comp_index_ID'          '_Entity_comp_index.ID'
-  '_Resonance_atom_set.Comp_index_ID'                    '_Entity_comp_index.ID'
+  '_Resonance_assignment.Comp_index_ID'                  '_Entity_comp_index.ID'
   '_Spin_system.Comp_index_ID'                           '_Entity_comp_index.ID'
   '_Isotope_effect.Comp_index_ID'                        '_Entity_comp_index.ID'
   '_Isotope_label_pattern.Comp_index_ID'                 '_Entity_comp_index.ID'
@@ -30541,7 +30548,7 @@ components in the entry.
   '_Coupling_constant.Comp_ID_2'                         'Coupling_constant'             yes
   '_Assigned_peak_chem_shift.Comp_ID'                    'Assigned_peak_chem_shift'      yes
   '_Assigned_spectral_transition.Comp_ID'                'Assigned_spectral_transition'       yes
-  '_Resonance_atom_set.Comp_ID'                          'Resonance_atom_set'            yes
+  '_Resonance_assignment.Comp_ID'                        'Resonance_assignment'          yes
   '_Spin_system.Comp_ID'                                 'Spin_system'                   yes
   '_Isotope_effect.Comp_ID'                              'Isotope_effect'                yes
   '_Isotope_label_pattern.Comp_ID'                       'Isotope_label_pattern'         yes
@@ -30663,7 +30670,7 @@ components in the entry.
   '_Coupling_constant.Comp_ID_2'                         '_Chem_comp.ID'
   '_Assigned_peak_chem_shift.Comp_ID'                    '_Chem_comp.ID'
   '_Assigned_spectral_transition.Comp_ID'                '_Chem_comp.ID'
-  '_Resonance_atom_set.Comp_ID'                          '_Chem_comp.ID'
+  '_Resonance_assignment.Comp_ID'                        '_Chem_comp.ID'
   '_Spin_system.Comp_ID'                                 '_Chem_comp.ID'
   '_Isotope_effect.Comp_ID'                              '_Chem_comp.ID'
   '_Isotope_label_pattern.Comp_ID'                       '_Chem_comp.ID'
@@ -33323,7 +33330,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Coupling_constant.Atom_ID_2'                         'Coupling_constant'             yes
   '_Assigned_peak_chem_shift.Atom_ID'                    'Assigned_peak_chem_shift'      yes
   '_Assigned_spectral_transition.Atom_ID'                'Assigned_spectral_transition'       yes
-  '_Resonance_atom_set.Atom_ID'                          'Resonance_atom_set'            yes
+  '_Resonance_assignment.Atom_ID'                        'Resonance_assignment'          yes
   '_Isotope_effect.Atom_ID'                              'Isotope_effect'                yes
   '_Isotope_label_pattern.Atom_ID'                       'Isotope_label_pattern'         yes
   '_Mol_interaction_chem_shift.Atom_ID'                  'Mol_interaction_chem_shift'         yes
@@ -33431,7 +33438,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Coupling_constant.Atom_ID_2'                         '_Chem_comp_atom.Atom_ID'
   '_Assigned_peak_chem_shift.Atom_ID'                    '_Chem_comp_atom.Atom_ID'
   '_Assigned_spectral_transition.Atom_ID'                '_Chem_comp_atom.Atom_ID'
-  '_Resonance_atom_set.Atom_ID'                          '_Chem_comp_atom.Atom_ID'
+  '_Resonance_assignment.Atom_ID'                        '_Chem_comp_atom.Atom_ID'
   '_Isotope_effect.Atom_ID'                              '_Chem_comp_atom.Atom_ID'
   '_Isotope_label_pattern.Atom_ID'                       '_Chem_comp_atom.Atom_ID'
   '_Mol_interaction_chem_shift.Atom_ID'                  '_Chem_comp_atom.Atom_ID'
@@ -59249,7 +59256,7 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Resonance_linker_list.Sf_ID'                         'Resonance_linker_list'         no
-  '_Resonance_atom_set.Sf_ID'                            'Resonance_atom_set'            no
+   ?      ?
 
   stop_
 
@@ -59257,7 +59264,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Resonance_atom_set.Sf_ID'                            '_Resonance_linker_list.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -59291,7 +59298,6 @@ information from other saveframes of this category in an entry.
   '_Resonance.Resonance_linker_list_ID'                  'Resonance'                     yes
   '_Resonance_covalent_link.Resonance_linker_list_ID'                       'Resonance_covalent_link'       yes
   '_Resonance_assignment.Resonance_linker_list_ID'                          'Resonance_assignment'          yes
-  '_Resonance_atom_set.Resonance_linker_list_ID'         'Resonance_atom_set'            yes
   '_Spin_system.Resonance_linker_list_ID'                'Spin_system'                   yes
   '_Spin_system_link.Resonance_linker_list_ID'           'Spin_system_link'              yes
 
@@ -59304,7 +59310,6 @@ information from other saveframes of this category in an entry.
   '_Resonance.Resonance_linker_list_ID'                  '_Resonance_linker_list.ID'
   '_Resonance_covalent_link.Resonance_linker_list_ID'                       '_Resonance_linker_list.ID'
   '_Resonance_assignment.Resonance_linker_list_ID'                          '_Resonance_linker_list.ID'
-  '_Resonance_atom_set.Resonance_linker_list_ID'         '_Resonance_linker_list.ID'
   '_Spin_system.Resonance_linker_list_ID'                '_Resonance_linker_list.ID'
   '_Spin_system_link.Resonance_linker_list_ID'           '_Resonance_linker_list.ID'
 
@@ -59849,6 +59854,9 @@ save_Resonance_assignment
      _category_key.name
 
      '_Resonance_assignment.Resonance_set_ID'
+     '_Resonance_assignment.Entity_assembly_ID'
+     '_Resonance_assignment.Comp_index_ID'
+     '_Resonance_assignment.Atom_ID'
      '_Resonance_assignment.Entry_ID'
      '_Resonance_assignment.Resonance_linker_list_ID'
 
@@ -59881,9 +59889,7 @@ save__Resonance_assignment.Resonance_set_ID
 
    _item_description.description
 ;
-The resonance_set_ID defines the ambiguity of the resonance to atom assignment. 
-For example, a non-stereospecific assigned methylene is defined by two 
-resonances connected to one resonance_set_ID.
+?
 ;
 
   loop_
@@ -59917,14 +59923,206 @@ resonances connected to one resonance_set_ID.
 
 save_
 
-save__Resonance_assignment.Resonance_atom_set_ID
+save__Resonance_assignment.Assembly_atom_ID
 
    _item_description.description
 ;
-Pointer to '_Resonance_atom_set.ID'
+Pointer to '_Atom.Assembly_atom_ID'
 ;
 
-   _item.name                  '_Resonance_assignment.Resonance_atom_set_ID'
+   _item.name                  '_Resonance_assignment.Assembly_atom_ID'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Entity_assembly_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                  '_Resonance_assignment.Entity_assembly_ID'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Entity_ID
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                  '_Resonance_assignment.Entity_ID'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Comp_index_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                  '_Resonance_assignment.Comp_index_ID'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Comp_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_Resonance_assignment.Comp_ID'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Atom_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                  '_Resonance_assignment.Atom_ID'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'atcode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Atom_type
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                  '_Resonance_assignment.Atom_type'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Atom_isotope_number
+
+   _item_description.description
+;
+Isotope number for the specified atom.
+;
+
+   _item.name                  '_Resonance_assignment.Atom_isotope_number'
+   _item.category_id              'Resonance_assignment'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Resonance_assignment.Atom_set_ID
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                  '_Resonance_assignment.Atom_set_ID'
    _item.category_id              'Resonance_assignment'
    _item.mandatory_code            no
 
@@ -59998,353 +60196,6 @@ Pointer to '_Resonance_linker_list.ID'
 
    _item.name                  '_Resonance_assignment.Resonance_linker_list_ID'
    _item.category_id              'Resonance_assignment'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save_Resonance_atom_set
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'Resonance_atom_set'
-
-   loop_
-     _category_key.name
-
-     '_Resonance_atom_set.Entity_assembly_ID'
-     '_Resonance_atom_set.Comp_index_ID'
-     '_Resonance_atom_set.Atom_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'resonance_linker'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.ID
-
-   _item_description.description
-;
-Resonance_atom_set_ID groups atoms that may or may not been unambiguously 
-assigned to specific resonance IDs. If the set has a single member and is linked 
-to a resonance set that also has a single member, the assignment is unambiguous. 
-If either the resonance atom set or the linked resonance set has more than 
-one member, the assignment is ambiguous unless the resonance atom set contains only 
-NMR indistinguishable atoms such as a set of methyl protons.
-;
-
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_Resonance_atom_set.ID'                               'Resonance_atom_set'            yes
-  '_Resonance_assignment.Resonance_atom_set_ID'          'Resonance_assignment'          yes
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-  '_Resonance_assignment.Resonance_atom_set_ID'          '_Resonance_atom_set.ID'
-
-  stop_
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Assembly_atom_ID
-
-   _item_description.description
-;
-Pointer to '_Atom.Assembly_atom_ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Assembly_atom_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Entity_assembly_ID
-
-   _item_description.description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Entity_assembly_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Entity_ID
-
-   _item_description.description
-;
-Pointer to '_Entity.ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Entity_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Comp_index_ID
-
-   _item_description.description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Comp_index_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Comp_ID
-
-   _item_description.description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Comp_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Atom_ID
-
-   _item_description.description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Atom_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            yes
-
-   _item_type.code                'atcode'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Atom_type
-
-   _item_description.description
-;
-Standard symbol used to define the atom element type.
-;
-
-   _item.name                  '_Resonance_atom_set.Atom_type'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Atom_isotope_number
-
-   _item_description.description
-;
-The mass number for the chemical element defined by the tag '_Atom_type' 
-or any of its related tags.
-;
-
-   _item.name                  '_Resonance_atom_set.Atom_isotope_number'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Sf_ID
-
-   _item_description.description
-;
-Pointer to '_Resonance_linker_list.Sf_ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Sf_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            no
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Entry_ID
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Entry_ID'
-   _item.category_id              'Resonance_atom_set'
-   _item.mandatory_code            yes
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Resonance_atom_set.Resonance_linker_list_ID
-
-   _item_description.description
-;
-Pointer to '_Resonance_linker_list.ID'
-;
-
-   _item.name                  '_Resonance_atom_set.Resonance_linker_list_ID'
-   _item.category_id              'Resonance_atom_set'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
