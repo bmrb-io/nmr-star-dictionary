@@ -484,6 +484,20 @@ save__Chem_comp.Aromatic
     stop_
 
 save_
+                                             
+save__Chem_comp.Mon_nstd_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
 
 save__Chem_comp.PDBx_ambiguous_flag
 
@@ -498,18 +512,7 @@ save__Chem_comp.PDBx_ambiguous_flag
 
 save_
 
-save__Chem_comp.PDB_NSTD_flag
 
-   loop_                           
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
 
 save__Chem_comp_atom.PDBx_aromatic_flag
 
@@ -563,7 +566,7 @@ save__Chem_comp_db_link.Author_supplied
 
 save_
 
-save__Chem_comp_atom.Chirality
+save__Chem_comp_atom.Stereo_config
 
    loop_
      _item_enumeration_value
@@ -720,6 +723,34 @@ save__Chem_comp.Vendor
 
 save_
 
+save__Chem_comp_bond.PDBx_aromatic_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   yes      'Yes - an aromatic bond'
+   no       'No  - not an aromatic bond'
+
+   stop_
+
+save_
+
+
+save__Chem_comp_bond.PDBx_stereo_config
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   E      'zusammen for together'
+   Z      'entgegen for opposite'
+   N      'none'
+
+   stop_
+
+save_
+
 
 save__Chem_comp_bond.Type
 
@@ -840,7 +871,66 @@ save__Chem_comp.Image_file_name
 
    stop_
 
+save_                              
+
+save__Chem_comp.Ideal_coordinates_missing_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes     .
+    no      .
+
+   stop_
+
+save_                                                       
+
+save__Chem_comp.Model_coordinates_missing_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes     .
+    no      .
+
+   stop_
+
 save_
+
+save__Chem_comp.Processing_site
+
+    loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     MSD       .
+     PDBJ      .
+     RCSB      .
+
+   stop_
+
+save_
+
+
+
+save__Chem_comp.PDBx_release_status
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'REL'   'Released
+    'HOLD'  'On hold until yyyy-mm-dd'
+    'HPUB'  'On hold until publication'
+    'OBS'   'Entry has been obsoleted and replaced by another entry'
+    'DEL'   'Entry has been deleted'
+
+   stop_
+
+save_
+
 
 save__Chem_comp_systematic_name.Naming_system
 

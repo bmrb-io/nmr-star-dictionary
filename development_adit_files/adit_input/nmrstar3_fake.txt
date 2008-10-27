@@ -1373,18 +1373,33 @@ save_<chem_comp>
   _Chem_comp.PDB_code                                 "Short string value"
   _Chem_comp.PDBx_type                                "Long string value"
   _Chem_comp.PDBx_ambiguous_flag                      yes/no
+  _Chem_comp.PDBX_initial_date                        2002-04-15
+  _Chem_comp.PDBX_modified_date                       2002-04-15
+  _Chem_comp.PDBx_release_status                      "Long string value"
+  _Chem_comp.PDBx_replaced_by                         "Short string value"
+  _Chem_comp.PDBx_replaces                            "Long string value"
+  _Chem_comp.One_letter_code                          
+  _Chem_comp.Three_letter_code                        "Short string value"
+  _Chem_comp.Number_atoms_all                         2
+  _Chem_comp.Number_atoms_nh                          2
   _Chem_comp.PubChem_code                             "Short string value"
+  _Chem_comp.PDBx_subcomponent_list                   "Possible multiline text"
   _Chem_comp.InCHi_code                               "Very very long phrase"
-  _Chem_comp.PDB_NSTD_flag                            yes/no
+  _Chem_comp.Mon_nstd_flag                            yes/no
+  _Chem_comp.Mon_nstd_class                           "Possible multiline text"
+  _Chem_comp.Mon_nstd_details                         "Possible multiline text"
+  _Chem_comp.Mon_nstd_parent                          "Possible multiline text"
+  _Chem_comp.Mon_nstd_parent_comp_ID                  "Very very long phrase"
   _Chem_comp.Std_deriv_one_letter_code                "Short string value"
   _Chem_comp.Std_deriv_three_letter_code              "Short string value"
   _Chem_comp.Std_deriv_BMRB_code                      "Short string value"
   _Chem_comp.Std_deriv_PDB_code                       "Short string value"
   _Chem_comp.Std_deriv_chem_comp_name                 "Long string value"
+  _Chem_comp.PDBx_synonyms                            "Very very long phrase"
   _Chem_comp.Formal_charge                            "Short string value"
   _Chem_comp.Paramagnetic                             yes/no
   _Chem_comp.Aromatic                                 yes/no
-  _Chem_comp.Empirical_formula                        "Long string value"
+  _Chem_comp.Formula                                  "Long string value"
   _Chem_comp.Formula_weight                           110.234
   _Chem_comp.Formula_mono_iso_wt_nat                  110.234
   _Chem_comp.Formula_mono_iso_wt_13C                  110.234
@@ -1398,6 +1413,15 @@ save_<chem_comp>
   _Chem_comp.Struct_file_format                       "Long string value"
   _Chem_comp.Stereochem_param_file_name               "Long string value"
   _Chem_comp.Stereochem_param_file_format             "Long string value"
+  _Chem_comp.Model_details                            "Possible multiline text"
+  _Chem_comp.Model_erf                                "Long string value"
+  _Chem_comp.Model_source                             "Possible multiline text"
+  _Chem_comp.Model_coordinates_details                "Possible multiline text"
+  _Chem_comp.Model_coordinates_missing_flag           yes/no
+  _Chem_comp.Ideal_coordinates_details                "Possible multiline text"
+  _Chem_comp.Ideal_coordinates_missing_flag           yes/no
+  _Chem_comp.Model_coordinates_db_code                "Long string value"
+  _Chem_comp.Processing_site                          "Short string value"
   _Chem_comp.Vendor                                   "Long string value"
   _Chem_comp.Vendor_product_code                      "Long string value"
   _Chem_comp.Details                                  "Possible multiline text"
@@ -1416,7 +1440,6 @@ save_<chem_comp>
   stop_
 
   loop_
-     _Chem_comp_descriptor.Ordinal                  
      _Chem_comp_descriptor.Descriptor               
      _Chem_comp_descriptor.Type                     
      _Chem_comp_descriptor.Program                  
@@ -1425,12 +1448,11 @@ save_<chem_comp>
      _Chem_comp_descriptor.Entry_ID                 
      _Chem_comp_descriptor.Comp_ID                  
 
-    2  "Very very long phrase"  "Long string value"  "Long string value"  "Long string value"    2  1  1  
+    "Very very long phrase"  "Long string value"  "Long string value"  "Long string value"  2    1  1  
 
   stop_
 
   loop_
-     _Chem_comp_identifier.Ordinal                  
      _Chem_comp_identifier.Identifier               
      _Chem_comp_identifier.Type                     
      _Chem_comp_identifier.Program                  
@@ -1439,7 +1461,7 @@ save_<chem_comp>
      _Chem_comp_identifier.Entry_ID                 
      _Chem_comp_identifier.Comp_ID                  
 
-    2  "Very very long phrase"  "Long string value"  "Long string value"  "Long string value"    2  1  1  
+    "Very very long phrase"  "Long string value"  "Long string value"  "Long string value"  2    1  1  
 
   stop_
 
@@ -1476,6 +1498,18 @@ save_<chem_comp>
   stop_
 
   loop_
+     _PDBx_chem_comp_feature.Type              
+     _PDBx_chem_comp_feature.Value             
+     _PDBx_chem_comp_feature.Source            
+     _PDBx_chem_comp_feature.Sf_ID             
+     _PDBx_chem_comp_feature.Entry_ID          
+     _PDBx_chem_comp_feature.Comp_ID           
+
+    "Very long phrase"  "Possible multiline text"  "Very long phrase"  2  1    1  
+
+  stop_
+
+  loop_
      _Characteristic.ID                      
      _Characteristic.Name                    
      _Characteristic.Atom_ID                 
@@ -1500,11 +1534,12 @@ save_<chem_comp>
      _Chem_comp_atom.Auth_atom_ID                      
      _Chem_comp_atom.Type_symbol                       
      _Chem_comp_atom.Isotope_number                    
-     _Chem_comp_atom.Chirality                         
+     _Chem_comp_atom.Stereo_config                     
      _Chem_comp_atom.Charge                            
      _Chem_comp_atom.Partial_charge                    
      _Chem_comp_atom.Oxidation_number                  
      _Chem_comp_atom.Unpaired_electron_number          
+     _Chem_comp_atom.PDBx_align                        
      _Chem_comp_atom.PDBx_aromatic_flag                
      _Chem_comp_atom.PDBx_leaving_atom_flag            
      _Chem_comp_atom.Substruct_code                    
@@ -1512,14 +1547,21 @@ save_<chem_comp>
      _Chem_comp_atom.Drawing_2D_coord_x                
      _Chem_comp_atom.Drawing_2D_coord_y                
      _Chem_comp_atom.Model_Cartn_x                     
+     _Chem_comp_atom.Model_Cartn_x_esd                 
      _Chem_comp_atom.Model_Cartn_y                     
+     _Chem_comp_atom.Model_Cartn_y_esd                 
      _Chem_comp_atom.Model_Cartn_z                     
+     _Chem_comp_atom.Model_Cartn_z_esd                 
+     _Chem_comp_atom.Model_Cartn_x_ideal               
+     _Chem_comp_atom.Model_Cartn_y_ideal               
+     _Chem_comp_atom.Model_Cartn_z_ideal               
+     _Chem_comp_atom.PDBx_ordinal                      
      _Chem_comp_atom.Details                           
      _Chem_comp_atom.Sf_ID                             
      _Chem_comp_atom.Entry_ID                          
      _Chem_comp_atom.Comp_ID                           
 
-    1  1  1  "Short string value"  "Short string value"    2  "Short string value"  "Short string value"  110.234  "Short string value"    2  yes/no  yes/no  "Short string value"  yes/no    110.234  110.234  110.234  110.234  110.234    "Possible multiline text"  2  1  1  
+    1  1  1  "Short string value"  "Short string value"    2  "Short string value"  "Short string value"  110.234  "Short string value"    2  2  yes/no  yes/no  "Short string value"    yes/no  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  2  "Possible multiline text"  2    1  1  
 
   stop_
 
@@ -1536,19 +1578,22 @@ save_<chem_comp>
   stop_
 
   loop_
-     _Chem_comp_bond.ID                     
-     _Chem_comp_bond.Type                   
-     _Chem_comp_bond.Value_order            
-     _Chem_comp_bond.Atom_ID_1              
-     _Chem_comp_bond.Atom_ID_2              
-     _Chem_comp_bond.PDB_atom_ID_1          
-     _Chem_comp_bond.PDB_atom_ID_2          
-     _Chem_comp_bond.Details                
-     _Chem_comp_bond.Sf_ID                  
-     _Chem_comp_bond.Entry_ID               
-     _Chem_comp_bond.Comp_ID                
+     _Chem_comp_bond.ID                          
+     _Chem_comp_bond.Type                        
+     _Chem_comp_bond.Value_order                 
+     _Chem_comp_bond.Atom_ID_1                   
+     _Chem_comp_bond.Atom_ID_2                   
+     _Chem_comp_bond.PDB_atom_ID_1               
+     _Chem_comp_bond.PDB_atom_ID_2               
+     _Chem_comp_bond.PDBx_aromatic_flag          
+     _Chem_comp_bond.PDBx_stereo_config          
+     _Chem_comp_bond.PDBx_ordinal                
+     _Chem_comp_bond.Details                     
+     _Chem_comp_bond.Sf_ID                       
+     _Chem_comp_bond.Entry_ID                    
+     _Chem_comp_bond.Comp_ID                     
 
-    2  "String value"  "String value"  1  1    1  1  "Possible multiline text"  2  1    1  
+    2  "String value"  "String value"  1  1    1  1  yes/no  yes/no  2    "Possible multiline text"  2  1  1  
 
   stop_
 

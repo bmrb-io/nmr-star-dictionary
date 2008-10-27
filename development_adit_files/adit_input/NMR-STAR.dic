@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-10-10
+#  version date -  2008-10-27
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.9.2
+    _dictionary.version         3.0.9.5
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.9.2         ?
+     3.0.9.5         ?
 ;
      ?
 ;
@@ -2371,7 +2371,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.9.2'
+   _item_default.value            '3.0.9.5'
    _item_type.code                'line'
 
    loop_
@@ -26497,6 +26497,7 @@ components in the entry.
   '_chem_comp_systematic_name.comp_id'                   'chem_comp_systematic_name'          yes
   '_chem_comp_smiles.comp_id'                            'chem_comp_smiles'              yes
   '_chem_comp_keyword.comp_id'                           'chem_comp_keyword'             yes
+  '_pdbx_chem_comp_feature.comp_id'                      'pdbx_chem_comp_feature'        yes
   '_characteristic.comp_id'                              'characteristic'                yes
   '_chem_comp_atom.comp_id'                              'chem_comp_atom'                yes
   '_atom_nomenclature.comp_id'                           'atom_nomenclature'             yes
@@ -26619,6 +26620,7 @@ components in the entry.
   '_chem_comp_systematic_name.comp_id'                   '_chem_comp.id'
   '_chem_comp_smiles.comp_id'                            '_chem_comp.id'
   '_chem_comp_keyword.comp_id'                           '_chem_comp.id'
+  '_pdbx_chem_comp_feature.comp_id'                      '_chem_comp.id'
   '_characteristic.comp_id'                              '_chem_comp.id'
   '_chem_comp_atom.comp_id'                              '_chem_comp.id'
   '_atom_nomenclature.comp_id'                           '_chem_comp.id'
@@ -26903,6 +26905,232 @@ tools may not be able to process this component definition.
 
 save_
 
+save__chem_comp.pdbx_initial_date
+
+   _item_description.description
+;
+Date the chemical component was added to the database.
+;
+
+   _item.name                  '_chem_comp.pdbx_initial_date'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'yyyy-mm-dd'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.pdbx_modified_date
+
+   _item_description.description
+;
+Date that the component was last modified.
+;
+
+   _item.name                  '_chem_comp.pdbx_modified_date'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'yyyy-mm-dd'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.pdbx_release_status
+
+   _item_description.description
+;
+This data item holds the current release status for the component.
+;
+
+   _item.name                  '_chem_comp.pdbx_release_status'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.pdbx_replaced_by
+
+   _item_description.description
+;
+Identifies the _chem_comp.id of the new component that has replaced this 
+component.
+;
+
+   _item.name                  '_chem_comp.pdbx_replaced_by'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'ucode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.pdbx_replaces
+
+   _item_description.description
+;
+Identifies the _chem_comp.id of the component this entry replaces. Converse 
+of _replaced_by.
+;
+
+   _item.name                  '_chem_comp.pdbx_replaces'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'uline'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.one_letter_code
+
+   _item_description.description
+;
+For standard polymer components, the one-letter code for the component. 
+If there is not a standard one-letter code for this component, or if this is a 
+non-polymer component, the one-letter code should be given as 'X'. This code may 
+be preceded by a '+' character to indicate that the component is a modification 
+of a standard component.
+;
+
+   _item.name                  '_chem_comp.one_letter_code'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'uchar1'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.three_letter_code
+
+   _item_description.description
+;
+For standard polymer components, the three-letter code for the component. 
+If there is not a standard three-letter code for this component, or if this is 
+a non-polymer component, the three-letter code should be given as 'UNK'. This 
+code may be preceded by a '+' character to indicate that the component is a modification 
+of a standard component.
+;
+
+   _item.name                  '_chem_comp.three_letter_code'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'uchar3'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.number_atoms_all
+
+   _item_description.description
+;
+The total number of atoms in the component.
+;
+
+   _item.name                  '_chem_comp.number_atoms_all'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.number_atoms_nh
+
+   _item_description.description
+;
+The number of non-hydrogen atoms in the component.
+;
+
+   _item.name                  '_chem_comp.number_atoms_nh'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__chem_comp.pubchem_code
 
    _item_description.description
@@ -26921,6 +27149,30 @@ The substance ID code assigned to the compound by the PubChem database.
 
 ;
 33768
+;
+
+   stop_
+
+save_
+
+save__chem_comp.pdbx_subcomponent_list
+
+   _item_description.description
+;
+The list of subcomponents contained in this component.
+;
+
+   _item.name                  '_chem_comp.pdbx_subcomponent_list'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+TSM DPH HIS CHF EMR
 ;
 
    stop_
@@ -26952,7 +27204,7 @@ the compound.
 
 save_
 
-save__chem_comp.pdb_nstd_flag
+save__chem_comp.mon_nstd_flag
 
    _item_description.description
 ;
@@ -26960,7 +27212,7 @@ A flag defining the non-standard status of the chemical component.  A value
 of Y indicates that the compound is a standard molecule.
 ;
 
-   _item.name                  '_chem_comp.pdb_nstd_flag'
+   _item.name                  '_chem_comp.mon_nstd_flag'
    _item.category_id              'chem_comp'
    _item.mandatory_code            no
 
@@ -26980,6 +27232,105 @@ of Y indicates that the compound is a standard molecule.
 
 ;
 yes
+;
+
+   stop_
+
+save_
+
+save__chem_comp.mon_nstd_class
+
+   _item_description.description
+;
+A description of the class of a nonstandard monomer if the nonstandard 
+monomer represents a modification of a standard monomer.
+;
+
+   _item.name                  '_chem_comp.mon_nstd_class'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+iodinated base
+;
+
+   stop_
+
+save_
+
+save__chem_comp.mon_nstd_details
+
+   _item_description.description
+;
+A description of special details of a nonstandard monomer.
+;
+
+   _item.name                  '_chem_comp.mon_nstd_details'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.mon_nstd_parent
+
+   _item_description.description
+;
+The name of the parent monomer of the nonstandard monomer, if the nonstandard 
+monomer represents a modification of a standard monomer.
+;
+
+   _item.name                  '_chem_comp.mon_nstd_parent'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.mon_nstd_parent_comp_id
+
+   _item_description.description
+;
+The identifier for the parent component of the nonstandard component. May 
+be a comma-separated list if this component is derived from multiple components.
+;
+
+   _item.name                  '_chem_comp.mon_nstd_parent_comp_id'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'uline'
+
+   loop_
+     _item_examples.case
+
+;
+?
 ;
 
    stop_
@@ -27111,6 +27462,30 @@ was derived.
 
 save_
 
+save__chem_comp.pdbx_synonyms
+
+   _item_description.description
+;
+Synonym list for the component.
+;
+
+   _item.name                  '_chem_comp.pdbx_synonyms'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__chem_comp.formal_charge
 
    _item_description.description
@@ -27215,14 +27590,14 @@ no
 
 save_
 
-save__chem_comp.empirical_formula
+save__chem_comp.formula
 
    _item_description.description
 ;
 The empirical chemical formula for the chemical component.
 ;
 
-   _item.name                  '_chem_comp.empirical_formula'
+   _item.name                  '_chem_comp.formula'
    _item.category_id              'chem_comp'
    _item.mandatory_code            no
 
@@ -27582,6 +27957,254 @@ File format for the attached stereochemical parameter file.
 
 save_
 
+save__chem_comp.model_details
+
+   _item_description.description
+;
+A description of special aspects of the generation of the coordinates for 
+the model of the component.
+;
+
+   _item.name                  '_chem_comp.model_details'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+geometry idealized but not minimized
+;
+
+   stop_
+
+save_
+
+save__chem_comp.model_erf
+
+   _item_description.description
+;
+A pointer to an external reference file from which the atomic
+;
+
+   _item.name                  '_chem_comp.model_erf'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.model_source
+
+   _item_description.description
+;
+The source of the coordinates for the model of the component.
+;
+
+   _item.name                  '_chem_comp.model_source'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+CSD entry ABCDEF
+;
+
+   stop_
+
+save_
+
+save__chem_comp.model_coordinates_details
+
+   _item_description.description
+;
+Provides additional details about the model coordinates in the component 
+definition.
+;
+
+   _item.name                  '_chem_comp.model_coordinates_details'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.model_coordinates_missing_flag
+
+   _item_description.description
+;
+This data item identifies if model coordinates are missing in this definition.
+;
+
+   _item.name                  '_chem_comp.model_coordinates_missing_flag'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'ucode'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.ideal_coordinates_details
+
+   _item_description.description
+;
+Identifies the source of the ideal coordinates in the component definition.
+;
+
+   _item.name                  '_chem_comp.ideal_coordinates_details'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.ideal_coordinates_missing_flag
+
+   _item_description.description
+;
+Identifies if ideal coordinates are missing in this definition.
+;
+
+   _item.name                  '_chem_comp.ideal_coordinates_missing_flag'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'ucode'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.model_coordinates_db_code
+
+   _item_description.description
+;
+This item identifies the PDB database code from which the atom model coordinates 
+were obtained.
+;
+
+   _item.name                  '_chem_comp.model_coordinates_db_code'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp.processing_site
+
+   _item_description.description
+;
+This data item identifies the deposition site that processed this chemical 
+component defintion.
+;
+
+   _item.name                  '_chem_comp.processing_site'
+   _item.category_id              'chem_comp'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   MSD    ?
+   PDBJ    ?
+   RCSB    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__chem_comp.vendor
 
    _item_description.description
@@ -27872,7 +28495,6 @@ Data items in the chem_comp_descriptor category provide string descriptors of co
    loop_
      _category_key.name
 
-     '_chem_comp_descriptor.ordinal'
      '_chem_comp_descriptor.entry_id'
      '_chem_comp_descriptor.comp_id'
 
@@ -27895,30 +28517,6 @@ Data items in the chem_comp_descriptor category provide string descriptors of co
 ;
 ;
    ?
-;
-
-   stop_
-
-save_
-
-save__chem_comp_descriptor.ordinal
-
-   _item_description.description
-;
-Ordinal index for this category.
-;
-
-   _item.name                  '_chem_comp_descriptor.ordinal'
-   _item.category_id              'chem_comp_descriptor'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
 ;
 
    stop_
@@ -28135,7 +28733,6 @@ Data items in the chem_comp_identifier category provide identifiers for chemical
    loop_
      _category_key.name
 
-     '_chem_comp_identifier.ordinal'
      '_chem_comp_identifier.entry_id'
      '_chem_comp_identifier.comp_id'
 
@@ -28158,30 +28755,6 @@ Data items in the chem_comp_identifier category provide identifiers for chemical
 ;
 ;
    ?
-;
-
-   stop_
-
-save_
-
-save__chem_comp_identifier.ordinal
-
-   _item_description.description
-;
-Ordinal index for this category.
-;
-
-   _item.name                  '_chem_comp_identifier.ordinal'
-   _item.category_id              'chem_comp_identifier'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
 ;
 
    stop_
@@ -28767,6 +29340,167 @@ Pointer to '_Chem_comp.ID'
 
    _item.name                  '_chem_comp_keyword.comp_id'
    _item.category_id              'chem_comp_keyword'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_pdbx_chem_comp_feature
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'pdbx_chem_comp_feature'
+
+   loop_
+     _category_key.name
+
+     '_pdbx_chem_comp_feature.type'
+     '_pdbx_chem_comp_feature.value'
+     '_pdbx_chem_comp_feature.source'
+     '_pdbx_chem_comp_feature.entry_id'
+     '_pdbx_chem_comp_feature.comp_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_comp'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__pdbx_chem_comp_feature.type
+
+   _item_description.description
+;
+The component feature type.
+;
+
+   _item.name                  '_pdbx_chem_comp_feature.type'
+   _item.category_id              'pdbx_chem_comp_feature'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__pdbx_chem_comp_feature.value
+
+   _item_description.description
+;
+The component feature value.
+;
+
+   _item.name                  '_pdbx_chem_comp_feature.value'
+   _item.category_id              'pdbx_chem_comp_feature'
+   _item.mandatory_code            yes
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__pdbx_chem_comp_feature.source
+
+   _item_description.description
+;
+The information source for the component feature.
+;
+
+   _item.name                  '_pdbx_chem_comp_feature.source'
+   _item.category_id              'pdbx_chem_comp_feature'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__pdbx_chem_comp_feature.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_pdbx_chem_comp_feature.entry_id'
+   _item.category_id              'pdbx_chem_comp_feature'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__pdbx_chem_comp_feature.comp_id
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_pdbx_chem_comp_feature.comp_id'
+   _item.category_id              'pdbx_chem_comp_feature'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -29486,14 +30220,14 @@ Mass number assigned to the atom.
 
 save_
 
-save__chem_comp_atom.chirality
+save__chem_comp_atom.stereo_config
 
    _item_description.description
 ;
 The chiral configuration of the atom that is a chiral center.
 ;
 
-   _item.name                  '_chem_comp_atom.chirality'
+   _item.name                  '_chem_comp_atom.stereo_config'
    _item.category_id              'chem_comp_atom'
    _item.mandatory_code            no
 
@@ -29603,6 +30337,31 @@ The number of unpaired electrons on the atom.
 ;
 
    _item.name                  '_chem_comp_atom.unpaired_electron_number'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_atom.pdbx_align
+
+   _item_description.description
+;
+Determines which column the atom name appears within the PDB coordinate 
+files. The possible values are 0 or 1.
+;
+
+   _item.name                  '_chem_comp_atom.pdbx_align'
    _item.category_id              'chem_comp_atom'
    _item.mandatory_code            no
 
@@ -29830,6 +30589,30 @@ X coordinate in a Cartesian system for an atom in the chemical compound.
 
 save_
 
+save__chem_comp_atom.model_cartn_x_esd
+
+   _item_description.description
+;
+The standard uncertainty (estimated standard deviation) of _chem_comp_atom.model_Cartn_x.
+;
+
+   _item.name                  '_chem_comp_atom.model_cartn_x_esd'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__chem_comp_atom.model_cartn_y
 
    _item_description.description
@@ -29838,6 +30621,30 @@ Y coordinate in a Cartesian system for an atom in the chemical compound.
 ;
 
    _item.name                  '_chem_comp_atom.model_cartn_y'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_atom.model_cartn_y_esd
+
+   _item_description.description
+;
+The standard uncertainty (estimated standard deviation) of _chem_comp_atom.model_Cartn_y.
+;
+
+   _item.name                  '_chem_comp_atom.model_cartn_y_esd'
    _item.category_id              'chem_comp_atom'
    _item.mandatory_code            no
 
@@ -29866,6 +30673,126 @@ Z coordinate in a Cartesian system for an atom in the chemical compound.
    _item.mandatory_code            no
 
    _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_atom.model_cartn_z_esd
+
+   _item_description.description
+;
+The standard uncertainty (estimated standard deviation) of _chem_comp_atom.model_Cartn_z.
+;
+
+   _item.name                  '_chem_comp_atom.model_cartn_z_esd'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_atom.model_cartn_x_ideal
+
+   _item_description.description
+;
+Computed idealized coordinates$ x component of the vector (in Angstroms)
+;
+
+   _item.name                  '_chem_comp_atom.model_cartn_x_ideal'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_atom.model_cartn_y_ideal
+
+   _item_description.description
+;
+Computed idealized coordinates$ y component of the vector (in Angstroms)
+;
+
+   _item.name                  '_chem_comp_atom.model_cartn_y_ideal'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_atom.model_cartn_z_ideal
+
+   _item_description.description
+;
+Computed idealized coordinates$ z component of the vector (in Angstroms)
+;
+
+   _item.name                  '_chem_comp_atom.model_cartn_z_ideal'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_atom.pdbx_ordinal
+
+   _item_description.description
+;
+Ordinal index for the chemical component atom list.
+;
+
+   _item.name                  '_chem_comp_atom.pdbx_ordinal'
+   _item.category_id              'chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
 
    loop_
      _item_examples.case
@@ -30312,6 +31239,97 @@ the name used by the PDB for the second atom in the bond.
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_bond.pdbx_aromatic_flag
+
+   _item_description.description
+;
+A flag indicating an aromatic bond.
+;
+
+   _item.name                  '_chem_comp_bond.pdbx_aromatic_flag'
+   _item.category_id              'chem_comp_bond'
+   _item.mandatory_code            no
+
+   _item_type.code                'ucode'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    'Yes - an aromatic bond'
+   no    'No  - not an aromatic bond'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__chem_comp_bond.pdbx_stereo_config
+
+   _item_description.description
+;
+Stereochemical configuration across a double bond.
+;
+
+   _item.name                  '_chem_comp_bond.pdbx_stereo_config'
+   _item.category_id              'chem_comp_bond'
+   _item.mandatory_code            no
+
+   _item_type.code                'ucode'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   E    'zusammen for together'
+   Z    'entgegen for opposite'
+   N    'none'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+E
+;
+
+   stop_
+
+save_
+
+save__chem_comp_bond.pdbx_ordinal
+
+   _item_description.description
+;
+Ordinal index for the component bond list.
+;
+
+   _item.name                  '_chem_comp_bond.pdbx_ordinal'
+   _item.category_id              'chem_comp_bond'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+1
 ;
 
    stop_

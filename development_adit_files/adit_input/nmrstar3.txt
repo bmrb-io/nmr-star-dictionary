@@ -1325,18 +1325,33 @@ save_<chem_comp>
   _Chem_comp.PDB_code                                 @
   _Chem_comp.PDBx_type                                @
   _Chem_comp.PDBx_ambiguous_flag                      @
+  _Chem_comp.PDBX_initial_date                        @
+  _Chem_comp.PDBX_modified_date                       @
+  _Chem_comp.PDBx_release_status                      @
+  _Chem_comp.PDBx_replaced_by                         @
+  _Chem_comp.PDBx_replaces                            @
+  _Chem_comp.One_letter_code                          @
+  _Chem_comp.Three_letter_code                        @
+  _Chem_comp.Number_atoms_all                         @
+  _Chem_comp.Number_atoms_nh                          @
   _Chem_comp.PubChem_code                             @
+  _Chem_comp.PDBx_subcomponent_list                   @
   _Chem_comp.InCHi_code                               @
-  _Chem_comp.PDB_NSTD_flag                            @
+  _Chem_comp.Mon_nstd_flag                            @
+  _Chem_comp.Mon_nstd_class                           @
+  _Chem_comp.Mon_nstd_details                         @
+  _Chem_comp.Mon_nstd_parent                          @
+  _Chem_comp.Mon_nstd_parent_comp_ID                  @
   _Chem_comp.Std_deriv_one_letter_code                @
   _Chem_comp.Std_deriv_three_letter_code              @
   _Chem_comp.Std_deriv_BMRB_code                      @
   _Chem_comp.Std_deriv_PDB_code                       @
   _Chem_comp.Std_deriv_chem_comp_name                 @
+  _Chem_comp.PDBx_synonyms                            @
   _Chem_comp.Formal_charge                            @
   _Chem_comp.Paramagnetic                             @
   _Chem_comp.Aromatic                                 @
-  _Chem_comp.Empirical_formula                        @
+  _Chem_comp.Formula                                  @
   _Chem_comp.Formula_weight                           @
   _Chem_comp.Formula_mono_iso_wt_nat                  @
   _Chem_comp.Formula_mono_iso_wt_13C                  @
@@ -1350,6 +1365,15 @@ save_<chem_comp>
   _Chem_comp.Struct_file_format                       @
   _Chem_comp.Stereochem_param_file_name               @
   _Chem_comp.Stereochem_param_file_format             @
+  _Chem_comp.Model_details                            @
+  _Chem_comp.Model_erf                                @
+  _Chem_comp.Model_source                             @
+  _Chem_comp.Model_coordinates_details                @
+  _Chem_comp.Model_coordinates_missing_flag           @
+  _Chem_comp.Ideal_coordinates_details                @
+  _Chem_comp.Ideal_coordinates_missing_flag           @
+  _Chem_comp.Model_coordinates_db_code                @
+  _Chem_comp.Processing_site                          @
   _Chem_comp.Vendor                                   @
   _Chem_comp.Vendor_product_code                      @
   _Chem_comp.Details                                  @
@@ -1368,7 +1392,6 @@ save_<chem_comp>
   stop_
 
   loop_
-     _Chem_comp_descriptor.Ordinal                  
      _Chem_comp_descriptor.Descriptor               
      _Chem_comp_descriptor.Type                     
      _Chem_comp_descriptor.Program                  
@@ -1377,12 +1400,11 @@ save_<chem_comp>
      _Chem_comp_descriptor.Entry_ID                 
      _Chem_comp_descriptor.Comp_ID                  
 
-    @ @ @ @ @   @ @ @ 
+    @ @ @ @ @   @ @ 
 
   stop_
 
   loop_
-     _Chem_comp_identifier.Ordinal                  
      _Chem_comp_identifier.Identifier               
      _Chem_comp_identifier.Type                     
      _Chem_comp_identifier.Program                  
@@ -1391,7 +1413,7 @@ save_<chem_comp>
      _Chem_comp_identifier.Entry_ID                 
      _Chem_comp_identifier.Comp_ID                  
 
-    @ @ @ @ @   @ @ @ 
+    @ @ @ @ @   @ @ 
 
   stop_
 
@@ -1428,6 +1450,18 @@ save_<chem_comp>
   stop_
 
   loop_
+     _PDBx_chem_comp_feature.Type              
+     _PDBx_chem_comp_feature.Value             
+     _PDBx_chem_comp_feature.Source            
+     _PDBx_chem_comp_feature.Sf_ID             
+     _PDBx_chem_comp_feature.Entry_ID          
+     _PDBx_chem_comp_feature.Comp_ID           
+
+    @ @ @ @ @   @ 
+
+  stop_
+
+  loop_
      _Characteristic.ID                      
      _Characteristic.Name                    
      _Characteristic.Atom_ID                 
@@ -1452,11 +1486,12 @@ save_<chem_comp>
      _Chem_comp_atom.Auth_atom_ID                      
      _Chem_comp_atom.Type_symbol                       
      _Chem_comp_atom.Isotope_number                    
-     _Chem_comp_atom.Chirality                         
+     _Chem_comp_atom.Stereo_config                     
      _Chem_comp_atom.Charge                            
      _Chem_comp_atom.Partial_charge                    
      _Chem_comp_atom.Oxidation_number                  
      _Chem_comp_atom.Unpaired_electron_number          
+     _Chem_comp_atom.PDBx_align                        
      _Chem_comp_atom.PDBx_aromatic_flag                
      _Chem_comp_atom.PDBx_leaving_atom_flag            
      _Chem_comp_atom.Substruct_code                    
@@ -1464,14 +1499,21 @@ save_<chem_comp>
      _Chem_comp_atom.Drawing_2D_coord_x                
      _Chem_comp_atom.Drawing_2D_coord_y                
      _Chem_comp_atom.Model_Cartn_x                     
+     _Chem_comp_atom.Model_Cartn_x_esd                 
      _Chem_comp_atom.Model_Cartn_y                     
+     _Chem_comp_atom.Model_Cartn_y_esd                 
      _Chem_comp_atom.Model_Cartn_z                     
+     _Chem_comp_atom.Model_Cartn_z_esd                 
+     _Chem_comp_atom.Model_Cartn_x_ideal               
+     _Chem_comp_atom.Model_Cartn_y_ideal               
+     _Chem_comp_atom.Model_Cartn_z_ideal               
+     _Chem_comp_atom.PDBx_ordinal                      
      _Chem_comp_atom.Details                           
      _Chem_comp_atom.Sf_ID                             
      _Chem_comp_atom.Entry_ID                          
      _Chem_comp_atom.Comp_ID                           
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ 
 
   stop_
 
@@ -1488,19 +1530,22 @@ save_<chem_comp>
   stop_
 
   loop_
-     _Chem_comp_bond.ID                     
-     _Chem_comp_bond.Type                   
-     _Chem_comp_bond.Value_order            
-     _Chem_comp_bond.Atom_ID_1              
-     _Chem_comp_bond.Atom_ID_2              
-     _Chem_comp_bond.PDB_atom_ID_1          
-     _Chem_comp_bond.PDB_atom_ID_2          
-     _Chem_comp_bond.Details                
-     _Chem_comp_bond.Sf_ID                  
-     _Chem_comp_bond.Entry_ID               
-     _Chem_comp_bond.Comp_ID                
+     _Chem_comp_bond.ID                          
+     _Chem_comp_bond.Type                        
+     _Chem_comp_bond.Value_order                 
+     _Chem_comp_bond.Atom_ID_1                   
+     _Chem_comp_bond.Atom_ID_2                   
+     _Chem_comp_bond.PDB_atom_ID_1               
+     _Chem_comp_bond.PDB_atom_ID_2               
+     _Chem_comp_bond.PDBx_aromatic_flag          
+     _Chem_comp_bond.PDBx_stereo_config          
+     _Chem_comp_bond.PDBx_ordinal                
+     _Chem_comp_bond.Details                     
+     _Chem_comp_bond.Sf_ID                       
+     _Chem_comp_bond.Entry_ID                    
+     _Chem_comp_bond.Comp_ID                     
 
-    @ @ @ @ @   @ @ @ @ @   @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ 
 
   stop_
 
