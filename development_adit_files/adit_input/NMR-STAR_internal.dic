@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-11-03
+#  version date -  2008-11-05
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.9.8
+    _dictionary.version         3.0.9.9
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.9.8         ?
+     3.0.9.9         ?
 ;
      ?
 ;
@@ -4520,7 +4520,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.9.8'
+   _item_default.value            '3.0.9.9'
    _item_type.code                'line'
 
    loop_
@@ -39172,7 +39172,6 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_Sample_condition_variable.Sample_condition_list_ID'                     'Sample_condition_variable'          yes
   '_Sample_condition_citation.Sample_condition_list_ID'                     'Sample_condition_citation'          yes
   '_Experiment.Sample_condition_list_ID'                 'Experiment'                    yes
-  '_NMR_spec_expt.NMR_spectrometer_ID'                   'NMR_spec_expt'                 yes
   '_Assigned_chem_shift_list.Sample_condition_list_ID'                      'Assigned_chem_shift_list'      yes
   '_Coupling_constant_list.Sample_condition_list_ID'                        'Coupling_constant_list'        yes
   '_Spectral_peak_list.Sample_condition_list_ID'         'Spectral_peak_list'            yes
@@ -39210,7 +39209,6 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_Sample_condition_variable.Sample_condition_list_ID'                     '_Sample_condition_list.ID'
   '_Sample_condition_citation.Sample_condition_list_ID'                     '_Sample_condition_list.ID'
   '_Experiment.Sample_condition_list_ID'                 '_Sample_condition_list.ID'
-  '_NMR_spec_expt.NMR_spectrometer_ID'                   '_Sample_condition_list.ID'
   '_Assigned_chem_shift_list.Sample_condition_list_ID'                      '_Sample_condition_list.ID'
   '_Coupling_constant_list.Sample_condition_list_ID'                        '_Sample_condition_list.ID'
   '_Spectral_peak_list.Sample_condition_list_ID'         '_Sample_condition_list.ID'
@@ -44808,6 +44806,7 @@ listed in the entry.
   '_NMR_spectrometer.ID'                                 'NMR_spectrometer'              yes
   '_NMR_spectrometer_citation.NMR_spectrometer_ID'                          'NMR_spectrometer_citation'          yes
   '_Experiment.NMR_spectrometer_ID'                      'Experiment'                    yes
+  '_NMR_spec_expt.NMR_spectrometer_ID'                   'NMR_spec_expt'                 yes
 
   stop_
 
@@ -44817,6 +44816,7 @@ listed in the entry.
 
   '_NMR_spectrometer_citation.NMR_spectrometer_ID'                          '_NMR_spectrometer.ID'
   '_Experiment.NMR_spectrometer_ID'                      '_NMR_spectrometer.ID'
+  '_NMR_spec_expt.NMR_spectrometer_ID'                   '_NMR_spectrometer.ID'
 
   stop_
 
