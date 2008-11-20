@@ -566,14 +566,31 @@ save__Chem_comp_db_link.Author_supplied
 
 save_
 
+save__Chem_comp_atom.Chirality
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     N      'atom is not a chiral center'
+     E      '(E)- alkene (German$ entgegen = opposite)'
+     Z      '(Z)- alkene (German$ zusammen = together)'
+     R      'rectus - right handed configuration'
+     S      'sinister - left handed configuration'
+     pro-R  'If substituted for a higher molecular weight entity will make the attached atom an R chiral center'
+     pro-S  'If substituted for a higher molecular weight entity will make the attached atom an S chiral center' 
+
+   stop_
+
+save_
+
+
 save__Chem_comp_atom.Stereo_config
 
    loop_
      _item_enumeration_value
      _item_enumeration_description
 
-     R      'rectus - right handed configuration'
-     S      'sinister - left handed configuration'
      N      'atom is not a chiral center'
      E      '(E)- alkene (German$ entgegen = opposite)'
      Z      '(Z)- alkene (German$ zusammen = together)'

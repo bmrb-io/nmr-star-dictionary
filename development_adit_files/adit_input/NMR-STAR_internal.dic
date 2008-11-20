@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.9.11
+    _dictionary.version         3.0.9.12
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.9.11         ?
+     3.0.9.12         ?
 ;
      ?
 ;
@@ -4520,7 +4520,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.9.11'
+   _item_default.value            '3.0.9.12'
    _item_type.code                'line'
 
    loop_
@@ -34401,6 +34401,44 @@ Mass number assigned to the atom.
 
 save_
 
+save__Chem_comp_atom.Chirality
+
+   _item_description.description
+;
+The chiral or prochiral characteristic of the atom.
+;
+
+   _item.name                  '_Chem_comp_atom.Chirality'
+   _item.category_id              'Chem_comp_atom'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   N    'atom is not a chiral center'
+   E    '(E)- alkene (German$ entgegen = opposite)'
+   Z    '(Z)- alkene (German$ zusammen = together)'
+   R    'rectus - right handed configuration'
+   S    'sinister - left handed configuration'
+   pro-R    'If substituted for a higher molecular weight entity will make the attached atom an R chiral center'
+   pro-S    'If substituted for a higher molecular weight entity will make the attached atom an S chiral center'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+R;S;E;Z;pro-R;pro-S
+;
+
+   stop_
+
+save_
+
 save__Chem_comp_atom.Stereo_config
 
    _item_description.description
@@ -34418,8 +34456,6 @@ The chiral configuration of the atom that is a chiral center.
      _item_enumeration.value
      _item_enumeration.detail
 
-   R    'rectus - right handed configuration'
-   S    'sinister - left handed configuration'
    N    'atom is not a chiral center'
    E    '(E)- alkene (German$ entgegen = opposite)'
    Z    '(Z)- alkene (German$ zusammen = together)'
@@ -34430,7 +34466,7 @@ The chiral configuration of the atom that is a chiral center.
      _item_examples.case
 
 ;
-R;S
+E;Z;N
 ;
 
    stop_
