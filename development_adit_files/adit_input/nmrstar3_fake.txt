@@ -643,6 +643,7 @@ save_<assembly>
      _PDBX_poly_seq_scheme.Asym_ID                     
      _PDBX_poly_seq_scheme.Seq_ID                      
      _PDBX_poly_seq_scheme.Mon_ID                      
+     _PDBX_poly_seq_scheme.Hetero                      
      _PDBX_poly_seq_scheme.PDB_seq_num                 
      _PDBX_poly_seq_scheme.PDB_mon_ID                  
      _PDBX_poly_seq_scheme.PDB_chain_ID                
@@ -653,7 +654,7 @@ save_<assembly>
      _PDBX_poly_seq_scheme.Entry_ID                    
      _PDBX_poly_seq_scheme.Assembly_ID                 
 
-    2  2  2  1  "Long string value"    1  2  1  1  1    1  1  1  "Short string value"  2    1  2  
+    2  2  2  1  "Long string value"    1  2  1  yes/no  1    1  1  1  1  "Short string value"    2  1  2  
 
   stop_
 
@@ -1501,11 +1502,12 @@ save_<chem_comp>
      _PDBx_chem_comp_feature.Type              
      _PDBx_chem_comp_feature.Value             
      _PDBx_chem_comp_feature.Source            
+     _PDBx_chem_comp_feature.Support           
      _PDBx_chem_comp_feature.Sf_ID             
      _PDBx_chem_comp_feature.Entry_ID          
      _PDBx_chem_comp_feature.Comp_ID           
 
-    "Very long phrase"  "Possible multiline text"  "Very long phrase"  2  1    1  
+    "Very long phrase"  "Possible multiline text"  "Very long phrase"  "Possible multiline text"  2    1  1  
 
   stop_
 
@@ -5199,6 +5201,7 @@ save_<conformer_family_coord_set>
      _Atom_site.PDBX_label_seq_ID                      
      _Atom_site.PDBX_label_comp_ID                     
      _Atom_site.PDBX_label_atom_ID                     
+     _Atom_site.PDBX_formal_charge                     
      _Atom_site.PDBX_label_entity_ID                   
      _Atom_site.PDB_record_ID                          
      _Atom_site.PDB_atom_name                          
@@ -5219,7 +5222,7 @@ save_<conformer_family_coord_set>
      _Atom_site.Entry_ID                               
      _Atom_site.Conformer_family_coord_set_ID          
 
-    2  2  2  2  2    2  2  1  1  "Short string value"    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  2    2  1  2  "Short string value"  1    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    "Short string value"  "Short string value"  "Short string value"  1  "Short string value"    2  1  "Short string value"  "Short string value"  "Short string value"    "Possible multiline text"  2  1  2  
+    2  2  2  2  2    2  2  1  1  "Short string value"    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  2    2  1  2  "Short string value"  1    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  "Short string value"  "Short string value"  "Short string value"  1    "Short string value"  2  1  "Short string value"  "Short string value"    "Short string value"  "Possible multiline text"  2  1  2    
 
   stop_
 

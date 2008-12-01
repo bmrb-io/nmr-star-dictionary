@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-11-21
+#  version date -  2008-12-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.9.12
+    _dictionary.version         3.0.9.13
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.9.12         ?
+     3.0.9.13         ?
 ;
      ?
 ;
@@ -4520,7 +4520,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.9.12'
+   _item_default.value            '3.0.9.13'
    _item_type.code                'line'
 
    loop_
@@ -15463,6 +15463,39 @@ Pointer to '_Entity_poly_seq.Mon_ID'
 
 save_
 
+save__PDBX_poly_seq_scheme.Hetero
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Hetero'
+;
+
+   _item.name                  '_PDBX_poly_seq_scheme.Hetero'
+   _item.category_id              'PDBX_poly_seq_scheme'
+   _item.mandatory_code            no
+
+   _item_type.code                'ucode'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   no    ?
+   yes    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
 save__PDBX_poly_seq_scheme.PDB_seq_num
 
    _item_description.description
@@ -25599,11 +25632,25 @@ A flag to indicate whether this monomer in the polymer is heterogeneous
 in sequence. This would be rare.
 ;
 
-   _item.name                  '_Entity_poly_seq.Hetero'
-   _item.category_id              'Entity_poly_seq'
-   _item.mandatory_code            no
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
 
-   _item_type.code                'code'
+  '_Entity_poly_seq.Hetero'                              'Entity_poly_seq'               no
+  '_PDBX_poly_seq_scheme.Hetero'                         'PDBX_poly_seq_scheme'          no
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_PDBX_poly_seq_scheme.Hetero'                         '_Entity_poly_seq.Hetero'
+
+  stop_
+
+   _item_type.code                'ucode'
 
    loop_
      _item_examples.case
@@ -33589,6 +33636,30 @@ The information source for the component feature.
    _item.mandatory_code            yes
 
    _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__PDBx_chem_comp_feature.Support
+
+   _item_description.description
+;
+The supporting evidence for this feature.
+;
+
+   _item.name                  '_PDBx_chem_comp_feature.Support'
+   _item.category_id              'PDBx_chem_comp_feature'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
 
    loop_
      _item_examples.case
@@ -109482,6 +109553,31 @@ Atom identifier assigned by the PDB and extracted from the PDB entry.
 
 ;
 HB1
+;
+
+   stop_
+
+save_
+
+save__Atom_site.PDBX_formal_charge
+
+   _item_description.description
+;
+The net integer charge assigned to this atom. This is the formal charge 
+assignment normally found in chemical diagrams.
+;
+
+   _item.name                  '_Atom_site.PDBX_formal_charge'
+   _item.category_id              'Atom_site'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+-1
 ;
 
    stop_
