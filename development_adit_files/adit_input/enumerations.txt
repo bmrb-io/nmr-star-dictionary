@@ -6,7 +6,7 @@
 #                                        #
 ##########################################
 
-
+     
 data_NMR-STAR_tag_enumerations
 
     _Revision_date      2008-12-01
@@ -499,7 +499,7 @@ save__Chem_comp.Mon_nstd_flag
 save_
 
 
-save__Chem_comp.PDBx_ambiguous_flag
+save__Chem_comp.PDBX_ambiguous_flag
 
    loop_
      _item_enumeration_value
@@ -514,7 +514,7 @@ save_
 
 
 
-save__Chem_comp_atom.PDBx_aromatic_flag
+save__Chem_comp_atom.PDBX_aromatic_flag
 
    loop_
      _item_enumeration_value
@@ -527,7 +527,7 @@ save__Chem_comp_atom.PDBx_aromatic_flag
 
 save_
 
-save__Chem_comp_atom.PDBx_leaving_atom_flag
+save__Chem_comp_atom.PDBX_leaving_atom_flag
 
    loop_
      _item_enumeration_value
@@ -740,7 +740,7 @@ save__Chem_comp.Vendor
 
 save_
 
-save__Chem_comp_bond.PDBx_aromatic_flag
+save__Chem_comp_bond.PDBX_aromatic_flag
 
    loop_
      _item_enumeration_value
@@ -754,7 +754,7 @@ save__Chem_comp_bond.PDBx_aromatic_flag
 save_
 
 
-save__Chem_comp_bond.PDBx_stereo_config
+save__Chem_comp_bond.PDBX_stereo_config
 
    loop_
      _item_enumeration_value
@@ -932,7 +932,7 @@ save_
 
 
 
-save__Chem_comp.PDBx_release_status
+save__Chem_comp.PDBX_release_status
 
    loop_
      _item_enumeration_value
@@ -4403,10 +4403,9 @@ save__Heteronucl_T1_list.T1_coherence_type
       _item_enumeration_value
       _item_enumeration_description
 
-         Nz              .
-         Cz              .
-         NzHz            .
-    
+         Iz              .
+         Sz              . 
+                         
     stop_
 
 save_
@@ -4476,9 +4475,8 @@ save__Heteronucl_T1rho_list.T1rho_coherence_type
       _item_enumeration_value
       _item_enumeration_description
 
-         Nz              .
-         Cz              .
-         NzHz            .
+         I(+$-)              'single quantum'
+         S(+$-)              'single quantum'
     
     stop_
 
@@ -4490,10 +4488,10 @@ save__Heteronucl_T1rho_list.T1rho_val_units
       _item_enumeration_value
       _item_enumeration_description
 
-         s             .
          s-1           .
-         ms            .
          ms-1          .
+         s             .
+         ms            .
              
     stop_
 
@@ -4505,7 +4503,6 @@ save__Heteronucl_T1rho_list.Temp_calibration_method
     loop_
       _item_enumeration_value
       _item_enumeration_description
-
 
     methanol     .
 
@@ -4575,9 +4572,9 @@ save__Heteronucl_T2_list.T2_coherence_type
       _item_enumeration_value
       _item_enumeration_description
 
-         Nz              .
-         Cz              .
-         NzHz            .
+
+         I(+$-)              'single quantum'
+         S(+$-)              'single quantum'
     
     stop_
 
@@ -4589,10 +4586,10 @@ save__Heteronucl_T2_list.T2_val_units
       _item_enumeration_value
       _item_enumeration_description
 
-         s             .
          s-1           .
-         ms            .
          ms-1          .
+         s             .
+         ms            .
              
     stop_
 
@@ -4625,6 +4622,105 @@ save__Heteronucl_T2_list.Temp_control_method
 
 save_
 
+
+save__General_relaxation_experiment.Experiment_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?             .
+            
+    stop_
+
+save_
+
+save__General_relaxation_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__General_relaxation_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__General_relaxation_list.Relaxation_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         I(+$-)S(-$+)              'zero quantum'
+         IzSz                      'longitudinal spin order'
+         I(+$-)Sz                  'single quantum antiphase'
+         IzS(+$-)                  'single quantum antiphase'
+         I(+$-)S(+$-)              'double quantum'
+         
+    
+    stop_
+
+save_
+
+save__General_relaxation_list.Relaxation_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         s             .
+         ms            .
+             
+    stop_
+
+save_
+
+save__General_relaxation_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+    methanol     .
+
+   stop_
+
+save_
+
+
+save__General_relaxation_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'           .
+    'temperature compensation block'     .
+
+   stop_
+
+save_
 
 
 save__Homonucl_NOE_list.Homonuclear_NOE_val_type

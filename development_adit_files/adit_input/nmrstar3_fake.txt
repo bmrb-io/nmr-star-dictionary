@@ -1372,19 +1372,19 @@ save_<chem_comp>
   _Chem_comp.Type                                     "Long string value"
   _Chem_comp.BMRB_code                                "Short string value"
   _Chem_comp.PDB_code                                 "Short string value"
-  _Chem_comp.PDBx_type                                "Long string value"
-  _Chem_comp.PDBx_ambiguous_flag                      yes/no
+  _Chem_comp.PDBX_type                                "Long string value"
+  _Chem_comp.PDBX_ambiguous_flag                      yes/no
   _Chem_comp.PDBX_initial_date                        2002-04-15
   _Chem_comp.PDBX_modified_date                       2002-04-15
-  _Chem_comp.PDBx_release_status                      "Long string value"
-  _Chem_comp.PDBx_replaced_by                         "Short string value"
-  _Chem_comp.PDBx_replaces                            "Long string value"
+  _Chem_comp.PDBX_release_status                      "Long string value"
+  _Chem_comp.PDBX_replaced_by                         "Short string value"
+  _Chem_comp.PDBX_replaces                            "Long string value"
   _Chem_comp.One_letter_code                          A
   _Chem_comp.Three_letter_code                        "Short string value"
   _Chem_comp.Number_atoms_all                         2
   _Chem_comp.Number_atoms_nh                          2
   _Chem_comp.PubChem_code                             "Short string value"
-  _Chem_comp.PDBx_subcomponent_list                   "Possible multiline text"
+  _Chem_comp.PDBX_subcomponent_list                   "Possible multiline text"
   _Chem_comp.InCHi_code                               "Very very long phrase"
   _Chem_comp.Mon_nstd_flag                            yes/no
   _Chem_comp.Mon_nstd_class                           "Possible multiline text"
@@ -1396,7 +1396,7 @@ save_<chem_comp>
   _Chem_comp.Std_deriv_BMRB_code                      "Short string value"
   _Chem_comp.Std_deriv_PDB_code                       "Short string value"
   _Chem_comp.Std_deriv_chem_comp_name                 "Long string value"
-  _Chem_comp.PDBx_synonyms                            "Very very long phrase"
+  _Chem_comp.PDBX_synonyms                            "Very very long phrase"
   _Chem_comp.Formal_charge                            "Short string value"
   _Chem_comp.Paramagnetic                             yes/no
   _Chem_comp.Aromatic                                 yes/no
@@ -1499,13 +1499,13 @@ save_<chem_comp>
   stop_
 
   loop_
-     _PDBx_chem_comp_feature.Type              
-     _PDBx_chem_comp_feature.Value             
-     _PDBx_chem_comp_feature.Source            
-     _PDBx_chem_comp_feature.Support           
-     _PDBx_chem_comp_feature.Sf_ID             
-     _PDBx_chem_comp_feature.Entry_ID          
-     _PDBx_chem_comp_feature.Comp_ID           
+     _PDBX_chem_comp_feature.Type              
+     _PDBX_chem_comp_feature.Value             
+     _PDBX_chem_comp_feature.Source            
+     _PDBX_chem_comp_feature.Support           
+     _PDBX_chem_comp_feature.Sf_ID             
+     _PDBX_chem_comp_feature.Entry_ID          
+     _PDBX_chem_comp_feature.Comp_ID           
 
     "Very long phrase"  "Possible multiline text"  "Very long phrase"  "Possible multiline text"  2    1  1  
 
@@ -1542,9 +1542,9 @@ save_<chem_comp>
      _Chem_comp_atom.Partial_charge                    
      _Chem_comp_atom.Oxidation_number                  
      _Chem_comp_atom.Unpaired_electron_number          
-     _Chem_comp_atom.PDBx_align                        
-     _Chem_comp_atom.PDBx_aromatic_flag                
-     _Chem_comp_atom.PDBx_leaving_atom_flag            
+     _Chem_comp_atom.PDBX_align                        
+     _Chem_comp_atom.PDBX_aromatic_flag                
+     _Chem_comp_atom.PDBX_leaving_atom_flag            
      _Chem_comp_atom.Substruct_code                    
      _Chem_comp_atom.Ionizable                         
      _Chem_comp_atom.Drawing_2D_coord_x                
@@ -1558,7 +1558,7 @@ save_<chem_comp>
      _Chem_comp_atom.Model_Cartn_x_ideal               
      _Chem_comp_atom.Model_Cartn_y_ideal               
      _Chem_comp_atom.Model_Cartn_z_ideal               
-     _Chem_comp_atom.PDBx_ordinal                      
+     _Chem_comp_atom.PDBX_ordinal                      
      _Chem_comp_atom.Details                           
      _Chem_comp_atom.Sf_ID                             
      _Chem_comp_atom.Entry_ID                          
@@ -1588,9 +1588,9 @@ save_<chem_comp>
      _Chem_comp_bond.Atom_ID_2                   
      _Chem_comp_bond.PDB_atom_ID_1               
      _Chem_comp_bond.PDB_atom_ID_2               
-     _Chem_comp_bond.PDBx_aromatic_flag          
-     _Chem_comp_bond.PDBx_stereo_config          
-     _Chem_comp_bond.PDBx_ordinal                
+     _Chem_comp_bond.PDBX_aromatic_flag          
+     _Chem_comp_bond.PDBX_stereo_config          
+     _Chem_comp_bond.PDBX_ordinal                
      _Chem_comp_bond.Details                     
      _Chem_comp_bond.Sf_ID                       
      _Chem_comp_bond.Entry_ID                    
@@ -4146,6 +4146,82 @@ save_<heteronucl_T2_relaxation>
      _T2.Sf_ID                            
      _T2.Entry_ID                         
      _T2.Heteronucl_T2_list_ID            
+
+    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  110.234  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
+
+  stop_
+
+save_
+
+save_<general_relaxation>
+  _General_relaxation_list.Sf_category     general_relaxation
+  _General_relaxation_list.Sf_framecode     <general_relaxation>
+  _General_relaxation_list.Entry_ID                             1
+  _General_relaxation_list.Sf_ID                                2
+  _General_relaxation_list.ID                                   2
+  _General_relaxation_list.Data_file_name                       "Long string value"
+  _General_relaxation_list.Sample_condition_list_ID             2
+  _General_relaxation_list.Sample_condition_list_label          "Long string value"
+  _General_relaxation_list.Temp_calibration_method              "Very long phrase"
+  _General_relaxation_list.Temp_control_method                  "Very long phrase"
+  _General_relaxation_list.Spectrometer_frequency_1H            110.234
+  _General_relaxation_list.Relaxation_coherence_type            "String value"
+  _General_relaxation_list.Relaxation_val_units                 "Short string value"
+  _General_relaxation_list.Rex_units                            "Short string value"
+  _General_relaxation_list.Details                              "Possible multiline text"
+  _General_relaxation_list.Text_data_format                     "String value"
+  _General_relaxation_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _General_relaxation_experiment.Experiment_ID                       
+     _General_relaxation_experiment.Experiment_name                     
+     _General_relaxation_experiment.Sample_ID                           
+     _General_relaxation_experiment.Sample_label                        
+     _General_relaxation_experiment.Sample_state                        
+     _General_relaxation_experiment.Sf_ID                               
+     _General_relaxation_experiment.Entry_ID                            
+     _General_relaxation_experiment.General_relaxation_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _General_relaxation_software.Software_ID                         
+     _General_relaxation_software.Software_label                      
+     _General_relaxation_software.Method_ID                           
+     _General_relaxation_software.Method_label                        
+     _General_relaxation_software.Sf_ID                               
+     _General_relaxation_software.Entry_ID                            
+     _General_relaxation_software.General_relaxation_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _General_relaxation.ID                                  
+     _General_relaxation.Assembly_atom_ID                    
+     _General_relaxation.Entity_assembly_ID                  
+     _General_relaxation.Entity_ID                           
+     _General_relaxation.Comp_index_ID                       
+     _General_relaxation.Seq_ID                              
+     _General_relaxation.Comp_ID                             
+     _General_relaxation.Atom_ID                             
+     _General_relaxation.Atom_type                           
+     _General_relaxation.Atom_isotope_number                 
+     _General_relaxation.General_relaxation_val              
+     _General_relaxation.General_relaxation_val_err          
+     _General_relaxation.Rex_val                             
+     _General_relaxation.Rex_err                             
+     _General_relaxation.Resonance_ID                        
+     _General_relaxation.Auth_entity_assembly_ID             
+     _General_relaxation.Auth_seq_ID                         
+     _General_relaxation.Auth_comp_ID                        
+     _General_relaxation.Auth_atom_ID                        
+     _General_relaxation.Sf_ID                               
+     _General_relaxation.Entry_ID                            
+     _General_relaxation.General_relaxation_list_ID          
 
     2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  110.234  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
 

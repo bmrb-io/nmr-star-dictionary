@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2008-12-02
+#  version date -  2009-01-12
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.9.13
+    _dictionary.version         3.0.9.15
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.9.13         ?
+     3.0.9.15         ?
 ;
      ?
 ;
@@ -3951,6 +3951,10 @@ BMRB accession number for this entry
   '_Heteronucl_T2_experiment.Entry_ID'                   'Heteronucl_T2_experiment'      yes
   '_Heteronucl_T2_software.Entry_ID'                     'Heteronucl_T2_software'        yes
   '_T2.Entry_ID'                                         'T2'                            yes
+  '_General_relaxation_list.Entry_ID'                    'General_relaxation_list'       yes
+  '_General_relaxation_experiment.Entry_ID'              'General_relaxation_experiment'      yes
+  '_General_relaxation_software.Entry_ID'                'General_relaxation_software'        yes
+  '_General_relaxation.Entry_ID'                         'General_relaxation'            yes
   '_Dipole_dipole_relax_list.Entry_ID'                   'Dipole_dipole_relax_list'      yes
   '_Dipole_dipole_relax_experiment.Entry_ID'             'Dipole_dipole_relax_experiment'     yes
   '_Dipole_dipole_relax_software.Entry_ID'               'Dipole_dipole_relax_software'       yes
@@ -4181,6 +4185,10 @@ BMRB accession number for this entry
   '_Heteronucl_T2_experiment.Entry_ID'                   '_Entry.ID'
   '_Heteronucl_T2_software.Entry_ID'                     '_Entry.ID'
   '_T2.Entry_ID'                                         '_Entry.ID'
+  '_General_relaxation_list.Entry_ID'                    '_Entry.ID'
+  '_General_relaxation_experiment.Entry_ID'              '_Entry.ID'
+  '_General_relaxation_software.Entry_ID'                '_Entry.ID'
+  '_General_relaxation.Entry_ID'                         '_Entry.ID'
   '_Dipole_dipole_relax_list.Entry_ID'                   '_Entry.ID'
   '_Dipole_dipole_relax_experiment.Entry_ID'             '_Entry.ID'
   '_Dipole_dipole_relax_software.Entry_ID'               '_Entry.ID'
@@ -4520,7 +4528,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.9.13'
+   _item_default.value            '3.0.9.15'
    _item_type.code                'line'
 
    loop_
@@ -11411,6 +11419,7 @@ Unique identifier for each component in the entity assembly.
   '_T1.Entity_assembly_ID'                               'T1'                            yes
   '_T1rho.Entity_assembly_ID'                            'T1rho'                         yes
   '_T2.Entity_assembly_ID'                               'T2'                            yes
+  '_General_relaxation.Entity_assembly_ID'               'General_relaxation'            yes
   '_Dipole_dipole_relax.Entity_assembly_ID_1'            'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Entity_assembly_ID_2'            'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                     'Cross_correlation_DD'          yes
@@ -11516,6 +11525,7 @@ Unique identifier for each component in the entity assembly.
   '_T1.Entity_assembly_ID'                               '_Entity_assembly.ID'
   '_T1rho.Entity_assembly_ID'                            '_Entity_assembly.ID'
   '_T2.Entity_assembly_ID'                               '_Entity_assembly.ID'
+  '_General_relaxation.Entity_assembly_ID'               '_Entity_assembly.ID'
   '_Dipole_dipole_relax.Entity_assembly_ID_1'            '_Entity_assembly.ID'
   '_Dipole_dipole_relax.Entity_assembly_ID_2'            '_Entity_assembly.ID'
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                     '_Entity_assembly.ID'
@@ -15467,7 +15477,7 @@ save__PDBX_poly_seq_scheme.Hetero
 
    _item_description.description
 ;
-Pointer to '_Entity_poly_seq.Hetero'
+Flag indicating if the sequence is heterogeneous at the position.
 ;
 
    _item.name                  '_PDBX_poly_seq_scheme.Hetero'
@@ -16582,6 +16592,7 @@ assembly.
   '_T1.Assembly_atom_ID'                                 'T1'                            yes
   '_T1rho.Assembly_atom_ID'                              'T1rho'                         yes
   '_T2.Assembly_atom_ID'                                 'T2'                            yes
+  '_General_relaxation.Assembly_atom_ID'                 'General_relaxation'            yes
   '_Dipole_dipole_relax.Assembly_atom_ID_1'              'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Assembly_atom_ID_2'              'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                       'Cross_correlation_DD'          yes
@@ -16674,6 +16685,7 @@ assembly.
   '_T1.Assembly_atom_ID'                                 '_Atom.Assembly_atom_ID'
   '_T1rho.Assembly_atom_ID'                              '_Atom.Assembly_atom_ID'
   '_T2.Assembly_atom_ID'                                 '_Atom.Assembly_atom_ID'
+  '_General_relaxation.Assembly_atom_ID'                 '_Atom.Assembly_atom_ID'
   '_Dipole_dipole_relax.Assembly_atom_ID_1'              '_Atom.Assembly_atom_ID'
   '_Dipole_dipole_relax.Assembly_atom_ID_2'              '_Atom.Assembly_atom_ID'
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                       '_Atom.Assembly_atom_ID'
@@ -22754,6 +22766,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_T1.Entity_ID'                                        'T1'                            yes
   '_T1rho.Entity_ID'                                     'T1rho'                         yes
   '_T2.Entity_ID'                                        'T2'                            yes
+  '_General_relaxation.Entity_ID'                        'General_relaxation'            yes
   '_Dipole_dipole_relax.Entity_ID_1'                     'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Entity_ID_2'                     'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_entity_ID_1'           'Cross_correlation_DD'          yes
@@ -22881,6 +22894,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_T1.Entity_ID'                                        '_Entity.ID'
   '_T1rho.Entity_ID'                                     '_Entity.ID'
   '_T2.Entity_ID'                                        '_Entity.ID'
+  '_General_relaxation.Entity_ID'                        '_Entity.ID'
   '_Dipole_dipole_relax.Entity_ID_1'                     '_Entity.ID'
   '_Dipole_dipole_relax.Entity_ID_2'                     '_Entity.ID'
   '_Cross_correlation_DD.Dipole_1_entity_ID_1'           '_Entity.ID'
@@ -25256,6 +25270,7 @@ Unique ID for the compound in the entity
   '_T1.Comp_index_ID'                                    'T1'                            yes
   '_T1rho.Comp_index_ID'                                 'T1rho'                         yes
   '_T2.Comp_index_ID'                                    'T2'                            yes
+  '_General_relaxation.Comp_index_ID'                    'General_relaxation'            yes
   '_Dipole_dipole_relax.Comp_index_ID_1'                 'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Comp_index_ID_2'                 'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_1'                          'Cross_correlation_DD'          yes
@@ -25371,6 +25386,7 @@ Unique ID for the compound in the entity
   '_T1.Comp_index_ID'                                    '_Entity_comp_index.ID'
   '_T1rho.Comp_index_ID'                                 '_Entity_comp_index.ID'
   '_T2.Comp_index_ID'                                    '_Entity_comp_index.ID'
+  '_General_relaxation.Comp_index_ID'                    '_Entity_comp_index.ID'
   '_Dipole_dipole_relax.Comp_index_ID_1'                 '_Entity_comp_index.ID'
   '_Dipole_dipole_relax.Comp_index_ID_2'                 '_Entity_comp_index.ID'
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_1'                          '_Entity_comp_index.ID'
@@ -25632,23 +25648,9 @@ A flag to indicate whether this monomer in the polymer is heterogeneous
 in sequence. This would be rare.
 ;
 
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_Entity_poly_seq.Hetero'                              'Entity_poly_seq'               no
-  '_PDBX_poly_seq_scheme.Hetero'                         'PDBX_poly_seq_scheme'          no
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-  '_PDBX_poly_seq_scheme.Hetero'                         '_Entity_poly_seq.Hetero'
-
-  stop_
+   _item.name                  '_Entity_poly_seq.Hetero'
+   _item.category_id              'Entity_poly_seq'
+   _item.mandatory_code            no
 
    _item_type.code                'ucode'
 
@@ -25762,6 +25764,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_T1.Seq_ID'                                           'T1'                            yes
   '_T1rho.Seq_ID'                                        'T1rho'                         yes
   '_T2.Seq_ID'                                           'T2'                            yes
+  '_General_relaxation.Seq_ID'                           'General_relaxation'            yes
   '_Dipole_dipole_relax.Seq_ID_1'                        'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Seq_ID_2'                        'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_seq_ID_1'              'Cross_correlation_DD'          yes
@@ -25865,6 +25868,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_T1.Seq_ID'                                           '_Entity_poly_seq.Num'
   '_T1rho.Seq_ID'                                        '_Entity_poly_seq.Num'
   '_T2.Seq_ID'                                           '_Entity_poly_seq.Num'
+  '_General_relaxation.Seq_ID'                           '_Entity_poly_seq.Num'
   '_Dipole_dipole_relax.Seq_ID_1'                        '_Entity_poly_seq.Num'
   '_Dipole_dipole_relax.Seq_ID_2'                        '_Entity_poly_seq.Num'
   '_Cross_correlation_DD.Dipole_1_seq_ID_1'              '_Entity_poly_seq.Num'
@@ -30581,7 +30585,7 @@ components in the entry.
   '_Chem_comp_systematic_name.Comp_ID'                   'Chem_comp_systematic_name'          yes
   '_Chem_comp_SMILES.Comp_ID'                            'Chem_comp_SMILES'              yes
   '_Chem_comp_keyword.Comp_ID'                           'Chem_comp_keyword'             yes
-  '_PDBx_chem_comp_feature.Comp_ID'                      'PDBx_chem_comp_feature'        yes
+  '_PDBX_chem_comp_feature.Comp_ID'                      'PDBX_chem_comp_feature'        yes
   '_Characteristic.Comp_ID'                              'Characteristic'                yes
   '_Chem_comp_atom.Comp_ID'                              'Chem_comp_atom'                yes
   '_Atom_nomenclature.Comp_ID'                           'Atom_nomenclature'             yes
@@ -30619,6 +30623,7 @@ components in the entry.
   '_T1.Comp_ID'                                          'T1'                            yes
   '_T1rho.Comp_ID'                                       'T1rho'                         yes
   '_T2.Comp_ID'                                          'T2'                            yes
+  '_General_relaxation.Comp_ID'                          'General_relaxation'            yes
   '_Dipole_dipole_relax.Comp_ID_1'                       'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Comp_ID_2'                       'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_comp_ID_1'             'Cross_correlation_DD'          yes
@@ -30704,7 +30709,7 @@ components in the entry.
   '_Chem_comp_systematic_name.Comp_ID'                   '_Chem_comp.ID'
   '_Chem_comp_SMILES.Comp_ID'                            '_Chem_comp.ID'
   '_Chem_comp_keyword.Comp_ID'                           '_Chem_comp.ID'
-  '_PDBx_chem_comp_feature.Comp_ID'                      '_Chem_comp.ID'
+  '_PDBX_chem_comp_feature.Comp_ID'                      '_Chem_comp.ID'
   '_Characteristic.Comp_ID'                              '_Chem_comp.ID'
   '_Chem_comp_atom.Comp_ID'                              '_Chem_comp.ID'
   '_Atom_nomenclature.Comp_ID'                           '_Chem_comp.ID'
@@ -30742,6 +30747,7 @@ components in the entry.
   '_T1.Comp_ID'                                          '_Chem_comp.ID'
   '_T1rho.Comp_ID'                                       '_Chem_comp.ID'
   '_T2.Comp_ID'                                          '_Chem_comp.ID'
+  '_General_relaxation.Comp_ID'                          '_Chem_comp.ID'
   '_Dipole_dipole_relax.Comp_ID_1'                       '_Chem_comp.ID'
   '_Dipole_dipole_relax.Comp_ID_2'                       '_Chem_comp.ID'
   '_Cross_correlation_DD.Dipole_1_comp_ID_1'             '_Chem_comp.ID'
@@ -30930,14 +30936,14 @@ ALA
 
 save_
 
-save__Chem_comp.PDBx_type
+save__Chem_comp.PDBX_type
 
    _item_description.description
 ;
 A preliminary classification used by PDB.
 ;
 
-   _item.name                  '_Chem_comp.PDBx_type'
+   _item.name                  '_Chem_comp.PDBX_type'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            no
 
@@ -30954,7 +30960,7 @@ A preliminary classification used by PDB.
 
 save_
 
-save__Chem_comp.PDBx_ambiguous_flag
+save__Chem_comp.PDBX_ambiguous_flag
 
    _item_description.description
 ;
@@ -30963,7 +30969,7 @@ of this component while described as clearly as possible is still ambiguous.  So
 tools may not be able to process this component definition.
 ;
 
-   _item.name                  '_Chem_comp.PDBx_ambiguous_flag'
+   _item.name                  '_Chem_comp.PDBX_ambiguous_flag'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            no
 
@@ -31037,14 +31043,14 @@ Date that the component was last modified.
 
 save_
 
-save__Chem_comp.PDBx_release_status
+save__Chem_comp.PDBX_release_status
 
    _item_description.description
 ;
 This data item holds the current release status for the component.
 ;
 
-   _item.name                  '_Chem_comp.PDBx_release_status'
+   _item.name                  '_Chem_comp.PDBX_release_status'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            no
 
@@ -31061,7 +31067,7 @@ This data item holds the current release status for the component.
 
 save_
 
-save__Chem_comp.PDBx_replaced_by
+save__Chem_comp.PDBX_replaced_by
 
    _item_description.description
 ;
@@ -31069,7 +31075,7 @@ Identifies the _chem_comp.id of the new component that has replaced this
 component.
 ;
 
-   _item.name                  '_Chem_comp.PDBx_replaced_by'
+   _item.name                  '_Chem_comp.PDBX_replaced_by'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            no
 
@@ -31086,7 +31092,7 @@ component.
 
 save_
 
-save__Chem_comp.PDBx_replaces
+save__Chem_comp.PDBX_replaces
 
    _item_description.description
 ;
@@ -31094,7 +31100,7 @@ Identifies the _chem_comp.id of the component this entry replaces. Converse
 of _replaced_by.
 ;
 
-   _item.name                  '_Chem_comp.PDBx_replaces'
+   _item.name                  '_Chem_comp.PDBX_replaces'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            no
 
@@ -31239,14 +31245,14 @@ The substance ID code assigned to the compound by the PubChem database.
 
 save_
 
-save__Chem_comp.PDBx_subcomponent_list
+save__Chem_comp.PDBX_subcomponent_list
 
    _item_description.description
 ;
 The list of subcomponents contained in this component.
 ;
 
-   _item.name                  '_Chem_comp.PDBx_subcomponent_list'
+   _item.name                  '_Chem_comp.PDBX_subcomponent_list'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            no
 
@@ -31546,14 +31552,14 @@ was derived.
 
 save_
 
-save__Chem_comp.PDBx_synonyms
+save__Chem_comp.PDBX_synonyms
 
    _item_description.description
 ;
 Synonym list for the component.
 ;
 
-   _item.name                  '_Chem_comp.PDBx_synonyms'
+   _item.name                  '_Chem_comp.PDBX_synonyms'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            no
 
@@ -33535,21 +33541,21 @@ Pointer to '_Chem_comp.ID'
 
 save_
 
-save_PDBx_chem_comp_feature
+save_PDBX_chem_comp_feature
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'PDBx_chem_comp_feature'
+   _category.id                   'PDBX_chem_comp_feature'
 
    loop_
      _category_key.name
 
-     '_PDBx_chem_comp_feature.Type'
-     '_PDBx_chem_comp_feature.Value'
-     '_PDBx_chem_comp_feature.Source'
-     '_PDBx_chem_comp_feature.Entry_ID'
-     '_PDBx_chem_comp_feature.Comp_ID'
+     '_PDBX_chem_comp_feature.Type'
+     '_PDBX_chem_comp_feature.Value'
+     '_PDBX_chem_comp_feature.Source'
+     '_PDBX_chem_comp_feature.Entry_ID'
+     '_PDBX_chem_comp_feature.Comp_ID'
 
    stop_
 
@@ -33576,15 +33582,15 @@ save_PDBx_chem_comp_feature
 
 save_
 
-save__PDBx_chem_comp_feature.Type
+save__PDBX_chem_comp_feature.Type
 
    _item_description.description
 ;
 The component feature type.
 ;
 
-   _item.name                  '_PDBx_chem_comp_feature.Type'
-   _item.category_id              'PDBx_chem_comp_feature'
+   _item.name                  '_PDBX_chem_comp_feature.Type'
+   _item.category_id              'PDBX_chem_comp_feature'
    _item.mandatory_code            yes
 
    _item_type.code                'line'
@@ -33600,15 +33606,15 @@ The component feature type.
 
 save_
 
-save__PDBx_chem_comp_feature.Value
+save__PDBX_chem_comp_feature.Value
 
    _item_description.description
 ;
 The component feature value.
 ;
 
-   _item.name                  '_PDBx_chem_comp_feature.Value'
-   _item.category_id              'PDBx_chem_comp_feature'
+   _item.name                  '_PDBX_chem_comp_feature.Value'
+   _item.category_id              'PDBX_chem_comp_feature'
    _item.mandatory_code            yes
 
    _item_type.code                'text'
@@ -33624,15 +33630,15 @@ The component feature value.
 
 save_
 
-save__PDBx_chem_comp_feature.Source
+save__PDBX_chem_comp_feature.Source
 
    _item_description.description
 ;
 The information source for the component feature.
 ;
 
-   _item.name                  '_PDBx_chem_comp_feature.Source'
-   _item.category_id              'PDBx_chem_comp_feature'
+   _item.name                  '_PDBX_chem_comp_feature.Source'
+   _item.category_id              'PDBX_chem_comp_feature'
    _item.mandatory_code            yes
 
    _item_type.code                'line'
@@ -33648,15 +33654,15 @@ The information source for the component feature.
 
 save_
 
-save__PDBx_chem_comp_feature.Support
+save__PDBX_chem_comp_feature.Support
 
    _item_description.description
 ;
 The supporting evidence for this feature.
 ;
 
-   _item.name                  '_PDBx_chem_comp_feature.Support'
-   _item.category_id              'PDBx_chem_comp_feature'
+   _item.name                  '_PDBX_chem_comp_feature.Support'
+   _item.category_id              'PDBX_chem_comp_feature'
    _item.mandatory_code            no
 
    _item_type.code                'text'
@@ -33672,15 +33678,15 @@ The supporting evidence for this feature.
 
 save_
 
-save__PDBx_chem_comp_feature.Sf_ID
+save__PDBX_chem_comp_feature.Sf_ID
 
    _item_description.description
 ;
 Pointer to '_Chem_comp.Sf_ID'
 ;
 
-   _item.name                  '_PDBx_chem_comp_feature.Sf_ID'
-   _item.category_id              'PDBx_chem_comp_feature'
+   _item.name                  '_PDBX_chem_comp_feature.Sf_ID'
+   _item.category_id              'PDBX_chem_comp_feature'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -33696,15 +33702,15 @@ Pointer to '_Chem_comp.Sf_ID'
 
 save_
 
-save__PDBx_chem_comp_feature.Entry_ID
+save__PDBX_chem_comp_feature.Entry_ID
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                  '_PDBx_chem_comp_feature.Entry_ID'
-   _item.category_id              'PDBx_chem_comp_feature'
+   _item.name                  '_PDBX_chem_comp_feature.Entry_ID'
+   _item.category_id              'PDBX_chem_comp_feature'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -33720,15 +33726,15 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__PDBx_chem_comp_feature.Comp_ID
+save__PDBX_chem_comp_feature.Comp_ID
 
    _item_description.description
 ;
 Pointer to '_Chem_comp.ID'
 ;
 
-   _item.name                  '_PDBx_chem_comp_feature.Comp_ID'
-   _item.category_id              'PDBx_chem_comp_feature'
+   _item.name                  '_PDBX_chem_comp_feature.Comp_ID'
+   _item.category_id              'PDBX_chem_comp_feature'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -34181,6 +34187,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_T1.Atom_ID'                                          'T1'                            yes
   '_T1rho.Atom_ID'                                       'T1rho'                         yes
   '_T2.Atom_ID'                                          'T2'                            yes
+  '_General_relaxation.Atom_ID'                          'General_relaxation'            yes
   '_Dipole_dipole_relax.Atom_ID_1'                       'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Atom_ID_2'                       'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_atom_ID_1'             'Cross_correlation_DD'          yes
@@ -34289,6 +34296,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_T1.Atom_ID'                                          '_Chem_comp_atom.Atom_ID'
   '_T1rho.Atom_ID'                                       '_Chem_comp_atom.Atom_ID'
   '_T2.Atom_ID'                                          '_Chem_comp_atom.Atom_ID'
+  '_General_relaxation.Atom_ID'                          '_Chem_comp_atom.Atom_ID'
   '_Dipole_dipole_relax.Atom_ID_1'                       '_Chem_comp_atom.Atom_ID'
   '_Dipole_dipole_relax.Atom_ID_2'                       '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_DD.Dipole_1_atom_ID_1'             '_Chem_comp_atom.Atom_ID'
@@ -34641,7 +34649,7 @@ The number of unpaired electrons on the atom.
 
 save_
 
-save__Chem_comp_atom.PDBx_align
+save__Chem_comp_atom.PDBX_align
 
    _item_description.description
 ;
@@ -34649,7 +34657,7 @@ Determines which column the atom name appears within the PDB coordinate
 files. The possible values are 0 or 1.
 ;
 
-   _item.name                  '_Chem_comp_atom.PDBx_align'
+   _item.name                  '_Chem_comp_atom.PDBX_align'
    _item.category_id              'Chem_comp_atom'
    _item.mandatory_code            no
 
@@ -34666,14 +34674,14 @@ files. The possible values are 0 or 1.
 
 save_
 
-save__Chem_comp_atom.PDBx_aromatic_flag
+save__Chem_comp_atom.PDBX_aromatic_flag
 
    _item_description.description
 ;
 A flag indicating an aromatic atom.
 ;
 
-   _item.name                  '_Chem_comp_atom.PDBx_aromatic_flag'
+   _item.name                  '_Chem_comp_atom.PDBX_aromatic_flag'
    _item.category_id              'Chem_comp_atom'
    _item.mandatory_code            no
 
@@ -34699,14 +34707,14 @@ Y
 
 save_
 
-save__Chem_comp_atom.PDBx_leaving_atom_flag
+save__Chem_comp_atom.PDBX_leaving_atom_flag
 
    _item_description.description
 ;
 A flag indicating a leaving atom.
 ;
 
-   _item.name                  '_Chem_comp_atom.PDBx_leaving_atom_flag'
+   _item.name                  '_Chem_comp_atom.PDBX_leaving_atom_flag'
    _item.category_id              'Chem_comp_atom'
    _item.mandatory_code            no
 
@@ -35069,14 +35077,14 @@ Computed idealized coordinates$ z component of the vector (in Angstroms)
 
 save_
 
-save__Chem_comp_atom.PDBx_ordinal
+save__Chem_comp_atom.PDBX_ordinal
 
    _item_description.description
 ;
 Ordinal index for the chemical component atom list.
 ;
 
-   _item.name                  '_Chem_comp_atom.PDBx_ordinal'
+   _item.name                  '_Chem_comp_atom.PDBX_ordinal'
    _item.category_id              'Chem_comp_atom'
    _item.mandatory_code            no
 
@@ -35581,14 +35589,14 @@ the name used by the PDB for the second atom in the bond.
 
 save_
 
-save__Chem_comp_bond.PDBx_aromatic_flag
+save__Chem_comp_bond.PDBX_aromatic_flag
 
    _item_description.description
 ;
 A flag indicating an aromatic bond.
 ;
 
-   _item.name                  '_Chem_comp_bond.PDBx_aromatic_flag'
+   _item.name                  '_Chem_comp_bond.PDBX_aromatic_flag'
    _item.category_id              'Chem_comp_bond'
    _item.mandatory_code            no
 
@@ -35614,14 +35622,14 @@ no
 
 save_
 
-save__Chem_comp_bond.PDBx_stereo_config
+save__Chem_comp_bond.PDBX_stereo_config
 
    _item_description.description
 ;
 Stereochemical configuration across a double bond.
 ;
 
-   _item.name                  '_Chem_comp_bond.PDBx_stereo_config'
+   _item.name                  '_Chem_comp_bond.PDBX_stereo_config'
    _item.category_id              'Chem_comp_bond'
    _item.mandatory_code            no
 
@@ -35648,14 +35656,14 @@ E
 
 save_
 
-save__Chem_comp_bond.PDBx_ordinal
+save__Chem_comp_bond.PDBX_ordinal
 
    _item_description.description
 ;
 Ordinal index for the component bond list.
 ;
 
-   _item.name                  '_Chem_comp_bond.PDBx_ordinal'
+   _item.name                  '_Chem_comp_bond.PDBX_ordinal'
    _item.category_id              'Chem_comp_bond'
    _item.mandatory_code            no
 
@@ -36951,6 +36959,7 @@ listed in the entry.
   '_Heteronucl_T1_experiment.Sample_ID'                  'Heteronucl_T1_experiment'      yes
   '_Heteronucl_T1rho_experiment.Sample_ID'               'Heteronucl_T1rho_experiment'        yes
   '_Heteronucl_T2_experiment.Sample_ID'                  'Heteronucl_T2_experiment'      yes
+  '_General_relaxation_experiment.Sample_ID'             'General_relaxation_experiment'      yes
   '_Dipole_dipole_relax_experiment.Sample_ID'            'Dipole_dipole_relax_experiment'     yes
   '_Cross_correlation_DD_experiment.Sample_ID'           'Cross_correlation_DD_experiment'    yes
   '_Cross_correlation_D_CSA_experiment.Sample_ID'                           'Cross_correlation_D_CSA_experiment' yes
@@ -36998,6 +37007,7 @@ listed in the entry.
   '_Heteronucl_T1_experiment.Sample_ID'                  '_Sample.ID'
   '_Heteronucl_T1rho_experiment.Sample_ID'               '_Sample.ID'
   '_Heteronucl_T2_experiment.Sample_ID'                  '_Sample.ID'
+  '_General_relaxation_experiment.Sample_ID'             '_Sample.ID'
   '_Dipole_dipole_relax_experiment.Sample_ID'            '_Sample.ID'
   '_Cross_correlation_DD_experiment.Sample_ID'           '_Sample.ID'
   '_Cross_correlation_D_CSA_experiment.Sample_ID'                           '_Sample.ID'
@@ -39297,6 +39307,7 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_Heteronucl_T1_list.Sample_condition_list_ID'         'Heteronucl_T1_list'            yes
   '_Heteronucl_T1rho_list.Sample_condition_list_ID'                         'Heteronucl_T1rho_list'         yes
   '_Heteronucl_T2_list.Sample_condition_list_ID'         'Heteronucl_T2_list'            yes
+  '_General_relaxation_list.Sample_condition_list_ID'                       'General_relaxation_list'       yes
   '_Dipole_dipole_relax_list.Sample_condition_list_ID'                      'Dipole_dipole_relax_list'      yes
   '_Cross_correlation_DD_list.Sample_condition_list_ID'                     'Cross_correlation_DD_list'          yes
   '_Cross_correlation_D_CSA_list.Sample_condition_list_ID'                  'Cross_correlation_D_CSA_list'       yes
@@ -39334,6 +39345,7 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_Heteronucl_T1_list.Sample_condition_list_ID'         '_Sample_condition_list.ID'
   '_Heteronucl_T1rho_list.Sample_condition_list_ID'                         '_Sample_condition_list.ID'
   '_Heteronucl_T2_list.Sample_condition_list_ID'         '_Sample_condition_list.ID'
+  '_General_relaxation_list.Sample_condition_list_ID'                       '_Sample_condition_list.ID'
   '_Dipole_dipole_relax_list.Sample_condition_list_ID'                      '_Sample_condition_list.ID'
   '_Cross_correlation_DD_list.Sample_condition_list_ID'                     '_Sample_condition_list.ID'
   '_Cross_correlation_D_CSA_list.Sample_condition_list_ID'                  '_Sample_condition_list.ID'
@@ -40768,6 +40780,7 @@ in the entry.
   '_Heteronucl_T1_software.Software_ID'                  'Heteronucl_T1_software'        yes
   '_Heteronucl_T1rho_software.Software_ID'               'Heteronucl_T1rho_software'          yes
   '_Heteronucl_T2_software.Software_ID'                  'Heteronucl_T2_software'        yes
+  '_General_relaxation_software.Software_ID'             'General_relaxation_software'        yes
   '_Dipole_dipole_relax_software.Software_ID'            'Dipole_dipole_relax_software'       yes
   '_Cross_correlation_DD_software.Software_ID'           'Cross_correlation_DD_software'      yes
   '_Cross_correlation_D_CSA_software.Software_ID'                           'Cross_correlation_D_CSA_software'   yes
@@ -40820,6 +40833,7 @@ in the entry.
   '_Heteronucl_T1_software.Software_ID'                  '_Software.ID'
   '_Heteronucl_T1rho_software.Software_ID'               '_Software.ID'
   '_Heteronucl_T2_software.Software_ID'                  '_Software.ID'
+  '_General_relaxation_software.Software_ID'             '_Software.ID'
   '_Dipole_dipole_relax_software.Software_ID'            '_Software.ID'
   '_Cross_correlation_DD_software.Software_ID'           '_Software.ID'
   '_Cross_correlation_D_CSA_software.Software_ID'                           '_Software.ID'
@@ -41773,6 +41787,7 @@ given in the entry.
   '_Heteronucl_T1_software.Method_ID'                    'Heteronucl_T1_software'        yes
   '_Heteronucl_T1rho_software.Method_ID'                 'Heteronucl_T1rho_software'          yes
   '_Heteronucl_T2_software.Method_ID'                    'Heteronucl_T2_software'        yes
+  '_General_relaxation_software.Method_ID'               'General_relaxation_software'        yes
   '_Dipole_dipole_relax_software.Method_ID'              'Dipole_dipole_relax_software'       yes
   '_Cross_correlation_DD_software.Method_ID'             'Cross_correlation_DD_software'      yes
   '_Cross_correlation_D_CSA_software.Method_ID'          'Cross_correlation_D_CSA_software'   yes
@@ -41835,6 +41850,7 @@ given in the entry.
   '_Heteronucl_T1_software.Method_ID'                    '_Method.ID'
   '_Heteronucl_T1rho_software.Method_ID'                 '_Method.ID'
   '_Heteronucl_T2_software.Method_ID'                    '_Method.ID'
+  '_General_relaxation_software.Method_ID'               '_Method.ID'
   '_Dipole_dipole_relax_software.Method_ID'              '_Method.ID'
   '_Cross_correlation_DD_software.Method_ID'             '_Method.ID'
   '_Cross_correlation_D_CSA_software.Method_ID'          '_Method.ID'
@@ -46878,6 +46894,7 @@ Unique identifier for each experiment listed.
   '_Heteronucl_T1_experiment.Experiment_ID'              'Heteronucl_T1_experiment'      yes
   '_Heteronucl_T1rho_experiment.Experiment_ID'           'Heteronucl_T1rho_experiment'        yes
   '_Heteronucl_T2_experiment.Experiment_ID'              'Heteronucl_T2_experiment'      yes
+  '_General_relaxation_experiment.Experiment_ID'         'General_relaxation_experiment'      yes
   '_Dipole_dipole_relax_experiment.Experiment_ID'                           'Dipole_dipole_relax_experiment'     yes
   '_Cross_correlation_DD_experiment.Experiment_ID'                          'Cross_correlation_DD_experiment'    yes
   '_Cross_correlation_D_CSA_experiment.Experiment_ID'                       'Cross_correlation_D_CSA_experiment' yes
@@ -46925,6 +46942,7 @@ Unique identifier for each experiment listed.
   '_Heteronucl_T1_experiment.Experiment_ID'              '_Experiment.ID'
   '_Heteronucl_T1rho_experiment.Experiment_ID'           '_Experiment.ID'
   '_Heteronucl_T2_experiment.Experiment_ID'              '_Experiment.ID'
+  '_General_relaxation_experiment.Experiment_ID'         '_Experiment.ID'
   '_Dipole_dipole_relax_experiment.Experiment_ID'                           '_Experiment.ID'
   '_Cross_correlation_DD_experiment.Experiment_ID'                          '_Experiment.ID'
   '_Cross_correlation_D_CSA_experiment.Experiment_ID'                       '_Experiment.ID'
@@ -58181,6 +58199,7 @@ Items in the assigned_peak_chem_shift category define the atom(s) assigned to in
 
      '_Assigned_peak_chem_shift.Peak_ID'
      '_Assigned_peak_chem_shift.Spectral_dim_ID'
+     '_Assigned_peak_chem_shift.Atom_ID'
      '_Assigned_peak_chem_shift.Entry_ID'
      '_Assigned_peak_chem_shift.Spectral_peak_list_ID'
 
@@ -58555,7 +58574,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _item.name                  '_Assigned_peak_chem_shift.Atom_ID'
    _item.category_id              'Assigned_peak_chem_shift'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'atcode'
 
@@ -60580,6 +60599,7 @@ Unique identifier for the specified resonance.
   '_T1.Resonance_ID'                                     'T1'                            yes
   '_T1rho.Resonance_ID'                                  'T1rho'                         yes
   '_T2.Resonance_ID'                                     'T2'                            yes
+  '_General_relaxation.Resonance_ID'                     'General_relaxation'            yes
   '_Dipole_dipole_relax.Resonance_ID_1'                  'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Resonance_ID_2'                  'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_1'                           'Cross_correlation_DD'          yes
@@ -60644,6 +60664,7 @@ Unique identifier for the specified resonance.
   '_T1.Resonance_ID'                                     '_Resonance.ID'
   '_T1rho.Resonance_ID'                                  '_Resonance.ID'
   '_T2.Resonance_ID'                                     '_Resonance.ID'
+  '_General_relaxation.Resonance_ID'                     '_Resonance.ID'
   '_Dipole_dipole_relax.Resonance_ID_1'                  '_Resonance.ID'
   '_Dipole_dipole_relax.Resonance_ID_2'                  '_Resonance.ID'
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_1'                           '_Resonance.ID'
@@ -83436,9 +83457,8 @@ A code describing the nuclei involved in the measured T1 coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Nz    ?
-   Cz    ?
-   NzHz    ?
+   Iz    ?
+   Sz    ?
 
    stop_
 
@@ -83446,7 +83466,7 @@ A code describing the nuclei involved in the measured T1 coherence.
      _item_examples.case
 
 ;
-Nz; Cz; NzHz
+Iz;Sz
 ;
 
    stop_
@@ -84928,9 +84948,8 @@ A code describing the nuclei involved in the measured T1rho coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Nz    ?
-   Cz    ?
-   NzHz    ?
+   I(+$-)    'single quantum'
+   S(+$-)    'single quantum'
 
    stop_
 
@@ -84962,10 +84981,10 @@ The units used for the reported T1rho relaxation values.
      _item_enumeration.value
      _item_enumeration.detail
 
-   s    ?
    s-1    ?
-   ms    ?
    ms-1    ?
+   s    ?
+   ms    ?
 
    stop_
 
@@ -86501,9 +86520,8 @@ A code describing the nuclei involved in the measured T2 coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Nz    ?
-   Cz    ?
-   NzHz    ?
+   I(+$-)    'single quantum'
+   S(+$-)    'single quantum'
 
    stop_
 
@@ -86511,7 +86529,7 @@ A code describing the nuclei involved in the measured T2 coherence.
      _item_examples.case
 
 ;
-Nz; Cz; NzHz
+?
 ;
 
    stop_
@@ -86535,10 +86553,10 @@ The units used for the reported T2 relaxation values.
      _item_enumeration.value
      _item_enumeration.detail
 
-   s    ?
    s-1    ?
-   ms    ?
    ms-1    ?
+   s    ?
+   ms    ?
 
    stop_
 
@@ -87681,6 +87699,1580 @@ Pointer to '_Heteronucl_T2_list.ID'
 
    _item.name                  '_T2.Heteronucl_T2_list_ID'
    _item.category_id              'T2'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_General_relaxation_list
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'General_relaxation_list'
+
+   loop_
+     _category_key.name
+
+     '_General_relaxation_list.Entry_ID'
+     '_General_relaxation_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_relaxation'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the saveframe
+;
+
+   _item.name                  '_General_relaxation_list.Sf_category'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Sf_framecode
+
+   _item_description.description
+;
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
+;
+
+   _item.name                  '_General_relaxation_list.Sf_framecode'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_default.value            'general_relaxation_list_1'
+   _item_type.code                'framecode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_General_relaxation_list.Entry_ID'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Sf_ID
+
+   _item_description.description
+;
+An interger value that is the unique identifier for the saveframe that 
+applies across the archive.  This value is not stable and may be reassigned each 
+time the data are loaded into a database system.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_General_relaxation_list.Sf_ID'                       'General_relaxation_list'       yes
+   ?      ?
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+   ?      ?
+
+  stop_
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.ID
+
+   _item_description.description
+;
+An integer value that uniquely identifies this saveframe of general relaxation 
+data from other saveframes of this category in an entry.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_General_relaxation_list.ID'                          'General_relaxation_list'       yes
+  '_General_relaxation_experiment.General_relaxation_list_ID'               'General_relaxation_experiment'      yes
+  '_General_relaxation_software.General_relaxation_list_ID'                 'General_relaxation_software'        yes
+  '_General_relaxation.General_relaxation_list_ID'                          'General_relaxation'            yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_General_relaxation_experiment.General_relaxation_list_ID'               '_General_relaxation_list.ID'
+  '_General_relaxation_software.General_relaxation_list_ID'                 '_General_relaxation_list.ID'
+  '_General_relaxation.General_relaxation_list_ID'                          '_General_relaxation_list.ID'
+
+  stop_
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Data_file_name
+
+   _item_description.description
+;
+The name of the file submitted with this depostion that contains the quantitative 
+data for this saveframe.
+;
+
+   _item.name                  '_General_relaxation_list.Data_file_name'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Sample_condition_list_ID
+
+   _item_description.description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _item.name                  '_General_relaxation_list.Sample_condition_list_ID'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Sample_condition_list_label
+
+   _item_description.description
+;
+The label for the set of experimental sample conditions used to collect 
+the data for determination of the general relaxation values.
+;
+
+   _item.name                  '_General_relaxation_list.Sample_condition_list_label'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Temp_calibration_method
+
+   _item_description.description
+;
+Method used to calibrate the temperature unit on the NMR spectrometer used 
+to collect the experimental data.
+;
+
+   _item.name                  '_General_relaxation_list.Temp_calibration_method'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   methanol    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Temp_control_method
+
+   _item_description.description
+;
+Method used to control the temperature of the sample to eliminate heating 
+caused by the long spin-lock pulse.
+;
+
+   _item.name                  '_General_relaxation_list.Temp_control_method'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'single scan interleaving'    ?
+   'temperature compensation block'    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Spectrometer_frequency_1H
+
+   _item_description.description
+;
+The operating proton frequency in MHz of the NMR spectrometer used to collect 
+the data.
+;
+
+   _item.name                  '_General_relaxation_list.Spectrometer_frequency_1H'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+600.1283731
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Relaxation_coherence_type
+
+   _item_description.description
+;
+A code describing the spin(s) involved in the measured relaxation coherence.
+;
+
+   _item.name                  '_General_relaxation_list.Relaxation_coherence_type'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   I(+$-)S(-$+)    'zero quantum'
+   IzSz    'longitudinal spin order'
+   I(+$-)Sz    'single quantum antiphase'
+   IzS(+$-)    'single quantum antiphase'
+   I(+$-)S(+$-)    'double quantum'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Relaxation_val_units
+
+   _item_description.description
+;
+The units used for the reported relaxation values.
+;
+
+   _item.name                  '_General_relaxation_list.Relaxation_val_units'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s-1    ?
+   ms-1    ?
+   s    ?
+   ms    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+s; s-1; ms
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Rex_units
+
+   _item_description.description
+;
+The units used for the reported R exchange values.
+;
+
+   _item.name                  '_General_relaxation_list.Rex_units'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s-1    ?
+   ms-1    ?
+   us-1    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Details
+
+   _item_description.description
+;
+Text describing the reported relaxation data.
+;
+
+   _item.name                  '_General_relaxation_list.Details'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Text_data_format
+
+   _item_description.description
+;
+The data format used to represent the relaxation data as ASCII text in 
+the text block that is the value to the '_General_relaxation_list.Text_data' tag.
+;
+
+   _item.name                  '_General_relaxation_list.Text_data_format'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_list.Text_data
+
+   _item_description.description
+;
+A set of relaxation data formatted as ASCII text.
+;
+
+   _item.name                  '_General_relaxation_list.Text_data'
+   _item.category_id              'General_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_General_relaxation_experiment
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'General_relaxation_experiment'
+
+   loop_
+     _category_key.name
+
+     '_General_relaxation_experiment.Experiment_ID'
+     '_General_relaxation_experiment.Sample_ID'
+     '_General_relaxation_experiment.Sample_state'
+     '_General_relaxation_experiment.Entry_ID'
+     '_General_relaxation_experiment.General_relaxation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_relaxation'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.Experiment_ID
+
+   _item_description.description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _item.name                  '_General_relaxation_experiment.Experiment_ID'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.Experiment_name
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _item.name                  '_General_relaxation_experiment.Experiment_name'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ?    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.Sample_ID
+
+   _item_description.description
+;
+Pointer to '_Sample.ID'
+;
+
+   _item.name                  '_General_relaxation_experiment.Sample_ID'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.Sample_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _item.name                  '_General_relaxation_experiment.Sample_label'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.Sample_state
+
+   _item_description.description
+;
+Physical state of the sample.
+;
+
+   _item.name                  '_General_relaxation_experiment.Sample_state'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_General_relaxation_list.Sf_ID'
+;
+
+   _item.name                  '_General_relaxation_experiment.Sf_ID'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_General_relaxation_experiment.Entry_ID'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_experiment.General_relaxation_list_ID
+
+   _item_description.description
+;
+Pointer to '_General_relaxation_list.ID'
+;
+
+   _item.name                  '_General_relaxation_experiment.General_relaxation_list_ID'
+   _item.category_id              'General_relaxation_experiment'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_General_relaxation_software
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'General_relaxation_software'
+
+   loop_
+     _category_key.name
+
+     '_General_relaxation_software.Software_ID'
+     '_General_relaxation_software.Entry_ID'
+     '_General_relaxation_software.General_relaxation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_relaxation'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_software.Software_ID
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                  '_General_relaxation_software.Software_ID'
+   _item.category_id              'General_relaxation_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_software.Software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _item.name                  '_General_relaxation_software.Software_label'
+   _item.category_id              'General_relaxation_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_software.Method_ID
+
+   _item_description.description
+;
+Pointer to '_Method.ID'
+;
+
+   _item.name                  '_General_relaxation_software.Method_ID'
+   _item.category_id              'General_relaxation_software'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_software.Method_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _item.name                  '_General_relaxation_software.Method_label'
+   _item.category_id              'General_relaxation_software'
+   _item.mandatory_code            no
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_software.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_General_relaxation_list.Sf_ID'
+;
+
+   _item.name                  '_General_relaxation_software.Sf_ID'
+   _item.category_id              'General_relaxation_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_software.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_General_relaxation_software.Entry_ID'
+   _item.category_id              'General_relaxation_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation_software.General_relaxation_list_ID
+
+   _item_description.description
+;
+Pointer to '_General_relaxation_list.ID'
+;
+
+   _item.name                  '_General_relaxation_software.General_relaxation_list_ID'
+   _item.category_id              'General_relaxation_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_General_relaxation
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'General_relaxation'
+
+   loop_
+     _category_key.name
+
+     '_General_relaxation.ID'
+     '_General_relaxation.Entry_ID'
+     '_General_relaxation.General_relaxation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_relaxation'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.ID
+
+   _item_description.description
+;
+Unique identifier for the observed relaxation value.
+;
+
+   _item.name                  '_General_relaxation.ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Assembly_atom_ID
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                  '_General_relaxation.Assembly_atom_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Entity_assembly_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                  '_General_relaxation.Entity_assembly_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Entity_ID
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                  '_General_relaxation.Entity_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Comp_index_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                  '_General_relaxation.Comp_index_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Seq_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                  '_General_relaxation.Seq_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Comp_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_General_relaxation.Comp_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Atom_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                  '_General_relaxation.Atom_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'atcode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Atom_type
+
+   _item_description.description
+;
+The value for this tag is a standard IUPAC abbreviation for an element 
+(i.e., H, C, P, etc).
+;
+
+   _item.name                  '_General_relaxation.Atom_type'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Atom_isotope_number
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                  '_General_relaxation.Atom_isotope_number'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.General_relaxation_val
+
+   _item_description.description
+;
+The relaxation value.
+;
+
+   _item.name                  '_General_relaxation.General_relaxation_val'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.General_relaxation_val_err
+
+   _item_description.description
+;
+The estimated error in the reported relaxation value.
+;
+
+   _item.name                  '_General_relaxation.General_relaxation_val_err'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Rex_val
+
+   _item_description.description
+;
+The exchange broadening contribution value.
+;
+
+   _item.name                  '_General_relaxation.Rex_val'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Rex_err
+
+   _item_description.description
+;
+The estimated error in the fitted exchange broadening contribution value.
+;
+
+   _item.name                  '_General_relaxation.Rex_err'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Resonance_ID
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                  '_General_relaxation.Resonance_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Auth_entity_assembly_ID
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                  '_General_relaxation.Auth_entity_assembly_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Auth_seq_ID
+
+   _item_description.description
+;
+An alternative identifier for Seq_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                  '_General_relaxation.Auth_seq_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Auth_comp_ID
+
+   _item_description.description
+;
+An alternative identifier for Comp_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_General_relaxation.Auth_comp_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Auth_atom_ID
+
+   _item_description.description
+;
+An alternative identifier for Atom_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_General_relaxation.Auth_atom_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_General_relaxation_list.Sf_ID'
+;
+
+   _item.name                  '_General_relaxation.Sf_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_General_relaxation.Entry_ID'
+   _item.category_id              'General_relaxation'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__General_relaxation.General_relaxation_list_ID
+
+   _item_description.description
+;
+Pointer to '_General_relaxation_list.ID'
+;
+
+   _item.name                  '_General_relaxation.General_relaxation_list_ID'
+   _item.category_id              'General_relaxation'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
