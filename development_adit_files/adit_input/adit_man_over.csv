@@ -340,6 +340,8 @@ TBL_BEGIN,,,,,,,?
 90374,representative_conformer,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 90380,conformer_family_coord_set,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
 90390,constraint_statistics,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
+90392,chem_shift_reference,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
+90394,assigned_chemical_shifts,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
 90400,chem_shift_reference,*,*,N,Entry_interview,_Entry_interview.Assigned_chem_shifts,yes
 90410,assigned_chemical_shifts,*,*,N,Entry_interview,_Entry_interview.Assigned_chem_shifts,yes
 90420,spectral_peak_list,*,*,N,Entry_interview,_Entry_interview.Spectral_peak_lists,yes
@@ -573,11 +575,11 @@ TBL_BEGIN,,,,,,,?
 92880,conformer_statistics,Conformer_stat_list_rep,_Conformer_stat_list_rep.Impropers_rmsd_err,N,Conformer_stat_list_rep,_Conformer_stat_list_rep.Stats_not_available,yes
 92890,conformer_statistics,Conformer_stat_list_rep,_Conformer_stat_list_rep.Peptide_planarity_rmsd,N,Conformer_stat_list_rep,_Conformer_stat_list_rep.Stats_not_available,yes
 92900,conformer_statistics,Conformer_stat_list_rep,_Conformer_stat_list_rep.Peptide_planarity_rmsd_err,N,Conformer_stat_list_rep,_Conformer_stat_list_rep.Stats_not_available,yes
-92910,constraint_statistics,Constraint_file,_Constraint_file.Constraint_type,N,Entry_interview,_Entry_interview.PDB_deposition,yes
-92920,constraint_statistics,Constraint_file,_Constraint_file.Constraint_subtype,N,Entry_interview,_Entry_interview.PDB_deposition,yes
-92930,constraint_statistics,Constraint_file,_Constraint_file.Constraint_filename,N,Entry_interview,_Entry_interview.PDB_deposition,yes
-92940,constraint_statistics,Constraint_file,_Constraint_file.Constraint_number,N,Entry_interview,_Entry_interview.PDB_deposition,yes
-92950,constraint_statistics,Constraint_file,_Constraint_file.Software_label,N,Entry_interview,_Entry_interview.PDB_deposition,yes
+92910,constraint_statistics,Constraint_file,_Constraint_file.Constraint_type,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
+92920,constraint_statistics,Constraint_file,_Constraint_file.Constraint_subtype,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
+92930,constraint_statistics,Constraint_file,_Constraint_file.Constraint_filename,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
+92940,constraint_statistics,Constraint_file,_Constraint_file.Constraint_number,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
+92950,constraint_statistics,Constraint_file,_Constraint_file.Software_label,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
 92960,constraint_statistics,Constraint_stat_list,_Constraint_stat_list.Stats_not_available,N,Constraint_file,_Constraint_file.Constraint_subtype,*
 92970,constraint_statistics,Constraint_stat_list,_Constraint_stat_list.NOE_interproton_dist_evaluation,H,Constraint_file,_Constraint_file.Constraint_subtype,NOE
 92980,constraint_statistics,Constraint_stat_list,_Constraint_stat_list.NOE_pseudoatom_corrections,H,Constraint_file,_Constraint_file.Constraint_subtype,NOE
@@ -902,8 +904,8 @@ TBL_BEGIN,,,,,,,?
 96152,entry_information,Entry,_Entry.Experimental_method,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96160,NMR_spectral_processing,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96170,computer,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
-96180,chem_shift_reference,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
-96190,assigned_chemical_shifts,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
+96180,chem_shift_reference,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
+96190,assigned_chemical_shifts,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
 96200,coupling_constants,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96210,spectral_peak_list,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96212,chem_shift_anisotropy,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes

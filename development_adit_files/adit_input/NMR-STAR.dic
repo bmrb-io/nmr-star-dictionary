@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2009-01-12
+#  version date -  2009-08-07
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.0.9.15
+    _dictionary.version         3.0.9.19
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.0.9.15         ?
+     3.0.9.19         ?
 ;
      ?
 ;
@@ -1886,6 +1886,15 @@ BMRB accession number for this entry
   '_observed_conformer.entry_id'                         'observed_conformer'            yes
   '_other_struct_feature_list.entry_id'                  'other_struct_feature_list'          yes
   '_other_struct_feature.entry_id'                       'other_struct_feature'          yes
+  '_gen_dist_constraint_list.entry_id'                   'gen_dist_constraint_list'      yes
+  '_gen_dist_constraint_expt.entry_id'                   'gen_dist_constraint_expt'      yes
+  '_gen_dist_constraint_software.entry_id'               'gen_dist_constraint_software'       yes
+  '_gen_dist_constraint_software_param.entry_id'         'gen_dist_constraint_software_param' yes
+  '_gen_dist_constraint.entry_id'                        'gen_dist_constraint'           yes
+  '_gen_dist_constraint_comment_org.entry_id'            'gen_dist_constraint_comment_org'    yes
+  '_gen_dist_constraint_parse_err.entry_id'              'gen_dist_constraint_parse_err'      yes
+  '_gen_dist_constraint_parse_file.entry_id'             'gen_dist_constraint_parse_file'     yes
+  '_gen_dist_constraint_conv_err.entry_id'               'gen_dist_constraint_conv_err'       yes
   '_distance_constraint_list.entry_id'                   'distance_constraint_list'      yes
   '_distance_constraint_expt.entry_id'                   'distance_constraint_expt'      yes
   '_distance_constraint_software.entry_id'               'distance_constraint_software'       yes
@@ -2120,6 +2129,15 @@ BMRB accession number for this entry
   '_observed_conformer.entry_id'                         '_entry.id'
   '_other_struct_feature_list.entry_id'                  '_entry.id'
   '_other_struct_feature.entry_id'                       '_entry.id'
+  '_gen_dist_constraint_list.entry_id'                   '_entry.id'
+  '_gen_dist_constraint_expt.entry_id'                   '_entry.id'
+  '_gen_dist_constraint_software.entry_id'               '_entry.id'
+  '_gen_dist_constraint_software_param.entry_id'         '_entry.id'
+  '_gen_dist_constraint.entry_id'                        '_entry.id'
+  '_gen_dist_constraint_comment_org.entry_id'            '_entry.id'
+  '_gen_dist_constraint_parse_err.entry_id'              '_entry.id'
+  '_gen_dist_constraint_parse_file.entry_id'             '_entry.id'
+  '_gen_dist_constraint_conv_err.entry_id'               '_entry.id'
   '_distance_constraint_list.entry_id'                   '_entry.id'
   '_distance_constraint_expt.entry_id'                   '_entry.id'
   '_distance_constraint_software.entry_id'               '_entry.id'
@@ -2379,7 +2397,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.0.9.15'
+   _item_default.value            '3.0.9.19'
    _item_type.code                'line'
 
    loop_
@@ -5301,20 +5319,26 @@ of the full list of saveframe categories available in constructing an NMR-STAR f
    other_data_list    ?
    RDCs    ?
    order_parameters    ?
-   spectral_density_values    ?
-   H_exch_rates    ?
-   H_exch_protection_factors    ?
-   pKa_value_data_set    ?
-   pH_NMR_param_list    ?
-   D_H_fractionation_factors    ?
-   molecular_axis_determinations    ?
-   deduced_secd_struct_features    ?
-   deduced_hydrogen_bonds    ?
-   representative_conformer    ?
-   conformer_family_coord_set    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   .    ?
+   general_relaxation    ?
    heteronucl_T1_relaxation    ?
-   heteronucl_T2_relaxation    ?
-   heteronucl_NOEs    ?
+   .    ?
+   .    ?
+   homonucl_NOEs    ?
+   dipole_dipole_relaxation    ?
+   dipole_dipole_cross_correlation_relaxation    ?
+   CSA_CSA_cross_correlation_relaxation    ?
+   dipole_CSA_cross_correlation_relaxation    ?
 
    stop_
 
@@ -8665,6 +8689,8 @@ Unique identifier for each component in the entity assembly.
   '_structure_interaction.entity_assembly_id_1'          'structure_interaction'         yes
   '_structure_interaction.entity_assembly_id_2'          'structure_interaction'         yes
   '_other_struct_feature.entity_assembly_id'             'other_struct_feature'          yes
+  '_gen_dist_constraint.entity_assembly_id_1'            'gen_dist_constraint'           yes
+  '_gen_dist_constraint.entity_assembly_id_2'            'gen_dist_constraint'           yes
   '_dist_constraint.entity_assembly_id'                  'dist_constraint'               yes
   '_floating_chirality.entity_assembly_id_1'             'floating_chirality'            yes
   '_floating_chirality.entity_assembly_id_2'             'floating_chirality'            yes
@@ -8771,6 +8797,8 @@ Unique identifier for each component in the entity assembly.
   '_structure_interaction.entity_assembly_id_1'          '_entity_assembly.id'
   '_structure_interaction.entity_assembly_id_2'          '_entity_assembly.id'
   '_other_struct_feature.entity_assembly_id'             '_entity_assembly.id'
+  '_gen_dist_constraint.entity_assembly_id_1'            '_entity_assembly.id'
+  '_gen_dist_constraint.entity_assembly_id_2'            '_entity_assembly.id'
   '_dist_constraint.entity_assembly_id'                  '_entity_assembly.id'
   '_floating_chirality.entity_assembly_id_1'             '_entity_assembly.id'
   '_floating_chirality.entity_assembly_id_2'             '_entity_assembly.id'
@@ -13546,6 +13574,8 @@ assembly.
   '_bond_annotation.assembly_atom_id_2'                  'bond_annotation'               yes
   '_structure_interaction.assembly_atom_id_1'            'structure_interaction'         yes
   '_structure_interaction.assembly_atom_id_2'            'structure_interaction'         yes
+  '_gen_dist_constraint.assembly_atom_id_1'              'gen_dist_constraint'           yes
+  '_gen_dist_constraint.assembly_atom_id_2'              'gen_dist_constraint'           yes
   '_dist_constraint.assembly_atom_id'                    'dist_constraint'               yes
   '_floating_chirality.assembly_atom_id_1'               'floating_chirality'            yes
   '_floating_chirality.assembly_atom_id_2'               'floating_chirality'            yes
@@ -13639,6 +13669,8 @@ assembly.
   '_bond_annotation.assembly_atom_id_2'                  '_atom.assembly_atom_id'
   '_structure_interaction.assembly_atom_id_1'            '_atom.assembly_atom_id'
   '_structure_interaction.assembly_atom_id_2'            '_atom.assembly_atom_id'
+  '_gen_dist_constraint.assembly_atom_id_1'              '_atom.assembly_atom_id'
+  '_gen_dist_constraint.assembly_atom_id_2'              '_atom.assembly_atom_id'
   '_dist_constraint.assembly_atom_id'                    '_atom.assembly_atom_id'
   '_floating_chirality.assembly_atom_id_1'               '_atom.assembly_atom_id'
   '_floating_chirality.assembly_atom_id_2'               '_atom.assembly_atom_id'
@@ -19219,6 +19251,8 @@ An integer value that is the unique identifier for the entity within the entry.
   '_structure_interaction.entity_id_1'                   'structure_interaction'         yes
   '_structure_interaction.entity_id_2'                   'structure_interaction'         yes
   '_other_struct_feature.entity_id'                      'other_struct_feature'          yes
+  '_gen_dist_constraint.entity_id_1'                     'gen_dist_constraint'           yes
+  '_gen_dist_constraint.entity_id_2'                     'gen_dist_constraint'           yes
   '_dist_constraint.entity_id'                           'dist_constraint'               yes
   '_floating_chirality.entity_id_1'                      'floating_chirality'            yes
   '_floating_chirality.entity_id_2'                      'floating_chirality'            yes
@@ -19347,6 +19381,8 @@ An integer value that is the unique identifier for the entity within the entry.
   '_structure_interaction.entity_id_1'                   '_entity.id'
   '_structure_interaction.entity_id_2'                   '_entity.id'
   '_other_struct_feature.entity_id'                      '_entity.id'
+  '_gen_dist_constraint.entity_id_1'                     '_entity.id'
+  '_gen_dist_constraint.entity_id_2'                     '_entity.id'
   '_dist_constraint.entity_id'                           '_entity.id'
   '_floating_chirality.entity_id_1'                      '_entity.id'
   '_floating_chirality.entity_id_2'                      '_entity.id'
@@ -19839,8 +19875,8 @@ atoms in the entity.
      _item_enumeration.value
      _item_enumeration.detail
 
-   yes    ?
-   no    ?
+   yes    'polymer contains at least one monomer with different chirality'
+   no    'polymer contains no monomers with different chirality'
 
    stop_
 
@@ -21605,6 +21641,8 @@ Unique ID for the compound in the entity
   '_bond_annotation.comp_index_id_2'                     'bond_annotation'               yes
   '_structure_interaction.comp_index_id_1'               'structure_interaction'         yes
   '_structure_interaction.comp_index_id_2'               'structure_interaction'         yes
+  '_gen_dist_constraint.comp_index_id_1'                 'gen_dist_constraint'           yes
+  '_gen_dist_constraint.comp_index_id_2'                 'gen_dist_constraint'           yes
   '_dist_constraint.comp_index_id'                       'dist_constraint'               yes
   '_floating_chirality.comp_index_id_1'                  'floating_chirality'            yes
   '_floating_chirality.comp_index_id_2'                  'floating_chirality'            yes
@@ -21721,6 +21759,8 @@ Unique ID for the compound in the entity
   '_bond_annotation.comp_index_id_2'                     '_entity_comp_index.id'
   '_structure_interaction.comp_index_id_1'               '_entity_comp_index.id'
   '_structure_interaction.comp_index_id_2'               '_entity_comp_index.id'
+  '_gen_dist_constraint.comp_index_id_1'                 '_entity_comp_index.id'
+  '_gen_dist_constraint.comp_index_id_2'                 '_entity_comp_index.id'
   '_dist_constraint.comp_index_id'                       '_entity_comp_index.id'
   '_floating_chirality.comp_index_id_1'                  '_entity_comp_index.id'
   '_floating_chirality.comp_index_id_2'                  '_entity_comp_index.id'
@@ -22073,6 +22113,8 @@ that the sequence numbers must progress in increasing numerical order.
   '_structure_interaction.seq_id_1'                      'structure_interaction'         yes
   '_structure_interaction.seq_id_2'                      'structure_interaction'         yes
   '_other_struct_feature.seq_id'                         'other_struct_feature'          yes
+  '_gen_dist_constraint.seq_id_1'                        'gen_dist_constraint'           yes
+  '_gen_dist_constraint.seq_id_2'                        'gen_dist_constraint'           yes
   '_dist_constraint.seq_id'                              'dist_constraint'               yes
   '_floating_chirality.seq_id_1'                         'floating_chirality'            yes
   '_floating_chirality.seq_id_2'                         'floating_chirality'            yes
@@ -22177,6 +22219,8 @@ that the sequence numbers must progress in increasing numerical order.
   '_structure_interaction.seq_id_1'                      '_entity_poly_seq.num'
   '_structure_interaction.seq_id_2'                      '_entity_poly_seq.num'
   '_other_struct_feature.seq_id'                         '_entity_poly_seq.num'
+  '_gen_dist_constraint.seq_id_1'                        '_entity_poly_seq.num'
+  '_gen_dist_constraint.seq_id_2'                        '_entity_poly_seq.num'
   '_dist_constraint.seq_id'                              '_entity_poly_seq.num'
   '_floating_chirality.seq_id_1'                         '_entity_poly_seq.num'
   '_floating_chirality.seq_id_2'                         '_entity_poly_seq.num'
@@ -26615,6 +26659,8 @@ components in the entry.
   '_bond_annotation.comp_id_2'                           'bond_annotation'               yes
   '_structure_interaction.comp_id_1'                     'structure_interaction'         yes
   '_structure_interaction.comp_id_2'                     'structure_interaction'         yes
+  '_gen_dist_constraint.comp_id_1'                       'gen_dist_constraint'           yes
+  '_gen_dist_constraint.comp_id_2'                       'gen_dist_constraint'           yes
   '_dist_constraint.comp_id'                             'dist_constraint'               yes
   '_floating_chirality.comp_id_1'                        'floating_chirality'            yes
   '_floating_chirality.comp_id_2'                        'floating_chirality'            yes
@@ -26739,6 +26785,8 @@ components in the entry.
   '_bond_annotation.comp_id_2'                           '_chem_comp.id'
   '_structure_interaction.comp_id_1'                     '_chem_comp.id'
   '_structure_interaction.comp_id_2'                     '_chem_comp.id'
+  '_gen_dist_constraint.comp_id_1'                       '_chem_comp.id'
+  '_gen_dist_constraint.comp_id_2'                       '_chem_comp.id'
   '_dist_constraint.comp_id'                             '_chem_comp.id'
   '_floating_chirality.comp_id_1'                        '_chem_comp.id'
   '_floating_chirality.comp_id_2'                        '_chem_comp.id'
@@ -30033,6 +30081,8 @@ each monomer in the CHEM_COMP_ATOM list.
   '_bond_annotation.atom_id_2'                           'bond_annotation'               yes
   '_structure_interaction.atom_id_1'                     'structure_interaction'         yes
   '_structure_interaction.atom_id_2'                     'structure_interaction'         yes
+  '_gen_dist_constraint.atom_id_1'                       'gen_dist_constraint'           yes
+  '_gen_dist_constraint.atom_id_2'                       'gen_dist_constraint'           yes
   '_dist_constraint.atom_id'                             'dist_constraint'               yes
   '_floating_chirality.atom_id_1'                        'floating_chirality'            yes
   '_floating_chirality.atom_id_2'                        'floating_chirality'            yes
@@ -30142,6 +30192,8 @@ each monomer in the CHEM_COMP_ATOM list.
   '_bond_annotation.atom_id_2'                           '_chem_comp_atom.atom_id'
   '_structure_interaction.atom_id_1'                     '_chem_comp_atom.atom_id'
   '_structure_interaction.atom_id_2'                     '_chem_comp_atom.atom_id'
+  '_gen_dist_constraint.atom_id_1'                       '_chem_comp_atom.atom_id'
+  '_gen_dist_constraint.atom_id_2'                       '_chem_comp_atom.atom_id'
   '_dist_constraint.atom_id'                             '_chem_comp_atom.atom_id'
   '_floating_chirality.atom_id_1'                        '_chem_comp_atom.atom_id'
   '_floating_chirality.atom_id_2'                        '_chem_comp_atom.atom_id'
@@ -30357,6 +30409,8 @@ The chiral configuration of the atom that is a chiral center.
    N    'atom is not a chiral center'
    E    '(E)- alkene (German$ entgegen = opposite)'
    Z    '(Z)- alkene (German$ zusammen = together)'
+   R    'rectus - right handed configuration'
+   S    'sinister - left handed configuration'
 
    stop_
 
@@ -32580,6 +32634,7 @@ listed in the entry.
   '_deduced_secd_struct_experiment.sample_id'            'deduced_secd_struct_experiment'     yes
   '_deduced_h_bond_experiment.sample_id'                 'deduced_h_bond_experiment'          yes
   '_conformer_family_coord_set_expt.sample_id'           'conformer_family_coord_set_expt'    yes
+  '_gen_dist_constraint_expt.sample_id'                  'gen_dist_constraint_expt'      yes
   '_distance_constraint_expt.sample_id'                  'distance_constraint_expt'      yes
   '_torsion_angle_constraints_expt.sample_id'            'torsion_angle_constraints_expt'     yes
   '_rdc_constraint_expt.sample_id'                       'rdc_constraint_expt'           yes
@@ -32628,6 +32683,7 @@ listed in the entry.
   '_deduced_secd_struct_experiment.sample_id'            '_sample.id'
   '_deduced_h_bond_experiment.sample_id'                 '_sample.id'
   '_conformer_family_coord_set_expt.sample_id'           '_sample.id'
+  '_gen_dist_constraint_expt.sample_id'                  '_sample.id'
   '_distance_constraint_expt.sample_id'                  '_sample.id'
   '_torsion_angle_constraints_expt.sample_id'            '_sample.id'
   '_rdc_constraint_expt.sample_id'                       '_sample.id'
@@ -32674,9 +32730,10 @@ of the sample.
    solid    ?
    bicelle    ?
    emulsion    ?
-   fiber    ?
+   fiber    'solid-state fiber sample'
    'filamentous virus'    ?
-   gel    ?
+   'gel solution'    'gel samples used for solution NMR'
+   'gel solid'    'gel samples used for solid-state NMR'
    liposome    ?
    membrane    ?
    micelle    ?
@@ -35962,6 +36019,7 @@ in the entry.
    AZARA    ?
    BIRDER    ?
    CAPP    ?
+   CING    ?
    CNS    ?
    CNSSOLVE    ?
    CORMA    ?
@@ -36010,6 +36068,7 @@ in the entry.
    PROSA    ?
    PSVS    ?
    QUEEN    ?
+   Relax    ?
    RESCUE    ?
    SANE    ?
    SPARKY    ?
@@ -36117,6 +36176,8 @@ in the entry.
   '_rep_conf_software.software_id'                       'rep_conf_software'             yes
   '_constraint_file.software_id'                         'constraint_file'               yes
   '_force_constant_software.software_id'                 'force_constant_software'       yes
+  '_gen_dist_constraint_software.software_id'            'gen_dist_constraint_software'       yes
+  '_gen_dist_constraint_software_param.software_id'                         'gen_dist_constraint_software_param' yes
   '_distance_constraint_software.software_id'            'distance_constraint_software'       yes
   '_dist_constr_software_setting.software_id'            'dist_constr_software_setting'       yes
   '_floating_chirality_software.software_id'             'floating_chirality_software'        yes
@@ -36170,6 +36231,8 @@ in the entry.
   '_rep_conf_software.software_id'                       '_software.id'
   '_constraint_file.software_id'                         '_software.id'
   '_force_constant_software.software_id'                 '_software.id'
+  '_gen_dist_constraint_software.software_id'            '_software.id'
+  '_gen_dist_constraint_software_param.software_id'                         '_software.id'
   '_distance_constraint_software.software_id'            '_software.id'
   '_dist_constr_software_setting.software_id'            '_software.id'
   '_floating_chirality_software.software_id'             '_software.id'
@@ -36227,6 +36290,7 @@ The name of the software defined by the author or provider of the software.
    BIRDER    ?
    CARA    ?
    CAPP    ?
+   CING    ?
    CcpNMR    ?
    CNS    ?
    CNSSOLVE    ?
@@ -36271,6 +36335,7 @@ The name of the software defined by the author or provider of the software.
    PROSA    ?
    PSVS    ?
    QUEEN    ?
+   Relax    ?
    RESCUE    ?
    SANE    ?
    SPARKY    ?
@@ -37016,6 +37081,8 @@ given in the entry.
   '_secondary_struct_sel.method_id'                      'secondary_struct_sel'          yes
   '_bond_annotation.selection_method_id'                 'bond_annotation'               yes
   '_structure_interaction.selection_method_id'           'structure_interaction'         yes
+  '_gen_dist_constraint_expt.method_id'                  'gen_dist_constraint_expt'      yes
+  '_gen_dist_constraint_software.method_id'              'gen_dist_constraint_software'       yes
   '_distance_constraint_expt.method_id'                  'distance_constraint_expt'      yes
   '_distance_constraint_software.method_id'              'distance_constraint_software'       yes
   '_floating_chirality_software.method_id'               'floating_chirality_software'        yes
@@ -37079,6 +37146,8 @@ given in the entry.
   '_secondary_struct_sel.method_id'                      '_method.id'
   '_bond_annotation.selection_method_id'                 '_method.id'
   '_structure_interaction.selection_method_id'           '_method.id'
+  '_gen_dist_constraint_expt.method_id'                  '_method.id'
+  '_gen_dist_constraint_software.method_id'              '_method.id'
   '_distance_constraint_expt.method_id'                  '_method.id'
   '_distance_constraint_software.method_id'              '_method.id'
   '_floating_chirality_software.method_id'               '_method.id'
@@ -39977,7 +40046,7 @@ The name or acronym used to describe the model of the spectrometer.
 
    AM    "from Bruker"
    AMX    "from Bruker"
-   ARX    'from Bruker'
+   ARX    "from Bruker"
    Avance    "from Bruker"
    CMX    'from Bruker'
    DMX    "from Bruker"
@@ -40062,6 +40131,7 @@ by the proton frequency of the instrument expressed in MHz.
    900    ?
    920    ?
    950    ?
+   1000    ?
 
    stop_
 
@@ -40590,6 +40660,7 @@ by the proton frequency of the instrument expressed in MHz.
    900    ?
    920    ?
    950    ?
+   1000    ?
 
    stop_
 
@@ -41632,6 +41703,7 @@ Unique identifier for each experiment listed.
   '_deduced_secd_struct_experiment.experiment_id'                           'deduced_secd_struct_experiment'     yes
   '_deduced_h_bond_experiment.experiment_id'             'deduced_h_bond_experiment'          yes
   '_conformer_family_coord_set_expt.experiment_id'                          'conformer_family_coord_set_expt'    yes
+  '_gen_dist_constraint_expt.experiment_id'              'gen_dist_constraint_expt'      yes
   '_distance_constraint_expt.experiment_id'              'distance_constraint_expt'      yes
   '_dist_constraint_value.source_experiment_id'          'dist_constraint_value'         yes
   '_torsion_angle_constraints_expt.experiment_id'                           'torsion_angle_constraints_expt'     yes
@@ -41680,6 +41752,7 @@ Unique identifier for each experiment listed.
   '_deduced_secd_struct_experiment.experiment_id'                           '_experiment.id'
   '_deduced_h_bond_experiment.experiment_id'             '_experiment.id'
   '_conformer_family_coord_set_expt.experiment_id'                          '_experiment.id'
+  '_gen_dist_constraint_expt.experiment_id'              '_experiment.id'
   '_distance_constraint_expt.experiment_id'              '_experiment.id'
   '_dist_constraint_value.source_experiment_id'          '_experiment.id'
   '_torsion_angle_constraints_expt.experiment_id'                           '_experiment.id'
@@ -41728,6 +41801,8 @@ Names for NMR experiments commonly found in the literature.
 
    '2D 1H-15N HSQC'    ?
    '2D 1H-13C HSQC'    ?
+   '2D 1H-13C HSQC aliphatic'    ?
+   '2D 1H-13C HSQC aromatic'    ?
    '2D 1H-1H TOCSY'    ?
    '2D DQF-COSY'    ?
    '2D 1H-1H COSY'    ?
@@ -48401,6 +48476,7 @@ the data.
    900    ?
    920    ?
    950    ?
+   1000    ?
 
    stop_
 
@@ -48444,7 +48520,7 @@ save__coupling_constant_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the coupling constant data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Coupling_constant_list.Text_data' tag.
 ;
 
    _item.name                  '_coupling_constant_list.text_data_format'
@@ -50032,6 +50108,7 @@ Spectral peak list ID
   '_spectral_transition_char.spectral_peak_list_id'                         'spectral_transition_char'      yes
   '_spectral_transition_contrib.spectral_peak_list_id'                      'spectral_transition_contrib'        yes
   '_assigned_spectral_transition.spectral_peak_list_id'                     'assigned_spectral_transition'       yes
+  '_gen_dist_constraint.spectral_peak_list_id'           'gen_dist_constraint'           yes
   '_dist_constraint_value.spectral_peak_list_id'         'dist_constraint_value'         yes
 
   stop_
@@ -50052,6 +50129,7 @@ Spectral peak list ID
   '_spectral_transition_char.spectral_peak_list_id'                         '_spectral_peak_list.id'
   '_spectral_transition_contrib.spectral_peak_list_id'                      '_spectral_peak_list.id'
   '_assigned_spectral_transition.spectral_peak_list_id'                     '_spectral_peak_list.id'
+  '_gen_dist_constraint.spectral_peak_list_id'           '_spectral_peak_list.id'
   '_dist_constraint_value.spectral_peak_list_id'         '_spectral_peak_list.id'
 
   stop_
@@ -50300,7 +50378,7 @@ save__spectral_peak_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the spectral peak data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Spectral_peak_list.Text_data' tag.
 ;
 
    _item.name                  '_spectral_peak_list.text_data_format'
@@ -50893,6 +50971,7 @@ Unique identifier for the spectral peak.
   '_assigned_peak_chem_shift.peak_id'                    'assigned_peak_chem_shift'      yes
   '_spectral_transition_general_char.spectral_transition_id'                'spectral_transition_general_char'   yes
   '_assigned_spectral_transition.peak_id'                'assigned_spectral_transition'       yes
+  '_gen_dist_constraint.spectral_peak_id'                'gen_dist_constraint'           yes
   '_dist_constraint_value.spectral_peak_id'              'dist_constraint_value'         yes
 
   stop_
@@ -50906,6 +50985,7 @@ Unique identifier for the spectral peak.
   '_assigned_peak_chem_shift.peak_id'                    '_peak.id'
   '_spectral_transition_general_char.spectral_transition_id'                '_peak.id'
   '_assigned_spectral_transition.peak_id'                '_peak.id'
+  '_gen_dist_constraint.spectral_peak_id'                '_peak.id'
   '_dist_constraint_value.spectral_peak_id'              '_peak.id'
 
   stop_
@@ -54104,6 +54184,8 @@ Unique identifier for the specified resonance.
   '_cross_correlation_d_csa.csa_resonance_id_2'          'cross_correlation_d_csa'       yes
   '_order_param.resonance_id'                            'order_param'                   yes
   '_d_h_fractionation_factor.resonance_id'               'd_h_fractionation_factor'      yes
+  '_gen_dist_constraint.resonance_id_1'                  'gen_dist_constraint'           yes
+  '_gen_dist_constraint.resonance_id_2'                  'gen_dist_constraint'           yes
   '_dist_constraint.resonance_id'                        'dist_constraint'               yes
   '_floating_chirality.resonance_id_1'                   'floating_chirality'            yes
   '_floating_chirality.resonance_id_2'                   'floating_chirality'            yes
@@ -54169,6 +54251,8 @@ Unique identifier for the specified resonance.
   '_cross_correlation_d_csa.csa_resonance_id_2'          '_resonance.id'
   '_order_param.resonance_id'                            '_resonance.id'
   '_d_h_fractionation_factor.resonance_id'               '_resonance.id'
+  '_gen_dist_constraint.resonance_id_1'                  '_resonance.id'
+  '_gen_dist_constraint.resonance_id_2'                  '_resonance.id'
   '_dist_constraint.resonance_id'                        '_resonance.id'
   '_floating_chirality.resonance_id_1'                   '_resonance.id'
   '_floating_chirality.resonance_id_2'                   '_resonance.id'
@@ -55558,7 +55642,7 @@ save__chem_shift_isotope_effect_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the chemical shift isotope effect data 
-as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+as ASCII text in the text block that is the value to the '_Chem_shift_isotope_effect.Text_data' 
 tag.
 ;
 
@@ -57496,7 +57580,7 @@ save__mol_interaction_chem_shift_diff.text_data_format
 ;
 The data format used to represent the chemical shift data for molecular 
 interaction observations as ASCII text in the text block that is the value to the 
-'_Assigned_chem_shift.Text_data' tag.
+'_Mol_interaction_chem_shift_diff.Text_data' tag.
 ;
 
    _item.name                  '_mol_interaction_chem_shift_diff.text_data_format'
@@ -58821,7 +58905,7 @@ save__chem_shift_anisotropy.text_data_format
    _item_description.description
 ;
 The data format used to represent the chemical shift anisotropy data as 
-ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+ASCII text in the text block that is the value to the '_Chem_shift_anisotropy.Text_data' 
 tag.
 ;
 
@@ -62240,7 +62324,7 @@ save__theoretical_chem_shift_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the theoretical chemical shift data as 
-ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+ASCII text in the text block that is the value to the '_Theoretical_chem_shift_list.Text_data' 
 tag.
 ;
 
@@ -63271,8 +63355,7 @@ save__rdc_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the residual dipolar coupling data as 
-ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
-tag.
+ASCII text in the text block that is the value to the '_RDC_list.Text_data' tag.
 ;
 
    _item.name                  '_rdc_list.text_data_format'
@@ -65055,7 +65138,7 @@ save__dipolar_coupling_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the dipolar coupling data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Dipolar_coupling.Text_data' tag.
 ;
 
    _item.name                  '_dipolar_coupling_list.text_data_format'
@@ -66813,7 +66896,7 @@ save__spectral_density_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the spectral density data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Spectral_density_list.Text_data' tag.
 ;
 
    _item.name                  '_spectral_density_list.text_data_format'
@@ -68219,8 +68302,7 @@ save__other_data_type_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the data reported in this saveframe as 
-ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
-tag.
+ASCII text in the text block that is the value to the '_Other_data_type.Text_data' tag.
 ;
 
    _item.name                  '_other_data_type_list.text_data_format'
@@ -69473,7 +69555,7 @@ save__h_exch_rate_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the hydrogen exchange data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_H_exch_rate_list.Text_data' tag.
 ;
 
    _item.name                  '_h_exch_rate_list.text_data_format'
@@ -70790,7 +70872,7 @@ save__h_exch_protection_factor_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the hydrogen exchange protection factor 
-data as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+data as ASCII text in the text block that is the value to the '_H_exch_protection_factor.Text_data' 
 tag.
 ;
 
@@ -72116,7 +72198,7 @@ save__homonucl_noe_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the homonuclear NOE data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Homonucl_NOE_list.Text_data' tag.
 ;
 
    _item.name                  '_homonucl_noe_list.text_data_format'
@@ -73766,7 +73848,7 @@ save__heteronucl_noe_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the heteronuclear NOE data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Heteronucl_NOE_list.Text_data' tag.
 ;
 
    _item.name                  '_heteronucl_noe_list.text_data_format'
@@ -75341,8 +75423,8 @@ A code describing the nuclei involved in the measured T1 coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Iz    ?
-   Sz    ?
+   Iz    'zero quantum$ longitudinal'
+   Sz    'zero quantum$ longitudinal'
 
    stop_
 
@@ -75422,7 +75504,7 @@ save__heteronucl_t1_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the heteronuclear T1 relaxation data 
-as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+as ASCII text in the text block that is the value to the '_Heteronucl_T1_list.Text_data' 
 tag.
 ;
 
@@ -76834,7 +76916,7 @@ save__heteronucl_t1rho_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the heteronuclear T1rho relaxation data 
-as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+as ASCII text in the text block that is the value to the '_Heteronucl_T1rho.Text_data' 
 tag.
 ;
 
@@ -78294,7 +78376,7 @@ save__heteronucl_t2_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the heteronuclear T2 relaxation data 
-as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+as ASCII text in the text block that is the value to the '_Heteronucl_T2_list.Text_data' 
 tag.
 ;
 
@@ -79550,6 +79632,8 @@ to collect the experimental data.
      _item_enumeration.detail
 
    methanol    ?
+   'monoethylene glycol'    ?
+   'no calibration applied'    ?
 
    stop_
 
@@ -79584,6 +79668,8 @@ caused by the long spin-lock pulse.
 
    'single scan interleaving'    ?
    'temperature compensation block'    ?
+   'single scan interleaving and temperature compensation block'    ?
+   'no temperature control applied'    ?
 
    stop_
 
@@ -79640,11 +79726,33 @@ A code describing the spin(s) involved in the measured relaxation coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   I(+$-)S(-$+)    'zero quantum'
+   Iz    'R1                           longitudinal'
+   Sz    'R1                           longitudinal'
+   I+    'R1rho                        transverse'
+   I-    'R1rho                        transverse'
+   S+    'R1rho                        transverse'
+   S-    'R1rho                        transverse'
+   (I+)+(I-)    'R1rho                        transverse'
+   (S+)+(S-)    'R1rho                        transverse'
+   I+    'R2                           transverse'
+   I-    'R2                           transverse'
+   S+    'R2                           transverse'
+   S-    'R2                           transverse'
+   (I+)+(I-)    'R2                           transverse'
+   (S+)+(S-)    'R2                           transverse'
+   I-S+    'ZQ relaxation'
+   I+S-    'ZQ relaxation'
+   (I+S-)+(I-S+)    'ZQ relaxation'
    IzSz    'longitudinal spin order'
-   I(+$-)Sz    'single quantum antiphase'
-   IzS(+$-)    'single quantum antiphase'
-   I(+$-)S(+$-)    'double quantum'
+   I+Sz    'single quantum antiphase'
+   I-Sz    'single quantum antiphase'
+   IzS+    'single quantum antiphase'
+   IzS-    'single quantum antiphase'
+   ((I+)+(I-))Sz    'single quantum antiphase'
+   Iz((S+)+(S-))    'single quantum antiphase'
+   I+S+    'DQ relaxation'
+   I-S-    'DQ relaxation'
+   (I+S+)+(I-S-)    'DQ relaxation'
 
    stop_
 
@@ -79678,8 +79786,9 @@ The units used for the reported relaxation values.
 
    s-1    ?
    ms-1    ?
-   s    ?
-   ms    ?
+   us-1    ?
+   ns-1    ?
+   ps-1    ?
 
    stop_
 
@@ -81080,7 +81189,7 @@ save__dipole_dipole_relax_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the dipole-dipole relaxation data as 
-ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+ASCII text in the text block that is the value to the '_Dipole_dipole_relax_list.Text_data' 
 tag.
 ;
 
@@ -82700,7 +82809,7 @@ save__cross_correlation_dd_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the cross-correlation dipole-dipole relaxation 
-data as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+data as ASCII text in the text block that is the value to the '_Cross_correlation_DD_list.Text_data' 
 tag.
 ;
 
@@ -87337,7 +87446,7 @@ save__order_parameter_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Order_parameter_list.Text_data' tag.
 ;
 
    _item.name                  '_order_parameter_list.text_data_format'
@@ -89028,7 +89137,7 @@ save__ph_titration_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the pK, pHmid, and other data as ASCII 
-text in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+text in the text block that is the value to the '_PH_titration_list.Text_data' tag.
 ;
 
    _item.name                  '_ph_titration_list.text_data_format'
@@ -90780,7 +90889,7 @@ save__ph_param_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the pH titration data as ASCII text in 
-the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+the text block that is the value to the '_PH_param_list.Text_data' tag.
 ;
 
    _item.name                  '_ph_param_list.text_data_format'
@@ -91313,7 +91422,7 @@ save__d_h_fractionation_factor_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the deuterium-proton fractionation factor 
-data as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+data as ASCII text in the text block that is the value to the '_D_H_fractionation_factor_list.Text_data' 
 tag.
 ;
 
@@ -92532,7 +92641,8 @@ save__deduced_secd_struct_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the secondary structure data as ASCII 
-text in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+text in the text block that is the value to the '_Deduced_secd_struct_list.Text_data' 
+tag.
 ;
 
    _item.name                  '_deduced_secd_struct_list.text_data_format'
@@ -94205,7 +94315,7 @@ save__deduced_h_bond_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the deduced hydrogen bond data as ASCII 
-text in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+text in the text block that is the value to the '_Deduced_H_bond_list.Text_data' tag.
 ;
 
    _item.name                  '_deduced_h_bond_list.text_data_format'
@@ -100456,6 +100566,7 @@ of the set of models reported in the Atom_site category.
    'representative lowest energy'    ?
    'representative closest to the mean'    ?
    'representative average minimized'    ?
+   'representative lowest overall target function'    ?
 
    stop_
 
@@ -108147,6 +108258,7 @@ Local unique identifier for the listed constraint file.
       _item.mandatory_code
 
   '_constraint_file.id'                                  'constraint_file'               no
+  '_gen_dist_constraint_list.constraint_file_id'         'gen_dist_constraint_list'      no
   '_distance_constraint_list.constraint_file_id'         'distance_constraint_list'      no
   '_torsion_angle_constraint_list.constraint_file_id'                       'torsion_angle_constraint_list'      no
   '_rdc_constraint_list.constraint_file_id'              'rdc_constraint_list'           no
@@ -108162,6 +108274,7 @@ Local unique identifier for the listed constraint file.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_gen_dist_constraint_list.constraint_file_id'         '_constraint_file.id'
   '_distance_constraint_list.constraint_file_id'         '_constraint_file.id'
   '_torsion_angle_constraint_list.constraint_file_id'                       '_constraint_file.id'
   '_rdc_constraint_list.constraint_file_id'              '_constraint_file.id'
@@ -108296,6 +108409,7 @@ Local unique identifier for a block of constraints within the constraint file.
       _item.mandatory_code
 
   '_constraint_file.block_id'                            'constraint_file'               no
+  '_gen_dist_constraint_list.block_id'                   'gen_dist_constraint_list'      no
   '_distance_constraint_list.block_id'                   'distance_constraint_list'      no
   '_torsion_angle_constraint_list.block_id'              'torsion_angle_constraint_list'      no
   '_rdc_constraint_list.block_id'                        'rdc_constraint_list'           no
@@ -108311,6 +108425,7 @@ Local unique identifier for a block of constraints within the constraint file.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_gen_dist_constraint_list.block_id'                   '_constraint_file.block_id'
   '_distance_constraint_list.block_id'                   '_constraint_file.block_id'
   '_torsion_angle_constraint_list.block_id'              '_constraint_file.block_id'
   '_rdc_constraint_list.block_id'                        '_constraint_file.block_id'
@@ -109351,7 +109466,7 @@ save__angular_order_parameter_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the angular order parameter data as ASCII 
-text in the text block that is the value to the '_Assigned_chem_shift.Text_data' 
+text in the text block that is the value to the '_Angular_order_parameter_list.Text_data' 
 tag.
 ;
 
@@ -114269,6 +114384,2973 @@ Pointer to '_Other_struct_feature_list.ID'
 
 save_
 
+save_gen_dist_constraint_list
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_list'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_list.entry_id'
+     '_gen_dist_constraint_list.id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the saveframe
+;
+
+   _item.name                  '_gen_dist_constraint_list.sf_category'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.sf_framecode
+
+   _item_description.description
+;
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
+;
+
+   _item.name                  '_gen_dist_constraint_list.sf_framecode'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'framecode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_list.entry_id'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.id
+
+   _item_description.description
+;
+Unique identifier for the list of reported distance constraints.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_gen_dist_constraint_list.id'                         'gen_dist_constraint_list'      yes
+  '_gen_dist_constraint_expt.gen_dist_constraint_list_id'                   'gen_dist_constraint_expt'      yes
+  '_gen_dist_constraint_software.gen_dist_constraint_list_id'               'gen_dist_constraint_software'       yes
+  '_gen_dist_constraint_software_param.gen_dist_constraint_list_id'         'gen_dist_constraint_software_param' yes
+  '_gen_dist_constraint.gen_dist_constraint_list_id'                        'gen_dist_constraint'           yes
+  '_gen_dist_constraint_comment_org.gen_dist_constraint_list_id'            'gen_dist_constraint_comment_org'    yes
+  '_gen_dist_constraint_parse_err.gen_dist_constraint_list_id'              'gen_dist_constraint_parse_err'      yes
+  '_gen_dist_constraint_parse_file.gen_dist_constraint_list_id'             'gen_dist_constraint_parse_file'     yes
+  '_gen_dist_constraint_conv_err.gen_dist_constraint_list_id'               'gen_dist_constraint_conv_err'       yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_gen_dist_constraint_expt.gen_dist_constraint_list_id'                   '_gen_dist_constraint_list.id'
+  '_gen_dist_constraint_software.gen_dist_constraint_list_id'               '_gen_dist_constraint_list.id'
+  '_gen_dist_constraint_software_param.gen_dist_constraint_list_id'         '_gen_dist_constraint_list.id'
+  '_gen_dist_constraint.gen_dist_constraint_list_id'                        '_gen_dist_constraint_list.id'
+  '_gen_dist_constraint_comment_org.gen_dist_constraint_list_id'            '_gen_dist_constraint_list.id'
+  '_gen_dist_constraint_parse_err.gen_dist_constraint_list_id'              '_gen_dist_constraint_list.id'
+  '_gen_dist_constraint_parse_file.gen_dist_constraint_list_id'             '_gen_dist_constraint_list.id'
+  '_gen_dist_constraint_conv_err.gen_dist_constraint_list_id'               '_gen_dist_constraint_list.id'
+
+  stop_
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.data_file_name
+
+   _item_description.description
+;
+Name of the uploaded file that contains the distance constraint data.
+;
+
+   _item.name                  '_gen_dist_constraint_list.data_file_name'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.constraint_type
+
+   _item_description.description
+;
+The type of reported distance constraint.
+;
+
+   _item.name                  '_gen_dist_constraint_list.constraint_type'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   NOE    'Distance constraints determined from NOE experiments'
+   'NOE build-up'    'Distance constraints determined from a series of NOE experiments with different mixing times'
+   'NOE not seen'    'Distance constraints supplied when an expected NOE was not observed'
+   ROE    'Distance constraints determined from ROE experiments'
+   'ROE build-up'    'Distance constraints determine from a series of ROE experiments with different mixing times'
+   'hydrogen bond'    'Hydrogen bond distance constraints'
+   'disulfide bond'    'Disulfide bond distance constraints'
+   'paramagnetic relaxation'    'Distance constraints determined from paramagnetic relaxation studies'
+   symmetry    'Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer'
+   'general distance'    'Specific distance constraint is not known'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+NOE
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.constraint_file_id
+
+   _item_description.description
+;
+Pointer to '_Constraint_file.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_list.constraint_file_id'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.block_id
+
+   _item_description.description
+;
+Pointer to '_Constraint_file.Block_ID'
+;
+
+   _item.name                  '_gen_dist_constraint_list.block_id'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.details
+
+   _item_description.description
+;
+Text description providing additional information about the reported distance 
+constraints.
+;
+
+   _item.name                  '_gen_dist_constraint_list.details'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.text_data_format
+
+   _item_description.description
+;
+The data format used to represent the order parameter data as ASCII text 
+in the text block that is the value to the '_Gen_dist_constraint_list.Text_data' tag.
+;
+
+   _item.name                  '_gen_dist_constraint_list.text_data_format'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_list.text_data
+
+   _item_description.description
+;
+A set of distance constraint data formatted as ASCII text.
+;
+
+   _item.name                  '_gen_dist_constraint_list.text_data'
+   _item.category_id              'gen_dist_constraint_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint_expt
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_expt'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_expt.experiment_id'
+     '_gen_dist_constraint_expt.sample_id'
+     '_gen_dist_constraint_expt.sample_state'
+     '_gen_dist_constraint_expt.entry_id'
+     '_gen_dist_constraint_expt.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.experiment_id
+
+   _item_description.description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_expt.experiment_id'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.experiment_name
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _item.name                  '_gen_dist_constraint_expt.experiment_name'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ?    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.method_id
+
+   _item_description.description
+;
+Pointer to '_Method.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_expt.method_id'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.method_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _item.name                  '_gen_dist_constraint_expt.method_label'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            no
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.sample_id
+
+   _item_description.description
+;
+Pointer to '_Sample.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_expt.sample_id'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.sample_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'sample'.
+;
+
+   _item.name                  '_gen_dist_constraint_expt.sample_label'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            yes
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.sample_state
+
+   _item_description.description
+;
+Physical state of the sample either anisotropic or isotropic.
+;
+
+   _item.name                  '_gen_dist_constraint_expt.sample_state'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_expt.entry_id'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_expt.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_expt.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint_expt'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint_software
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_software'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_software.software_id'
+     '_gen_dist_constraint_software.entry_id'
+     '_gen_dist_constraint_software.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software.software_id
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_software.software_id'
+   _item.category_id              'gen_dist_constraint_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software.software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _item.name                  '_gen_dist_constraint_software.software_label'
+   _item.category_id              'gen_dist_constraint_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software.method_id
+
+   _item_description.description
+;
+Pointer to '_Method.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_software.method_id'
+   _item.category_id              'gen_dist_constraint_software'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software.method_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _item.name                  '_gen_dist_constraint_software.method_label'
+   _item.category_id              'gen_dist_constraint_software'
+   _item.mandatory_code            no
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_software.entry_id'
+   _item.category_id              'gen_dist_constraint_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_software.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint_software'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint_software_param
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_software_param'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_software_param.software_id'
+     '_gen_dist_constraint_software_param.type'
+     '_gen_dist_constraint_software_param.entry_id'
+     '_gen_dist_constraint_software_param.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software_param.software_id
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_software_param.software_id'
+   _item.category_id              'gen_dist_constraint_software_param'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software_param.type
+
+   _item_description.description
+;
+A code or name for the parameter in the software package.
+;
+
+   _item.name                  '_gen_dist_constraint_software_param.type'
+   _item.category_id              'gen_dist_constraint_software_param'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'averaging method'    ?
+   'number monomers'    ?
+   'pseudoatom corrections'    ?
+   'potential function'    ?
+   temperature    ?
+   exponent    ?
+   'switch distance'    ?
+   'asymptote slope'    ?
+   B_high    ?
+   ceiling    ?
+   'negative offset'    ?
+   'scaling constant'    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software_param.value
+
+   _item_description.description
+;
+The value assigned to the software parameter$ if a single value is appropriate.
+;
+
+   _item.name                  '_gen_dist_constraint_software_param.value'
+   _item.category_id              'gen_dist_constraint_software_param'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software_param.range
+
+   _item_description.description
+;
+The value range assigned to the software parameter$ if range is appropriate.
+;
+
+   _item.name                  '_gen_dist_constraint_software_param.range'
+   _item.category_id              'gen_dist_constraint_software_param'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software_param.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_software_param.entry_id'
+   _item.category_id              'gen_dist_constraint_software_param'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_software_param.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_software_param.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint_software_param'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint.entry_id'
+     '_gen_dist_constraint.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.id
+
+   _item_description.description
+;
+Unique identifier for the reported distance constraint.
+;
+
+   _item.name                  '_gen_dist_constraint.id'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.member_id
+
+   _item_description.description
+;
+Unique identifier for a member of a constraint defined by the value to 
+the tag '_Gen_dist_constraint.ID'. For distance constraints with ambiguity that 
+is related by a logical operator (or, and, etc.), the constraint will have two or 
+more members.
+;
+
+   _item.name                  '_gen_dist_constraint.member_id'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.member_logic_code
+
+   _item_description.description
+;
+Code that defines the logical relationship (or, and, etc.) between the 
+set of distance constraint members. Every member of the constraint must be assigned 
+a value.
+;
+
+   _item.name                  '_gen_dist_constraint.member_logic_code'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   OR    ?
+   AND    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.assembly_atom_id_1
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                  '_gen_dist_constraint.assembly_atom_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.entity_assembly_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.entity_assembly_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.entity_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.entity_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.comp_index_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.comp_index_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.seq_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                  '_gen_dist_constraint.seq_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.comp_id_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.comp_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.atom_id_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                  '_gen_dist_constraint.atom_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'atcode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.atom_type_1
+
+   _item_description.description
+;
+The value for this tag is a standard IUPAC abbreviation for an element 
+(i.e., H, C, P, etc).
+;
+
+   _item.name                  '_gen_dist_constraint.atom_type_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.atom_isotope_number_1
+
+   _item_description.description
+;
+The number of combined protons and neutrons for the chemical element defined 
+by the tag '_Atom_type' or any of its related tags.
+;
+
+   _item.name                  '_gen_dist_constraint.atom_isotope_number_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.resonance_id_1
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.resonance_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.assembly_atom_id_2
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                  '_gen_dist_constraint.assembly_atom_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.entity_assembly_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.entity_assembly_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.entity_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.entity_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.comp_index_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.comp_index_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.seq_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                  '_gen_dist_constraint.seq_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.comp_id_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.comp_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.atom_id_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                  '_gen_dist_constraint.atom_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'atcode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.atom_type_2
+
+   _item_description.description
+;
+The value for this tag is a standard IUPAC abbreviation for an element 
+(i.e., H, C, P, etc).
+;
+
+   _item.name                  '_gen_dist_constraint.atom_type_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.atom_isotope_number_2
+
+   _item_description.description
+;
+The number of combined protons and neutrons for the chemical element defined 
+by the tag '_Atom_type' or any of its related tags.
+;
+
+   _item.name                  '_gen_dist_constraint.atom_isotope_number_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.resonance_id_2
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.resonance_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.intensity_val
+
+   _item_description.description
+;
+Intensity val
+;
+
+   _item.name                  '_gen_dist_constraint.intensity_val'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.intensity_lower_val_err
+
+   _item_description.description
+;
+Intensity lower val err
+;
+
+   _item.name                  '_gen_dist_constraint.intensity_lower_val_err'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.intensity_upper_val_err
+
+   _item_description.description
+;
+Intensity upper val err
+;
+
+   _item.name                  '_gen_dist_constraint.intensity_upper_val_err'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.distance_val
+
+   _item_description.description
+;
+A single value assigned to the distance constraint.
+;
+
+   _item.name                  '_gen_dist_constraint.distance_val'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+3
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.distance_lower_bound_val
+
+   _item_description.description
+;
+The value of the lower bound for the distance constraint.
+;
+
+   _item.name                  '_gen_dist_constraint.distance_lower_bound_val'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+2
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.distance_upper_bound_val
+
+   _item_description.description
+;
+The value of the upper bound for the distance constraint.
+;
+
+   _item.name                  '_gen_dist_constraint.distance_upper_bound_val'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+4
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.contribution_fractional_val
+
+   _item_description.description
+;
+Fractional contribution of the constraint
+;
+
+   _item.name                  '_gen_dist_constraint.contribution_fractional_val'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.spectral_peak_id
+
+   _item_description.description
+;
+Pointer to '_Peak.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.spectral_peak_id'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.spectral_peak_list_id
+
+   _item_description.description
+;
+Pointer to '_Spectral_peak_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.spectral_peak_list_id'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_asym_id_1
+
+   _item_description.description
+;
+An alternative identifier for Asym_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not need to correspond 
+to the value for Asym_ID. This item is provided as a place holder for 
+information extracted from distance constraint files generated by various software 
+applications.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_asym_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_entity_assembly_id_1
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_entity_assembly_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+2
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_seq_id_1
+
+   _item_description.description
+;
+An alternative identifier for Seq_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_seq_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_comp_id_1
+
+   _item_description.description
+;
+An alternative identifier for Comp_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_comp_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_atom_id_1
+
+   _item_description.description
+;
+An alternative identifier for Atom_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_atom_id_1'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_asym_id_2
+
+   _item_description.description
+;
+An alternative identifier for Asym_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not need to correspond 
+to the value for Asym_ID. This item is provided as a place holder for 
+information extracted from distance constraint files generated by various software 
+applications.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_asym_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_entity_assembly_id_2
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_id that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_entity_assembly_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+2
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_seq_id_2
+
+   _item_description.description
+;
+An alternative identifier for Seq_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_seq_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_comp_id_2
+
+   _item_description.description
+;
+An alternative identifier for Comp_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_comp_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.auth_atom_id_2
+
+   _item_description.description
+;
+An alternative identifier for Atom_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_gen_dist_constraint.auth_atom_id_2'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.entry_id'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint_comment_org
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_comment_org'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_comment_org.id'
+     '_gen_dist_constraint_comment_org.entry_id'
+     '_gen_dist_constraint_comment_org.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.id
+
+   _item_description.description
+;
+An integer value that uniquely identifies the comment extracted from the 
+distance constraint file.
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.id'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.comment_text
+
+   _item_description.description
+;
+The text of the comment parsed from the distance constraint file.
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.comment_text'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            yes
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.comment_begin_line
+
+   _item_description.description
+;
+The line in the distance constraint file where the comment begins.
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.comment_begin_line'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.comment_begin_column
+
+   _item_description.description
+;
+The column in the distance constraint file where the comment begins.
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.comment_begin_column'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.comment_end_line
+
+   _item_description.description
+;
+The line in the distance constraint file where the comment ends.
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.comment_end_line'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.comment_end_column
+
+   _item_description.description
+;
+The column in the distance constraint file where the comment ends.
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.comment_end_column'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.entry_id'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_comment_org.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_comment_org.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint_comment_org'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint_parse_err
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_parse_err'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_parse_err.id'
+     '_gen_dist_constraint_parse_err.entry_id'
+     '_gen_dist_constraint_parse_err.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.id
+
+   _item_description.description
+;
+An integer value that uniquely identifies the error that occurred in parsing 
+the distance constaint file.
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.id'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.content
+
+   _item_description.description
+;
+The text content of the parse error.
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.content'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.begin_line
+
+   _item_description.description
+;
+The line in the distance constraint file where the parse error began.
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.begin_line'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.begin_column
+
+   _item_description.description
+;
+The column in the distance constraint file where the parse error began.
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.begin_column'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.end_line
+
+   _item_description.description
+;
+The line in the distance constraint file where the parse error ended.
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.end_line'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.end_column
+
+   _item_description.description
+;
+The column in the distance constraint file where the parse error ended.
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.end_column'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.entry_id'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_err.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_parse_err.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint_parse_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint_parse_file
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_parse_file'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_parse_file.id'
+     '_gen_dist_constraint_parse_file.entry_id'
+     '_gen_dist_constraint_parse_file.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_file.id
+
+   _item_description.description
+;
+An integer that uniquely defines the file from other files in the list.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_gen_dist_constraint_parse_file.id'                   'gen_dist_constraint_parse_file'     yes
+  '_gen_dist_constraint_conv_err.gen_dist_constraint_parse_file_id'         'gen_dist_constraint_conv_err'       yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_gen_dist_constraint_conv_err.gen_dist_constraint_parse_file_id'         '_gen_dist_constraint_parse_file.id'
+
+  stop_
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_file.name
+
+   _item_description.description
+;
+Name of the file from which the distance constraints were parsed.
+;
+
+   _item.name                  '_gen_dist_constraint_parse_file.name'
+   _item.category_id              'gen_dist_constraint_parse_file'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_file.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_parse_file.entry_id'
+   _item.category_id              'gen_dist_constraint_parse_file'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_parse_file.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_parse_file.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint_parse_file'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_gen_dist_constraint_conv_err
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'gen_dist_constraint_conv_err'
+
+   loop_
+     _category_key.name
+
+     '_gen_dist_constraint_conv_err.id'
+     '_gen_dist_constraint_conv_err.entry_id'
+     '_gen_dist_constraint_conv_err.gen_dist_constraint_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_conv_err.id
+
+   _item_description.description
+;
+An integer value that uniquely identifies the conversion error.
+;
+
+   _item.name                  '_gen_dist_constraint_conv_err.id'
+   _item.category_id              'gen_dist_constraint_conv_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_conv_err.gen_dist_constraint_parse_file_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_parse_file.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_conv_err.gen_dist_constraint_parse_file_id'
+   _item.category_id              'gen_dist_constraint_conv_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_conv_err.parse_file_constraintaint_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_conv_err.parse_file_constraintaint_id'
+   _item.category_id              'gen_dist_constraint_conv_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_conv_err.conv_error_type
+
+   _item_description.description
+;
+Type of constraint conversion error.
+;
+
+   _item.name                  '_gen_dist_constraint_conv_err.conv_error_type'
+   _item.category_id              'gen_dist_constraint_conv_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_conv_err.conv_error_note
+
+   _item_description.description
+;
+Text providing additional information regarding a converion error.
+;
+
+   _item.name                  '_gen_dist_constraint_conv_err.conv_error_note'
+   _item.category_id              'gen_dist_constraint_conv_err'
+   _item.mandatory_code            no
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_conv_err.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_conv_err.entry_id'
+   _item.category_id              'gen_dist_constraint_conv_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__gen_dist_constraint_conv_err.gen_dist_constraint_list_id
+
+   _item_description.description
+;
+Pointer to '_Gen_dist_constraint_list.ID'
+;
+
+   _item.name                  '_gen_dist_constraint_conv_err.gen_dist_constraint_list_id'
+   _item.category_id              'gen_dist_constraint_conv_err'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save_distance_constraint_list
    _category.description
 ;
@@ -114579,7 +117661,7 @@ save__distance_constraint_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Distance_constraint_list.Text_data' tag.
 ;
 
    _item.name                  '_distance_constraint_list.text_data_format'
@@ -118778,7 +121860,8 @@ save__torsion_angle_constraint_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_Torsion_angle_constraint_list.Text_data' 
+tag.
 ;
 
    _item.name                  '_torsion_angle_constraint_list.text_data_format'
@@ -122338,7 +125421,7 @@ save__rdc_constraint_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_RDC_constraint_list.Text_data' tag.
 ;
 
    _item.name                  '_rdc_constraint_list.text_data_format'
@@ -124943,7 +128026,8 @@ save__j_three_bond_constraint_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_J_three_bond_constraint_list.Text_data' 
+tag.
 ;
 
    _item.name                  '_j_three_bond_constraint_list.text_data_format'
@@ -127376,7 +130460,7 @@ save__ca_cb_constraint_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_CA_CB_constraint_list.Text_data' tag.
 ;
 
    _item.name                  '_ca_cb_constraint_list.text_data_format'
@@ -130128,7 +133212,8 @@ save__h_chem_shift_constraint_list.text_data_format
    _item_description.description
 ;
 The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+in the text block that is the value to the '_H_chem_shift_constraint_list.Text_data' 
+tag.
 ;
 
    _item.name                  '_h_chem_shift_constraint_list.text_data_format'
@@ -131554,8 +134639,8 @@ save__other_constraint_list.text_data_format
 
    _item_description.description
 ;
-A set of constraint data of a type not modeled explicitly in the dictionary 
-formatted as ASCII text.
+The data format used to represent the other constraint data as ASCII text 
+in the text block that is the value to the '_Other_constraint_list.Text_data' tag.
 ;
 
    _item.name                  '_other_constraint_list.text_data_format'

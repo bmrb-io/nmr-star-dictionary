@@ -2661,12 +2661,12 @@ save__Entity.Nstd_chirality
      _item_enumeration_value
      _item_enumeration_description
 
-    yes    .
-    no     .
+    yes    'polymer contains at least one monomer with different chirality'
+    no     'polymer contains no monomers with different chirality'
 
     stop_
 
-save_
+save_                                   
 
 
 save__Entity.Nstd_monomer
@@ -4403,8 +4403,8 @@ save__Heteronucl_T1_list.T1_coherence_type
       _item_enumeration_value
       _item_enumeration_description
 
-         Iz              .
-         Sz              . 
+         Iz              'zero quantum$ longitudinal'
+         Sz              'zero quantum$ longitudinal'
                          
     stop_
 
@@ -4670,9 +4670,9 @@ save__General_relaxation_list.Relaxation_coherence_type
       _item_enumeration_description
 
          I(+$-)S(-$+)              'zero quantum'
-         IzSz                      'longitudinal spin order'
-         I(+$-)Sz                  'single quantum antiphase'
-         IzS(+$-)                  'single quantum antiphase'
+         IzSz                      'zero quantum$longitudinal spin order'
+         I(+$-)Sz                  'single quantum& antiphase'
+         IzS(+$-)                  'single quantum& antiphase'
          I(+$-)S(+$-)              'double quantum'
          
     

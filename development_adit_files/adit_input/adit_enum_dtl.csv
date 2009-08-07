@@ -83,10 +83,10 @@ TBL_BEGIN,?,?,?
 306,2,0,"Flag indicating that the atom is in a poorly ordered region of the structure."
 97,1,yes,enumeration_text
 97,2,no,enumeration_text
-335,1,?,enumeration_text
-336,1,isotropic,enumeration_text
-336,2,anisotropic,enumeration_text
-336,3,solid,enumeration_text
+340,1,?,enumeration_text
+341,1,isotropic,enumeration_text
+341,2,anisotropic,enumeration_text
+341,3,solid,enumeration_text
 129,1,yes,enumeration_text
 129,2,no,enumeration_text
 130,1,yes,enumeration_text
@@ -113,6 +113,8 @@ TBL_BEGIN,?,?,?
 144,1,N,"atom is not a chiral center"
 144,2,E,"(E)- alkene (German$ entgegen = opposite)"
 144,3,Z,"(Z)- alkene (German$ zusammen = together)"
+144,4,R,"rectus - right handed configuration"
+144,5,S,"sinister - left handed configuration"
 147,1,main,"main chain of an amino acid"
 147,2,side,"side chain of an amino acid"
 147,3,base,"base of a nucleic acid"
@@ -475,6 +477,7 @@ TBL_BEGIN,?,?,?
 209,8,900,enumeration_text
 209,9,920,enumeration_text
 209,10,950,enumeration_text
+209,11,1000,enumeration_text
 274,1,?,enumeration_text
 275,1,isotropic,enumeration_text
 275,2,anisotropic,enumeration_text
@@ -499,20 +502,26 @@ TBL_BEGIN,?,?,?
 68,4,other_data_list,enumeration_text
 68,5,RDCs,enumeration_text
 68,6,order_parameters,enumeration_text
-68,7,spectral_density_values,enumeration_text
-68,8,H_exch_rates,enumeration_text
-68,9,H_exch_protection_factors,enumeration_text
-68,10,pKa_value_data_set,enumeration_text
-68,11,pH_NMR_param_list,enumeration_text
-68,12,D_H_fractionation_factors,enumeration_text
-68,13,molecular_axis_determinations,enumeration_text
-68,14,deduced_secd_struct_features,enumeration_text
-68,15,deduced_hydrogen_bonds,enumeration_text
-68,16,representative_conformer,enumeration_text
-68,17,conformer_family_coord_set,enumeration_text
-68,18,heteronucl_T1_relaxation,enumeration_text
-68,19,heteronucl_T2_relaxation,enumeration_text
-68,20,heteronucl_NOEs,enumeration_text
+68,7,.,enumeration_text
+68,8,.,enumeration_text
+68,9,.,enumeration_text
+68,10,.,enumeration_text
+68,11,.,enumeration_text
+68,12,.,enumeration_text
+68,13,.,enumeration_text
+68,14,.,enumeration_text
+68,15,.,enumeration_text
+68,16,.,enumeration_text
+68,17,.,enumeration_text
+68,18,general_relaxation,enumeration_text
+68,19,heteronucl_T1_relaxation,enumeration_text
+68,20,.,enumeration_text
+68,21,.,enumeration_text
+68,22,homonucl_NOEs,enumeration_text
+68,23,dipole_dipole_relaxation,enumeration_text
+68,24,dipole_dipole_cross_correlation_relaxation,enumeration_text
+68,25,CSA_CSA_cross_correlation_relaxation,enumeration_text
+68,26,dipole_CSA_cross_correlation_relaxation,enumeration_text
 69,1,1H chemical shifts,enumeration_text
 69,2,2H chemical shifts,enumeration_text
 69,3,3H chemical shifts,enumeration_text
@@ -589,40 +598,40 @@ TBL_BEGIN,?,?,?
 270,1,s-1,enumeration_text
 270,2,ms-1,enumeration_text
 270,3,us-1,enumeration_text
-326,1,?,enumeration_text
-327,1,isotropic,enumeration_text
-327,2,anisotropic,enumeration_text
-327,3,solid,enumeration_text
-325,1,NOE,"Distance constraints determined from NOE experiments"
-325,2,NOE build-up,"Distance constraints determined from a series of NOE experiments with different mixing times"
-325,3,NOE not seen,"Distance constraints supplied when an expected NOE was not observed"
-325,4,ROE,"Distance constraints determined from ROE experiments"
-325,5,ROE build-up,"Distance constraints determine from a series of ROE experiments with different mixing times"
-325,6,hydrogen bond,"Hydrogen bond distance constraints"
-325,7,disulfide bond,"Disulfide bond distance constraints"
-325,8,paramagnetic relaxation,"Distance constraints determined from paramagnetic relaxation studies"
-325,9,symmetry,"Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer"
-325,10,general distance,"Specific distance constraint is not known"
-328,1,averaging method,enumeration_text
-328,2,number monomers,enumeration_text
-328,3,pseudoatom corrections,enumeration_text
-328,4,potential function,enumeration_text
-328,5,temperature,enumeration_text
-328,6,exponent,enumeration_text
-328,7,switch distance,enumeration_text
-328,8,asymptote slope,enumeration_text
-328,9,B_high,enumeration_text
-328,10,ceiling,enumeration_text
-328,11,negative offset,enumeration_text
-328,12,scaling constant,enumeration_text
+331,1,?,enumeration_text
+332,1,isotropic,enumeration_text
+332,2,anisotropic,enumeration_text
+332,3,solid,enumeration_text
+330,1,NOE,"Distance constraints determined from NOE experiments"
+330,2,NOE build-up,"Distance constraints determined from a series of NOE experiments with different mixing times"
+330,3,NOE not seen,"Distance constraints supplied when an expected NOE was not observed"
+330,4,ROE,"Distance constraints determined from ROE experiments"
+330,5,ROE build-up,"Distance constraints determine from a series of ROE experiments with different mixing times"
+330,6,hydrogen bond,"Hydrogen bond distance constraints"
+330,7,disulfide bond,"Disulfide bond distance constraints"
+330,8,paramagnetic relaxation,"Distance constraints determined from paramagnetic relaxation studies"
+330,9,symmetry,"Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer"
+330,10,general distance,"Specific distance constraint is not known"
+333,1,averaging method,enumeration_text
+333,2,number monomers,enumeration_text
+333,3,pseudoatom corrections,enumeration_text
+333,4,potential function,enumeration_text
+333,5,temperature,enumeration_text
+333,6,exponent,enumeration_text
+333,7,switch distance,enumeration_text
+333,8,asymptote slope,enumeration_text
+333,9,B_high,enumeration_text
+333,10,ceiling,enumeration_text
+333,11,negative offset,enumeration_text
+333,12,scaling constant,enumeration_text
 85,1,yes,enumeration_text
 85,2,no,enumeration_text
 87,1,yes,enumeration_text
 87,2,no,enumeration_text
 88,1,yes,enumeration_text
 88,2,no,enumeration_text
-105,1,yes,enumeration_text
-105,2,no,enumeration_text
+105,1,yes,"polymer contains at least one monomer with different chirality"
+105,2,no,"polymer contains no monomers with different chirality"
 104,1,yes,enumeration_text
 104,2,no,enumeration_text
 100,1,protein,enumeration_text
@@ -1017,10 +1026,38 @@ TBL_BEGIN,?,?,?
 324,3,kcal/mol*A4,van der Waals
 324,4,kcal/mol*Hz2,dipolar coupling; scalar couplings; T1/T2; CSA
 324,5,kcal/mol*ppm2,Chemical shifts; pseudocontact shifts
-337,1,?,enumeration_text
-338,1,isotropic,enumeration_text
-338,2,anisotropic,enumeration_text
-338,3,solid,enumeration_text
+325,1,NOE,"Distance constraints determined from NOE experiments"
+325,2,NOE build-up,"Distance constraints determined from a series of NOE experiments with different mixing times"
+325,3,NOE not seen,"Distance constraints supplied when an expected NOE was not observed"
+325,4,ROE,"Distance constraints determined from ROE experiments"
+325,5,ROE build-up,"Distance constraints determine from a series of ROE experiments with different mixing times"
+325,6,hydrogen bond,"Hydrogen bond distance constraints"
+325,7,disulfide bond,"Disulfide bond distance constraints"
+325,8,paramagnetic relaxation,"Distance constraints determined from paramagnetic relaxation studies"
+325,9,symmetry,"Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer"
+325,10,general distance,"Specific distance constraint is not known"
+326,1,?,enumeration_text
+327,1,isotropic,enumeration_text
+327,2,anisotropic,enumeration_text
+327,3,solid,enumeration_text
+328,1,averaging method,enumeration_text
+328,2,number monomers,enumeration_text
+328,3,pseudoatom corrections,enumeration_text
+328,4,potential function,enumeration_text
+328,5,temperature,enumeration_text
+328,6,exponent,enumeration_text
+328,7,switch distance,enumeration_text
+328,8,asymptote slope,enumeration_text
+328,9,B_high,enumeration_text
+328,10,ceiling,enumeration_text
+328,11,negative offset,enumeration_text
+328,12,scaling constant,enumeration_text
+329,1,OR,enumeration_text
+329,2,AND,enumeration_text
+342,1,?,enumeration_text
+343,1,isotropic,enumeration_text
+343,2,anisotropic,enumeration_text
+343,3,solid,enumeration_text
 243,1,?,enumeration_text
 244,1,isotropic,enumeration_text
 244,2,anisotropic,enumeration_text
@@ -1033,8 +1070,8 @@ TBL_BEGIN,?,?,?
 248,1,isotropic,enumeration_text
 248,2,anisotropic,enumeration_text
 248,3,solid,enumeration_text
-245,1,Iz,enumeration_text
-245,2,Sz,enumeration_text
+245,1,Iz,"zero quantum$ longitudinal"
+245,2,Sz,"zero quantum$ longitudinal"
 246,1,s,enumeration_text
 246,2,s-1,enumeration_text
 246,3,ms,enumeration_text
@@ -1078,18 +1115,45 @@ TBL_BEGIN,?,?,?
 267,1,s-1,enumeration_text
 267,2,ms-1,enumeration_text
 267,3,us-1,enumeration_text
-265,1,I(+$-)S(-$+),"zero quantum"
-265,2,IzSz,"longitudinal spin order"
-265,3,I(+$-)Sz,"single quantum antiphase"
-265,4,IzS(+$-),"single quantum antiphase"
-265,5,I(+$-)S(+$-),"double quantum"
+265,1,Iz,"R1                           longitudinal"
+265,2,Sz,"R1                           longitudinal"
+265,3,I+,"R1rho                        transverse"
+265,4,I-,"R1rho                        transverse"
+265,5,S+,"R1rho                        transverse"
+265,6,S-,"R1rho                        transverse"
+265,7,(I+)+(I-),"R1rho                        transverse"
+265,8,(S+)+(S-),"R1rho                        transverse"
+265,9,I+,"R2                           transverse"
+265,10,I-,"R2                           transverse"
+265,11,S+,"R2                           transverse"
+265,12,S-,"R2                           transverse"
+265,13,(I+)+(I-),"R2                           transverse"
+265,14,(S+)+(S-),"R2                           transverse"
+265,15,I-S+,"ZQ relaxation"
+265,16,I+S-,"ZQ relaxation"
+265,17,(I+S-)+(I-S+),"ZQ relaxation"
+265,18,IzSz,"longitudinal spin order"
+265,19,I+Sz,"single quantum antiphase"
+265,20,I-Sz,"single quantum antiphase"
+265,21,IzS+,"single quantum antiphase"
+265,22,IzS-,"single quantum antiphase"
+265,23,((I+)+(I-))Sz,"single quantum antiphase"
+265,24,Iz((S+)+(S-)),"single quantum antiphase"
+265,25,I+S+,"DQ relaxation"
+265,26,I-S-,"DQ relaxation"
+265,27,(I+S+)+(I-S-),"DQ relaxation"
 266,1,s-1,enumeration_text
 266,2,ms-1,enumeration_text
-266,3,s,enumeration_text
-266,4,ms,enumeration_text
+266,3,us-1,enumeration_text
+266,4,ns-1,enumeration_text
+266,5,ps-1,enumeration_text
 263,1,methanol,enumeration_text
+263,2,monoethylene glycol,enumeration_text
+263,3,no calibration applied,enumeration_text
 264,1,single scan interleaving,enumeration_text
 264,2,temperature compensation block,enumeration_text
+264,3,single scan interleaving and temperature compensation block,enumeration_text
+264,4,no temperature control applied,enumeration_text
 241,1,peak volume,enumeration_text
 241,2,peak height,enumeration_text
 241,3,contour count,enumeration_text
@@ -1111,10 +1175,10 @@ TBL_BEGIN,?,?,?
 218,1,isotropic,enumeration_text
 218,2,anisotropic,enumeration_text
 218,3,solid,enumeration_text
-333,1,?,enumeration_text
-334,1,isotropic,enumeration_text
-334,2,anisotropic,enumeration_text
-334,3,solid,enumeration_text
+338,1,?,enumeration_text
+339,1,isotropic,enumeration_text
+339,2,anisotropic,enumeration_text
+339,3,solid,enumeration_text
 163,1,?,enumeration_text
 164,1,?,enumeration_text
 165,1,?,enumeration_text
@@ -1151,27 +1215,29 @@ TBL_BEGIN,?,?,?
 185,2,COSY,enumeration_text
 182,1,2D 1H-15N HSQC,enumeration_text
 182,2,2D 1H-13C HSQC,enumeration_text
-182,3,2D 1H-1H TOCSY,enumeration_text
-182,4,2D DQF-COSY,enumeration_text
-182,5,2D 1H-1H COSY,enumeration_text
-182,6,2D 1H-1H NOESY,enumeration_text
-182,7,3D CBCA(CO)NH,enumeration_text
-182,8,3D C(CO)NH,enumeration_text
-182,9,3D HNCO,enumeration_text
-182,10,3D HNCA,enumeration_text
-182,11,3D HNCACB,enumeration_text
-182,12,3D HBHA(CO)NH,enumeration_text
-182,13,3D HN(CO)CA,enumeration_text
-182,14,3D H(CCO)NH,enumeration_text
-182,15,3D HCCH-TOCSY,enumeration_text
-182,16,3D HNHA,enumeration_text
-182,17,3D 1H-15N NOESY,enumeration_text
-182,18,3D 1H-15N TOCSY,enumeration_text
-182,19,3D 1H-13C NOESY,enumeration_text
-182,20,3D HNHB,enumeration_text
-182,21,3D HCCH-COSY,enumeration_text
-182,22,3D HCACO,enumeration_text
-182,23,3D HN(COCA)CB,enumeration_text
+182,3,2D 1H-13C HSQC aliphatic,enumeration_text
+182,4,2D 1H-13C HSQC aromatic,enumeration_text
+182,5,2D 1H-1H TOCSY,enumeration_text
+182,6,2D DQF-COSY,enumeration_text
+182,7,2D 1H-1H COSY,enumeration_text
+182,8,2D 1H-1H NOESY,enumeration_text
+182,9,3D CBCA(CO)NH,enumeration_text
+182,10,3D C(CO)NH,enumeration_text
+182,11,3D HNCO,enumeration_text
+182,12,3D HNCA,enumeration_text
+182,13,3D HNCACB,enumeration_text
+182,14,3D HBHA(CO)NH,enumeration_text
+182,15,3D HN(CO)CA,enumeration_text
+182,16,3D H(CCO)NH,enumeration_text
+182,17,3D HCCH-TOCSY,enumeration_text
+182,18,3D HNHA,enumeration_text
+182,19,3D 1H-15N NOESY,enumeration_text
+182,20,3D 1H-15N TOCSY,enumeration_text
+182,21,3D 1H-13C NOESY,enumeration_text
+182,22,3D HNHB,enumeration_text
+182,23,3D HCCH-COSY,enumeration_text
+182,24,3D HCACO,enumeration_text
+182,25,3D HN(COCA)CB,enumeration_text
 183,1,no,enumeration_text
 183,2,yes,enumeration_text
 304,1,not observed,enumeration_text
@@ -1183,6 +1249,7 @@ TBL_BEGIN,?,?,?
 305,2,representative lowest energy,enumeration_text
 305,3,representative closest to the mean,enumeration_text
 305,4,representative average minimized,enumeration_text
+305,5,representative lowest overall target function,enumeration_text
 186,1,uL,enumeration_text
 186,2,mL,enumeration_text
 175,1,400,enumeration_text
@@ -1195,13 +1262,14 @@ TBL_BEGIN,?,?,?
 175,8,900,enumeration_text
 175,9,920,enumeration_text
 175,10,950,enumeration_text
+175,11,1000,enumeration_text
 173,1,Bruker,enumeration_text
 173,2,GE,enumeration_text
 173,3,JEOL,enumeration_text
 173,4,Varian,enumeration_text
 174,1,AM,from Bruker
 174,2,AMX,from Bruker
-174,3,ARX,"from Bruker"
+174,3,ARX,from Bruker
 174,4,Avance,from Bruker
 174,5,CMX,"from Bruker"
 174,6,DMX,from Bruker
@@ -1230,6 +1298,7 @@ TBL_BEGIN,?,?,?
 178,8,900,enumeration_text
 178,9,920,enumeration_text
 178,10,950,enumeration_text
+178,11,1000,enumeration_text
 176,1,Bruker,enumeration_text
 176,2,GE,enumeration_text
 176,3,JEOL,enumeration_text
@@ -1275,10 +1344,10 @@ TBL_BEGIN,?,?,?
 280,3,us,enumeration_text
 280,4,ns,enumeration_text
 280,5,ps,enumeration_text
-339,1,?,enumeration_text
-340,1,isotropic,enumeration_text
-340,2,anisotropic,enumeration_text
-340,3,solid,enumeration_text
+344,1,?,enumeration_text
+345,1,isotropic,enumeration_text
+345,2,anisotropic,enumeration_text
+345,3,solid,enumeration_text
 234,1,?,enumeration_text
 235,1,isotropic,enumeration_text
 235,2,anisotropic,enumeration_text
@@ -1315,10 +1384,10 @@ TBL_BEGIN,?,?,?
 286,2,coupling constant,enumeration_text
 286,3,peak height,enumeration_text
 286,4,peak volume,enumeration_text
-331,1,?,enumeration_text
-332,1,isotropic,enumeration_text
-332,2,anisotropic,enumeration_text
-332,3,solid,enumeration_text
+336,1,?,enumeration_text
+337,1,isotropic,enumeration_text
+337,2,anisotropic,enumeration_text
+337,3,solid,enumeration_text
 228,1,?,enumeration_text
 229,1,isotropic,enumeration_text
 229,2,anisotropic,enumeration_text
@@ -1355,18 +1424,19 @@ TBL_BEGIN,?,?,?
 152,2,solid,enumeration_text
 152,3,bicelle,enumeration_text
 152,4,emulsion,enumeration_text
-152,5,fiber,enumeration_text
+152,5,fiber,"solid-state fiber sample"
 152,6,filamentous virus,enumeration_text
-152,7,gel,enumeration_text
-152,8,liposome,enumeration_text
-152,9,membrane,enumeration_text
-152,10,micelle,enumeration_text
-152,11,lyophilized powder,enumeration_text
-152,12,oriented membrane film,enumeration_text
-152,13,fibrous protein,enumeration_text
-152,14,polycrystalline powder,enumeration_text
-152,15,reverse micelle,enumeration_text
-152,16,single crystal,enumeration_text
+152,7,gel solution,"gel samples used for solution NMR"
+152,8,gel solid,"gel samples used for solid-state NMR"
+152,9,liposome,enumeration_text
+152,10,membrane,enumeration_text
+152,11,micelle,enumeration_text
+152,12,lyophilized powder,enumeration_text
+152,13,oriented membrane film,enumeration_text
+152,14,fibrous protein,enumeration_text
+152,15,polycrystalline powder,enumeration_text
+152,16,reverse micelle,enumeration_text
+152,17,single crystal,enumeration_text
 156,1,M,Molar
 156,2,mM,millimolar
 156,3,uM,micromolar
@@ -1496,72 +1566,74 @@ TBL_BEGIN,?,?,?
 159,11,AZARA,enumeration_text
 159,12,BIRDER,enumeration_text
 159,13,CAPP,enumeration_text
-159,14,CNS,enumeration_text
-159,15,CNSSOLVE,enumeration_text
-159,16,CORMA,enumeration_text
-159,17,CSI,enumeration_text
-159,18,CURVES,enumeration_text
-159,19,CYANA,enumeration_text
-159,20,DELTA,enumeration_text
-159,21,DGII,enumeration_text
-159,22,DIAMOD,enumeration_text
-159,23,DIANA,enumeration_text
-159,24,DISCOVER,enumeration_text
-159,25,DSPACE,enumeration_text
-159,26,DYANA,enumeration_text
-159,27,EMBOSS,enumeration_text
-159,28,FANTOM,enumeration_text
-159,29,Felix,enumeration_text
-159,30,GARANT,enumeration_text
-159,31,GIFA,enumeration_text
-159,32,GROMOS,enumeration_text
-159,33,HYPER,enumeration_text
-159,34,InsightII,enumeration_text
-159,35,MARDIGRAS,enumeration_text
-159,36,ModelFree,enumeration_text
-159,37,Molmol,enumeration_text
-159,38,MORASS,enumeration_text
-159,39,NDEE,enumeration_text
-159,40,NMRCOMPASS,enumeration_text
-159,41,NMRDraw,enumeration_text
-159,42,NMRPipe,enumeration_text
-159,43,NMR-STAR,enumeration_text
-159,44,NMRView,enumeration_text
-159,45,NOAH,enumeration_text
-159,46,NOEID,enumeration_text
-159,47,NUCFIT,enumeration_text
-159,48,NUTS,enumeration_text
-159,49,OPAL,enumeration_text
-159,50,PDB,enumeration_text
-159,51,PECAN,enumeration_text
-159,52,PINE,enumeration_text
-159,53,PIPP,enumeration_text
-159,54,PISTACHIO,enumeration_text
-159,55,Procheck,enumeration_text
-159,56,ProcheckNMR,enumeration_text
-159,57,P-ROI,enumeration_text
-159,58,PRONTO,enumeration_text
-159,59,PROSA,enumeration_text
-159,60,PSVS,enumeration_text
-159,61,QUEEN,enumeration_text
-159,62,RESCUE,enumeration_text
-159,63,SANE,enumeration_text
-159,64,SPARKY,enumeration_text
-159,65,SPSCAN,enumeration_text
-159,66,SYBYL,enumeration_text
-159,67,TALOS,enumeration_text
-159,68,TINKER,enumeration_text
-159,69,TOPSPIN,enumeration_text
-159,70,TRIPOS,enumeration_text
-159,71,UXNMR,enumeration_text
-159,72,VNMR,enumeration_text
-159,73,VNMRJ,enumeration_text
-159,74,WhatIF,enumeration_text
-159,75,Wattos,enumeration_text
-159,76,XEASY,enumeration_text
-159,77,X-PLOR,enumeration_text
-159,78,X-PLOR NIH,enumeration_text
-159,79,xwinnmr,enumeration_text
+159,14,CING,enumeration_text
+159,15,CNS,enumeration_text
+159,16,CNSSOLVE,enumeration_text
+159,17,CORMA,enumeration_text
+159,18,CSI,enumeration_text
+159,19,CURVES,enumeration_text
+159,20,CYANA,enumeration_text
+159,21,DELTA,enumeration_text
+159,22,DGII,enumeration_text
+159,23,DIAMOD,enumeration_text
+159,24,DIANA,enumeration_text
+159,25,DISCOVER,enumeration_text
+159,26,DSPACE,enumeration_text
+159,27,DYANA,enumeration_text
+159,28,EMBOSS,enumeration_text
+159,29,FANTOM,enumeration_text
+159,30,Felix,enumeration_text
+159,31,GARANT,enumeration_text
+159,32,GIFA,enumeration_text
+159,33,GROMOS,enumeration_text
+159,34,HYPER,enumeration_text
+159,35,InsightII,enumeration_text
+159,36,MARDIGRAS,enumeration_text
+159,37,ModelFree,enumeration_text
+159,38,Molmol,enumeration_text
+159,39,MORASS,enumeration_text
+159,40,NDEE,enumeration_text
+159,41,NMRCOMPASS,enumeration_text
+159,42,NMRDraw,enumeration_text
+159,43,NMRPipe,enumeration_text
+159,44,NMR-STAR,enumeration_text
+159,45,NMRView,enumeration_text
+159,46,NOAH,enumeration_text
+159,47,NOEID,enumeration_text
+159,48,NUCFIT,enumeration_text
+159,49,NUTS,enumeration_text
+159,50,OPAL,enumeration_text
+159,51,PDB,enumeration_text
+159,52,PECAN,enumeration_text
+159,53,PINE,enumeration_text
+159,54,PIPP,enumeration_text
+159,55,PISTACHIO,enumeration_text
+159,56,Procheck,enumeration_text
+159,57,ProcheckNMR,enumeration_text
+159,58,P-ROI,enumeration_text
+159,59,PRONTO,enumeration_text
+159,60,PROSA,enumeration_text
+159,61,PSVS,enumeration_text
+159,62,QUEEN,enumeration_text
+159,63,Relax,enumeration_text
+159,64,RESCUE,enumeration_text
+159,65,SANE,enumeration_text
+159,66,SPARKY,enumeration_text
+159,67,SPSCAN,enumeration_text
+159,68,SYBYL,enumeration_text
+159,69,TALOS,enumeration_text
+159,70,TINKER,enumeration_text
+159,71,TOPSPIN,enumeration_text
+159,72,TRIPOS,enumeration_text
+159,73,UXNMR,enumeration_text
+159,74,VNMR,enumeration_text
+159,75,VNMRJ,enumeration_text
+159,76,WhatIF,enumeration_text
+159,77,Wattos,enumeration_text
+159,78,XEASY,enumeration_text
+159,79,X-PLOR,enumeration_text
+159,80,X-PLOR NIH,enumeration_text
+159,81,xwinnmr,enumeration_text
 160,1,AMBER,enumeration_text
 160,2,AngleSearch,enumeration_text
 160,3,ANSIG,enumeration_text
@@ -1577,65 +1649,67 @@ TBL_BEGIN,?,?,?
 160,13,BIRDER,enumeration_text
 160,14,CARA,enumeration_text
 160,15,CAPP,enumeration_text
-160,16,CcpNMR,enumeration_text
-160,17,CNS,enumeration_text
-160,18,CNSSOLVE,enumeration_text
-160,19,CORMA,enumeration_text
-160,20,CSI,enumeration_text
-160,21,CURVES,enumeration_text
-160,22,CYANA,enumeration_text
-160,23,DGII,enumeration_text
-160,24,DIAMOD,enumeration_text
-160,25,DISCOVER,enumeration_text
-160,26,DYANA,enumeration_text
-160,27,DYNAMO,enumeration_text
-160,28,EMBOSS,enumeration_text
-160,29,FANTOM,enumeration_text
-160,30,Felix,enumeration_text
-160,31,GARANT,enumeration_text
-160,32,Gaussian,enumeration_text
-160,33,GIFA,enumeration_text
-160,34,HYPER,enumeration_text
-160,35,InsightII,enumeration_text
-160,36,MARDIGRAS,enumeration_text
-160,37,ModelFree,enumeration_text
-160,38,Molmol,enumeration_text
-160,39,MORASS,enumeration_text
-160,40,NDEE,enumeration_text
-160,41,NMRDraw,enumeration_text
-160,42,NMRPipe,enumeration_text
-160,43,NMRView,enumeration_text
-160,44,NOAH,enumeration_text
-160,45,NOEID,enumeration_text
-160,46,NUCFIT,enumeration_text
-160,47,NUTS,enumeration_text
-160,48,OPAL,enumeration_text
-160,49,PECAN,enumeration_text
-160,50,PINE,enumeration_text
-160,51,PIPP,enumeration_text
-160,52,PISTACHIO,enumeration_text
-160,53,Procheck,enumeration_text
-160,54,ProcheckNMR,enumeration_text
-160,55,P-ROI,enumeration_text
-160,56,PRONTO,enumeration_text
-160,57,PROSA,enumeration_text
-160,58,PSVS,enumeration_text
-160,59,QUEEN,enumeration_text
-160,60,RESCUE,enumeration_text
-160,61,SANE,enumeration_text
-160,62,SPARKY,enumeration_text
-160,63,SPSCAN,enumeration_text
-160,64,SYBYL,enumeration_text
-160,65,TALOS,enumeration_text
-160,66,TOPSPIN,enumeration_text
-160,67,UXNMR,enumeration_text
-160,68,VNMR,enumeration_text
-160,69,WhatIF,enumeration_text
-160,70,Wattos,enumeration_text
-160,71,XEASY,enumeration_text
-160,72,X-PLOR,enumeration_text
-160,73,X-PLOR NIH,enumeration_text
-160,74,xwinnmr,enumeration_text
+160,16,CING,enumeration_text
+160,17,CcpNMR,enumeration_text
+160,18,CNS,enumeration_text
+160,19,CNSSOLVE,enumeration_text
+160,20,CORMA,enumeration_text
+160,21,CSI,enumeration_text
+160,22,CURVES,enumeration_text
+160,23,CYANA,enumeration_text
+160,24,DGII,enumeration_text
+160,25,DIAMOD,enumeration_text
+160,26,DISCOVER,enumeration_text
+160,27,DYANA,enumeration_text
+160,28,DYNAMO,enumeration_text
+160,29,EMBOSS,enumeration_text
+160,30,FANTOM,enumeration_text
+160,31,Felix,enumeration_text
+160,32,GARANT,enumeration_text
+160,33,Gaussian,enumeration_text
+160,34,GIFA,enumeration_text
+160,35,HYPER,enumeration_text
+160,36,InsightII,enumeration_text
+160,37,MARDIGRAS,enumeration_text
+160,38,ModelFree,enumeration_text
+160,39,Molmol,enumeration_text
+160,40,MORASS,enumeration_text
+160,41,NDEE,enumeration_text
+160,42,NMRDraw,enumeration_text
+160,43,NMRPipe,enumeration_text
+160,44,NMRView,enumeration_text
+160,45,NOAH,enumeration_text
+160,46,NOEID,enumeration_text
+160,47,NUCFIT,enumeration_text
+160,48,NUTS,enumeration_text
+160,49,OPAL,enumeration_text
+160,50,PECAN,enumeration_text
+160,51,PINE,enumeration_text
+160,52,PIPP,enumeration_text
+160,53,PISTACHIO,enumeration_text
+160,54,Procheck,enumeration_text
+160,55,ProcheckNMR,enumeration_text
+160,56,P-ROI,enumeration_text
+160,57,PRONTO,enumeration_text
+160,58,PROSA,enumeration_text
+160,59,PSVS,enumeration_text
+160,60,QUEEN,enumeration_text
+160,61,Relax,enumeration_text
+160,62,RESCUE,enumeration_text
+160,63,SANE,enumeration_text
+160,64,SPARKY,enumeration_text
+160,65,SPSCAN,enumeration_text
+160,66,SYBYL,enumeration_text
+160,67,TALOS,enumeration_text
+160,68,TOPSPIN,enumeration_text
+160,69,UXNMR,enumeration_text
+160,70,VNMR,enumeration_text
+160,71,WhatIF,enumeration_text
+160,72,Wattos,enumeration_text
+160,73,XEASY,enumeration_text
+160,74,X-PLOR,enumeration_text
+160,75,X-PLOR NIH,enumeration_text
+160,76,xwinnmr,enumeration_text
 216,1,identity,enumeration_text
 216,2,sequential,enumeration_text
 216,3,basepair,enumeration_text
@@ -1740,11 +1814,11 @@ TBL_BEGIN,?,?,?
 162,7,processing,enumeration_text
 162,8,refinement,enumeration_text
 162,9,structure solution,enumeration_text
-329,1,?,enumeration_text
-330,1,isotropic,enumeration_text
-330,2,anisotropic,enumeration_text
-330,3,solid,enumeration_text
-40,1,NMR-STAR 3.0 deposition file,enumeration_text
+334,1,?,enumeration_text
+335,1,isotropic,enumeration_text
+335,2,anisotropic,enumeration_text
+335,3,solid,enumeration_text
+40,1,NMR-STAR 3.1 deposition file,enumeration_text
 40,2,Assigned chemical shifts,enumeration_text
 40,3,Coupling constants,enumeration_text
 40,4,D/H fractionation factors,enumeration_text
@@ -1769,7 +1843,7 @@ TBL_BEGIN,?,?,?
 40,23,Quadrupolar coupling data,enumeration_text
 40,24,Dipolar tensors,enumeration_text
 40,25,CSA tensors,enumeration_text
-41,1,NMR-STAR 3.0,enumeration_text
+41,1,NMR-STAR 3.1,enumeration_text
 41,2,NMR-STAR 2.1,enumeration_text
 161,1,(ACME) - Delaglio$ Zhengrong and Bax,enumeration_text
 161,2,(AMBER) - Case$ Darden$ Cheatham$ III$ Simmerling$ Wang$ Duke$ Luo$ ... and Kollman,enumeration_text
