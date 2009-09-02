@@ -9,7 +9,7 @@
      
 data_NMR-STAR_tag_enumerations
 
-    _Revision_date      2008-12-01
+    _Revision_date      2009-03-17
 
 
 
@@ -594,6 +594,8 @@ save__Chem_comp_atom.Stereo_config
      N      'atom is not a chiral center'
      E      '(E)- alkene (German$ entgegen = opposite)'
      Z      '(Z)- alkene (German$ zusammen = together)'
+     R      'rectus - right handed configuration'
+     S      'sinister - left handed configuration'
 
    stop_
 
@@ -1030,6 +1032,22 @@ equivalent
 # find more values from existing database
 
     stop_
+
+save_
+
+save__Chem_shift_ref.Atom_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+   H          .
+   C          .
+   N          .
+   P          .
+   Cd         . 
+
+     stop_
 
 save_
 
@@ -2085,6 +2103,7 @@ save__Coupling_constant_list.Spectrometer_frequency_1H
     900       .
     920       .
     950       .
+   1000       .
 
   stop_
 
@@ -2175,6 +2194,49 @@ save__Cross_correlation_D_CSA_list.Val_units
 
 save_
 
+
+#save__Cross_correlation_CSA_CSA_expt.Experiment_name
+#
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+#
+#    ?                    .
+#
+#  stop_
+#
+#save_
+
+
+#save__Cross_correlation_CSA_CSA_expt.Sample_state
+#
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+#
+#    isotropic                    .
+#    anisotropic                  .
+#    solid                        .
+#
+#  stop_
+#
+#save_
+
+
+#save__Cross_correlation_CSA_CSA_list.Val_units
+#
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+#
+#   s-1      .
+#   ms-1     .
+#   us-1     .
+#
+#    stop_
+#
+#save_
+
 save__CS_anisotropy_experiment.Experiment_name
 
   loop_
@@ -2215,7 +2277,8 @@ save__Data_set.Type
    spectral_peak_list                   .
    other_data_list                      .
    RDCs                                 .
-   order_parameters                     .
+   order_parameters 
+   dipolar_couplings                    .
    spectral_density_values              .
    H_exch_rates                         .
    H_exch_protection_factors            .
@@ -2226,10 +2289,17 @@ save__Data_set.Type
    deduced_secd_struct_features         .
    deduced_hydrogen_bonds               .
    representative_conformer             .
-   conformer_family_coord_set           .
-   heteronucl_T1_relaxation             .
+   conformer_family_coord_set
+   general_relaxation           .
+   heteronucl_T1_relaxation
+   heteronucl_T1rho_relaxation             .
    heteronucl_T2_relaxation             .
-   heteronucl_NOEs                      .
+   heteronucl_NOEs
+   homonucl_NOEs                      .
+   dipole_dipole_relaxation                    .
+   dipole_dipole_cross_correlation_relaxation             .
+   CSA_CSA_cross_correlation_relaxation                   .
+   dipole_CSA_cross_correlation_relaxation                .
 
     stop_
 
@@ -3722,6 +3792,20 @@ save__Entry_interview.Coupling_constants
 
 save_
 
+#save__Entry_interview.CSA_CSA_cross_correlation
+#
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+#     
+#       yes      .
+#       no       .
+#
+#   stop_
+#
+#save_
+
+
 save__Entry_interview.DD_cross_correlation
 
   loop_
@@ -4303,6 +4387,95 @@ kcal/mol*ppm2      "Chemical shifts; pseudocontact shifts"
 
 save_
 
+
+save__Gen_dist_constraint_list.Constraint_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      NOE                               'Distance constraints determined from NOE experiments'
+     'NOE build-up'                     'Distance constraints determined from a series of NOE experiments with different mixing times'
+     'NOE not seen'                     'Distance constraints supplied when an expected NOE was not observed'
+      ROE                               'Distance constraints determined from ROE experiments'
+     'ROE build-up'                     'Distance constraints determine from a series of ROE experiments with different mixing times'
+     'hydrogen bond'                    'Hydrogen bond distance constraints'
+     'disulfide bond'                   'Disulfide bond distance constraints'
+     'paramagnetic relaxation'          'Distance constraints determined from paramagnetic relaxation studies'
+     'symmetry'                         'Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer'
+     'general distance'                 'Specific distance constraint is not known'
+
+    stop_
+
+save_
+
+
+save__Gen_dist_constraint_expt.Experiment_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?       .
+
+    stop_
+
+save_
+
+save__Gen_dist_constraint_expt.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+    isotropic         .
+    anisotropic       .
+    solid             .
+
+    stop_
+
+save_
+
+save__Gen_dist_constraint_software_param.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'averaging method'                 .
+      'number monomers'                  .
+      'pseudoatom corrections'           .
+      'potential function'               .
+      'temperature'                      .
+      'exponent'                         .
+      'switch distance'                  .
+      'asymptote slope'                  .
+      'B_high'                           .
+      'ceiling'                          .
+      'negative offset'                  .
+      'scaling constant'                 .
+
+    stop_
+
+save_
+
+
+save__Gen_dist_constraint.Member_logic_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     OR          .
+     AND         .
+
+  stop_
+
+save_
+
+
+
 save__H_chem_shift_constraint_expt.Experiment_name
 
     loop_
@@ -4623,6 +4796,23 @@ save__Heteronucl_T2_list.Temp_control_method
 save_
 
 
+#save__General_relaxation_list.Common_relaxation_term
+#
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+#
+#      R1             .
+#      R1rho          .
+#      R2             .
+#      T1             .
+#      T1rho          .
+#      T2             .
+#            
+#    stop_
+#
+#save_
+
 save__General_relaxation_experiment.Experiment_name
 
     loop_
@@ -4669,16 +4859,68 @@ save__General_relaxation_list.Relaxation_coherence_type
       _item_enumeration_value
       _item_enumeration_description
 
-         I(+$-)S(-$+)              'zero quantum'
-         IzSz                      'zero quantum$longitudinal spin order'
-         I(+$-)Sz                  'single quantum& antiphase'
-         IzS(+$-)                  'single quantum& antiphase'
-         I(+$-)S(+$-)              'double quantum'
-         
+   Iz                  'R1                           longitudinal'
+   Sz                  'R1                           longitudinal'
+                         
+
+   I+                  'R1rho                        transverse'
+   I-                  'R1rho                        transverse'
+   S+                  'R1rho                        transverse'
+   S-                  'R1rho                        transverse'
+   (I+)+(I-)           'R1rho                        transverse'
+   (S+)+(S-)           'R1rho                        transverse'
+
+
+   I+                  'R2                           transverse'
+   I-                  'R2                           transverse'
+   S+                  'R2                           transverse'
+   S-                  'R2                           transverse'
+   (I+)+(I-)           'R2                           transverse'
+   (S+)+(S-)           'R2                           transverse'
     
+
+   I-S+             'ZQ relaxation'
+   I+S-             'ZQ relaxation'
+   (I+S-)+(I-S+)    'ZQ relaxation'
+
+
+   IzSz             'longitudinal spin order'
+
+
+   I+Sz             'single quantum antiphase'
+   I-Sz             'single quantum antiphase'
+   IzS+             'single quantum antiphase'
+   IzS-             'single quantum antiphase'
+  ((I+)+(I-))Sz     'single quantum antiphase'
+  Iz((S+)+(S-))     'single quantum antiphase'
+
+   
+   I+S+             'DQ relaxation'
+   I-S-             'DQ relaxation'
+ (I+S+)+(I-S-)      'DQ relaxation'
+         
     stop_
 
 save_
+
+
+#save__General_relaxation_list.Relaxation_type_common_name
+
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+
+#      R1                                    .
+#      R2                                    .
+#      R1rho                                 .
+#     'ZQ relaxation'                        .
+#     'longitudinal spin order'              .
+#     'single quantum antiphase'             .
+#     'DQ relaxation'                        .
+
+#    stop_
+
+#save_
 
 save__General_relaxation_list.Relaxation_val_units
 
@@ -4688,8 +4930,9 @@ save__General_relaxation_list.Relaxation_val_units
 
          s-1           .
          ms-1          .
-         s             .
-         ms            .
+         us-1          .
+         ns-1          .
+         ps-1          .
              
     stop_
 
@@ -4701,13 +4944,13 @@ save__General_relaxation_list.Temp_calibration_method
       _item_enumeration_value
       _item_enumeration_description
 
-
-    methanol     .
+    methanol                    .
+   'monoethylene glycol'        .
+   'no calibration applied'     .
 
    stop_
 
 save_
-
 
 save__General_relaxation_list.Temp_control_method
 
@@ -4715,8 +4958,10 @@ save__General_relaxation_list.Temp_control_method
       _item_enumeration_value
       _item_enumeration_description
 
-    'single scan interleaving'           .
-    'temperature compensation block'     .
+    'single scan interleaving'                                             .
+    'temperature compensation block'                                       .
+    'single scan interleaving and temperature compensation block'          .
+    'no temperature control applied'                                       .
 
    stop_
 
@@ -4950,8 +5195,6 @@ save__Mol_interaction_diff_experiment.Experiment_name
 
 save_
 
-
-
 save__Mol_interaction_diff_experiment.Sample_state  
 
     loop_
@@ -4965,7 +5208,6 @@ save__Mol_interaction_diff_experiment.Sample_state
     stop_
 
 save_
-
 
 save__NMR_experiment_file.Type
 
@@ -5040,7 +5282,6 @@ save__NMR_probe.Type
 
 save_
 
-
 save__NMR_spec_expt.NMR_tube_type
 
     loop_
@@ -5056,8 +5297,6 @@ save__NMR_spec_expt.NMR_tube_type
 
 save_
 
-
-
 save__NMR_spec_expt.Type
 
     loop_
@@ -5071,13 +5310,13 @@ save__NMR_spec_expt.Type
 
 save_
 
-
 save__NMR_spectrometer_probe.Diameter
 
   loop_
      _item_enumeration_value
      _item_enumeration_description
 
+   '1.7 mm'          .
    '3 mm'            .
    '5 mm'            .
    '8 mm'            .
@@ -5096,6 +5335,8 @@ save__Experiment.Name
 
       '2D 1H-15N HSQC'              .
       '2D 1H-13C HSQC'              .
+      '2D 1H-13C HSQC aliphatic'    .
+      '2D 1H-13C HSQC aromatic'     .   
       '2D 1H-1H TOCSY'              .
       '2D DQF-COSY'                 .
       '2D 1H-1H COSY'               .
@@ -5128,7 +5369,6 @@ save__Experiment.Raw_data_flag
      _item_enumeration_value
      _item_enumeration_description
 
-
     no            .
     yes           .
 
@@ -5160,15 +5400,15 @@ save__Model_type.Type
      _item_enumeration_value
      _item_enumeration_description
 
-     'experimental ensemble member'              ?
-     'representative lowest energy'              ?
-     'representative closest to the mean'        ?
-     'representative average minimized'          ?
+     'experimental ensemble member'                    ?
+     'representative lowest energy'                    ?
+     'representative closest to the mean'              ?
+     'representative average minimized'                ?
+     'representative lowest overall target function'   ?
 
   stop_
 
 save_
-
                          
 save__NMR_spec_expt.Name
 
@@ -5176,19 +5416,47 @@ save__NMR_spec_expt.Name
      _item_enumeration_value
      _item_enumeration_description
 
-
     ?   .
 
   stop_
 
 save_
 
+#save__NMR_spec_expt.Temp_calibration_method
+
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+
+#    methanol                    .
+#   'monoethylene glycol'        .
+#   'no calibration applied'     .
+
+#   stop_
+
+#save_
+
+
+#save__NMR_spec_expt.Temp_control_method
+
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+
+#    'single scan interleaving'                                             .
+#    'temperature compensation block'                                       .
+#    'single scan interleaving and temperature compensation block'          .
+#    'no temperature control applied'                                       .
+
+#   stop_
+
+#save_
+
 save__NMR_spec_expt.Sample_volume_units
 
   loop_
      _item_enumeration_value
      _item_enumeration_description
-
 
     uL   .
     mL   .
@@ -5213,6 +5481,7 @@ save__NMR_spectrometer.Field_strength
     900       .
     920       .
     950       .
+   1000       .
 
   stop_
 
@@ -5239,29 +5508,27 @@ save__NMR_spectrometer.Model
      _item_enumeration_value
      _item_enumeration_description
 
-
-   AM        "from Bruker"
-   AMX       "from Bruker"
-   ARX       'from Bruker'
-   Avance    "from Bruker"
-   CMX       'from Bruker'
-   DMX       "from Bruker"
-   DPX       "from Bruker"
-   DRX       "from Bruker"
-   MSL       "from Bruker"
-   ECA       "from JEOL"
-   ECP       "from JEOL"
-  'Uniform NMR System'     "from Varian"
-   INOVA     "from Varian"
-   Unity     "from Varian"
-   UnityPlus "from Varian"
-   VXRS      "from Varian"
-   Gemini    "from General Electric"
-   GSX       "from General Electric"
-   GX        "from General Electric"
-   OMEGA     "from General Electric"
-  'OMEGA PSG' "from General Electric"
-
+   AM                       "from Bruker"
+   AMX                      "from Bruker"
+   ARX                      "from Bruker"
+   Avance                   "from Bruker"
+   CMX                      'from Bruker'
+   DMX                      "from Bruker"
+   DPX                      "from Bruker"
+   DRX                      "from Bruker"
+   MSL                      "from Bruker"
+   ECA                      "from JEOL"
+   ECP                      "from JEOL"
+  'Uniform NMR System'      "from Varian"
+   INOVA                    "from Varian"
+   Unity                    "from Varian"
+   UnityPlus                "from Varian"
+   VXRS                     "from Varian"
+   Gemini                   "from General Electric"
+   GSX                      "from General Electric"
+   GX                       "from General Electric"
+   OMEGA                    "from General Electric"
+  'OMEGA PSG'               "from General Electric"
 
   stop_
 
@@ -5283,6 +5550,7 @@ save__NMR_spectrometer_view.Field_strength
     900       .
     920       .
     950       .
+   1000
 
   stop_
 
@@ -5362,6 +5630,136 @@ save__NMR_spectrometer_probe.Spacer_present
   stop_
 
 save_ 
+
+
+#save__Model_free.Model_fit
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+# No internal model-free motions:
+
+ #        ''                                                .
+ #        'Rex'                                             .
+ 
+# Original Lipari-Szabo (Lipari and Szabo, 1982), plus additional params
+# such as Rex:
+
+  #       'S2'                                               .
+  #       'S2, te'                                           .
+  #       'S2, Rex'                                          .
+  #       'S2, te, Rex'                                      .
+ 
+# Extended model-free (Clore et al., 1990), plus additional params such as Rex:
+
+  #       'S2f, S2, ts'                                      .
+  #       'S2f, S2s, ts'                                     .
+  #       'S2f, tf, S2, ts'                                  .
+  #       'S2f, tf, S2s, ts'                                 .
+  #       'S2f, S2, ts, Rex'                                 .
+  #       'S2f, S2s, ts, Rex'                                .
+  #       'S2f, tf, S2, ts, Rex'                             .
+  #       'S2f, tf, S2s, ts, Rex'                            .
+
+#  stop_
+
+#save_ 
+
+
+#save__Model_free_experiment.Experiment_name
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#     ?       .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_experiment.Sample_state
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    isotropic         .
+#    anisotropic       .
+#    solid             .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_list.Tau_e_val_units
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    s    .
+#    ms   .
+#    us   .
+#    ns   .
+#    ps   .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_list.Tau_s_val_units
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    s    .
+#    ms   .
+#    us   .
+#    ns   .
+#    ps   .
+
+#  stop_
+
+#save_ 
+
+
+save__Order_param.Model_fit
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+ No internal model-free motions:
+
+         ''                                                .
+         'Rex'                                             .
+ 
+ Original Lipari-Szabo (Lipari and Szabo, 1982), plus additional params
+ such as Rex:
+
+         'S2'                                               .
+         'S2, te'                                           .
+         'S2, Rex'                                          .
+         'S2, te, Rex'                                      .
+ 
+ Extended model-free (Clore et al., 1990), plus additional params such as Rex:
+
+         'S2f, S2, ts'                                      .
+         'S2f, S2s, ts'                                     .
+         'S2f, tf, S2, ts'                                  .
+         'S2f, tf, S2s, ts'                                 .
+         'S2f, S2, ts, Rex'                                 .
+         'S2f, S2s, ts, Rex'                                .
+         'S2f, tf, S2, ts, Rex'                             .
+         'S2f, tf, S2s, ts, Rex'                            .
+
+  stop_
+
+save_ 
+
 
 save__Order_parameter_experiment.Experiment_name
 
@@ -5783,12 +6181,10 @@ save__Sample.Type
     solid                             .
     bicelle                           .
     emulsion                          .
-    fiber                             
-;
-Solid-state fiber sample
-;
+    fiber                            'solid-state fiber sample'
     'filamentous virus'               .
-    gel                               .
+    'gel solution'                   'gel samples used for solution NMR'
+    'gel solid'                      'gel samples used for solid-state NMR'
     liposome                          .
     membrane                          .
     micelle                           .
@@ -6106,6 +6502,7 @@ save__Software.Sf_framecode
     AZARA            .
     BIRDER           .
     CAPP             .
+    CING             .
     CNS              .
     CNSSOLVE         .
     CORMA            .
@@ -6154,6 +6551,7 @@ save__Software.Sf_framecode
     PROSA            .
     PSVS             .
     QUEEN            .
+    Relax            .
     RESCUE           .
     SANE             .
     SPARKY           .
@@ -6198,6 +6596,7 @@ save__Software.Name
     BIRDER           .
     CARA             .
     CAPP             .
+    CING             .
     CcpNMR           .
     CNS              .             
     CNSSOLVE         .
@@ -6242,6 +6641,7 @@ save__Software.Name
     PROSA            .
     PSVS             .
     QUEEN            .
+    Relax            .
     RESCUE           .
     SANE             .
     SPARKY           .
@@ -6577,6 +6977,19 @@ save__Task.Task
 
 save_
 
+#save__Torsion_angle_constraint.Member_logic_code
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#     OR          .
+#     AND         .
+
+#  stop_
+
+#save_
+
 save__Torsion_angle_constraints_expt.Experiment_name
 
   loop_
@@ -6609,9 +7022,9 @@ save__Upload_data.Data_file_Sf_category
      _item_enumeration_value
      _item_enumeration_description
 
-   'NMR-STAR 3.0 deposition file'           
+   'NMR-STAR 3.1 deposition file'           
 ;
-NMR-STAR 3.0 deposition file
+NMR-STAR 3.1 deposition file
 ;
    'Assigned chemical shifts'               
 ;
@@ -6741,7 +7154,7 @@ save__Upload_data.Data_file_syntax
      _item_enumeration_value
      _item_enumeration_description
 
-    'NMR-STAR 3.0'     .
+    'NMR-STAR 3.1'     .
     'NMR-STAR 2.1'     .
 #     NMRIF             .
 #    'mmCIF (pdbx)'      .

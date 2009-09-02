@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2009-08-07
+#  version date -  2009-09-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -126282,6 +126282,8 @@ save_Gen_dist_constraint
    loop_
      _category_key.name
 
+     '_Gen_dist_constraint.ID'
+     '_Gen_dist_constraint.Member_ID'
      '_Gen_dist_constraint.Entry_ID'
      '_Gen_dist_constraint.Gen_dist_constraint_list_ID'
 
@@ -126346,7 +126348,7 @@ more members.
 
    _item.name                  '_Gen_dist_constraint.Member_ID'
    _item.category_id              'Gen_dist_constraint'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
