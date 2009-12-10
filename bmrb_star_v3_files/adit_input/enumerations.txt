@@ -155,12 +155,13 @@ save__Assembly_db_link.Database_code
     BMRB           'BioMagResBank'
     DBJ            .
     EMBL           .
-    GenBank        .
+    GB             .
     NDB            'Nucleic Acid Data Bank'
     PIR            .
     PRF            .
     REF            .
-    SWISS-PROT     .
+    SP             .
+    UNP            .
 
   stop_
 
@@ -351,6 +352,44 @@ save__Atom_type.Paramagnetic
      stop_
 
 save_
+
+save__Binding_experiment.Experiment_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_ 
+
+save__Binding_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    anisotropic            .
+    isotropic              .
+
+  stop_
+
+save_ 
+
+save__Binding_result.Val_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_ 
+
 
 save__Bond_annotation.Bond_order
 
@@ -2913,11 +2952,15 @@ save__Entity_db_link.Database_code
      _item_enumeration_description
 
     BMRB           .
+    DBJ            .
     EMBL           .
     GB             .
+    NDB            .
     PDB            .
     PIR            .
-    SWS            .
+    PRF            .
+    REF            .
+    SP             .
     UNP            .
 
   stop_
@@ -5376,6 +5419,42 @@ save__Experiment.Raw_data_flag
 
 save_ 
 
+save__Kinetic_rate_experiment.Experiment_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_ 
+
+save__Kinetic_rate_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    anisotropic            .
+    isotropic              .
+
+  stop_
+
+save_ 
+
+save__Kinetic_rate.Val_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_ 
 
 save__Local_structure_quality.Type
 
