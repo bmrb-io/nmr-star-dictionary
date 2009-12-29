@@ -25326,6 +25326,33 @@ ID
 
 save_
 
+save__Chem_comp.Province
+
+   _Tag                  '_Chem_comp.Province'
+
+   _Category              'Chem_comp'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Province
+;
+
+   loop_
+     _Example
+
+;
+BMRB
+;
+
+   stop_
+
+save_
+
 save__Chem_comp.Name
 
    _Tag                  '_Chem_comp.Name'
@@ -25434,9 +25461,9 @@ ALA
 
 save_
 
-save__Chem_comp.PDBX_type
+save__Chem_comp.Ambiguous_flag
 
-   _Tag                  '_Chem_comp.PDBX_type'
+   _Tag                  '_Chem_comp.Ambiguous_flag'
 
    _Category              'Chem_comp'
 
@@ -25447,7 +25474,7 @@ save__Chem_comp.PDBX_type
 
    _Adit_item_view_name
 ;
-PDBX type
+Ambiguous flag
 ;
 
    loop_
@@ -25461,9 +25488,9 @@ PDBX type
 
 save_
 
-save__Chem_comp.PDBX_ambiguous_flag
+save__Chem_comp.Initial_date
 
-   _Tag                  '_Chem_comp.PDBX_ambiguous_flag'
+   _Tag                  '_Chem_comp.Initial_date'
 
    _Category              'Chem_comp'
 
@@ -25474,7 +25501,7 @@ save__Chem_comp.PDBX_ambiguous_flag
 
    _Adit_item_view_name
 ;
-PDBX ambiguous flag
+Initial date
 ;
 
    loop_
@@ -25488,9 +25515,9 @@ PDBX ambiguous flag
 
 save_
 
-save__Chem_comp.PDBX_initial_date
+save__Chem_comp.Modified_date
 
-   _Tag                  '_Chem_comp.PDBX_initial_date'
+   _Tag                  '_Chem_comp.Modified_date'
 
    _Category              'Chem_comp'
 
@@ -25501,7 +25528,7 @@ save__Chem_comp.PDBX_initial_date
 
    _Adit_item_view_name
 ;
-PDBX initial date
+Modified date
 ;
 
    loop_
@@ -25515,9 +25542,9 @@ PDBX initial date
 
 save_
 
-save__Chem_comp.PDBX_modified_date
+save__Chem_comp.Release_status
 
-   _Tag                  '_Chem_comp.PDBX_modified_date'
+   _Tag                  '_Chem_comp.Release_status'
 
    _Category              'Chem_comp'
 
@@ -25528,7 +25555,7 @@ save__Chem_comp.PDBX_modified_date
 
    _Adit_item_view_name
 ;
-PDBX modified date
+Release status
 ;
 
    loop_
@@ -25542,9 +25569,9 @@ PDBX modified date
 
 save_
 
-save__Chem_comp.PDBX_release_status
+save__Chem_comp.Replaced_by
 
-   _Tag                  '_Chem_comp.PDBX_release_status'
+   _Tag                  '_Chem_comp.Replaced_by'
 
    _Category              'Chem_comp'
 
@@ -25555,7 +25582,7 @@ save__Chem_comp.PDBX_release_status
 
    _Adit_item_view_name
 ;
-PDBX release status
+Replaced by
 ;
 
    loop_
@@ -25569,36 +25596,9 @@ PDBX release status
 
 save_
 
-save__Chem_comp.PDBX_replaced_by
+save__Chem_comp.Replaces
 
-   _Tag                  '_Chem_comp.PDBX_replaced_by'
-
-   _Category              'Chem_comp'
-
-   _Description
-;
-?
-;
-
-   _Adit_item_view_name
-;
-PDBX replaced by
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Chem_comp.PDBX_replaces
-
-   _Tag                  '_Chem_comp.PDBX_replaces'
+   _Tag                  '_Chem_comp.Replaces'
 
    _Category              'Chem_comp'
 
@@ -25609,7 +25609,7 @@ save__Chem_comp.PDBX_replaces
 
    _Adit_item_view_name
 ;
-PDBX replaces
+Replaces
 ;
 
    loop_
@@ -25758,9 +25758,9 @@ PubChem Substance ID
 
 save_
 
-save__Chem_comp.PDBX_subcomponent_list
+save__Chem_comp.Subcomponent_list
 
-   _Tag                  '_Chem_comp.PDBX_subcomponent_list'
+   _Tag                  '_Chem_comp.Subcomponent_list'
 
    _Category              'Chem_comp'
 
@@ -25771,7 +25771,7 @@ save__Chem_comp.PDBX_subcomponent_list
 
    _Adit_item_view_name
 ;
-PDBX subcomponent list
+Subcomponent list
 ;
 
    loop_
@@ -26082,9 +26082,9 @@ Std deriv chem comp name
 
 save_
 
-save__Chem_comp.PDBX_synonyms
+save__Chem_comp.Synonyms
 
-   _Tag                  '_Chem_comp.PDBX_synonyms'
+   _Tag                  '_Chem_comp.Synonyms'
 
    _Category              'Chem_comp'
 
@@ -26095,7 +26095,7 @@ save__Chem_comp.PDBX_synonyms
 
    _Adit_item_view_name
 ;
-PDBX synonyms
+Synonyms
 ;
 
    loop_
@@ -28377,6 +28377,33 @@ Atom ID
 
 save_
 
+save__Chem_comp_atom.BMRB_code
+
+   _Tag                  '_Chem_comp_atom.BMRB_code'
+
+   _Category              'Chem_comp_atom'
+
+   _Description
+;
+A code assigned to the atom by BMRB that is unique within the chemical compound.
+;
+
+   _Adit_item_view_name
+;
+BMRB code
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Chem_comp_atom.PDB_atom_ID
 
    _Tag                  '_Chem_comp_atom.PDB_atom_ID'
@@ -28674,9 +28701,9 @@ Unpaired electrons
 
 save_
 
-save__Chem_comp_atom.PDBX_align
+save__Chem_comp_atom.Align
 
-   _Tag                  '_Chem_comp_atom.PDBX_align'
+   _Tag                  '_Chem_comp_atom.Align'
 
    _Category              'Chem_comp_atom'
 
@@ -28687,7 +28714,7 @@ save__Chem_comp_atom.PDBX_align
 
    _Adit_item_view_name
 ;
-PDBX align
+Align
 ;
 
    loop_
@@ -28701,9 +28728,9 @@ PDBX align
 
 save_
 
-save__Chem_comp_atom.PDBX_aromatic_flag
+save__Chem_comp_atom.Aromatic_flag
 
-   _Tag                  '_Chem_comp_atom.PDBX_aromatic_flag'
+   _Tag                  '_Chem_comp_atom.Aromatic_flag'
 
    _Category              'Chem_comp_atom'
 
@@ -28714,7 +28741,7 @@ A flag indicating an aromatic atom.
 
    _Adit_item_view_name
 ;
-PDBX aromatic flag
+Aromatic flag
 ;
 
    loop_
@@ -28728,9 +28755,9 @@ Y
 
 save_
 
-save__Chem_comp_atom.PDBX_leaving_atom_flag
+save__Chem_comp_atom.Leaving_atom_flag
 
-   _Tag                  '_Chem_comp_atom.PDBX_leaving_atom_flag'
+   _Tag                  '_Chem_comp_atom.Leaving_atom_flag'
 
    _Category              'Chem_comp_atom'
 
@@ -28741,7 +28768,7 @@ A flag indicating a leaving atom.
 
    _Adit_item_view_name
 ;
-PDBX leaving atom flag
+Leaving atom flag
 ;
 
    loop_
@@ -29538,63 +29565,9 @@ Atom 2 atom ID
 
 save_
 
-save__Chem_comp_bond.PDB_atom_ID_1
+save__Chem_comp_bond.Aromatic_flag
 
-   _Tag                  '_Chem_comp_bond.PDB_atom_ID_1'
-
-   _Category              'Chem_comp_bond'
-
-   _Description
-;
-The name used by the PDB for the first atom in the bond.
-;
-
-   _Adit_item_view_name
-;
-PDB atom ID 1
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Chem_comp_bond.PDB_atom_ID_2
-
-   _Tag                  '_Chem_comp_bond.PDB_atom_ID_2'
-
-   _Category              'Chem_comp_bond'
-
-   _Description
-;
-the name used by the PDB for the second atom in the bond.
-;
-
-   _Adit_item_view_name
-;
-PDB atom ID 2
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Chem_comp_bond.PDBX_aromatic_flag
-
-   _Tag                  '_Chem_comp_bond.PDBX_aromatic_flag'
+   _Tag                  '_Chem_comp_bond.Aromatic_flag'
 
    _Category              'Chem_comp_bond'
 
@@ -29605,7 +29578,7 @@ save__Chem_comp_bond.PDBX_aromatic_flag
 
    _Adit_item_view_name
 ;
-PDBX aromatic flag
+Aromatic flag
 ;
 
    loop_
@@ -29619,9 +29592,9 @@ no
 
 save_
 
-save__Chem_comp_bond.PDBX_stereo_config
+save__Chem_comp_bond.Stereo_config
 
-   _Tag                  '_Chem_comp_bond.PDBX_stereo_config'
+   _Tag                  '_Chem_comp_bond.Stereo_config'
 
    _Category              'Chem_comp_bond'
 
@@ -29632,7 +29605,7 @@ save__Chem_comp_bond.PDBX_stereo_config
 
    _Adit_item_view_name
 ;
-PDBX stereo config
+Stereo config
 ;
 
    loop_
@@ -29646,9 +29619,9 @@ E
 
 save_
 
-save__Chem_comp_bond.PDBX_ordinal
+save__Chem_comp_bond.Ordinal
 
-   _Tag                  '_Chem_comp_bond.PDBX_ordinal'
+   _Tag                  '_Chem_comp_bond.Ordinal'
 
    _Category              'Chem_comp_bond'
 
@@ -29659,7 +29632,7 @@ save__Chem_comp_bond.PDBX_ordinal
 
    _Adit_item_view_name
 ;
-PDBX ordinal
+Ordinal
 ;
 
    loop_
@@ -44982,6 +44955,195 @@ Resonance ID
 
 save_
 
+save__Atom_chem_shift.PDB_record_ID
+
+   _Tag                  '_Atom_chem_shift.PDB_record_ID'
+
+   _Category              'Atom_chem_shift'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB record ID
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_model_num
+
+   _Tag                  '_Atom_chem_shift.PDB_model_num'
+
+   _Category              'Atom_chem_shift'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_strand_ID
+
+   _Tag                  '_Atom_chem_shift.PDB_strand_ID'
+
+   _Category              'Atom_chem_shift'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_ins_code
+
+   _Tag                  '_Atom_chem_shift.PDB_ins_code'
+
+   _Category              'Atom_chem_shift'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_residue_no
+
+   _Tag                  '_Atom_chem_shift.PDB_residue_no'
+
+   _Category              'Atom_chem_shift'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_residue_name
+
+   _Tag                  '_Atom_chem_shift.PDB_residue_name'
+
+   _Category              'Atom_chem_shift'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_atom_name
+
+   _Tag                  '_Atom_chem_shift.PDB_atom_name'
+
+   _Category              'Atom_chem_shift'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name
+;
+
+   loop_
+     _Example
+
+;
+CD1
+;
+
+   stop_
+
+save_
+
 save__Atom_chem_shift.Auth_entity_assembly_ID
 
    _Tag                  '_Atom_chem_shift.Auth_entity_assembly_ID'
@@ -57807,1221 +57969,6 @@ Chem shifts calc type ID
 
 save_
 
-save__Shielding_tensor_list.Sf_category
-
-   _Tag                  '_Shielding_tensor_list.Sf_category'
-
-   _Category              'Shielding_tensor_list'
-
-   _Description
-;
-Category definition for the information content of the saveframe
-;
-
-   _Adit_item_view_name
-;
-Sf category
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor_list.Sf_framecode
-
-   _Tag                  '_Shielding_tensor_list.Sf_framecode'
-
-   _Category              'Shielding_tensor_list'
-
-   _Description
-;
-A label for the saveframe that describes in very brief terms the information contained in the saveframe.
-;
-
-   _Adit_item_view_name
-;
-Chemical shift tensors label
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor_list.Entry_ID
-
-   _Tag                  '_Shielding_tensor_list.Entry_ID'
-
-   _Category              'Shielding_tensor_list'
-
-   _Description
-;
-Pointer to '_Entry.ID'
-;
-
-   _Adit_item_view_name
-;
-Entry ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor_list.Sf_ID
-
-   _Tag                  '_Shielding_tensor_list.Sf_ID'
-
-   _Category              'Shielding_tensor_list'
-
-   _Description
-;
-An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
-;
-
-   _Adit_item_view_name
-;
-Sf ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor_list.ID
-
-   _Tag                  '_Shielding_tensor_list.ID'
-
-   _Category              'Shielding_tensor_list'
-
-   _Description
-;
-Unique identifier for the list of chemical shift tensors.
-;
-
-   _Adit_item_view_name
-;
-ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor_list.Data_file_name
-
-   _Tag                  '_Shielding_tensor_list.Data_file_name'
-
-   _Category              'Shielding_tensor_list'
-
-   _Description
-;
-Name of the file uploaded for this deposition that contains the reported set of chemical shielding tensor data.
-;
-
-   _Adit_item_view_name
-;
-Name of the uploaded data file
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor_list.Details
-
-   _Tag                  '_Shielding_tensor_list.Details'
-
-   _Category              'Shielding_tensor_list'
-
-   _Description
-;
-Text providing additional information regarding the chemical shift tensor list and its derivation.
-;
-
-   _Adit_item_view_name
-;
-Details
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.ID
-
-   _Tag                  '_Shielding_tensor.ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Unique identifier for the chemical shift tensor.
-;
-
-   _Adit_item_view_name
-;
-ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Shieldings_calc_type_ID
-
-   _Tag                  '_Shielding_tensor.Shieldings_calc_type_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Chem_shifts_calc_type.ID'
-;
-
-   _Adit_item_view_name
-;
-Shieldings calc type ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Assembly_atom_ID
-
-   _Tag                  '_Shielding_tensor.Assembly_atom_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Atom.Assembly_atom_ID'
-;
-
-   _Adit_item_view_name
-;
-Assembly atom ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Entity_assembly_ID
-
-   _Tag                  '_Shielding_tensor.Entity_assembly_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _Adit_item_view_name
-;
-Entity assembly ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Entity_ID
-
-   _Tag                  '_Shielding_tensor.Entity_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Entity.ID'
-;
-
-   _Adit_item_view_name
-;
-Entity ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Comp_index_ID
-
-   _Tag                  '_Shielding_tensor.Comp_index_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _Adit_item_view_name
-;
-Comp index ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Seq_ID
-
-   _Tag                  '_Shielding_tensor.Seq_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
-;
-
-   _Adit_item_view_name
-;
-Seq ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Comp_ID
-
-   _Tag                  '_Shielding_tensor.Comp_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _Adit_item_view_name
-;
-Comp ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Atom_ID
-
-   _Tag                  '_Shielding_tensor.Atom_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _Adit_item_view_name
-;
-Atom ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Atom_type
-
-   _Tag                  '_Shielding_tensor.Atom_type'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for this tag is a standard IUPAC abbreviation for an element (i.e., H, C, P, etc).
-;
-
-   _Adit_item_view_name
-;
-Atom type
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Atom_isotope_number
-
-   _Tag                  '_Shielding_tensor.Atom_isotope_number'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-?
-;
-
-   _Adit_item_view_name
-;
-Atom isotope number
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Isotropic_comp_1_1_val
-
-   _Tag                  '_Shielding_tensor.Isotropic_comp_1_1_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-By the standard convention, the value of the 1_1 element of the isotropic component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Isotropic comp 1 1 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Isotropic_comp_2_2_val
-
-   _Tag                  '_Shielding_tensor.Isotropic_comp_2_2_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-By the standard convention, the value of the 2_2 element of the isotropic component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Isotropic comp 2 2 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Isotropic_comp_3_3_val
-
-   _Tag                  '_Shielding_tensor.Isotropic_comp_3_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-By the standard convention, the value of the 3_3 element of the isotropic component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Isotropic comp 3 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Anti_sym_comp_1_2_val
-
-   _Tag                  '_Shielding_tensor.Anti_sym_comp_1_2_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_2 element of the anti-symmetric component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Anti sym comp 1 2 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Anti_sym_comp_1_3_val
-
-   _Tag                  '_Shielding_tensor.Anti_sym_comp_1_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_3 element of the anti-symmetric component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Anti sym comp 1 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Anti_sym_comp_2_3_val
-
-   _Tag                  '_Shielding_tensor.Anti_sym_comp_2_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 2_3 element of the anti-symmetric component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Anti sym comp 2 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Sym_traceless_comp_1_1_val
-
-   _Tag                  '_Shielding_tensor.Sym_traceless_comp_1_1_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_1 element of the symmetric traceless component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Sym traceless comp 1 1 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Sym_traceless_comp_1_2_val
-
-   _Tag                  '_Shielding_tensor.Sym_traceless_comp_1_2_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_2 element of the symmetric traceless component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Sym traceless comp 1 2 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Sym_traceless_comp_1_3_val
-
-   _Tag                  '_Shielding_tensor.Sym_traceless_comp_1_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_3 element of the symmetric traceless component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Sym traceless comp 1 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Sym_traceless_comp_2_2_val
-
-   _Tag                  '_Shielding_tensor.Sym_traceless_comp_2_2_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 2_2 element of the symmetric traceless component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Sym traceless comp 2 2 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Sym_traceless_comp_2_3_val
-
-   _Tag                  '_Shielding_tensor.Sym_traceless_comp_2_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 2_3 element of the symmetric traceless component of the chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Sym traceless comp 2 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_1_1_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_1_1_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_1 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 1 1 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_1_2_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_1_2_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_2 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 1 2 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_1_3_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_1_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 1_3 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 1 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_2_1_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_2_1_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 2_1 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 2 1 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_2_2_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_2_2_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 2_2 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 2 2 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_2_3_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_2_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 2_3 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 2 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_3_1_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_3_1_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 3_1 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 3 1 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_3_2_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_3_2_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 3_2 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 3 2 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Reduceable_matrix_3_3_val
-
-   _Tag                  '_Shielding_tensor.Reduceable_matrix_3_3_val'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-The value for the 3_3 element of the reduceable chemical shielding tensor.
-;
-
-   _Adit_item_view_name
-;
-Reduceable matrix 3 3 val
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Auth_entity_assembly_ID
-
-   _Tag                  '_Shielding_tensor.Auth_entity_assembly_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-?
-;
-
-   _Adit_item_view_name
-;
-Auth entity assembly ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Auth_seq_ID
-
-   _Tag                  '_Shielding_tensor.Auth_seq_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-An alternative identifier for Seq_id that may be provided by an author in order to match that used in the publication that describes the experimental data.  Note that the value is not required to be a number and does not need to correspond to the value for Seq_ID or Comp_index_ID.
-;
-
-   _Adit_item_view_name
-;
-Auth seq ID
-;
-
-   loop_
-     _Example
-
-;
--3
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Auth_comp_ID
-
-   _Tag                  '_Shielding_tensor.Auth_comp_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-An alternative identifier for Comp_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
-;
-
-   _Adit_item_view_name
-;
-Auth comp ID
-;
-
-   loop_
-     _Example
-
-;
-DPN
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Auth_atom_ID
-
-   _Tag                  '_Shielding_tensor.Auth_atom_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-An alternative identifier for Atom_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
-;
-
-   _Adit_item_view_name
-;
-Auth atom ID
-;
-
-   loop_
-     _Example
-
-;
-HB1
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Sf_ID
-
-   _Tag                  '_Shielding_tensor.Sf_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Shielding_tensor_list.Sf_ID'
-;
-
-   _Adit_item_view_name
-;
-Sf ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Entry_ID
-
-   _Tag                  '_Shielding_tensor.Entry_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Entry.ID'
-;
-
-   _Adit_item_view_name
-;
-Entry ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Shielding_tensor.Shielding_tensor_list_ID
-
-   _Tag                  '_Shielding_tensor.Shielding_tensor_list_ID'
-
-   _Category              'Shielding_tensor'
-
-   _Description
-;
-Pointer to '_Shielding_tensor_list.ID'
-;
-
-   _Adit_item_view_name
-;
-Shielding tensor list ID
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Theoretical_chem_shift_list.Sf_category
 
    _Tag                  '_Theoretical_chem_shift_list.Sf_category'
@@ -59292,15 +58239,15 @@ Model atomic coordinates label
 
 save_
 
-save__Theoretical_chem_shift_list.Shielding_tensor_list_ID
+save__Theoretical_chem_shift_list.Tensor_list_ID
 
-   _Tag                  '_Theoretical_chem_shift_list.Shielding_tensor_list_ID'
+   _Tag                  '_Theoretical_chem_shift_list.Tensor_list_ID'
 
    _Category              'Theoretical_chem_shift_list'
 
    _Description
 ;
-Pointer to '_Shielding_tensor_list.ID'
+Pointer to '_Tensor_list.ID'
 ;
 
    _Adit_item_view_name
@@ -59319,15 +58266,15 @@ Chem shift tensors ID
 
 save_
 
-save__Theoretical_chem_shift_list.Shielding_tensor_list_label
+save__Theoretical_chem_shift_list.Tensor_list_label
 
-   _Tag                  '_Theoretical_chem_shift_list.Shielding_tensor_list_label'
+   _Tag                  '_Theoretical_chem_shift_list.Tensor_list_label'
 
    _Category              'Theoretical_chem_shift_list'
 
    _Description
 ;
-Pointer to a saveframe of category 'Chem_shift_tensors.'  This is the label assigned by the depositor to the set of chemical sift tensors.
+Pointer to a saveframe of category 'tensors.'  This is the label assigned by the depositor to the set of tensors.
 ;
 
    _Adit_item_view_name
@@ -66785,6 +65732,1383 @@ Pointer to '_Other_data_type_list.ID'
    _Adit_item_view_name
 ;
 Other data type list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Sf_category
+
+   _Tag                  '_Kinetic_rate_list.Sf_category'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+Category definition for the information content of the saveframe
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Sf_framecode
+
+   _Tag                  '_Kinetic_rate_list.Sf_framecode'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+A label for the saveframe that describes in very brief terms the information contained in the saveframe.
+;
+
+   _Adit_item_view_name
+;
+H exchange rate list label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Entry_ID
+
+   _Tag                  '_Kinetic_rate_list.Entry_ID'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Sf_ID
+
+   _Tag                  '_Kinetic_rate_list.Sf_ID'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.ID
+
+   _Tag                  '_Kinetic_rate_list.ID'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+A unique identifier for the list of kinetic rate data.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Data_file_name
+
+   _Tag                  '_Kinetic_rate_list.Data_file_name'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+The name of the file submitted with this depostion that contains the quantitative data for this saveframe.
+;
+
+   _Adit_item_view_name
+;
+Deposited data file name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Sample_condition_list_ID
+
+   _Tag                  '_Kinetic_rate_list.Sample_condition_list_ID'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample conditions ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Sample_condition_list_label
+
+   _Tag                  '_Kinetic_rate_list.Sample_condition_list_label'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+The label for the set of experimental sample conditions used to collect the data for determination of the kinetic rates.
+;
+
+   _Adit_item_view_name
+;
+Sample conditions label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Details
+
+   _Tag                  '_Kinetic_rate_list.Details'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+Text describing the reported kinetic rates.
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Text_data_format
+
+   _Tag                  '_Kinetic_rate_list.Text_data_format'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+The data format used to represent the kinetic rate data as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_list.Text_data
+
+   _Tag                  '_Kinetic_rate_list.Text_data'
+
+   _Category              'Kinetic_rate_list'
+
+   _Description
+;
+A set of kinetic rate data formatted as ASCII text.
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Experiment_ID
+
+   _Tag                  '_Kinetic_rate_experiment.Experiment_ID'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _Adit_item_view_name
+;
+Experiment ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Experiment_name
+
+   _Tag                  '_Kinetic_rate_experiment.Experiment_name'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _Adit_item_view_name
+;
+NMR experiments (select from NMR experiment and samples list)
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Sample_ID
+
+   _Tag                  '_Kinetic_rate_experiment.Sample_ID'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Pointer to '_Sample.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Sample_label
+
+   _Tag                  '_Kinetic_rate_experiment.Sample_label'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _Adit_item_view_name
+;
+Sample label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Sample_state
+
+   _Tag                  '_Kinetic_rate_experiment.Sample_state'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Physical state of the sample either anisotropic or isotropic.
+;
+
+   _Adit_item_view_name
+;
+Sample state
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Sf_ID
+
+   _Tag                  '_Kinetic_rate_experiment.Sf_ID'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Pointer to '_Kinetic_rate_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Entry_ID
+
+   _Tag                  '_Kinetic_rate_experiment.Entry_ID'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_experiment.Kinetic_rate_list_ID
+
+   _Tag                  '_Kinetic_rate_experiment.Kinetic_rate_list_ID'
+
+   _Category              'Kinetic_rate_experiment'
+
+   _Description
+;
+Pointer to '_Kinetic_rate_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Kinetic rate list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_software.Software_ID
+
+   _Tag                  '_Kinetic_rate_software.Software_ID'
+
+   _Category              'Kinetic_rate_software'
+
+   _Description
+;
+Pointer to '_Software.ID'
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_software.Software_label
+
+   _Tag                  '_Kinetic_rate_software.Software_label'
+
+   _Category              'Kinetic_rate_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_software.Method_ID
+
+   _Tag                  '_Kinetic_rate_software.Method_ID'
+
+   _Category              'Kinetic_rate_software'
+
+   _Description
+;
+Pointer to '_Method.ID'
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_software.Method_label
+
+   _Tag                  '_Kinetic_rate_software.Method_label'
+
+   _Category              'Kinetic_rate_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_software.Sf_ID
+
+   _Tag                  '_Kinetic_rate_software.Sf_ID'
+
+   _Category              'Kinetic_rate_software'
+
+   _Description
+;
+Pointer to '_Kinetic_rate_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_software.Entry_ID
+
+   _Tag                  '_Kinetic_rate_software.Entry_ID'
+
+   _Category              'Kinetic_rate_software'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate_software.Kinetic_rate_list_ID
+
+   _Tag                  '_Kinetic_rate_software.Kinetic_rate_list_ID'
+
+   _Category              'Kinetic_rate_software'
+
+   _Description
+;
+Pointer to '_Kinetic_rate_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Kinetic rate list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.ID
+
+   _Tag                  '_Kinetic_rate.ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Unique identifier for the observed Kinetic rate.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Assembly_ID
+
+   _Tag                  '_Kinetic_rate.Assembly_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Assembly_atom_ID
+
+   _Tag                  '_Kinetic_rate.Assembly_atom_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Entity_assembly_ID
+
+   _Tag                  '_Kinetic_rate.Entity_assembly_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Entity_ID
+
+   _Tag                  '_Kinetic_rate.Entity_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Entity.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Comp_index_ID
+
+   _Tag                  '_Kinetic_rate.Comp_index_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp index ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Seq_ID
+
+   _Tag                  '_Kinetic_rate.Seq_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
+;
+
+   _Adit_item_view_name
+;
+Seq ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Comp_ID
+
+   _Tag                  '_Kinetic_rate.Comp_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Atom_ID
+
+   _Tag                  '_Kinetic_rate.Atom_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Atom_type
+
+   _Tag                  '_Kinetic_rate.Atom_type'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+The value for this tag is a standard IUPAC abbreviation for an element (i.e., H, C, P, etc).
+;
+
+   _Adit_item_view_name
+;
+Atom type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Atom_isotope_number
+
+   _Tag                  '_Kinetic_rate.Atom_isotope_number'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Atom isotope number
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Val_type
+
+   _Tag                  '_Kinetic_rate.Val_type'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Val type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Val
+
+   _Tag                  '_Kinetic_rate.Val'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Kinetic rate value
+;
+
+   _Adit_item_view_name
+;
+Val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Val_min
+
+   _Tag                  '_Kinetic_rate.Val_min'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Estimated minimum value for the kinetic rate when a specific value cannot be obtained.
+;
+
+   _Adit_item_view_name
+;
+Val min
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Val_max
+
+   _Tag                  '_Kinetic_rate.Val_max'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Estimated maximum value for the kinetic rate when a specific value cannot be obtained.
+;
+
+   _Adit_item_view_name
+;
+Val max
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Val_err
+
+   _Tag                  '_Kinetic_rate.Val_err'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Estimated error in the kinetic rate value.
+;
+
+   _Adit_item_view_name
+;
+Val err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Val_units
+
+   _Tag                  '_Kinetic_rate.Val_units'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Kinetic rate value units
+;
+
+   _Adit_item_view_name
+;
+Val units
+;
+
+   loop_
+     _Example
+
+;
+s-1
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Resonance_ID
+
+   _Tag                  '_Kinetic_rate.Resonance_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _Adit_item_view_name
+;
+Resonance ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Auth_entity_assembly_ID
+
+   _Tag                  '_Kinetic_rate.Auth_entity_assembly_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Auth_seq_ID
+
+   _Tag                  '_Kinetic_rate.Auth_seq_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+An alternative identifier for Seq_id that may be provided by an author in order to match that used in the publication that describes the experimental data.  Note that the value is not required to be a number and does not need to correspond to the value for Seq_ID or Comp_index_ID.
+;
+
+   _Adit_item_view_name
+;
+Auth seq ID
+;
+
+   loop_
+     _Example
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Auth_comp_ID
+
+   _Tag                  '_Kinetic_rate.Auth_comp_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+An alternative identifier for Comp_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth comp ID
+;
+
+   loop_
+     _Example
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Auth_atom_ID
+
+   _Tag                  '_Kinetic_rate.Auth_atom_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+An alternative identifier for Atom_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth atom ID
+;
+
+   loop_
+     _Example
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Sf_ID
+
+   _Tag                  '_Kinetic_rate.Sf_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Kinetic_rate_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Entry_ID
+
+   _Tag                  '_Kinetic_rate.Entry_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Kinetic_rate.Kinetic_rate_list_ID
+
+   _Tag                  '_Kinetic_rate.Kinetic_rate_list_ID'
+
+   _Category              'Kinetic_rate'
+
+   _Description
+;
+Pointer to '_Kinetic_rate_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Kinetic rate list ID
 ;
 
    loop_
@@ -77112,11 +77436,11 @@ Heteronucl T2 list ID
 
 save_
 
-save__General_relaxation_list.Sf_category
+save__Auto_relaxation_list.Sf_category
 
-   _Tag                  '_General_relaxation_list.Sf_category'
+   _Tag                  '_Auto_relaxation_list.Sf_category'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77139,11 +77463,11 @@ Sf category
 
 save_
 
-save__General_relaxation_list.Sf_framecode
+save__Auto_relaxation_list.Sf_framecode
 
-   _Tag                  '_General_relaxation_list.Sf_framecode'
+   _Tag                  '_Auto_relaxation_list.Sf_framecode'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77166,11 +77490,11 @@ Heteronuclear T2 list label
 
 save_
 
-save__General_relaxation_list.Entry_ID
+save__Auto_relaxation_list.Entry_ID
 
-   _Tag                  '_General_relaxation_list.Entry_ID'
+   _Tag                  '_Auto_relaxation_list.Entry_ID'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77193,11 +77517,11 @@ Entry ID
 
 save_
 
-save__General_relaxation_list.Sf_ID
+save__Auto_relaxation_list.Sf_ID
 
-   _Tag                  '_General_relaxation_list.Sf_ID'
+   _Tag                  '_Auto_relaxation_list.Sf_ID'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77220,11 +77544,11 @@ Sf ID
 
 save_
 
-save__General_relaxation_list.ID
+save__Auto_relaxation_list.ID
 
-   _Tag                  '_General_relaxation_list.ID'
+   _Tag                  '_Auto_relaxation_list.ID'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77247,11 +77571,11 @@ ID
 
 save_
 
-save__General_relaxation_list.Data_file_name
+save__Auto_relaxation_list.Data_file_name
 
-   _Tag                  '_General_relaxation_list.Data_file_name'
+   _Tag                  '_Auto_relaxation_list.Data_file_name'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77274,11 +77598,11 @@ Deposited data file name
 
 save_
 
-save__General_relaxation_list.Sample_condition_list_ID
+save__Auto_relaxation_list.Sample_condition_list_ID
 
-   _Tag                  '_General_relaxation_list.Sample_condition_list_ID'
+   _Tag                  '_Auto_relaxation_list.Sample_condition_list_ID'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77301,11 +77625,11 @@ Sample conditions ID
 
 save_
 
-save__General_relaxation_list.Sample_condition_list_label
+save__Auto_relaxation_list.Sample_condition_list_label
 
-   _Tag                  '_General_relaxation_list.Sample_condition_list_label'
+   _Tag                  '_Auto_relaxation_list.Sample_condition_list_label'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77328,11 +77652,11 @@ Sample conditions label
 
 save_
 
-save__General_relaxation_list.Temp_calibration_method
+save__Auto_relaxation_list.Temp_calibration_method
 
-   _Tag                  '_General_relaxation_list.Temp_calibration_method'
+   _Tag                  '_Auto_relaxation_list.Temp_calibration_method'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77355,11 +77679,11 @@ Temperature calibration method
 
 save_
 
-save__General_relaxation_list.Temp_control_method
+save__Auto_relaxation_list.Temp_control_method
 
-   _Tag                  '_General_relaxation_list.Temp_control_method'
+   _Tag                  '_Auto_relaxation_list.Temp_control_method'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77382,11 +77706,11 @@ Pulse program temperature control method
 
 save_
 
-save__General_relaxation_list.Spectrometer_frequency_1H
+save__Auto_relaxation_list.Spectrometer_frequency_1H
 
-   _Tag                  '_General_relaxation_list.Spectrometer_frequency_1H'
+   _Tag                  '_Auto_relaxation_list.Spectrometer_frequency_1H'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77409,11 +77733,38 @@ Spectrometer frequency 1H
 
 save_
 
-save__General_relaxation_list.Relaxation_coherence_type
+save__Auto_relaxation_list.Common_relaxation_type_name
 
-   _Tag                  '_General_relaxation_list.Relaxation_coherence_type'
+   _Tag                  '_Auto_relaxation_list.Common_relaxation_type_name'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
+
+   _Description
+;
+Common term used for the type of relaxation phenomena reported.
+;
+
+   _Adit_item_view_name
+;
+Common term used for relaxation
+;
+
+   loop_
+     _Example
+
+;
+R1
+;
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Relaxation_coherence_type
+
+   _Tag                  '_Auto_relaxation_list.Relaxation_coherence_type'
+
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77422,25 +77773,25 @@ A code describing the spins involved in the measured relaxation coherence.
 
    _Adit_item_view_name
 ;
-T2 coherence type
+Relaxation coherence type
 ;
 
    loop_
      _Example
 
 ;
-?
+Iz
 ;
 
    stop_
 
 save_
 
-save__General_relaxation_list.Relaxation_val_units
+save__Auto_relaxation_list.Relaxation_val_units
 
-   _Tag                  '_General_relaxation_list.Relaxation_val_units'
+   _Tag                  '_Auto_relaxation_list.Relaxation_val_units'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77449,7 +77800,7 @@ The units used for the reported relaxation values.
 
    _Adit_item_view_name
 ;
-T2 value units
+Relaxation value units
 ;
 
    loop_
@@ -77463,11 +77814,11 @@ s; s-1; ms
 
 save_
 
-save__General_relaxation_list.Rex_units
+save__Auto_relaxation_list.Rex_units
 
-   _Tag                  '_General_relaxation_list.Rex_units'
+   _Tag                  '_Auto_relaxation_list.Rex_units'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77490,11 +77841,11 @@ Rex units
 
 save_
 
-save__General_relaxation_list.Details
+save__Auto_relaxation_list.Details
 
-   _Tag                  '_General_relaxation_list.Details'
+   _Tag                  '_Auto_relaxation_list.Details'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77517,15 +77868,15 @@ Details
 
 save_
 
-save__General_relaxation_list.Text_data_format
+save__Auto_relaxation_list.Text_data_format
 
-   _Tag                  '_General_relaxation_list.Text_data_format'
+   _Tag                  '_Auto_relaxation_list.Text_data_format'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
-The data format used to represent the relaxation data as ASCII text in the text block that is the value to the '_General_relaxation_list.Text_data' tag.
+The data format used to represent the relaxation data as ASCII text in the text block that is the value to the '_Auto_relaxation_list.Text_data' tag.
 ;
 
    _Adit_item_view_name
@@ -77544,11 +77895,11 @@ Text data format
 
 save_
 
-save__General_relaxation_list.Text_data
+save__Auto_relaxation_list.Text_data
 
-   _Tag                  '_General_relaxation_list.Text_data'
+   _Tag                  '_Auto_relaxation_list.Text_data'
 
-   _Category              'General_relaxation_list'
+   _Category              'Auto_relaxation_list'
 
    _Description
 ;
@@ -77571,11 +77922,11 @@ Text data
 
 save_
 
-save__General_relaxation_experiment.Experiment_ID
+save__Auto_relaxation_experiment.Experiment_ID
 
-   _Tag                  '_General_relaxation_experiment.Experiment_ID'
+   _Tag                  '_Auto_relaxation_experiment.Experiment_ID'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
@@ -77598,11 +77949,11 @@ Experiment ID
 
 save_
 
-save__General_relaxation_experiment.Experiment_name
+save__Auto_relaxation_experiment.Experiment_name
 
-   _Tag                  '_General_relaxation_experiment.Experiment_name'
+   _Tag                  '_Auto_relaxation_experiment.Experiment_name'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
@@ -77625,11 +77976,11 @@ NMR experiments (select from NMR experiment and samples list)
 
 save_
 
-save__General_relaxation_experiment.Sample_ID
+save__Auto_relaxation_experiment.Sample_ID
 
-   _Tag                  '_General_relaxation_experiment.Sample_ID'
+   _Tag                  '_Auto_relaxation_experiment.Sample_ID'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
@@ -77652,11 +78003,11 @@ Sample ID
 
 save_
 
-save__General_relaxation_experiment.Sample_label
+save__Auto_relaxation_experiment.Sample_label
 
-   _Tag                  '_General_relaxation_experiment.Sample_label'
+   _Tag                  '_Auto_relaxation_experiment.Sample_label'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
@@ -77679,11 +78030,11 @@ Sample label
 
 save_
 
-save__General_relaxation_experiment.Sample_state
+save__Auto_relaxation_experiment.Sample_state
 
-   _Tag                  '_General_relaxation_experiment.Sample_state'
+   _Tag                  '_Auto_relaxation_experiment.Sample_state'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
@@ -77706,15 +78057,15 @@ Sample state
 
 save_
 
-save__General_relaxation_experiment.Sf_ID
+save__Auto_relaxation_experiment.Sf_ID
 
-   _Tag                  '_General_relaxation_experiment.Sf_ID'
+   _Tag                  '_Auto_relaxation_experiment.Sf_ID'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
-Pointer to '_General_relaxation_list.Sf_ID'
+Pointer to '_Auto_relaxation_list.Sf_ID'
 ;
 
    _Adit_item_view_name
@@ -77733,11 +78084,11 @@ Sf ID
 
 save_
 
-save__General_relaxation_experiment.Entry_ID
+save__Auto_relaxation_experiment.Entry_ID
 
-   _Tag                  '_General_relaxation_experiment.Entry_ID'
+   _Tag                  '_Auto_relaxation_experiment.Entry_ID'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
@@ -77760,20 +78111,20 @@ Entry ID
 
 save_
 
-save__General_relaxation_experiment.General_relaxation_list_ID
+save__Auto_relaxation_experiment.Auto_relaxation_list_ID
 
-   _Tag                  '_General_relaxation_experiment.General_relaxation_list_ID'
+   _Tag                  '_Auto_relaxation_experiment.Auto_relaxation_list_ID'
 
-   _Category              'General_relaxation_experiment'
+   _Category              'Auto_relaxation_experiment'
 
    _Description
 ;
-Pointer to '_General_relaxation_list.ID'
+Pointer to '_Auto_relaxation_list.ID'
 ;
 
    _Adit_item_view_name
 ;
-General relaxation list ID
+Auto relaxation list ID
 ;
 
    loop_
@@ -77787,11 +78138,11 @@ General relaxation list ID
 
 save_
 
-save__General_relaxation_software.Software_ID
+save__Auto_relaxation_software.Software_ID
 
-   _Tag                  '_General_relaxation_software.Software_ID'
+   _Tag                  '_Auto_relaxation_software.Software_ID'
 
-   _Category              'General_relaxation_software'
+   _Category              'Auto_relaxation_software'
 
    _Description
 ;
@@ -77814,11 +78165,11 @@ Software ID
 
 save_
 
-save__General_relaxation_software.Software_label
+save__Auto_relaxation_software.Software_label
 
-   _Tag                  '_General_relaxation_software.Software_label'
+   _Tag                  '_Auto_relaxation_software.Software_label'
 
-   _Category              'General_relaxation_software'
+   _Category              'Auto_relaxation_software'
 
    _Description
 ;
@@ -77841,11 +78192,11 @@ Software label
 
 save_
 
-save__General_relaxation_software.Method_ID
+save__Auto_relaxation_software.Method_ID
 
-   _Tag                  '_General_relaxation_software.Method_ID'
+   _Tag                  '_Auto_relaxation_software.Method_ID'
 
-   _Category              'General_relaxation_software'
+   _Category              'Auto_relaxation_software'
 
    _Description
 ;
@@ -77868,11 +78219,11 @@ Method ID
 
 save_
 
-save__General_relaxation_software.Method_label
+save__Auto_relaxation_software.Method_label
 
-   _Tag                  '_General_relaxation_software.Method_label'
+   _Tag                  '_Auto_relaxation_software.Method_label'
 
-   _Category              'General_relaxation_software'
+   _Category              'Auto_relaxation_software'
 
    _Description
 ;
@@ -77895,15 +78246,15 @@ Method label
 
 save_
 
-save__General_relaxation_software.Sf_ID
+save__Auto_relaxation_software.Sf_ID
 
-   _Tag                  '_General_relaxation_software.Sf_ID'
+   _Tag                  '_Auto_relaxation_software.Sf_ID'
 
-   _Category              'General_relaxation_software'
+   _Category              'Auto_relaxation_software'
 
    _Description
 ;
-Pointer to '_General_relaxation_list.Sf_ID'
+Pointer to '_Auto_relaxation_list.Sf_ID'
 ;
 
    _Adit_item_view_name
@@ -77922,11 +78273,11 @@ Sf ID
 
 save_
 
-save__General_relaxation_software.Entry_ID
+save__Auto_relaxation_software.Entry_ID
 
-   _Tag                  '_General_relaxation_software.Entry_ID'
+   _Tag                  '_Auto_relaxation_software.Entry_ID'
 
-   _Category              'General_relaxation_software'
+   _Category              'Auto_relaxation_software'
 
    _Description
 ;
@@ -77949,20 +78300,20 @@ Entry ID
 
 save_
 
-save__General_relaxation_software.General_relaxation_list_ID
+save__Auto_relaxation_software.Auto_relaxation_list_ID
 
-   _Tag                  '_General_relaxation_software.General_relaxation_list_ID'
+   _Tag                  '_Auto_relaxation_software.Auto_relaxation_list_ID'
 
-   _Category              'General_relaxation_software'
+   _Category              'Auto_relaxation_software'
 
    _Description
 ;
-Pointer to '_General_relaxation_list.ID'
+Pointer to '_Auto_relaxation_list.ID'
 ;
 
    _Adit_item_view_name
 ;
-General relaxation list ID
+Auto relaxation list ID
 ;
 
    loop_
@@ -77976,11 +78327,11 @@ General relaxation list ID
 
 save_
 
-save__General_relaxation.ID
+save__Auto_relaxation.ID
 
-   _Tag                  '_General_relaxation.ID'
+   _Tag                  '_Auto_relaxation.ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78003,11 +78354,38 @@ ID
 
 save_
 
-save__General_relaxation.Assembly_atom_ID
+save__Auto_relaxation.Assembly_ID
 
-   _Tag                  '_General_relaxation.Assembly_atom_ID'
+   _Tag                  '_Auto_relaxation.Assembly_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
+
+   _Description
+;
+Pointer to '_Assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Auto_relaxation.Assembly_atom_ID
+
+   _Tag                  '_Auto_relaxation.Assembly_atom_ID'
+
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78030,11 +78408,11 @@ Assembly atom ID
 
 save_
 
-save__General_relaxation.Entity_assembly_ID
+save__Auto_relaxation.Entity_assembly_ID
 
-   _Tag                  '_General_relaxation.Entity_assembly_ID'
+   _Tag                  '_Auto_relaxation.Entity_assembly_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78057,11 +78435,11 @@ Entity assembly ID
 
 save_
 
-save__General_relaxation.Entity_ID
+save__Auto_relaxation.Entity_ID
 
-   _Tag                  '_General_relaxation.Entity_ID'
+   _Tag                  '_Auto_relaxation.Entity_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78084,11 +78462,11 @@ Entity ID
 
 save_
 
-save__General_relaxation.Comp_index_ID
+save__Auto_relaxation.Comp_index_ID
 
-   _Tag                  '_General_relaxation.Comp_index_ID'
+   _Tag                  '_Auto_relaxation.Comp_index_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78111,11 +78489,11 @@ Comp index ID
 
 save_
 
-save__General_relaxation.Seq_ID
+save__Auto_relaxation.Seq_ID
 
-   _Tag                  '_General_relaxation.Seq_ID'
+   _Tag                  '_Auto_relaxation.Seq_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78138,11 +78516,11 @@ Seq ID
 
 save_
 
-save__General_relaxation.Comp_ID
+save__Auto_relaxation.Comp_ID
 
-   _Tag                  '_General_relaxation.Comp_ID'
+   _Tag                  '_Auto_relaxation.Comp_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78165,11 +78543,11 @@ Comp ID
 
 save_
 
-save__General_relaxation.Atom_ID
+save__Auto_relaxation.Atom_ID
 
-   _Tag                  '_General_relaxation.Atom_ID'
+   _Tag                  '_Auto_relaxation.Atom_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78192,11 +78570,11 @@ Atom ID
 
 save_
 
-save__General_relaxation.Atom_type
+save__Auto_relaxation.Atom_type
 
-   _Tag                  '_General_relaxation.Atom_type'
+   _Tag                  '_Auto_relaxation.Atom_type'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78219,11 +78597,11 @@ Atom type
 
 save_
 
-save__General_relaxation.Atom_isotope_number
+save__Auto_relaxation.Atom_isotope_number
 
-   _Tag                  '_General_relaxation.Atom_isotope_number'
+   _Tag                  '_Auto_relaxation.Atom_isotope_number'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78246,11 +78624,11 @@ Atom isotope number
 
 save_
 
-save__General_relaxation.General_relaxation_val
+save__Auto_relaxation.Auto_relaxation_val
 
-   _Tag                  '_General_relaxation.General_relaxation_val'
+   _Tag                  '_Auto_relaxation.Auto_relaxation_val'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78259,7 +78637,7 @@ The relaxation value.
 
    _Adit_item_view_name
 ;
-General relaxation val
+Auto relaxation val
 ;
 
    loop_
@@ -78273,11 +78651,11 @@ General relaxation val
 
 save_
 
-save__General_relaxation.General_relaxation_val_err
+save__Auto_relaxation.Auto_relaxation_val_err
 
-   _Tag                  '_General_relaxation.General_relaxation_val_err'
+   _Tag                  '_Auto_relaxation.Auto_relaxation_val_err'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78286,7 +78664,7 @@ The estimated error in the reported relaxation value.
 
    _Adit_item_view_name
 ;
-General relaxation val err
+Auto relaxation val err
 ;
 
    loop_
@@ -78300,11 +78678,11 @@ General relaxation val err
 
 save_
 
-save__General_relaxation.Rex_val
+save__Auto_relaxation.Rex_val
 
-   _Tag                  '_General_relaxation.Rex_val'
+   _Tag                  '_Auto_relaxation.Rex_val'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78327,11 +78705,11 @@ Rex val
 
 save_
 
-save__General_relaxation.Rex_err
+save__Auto_relaxation.Rex_val_err
 
-   _Tag                  '_General_relaxation.Rex_err'
+   _Tag                  '_Auto_relaxation.Rex_val_err'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78340,7 +78718,7 @@ The estimated error in the fitted exchange broadening contribution value.
 
    _Adit_item_view_name
 ;
-Rex err
+Rex val err
 ;
 
    loop_
@@ -78354,11 +78732,11 @@ Rex err
 
 save_
 
-save__General_relaxation.Resonance_ID
+save__Auto_relaxation.Resonance_ID
 
-   _Tag                  '_General_relaxation.Resonance_ID'
+   _Tag                  '_Auto_relaxation.Resonance_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78381,11 +78759,11 @@ Resonance ID
 
 save_
 
-save__General_relaxation.Auth_entity_assembly_ID
+save__Auto_relaxation.Auth_entity_assembly_ID
 
-   _Tag                  '_General_relaxation.Auth_entity_assembly_ID'
+   _Tag                  '_Auto_relaxation.Auth_entity_assembly_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78408,11 +78786,11 @@ Auth entity assembly ID
 
 save_
 
-save__General_relaxation.Auth_seq_ID
+save__Auto_relaxation.Auth_seq_ID
 
-   _Tag                  '_General_relaxation.Auth_seq_ID'
+   _Tag                  '_Auto_relaxation.Auth_seq_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78435,11 +78813,11 @@ Auth seq ID
 
 save_
 
-save__General_relaxation.Auth_comp_ID
+save__Auto_relaxation.Auth_comp_ID
 
-   _Tag                  '_General_relaxation.Auth_comp_ID'
+   _Tag                  '_Auto_relaxation.Auth_comp_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78462,11 +78840,11 @@ DPN
 
 save_
 
-save__General_relaxation.Auth_atom_ID
+save__Auto_relaxation.Auth_atom_ID
 
-   _Tag                  '_General_relaxation.Auth_atom_ID'
+   _Tag                  '_Auto_relaxation.Auth_atom_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78489,15 +78867,15 @@ HB1
 
 save_
 
-save__General_relaxation.Sf_ID
+save__Auto_relaxation.Sf_ID
 
-   _Tag                  '_General_relaxation.Sf_ID'
+   _Tag                  '_Auto_relaxation.Sf_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
-Pointer to '_General_relaxation_list.Sf_ID'
+Pointer to '_Auto_relaxation_list.Sf_ID'
 ;
 
    _Adit_item_view_name
@@ -78516,11 +78894,11 @@ Sf ID
 
 save_
 
-save__General_relaxation.Entry_ID
+save__Auto_relaxation.Entry_ID
 
-   _Tag                  '_General_relaxation.Entry_ID'
+   _Tag                  '_Auto_relaxation.Entry_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
@@ -78543,20 +78921,20 @@ Entry ID
 
 save_
 
-save__General_relaxation.General_relaxation_list_ID
+save__Auto_relaxation.Auto_relaxation_list_ID
 
-   _Tag                  '_General_relaxation.General_relaxation_list_ID'
+   _Tag                  '_Auto_relaxation.Auto_relaxation_list_ID'
 
-   _Category              'General_relaxation'
+   _Category              'Auto_relaxation'
 
    _Description
 ;
-Pointer to '_General_relaxation_list.ID'
+Pointer to '_Auto_relaxation_list.ID'
 ;
 
    _Adit_item_view_name
 ;
-General relaxation list ID
+Auto relaxation list ID
 ;
 
    loop_
@@ -90477,6 +90855,2166 @@ D H fractionation factor list ID
 
 save_
 
+save__Binding_value_list.Sf_category
+
+   _Tag                  '_Binding_value_list.Sf_category'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+Category definition for the information content of the saveframe
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Sf_framecode
+
+   _Tag                  '_Binding_value_list.Sf_framecode'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+A label for the saveframe that describes in very brief terms the information contained in the saveframe.
+;
+
+   _Adit_item_view_name
+;
+binding constants
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Entry_ID
+
+   _Tag                  '_Binding_value_list.Entry_ID'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Sf_ID
+
+   _Tag                  '_Binding_value_list.Sf_ID'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.ID
+
+   _Tag                  '_Binding_value_list.ID'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Data_file_name
+
+   _Tag                  '_Binding_value_list.Data_file_name'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+The name of the file submitted with this depostion that contains the quantitative data for this saveframe.
+;
+
+   _Adit_item_view_name
+;
+Deposited data file name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Sample_condition_list_ID
+
+   _Tag                  '_Binding_value_list.Sample_condition_list_ID'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample conditions ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Sample_condition_list_label
+
+   _Tag                  '_Binding_value_list.Sample_condition_list_label'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+The label for the set of experimental sample conditions used to collect the binding data.
+;
+
+   _Adit_item_view_name
+;
+Sample conditions label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Details
+
+   _Tag                  '_Binding_value_list.Details'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+Text describing the reported binding values.
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Text_data_format
+
+   _Tag                  '_Binding_value_list.Text_data_format'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+The data format used to represent the binding data as ASCII text in the text block that is the value to the '_Binding_value_list.Text_data' tag.
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Text_data
+
+   _Tag                  '_Binding_value_list.Text_data'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+A set of binding data formatted as ASCII text.
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Experiment_ID
+
+   _Tag                  '_Binding_experiment.Experiment_ID'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _Adit_item_view_name
+;
+Experiment ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Experiment_name
+
+   _Tag                  '_Binding_experiment.Experiment_name'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _Adit_item_view_name
+;
+NMR experiments (select from NMR experiment and samples list)
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Sample_ID
+
+   _Tag                  '_Binding_experiment.Sample_ID'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Pointer to '_Sample.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Sample_label
+
+   _Tag                  '_Binding_experiment.Sample_label'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _Adit_item_view_name
+;
+Sample label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Sample_state
+
+   _Tag                  '_Binding_experiment.Sample_state'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Physical state of the sample either anisotropic or isotropic.
+;
+
+   _Adit_item_view_name
+;
+Sample state
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Sf_ID
+
+   _Tag                  '_Binding_experiment.Sf_ID'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Pointer to '_Binding_value_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Entry_ID
+
+   _Tag                  '_Binding_experiment.Entry_ID'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_experiment.Binding_value_list_ID
+
+   _Tag                  '_Binding_experiment.Binding_value_list_ID'
+
+   _Category              'Binding_experiment'
+
+   _Description
+;
+Pointer to '_Binding_value_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding value list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_software.Software_ID
+
+   _Tag                  '_Binding_software.Software_ID'
+
+   _Category              'Binding_software'
+
+   _Description
+;
+Pointer to '_Software.ID'
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_software.Software_label
+
+   _Tag                  '_Binding_software.Software_label'
+
+   _Category              'Binding_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_software.Method_ID
+
+   _Tag                  '_Binding_software.Method_ID'
+
+   _Category              'Binding_software'
+
+   _Description
+;
+Pointer to '_Method.ID'
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_software.Method_label
+
+   _Tag                  '_Binding_software.Method_label'
+
+   _Category              'Binding_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_software.Sf_ID
+
+   _Tag                  '_Binding_software.Sf_ID'
+
+   _Category              'Binding_software'
+
+   _Description
+;
+Pointer to '_Binding_value_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_software.Entry_ID
+
+   _Tag                  '_Binding_software.Entry_ID'
+
+   _Category              'Binding_software'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_software.Binding_value_list_ID
+
+   _Tag                  '_Binding_software.Binding_value_list_ID'
+
+   _Category              'Binding_software'
+
+   _Description
+;
+Pointer to '_Binding_value_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding value list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.ID
+
+   _Tag                  '_Binding_result.ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Unique identifier for the observed binding constant.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Experiment_ID
+
+   _Tag                  '_Binding_result.Experiment_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _Adit_item_view_name
+;
+Experiment ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Assembly_ID
+
+   _Tag                  '_Binding_result.Assembly_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_assembly_atom_ID
+
+   _Tag                  '_Binding_result.Atm_obs_assembly_atom_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Atm obs assembly atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_entity_assembly_ID
+
+   _Tag                  '_Binding_result.Atm_obs_entity_assembly_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Atm obs entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_entity_ID
+
+   _Tag                  '_Binding_result.Atm_obs_entity_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Entity.ID'
+;
+
+   _Adit_item_view_name
+;
+Atm obs entity ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_comp_index_ID
+
+   _Tag                  '_Binding_result.Atm_obs_comp_index_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _Adit_item_view_name
+;
+Atm obs comp index ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_seq_ID
+
+   _Tag                  '_Binding_result.Atm_obs_seq_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _Adit_item_view_name
+;
+Atm obs seq ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_comp_ID
+
+   _Tag                  '_Binding_result.Atm_obs_comp_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _Adit_item_view_name
+;
+Atm obs comp ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_atom_ID
+
+   _Tag                  '_Binding_result.Atm_obs_atom_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Atm obs atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_atom_type
+
+   _Tag                  '_Binding_result.Atm_obs_atom_type'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Standard symbol used to define the atom element type.
+;
+
+   _Adit_item_view_name
+;
+Atm obs atom type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_atom_isotope_number
+
+   _Tag                  '_Binding_result.Atm_obs_atom_isotope_number'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Atm obs atom isotope number
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Resonance_ID
+
+   _Tag                  '_Binding_result.Resonance_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _Adit_item_view_name
+;
+Resonance ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_auth_entity_assembly_ID
+
+   _Tag                  '_Binding_result.Atm_obs_auth_entity_assembly_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Atm obs auth entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_auth_seq_ID
+
+   _Tag                  '_Binding_result.Atm_obs_auth_seq_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+An alternative identifier for Seq_id that may be provided by an author in order to match that used in the publication that describes the experimental data.  Note that the value is not required to be a number and does not need to correspond to the value for Seq_ID or Comp_index_ID.
+;
+
+   _Adit_item_view_name
+;
+Atm obs auth seq ID
+;
+
+   loop_
+     _Example
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_auth_comp_ID
+
+   _Tag                  '_Binding_result.Atm_obs_auth_comp_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+An alternative identifier for Comp_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Atm obs auth comp ID
+;
+
+   loop_
+     _Example
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Atm_obs_auth_atom_ID
+
+   _Tag                  '_Binding_result.Atm_obs_auth_atom_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+An alternative identifier for Atom_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Atm obs auth atom ID
+;
+
+   loop_
+     _Example
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Expt_observed_param
+
+   _Tag                  '_Binding_result.Expt_observed_param'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Expt observed param
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Val_type
+
+   _Tag                  '_Binding_result.Val_type'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Val type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Val
+
+   _Tag                  '_Binding_result.Val'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Binding value estimated from a fit of a binding titration data set.
+;
+
+   _Adit_item_view_name
+;
+Val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Val_err
+
+   _Tag                  '_Binding_result.Val_err'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Estimated error in the binding constant.
+;
+
+   _Adit_item_view_name
+;
+Val err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Val_units
+
+   _Tag                  '_Binding_result.Val_units'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Val units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Sf_ID
+
+   _Tag                  '_Binding_result.Sf_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Binding_value_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Entry_ID
+
+   _Tag                  '_Binding_result.Entry_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_result.Binding_value_list_ID
+
+   _Tag                  '_Binding_result.Binding_value_list_ID'
+
+   _Category              'Binding_result'
+
+   _Description
+;
+Pointer to '_Binding_value_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding value list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Binding_result_ID
+
+   _Tag                  '_Binding_partners.Binding_result_ID'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+Pointer to '_Binding_result.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding result ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Assembly_ID
+
+   _Tag                  '_Binding_partners.Assembly_ID'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+Pointer to '_Assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Entity_assembly_ID
+
+   _Tag                  '_Binding_partners.Entity_assembly_ID'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Entity_assembly_name
+
+   _Tag                  '_Binding_partners.Entity_assembly_name'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entity assembly name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Entity_ID
+
+   _Tag                  '_Binding_partners.Entity_ID'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+Pointer to '_Binding_value_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Entity ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Entity_label
+
+   _Tag                  '_Binding_partners.Entity_label'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entity label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Sf_ID
+
+   _Tag                  '_Binding_partners.Sf_ID'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+Pointer to '_Binding_value_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Entry_ID
+
+   _Tag                  '_Binding_partners.Entry_ID'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_partners.Binding_value_list_ID
+
+   _Tag                  '_Binding_partners.Binding_value_list_ID'
+
+   _Category              'Binding_partners'
+
+   _Description
+;
+Pointer to '_Binding_value_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding value list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Sf_category
+
+   _Tag                  '_Binding_titration_list.Sf_category'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+Category definition for the information content of the saveframe
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Sf_framecode
+
+   _Tag                  '_Binding_titration_list.Sf_framecode'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+A label for the saveframe that describes in very brief terms the information contained in the saveframe.
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Entry_ID
+
+   _Tag                  '_Binding_titration_list.Entry_ID'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Sf_ID
+
+   _Tag                  '_Binding_titration_list.Sf_ID'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.ID
+
+   _Tag                  '_Binding_titration_list.ID'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+Unique identifier for the list of binding titration values.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Data_file_name
+
+   _Tag                  '_Binding_titration_list.Data_file_name'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+The name of the file submitted with this depostion that contains the quantitative data for this saveframe.
+;
+
+   _Adit_item_view_name
+;
+Deposited data file name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Details
+
+   _Tag                  '_Binding_titration_list.Details'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+Text describing the reported binding data.
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Text_data_format
+
+   _Tag                  '_Binding_titration_list.Text_data_format'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+The data format used to represent the binding parameter data as ASCII text in the text block that is the value to the '_Binding_param_list.Text_data' tag.
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration_list.Text_data
+
+   _Tag                  '_Binding_titration_list.Text_data'
+
+   _Category              'Binding_titration_list'
+
+   _Description
+;
+A set of binding titration data formatted as ASCII text.
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.ID
+
+   _Tag                  '_Binding_titration.ID'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Unique identifier for the observed NMR parameter value.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Binding_result_ID
+
+   _Tag                  '_Binding_titration.Binding_result_ID'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Pointer to '_Binding_result.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding result ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Concentration_val
+
+   _Tag                  '_Binding_titration.Concentration_val'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Concentration value at which the observed NMR parameter value was observed.
+;
+
+   _Adit_item_view_name
+;
+Concentration val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Concentration_val_err
+
+   _Tag                  '_Binding_titration.Concentration_val_err'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Error in the measured concentration value.
+;
+
+   _Adit_item_view_name
+;
+Concentration val err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Concentration_val_units
+
+   _Tag                  '_Binding_titration.Concentration_val_units'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Concentration value units.
+;
+
+   _Adit_item_view_name
+;
+Concentration val units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Observed_param_val
+
+   _Tag                  '_Binding_titration.Observed_param_val'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Value for the observed NMR parameter.
+;
+
+   _Adit_item_view_name
+;
+Observed NMR param val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Observed_param_val_err
+
+   _Tag                  '_Binding_titration.Observed_param_val_err'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Error in the reported NMR parameter value.
+;
+
+   _Adit_item_view_name
+;
+Observed NMR param val err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Observed_param
+
+   _Tag                  '_Binding_titration.Observed_param'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Observed NMR parameter
+;
+
+   _Adit_item_view_name
+;
+Observed param
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Sf_ID
+
+   _Tag                  '_Binding_titration.Sf_ID'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Pointer to '_Binding_titration_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Entry_ID
+
+   _Tag                  '_Binding_titration.Entry_ID'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_titration.Binding_titration_list_ID
+
+   _Tag                  '_Binding_titration.Binding_titration_list_ID'
+
+   _Category              'Binding_titration'
+
+   _Description
+;
+Pointer to '_Binding_titration_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding titration list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Deduced_secd_struct_list.Sf_category
 
    _Tag                  '_Deduced_secd_struct_list.Sf_category'
@@ -97659,6 +100197,60 @@ Details about the refinement method
 
 save_
 
+save__Conformer_family_refinement.Software_ID
+
+   _Tag                  '_Conformer_family_refinement.Software_ID'
+
+   _Category              'Conformer_family_refinement'
+
+   _Description
+;
+Pointer to '_Software.ID'
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Conformer_family_refinement.Software_label
+
+   _Tag                  '_Conformer_family_refinement.Software_label'
+
+   _Category              'Conformer_family_refinement'
+
+   _Description
+;
+Name of the software application primarily used to refine the reported conformers.
+;
+
+   _Adit_item_view_name
+;
+Major refinement software used
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Conformer_family_refinement.Sf_ID
 
    _Tag                  '_Conformer_family_refinement.Sf_ID'
@@ -99036,6 +101628,33 @@ Conformer family coord set ID
 
 save_
 
+save__Atom_site.Assembly_ID
+
+   _Tag                  '_Atom_site.Assembly_ID'
+
+   _Category              'Atom_site'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Assembly ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
 save__Atom_site.Model_ID
 
    _Tag                  '_Atom_site.Model_ID'
@@ -99792,9 +102411,9 @@ PDB record ID
 
 save_
 
-save__Atom_site.PDB_atom_name
+save__Atom_site.PDB_model_num
 
-   _Tag                  '_Atom_site.PDB_atom_name'
+   _Tag                  '_Atom_site.PDB_model_num'
 
    _Category              'Atom_site'
 
@@ -99805,14 +102424,41 @@ save__Atom_site.PDB_atom_name
 
    _Adit_item_view_name
 ;
-PDB atom name
+PDB model num
 ;
 
    loop_
      _Example
 
 ;
-CD1
+1
+;
+
+   stop_
+
+save_
+
+save__Atom_site.PDB_strand_ID
+
+   _Tag                  '_Atom_site.PDB_strand_ID'
+
+   _Category              'Atom_site'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -99846,9 +102492,9 @@ PDB ins code
 
 save_
 
-save__Atom_site.PDB_model_num
+save__Atom_site.PDB_residue_no
 
-   _Tag                  '_Atom_site.PDB_model_num'
+   _Tag                  '_Atom_site.PDB_residue_no'
 
    _Category              'Atom_site'
 
@@ -99859,14 +102505,14 @@ save__Atom_site.PDB_model_num
 
    _Adit_item_view_name
 ;
-PDB model num
+PDB residue no
 ;
 
    loop_
      _Example
 
 ;
-1
+6
 ;
 
    stop_
@@ -99900,9 +102546,9 @@ TYR
 
 save_
 
-save__Atom_site.PDB_residue_no
+save__Atom_site.PDB_atom_name
 
-   _Tag                  '_Atom_site.PDB_residue_no'
+   _Tag                  '_Atom_site.PDB_atom_name'
 
    _Category              'Atom_site'
 
@@ -99913,23 +102559,23 @@ save__Atom_site.PDB_residue_no
 
    _Adit_item_view_name
 ;
-PDB residue no
+PDB atom name
 ;
 
    loop_
      _Example
 
 ;
-6
+CD1
 ;
 
    stop_
 
 save_
 
-save__Atom_site.PDB_strand_id
+save__Atom_site.Auth_entity_assembly_ID
 
-   _Tag                  '_Atom_site.PDB_strand_id'
+   _Tag                  '_Atom_site.Auth_entity_assembly_ID'
 
    _Category              'Atom_site'
 
@@ -99940,14 +102586,14 @@ save__Atom_site.PDB_strand_id
 
    _Adit_item_view_name
 ;
-PDB strand id
+Auth entity assembly ID
 ;
 
    loop_
      _Example
 
 ;
-A
+3
 ;
 
    stop_
@@ -100002,33 +102648,6 @@ Auth chain ID
 
 ;
 A
-;
-
-   stop_
-
-save_
-
-save__Atom_site.Auth_entity_assembly_ID
-
-   _Tag                  '_Atom_site.Auth_entity_assembly_ID'
-
-   _Category              'Atom_site'
-
-   _Description
-;
-?
-;
-
-   _Adit_item_view_name
-;
-Auth entity assembly ID
-;
-
-   loop_
-     _Example
-
-;
-3
 ;
 
    stop_
@@ -100116,11 +102735,38 @@ HB1
 
 save_
 
-save__Atom_site.Auth_atom_name
+save__atom_site.Auth_alt_ID
 
-   _Tag                  '_Atom_site.Auth_atom_name'
+   _Tag                  '_atom_site.Auth_alt_ID'
 
-   _Category              'Atom_site'
+   _Category              'atom_site'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth alt ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__atom_site.Auth_atom_name
+
+   _Tag                  '_atom_site.Auth_atom_name'
+
+   _Category              'atom_site'
 
    _Description
 ;
@@ -113049,6 +115695,2814 @@ Other struct feature list ID
 
 save_
 
+save__Tensor_list.Sf_category
+
+   _Tag                  '_Tensor_list.Sf_category'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+Category definition for the information content of the saveframe
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Sf_framecode
+
+   _Tag                  '_Tensor_list.Sf_framecode'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+A label for the saveframe that describes in very brief terms the information contained in the saveframe.
+;
+
+   _Adit_item_view_name
+;
+Chemical shift tensors label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Entry_ID
+
+   _Tag                  '_Tensor_list.Entry_ID'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Sf_ID
+
+   _Tag                  '_Tensor_list.Sf_ID'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.ID
+
+   _Tag                  '_Tensor_list.ID'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+Unique identifier for the list of chemical shift tensors.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Tensor_type
+
+   _Tag                  '_Tensor_list.Tensor_type'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Tensor type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Tensor_shape
+
+   _Tag                  '_Tensor_list.Tensor_shape'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Tensor shape
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Matrix_val_units
+
+   _Tag                  '_Tensor_list.Matrix_val_units'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Matrix val units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Isotropic_val_type
+
+   _Tag                  '_Tensor_list.Isotropic_val_type'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Isotropic val type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Angle_units
+
+   _Tag                  '_Tensor_list.Angle_units'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Angle units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Isotropic_val_formula
+
+   _Tag                  '_Tensor_list.Isotropic_val_formula'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Isotropic val formula
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Anisotropic_val_formula
+
+   _Tag                  '_Tensor_list.Anisotropic_val_formula'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Anisotropic val formula
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Rhombic_val_formula
+
+   _Tag                  '_Tensor_list.Rhombic_val_formula'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Rhombic val formula
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Euler_angle_type
+
+   _Tag                  '_Tensor_list.Euler_angle_type'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Euler angle type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Data_file_name
+
+   _Tag                  '_Tensor_list.Data_file_name'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+Name of the file uploaded for this deposition that contains the reported set of chemical shielding tensor data.
+;
+
+   _Adit_item_view_name
+;
+Name of the uploaded data file
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor_list.Details
+
+   _Tag                  '_Tensor_list.Details'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+Text providing additional information regarding the chemical shift tensor list and its derivation.
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.ID
+
+   _Tag                  '_Tensor.ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Unique identifier for the chemical shift tensor.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Interatomic_distance_list_ID
+
+   _Tag                  '_Tensor.Interatomic_distance_list_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Interatomic distance list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Interatomic_dist_set_ID
+
+   _Tag                  '_Tensor.Interatomic_dist_set_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Interatomic dist set ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Calc_type_ID
+
+   _Tag                  '_Tensor.Calc_type_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Chem_shifts_calc_type.ID'
+;
+
+   _Adit_item_view_name
+;
+Calc type ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Assembly_atom_ID
+
+   _Tag                  '_Tensor.Assembly_atom_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Entity_assembly_ID
+
+   _Tag                  '_Tensor.Entity_assembly_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Entity_ID
+
+   _Tag                  '_Tensor.Entity_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Entity.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Comp_index_ID
+
+   _Tag                  '_Tensor.Comp_index_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp index ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Seq_ID
+
+   _Tag                  '_Tensor.Seq_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
+;
+
+   _Adit_item_view_name
+;
+Seq ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Comp_ID
+
+   _Tag                  '_Tensor.Comp_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Atom_ID
+
+   _Tag                  '_Tensor.Atom_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Atom_type
+
+   _Tag                  '_Tensor.Atom_type'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for this tag is a standard IUPAC abbreviation for an element (i.e., H, C, P, etc).
+;
+
+   _Adit_item_view_name
+;
+Atom type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Atom_isotope_number
+
+   _Tag                  '_Tensor.Atom_isotope_number'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Atom isotope number
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Axial_sym_axis_polar_angle
+
+   _Tag                  '_Tensor.Axial_sym_axis_polar_angle'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Axial sym axis polar angle
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Axial_sym_axis_aximuthal_angle
+
+   _Tag                  '_Tensor.Axial_sym_axis_aximuthal_angle'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Axial sym axis aximuthal angle
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Isotropic_val
+
+   _Tag                  '_Tensor.Isotropic_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Isotropic val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Anisotropic_val
+
+   _Tag                  '_Tensor.Anisotropic_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Anisotropic val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Rhombic_val
+
+   _Tag                  '_Tensor.Rhombic_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Rhombic val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Euler_angle_alpha
+
+   _Tag                  '_Tensor.Euler_angle_alpha'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Euler angle alpha
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Euler_angle_beta
+
+   _Tag                  '_Tensor.Euler_angle_beta'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Euler angle beta
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Euler_angle_gamma
+
+   _Tag                  '_Tensor.Euler_angle_gamma'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Euler angle gamma
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Isotropic_comp_1_1_val
+
+   _Tag                  '_Tensor.Isotropic_comp_1_1_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+By the standard convention, the value of the 1_1 element of the isotropic component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Isotropic comp 1 1 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Isotropic_comp_2_2_val
+
+   _Tag                  '_Tensor.Isotropic_comp_2_2_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+By the standard convention, the value of the 2_2 element of the isotropic component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Isotropic comp 2 2 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Isotropic_comp_3_3_val
+
+   _Tag                  '_Tensor.Isotropic_comp_3_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+By the standard convention, the value of the 3_3 element of the isotropic component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Isotropic comp 3 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Anti_sym_comp_1_2_val
+
+   _Tag                  '_Tensor.Anti_sym_comp_1_2_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_2 element of the anti-symmetric component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Anti sym comp 1 2 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Anti_sym_comp_1_3_val
+
+   _Tag                  '_Tensor.Anti_sym_comp_1_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_3 element of the anti-symmetric component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Anti sym comp 1 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Anti_sym_comp_2_3_val
+
+   _Tag                  '_Tensor.Anti_sym_comp_2_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 2_3 element of the anti-symmetric component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Anti sym comp 2 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Sym_traceless_comp_1_1_val
+
+   _Tag                  '_Tensor.Sym_traceless_comp_1_1_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_1 element of the symmetric traceless component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Sym traceless comp 1 1 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Sym_traceless_comp_1_2_val
+
+   _Tag                  '_Tensor.Sym_traceless_comp_1_2_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_2 element of the symmetric traceless component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Sym traceless comp 1 2 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Sym_traceless_comp_1_3_val
+
+   _Tag                  '_Tensor.Sym_traceless_comp_1_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_3 element of the symmetric traceless component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Sym traceless comp 1 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Sym_traceless_comp_2_2_val
+
+   _Tag                  '_Tensor.Sym_traceless_comp_2_2_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 2_2 element of the symmetric traceless component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Sym traceless comp 2 2 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Sym_traceless_comp_2_3_val
+
+   _Tag                  '_Tensor.Sym_traceless_comp_2_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 2_3 element of the symmetric traceless component of the chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Sym traceless comp 2 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_1_1_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_1_1_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_1 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 1 1 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_1_2_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_1_2_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_2 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 1 2 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_1_3_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_1_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 1_3 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 1 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_2_1_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_2_1_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 2_1 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 2 1 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_2_2_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_2_2_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 2_2 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 2 2 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_2_3_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_2_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 2_3 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 2 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_3_1_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_3_1_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 3_1 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 3 1 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_3_2_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_3_2_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 3_2 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 3 2 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Reduceable_matrix_3_3_val
+
+   _Tag                  '_Tensor.Reduceable_matrix_3_3_val'
+
+   _Category              'Tensor'
+
+   _Description
+;
+The value for the 3_3 element of the reduceable chemical shielding tensor.
+;
+
+   _Adit_item_view_name
+;
+Reduceable matrix 3 3 val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Auth_entity_assembly_ID
+
+   _Tag                  '_Tensor.Auth_entity_assembly_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Auth_seq_ID
+
+   _Tag                  '_Tensor.Auth_seq_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+An alternative identifier for Seq_id that may be provided by an author in order to match that used in the publication that describes the experimental data.  Note that the value is not required to be a number and does not need to correspond to the value for Seq_ID or Comp_index_ID.
+;
+
+   _Adit_item_view_name
+;
+Auth seq ID
+;
+
+   loop_
+     _Example
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Tensor.Auth_comp_ID
+
+   _Tag                  '_Tensor.Auth_comp_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+An alternative identifier for Comp_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth comp ID
+;
+
+   loop_
+     _Example
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Tensor.Auth_atom_ID
+
+   _Tag                  '_Tensor.Auth_atom_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+An alternative identifier for Atom_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth atom ID
+;
+
+   loop_
+     _Example
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Tensor.Sf_ID
+
+   _Tag                  '_Tensor.Sf_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Tensor_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Entry_ID
+
+   _Tag                  '_Tensor.Entry_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Tensor.Tensor_list_ID
+
+   _Tag                  '_Tensor.Tensor_list_ID'
+
+   _Category              'Tensor'
+
+   _Description
+;
+Pointer to '_Tensor_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Tensor list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Sf_category
+
+   _Tag                  '_Interatomic_distance_list.Sf_category'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Sf_framecode
+
+   _Tag                  '_Interatomic_distance_list.Sf_framecode'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Tensors label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Entry_ID
+
+   _Tag                  '_Interatomic_distance_list.Entry_ID'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Sf_ID
+
+   _Tag                  '_Interatomic_distance_list.Sf_ID'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.ID
+
+   _Tag                  '_Interatomic_distance_list.ID'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Details
+
+   _Tag                  '_Interatomic_distance_list.Details'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Text_data_format
+
+   _Tag                  '_Interatomic_distance_list.Text_data_format'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Text_data
+
+   _Tag                  '_Interatomic_distance_list.Text_data'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.ID
+
+   _Tag                  '_Interatomic_dist.ID'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Set_ID
+
+   _Tag                  '_Interatomic_dist.Set_ID'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Set ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Assembly_atom_ID_1
+
+   _Tag                  '_Interatomic_dist.Assembly_atom_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly atom ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Entity_assembly_ID_1
+
+   _Tag                  '_Interatomic_dist.Entity_assembly_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity assembly ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Entity_ID_1
+
+   _Tag                  '_Interatomic_dist.Entity_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Entity.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Comp_index_ID_1
+
+   _Tag                  '_Interatomic_dist.Comp_index_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp index ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Seq_ID_1
+
+   _Tag                  '_Interatomic_dist.Seq_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
+;
+
+   _Adit_item_view_name
+;
+Seq ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Comp_ID_1
+
+   _Tag                  '_Interatomic_dist.Comp_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Atom_ID_1
+
+   _Tag                  '_Interatomic_dist.Atom_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Atom ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Atom_type_1
+
+   _Tag                  '_Interatomic_dist.Atom_type_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+The value for this tag is a standard IUPAC abbreviation for an element (i.e., H, C, P, etc).
+;
+
+   _Adit_item_view_name
+;
+Atom type 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Assembly_atom_ID_2
+
+   _Tag                  '_Interatomic_dist.Assembly_atom_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly atom ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Entity_assembly_ID_2
+
+   _Tag                  '_Interatomic_dist.Entity_assembly_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity assembly ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Entity_ID_2
+
+   _Tag                  '_Interatomic_dist.Entity_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Entity.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Comp_index_ID_2
+
+   _Tag                  '_Interatomic_dist.Comp_index_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp index ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Seq_ID_2
+
+   _Tag                  '_Interatomic_dist.Seq_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
+;
+
+   _Adit_item_view_name
+;
+Seq ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Comp_ID_2
+
+   _Tag                  '_Interatomic_dist.Comp_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Atom_ID_2
+
+   _Tag                  '_Interatomic_dist.Atom_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Atom ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Atom_type_2
+
+   _Tag                  '_Interatomic_dist.Atom_type_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+The value for this tag is a standard IUPAC abbreviation for an element (i.e., H, C, P, etc).
+;
+
+   _Adit_item_view_name
+;
+Atom type 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Val
+
+   _Tag                  '_Interatomic_dist.Val'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_asym_ID_1
+
+   _Tag                  '_Interatomic_dist.Auth_asym_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_entity_assembly_ID_1
+
+   _Tag                  '_Interatomic_dist.Auth_entity_assembly_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth entity assembly ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_seq_ID_1
+
+   _Tag                  '_Interatomic_dist.Auth_seq_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+An alternative identifier for Seq_id that may be provided by an author in order to match that used in the publication that describes the experimental data.  Note that the value is not required to be a number and does not need to correspond to the value for Seq_ID or Comp_index_ID.
+;
+
+   _Adit_item_view_name
+;
+Auth seq ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_comp_ID_1
+
+   _Tag                  '_Interatomic_dist.Auth_comp_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+An alternative identifier for Comp_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth comp ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_atom_ID_1
+
+   _Tag                  '_Interatomic_dist.Auth_atom_ID_1'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+An alternative identifier for Atom_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth atom ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_asym_ID_2
+
+   _Tag                  '_Interatomic_dist.Auth_asym_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_entity_assembly_ID_2
+
+   _Tag                  '_Interatomic_dist.Auth_entity_assembly_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth entity assembly ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_seq_ID_2
+
+   _Tag                  '_Interatomic_dist.Auth_seq_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+An alternative identifier for Seq_id that may be provided by an author in order to match that used in the publication that describes the experimental data.  Note that the value is not required to be a number and does not need to correspond to the value for Seq_ID or Comp_index_ID.
+;
+
+   _Adit_item_view_name
+;
+Auth seq ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_comp_ID_2
+
+   _Tag                  '_Interatomic_dist.Auth_comp_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+An alternative identifier for Comp_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth comp ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Auth_atom_ID_2
+
+   _Tag                  '_Interatomic_dist.Auth_atom_ID_2'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+An alternative identifier for Atom_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth atom ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Sf_ID
+
+   _Tag                  '_Interatomic_dist.Sf_ID'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Interatomic_distance_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Entry_ID
+
+   _Tag                  '_Interatomic_dist.Entry_ID'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_dist.Interatomic_distance_list_ID
+
+   _Tag                  '_Interatomic_dist.Interatomic_distance_list_ID'
+
+   _Category              'Interatomic_dist'
+
+   _Description
+;
+Pointer to '_Interatomic_distance_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Interatomic distance list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Gen_dist_constraint_list.Sf_category
 
    _Tag                  '_Gen_dist_constraint_list.Sf_category'
@@ -114885,9 +120339,9 @@ Spectral peak list ID
 
 save_
 
-save__Gen_dist_constraint.Auth_asym_ID_1
+save__Gen_dist_constraint.PDB_record_ID_1
 
-   _Tag                  '_Gen_dist_constraint.Auth_asym_ID_1'
+   _Tag                  '_Gen_dist_constraint.PDB_record_ID_1'
 
    _Category              'Gen_dist_constraint'
 
@@ -114898,7 +120352,88 @@ save__Gen_dist_constraint.Auth_asym_ID_1
 
    _Adit_item_view_name
 ;
-Auth asym ID 1
+PDB record ID 1
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_model_num_1
+
+   _Tag                  '_Gen_dist_constraint.PDB_model_num_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 1
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_strand_ID_1
+
+   _Tag                  '_Gen_dist_constraint.PDB_strand_ID_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 1
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_ins_code_1
+
+   _Tag                  '_Gen_dist_constraint.PDB_ins_code_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 1
 ;
 
    loop_
@@ -114906,6 +120441,276 @@ Auth asym ID 1
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_residue_no_1
+
+   _Tag                  '_Gen_dist_constraint.PDB_residue_no_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 1
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_residue_name_1
+
+   _Tag                  '_Gen_dist_constraint.PDB_residue_name_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 1
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_atom_name_1
+
+   _Tag                  '_Gen_dist_constraint.PDB_atom_name_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 1
+;
+
+   loop_
+     _Example
+
+;
+CD1
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_record_ID_2
+
+   _Tag                  '_Gen_dist_constraint.PDB_record_ID_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB record ID 2
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_model_num_2
+
+   _Tag                  '_Gen_dist_constraint.PDB_model_num_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 2
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_strand_ID_2
+
+   _Tag                  '_Gen_dist_constraint.PDB_strand_ID_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 2
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_ins_code_2
+
+   _Tag                  '_Gen_dist_constraint.PDB_ins_code_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_residue_no_2
+
+   _Tag                  '_Gen_dist_constraint.PDB_residue_no_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 2
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_residue_name_2
+
+   _Tag                  '_Gen_dist_constraint.PDB_residue_name_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 2
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.PDB_atom_name_2
+
+   _Tag                  '_Gen_dist_constraint.PDB_atom_name_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 2
+;
+
+   loop_
+     _Example
+
+;
+CD1
 ;
 
    stop_
@@ -114933,6 +120738,60 @@ Auth entity assembly ID 1
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Auth_asym_ID_1
+
+   _Tag                  '_Gen_dist_constraint.Auth_asym_ID_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Auth_chain_ID_1
+
+   _Tag                  '_Gen_dist_constraint.Auth_chain_ID_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 1
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -115020,9 +120879,9 @@ HB1
 
 save_
 
-save__Gen_dist_constraint.Auth_asym_ID_2
+save__Gen_dist_constraint.Auth_alt_ID_1
 
-   _Tag                  '_Gen_dist_constraint.Auth_asym_ID_2'
+   _Tag                  '_Gen_dist_constraint.Auth_alt_ID_1'
 
    _Category              'Gen_dist_constraint'
 
@@ -115033,7 +120892,34 @@ save__Gen_dist_constraint.Auth_asym_ID_2
 
    _Adit_item_view_name
 ;
-Auth asym ID 2
+Auth alt ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Auth_atom_name_1
+
+   _Tag                  '_Gen_dist_constraint.Auth_atom_name_1'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 1
 ;
 
    loop_
@@ -115068,6 +120954,60 @@ Auth entity assembly ID 2
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Auth_asym_ID_2
+
+   _Tag                  '_Gen_dist_constraint.Auth_asym_ID_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Auth_chain_ID_2
+
+   _Tag                  '_Gen_dist_constraint.Auth_chain_ID_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 2
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -115149,6 +121089,60 @@ Auth atom ID 2
 
 ;
 HB1
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Auth_alt_ID_2
+
+   _Tag                  '_Gen_dist_constraint.Auth_alt_ID_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth alt ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Auth_atom_name_2
+
+   _Tag                  '_Gen_dist_constraint.Auth_atom_name_2'
+
+   _Category              'Gen_dist_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 2
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -115911,20 +121905,20 @@ Gen dist constraint parse file ID
 
 save_
 
-save__Gen_dist_constraint_conv_err.Parse_file_constraintaint_ID
+save__Gen_dist_constraint_conv_err.Parse_file_constraint_ID
 
-   _Tag                  '_Gen_dist_constraint_conv_err.Parse_file_constraintaint_ID'
+   _Tag                  '_Gen_dist_constraint_conv_err.Parse_file_constraint_ID'
 
    _Category              'Gen_dist_constraint_conv_err'
 
    _Description
 ;
-Pointer to '_Gen_dist_constraint.ID'
+?
 ;
 
    _Adit_item_view_name
 ;
-Parse file constraintaint ID
+Parse file constraint ID
 ;
 
    loop_
@@ -118916,7 +124910,7 @@ save__Dist_constraint_conv_err.Parse_file_constraint_ID
 
    _Description
 ;
-Pointer to '_Dist_constraint_tree.Constraint_ID'
+?
 ;
 
    _Adit_item_view_name
@@ -122418,9 +128412,9 @@ Source experiment ID
 
 save_
 
-save__Torsion_angle_constraint.Auth_asym_ID_1
+save__Torsion_angle_constraint.PDB_record_ID_1
 
-   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_1'
+   _Tag                  '_Torsion_angle_constraint.PDB_record_ID_1'
 
    _Category              'Torsion_angle_constraint'
 
@@ -122431,7 +128425,88 @@ save__Torsion_angle_constraint.Auth_asym_ID_1
 
    _Adit_item_view_name
 ;
-Auth asym ID 1
+PDB record ID 1
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_model_num_1
+
+   _Tag                  '_Torsion_angle_constraint.PDB_model_num_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 1
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_strand_ID_1
+
+   _Tag                  '_Torsion_angle_constraint.PDB_strand_ID_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 1
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_ins_code_1
+
+   _Tag                  '_Torsion_angle_constraint.PDB_ins_code_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 1
 ;
 
    loop_
@@ -122439,6 +128514,654 @@ Auth asym ID 1
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_no_1
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_no_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 1
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_name_1
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_name_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 1
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_atom_name_1
+
+   _Tag                  '_Torsion_angle_constraint.PDB_atom_name_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 1
+;
+
+   loop_
+     _Example
+
+;
+CD1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_record_ID_2
+
+   _Tag                  '_Torsion_angle_constraint.PDB_record_ID_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB record ID 2
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_model_num_2
+
+   _Tag                  '_Torsion_angle_constraint.PDB_model_num_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 2
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_strand_ID_2
+
+   _Tag                  '_Torsion_angle_constraint.PDB_strand_ID_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 2
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_ins_code_2
+
+   _Tag                  '_Torsion_angle_constraint.PDB_ins_code_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_no_2
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_no_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 2
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_name_2
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_name_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 2
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_atom_name_2
+
+   _Tag                  '_Torsion_angle_constraint.PDB_atom_name_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 2
+;
+
+   loop_
+     _Example
+
+;
+CD1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_record_ID_3
+
+   _Tag                  '_Torsion_angle_constraint.PDB_record_ID_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB record ID 3
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_model_num_3
+
+   _Tag                  '_Torsion_angle_constraint.PDB_model_num_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 3
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_strand_ID_3
+
+   _Tag                  '_Torsion_angle_constraint.PDB_strand_ID_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 3
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_ins_code_3
+
+   _Tag                  '_Torsion_angle_constraint.PDB_ins_code_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 3
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_no_3
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_no_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 3
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_name_3
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_name_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 3
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_atom_name_3
+
+   _Tag                  '_Torsion_angle_constraint.PDB_atom_name_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 3
+;
+
+   loop_
+     _Example
+
+;
+CD1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_record_ID_4
+
+   _Tag                  '_Torsion_angle_constraint.PDB_record_ID_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB record ID 4
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_model_num_4
+
+   _Tag                  '_Torsion_angle_constraint.PDB_model_num_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 4
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_strand_ID_4
+
+   _Tag                  '_Torsion_angle_constraint.PDB_strand_ID_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 4
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_ins_code_4
+
+   _Tag                  '_Torsion_angle_constraint.PDB_ins_code_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 4
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_no_4
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_no_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 4
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_residue_name_4
+
+   _Tag                  '_Torsion_angle_constraint.PDB_residue_name_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 4
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.PDB_atom_name_4
+
+   _Tag                  '_Torsion_angle_constraint.PDB_atom_name_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 4
+;
+
+   loop_
+     _Example
+
+;
+CD1
 ;
 
    stop_
@@ -122466,6 +129189,60 @@ Auth entity assembly ID 1
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_asym_ID_1
+
+   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_chain_ID_1
+
+   _Tag                  '_Torsion_angle_constraint.Auth_chain_ID_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 1
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -122553,9 +129330,9 @@ HB1
 
 save_
 
-save__Torsion_angle_constraint.Auth_asym_ID_2
+save__Torsion_angle_constraint.Auth_alt_ID_1
 
-   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_2'
+   _Tag                  '_Torsion_angle_constraint.Auth_alt_ID_1'
 
    _Category              'Torsion_angle_constraint'
 
@@ -122566,7 +129343,34 @@ save__Torsion_angle_constraint.Auth_asym_ID_2
 
    _Adit_item_view_name
 ;
-Auth asym ID 2
+Auth alt ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_atom_name_1
+
+   _Tag                  '_Torsion_angle_constraint.Auth_atom_name_1'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 1
 ;
 
    loop_
@@ -122601,6 +129405,60 @@ Auth entity assembly ID 2
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_asym_ID_2
+
+   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_chain_ID_2
+
+   _Tag                  '_Torsion_angle_constraint.Auth_chain_ID_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 2
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -122688,9 +129546,9 @@ HB1
 
 save_
 
-save__Torsion_angle_constraint.Auth_asym_ID_3
+save__Torsion_angle_constraint.Auth_alt_ID_2
 
-   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_3'
+   _Tag                  '_Torsion_angle_constraint.Auth_alt_ID_2'
 
    _Category              'Torsion_angle_constraint'
 
@@ -122701,7 +129559,34 @@ save__Torsion_angle_constraint.Auth_asym_ID_3
 
    _Adit_item_view_name
 ;
-Auth asym ID 3
+Auth alt ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_atom_name_2
+
+   _Tag                  '_Torsion_angle_constraint.Auth_atom_name_2'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 2
 ;
 
    loop_
@@ -122736,6 +129621,60 @@ Auth entity assembly ID 3
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_asym_ID_3
+
+   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 3
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_chain_ID_3
+
+   _Tag                  '_Torsion_angle_constraint.Auth_chain_ID_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 3
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -122823,9 +129762,9 @@ HB1
 
 save_
 
-save__Torsion_angle_constraint.Auth_asym_ID_4
+save__Torsion_angle_constraint.Auth_alt_ID_3
 
-   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_4'
+   _Tag                  '_Torsion_angle_constraint.Auth_alt_ID_3'
 
    _Category              'Torsion_angle_constraint'
 
@@ -122836,7 +129775,34 @@ save__Torsion_angle_constraint.Auth_asym_ID_4
 
    _Adit_item_view_name
 ;
-Auth asym ID 4
+Auth alt ID 3
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_atom_name_3
+
+   _Tag                  '_Torsion_angle_constraint.Auth_atom_name_3'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 3
 ;
 
    loop_
@@ -122871,6 +129837,60 @@ Auth entity assembly ID 4
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_asym_ID_4
+
+   _Tag                  '_Torsion_angle_constraint.Auth_asym_ID_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 4
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_chain_ID_4
+
+   _Tag                  '_Torsion_angle_constraint.Auth_chain_ID_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 4
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -122952,6 +129972,60 @@ Auth atom ID 4
 
 ;
 HB1
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_alt_ID_4
+
+   _Tag                  '_Torsion_angle_constraint.Auth_alt_ID_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth alt ID 4
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Auth_atom_name_4
+
+   _Tag                  '_Torsion_angle_constraint.Auth_atom_name_4'
+
+   _Category              'Torsion_angle_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 4
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -123722,7 +130796,7 @@ save__TA_constraint_conv_err.Parse_file_constraint_ID
 
    _Description
 ;
-Pointer to '_Torsion_angle_constraint.ID'
+Identifier for the constraint in the parse file that produced a conversion error.
 ;
 
    _Adit_item_view_name
@@ -125631,9 +132705,9 @@ Source experiment ID
 
 save_
 
-save__RDC_constraint.Auth_asym_ID_1
+save__RDC_constraint.PDB_record_ID_1
 
-   _Tag                  '_RDC_constraint.Auth_asym_ID_1'
+   _Tag                  '_RDC_constraint.PDB_record_ID_1'
 
    _Category              'RDC_constraint'
 
@@ -125644,7 +132718,88 @@ save__RDC_constraint.Auth_asym_ID_1
 
    _Adit_item_view_name
 ;
-Auth asym ID 1
+PDB record ID 1
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_model_num_1
+
+   _Tag                  '_RDC_constraint.PDB_model_num_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 1
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_strand_ID_1
+
+   _Tag                  '_RDC_constraint.PDB_strand_ID_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 1
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_ins_code_1
+
+   _Tag                  '_RDC_constraint.PDB_ins_code_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 1
 ;
 
    loop_
@@ -125652,6 +132807,276 @@ Auth asym ID 1
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_residue_no_1
+
+   _Tag                  '_RDC_constraint.PDB_residue_no_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 1
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_residue_name_1
+
+   _Tag                  '_RDC_constraint.PDB_residue_name_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 1
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_atom_name_1
+
+   _Tag                  '_RDC_constraint.PDB_atom_name_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 1
+;
+
+   loop_
+     _Example
+
+;
+CD1
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_record_ID_2
+
+   _Tag                  '_RDC_constraint.PDB_record_ID_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB record ID 2
+;
+
+   loop_
+     _Example
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_model_num_2
+
+   _Tag                  '_RDC_constraint.PDB_model_num_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB model num 2
+;
+
+   loop_
+     _Example
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_strand_ID_2
+
+   _Tag                  '_RDC_constraint.PDB_strand_ID_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB strand ID 2
+;
+
+   loop_
+     _Example
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_ins_code_2
+
+   _Tag                  '_RDC_constraint.PDB_ins_code_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB ins code 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_residue_no_2
+
+   _Tag                  '_RDC_constraint.PDB_residue_no_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue no 2
+;
+
+   loop_
+     _Example
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_residue_name_2
+
+   _Tag                  '_RDC_constraint.PDB_residue_name_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB residue name 2
+;
+
+   loop_
+     _Example
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.PDB_atom_name_2
+
+   _Tag                  '_RDC_constraint.PDB_atom_name_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+PDB atom name 2
+;
+
+   loop_
+     _Example
+
+;
+CD1
 ;
 
    stop_
@@ -125679,6 +133104,60 @@ Auth entity assembly ID 1
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.Auth_asym_ID_1
+
+   _Tag                  '_RDC_constraint.Auth_asym_ID_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.Auth_chain_ID_1
+
+   _Tag                  '_RDC_constraint.Auth_chain_ID_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 1
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -125766,9 +133245,9 @@ HB1
 
 save_
 
-save__RDC_constraint.Auth_asym_ID_2
+save__RDC_constraint.Auth_alt_ID_1
 
-   _Tag                  '_RDC_constraint.Auth_asym_ID_2'
+   _Tag                  '_RDC_constraint.Auth_alt_ID_1'
 
    _Category              'RDC_constraint'
 
@@ -125779,7 +133258,34 @@ save__RDC_constraint.Auth_asym_ID_2
 
    _Adit_item_view_name
 ;
-Auth asym ID 2
+Auth alt ID 1
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.Auth_atom_name_1
+
+   _Tag                  '_RDC_constraint.Auth_atom_name_1'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 1
 ;
 
    loop_
@@ -125814,6 +133320,60 @@ Auth entity assembly ID 2
 
 ;
 2
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.Auth_asym_ID_2
+
+   _Tag                  '_RDC_constraint.Auth_asym_ID_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth asym ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.Auth_chain_ID_2
+
+   _Tag                  '_RDC_constraint.Auth_chain_ID_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth chain ID 2
+;
+
+   loop_
+     _Example
+
+;
+A
 ;
 
    stop_
@@ -125895,6 +133455,60 @@ Auth atom ID 2
 
 ;
 HB1
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.Auth_alt_ID_2
+
+   _Tag                  '_RDC_constraint.Auth_alt_ID_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth alt ID 2
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint.Auth_atom_name_2
+
+   _Tag                  '_RDC_constraint.Auth_atom_name_2'
+
+   _Category              'RDC_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth atom name 2
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -126638,7 +134252,7 @@ save__RDC_constraint_conv_err.RDC_constr_parse_file_ID
 
    _Description
 ;
-Pointer to '_RDC_constraint_parse_file.ID'
+Pointer to '_RDC_constraint_parse_file_ID'
 ;
 
    _Adit_item_view_name
@@ -126665,7 +134279,7 @@ save__RDC_constraint_conv_err.Parse_file_constraint_ID
 
    _Description
 ;
-Pointer to '_RDC_constraint.ID'
+A pointer if one is available to a specific restraint in a file created by parsing a restraints file provided by a user.
 ;
 
    _Adit_item_view_name

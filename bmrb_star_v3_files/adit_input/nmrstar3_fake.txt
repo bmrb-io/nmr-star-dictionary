@@ -1368,23 +1368,23 @@ save_<chem_comp>
   _Chem_comp.Entry_ID                                 1
   _Chem_comp.Sf_ID                                    2
   _Chem_comp.ID                                       1
-  _Chem_comp.Name                                     "Very very long phrase"
+  _Chem_comp.Province                                 "Long string value"
+  _Chem_comp.Name                                     
   _Chem_comp.Type                                     "Long string value"
   _Chem_comp.BMRB_code                                "Short string value"
   _Chem_comp.PDB_code                                 "Short string value"
-  _Chem_comp.PDBX_type                                "Long string value"
-  _Chem_comp.PDBX_ambiguous_flag                      yes/no
-  _Chem_comp.PDBX_initial_date                        2002-04-15
-  _Chem_comp.PDBX_modified_date                       2002-04-15
-  _Chem_comp.PDBX_release_status                      "Long string value"
-  _Chem_comp.PDBX_replaced_by                         "Short string value"
-  _Chem_comp.PDBX_replaces                            "Long string value"
+  _Chem_comp.Ambiguous_flag                           yes/no
+  _Chem_comp.Initial_date                             2002-04-15
+  _Chem_comp.Modified_date                            2002-04-15
+  _Chem_comp.Release_status                           "Long string value"
+  _Chem_comp.Replaced_by                              "Short string value"
+  _Chem_comp.Replaces                                 "Long string value"
   _Chem_comp.One_letter_code                          A
   _Chem_comp.Three_letter_code                        "Short string value"
   _Chem_comp.Number_atoms_all                         2
   _Chem_comp.Number_atoms_nh                          2
   _Chem_comp.PubChem_code                             "Short string value"
-  _Chem_comp.PDBX_subcomponent_list                   "Possible multiline text"
+  _Chem_comp.Subcomponent_list                        "Possible multiline text"
   _Chem_comp.InCHi_code                               "Very very long phrase"
   _Chem_comp.Mon_nstd_flag                            yes/no
   _Chem_comp.Mon_nstd_class                           "Possible multiline text"
@@ -1396,7 +1396,7 @@ save_<chem_comp>
   _Chem_comp.Std_deriv_BMRB_code                      "Short string value"
   _Chem_comp.Std_deriv_PDB_code                       "Short string value"
   _Chem_comp.Std_deriv_chem_comp_name                 "Long string value"
-  _Chem_comp.PDBX_synonyms                            "Very very long phrase"
+  _Chem_comp.Synonyms                                 "Very very long phrase"
   _Chem_comp.Formal_charge                            "Short string value"
   _Chem_comp.Paramagnetic                             yes/no
   _Chem_comp.Aromatic                                 yes/no
@@ -1531,6 +1531,7 @@ save_<chem_comp>
 
   loop_
      _Chem_comp_atom.Atom_ID                           
+     _Chem_comp_atom.BMRB_code                         
      _Chem_comp_atom.PDB_atom_ID                       
      _Chem_comp_atom.Alt_atom_ID                       
      _Chem_comp_atom.Auth_atom_ID                      
@@ -1542,9 +1543,9 @@ save_<chem_comp>
      _Chem_comp_atom.Partial_charge                    
      _Chem_comp_atom.Oxidation_number                  
      _Chem_comp_atom.Unpaired_electron_number          
-     _Chem_comp_atom.PDBX_align                        
-     _Chem_comp_atom.PDBX_aromatic_flag                
-     _Chem_comp_atom.PDBX_leaving_atom_flag            
+     _Chem_comp_atom.Align                             
+     _Chem_comp_atom.Aromatic_flag                     
+     _Chem_comp_atom.Leaving_atom_flag                 
      _Chem_comp_atom.Substruct_code                    
      _Chem_comp_atom.Ionizable                         
      _Chem_comp_atom.Drawing_2D_coord_x                
@@ -1564,7 +1565,7 @@ save_<chem_comp>
      _Chem_comp_atom.Entry_ID                          
      _Chem_comp_atom.Comp_ID                           
 
-    1  1  1  "Short string value"  "Short string value"    2  "Short string value"  "Short string value"  "Short string value"  110.234    "Short string value"  2  2  yes/no  yes/no    "Short string value"  yes/no  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  2  "Possible multiline text"    2  1  1  
+    1  1  1  1  "Short string value"    "Short string value"  2  "Short string value"  "Short string value"  "Short string value"    110.234  "Short string value"  2  2  yes/no    yes/no  "Short string value"  yes/no  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  2    "Possible multiline text"  2  1  1  
 
   stop_
 
@@ -1581,22 +1582,20 @@ save_<chem_comp>
   stop_
 
   loop_
-     _Chem_comp_bond.ID                          
-     _Chem_comp_bond.Type                        
-     _Chem_comp_bond.Value_order                 
-     _Chem_comp_bond.Atom_ID_1                   
-     _Chem_comp_bond.Atom_ID_2                   
-     _Chem_comp_bond.PDB_atom_ID_1               
-     _Chem_comp_bond.PDB_atom_ID_2               
-     _Chem_comp_bond.PDBX_aromatic_flag          
-     _Chem_comp_bond.PDBX_stereo_config          
-     _Chem_comp_bond.PDBX_ordinal                
-     _Chem_comp_bond.Details                     
-     _Chem_comp_bond.Sf_ID                       
-     _Chem_comp_bond.Entry_ID                    
-     _Chem_comp_bond.Comp_ID                     
+     _Chem_comp_bond.ID                     
+     _Chem_comp_bond.Type                   
+     _Chem_comp_bond.Value_order            
+     _Chem_comp_bond.Atom_ID_1              
+     _Chem_comp_bond.Atom_ID_2              
+     _Chem_comp_bond.Aromatic_flag          
+     _Chem_comp_bond.Stereo_config          
+     _Chem_comp_bond.Ordinal                
+     _Chem_comp_bond.Details                
+     _Chem_comp_bond.Sf_ID                  
+     _Chem_comp_bond.Entry_ID               
+     _Chem_comp_bond.Comp_ID                
 
-    2  "String value"  "String value"  1  1    1  1  yes/no  yes/no  2    "Possible multiline text"  2  1  1  
+    2  "String value"  "String value"  1  1    yes/no  yes/no  2  "Possible multiline text"  2    1  1  
 
   stop_
 
@@ -2474,6 +2473,13 @@ save_<assigned_chemical_shifts>
      _Atom_chem_shift.Ambiguity_code                       
      _Atom_chem_shift.Occupancy                            
      _Atom_chem_shift.Resonance_ID                         
+     _Atom_chem_shift.PDB_record_ID                        
+     _Atom_chem_shift.PDB_model_num                        
+     _Atom_chem_shift.PDB_strand_ID                        
+     _Atom_chem_shift.PDB_ins_code                         
+     _Atom_chem_shift.PDB_residue_no                       
+     _Atom_chem_shift.PDB_residue_name                     
+     _Atom_chem_shift.PDB_atom_name                        
      _Atom_chem_shift.Auth_entity_assembly_ID              
      _Atom_chem_shift.Auth_seq_ID                          
      _Atom_chem_shift.Auth_comp_ID                         
@@ -2483,7 +2489,7 @@ save_<assigned_chemical_shifts>
      _Atom_chem_shift.Entry_ID                             
      _Atom_chem_shift.Assigned_chem_shift_list_ID          
 
-    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  yes/no  1    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Possible multiline text"  2  1  2  
+    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  yes/no  1    2  "Short string value"  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Possible multiline text"  2  1    2  
 
   stop_
 
@@ -3176,61 +3182,6 @@ save_<chem_shifts_calc_type>
 
 save_
 
-save_<shielding_tensors>
-  _Shielding_tensor_list.Sf_category     shielding_tensors
-  _Shielding_tensor_list.Sf_framecode     <shielding_tensors>
-  _Shielding_tensor_list.Entry_ID                1
-  _Shielding_tensor_list.Sf_ID                   2
-  _Shielding_tensor_list.ID                      2
-  _Shielding_tensor_list.Data_file_name          "Long string value"
-  _Shielding_tensor_list.Details                 "Possible multiline text"
-
-  loop_
-     _Shielding_tensor.ID                                  
-     _Shielding_tensor.Shieldings_calc_type_ID             
-     _Shielding_tensor.Assembly_atom_ID                    
-     _Shielding_tensor.Entity_assembly_ID                  
-     _Shielding_tensor.Entity_ID                           
-     _Shielding_tensor.Comp_index_ID                       
-     _Shielding_tensor.Seq_ID                              
-     _Shielding_tensor.Comp_ID                             
-     _Shielding_tensor.Atom_ID                             
-     _Shielding_tensor.Atom_type                           
-     _Shielding_tensor.Atom_isotope_number                 
-     _Shielding_tensor.Isotropic_comp_1_1_val              
-     _Shielding_tensor.Isotropic_comp_2_2_val              
-     _Shielding_tensor.Isotropic_comp_3_3_val              
-     _Shielding_tensor.Anti_sym_comp_1_2_val               
-     _Shielding_tensor.Anti_sym_comp_1_3_val               
-     _Shielding_tensor.Anti_sym_comp_2_3_val               
-     _Shielding_tensor.Sym_traceless_comp_1_1_val          
-     _Shielding_tensor.Sym_traceless_comp_1_2_val          
-     _Shielding_tensor.Sym_traceless_comp_1_3_val          
-     _Shielding_tensor.Sym_traceless_comp_2_2_val          
-     _Shielding_tensor.Sym_traceless_comp_2_3_val          
-     _Shielding_tensor.Reduceable_matrix_1_1_val           
-     _Shielding_tensor.Reduceable_matrix_1_2_val           
-     _Shielding_tensor.Reduceable_matrix_1_3_val           
-     _Shielding_tensor.Reduceable_matrix_2_1_val           
-     _Shielding_tensor.Reduceable_matrix_2_2_val           
-     _Shielding_tensor.Reduceable_matrix_2_3_val           
-     _Shielding_tensor.Reduceable_matrix_3_1_val           
-     _Shielding_tensor.Reduceable_matrix_3_2_val           
-     _Shielding_tensor.Reduceable_matrix_3_3_val           
-     _Shielding_tensor.Auth_entity_assembly_ID             
-     _Shielding_tensor.Auth_seq_ID                         
-     _Shielding_tensor.Auth_comp_ID                        
-     _Shielding_tensor.Auth_atom_ID                        
-     _Shielding_tensor.Sf_ID                               
-     _Shielding_tensor.Entry_ID                            
-     _Shielding_tensor.Shielding_tensor_list_ID            
-
-    2  2  2  2  2    2  2  1  1  "Short string value"    2  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  2  
-
-  stop_
-
-save_
-
 save_<theoretical_chem_shifts>
   _Theoretical_chem_shift_list.Sf_category     theoretical_chem_shifts
   _Theoretical_chem_shift_list.Sf_framecode     <theoretical_chem_shifts>
@@ -3242,8 +3193,8 @@ save_<theoretical_chem_shifts>
   _Theoretical_chem_shift_list.Chem_shifts_calc_type_label               "Long string value"
   _Theoretical_chem_shift_list.Model_atomic_coordinates_ID               2
   _Theoretical_chem_shift_list.Model_atomic_coordinates_label            "Long string value"
-  _Theoretical_chem_shift_list.Shielding_tensor_list_ID                  2
-  _Theoretical_chem_shift_list.Shielding_tensor_list_label               "Long string value"
+  _Theoretical_chem_shift_list.Tensor_list_ID                            2
+  _Theoretical_chem_shift_list.Tensor_list_label                         "Long string value"
   _Theoretical_chem_shift_list.Fermi_contact_spin_density_units          "String value"
   _Theoretical_chem_shift_list.Chem_shift_1H_err                         110.234
   _Theoretical_chem_shift_list.Chem_shift_2H_err                         110.234
@@ -3612,6 +3563,79 @@ save_<other_data_types>
      _Other_data.Other_data_type_list_ID          
 
     2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
+
+  stop_
+
+save_
+
+save_<kinetic_rates>
+  _Kinetic_rate_list.Sf_category     kinetic_rates
+  _Kinetic_rate_list.Sf_framecode     <kinetic_rates>
+  _Kinetic_rate_list.Entry_ID                             1
+  _Kinetic_rate_list.Sf_ID                                2
+  _Kinetic_rate_list.ID                                   2
+  _Kinetic_rate_list.Data_file_name                       "Long string value"
+  _Kinetic_rate_list.Sample_condition_list_ID             2
+  _Kinetic_rate_list.Sample_condition_list_label          "Long string value"
+  _Kinetic_rate_list.Details                              "Possible multiline text"
+  _Kinetic_rate_list.Text_data_format                     "String value"
+  _Kinetic_rate_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Kinetic_rate_experiment.Experiment_ID                 
+     _Kinetic_rate_experiment.Experiment_name               
+     _Kinetic_rate_experiment.Sample_ID                     
+     _Kinetic_rate_experiment.Sample_label                  
+     _Kinetic_rate_experiment.Sample_state                  
+     _Kinetic_rate_experiment.Sf_ID                         
+     _Kinetic_rate_experiment.Entry_ID                      
+     _Kinetic_rate_experiment.Kinetic_rate_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Kinetic_rate_software.Software_ID                   
+     _Kinetic_rate_software.Software_label                
+     _Kinetic_rate_software.Method_ID                     
+     _Kinetic_rate_software.Method_label                  
+     _Kinetic_rate_software.Sf_ID                         
+     _Kinetic_rate_software.Entry_ID                      
+     _Kinetic_rate_software.Kinetic_rate_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Kinetic_rate.ID                               
+     _Kinetic_rate.Assembly_ID                      
+     _Kinetic_rate.Assembly_atom_ID                 
+     _Kinetic_rate.Entity_assembly_ID               
+     _Kinetic_rate.Entity_ID                        
+     _Kinetic_rate.Comp_index_ID                    
+     _Kinetic_rate.Seq_ID                           
+     _Kinetic_rate.Comp_ID                          
+     _Kinetic_rate.Atom_ID                          
+     _Kinetic_rate.Atom_type                        
+     _Kinetic_rate.Atom_isotope_number              
+     _Kinetic_rate.Val_type                         
+     _Kinetic_rate.Val                              
+     _Kinetic_rate.Val_min                          
+     _Kinetic_rate.Val_max                          
+     _Kinetic_rate.Val_err                          
+     _Kinetic_rate.Val_units                        
+     _Kinetic_rate.Resonance_ID                     
+     _Kinetic_rate.Auth_entity_assembly_ID          
+     _Kinetic_rate.Auth_seq_ID                      
+     _Kinetic_rate.Auth_comp_ID                     
+     _Kinetic_rate.Auth_atom_ID                     
+     _Kinetic_rate.Sf_ID                            
+     _Kinetic_rate.Entry_ID                         
+     _Kinetic_rate.Kinetic_rate_list_ID             
+
+    2  2  2  2  2    2  2  1  1  "Short string value"    2  "Long string value"  110.234  110.234  110.234    110.234  "Short string value"  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
 
   stop_
 
@@ -4153,77 +4177,79 @@ save_<heteronucl_T2_relaxation>
 
 save_
 
-save_<general_relaxation>
-  _General_relaxation_list.Sf_category     general_relaxation
-  _General_relaxation_list.Sf_framecode     <general_relaxation>
-  _General_relaxation_list.Entry_ID                             1
-  _General_relaxation_list.Sf_ID                                2
-  _General_relaxation_list.ID                                   2
-  _General_relaxation_list.Data_file_name                       "Long string value"
-  _General_relaxation_list.Sample_condition_list_ID             2
-  _General_relaxation_list.Sample_condition_list_label          "Long string value"
-  _General_relaxation_list.Temp_calibration_method              "Very long phrase"
-  _General_relaxation_list.Temp_control_method                  "Very long phrase"
-  _General_relaxation_list.Spectrometer_frequency_1H            110.234
-  _General_relaxation_list.Relaxation_coherence_type            "String value"
-  _General_relaxation_list.Relaxation_val_units                 "Short string value"
-  _General_relaxation_list.Rex_units                            "Short string value"
-  _General_relaxation_list.Details                              "Possible multiline text"
-  _General_relaxation_list.Text_data_format                     "String value"
-  _General_relaxation_list.Text_data                            "Possible multiline text"
+save_<auto_relaxation>
+  _Auto_relaxation_list.Sf_category     auto_relaxation
+  _Auto_relaxation_list.Sf_framecode     <auto_relaxation>
+  _Auto_relaxation_list.Entry_ID                             1
+  _Auto_relaxation_list.Sf_ID                                2
+  _Auto_relaxation_list.ID                                   2
+  _Auto_relaxation_list.Data_file_name                       "Long string value"
+  _Auto_relaxation_list.Sample_condition_list_ID             2
+  _Auto_relaxation_list.Sample_condition_list_label          "Long string value"
+  _Auto_relaxation_list.Temp_calibration_method              "Very long phrase"
+  _Auto_relaxation_list.Temp_control_method                  "Very long phrase"
+  _Auto_relaxation_list.Spectrometer_frequency_1H            110.234
+  _Auto_relaxation_list.Common_relaxation_type_name          "Short string value"
+  _Auto_relaxation_list.Relaxation_coherence_type            "String value"
+  _Auto_relaxation_list.Relaxation_val_units                 "Short string value"
+  _Auto_relaxation_list.Rex_units                            "Short string value"
+  _Auto_relaxation_list.Details                              "Possible multiline text"
+  _Auto_relaxation_list.Text_data_format                     "String value"
+  _Auto_relaxation_list.Text_data                            "Possible multiline text"
 
   loop_
-     _General_relaxation_experiment.Experiment_ID                       
-     _General_relaxation_experiment.Experiment_name                     
-     _General_relaxation_experiment.Sample_ID                           
-     _General_relaxation_experiment.Sample_label                        
-     _General_relaxation_experiment.Sample_state                        
-     _General_relaxation_experiment.Sf_ID                               
-     _General_relaxation_experiment.Entry_ID                            
-     _General_relaxation_experiment.General_relaxation_list_ID          
+     _Auto_relaxation_experiment.Experiment_ID                    
+     _Auto_relaxation_experiment.Experiment_name                  
+     _Auto_relaxation_experiment.Sample_ID                        
+     _Auto_relaxation_experiment.Sample_label                     
+     _Auto_relaxation_experiment.Sample_state                     
+     _Auto_relaxation_experiment.Sf_ID                            
+     _Auto_relaxation_experiment.Entry_ID                         
+     _Auto_relaxation_experiment.Auto_relaxation_list_ID          
 
     2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
 
   stop_
 
   loop_
-     _General_relaxation_software.Software_ID                         
-     _General_relaxation_software.Software_label                      
-     _General_relaxation_software.Method_ID                           
-     _General_relaxation_software.Method_label                        
-     _General_relaxation_software.Sf_ID                               
-     _General_relaxation_software.Entry_ID                            
-     _General_relaxation_software.General_relaxation_list_ID          
+     _Auto_relaxation_software.Software_ID                      
+     _Auto_relaxation_software.Software_label                   
+     _Auto_relaxation_software.Method_ID                        
+     _Auto_relaxation_software.Method_label                     
+     _Auto_relaxation_software.Sf_ID                            
+     _Auto_relaxation_software.Entry_ID                         
+     _Auto_relaxation_software.Auto_relaxation_list_ID          
 
     2  "Long string value"  2  "Long string value"  2    1  2  
 
   stop_
 
   loop_
-     _General_relaxation.ID                                  
-     _General_relaxation.Assembly_atom_ID                    
-     _General_relaxation.Entity_assembly_ID                  
-     _General_relaxation.Entity_ID                           
-     _General_relaxation.Comp_index_ID                       
-     _General_relaxation.Seq_ID                              
-     _General_relaxation.Comp_ID                             
-     _General_relaxation.Atom_ID                             
-     _General_relaxation.Atom_type                           
-     _General_relaxation.Atom_isotope_number                 
-     _General_relaxation.General_relaxation_val              
-     _General_relaxation.General_relaxation_val_err          
-     _General_relaxation.Rex_val                             
-     _General_relaxation.Rex_err                             
-     _General_relaxation.Resonance_ID                        
-     _General_relaxation.Auth_entity_assembly_ID             
-     _General_relaxation.Auth_seq_ID                         
-     _General_relaxation.Auth_comp_ID                        
-     _General_relaxation.Auth_atom_ID                        
-     _General_relaxation.Sf_ID                               
-     _General_relaxation.Entry_ID                            
-     _General_relaxation.General_relaxation_list_ID          
+     _Auto_relaxation.ID                               
+     _Auto_relaxation.Assembly_ID                      
+     _Auto_relaxation.Assembly_atom_ID                 
+     _Auto_relaxation.Entity_assembly_ID               
+     _Auto_relaxation.Entity_ID                        
+     _Auto_relaxation.Comp_index_ID                    
+     _Auto_relaxation.Seq_ID                           
+     _Auto_relaxation.Comp_ID                          
+     _Auto_relaxation.Atom_ID                          
+     _Auto_relaxation.Atom_type                        
+     _Auto_relaxation.Atom_isotope_number              
+     _Auto_relaxation.Auto_relaxation_val              
+     _Auto_relaxation.Auto_relaxation_val_err          
+     _Auto_relaxation.Rex_val                          
+     _Auto_relaxation.Rex_val_err                      
+     _Auto_relaxation.Resonance_ID                     
+     _Auto_relaxation.Auth_entity_assembly_ID          
+     _Auto_relaxation.Auth_seq_ID                      
+     _Auto_relaxation.Auth_comp_ID                     
+     _Auto_relaxation.Auth_atom_ID                     
+     _Auto_relaxation.Sf_ID                            
+     _Auto_relaxation.Entry_ID                         
+     _Auto_relaxation.Auto_relaxation_list_ID          
 
-    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  110.234  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
+    2  2  2  2  2    2  2  1  1  "Short string value"    2  110.234  110.234  110.234  110.234    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  2  
 
   stop_
 
@@ -4812,6 +4838,124 @@ save_<D_H_fractionation_factors>
 
 save_
 
+save_<binding_study>
+  _Binding_value_list.Sf_category     binding_study
+  _Binding_value_list.Sf_framecode     <binding_study>
+  _Binding_value_list.Entry_ID                             1
+  _Binding_value_list.Sf_ID                                2
+  _Binding_value_list.ID                                   2
+  _Binding_value_list.Data_file_name                       "Long string value"
+  _Binding_value_list.Sample_condition_list_ID             2
+  _Binding_value_list.Sample_condition_list_label          "Long string value"
+  _Binding_value_list.Details                              "Possible multiline text"
+  _Binding_value_list.Text_data_format                     "String value"
+  _Binding_value_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Binding_experiment.Experiment_ID                  
+     _Binding_experiment.Experiment_name                
+     _Binding_experiment.Sample_ID                      
+     _Binding_experiment.Sample_label                   
+     _Binding_experiment.Sample_state                   
+     _Binding_experiment.Sf_ID                          
+     _Binding_experiment.Entry_ID                       
+     _Binding_experiment.Binding_value_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Binding_software.Software_ID                    
+     _Binding_software.Software_label                 
+     _Binding_software.Method_ID                      
+     _Binding_software.Method_label                   
+     _Binding_software.Sf_ID                          
+     _Binding_software.Entry_ID                       
+     _Binding_software.Binding_value_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Binding_result.ID                                       
+     _Binding_result.Experiment_ID                            
+     _Binding_result.Assembly_ID                              
+     _Binding_result.Atm_obs_assembly_atom_ID                 
+     _Binding_result.Atm_obs_entity_assembly_ID               
+     _Binding_result.Atm_obs_entity_ID                        
+     _Binding_result.Atm_obs_comp_index_ID                    
+     _Binding_result.Atm_obs_seq_ID                           
+     _Binding_result.Atm_obs_comp_ID                          
+     _Binding_result.Atm_obs_atom_ID                          
+     _Binding_result.Atm_obs_atom_type                        
+     _Binding_result.Atm_obs_atom_isotope_number              
+     _Binding_result.Resonance_ID                             
+     _Binding_result.Atm_obs_auth_entity_assembly_ID          
+     _Binding_result.Atm_obs_auth_seq_ID                      
+     _Binding_result.Atm_obs_auth_comp_ID                     
+     _Binding_result.Atm_obs_auth_atom_ID                     
+     _Binding_result.Expt_observed_param                      
+     _Binding_result.Val_type                                 
+     _Binding_result.Val                                      
+     _Binding_result.Val_err                                  
+     _Binding_result.Val_units                                
+     _Binding_result.Sf_ID                                    
+     _Binding_result.Entry_ID                                 
+     _Binding_result.Binding_value_list_ID                    
+
+    2  2  2  2  2    2  2  2  1  1    "Short string value"  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "String value"  "String value"  110.234    110.234  "Short string value"  2  1  2    
+
+  stop_
+
+  loop_
+     _Binding_partners.Binding_result_ID              
+     _Binding_partners.Assembly_ID                    
+     _Binding_partners.Entity_assembly_ID             
+     _Binding_partners.Entity_assembly_name           
+     _Binding_partners.Entity_ID                      
+     _Binding_partners.Entity_label                   
+     _Binding_partners.Sf_ID                          
+     _Binding_partners.Entry_ID                       
+     _Binding_partners.Binding_value_list_ID          
+
+    2  2  2  "Long string value"  2    "Long string value"  2  1  2  
+
+  stop_
+
+save_
+
+save_<binding_titration_list>
+  _Binding_titration_list.Sf_category     binding_titration_list
+  _Binding_titration_list.Sf_framecode     <binding_titration_list>
+  _Binding_titration_list.Entry_ID                  1
+  _Binding_titration_list.Sf_ID                     2
+  _Binding_titration_list.ID                        2
+  _Binding_titration_list.Data_file_name            "Long string value"
+  _Binding_titration_list.Details                   "Possible multiline text"
+  _Binding_titration_list.Text_data_format          "String value"
+  _Binding_titration_list.Text_data                 "Possible multiline text"
+
+  loop_
+     _Binding_titration.ID                                 
+     _Binding_titration.Binding_result_ID                  
+     _Binding_titration.Concentration_val                  
+     _Binding_titration.Concentration_val_err              
+     _Binding_titration.Concentration_val_units            
+     _Binding_titration.Observed_param_val                 
+     _Binding_titration.Observed_param_val_err             
+     _Binding_titration.Observed_param                     
+     _Binding_titration.Sf_ID                              
+     _Binding_titration.Entry_ID                           
+     _Binding_titration.Binding_titration_list_ID          
+
+    2  2  110.234  110.234  "Short string value"    110.234  110.234  "String value"  2  1    2  
+
+  stop_
+
+save_
+
 save_<deduced_secd_struct_features>
   _Deduced_secd_struct_list.Sf_category     deduced_secd_struct_features
   _Deduced_secd_struct_list.Sf_framecode     <deduced_secd_struct_features>
@@ -5153,11 +5297,13 @@ save_<conformer_family_coord_set>
   loop_
      _Conformer_family_refinement.Refine_method                          
      _Conformer_family_refinement.Refine_details                         
+     _Conformer_family_refinement.Software_ID                            
+     _Conformer_family_refinement.Software_label                         
      _Conformer_family_refinement.Sf_ID                                  
      _Conformer_family_refinement.Entry_ID                               
      _Conformer_family_refinement.Conformer_family_coord_set_ID          
 
-    "Possible multiline text"  "Possible multiline text"  2  1  2    
+    "Possible multiline text"  "Possible multiline text"  2  "Long string value"  2    1  2  
 
   stop_
 
@@ -5252,53 +5398,67 @@ save_<conformer_family_coord_set>
   stop_
 
   loop_
-     _Atom_site.Model_ID                               
-     _Atom_site.Model_site_ID                          
-     _Atom_site.ID                                     
-     _Atom_site.Assembly_atom_ID                       
-     _Atom_site.Label_entity_assembly_ID               
-     _Atom_site.Label_entity_ID                        
-     _Atom_site.Label_comp_index_ID                    
-     _Atom_site.Label_comp_ID                          
-     _Atom_site.Label_atom_ID                          
-     _Atom_site.Type_symbol                            
-     _Atom_site.Cartn_x                                
-     _Atom_site.Cartn_y                                
-     _Atom_site.Cartn_z                                
-     _Atom_site.Cartn_x_esd                            
-     _Atom_site.Cartn_y_esd                            
-     _Atom_site.Cartn_z_esd                            
-     _Atom_site.Occupancy                              
-     _Atom_site.Occupancy_esd                          
-     _Atom_site.Uncertainty                            
-     _Atom_site.Ordered_flag                           
-     _Atom_site.Footnote_ID                            
-     _Atom_site.PDBX_label_asym_ID                     
-     _Atom_site.PDBX_label_seq_ID                      
-     _Atom_site.PDBX_label_comp_ID                     
-     _Atom_site.PDBX_label_atom_ID                     
-     _Atom_site.PDBX_formal_charge                     
-     _Atom_site.PDBX_label_entity_ID                   
-     _Atom_site.PDB_record_ID                          
-     _Atom_site.PDB_atom_name                          
-     _Atom_site.PDB_ins_code                           
-     _Atom_site.PDB_model_num                          
-     _Atom_site.PDB_residue_name                       
-     _Atom_site.PDB_residue_no                         
-     _Atom_site.PDB_strand_id                          
-     _Atom_site.Auth_asym_ID                           
-     _Atom_site.Auth_chain_ID                          
-     _Atom_site.Auth_entity_assembly_ID                
-     _Atom_site.Auth_seq_ID                            
-     _Atom_site.Auth_comp_ID                           
-     _Atom_site.Auth_atom_ID                           
-     _Atom_site.Auth_atom_name                         
+     _Atom_site.Assembly_ID                       
+     _Atom_site.Model_ID                          
+     _Atom_site.Model_site_ID                     
+     _Atom_site.ID                                
+     _Atom_site.Assembly_atom_ID                  
+     _Atom_site.Label_entity_assembly_ID          
+     _Atom_site.Label_entity_ID                   
+     _Atom_site.Label_comp_index_ID               
+     _Atom_site.Label_comp_ID                     
+     _Atom_site.Label_atom_ID                     
+     _Atom_site.Type_symbol                       
+     _Atom_site.Cartn_x                           
+     _Atom_site.Cartn_y                           
+     _Atom_site.Cartn_z                           
+     _Atom_site.Cartn_x_esd                       
+     _Atom_site.Cartn_y_esd                       
+     _Atom_site.Cartn_z_esd                       
+     _Atom_site.Occupancy                         
+     _Atom_site.Occupancy_esd                     
+     _Atom_site.Uncertainty                       
+     _Atom_site.Ordered_flag                      
+     _Atom_site.Footnote_ID                       
+     _Atom_site.PDBX_label_asym_ID                
+     _Atom_site.PDBX_label_seq_ID                 
+     _Atom_site.PDBX_label_comp_ID                
+     _Atom_site.PDBX_label_atom_ID                
+     _Atom_site.PDBX_formal_charge                
+     _Atom_site.PDBX_label_entity_ID              
+     _Atom_site.PDB_record_ID                     
+     _Atom_site.PDB_model_num                     
+     _Atom_site.PDB_strand_ID                     
+     _Atom_site.PDB_ins_code                      
+     _Atom_site.PDB_residue_no                    
+     _Atom_site.PDB_residue_name                  
+     _Atom_site.PDB_atom_name                     
+     _Atom_site.Auth_entity_assembly_ID           
+     _Atom_site.Auth_asym_ID                      
+     _Atom_site.Auth_chain_ID                     
+     _Atom_site.Auth_seq_ID                       
+     _Atom_site.Auth_comp_ID                      
+     _Atom_site.Auth_atom_ID                      
+
+    2  2  2  2  2    2  2  2  1  1    "Short string value"  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    2  2  1  2  "Short string value"    1  2  "Short string value"  "Short string value"  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  "Short string value"  1  "Short string value"    "Short string value"  
+
+  stop_
+
+  loop_
+     _atom_site.Auth_alt_ID             
+     _atom_site.Auth_atom_name          
+
+    "Short string value"  1  
+
+  stop_
+
+  loop_
      _Atom_site.Details                                
      _Atom_site.Sf_ID                                  
      _Atom_site.Entry_ID                               
      _Atom_site.Conformer_family_coord_set_ID          
 
-    2  2  2  2  2    2  2  1  1  "Short string value"    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  2    2  1  2  "Short string value"  1    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  "Short string value"  "Short string value"  "Short string value"  1    "Short string value"  2  1  "Short string value"  "Short string value"    "Short string value"  "Possible multiline text"  2  1  2    
+    "Possible multiline text"  2  1  2  
 
   stop_
 
@@ -5946,6 +6106,130 @@ save_<other_struct_features>
 
 save_
 
+save_<tensor>
+  _Tensor_list.Sf_category     tensor
+  _Tensor_list.Sf_framecode     <tensor>
+  _Tensor_list.Entry_ID                         1
+  _Tensor_list.Sf_ID                            2
+  _Tensor_list.ID                               2
+  _Tensor_list.Tensor_type                      "Long string value"
+  _Tensor_list.Tensor_shape                     "Long string value"
+  _Tensor_list.Matrix_val_units                 "Short string value"
+  _Tensor_list.Isotropic_val_type               "Long string value"
+  _Tensor_list.Angle_units                      "Short string value"
+  _Tensor_list.Isotropic_val_formula            "Long string value"
+  _Tensor_list.Anisotropic_val_formula          "Long string value"
+  _Tensor_list.Rhombic_val_formula              "Long string value"
+  _Tensor_list.Euler_angle_type                 "Long string value"
+  _Tensor_list.Data_file_name                   "Long string value"
+  _Tensor_list.Details                          "Possible multiline text"
+
+  loop_
+     _Tensor.ID                                      
+     _Tensor.Interatomic_distance_list_ID            
+     _Tensor.Interatomic_dist_set_ID                 
+     _Tensor.Calc_type_ID                            
+     _Tensor.Assembly_atom_ID                        
+     _Tensor.Entity_assembly_ID                      
+     _Tensor.Entity_ID                               
+     _Tensor.Comp_index_ID                           
+     _Tensor.Seq_ID                                  
+     _Tensor.Comp_ID                                 
+     _Tensor.Atom_ID                                 
+     _Tensor.Atom_type                               
+     _Tensor.Atom_isotope_number                     
+     _Tensor.Axial_sym_axis_polar_angle              
+     _Tensor.Axial_sym_axis_aximuthal_angle          
+     _Tensor.Isotropic_val                           
+     _Tensor.Anisotropic_val                         
+     _Tensor.Rhombic_val                             
+     _Tensor.Euler_angle_alpha                       
+     _Tensor.Euler_angle_beta                        
+     _Tensor.Euler_angle_gamma                       
+     _Tensor.Isotropic_comp_1_1_val                  
+     _Tensor.Isotropic_comp_2_2_val                  
+     _Tensor.Isotropic_comp_3_3_val                  
+     _Tensor.Anti_sym_comp_1_2_val                   
+     _Tensor.Anti_sym_comp_1_3_val                   
+     _Tensor.Anti_sym_comp_2_3_val                   
+     _Tensor.Sym_traceless_comp_1_1_val              
+     _Tensor.Sym_traceless_comp_1_2_val              
+     _Tensor.Sym_traceless_comp_1_3_val              
+     _Tensor.Sym_traceless_comp_2_2_val              
+     _Tensor.Sym_traceless_comp_2_3_val              
+     _Tensor.Reduceable_matrix_1_1_val               
+     _Tensor.Reduceable_matrix_1_2_val               
+     _Tensor.Reduceable_matrix_1_3_val               
+     _Tensor.Reduceable_matrix_2_1_val               
+     _Tensor.Reduceable_matrix_2_2_val               
+     _Tensor.Reduceable_matrix_2_3_val               
+     _Tensor.Reduceable_matrix_3_1_val               
+     _Tensor.Reduceable_matrix_3_2_val               
+     _Tensor.Reduceable_matrix_3_3_val               
+     _Tensor.Auth_entity_assembly_ID                 
+     _Tensor.Auth_seq_ID                             
+     _Tensor.Auth_comp_ID                            
+     _Tensor.Auth_atom_ID                            
+     _Tensor.Sf_ID                                   
+     _Tensor.Entry_ID                                
+     _Tensor.Tensor_list_ID                          
+
+    2  2  2  2  2    2  2  2  2  1    1  "Short string value"  2  2  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  2  
+
+  stop_
+
+save_
+
+save_<interatomic_distance>
+  _Interatomic_distance_list.Sf_category     interatomic_distance
+  _Interatomic_distance_list.Sf_framecode     <interatomic_distance>
+  _Interatomic_distance_list.Entry_ID                  1
+  _Interatomic_distance_list.Sf_ID                     2
+  _Interatomic_distance_list.ID                        2
+  _Interatomic_distance_list.Details                   "Possible multiline text"
+  _Interatomic_distance_list.Text_data_format          "Long string value"
+  _Interatomic_distance_list.Text_data                 "Possible multiline text"
+
+  loop_
+     _Interatomic_dist.ID                                    
+     _Interatomic_dist.Set_ID                                
+     _Interatomic_dist.Assembly_atom_ID_1                    
+     _Interatomic_dist.Entity_assembly_ID_1                  
+     _Interatomic_dist.Entity_ID_1                           
+     _Interatomic_dist.Comp_index_ID_1                       
+     _Interatomic_dist.Seq_ID_1                              
+     _Interatomic_dist.Comp_ID_1                             
+     _Interatomic_dist.Atom_ID_1                             
+     _Interatomic_dist.Atom_type_1                           
+     _Interatomic_dist.Assembly_atom_ID_2                    
+     _Interatomic_dist.Entity_assembly_ID_2                  
+     _Interatomic_dist.Entity_ID_2                           
+     _Interatomic_dist.Comp_index_ID_2                       
+     _Interatomic_dist.Seq_ID_2                              
+     _Interatomic_dist.Comp_ID_2                             
+     _Interatomic_dist.Atom_ID_2                             
+     _Interatomic_dist.Atom_type_2                           
+     _Interatomic_dist.Val                                   
+     _Interatomic_dist.Auth_asym_ID_1                        
+     _Interatomic_dist.Auth_entity_assembly_ID_1             
+     _Interatomic_dist.Auth_seq_ID_1                         
+     _Interatomic_dist.Auth_comp_ID_1                        
+     _Interatomic_dist.Auth_atom_ID_1                        
+     _Interatomic_dist.Auth_asym_ID_2                        
+     _Interatomic_dist.Auth_entity_assembly_ID_2             
+     _Interatomic_dist.Auth_seq_ID_2                         
+     _Interatomic_dist.Auth_comp_ID_2                        
+     _Interatomic_dist.Auth_atom_ID_2                        
+     _Interatomic_dist.Sf_ID                                 
+     _Interatomic_dist.Entry_ID                              
+     _Interatomic_dist.Interatomic_distance_list_ID          
+
+    2  2  2  2  2    2  2  1  1  "Short string value"    2  2  2  2  2    1  1  "Short string value"  110.234  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
+
+  stop_
+
+save_
+
 save_<general_distance_constraints>
   _Gen_dist_constraint_list.Sf_category     general_distance_constraints
   _Gen_dist_constraint_list.Sf_framecode     <general_distance_constraints>
@@ -6035,21 +6319,41 @@ save_<general_distance_constraints>
      _Gen_dist_constraint.Contribution_fractional_val          
      _Gen_dist_constraint.Spectral_peak_ID                     
      _Gen_dist_constraint.Spectral_peak_list_ID                
-     _Gen_dist_constraint.Auth_asym_ID_1                       
+     _Gen_dist_constraint.PDB_record_ID_1                      
+     _Gen_dist_constraint.PDB_model_num_1                      
+     _Gen_dist_constraint.PDB_strand_ID_1                      
+     _Gen_dist_constraint.PDB_ins_code_1                       
+     _Gen_dist_constraint.PDB_residue_no_1                     
+     _Gen_dist_constraint.PDB_residue_name_1                   
+     _Gen_dist_constraint.PDB_atom_name_1                      
+     _Gen_dist_constraint.PDB_record_ID_2                      
+     _Gen_dist_constraint.PDB_model_num_2                      
+     _Gen_dist_constraint.PDB_strand_ID_2                      
+     _Gen_dist_constraint.PDB_ins_code_2                       
+     _Gen_dist_constraint.PDB_residue_no_2                     
+     _Gen_dist_constraint.PDB_residue_name_2                   
+     _Gen_dist_constraint.PDB_atom_name_2                      
      _Gen_dist_constraint.Auth_entity_assembly_ID_1            
+     _Gen_dist_constraint.Auth_asym_ID_1                       
+     _Gen_dist_constraint.Auth_chain_ID_1                      
      _Gen_dist_constraint.Auth_seq_ID_1                        
      _Gen_dist_constraint.Auth_comp_ID_1                       
      _Gen_dist_constraint.Auth_atom_ID_1                       
-     _Gen_dist_constraint.Auth_asym_ID_2                       
+     _Gen_dist_constraint.Auth_alt_ID_1                        
+     _Gen_dist_constraint.Auth_atom_name_1                     
      _Gen_dist_constraint.Auth_entity_assembly_ID_2            
+     _Gen_dist_constraint.Auth_asym_ID_2                       
+     _Gen_dist_constraint.Auth_chain_ID_2                      
      _Gen_dist_constraint.Auth_seq_ID_2                        
      _Gen_dist_constraint.Auth_comp_ID_2                       
      _Gen_dist_constraint.Auth_atom_ID_2                       
+     _Gen_dist_constraint.Auth_alt_ID_2                        
+     _Gen_dist_constraint.Auth_atom_name_2                     
      _Gen_dist_constraint.Sf_ID                                
      _Gen_dist_constraint.Entry_ID                             
      _Gen_dist_constraint.Gen_dist_constraint_list_ID          
 
-    2  2  yes/no  2  2    2  2  2  1  1    "Short string value"  2  2  2  2    2  2  2  1  1    "Short string value"  2  2  110.234  110.234    110.234  110.234  110.234  110.234  110.234    2  2  1  2  "Short string value"    "Short string value"  "Short string value"  1  2  "Short string value"    "Short string value"  "Short string value"  2  1  2    
+    2  2  yes/no  2  2    2  2  2  1  1    "Short string value"  2  2  2  2    2  2  2  1  1    "Short string value"  2  2  110.234  110.234    110.234  110.234  110.234  110.234  110.234    2  2  "Short string value"  2  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  2  1  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  1  2    1  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  1  2  1  2    
 
   stop_
 
@@ -6097,7 +6401,7 @@ save_<general_distance_constraints>
   loop_
      _Gen_dist_constraint_conv_err.ID                                         
      _Gen_dist_constraint_conv_err.Gen_dist_constraint_parse_file_ID          
-     _Gen_dist_constraint_conv_err.Parse_file_constraintaint_ID               
+     _Gen_dist_constraint_conv_err.Parse_file_constraint_ID                   
      _Gen_dist_constraint_conv_err.Conv_error_type                            
      _Gen_dist_constraint_conv_err.Conv_error_note                            
      _Gen_dist_constraint_conv_err.Sf_ID                                      
@@ -6446,31 +6750,71 @@ save_<torsion_angle_constraints>
      _Torsion_angle_constraint.Angle_lower_bound_val                     
      _Torsion_angle_constraint.Angle_upper_bound_val                     
      _Torsion_angle_constraint.Source_experiment_ID                      
-     _Torsion_angle_constraint.Auth_asym_ID_1                            
+     _Torsion_angle_constraint.PDB_record_ID_1                           
+     _Torsion_angle_constraint.PDB_model_num_1                           
+     _Torsion_angle_constraint.PDB_strand_ID_1                           
+     _Torsion_angle_constraint.PDB_ins_code_1                            
+     _Torsion_angle_constraint.PDB_residue_no_1                          
+     _Torsion_angle_constraint.PDB_residue_name_1                        
+     _Torsion_angle_constraint.PDB_atom_name_1                           
+     _Torsion_angle_constraint.PDB_record_ID_2                           
+     _Torsion_angle_constraint.PDB_model_num_2                           
+     _Torsion_angle_constraint.PDB_strand_ID_2                           
+     _Torsion_angle_constraint.PDB_ins_code_2                            
+     _Torsion_angle_constraint.PDB_residue_no_2                          
+     _Torsion_angle_constraint.PDB_residue_name_2                        
+     _Torsion_angle_constraint.PDB_atom_name_2                           
+     _Torsion_angle_constraint.PDB_record_ID_3                           
+     _Torsion_angle_constraint.PDB_model_num_3                           
+     _Torsion_angle_constraint.PDB_strand_ID_3                           
+     _Torsion_angle_constraint.PDB_ins_code_3                            
+     _Torsion_angle_constraint.PDB_residue_no_3                          
+     _Torsion_angle_constraint.PDB_residue_name_3                        
+     _Torsion_angle_constraint.PDB_atom_name_3                           
+     _Torsion_angle_constraint.PDB_record_ID_4                           
+     _Torsion_angle_constraint.PDB_model_num_4                           
+     _Torsion_angle_constraint.PDB_strand_ID_4                           
+     _Torsion_angle_constraint.PDB_ins_code_4                            
+     _Torsion_angle_constraint.PDB_residue_no_4                          
+     _Torsion_angle_constraint.PDB_residue_name_4                        
+     _Torsion_angle_constraint.PDB_atom_name_4                           
      _Torsion_angle_constraint.Auth_entity_assembly_ID_1                 
+     _Torsion_angle_constraint.Auth_asym_ID_1                            
+     _Torsion_angle_constraint.Auth_chain_ID_1                           
      _Torsion_angle_constraint.Auth_seq_ID_1                             
      _Torsion_angle_constraint.Auth_comp_ID_1                            
      _Torsion_angle_constraint.Auth_atom_ID_1                            
-     _Torsion_angle_constraint.Auth_asym_ID_2                            
+     _Torsion_angle_constraint.Auth_alt_ID_1                             
+     _Torsion_angle_constraint.Auth_atom_name_1                          
      _Torsion_angle_constraint.Auth_entity_assembly_ID_2                 
+     _Torsion_angle_constraint.Auth_asym_ID_2                            
+     _Torsion_angle_constraint.Auth_chain_ID_2                           
      _Torsion_angle_constraint.Auth_seq_ID_2                             
      _Torsion_angle_constraint.Auth_comp_ID_2                            
      _Torsion_angle_constraint.Auth_atom_ID_2                            
-     _Torsion_angle_constraint.Auth_asym_ID_3                            
+     _Torsion_angle_constraint.Auth_alt_ID_2                             
+     _Torsion_angle_constraint.Auth_atom_name_2                          
      _Torsion_angle_constraint.Auth_entity_assembly_ID_3                 
+     _Torsion_angle_constraint.Auth_asym_ID_3                            
+     _Torsion_angle_constraint.Auth_chain_ID_3                           
      _Torsion_angle_constraint.Auth_seq_ID_3                             
      _Torsion_angle_constraint.Auth_comp_ID_3                            
      _Torsion_angle_constraint.Auth_atom_ID_3                            
-     _Torsion_angle_constraint.Auth_asym_ID_4                            
+     _Torsion_angle_constraint.Auth_alt_ID_3                             
+     _Torsion_angle_constraint.Auth_atom_name_3                          
      _Torsion_angle_constraint.Auth_entity_assembly_ID_4                 
+     _Torsion_angle_constraint.Auth_asym_ID_4                            
+     _Torsion_angle_constraint.Auth_chain_ID_4                           
      _Torsion_angle_constraint.Auth_seq_ID_4                             
      _Torsion_angle_constraint.Auth_comp_ID_4                            
      _Torsion_angle_constraint.Auth_atom_ID_4                            
+     _Torsion_angle_constraint.Auth_alt_ID_4                             
+     _Torsion_angle_constraint.Auth_atom_name_4                          
      _Torsion_angle_constraint.Sf_ID                                     
      _Torsion_angle_constraint.Entry_ID                                  
      _Torsion_angle_constraint.Torsion_angle_constraint_list_ID          
 
-    2  1  2  2  2    2  2  1  1  "Short string value"    2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    1  1  "Short string value"  2  2    2  2  2  2  1    1  "Short string value"  2  110.234  110.234    2  1  2  "Short string value"  "Short string value"    "Short string value"  1  2  "Short string value"  "Short string value"    "Short string value"  1  2  "Short string value"  "Short string value"    "Short string value"  1  2  "Short string value"  "Short string value"    "Short string value"  2  1  2  
+    2  1  2  2  2    2  2  1  1  "Short string value"    2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    1  1  "Short string value"  2  2    2  2  2  2  1    1  "Short string value"  2  110.234  110.234    2  "Short string value"  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  2  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  2  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  1  2  1  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  1    2  1  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  1  2  1    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    1  2  1  2  
 
   stop_
 
@@ -6611,21 +6955,41 @@ save_<RDC_constraints>
      _RDC_constraint.RDC_val_scale_factor               
      _RDC_constraint.RDC_bond_length                    
      _RDC_constraint.Source_experiment_ID               
-     _RDC_constraint.Auth_asym_ID_1                     
+     _RDC_constraint.PDB_record_ID_1                    
+     _RDC_constraint.PDB_model_num_1                    
+     _RDC_constraint.PDB_strand_ID_1                    
+     _RDC_constraint.PDB_ins_code_1                     
+     _RDC_constraint.PDB_residue_no_1                   
+     _RDC_constraint.PDB_residue_name_1                 
+     _RDC_constraint.PDB_atom_name_1                    
+     _RDC_constraint.PDB_record_ID_2                    
+     _RDC_constraint.PDB_model_num_2                    
+     _RDC_constraint.PDB_strand_ID_2                    
+     _RDC_constraint.PDB_ins_code_2                     
+     _RDC_constraint.PDB_residue_no_2                   
+     _RDC_constraint.PDB_residue_name_2                 
+     _RDC_constraint.PDB_atom_name_2                    
      _RDC_constraint.Auth_entity_assembly_ID_1          
+     _RDC_constraint.Auth_asym_ID_1                     
+     _RDC_constraint.Auth_chain_ID_1                    
      _RDC_constraint.Auth_seq_ID_1                      
      _RDC_constraint.Auth_comp_ID_1                     
      _RDC_constraint.Auth_atom_ID_1                     
-     _RDC_constraint.Auth_asym_ID_2                     
+     _RDC_constraint.Auth_alt_ID_1                      
+     _RDC_constraint.Auth_atom_name_1                   
      _RDC_constraint.Auth_entity_assembly_ID_2          
+     _RDC_constraint.Auth_asym_ID_2                     
+     _RDC_constraint.Auth_chain_ID_2                    
      _RDC_constraint.Auth_seq_ID_2                      
      _RDC_constraint.Auth_comp_ID_2                     
      _RDC_constraint.Auth_atom_ID_2                     
+     _RDC_constraint.Auth_alt_ID_2                      
+     _RDC_constraint.Auth_atom_name_2                   
      _RDC_constraint.Sf_ID                              
      _RDC_constraint.Entry_ID                           
      _RDC_constraint.RDC_constraint_list_ID             
 
-    2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    2  1  1  "Short string value"  2    2  110.234  110.234  110.234  110.234    110.234  110.234  2  1  2    "Short string value"  "Short string value"  "Short string value"  1  2    "Short string value"  "Short string value"  "Short string value"  2  1    2  
+    2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    2  1  1  "Short string value"  2    2  110.234  110.234  110.234  110.234    110.234  110.234  2  "Short string value"  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  2  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  1    2  1  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  1  2  1    2  
 
   stop_
 

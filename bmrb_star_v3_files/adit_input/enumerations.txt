@@ -497,7 +497,19 @@ save__CA_CB_constraint_expt.Sample_state
 
 save_
 
+save__Chem_comp.Aromatic
 
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+      
 save__Chem_comp.Paramagnetic
 
    loop_
@@ -511,19 +523,20 @@ save__Chem_comp.Paramagnetic
 
 save_
 
-save__Chem_comp.Aromatic
+save__Chem_comp.Province
 
    loop_
      _item_enumeration_value
      _item_enumeration_description
 
-     yes           .
-     no            .
+     BMRB           .
+     PDB            .
+     PubChem        .
 
     stop_
 
 save_
-                                             
+                                       
 save__Chem_comp.Mon_nstd_flag
 
    loop_
@@ -538,7 +551,7 @@ save__Chem_comp.Mon_nstd_flag
 save_
 
 
-save__Chem_comp.PDBX_ambiguous_flag
+save__Chem_comp.Ambiguous_flag
 
    loop_
      _item_enumeration_value
@@ -553,7 +566,7 @@ save_
 
 
 
-save__Chem_comp_atom.PDBX_aromatic_flag
+save__Chem_comp_atom.Aromatic_flag
 
    loop_
      _item_enumeration_value
@@ -566,7 +579,7 @@ save__Chem_comp_atom.PDBX_aromatic_flag
 
 save_
 
-save__Chem_comp_atom.PDBX_leaving_atom_flag
+save__Chem_comp_atom.Leaving_atom_flag
 
    loop_
      _item_enumeration_value
@@ -781,7 +794,7 @@ save__Chem_comp.Vendor
 
 save_
 
-save__Chem_comp_bond.PDBX_aromatic_flag
+save__Chem_comp_bond.Aromatic_flag
 
    loop_
      _item_enumeration_value
@@ -795,7 +808,7 @@ save__Chem_comp_bond.PDBX_aromatic_flag
 save_
 
 
-save__Chem_comp_bond.PDBX_stereo_config
+save__Chem_comp_bond.Stereo_config
 
    loop_
      _item_enumeration_value
@@ -973,7 +986,7 @@ save_
 
 
 
-save__Chem_comp.PDBX_release_status
+save__Chem_comp.Release_status
 
    loop_
      _item_enumeration_value
@@ -4856,7 +4869,7 @@ save_
 #
 #save_
 
-save__General_relaxation_experiment.Experiment_name
+save__Auto_relaxation_experiment.Experiment_name
 
     loop_
       _item_enumeration_value
@@ -4868,7 +4881,7 @@ save__General_relaxation_experiment.Experiment_name
 
 save_
 
-save__General_relaxation_experiment.Sample_state
+save__Auto_relaxation_experiment.Sample_state
 
     loop_
       _item_enumeration_value
@@ -4882,7 +4895,7 @@ save__General_relaxation_experiment.Sample_state
 
 save_
 
-save__General_relaxation_list.Rex_units
+save__Auto_relaxation_list.Rex_units
 
     loop_
       _item_enumeration_value
@@ -4896,7 +4909,7 @@ save__General_relaxation_list.Rex_units
 
 save_
 
-save__General_relaxation_list.Relaxation_coherence_type
+save__Auto_relaxation_list.Relaxation_coherence_type
 
     loop_
       _item_enumeration_value
@@ -4965,7 +4978,7 @@ save_
 
 #save_
 
-save__General_relaxation_list.Relaxation_val_units
+save__Auto_relaxation_list.Relaxation_val_units
 
     loop_
       _item_enumeration_value
@@ -4981,7 +4994,7 @@ save__General_relaxation_list.Relaxation_val_units
 
 save_
 
-save__General_relaxation_list.Temp_calibration_method
+save__Auto_relaxation_list.Temp_calibration_method
 
     loop_
       _item_enumeration_value
@@ -4995,7 +5008,19 @@ save__General_relaxation_list.Temp_calibration_method
 
 save_
 
-save__General_relaxation_list.Temp_control_method
+save__Auto_relaxation_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    ?               .
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Common_relaxation_type_name
 
     loop_
       _item_enumeration_value
@@ -5009,6 +5034,7 @@ save__General_relaxation_list.Temp_control_method
    stop_
 
 save_
+
 
 
 save__Homonucl_NOE_list.Homonuclear_NOE_val_type
@@ -7055,6 +7081,80 @@ save__Task.Task
   stop_
 
 save_
+
+save__Tensor_list.Tensor_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_
+
+save__Tensor_list.Tensor_shape
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_
+
+save__Tensor_list.Matrix_val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_
+
+save__Tensor_list.Isotropic_val_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_
+
+save__Tensor_list.Angle_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_
+
+save__Tensor_list.Euler_angle_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?            .
+
+  stop_
+
+save_
+
+
 
 #save__Torsion_angle_constraint.Member_logic_code
 
