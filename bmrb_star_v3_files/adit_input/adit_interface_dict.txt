@@ -27081,6 +27081,114 @@ Comp ID
 
 save_
 
+save__Chem_comp_bio_function.Biological_function
+
+   _Tag                  '_Chem_comp_bio_function.Biological_function'
+
+   _Category              'Chem_comp_bio_function'
+
+   _Description
+;
+A specific function carried out by the molecular entity in its native biological system.
+;
+
+   _Adit_item_view_name
+;
+Biological function
+;
+
+   loop_
+     _Example
+
+;
+electron transport; protease; kinase
+;
+
+   stop_
+
+save_
+
+save__Chem_comp_bio_function.Sf_ID
+
+   _Tag                  '_Chem_comp_bio_function.Sf_ID'
+
+   _Category              'Chem_comp_bio_function'
+
+   _Description
+;
+Pointer to '_Chem_comp.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_comp_bio_function.Entry_ID
+
+   _Tag                  '_Chem_comp_bio_function.Entry_ID'
+
+   _Category              'Chem_comp_bio_function'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_comp_bio_function.Comp_ID
+
+   _Tag                  '_Chem_comp_bio_function.Comp_ID'
+
+   _Category              'Chem_comp_bio_function'
+
+   _Description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Chem_comp_descriptor.Descriptor
 
    _Tag                  '_Chem_comp_descriptor.Descriptor'
@@ -35405,12 +35513,39 @@ save__Mass_spectrometer.Type
 
    _Description
 ;
-Approximate strength of the magnetic field for the spectrometer as defined by the proton frequency of the instrument expressed in MHz.
+Provide the type of mass spectrometer used.
 ;
 
    _Adit_item_view_name
 ;
-Field strength
+Mass spectrometer type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Mass_spectrometer.Fragmentation_method
+
+   _Tag                  '_Mass_spectrometer.Fragmentation_method'
+
+   _Category              'Mass_spectrometer'
+
+   _Description
+;
+Enter the method by the mass spectrometer to fragment compounds.
+;
+
+   _Adit_item_view_name
+;
+Fragmentation method
 ;
 
    loop_
@@ -35897,6 +36032,33 @@ Approximate strength of the magnetic field for the spectrometer as defined by th
    _Adit_item_view_name
 ;
 Field strength
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Mass_spectrometer_view.Fragmentation_method
+
+   _Tag                  '_Mass_spectrometer_view.Fragmentation_method'
+
+   _Category              'Mass_spectrometer_view'
+
+   _Description
+;
+Enter the method by the mass spectrometer to fragment compounds.
+;
+
+   _Adit_item_view_name
+;
+Fragmentation method
 ;
 
    loop_

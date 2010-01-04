@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2009-12-29
+#  version date -  2010-01-04
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.5
+    _dictionary.version         3.1.0.6
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.5         ?
+     3.1.0.6         ?
 ;
      ?
 ;
@@ -2421,7 +2421,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.5'
+   _item_default.value            '3.1.0.6'
    _item_type.code                'line'
 
    loop_
@@ -26668,6 +26668,7 @@ components in the entry.
   '_entity_bond.comp_id_1'                               'entity_bond'                   yes
   '_entity_bond.comp_id_2'                               'entity_bond'                   yes
   '_chem_comp_common_name.comp_id'                       'chem_comp_common_name'         yes
+  '_chem_comp_bio_function.comp_id'                      'chem_comp_bio_function'        yes
   '_chem_comp_descriptor.comp_id'                        'chem_comp_descriptor'          yes
   '_chem_comp_identifier.comp_id'                        'chem_comp_identifier'          yes
   '_chem_comp_systematic_name.comp_id'                   'chem_comp_systematic_name'          yes
@@ -26798,6 +26799,7 @@ components in the entry.
   '_entity_bond.comp_id_1'                               '_chem_comp.id'
   '_entity_bond.comp_id_2'                               '_chem_comp.id'
   '_chem_comp_common_name.comp_id'                       '_chem_comp.id'
+  '_chem_comp_bio_function.comp_id'                      '_chem_comp.id'
   '_chem_comp_descriptor.comp_id'                        '_chem_comp.id'
   '_chem_comp_identifier.comp_id'                        '_chem_comp.id'
   '_chem_comp_systematic_name.comp_id'                   '_chem_comp.id'
@@ -28671,6 +28673,118 @@ Pointer to '_Chem_comp.ID'
 
    _item.name                  '_chem_comp_common_name.comp_id'
    _item.category_id              'chem_comp_common_name'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_chem_comp_bio_function
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'chem_comp_bio_function'
+
+   loop_
+     _category_key.name
+
+     '_chem_comp_bio_function.biological_function'
+     '_chem_comp_bio_function.entry_id'
+     '_chem_comp_bio_function.comp_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_comp'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_bio_function.biological_function
+
+   _item_description.description
+;
+A specific function carried out by the molecular entity in its native biological 
+system.
+;
+
+   _item.name                  '_chem_comp_bio_function.biological_function'
+   _item.category_id              'chem_comp_bio_function'
+   _item.mandatory_code            yes
+
+   _item_type.code                'text'
+
+   loop_
+     _item_examples.case
+
+;
+electron transport; protease; kinase
+;
+
+   stop_
+
+save_
+
+save__chem_comp_bio_function.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_chem_comp_bio_function.entry_id'
+   _item.category_id              'chem_comp_bio_function'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_comp_bio_function.comp_id
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_chem_comp_bio_function.comp_id'
+   _item.category_id              'chem_comp_bio_function'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -38048,8 +38162,7 @@ save__mass_spectrometer.type
 
    _item_description.description
 ;
-Approximate strength of the magnetic field for the spectrometer as defined 
-by the proton frequency of the instrument expressed in MHz.
+The type of mass spectrometer used.
 ;
 
    _item.name                  '_mass_spectrometer.type'
@@ -38062,7 +38175,44 @@ by the proton frequency of the instrument expressed in MHz.
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?    ?
+   Q-TOF    ?
+   'ion TRAP'    ?
+   FTMS    ?
+   Quadrupole    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__mass_spectrometer.fragmentation_method
+
+   _item_description.description
+;
+The kind of fragmentation method used by the defined mass spectrometer.
+;
+
+   _item.name                  '_mass_spectrometer.fragmentation_method'
+   _item.category_id              'mass_spectrometer'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   CID    'collision induced'
+   ETD    'electron-transfer dissociation'
+   IRMPD    'infrared multi-photon dissociation'
 
    stop_
 
@@ -38599,7 +38749,44 @@ by the proton frequency of the instrument expressed in MHz.
      _item_enumeration.value
      _item_enumeration.detail
 
+   Q-TOF    ?
+   'ion TRAP'    ?
+   FTMS    ?
+   Quadrupole    ?
    ?    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__mass_spectrometer_view.fragmentation_method
+
+   _item_description.description
+;
+The kind of fragmentation method used by the defined mass spectrometer.
+;
+
+   _item.name                  '_mass_spectrometer_view.fragmentation_method'
+   _item.category_id              'mass_spectrometer_view'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   CID    ?
+   IRMPD    ?
 
    stop_
 

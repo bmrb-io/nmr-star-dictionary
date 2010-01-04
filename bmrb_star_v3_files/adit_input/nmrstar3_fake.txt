@@ -1441,6 +1441,16 @@ save_<chem_comp>
   stop_
 
   loop_
+     _Chem_comp_bio_function.Biological_function          
+     _Chem_comp_bio_function.Sf_ID                        
+     _Chem_comp_bio_function.Entry_ID                     
+     _Chem_comp_bio_function.Comp_ID                      
+
+    "Possible multiline text"  2  1  1  
+
+  stop_
+
+  loop_
      _Chem_comp_descriptor.Descriptor               
      _Chem_comp_descriptor.Type                     
      _Chem_comp_descriptor.Program                  
@@ -1934,6 +1944,7 @@ save_<Mass_spectrometer>
   _Mass_spectrometer.Manufacturer                          "Long string value"
   _Mass_spectrometer.Model                                 "Long string value"
   _Mass_spectrometer.Type                                  "Long string value"
+  _Mass_spectrometer.Fragmentation_method                  "Long string value"
   _Mass_spectrometer.Serial_number                         "Long string value"
   _Mass_spectrometer.Mass_ref_introduction_method          "Long string value"
   _Mass_spectrometer.Details                               "Possible multiline text"
@@ -1964,6 +1975,7 @@ save_<Mass_spectrometer_list>
      _Mass_spectrometer_view.Manufacturer                          
      _Mass_spectrometer_view.Model                                 
      _Mass_spectrometer_view.Type                                  
+     _Mass_spectrometer_view.Fragmentation_method                  
      _Mass_spectrometer_view.Serial_number                         
      _Mass_spectrometer_view.Mass_ref_introduction_method          
      _Mass_spectrometer_view.Details                               
@@ -1973,7 +1985,7 @@ save_<Mass_spectrometer_list>
      _Mass_spectrometer_view.Entry_ID                              
      _Mass_spectrometer_view.Mass_spectrometer_list_ID             
 
-    2  "String value"  "Long string value"  "Long string value"  "Long string value"    "Long string value"  "Long string value"  "Possible multiline text"  2  "Long string value"    2  1  2  
+    2  "String value"  "Long string value"  "Long string value"  "Long string value"    "Long string value"  "Long string value"  "Long string value"  "Possible multiline text"  2    "Long string value"  2  1  2  
 
   stop_
 
