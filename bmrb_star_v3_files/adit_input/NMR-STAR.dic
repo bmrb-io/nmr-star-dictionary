@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-01-04
+#  version date -  2010-01-05
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.6
+    _dictionary.version         3.1.0.7
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.6         ?
+     3.1.0.7         ?
 ;
      ?
 ;
@@ -2421,7 +2421,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.6'
+   _item_default.value            '3.1.0.7'
    _item_type.code                'line'
 
    loop_
@@ -80420,20 +80420,14 @@ A code describing the spin(s) involved in the measured relaxation coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Iz    'R1                           longitudinal'
-   Sz    'R1                           longitudinal'
-   I+    'R1rho                        transverse'
-   I-    'R1rho                        transverse'
-   S+    'R1rho                        transverse'
-   S-    'R1rho                        transverse'
-   (I+)+(I-)    'R1rho                        transverse'
-   (S+)+(S-)    'R1rho                        transverse'
-   I+    'R2                           transverse'
-   I-    'R2                           transverse'
-   S+    'R2                           transverse'
-   S-    'R2                           transverse'
-   (I+)+(I-)    'R2                           transverse'
-   (S+)+(S-)    'R2                           transverse'
+   Iz    'R1    longitudinal'
+   Sz    'R1    longitudinal'
+   I+    'R1rho or R2      transverse'
+   I-    'R1rho or R2      transverse'
+   S+    'R1rho or R2      transverse'
+   S-    'R1rho or R2      transverse'
+   (I+)+(I-)    'R1rho or R2      transverse'
+   (S+)+(S-)    'R1rho or R2      transverse'
    I-S+    'ZQ relaxation'
    I+S-    'ZQ relaxation'
    (I+S-)+(I-S+)    'ZQ relaxation'
@@ -93094,7 +93088,7 @@ save_binding_value_list
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -93400,7 +93394,7 @@ save_binding_experiment
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -93624,7 +93618,7 @@ save_binding_software
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -93807,7 +93801,7 @@ save_binding_result
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -94439,7 +94433,7 @@ save_binding_partners
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -104661,43 +104655,6 @@ HB1
 
 save_
 
-save_atom_site
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'atom_site'
-
-   loop_
-     _category_key.name
-
-      ?
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__atom_site.auth_alt_id
 
    _item_description.description
@@ -104740,45 +104697,6 @@ Author's atom name.
 
 ;
 ?
-;
-
-   stop_
-
-save_
-
-save_atom_site
-   _category.description
-;
-Data items in the atom_site category record details about the atom sites in a macromolecular structure, such as the positional coordinates, atomic displacement parameters, magnetic moments and directions.
-;
-   _category.id                   'atom_site'
-
-   loop_
-     _category_key.name
-
-     '_atom_site.id'
-     '_atom_site.entry_id'
-     '_atom_site.conformer_family_coord_set_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_

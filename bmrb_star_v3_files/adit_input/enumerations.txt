@@ -4915,33 +4915,21 @@ save__Auto_relaxation_list.Relaxation_coherence_type
       _item_enumeration_value
       _item_enumeration_description
 
-   Iz                  'R1                           longitudinal'
-   Sz                  'R1                           longitudinal'
+   Iz               'R1    longitudinal'
+   Sz               'R1    longitudinal'
                          
-
-   I+                  'R1rho                        transverse'
-   I-                  'R1rho                        transverse'
-   S+                  'R1rho                        transverse'
-   S-                  'R1rho                        transverse'
-   (I+)+(I-)           'R1rho                        transverse'
-   (S+)+(S-)           'R1rho                        transverse'
-
-
-   I+                  'R2                           transverse'
-   I-                  'R2                           transverse'
-   S+                  'R2                           transverse'
-   S-                  'R2                           transverse'
-   (I+)+(I-)           'R2                           transverse'
-   (S+)+(S-)           'R2                           transverse'
-    
+   I+               'R1rho or R2      transverse'
+   I-               'R1rho or R2      transverse'
+   S+               'R1rho or R2      transverse'
+   S-               'R1rho or R2      transverse'
+   (I+)+(I-)        'R1rho or R2      transverse'
+   (S+)+(S-)        'R1rho or R2      transverse'
 
    I-S+             'ZQ relaxation'
    I+S-             'ZQ relaxation'
    (I+S-)+(I-S+)    'ZQ relaxation'
 
-
    IzSz             'longitudinal spin order'
-
 
    I+Sz             'single quantum antiphase'
    I-Sz             'single quantum antiphase'
@@ -4949,7 +4937,6 @@ save__Auto_relaxation_list.Relaxation_coherence_type
    IzS-             'single quantum antiphase'
   ((I+)+(I-))Sz     'single quantum antiphase'
   Iz((S+)+(S-))     'single quantum antiphase'
-
    
    I+S+             'DQ relaxation'
    I-S-             'DQ relaxation'
@@ -5178,6 +5165,34 @@ save__J_three_bond_constraint_expt.Sample_state
 
 save_
 
+save__Mass_spectrometer.Fragmentation_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      CID          'collision induced'
+      ETD          'electron-transfer dissociation'
+      IRMPD        'infrared multi-photon dissociation'
+
+    stop_
+
+save_
+
+save__Mass_spectrometer_view.Fragmentation_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      CID          .
+      IRMPD        .
+
+    stop_
+
+save_
+
+
 save__Mass_spectrometer.Manufacturer
 
     loop_
@@ -5208,12 +5223,29 @@ save__Mass_spectrometer.Type
       _item_enumeration_value
       _item_enumeration_description
 
-      ?          .
+      Q-TOF          .
+     'ion TRAP'      .
+      FTMS           .
+      Quadrupole     .
 
     stop_
 
 save_
 
+save__Mass_spectrometer_view.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Q-TOF          .
+     'ion TRAP'      .
+      FTMS           .
+      Quadrupole     .
+
+    stop_
+
+save_
 
 save__Mass_spectrometer_view.Manufacturer
 

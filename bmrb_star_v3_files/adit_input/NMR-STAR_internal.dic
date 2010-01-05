@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-01-04
+#  version date -  2010-01-05
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.6
+    _dictionary.version         3.1.0.7
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.6         ?
+     3.1.0.7         ?
 ;
      ?
 ;
@@ -4566,7 +4566,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.6'
+   _item_default.value            '3.1.0.7'
    _item_type.code                'line'
 
    loop_
@@ -88900,20 +88900,14 @@ A code describing the spin(s) involved in the measured relaxation coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Iz    'R1                           longitudinal'
-   Sz    'R1                           longitudinal'
-   I+    'R1rho                        transverse'
-   I-    'R1rho                        transverse'
-   S+    'R1rho                        transverse'
-   S-    'R1rho                        transverse'
-   (I+)+(I-)    'R1rho                        transverse'
-   (S+)+(S-)    'R1rho                        transverse'
-   I+    'R2                           transverse'
-   I-    'R2                           transverse'
-   S+    'R2                           transverse'
-   S-    'R2                           transverse'
-   (I+)+(I-)    'R2                           transverse'
-   (S+)+(S-)    'R2                           transverse'
+   Iz    'R1    longitudinal'
+   Sz    'R1    longitudinal'
+   I+    'R1rho or R2      transverse'
+   I-    'R1rho or R2      transverse'
+   S+    'R1rho or R2      transverse'
+   S-    'R1rho or R2      transverse'
+   (I+)+(I-)    'R1rho or R2      transverse'
+   (S+)+(S-)    'R1rho or R2      transverse'
    I-S+    'ZQ relaxation'
    I+S-    'ZQ relaxation'
    (I+S-)+(I-S+)    'ZQ relaxation'
@@ -102375,7 +102369,7 @@ save_Binding_value_list
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -102721,7 +102715,7 @@ save_Binding_experiment
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -102969,7 +102963,7 @@ save_Binding_software
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -103176,7 +103170,7 @@ save_Binding_result
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -103832,7 +103826,7 @@ save_Binding_partners
      _category_group.id
 
      'inclusive_group'
-     'binding_study'
+     'binding_data'
 
    stop_
 
@@ -114771,52 +114765,15 @@ HB1
 
 save_
 
-save_atom_site
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'atom_site'
-
-   loop_
-     _category_key.name
-
-      ?
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
-save__atom_site.Auth_alt_ID
+save__Atom_site.Auth_alt_ID
 
    _item_description.description
 ;
 Author's alternate location identifier.
 ;
 
-   _item.name                  '_atom_site.Auth_alt_ID'
-   _item.category_id              'atom_site'
+   _item.name                  '_Atom_site.Auth_alt_ID'
+   _item.category_id              'Atom_site'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -114832,15 +114789,15 @@ Author's alternate location identifier.
 
 save_
 
-save__atom_site.Auth_atom_name
+save__Atom_site.Auth_atom_name
 
    _item_description.description
 ;
 Author's atom name.
 ;
 
-   _item.name                  '_atom_site.Auth_atom_name'
-   _item.category_id              'atom_site'
+   _item.name                  '_Atom_site.Auth_atom_name'
+   _item.category_id              'Atom_site'
    _item.mandatory_code            no
 
    _item_type.code                'atcode'
@@ -114850,45 +114807,6 @@ Author's atom name.
 
 ;
 ?
-;
-
-   stop_
-
-save_
-
-save_Atom_site
-   _category.description
-;
-Data items in the atom_site category record details about the atom sites in a macromolecular structure, such as the positional coordinates, atomic displacement parameters, magnetic moments and directions.
-;
-   _category.id                   'Atom_site'
-
-   loop_
-     _category_key.name
-
-     '_Atom_site.ID'
-     '_Atom_site.Entry_ID'
-     '_Atom_site.Conformer_family_coord_set_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_
