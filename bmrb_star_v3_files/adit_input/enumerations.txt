@@ -9,7 +9,7 @@
      
 data_NMR-STAR_tag_enumerations
 
-    _Revision_date      2009-03-17
+    _Revision_date      2010-02-01
 
 
 
@@ -2329,7 +2329,7 @@ save__Data_set.Type
    spectral_peak_list                   .
    other_data_list                      .
    RDCs                                 .
-   order_parameters 
+   order_parameters                     .
    dipolar_couplings                    .
    spectral_density_values              .
    H_exch_rates                         .
@@ -2341,14 +2341,14 @@ save__Data_set.Type
    deduced_secd_struct_features         .
    deduced_hydrogen_bonds               .
    representative_conformer             .
-   conformer_family_coord_set
-   general_relaxation           .
-   heteronucl_T1_relaxation
-   heteronucl_T1rho_relaxation             .
+   conformer_family_coord_set           .
+   general_relaxation                   .
+   heteronucl_T1_relaxation             .
+   heteronucl_T1rho_relaxation          .
    heteronucl_T2_relaxation             .
-   heteronucl_NOEs
-   homonucl_NOEs                      .
-   dipole_dipole_relaxation                    .
+   heteronucl_NOEs                      .
+   homonucl_NOEs                                          .
+   dipole_dipole_relaxation                               .
    dipole_dipole_cross_correlation_relaxation             .
    CSA_CSA_cross_correlation_relaxation                   .
    dipole_CSA_cross_correlation_relaxation                .
@@ -2937,6 +2937,7 @@ save__Entity_assembly.Physical_state
   denatured            .
   'molten globule'     .
   unfolded             .
+ 'intrinsically disordered'     .
  
   stop_
 
@@ -3827,8 +3828,8 @@ save__Entry_interview.View_mode
      _item_enumeration_value
      _item_enumeration_description
      
-       PDB       .
-       BMRB      .
+       PDB/BMRB        .
+      'BMRB only'      .
 
    stop_
 
@@ -7222,6 +7223,19 @@ save__Torsion_angle_constraints_expt.Sample_state
      isotropic         .
      anisotropic       .
      solid             .
+
+  stop_
+
+save_
+
+save__Upload_data.Data_file_immutable_flag
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     no         .
+     yes        .
 
   stop_
 

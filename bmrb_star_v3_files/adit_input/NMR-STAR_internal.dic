@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-01-05
+#  version date -  2010-02-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.7
+    _dictionary.version         3.1.0.8
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.7         ?
+     3.1.0.8         ?
 ;
      ?
 ;
@@ -1085,7 +1085,6 @@ Flag indicating that atomic coordinates are being deposited.
    _item.category_id              'Entry_interview'
    _item.mandatory_code            no
 
-   _item_default.value            'yes'
    _item_type.code                'yes_no'
 
    loop_
@@ -1124,7 +1123,6 @@ left of the screen.
    _item.category_id              'Entry_interview'
    _item.mandatory_code            no
 
-   _item_default.value            'yes'
    _item_type.code                'yes_no'
 
    loop_
@@ -1168,8 +1166,8 @@ submitted to BMRB.
      _item_enumeration.value
      _item_enumeration.detail
 
-   PDB    ?
-   BMRB    ?
+   PDB/BMRB    ?
+   'BMRB only'    ?
 
    stop_
 
@@ -1333,6 +1331,7 @@ Flag indicating that assigned chemical shifts are being deposited.
    _item.category_id              'Entry_interview'
    _item.mandatory_code            no
 
+   _item_default.value            'no'
    _item_type.code                'yes_no'
 
    loop_
@@ -2827,6 +2826,120 @@ The syntax or format of the file that is uploaded.
 
 ;
 NMR-STAR v3
+;
+
+   stop_
+
+save_
+
+save_Upload_data
+   _category.description
+;
+Items in the upload_data category define the names and syntax for author deposited files containing quantitative data or other information.
+;
+   _category.id                   'Upload_data'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Upload_data.Data_file_ID'
+     '_Upload_data.Entry_ID'
+     '_Upload_data.Deposited_data_files_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'deposited_data_files'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__Upload_data.Data_file_immutable_flag
+
+   _item_description.description
+;
+A flag used during the deposition process to indicate that an uploaded 
+file cannot be changed without reapplying the validation procedures.
+;
+
+   _item.name                  '_Upload_data.Data_file_immutable_flag'
+   _item.category_id              'Upload_data'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   no    ?
+   yes    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+yes
+;
+
+   stop_
+
+save_
+
+save_Upload_data
+   _category.description
+;
+Items in the upload_data category define the names and syntax for author deposited files containing quantitative data or other information.
+;
+   _category.id                   'Upload_data'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Upload_data.Data_file_ID'
+     '_Upload_data.Entry_ID'
+     '_Upload_data.Deposited_data_files_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'deposited_data_files'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
 ;
 
    stop_
@@ -4566,7 +4679,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.7'
+   _item_default.value            '3.1.0.8'
    _item_type.code                'line'
 
    loop_
@@ -7852,21 +7965,23 @@ of the full list of saveframe categories available in constructing an NMR-STAR f
    other_data_list    ?
    RDCs    ?
    order_parameters    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
+   dipolar_couplings    ?
+   spectral_density_values    ?
+   H_exch_rates    ?
+   H_exch_protection_factors    ?
+   pKa_value_data_set    ?
+   pH_NMR_param_list    ?
+   D_H_fractionation_factors    ?
+   molecular_axis_determinations    ?
+   deduced_secd_struct_features    ?
+   deduced_hydrogen_bonds    ?
+   representative_conformer    ?
+   conformer_family_coord_set    ?
    general_relaxation    ?
    heteronucl_T1_relaxation    ?
-   .    ?
-   .    ?
+   heteronucl_T1rho_relaxation    ?
+   heteronucl_T2_relaxation    ?
+   heteronucl_NOEs    ?
    homonucl_NOEs    ?
    dipole_dipole_relaxation    ?
    dipole_dipole_cross_correlation_relaxation    ?
@@ -11854,6 +11969,7 @@ state of the component of the assembly.
    denatured    ?
    'molten globule'    ?
    unfolded    ?
+   'intrinsically disordered'    ?
 
    stop_
 
@@ -30941,7 +31057,7 @@ components in the entry.
 
 save_
 
-save__Chem_comp.Province
+save__Chem_comp.Provenance
 
    _item_description.description
 ;
@@ -30949,7 +31065,7 @@ The tag value defines the source of the data used to construct the chem_comp
 record.
 ;
 
-   _item.name                  '_Chem_comp.Province'
+   _item.name                  '_Chem_comp.Provenance'
    _item.category_id              'Chem_comp'
    _item.mandatory_code            yes
 
@@ -30959,9 +31075,6 @@ record.
      _item_enumeration.value
      _item_enumeration.detail
 
-   BMRB    ?
-   PDB    ?
-   PubChem    ?
 
    stop_
 

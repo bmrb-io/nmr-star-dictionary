@@ -337,7 +337,7 @@ Check this box, if you are depositing one or more sets of assigned chemical shif
 
    _Adit_item_view_name
 ;
-<p align='left'><FONT COLOR='#000000'><BR>You are strongly encouraged to deposit any of the following kinds of data.</p></td><td colspan='99'></tr><tr><td class='category_cell_mandatory_label'>Assigned NMR chemical shifts
+Assigned NMR chemical shifts
 ;
 
    loop_
@@ -1479,6 +1479,33 @@ Data file format
 
 ;
 NMR-STAR v3
+;
+
+   stop_
+
+save_
+
+save__Upload_data.Data_file_immutable_flag
+
+   _Tag                  '_Upload_data.Data_file_immutable_flag'
+
+   _Category              'Upload_data'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+?
+;
+
+   loop_
+     _Example
+
+;
+yes
 ;
 
    stop_
@@ -25326,9 +25353,9 @@ ID
 
 save_
 
-save__Chem_comp.Province
+save__Chem_comp.Provenance
 
-   _Tag                  '_Chem_comp.Province'
+   _Tag                  '_Chem_comp.Provenance'
 
    _Category              'Chem_comp'
 
@@ -25339,7 +25366,7 @@ save__Chem_comp.Province
 
    _Adit_item_view_name
 ;
-Province
+
 ;
 
    loop_

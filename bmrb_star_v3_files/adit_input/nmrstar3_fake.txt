@@ -59,15 +59,16 @@ save_<deposited_data_files>
   _Deposited_data_files.Validate_flag                          yes/no
 
   loop_
-     _Upload_data.Data_file_ID                     
-     _Upload_data.Data_file_name                   
-     _Upload_data.Data_file_Sf_category            
-     _Upload_data.Data_file_syntax                 
-     _Upload_data.Sf_ID                            
-     _Upload_data.Entry_ID                         
-     _Upload_data.Deposited_data_files_ID          
+     _Upload_data.Data_file_ID                      
+     _Upload_data.Data_file_name                    
+     _Upload_data.Data_file_Sf_category             
+     _Upload_data.Data_file_syntax                  
+     _Upload_data.Data_file_immutable_flag          
+     _Upload_data.Sf_ID                             
+     _Upload_data.Entry_ID                          
+     _Upload_data.Deposited_data_files_ID           
 
-    2  "Long string value"  "Long string value"  "Long string value"  2    1  2  
+    2  "Long string value"  "Long string value"  "Long string value"  yes/no    2  1  2  
 
   stop_
 
@@ -1368,7 +1369,7 @@ save_<chem_comp>
   _Chem_comp.Entry_ID                                 1
   _Chem_comp.Sf_ID                                    2
   _Chem_comp.ID                                       1
-  _Chem_comp.Province                                 "Long string value"
+  _Chem_comp.Provenance                               "Long string value"
   _Chem_comp.Name                                     
   _Chem_comp.Type                                     "Long string value"
   _Chem_comp.BMRB_code                                "Short string value"
