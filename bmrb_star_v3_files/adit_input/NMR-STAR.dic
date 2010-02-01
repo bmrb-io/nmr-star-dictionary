@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-01-05
+#  version date -  2010-02-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.7
+    _dictionary.version         3.1.0.9
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.7         ?
+     3.1.0.9         ?
 ;
      ?
 ;
@@ -2421,7 +2421,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.7'
+   _item_default.value            '3.1.0.9'
    _item_type.code                'line'
 
    loop_
@@ -5343,21 +5343,23 @@ of the full list of saveframe categories available in constructing an NMR-STAR f
    other_data_list    ?
    RDCs    ?
    order_parameters    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
-   .    ?
+   dipolar_couplings    ?
+   spectral_density_values    ?
+   H_exch_rates    ?
+   H_exch_protection_factors    ?
+   pKa_value_data_set    ?
+   pH_NMR_param_list    ?
+   D_H_fractionation_factors    ?
+   molecular_axis_determinations    ?
+   deduced_secd_struct_features    ?
+   deduced_hydrogen_bonds    ?
+   representative_conformer    ?
+   conformer_family_coord_set    ?
    general_relaxation    ?
    heteronucl_T1_relaxation    ?
-   .    ?
-   .    ?
+   heteronucl_T1rho_relaxation    ?
+   heteronucl_T2_relaxation    ?
+   heteronucl_NOEs    ?
    homonucl_NOEs    ?
    dipole_dipole_relaxation    ?
    dipole_dipole_cross_correlation_relaxation    ?
@@ -9074,6 +9076,7 @@ state of the component of the assembly.
    denatured    ?
    'molten globule'    ?
    unfolded    ?
+   'intrinsically disordered'    ?
 
    stop_
 
@@ -26913,7 +26916,7 @@ components in the entry.
 
 save_
 
-save__chem_comp.province
+save__chem_comp.provenance
 
    _item_description.description
 ;
@@ -26921,7 +26924,7 @@ The tag value defines the source of the data used to construct the chem_comp
 record.
 ;
 
-   _item.name                  '_chem_comp.province'
+   _item.name                  '_chem_comp.provenance'
    _item.category_id              'chem_comp'
    _item.mandatory_code            yes
 

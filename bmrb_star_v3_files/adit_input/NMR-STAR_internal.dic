@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.8
+    _dictionary.version         3.1.0.9
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.8         ?
+     3.1.0.9         ?
 ;
      ?
 ;
@@ -1167,7 +1167,7 @@ submitted to BMRB.
      _item_enumeration.detail
 
    PDB/BMRB    ?
-   'BMRB only'    ?
+   'BMRB Only'    ?
 
    stop_
 
@@ -2832,46 +2832,6 @@ NMR-STAR v3
 
 save_
 
-save_Upload_data
-   _category.description
-;
-Items in the upload_data category define the names and syntax for author deposited files containing quantitative data or other information.
-;
-   _category.id                   'Upload_data'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Upload_data.Data_file_ID'
-     '_Upload_data.Entry_ID'
-     '_Upload_data.Deposited_data_files_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'deposited_data_files'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__Upload_data.Data_file_immutable_flag
 
    _item_description.description
@@ -2900,46 +2860,6 @@ file cannot be changed without reapplying the validation procedures.
 
 ;
 yes
-;
-
-   stop_
-
-save_
-
-save_Upload_data
-   _category.description
-;
-Items in the upload_data category define the names and syntax for author deposited files containing quantitative data or other information.
-;
-   _category.id                   'Upload_data'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Upload_data.Data_file_ID'
-     '_Upload_data.Entry_ID'
-     '_Upload_data.Deposited_data_files_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'deposited_data_files'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_
@@ -4679,7 +4599,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.8'
+   _item_default.value            '3.1.0.9'
    _item_type.code                'line'
 
    loop_
@@ -31075,6 +30995,9 @@ record.
      _item_enumeration.value
      _item_enumeration.detail
 
+   BMRB    ?
+   PDB    ?
+   PubChem    ?
 
    stop_
 
