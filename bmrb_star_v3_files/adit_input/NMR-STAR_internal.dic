@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.14
+    _dictionary.version         3.1.0.16
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.14         ?
+     3.1.0.16         ?
 ;
      ?
 ;
@@ -1903,15 +1903,45 @@ save__Entry_interview.Dipole_CSA_cross_correlation
 
    _item_description.description
 ;
-Check this box, if you are submitting dipole-Chemical shift anisotropy 
-cross correlation relaxation data. With this box checked, after clicking on the 
-'Save Entry Interview' button found at the top of this page, you will be asked to 
-enter additional information regarding the data submitted. Files containing the 
-data sets should be uploaded by filling out the form found by clicking on the 
-'Deposit data files' link in the frame on the left of the screen.
+Flag indicating that dipole-Chemical shift anisotropy cross correlation 
+relaxation data are being deposited.
 ;
 
    _item.name                  '_Entry_interview.Dipole_CSA_cross_correlation'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Binding_constants
+
+   _item_description.description
+;
+Flag indicating that binding constant values are being deposited.
+;
+
+   _item.name                  '_Entry_interview.Binding_constants'
    _item.category_id              'Entry_interview'
    _item.mandatory_code            no
 
@@ -4599,7 +4629,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.14'
+   _item_default.value            '3.1.0.16'
    _item_type.code                'line'
 
    loop_
@@ -41104,6 +41134,7 @@ in the entry.
   '_Deduced_secd_struct_software.Software_ID'            'Deduced_secd_struct_software'       yes
   '_Deduced_H_bond_software.Software_ID'                 'Deduced_H_bond_software'       yes
   '_Conf_stats_software.Software_ID'                     'Conf_stats_software'           yes
+  '_Conformer_family_refinement.Software_ID'             'Conformer_family_refinement'        yes
   '_Conformer_family_software.Software_ID'               'Conformer_family_software'          yes
   '_Rep_conf_software.Software_ID'                       'Rep_conf_software'             yes
   '_Constraint_file.Software_ID'                         'Constraint_file'               yes
@@ -41161,6 +41192,7 @@ in the entry.
   '_Deduced_secd_struct_software.Software_ID'            '_Software.ID'
   '_Deduced_H_bond_software.Software_ID'                 '_Software.ID'
   '_Conf_stats_software.Software_ID'                     '_Software.ID'
+  '_Conformer_family_refinement.Software_ID'             '_Software.ID'
   '_Conformer_family_software.Software_ID'               '_Software.ID'
   '_Rep_conf_software.Software_ID'                       '_Software.ID'
   '_Constraint_file.Software_ID'                         '_Software.ID'
@@ -103240,6 +103272,7 @@ Unique identifier for the observed binding constant.
       _item.mandatory_code
 
   '_Binding_result.ID'                                   'Binding_result'                yes
+  '_Binding_partners.Binding_result_ID'                  'Binding_partners'              yes
   '_Binding_param.Binding_result_ID'                     'Binding_param'                 yes
 
   stop_
@@ -103248,6 +103281,7 @@ Unique identifier for the observed binding constant.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_Binding_partners.Binding_result_ID'                  '_Binding_result.ID'
   '_Binding_param.Binding_result_ID'                     '_Binding_result.ID'
 
   stop_
@@ -103983,7 +104017,7 @@ save__Binding_partners.Entity_ID
 
    _item_description.description
 ;
-Pointer to '_Binding_value_list.Sf_ID'
+Pointer to '_Entity.ID'
 ;
 
    _item.name                  '_Binding_partners.Entity_ID'

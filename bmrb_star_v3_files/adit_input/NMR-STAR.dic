@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.14
+    _dictionary.version         3.1.0.16
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.14         ?
+     3.1.0.16         ?
 ;
      ?
 ;
@@ -2421,7 +2421,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.14'
+   _item_default.value            '3.1.0.16'
    _item_type.code                'line'
 
    loop_
@@ -36383,6 +36383,7 @@ in the entry.
   '_deduced_secd_struct_software.software_id'            'deduced_secd_struct_software'       yes
   '_deduced_h_bond_software.software_id'                 'deduced_h_bond_software'       yes
   '_conf_stats_software.software_id'                     'conf_stats_software'           yes
+  '_conformer_family_refinement.software_id'             'conformer_family_refinement'        yes
   '_conformer_family_software.software_id'               'conformer_family_software'          yes
   '_rep_conf_software.software_id'                       'rep_conf_software'             yes
   '_constraint_file.software_id'                         'constraint_file'               yes
@@ -36440,6 +36441,7 @@ in the entry.
   '_deduced_secd_struct_software.software_id'            '_software.id'
   '_deduced_h_bond_software.software_id'                 '_software.id'
   '_conf_stats_software.software_id'                     '_software.id'
+  '_conformer_family_refinement.software_id'             '_software.id'
   '_conformer_family_software.software_id'               '_software.id'
   '_rep_conf_software.software_id'                       '_software.id'
   '_constraint_file.software_id'                         '_software.id'
@@ -93838,6 +93840,7 @@ Unique identifier for the observed binding constant.
       _item.mandatory_code
 
   '_binding_result.id'                                   'binding_result'                yes
+  '_binding_partners.binding_result_id'                  'binding_partners'              yes
   '_binding_param.binding_result_id'                     'binding_param'                 yes
 
   stop_
@@ -93846,6 +93849,7 @@ Unique identifier for the observed binding constant.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_binding_partners.binding_result_id'                  '_binding_result.id'
   '_binding_param.binding_result_id'                     '_binding_result.id'
 
   stop_
@@ -94557,7 +94561,7 @@ save__binding_partners.entity_id
 
    _item_description.description
 ;
-Pointer to '_Binding_value_list.Sf_ID'
+Pointer to '_Entity.ID'
 ;
 
    _item.name                  '_binding_partners.entity_id'
