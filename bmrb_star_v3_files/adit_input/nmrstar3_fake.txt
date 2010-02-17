@@ -4939,29 +4939,33 @@ save_<binding_data>
 
 save_
 
-save_<binding_titration_list>
-  _Binding_titration_list.Sf_category     binding_titration_list
-  _Binding_titration_list.Sf_framecode     <binding_titration_list>
-  _Binding_titration_list.Entry_ID                  1
-  _Binding_titration_list.Sf_ID                     2
-  _Binding_titration_list.ID                        2
-  _Binding_titration_list.Data_file_name            "Long string value"
-  _Binding_titration_list.Details                   "Possible multiline text"
-  _Binding_titration_list.Text_data_format          "String value"
-  _Binding_titration_list.Text_data                 "Possible multiline text"
+save_<binding_param_list>
+  _Binding_param_list.Sf_category     binding_param_list
+  _Binding_param_list.Sf_framecode     <binding_param_list>
+  _Binding_param_list.Entry_ID                          1
+  _Binding_param_list.Sf_ID                             2
+  _Binding_param_list.ID                                2
+  _Binding_param_list.Binding_value_list_ID             2
+  _Binding_param_list.Binding_value_list_label          "Long string value"
+  _Binding_param_list.Concentration_val_units           "Short string value"
+  _Binding_param_list.Observed_param                    "Long string value"
+  _Binding_param_list.Data_file_name                    "Long string value"
+  _Binding_param_list.Details                           "Possible multiline text"
+  _Binding_param_list.Text_data_format                  "String value"
+  _Binding_param_list.Text_data                         "Possible multiline text"
 
   loop_
-     _Binding_titration.ID                                 
-     _Binding_titration.Binding_result_ID                  
-     _Binding_titration.Concentration_val                  
-     _Binding_titration.Concentration_val_err              
-     _Binding_titration.Concentration_val_units            
-     _Binding_titration.Observed_param_val                 
-     _Binding_titration.Observed_param_val_err             
-     _Binding_titration.Observed_param                     
-     _Binding_titration.Sf_ID                              
-     _Binding_titration.Entry_ID                           
-     _Binding_titration.Binding_titration_list_ID          
+     _Binding_param.ID                               
+     _Binding_param.Binding_result_ID                
+     _Binding_param.Concentration_val                
+     _Binding_param.Concentration_val_err            
+     _Binding_param.Concentration_val_units          
+     _Binding_param.Observed_param_val               
+     _Binding_param.Observed_param_val_err           
+     _Binding_param.Observed_param                   
+     _Binding_param.Sf_ID                            
+     _Binding_param.Entry_ID                         
+     _Binding_param.Binding_param_list_ID            
 
     2  2  110.234  110.234  "Short string value"    110.234  110.234  "String value"  2  1    2  
 

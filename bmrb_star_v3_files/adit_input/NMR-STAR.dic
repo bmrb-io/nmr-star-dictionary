@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-02-01
+#  version date -  2010-02-17
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.9
+    _dictionary.version         3.1.0.13
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.9         ?
+     3.1.0.13         ?
 ;
      ?
 ;
@@ -1840,8 +1840,8 @@ BMRB accession number for this entry
   '_binding_software.entry_id'                           'binding_software'              yes
   '_binding_result.entry_id'                             'binding_result'                yes
   '_binding_partners.entry_id'                           'binding_partners'              yes
-  '_binding_titration_list.entry_id'                     'binding_titration_list'        yes
-  '_binding_titration.entry_id'                          'binding_titration'             yes
+  '_binding_param_list.entry_id'                         'binding_param_list'            yes
+  '_binding_param.entry_id'                              'binding_param'                 yes
   '_deduced_secd_struct_list.entry_id'                   'deduced_secd_struct_list'      yes
   '_deduced_secd_struct_experiment.entry_id'             'deduced_secd_struct_experiment'     yes
   '_deduced_secd_struct_software.entry_id'               'deduced_secd_struct_software'       yes
@@ -2095,8 +2095,8 @@ BMRB accession number for this entry
   '_binding_software.entry_id'                           '_entry.id'
   '_binding_result.entry_id'                             '_entry.id'
   '_binding_partners.entry_id'                           '_entry.id'
-  '_binding_titration_list.entry_id'                     '_entry.id'
-  '_binding_titration.entry_id'                          '_entry.id'
+  '_binding_param_list.entry_id'                         '_entry.id'
+  '_binding_param.entry_id'                              '_entry.id'
   '_deduced_secd_struct_list.entry_id'                   '_entry.id'
   '_deduced_secd_struct_experiment.entry_id'             '_entry.id'
   '_deduced_secd_struct_software.entry_id'               '_entry.id'
@@ -2421,7 +2421,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.9'
+   _item_default.value            '3.1.0.13'
    _item_type.code                'line'
 
    loop_
@@ -2722,7 +2722,8 @@ save__entry.casp_target
 
    _item_description.description
 ;
-Flag indicating if the deposited structure is part of a CASP project.
+Flag indicating if the deposited structure is part of a CASP, CASD, or 
+other project.
 ;
 
    _item.name                  '_entry.casp_target'
@@ -33790,7 +33791,6 @@ Interunion Task Group
    _item.category_id              'sample_component'
    _item.mandatory_code            no
 
-   _item_default.value            'natural abundance'
    _item_type.code                'line'
 
    loop_
@@ -93201,6 +93201,7 @@ save__binding_value_list.id
   '_binding_software.binding_value_list_id'              'binding_software'              yes
   '_binding_result.binding_value_list_id'                'binding_result'                yes
   '_binding_partners.binding_value_list_id'              'binding_partners'              yes
+  '_binding_param_list.binding_value_list_id'            'binding_param_list'            yes
 
   stop_
 
@@ -93212,6 +93213,7 @@ save__binding_value_list.id
   '_binding_software.binding_value_list_id'              '_binding_value_list.id'
   '_binding_result.binding_value_list_id'                '_binding_value_list.id'
   '_binding_partners.binding_value_list_id'              '_binding_value_list.id'
+  '_binding_param_list.binding_value_list_id'            '_binding_value_list.id'
 
   stop_
 
@@ -93836,7 +93838,7 @@ Unique identifier for the observed binding constant.
       _item.mandatory_code
 
   '_binding_result.id'                                   'binding_result'                yes
-  '_binding_titration.binding_result_id'                 'binding_titration'             yes
+  '_binding_param.binding_result_id'                     'binding_param'                 yes
 
   stop_
 
@@ -93844,7 +93846,7 @@ Unique identifier for the observed binding constant.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_binding_titration.binding_result_id'                 '_binding_result.id'
+  '_binding_param.binding_result_id'                     '_binding_result.id'
 
   stop_
 
@@ -94671,18 +94673,18 @@ Pointer to '_Binding_value_list.ID'
 
 save_
 
-save_binding_titration_list
+save_binding_param_list
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'binding_titration_list'
+   _category.id                   'binding_param_list'
 
    loop_
      _category_key.name
 
-     '_binding_titration_list.entry_id'
-     '_binding_titration_list.id'
+     '_binding_param_list.entry_id'
+     '_binding_param_list.id'
 
    stop_
 
@@ -94690,7 +94692,7 @@ save_binding_titration_list
      _category_group.id
 
      'inclusive_group'
-     'binding_titration_list'
+     'binding_param_list'
 
    stop_
 
@@ -94709,15 +94711,15 @@ save_binding_titration_list
 
 save_
 
-save__binding_titration_list.sf_category
+save__binding_param_list.sf_category
 
    _item_description.description
 ;
 Category definition for the information content of the saveframe
 ;
 
-   _item.name                  '_binding_titration_list.sf_category'
-   _item.category_id              'binding_titration_list'
+   _item.name                  '_binding_param_list.sf_category'
+   _item.category_id              'binding_param_list'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -94733,7 +94735,7 @@ Category definition for the information content of the saveframe
 
 save_
 
-save__binding_titration_list.sf_framecode
+save__binding_param_list.sf_framecode
 
    _item_description.description
 ;
@@ -94741,8 +94743,8 @@ A label for the saveframe that describes in very brief terms the information
 contained in the saveframe.
 ;
 
-   _item.name                  '_binding_titration_list.sf_framecode'
-   _item.category_id              'binding_titration_list'
+   _item.name                  '_binding_param_list.sf_framecode'
+   _item.category_id              'binding_param_list'
    _item.mandatory_code            yes
 
    _item_default.value            'binding_parameter'
@@ -94759,15 +94761,15 @@ contained in the saveframe.
 
 save_
 
-save__binding_titration_list.entry_id
+save__binding_param_list.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                  '_binding_titration_list.entry_id'
-   _item.category_id              'binding_titration_list'
+   _item.name                  '_binding_param_list.entry_id'
+   _item.category_id              'binding_param_list'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -94783,7 +94785,7 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__binding_titration_list.id
+save__binding_param_list.id
 
    _item_description.description
 ;
@@ -94795,8 +94797,8 @@ Unique identifier for the list of data values used to calculate a pKa value.
       _item.category_id
       _item.mandatory_code
 
-  '_binding_titration_list.id'                           'binding_titration_list'        yes
-  '_binding_titration.binding_titration_list_id'         'binding_titration'             yes
+  '_binding_param_list.id'                               'binding_param_list'            yes
+  '_binding_param.binding_param_list_id'                 'binding_param'                 yes
 
   stop_
 
@@ -94804,7 +94806,7 @@ Unique identifier for the list of data values used to calculate a pKa value.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_binding_titration.binding_titration_list_id'         '_binding_titration_list.id'
+  '_binding_param.binding_param_list_id'                 '_binding_param_list.id'
 
   stop_
 
@@ -94821,7 +94823,105 @@ Unique identifier for the list of data values used to calculate a pKa value.
 
 save_
 
-save__binding_titration_list.data_file_name
+save__binding_param_list.binding_value_list_id
+
+   _item_description.description
+;
+Pointer to '_Binding_value_list.ID'
+;
+
+   _item.name                  '_binding_param_list.binding_value_list_id'
+   _item.category_id              'binding_param_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__binding_param_list.binding_value_list_label
+
+   _item_description.description
+;
+Pointer to the saveframe where the binding constant values are reported 
+that were calculated from the measured data values provided in this save frame.
+;
+
+   _item.name                  '_binding_param_list.binding_value_list_label'
+   _item.category_id              'binding_param_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'label'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__binding_param_list.concentration_val_units
+
+   _item_description.description
+;
+Units for the concentration values reported in the save frame.
+;
+
+   _item.name                  '_binding_param_list.concentration_val_units'
+   _item.category_id              'binding_param_list'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__binding_param_list.observed_param
+
+   _item_description.description
+;
+The experimental parameter measured when collecting the data used to calculate 
+binding constants.
+;
+
+   _item.name                  '_binding_param_list.observed_param'
+   _item.category_id              'binding_param_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__binding_param_list.data_file_name
 
    _item_description.description
 ;
@@ -94829,8 +94929,8 @@ The name of the file submitted with this depostion that contains the quantitativ
 data for this saveframe.
 ;
 
-   _item.name                  '_binding_titration_list.data_file_name'
-   _item.category_id              'binding_titration_list'
+   _item.name                  '_binding_param_list.data_file_name'
+   _item.category_id              'binding_param_list'
    _item.mandatory_code            no
 
    _item_type.code                'line'
@@ -94846,15 +94946,15 @@ data for this saveframe.
 
 save_
 
-save__binding_titration_list.details
+save__binding_param_list.details
 
    _item_description.description
 ;
-Text describing the reported pH parameter values.
+Text describing the reported binding parameter values.
 ;
 
-   _item.name                  '_binding_titration_list.details'
-   _item.category_id              'binding_titration_list'
+   _item.name                  '_binding_param_list.details'
+   _item.category_id              'binding_param_list'
    _item.mandatory_code            no
 
    _item_type.code                'text'
@@ -94870,16 +94970,16 @@ Text describing the reported pH parameter values.
 
 save_
 
-save__binding_titration_list.text_data_format
+save__binding_param_list.text_data_format
 
    _item_description.description
 ;
-The data format used to represent the pH titration data as ASCII text in 
-the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+The data format used to represent the binding titration data as ASCII text 
+in the text block that is the value to the '_Binding_param_list.Text_data' tag.
 ;
 
-   _item.name                  '_binding_titration_list.text_data_format'
-   _item.category_id              'binding_titration_list'
+   _item.name                  '_binding_param_list.text_data_format'
+   _item.category_id              'binding_param_list'
    _item.mandatory_code            no
 
    _item_type.code                'line'
@@ -94895,15 +94995,15 @@ the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
 
 save_
 
-save__binding_titration_list.text_data
+save__binding_param_list.text_data
 
    _item_description.description
 ;
-A set of pH titration data formatted as ASCII text.
+A set of binding titration data formatted as ASCII text.
 ;
 
-   _item.name                  '_binding_titration_list.text_data'
-   _item.category_id              'binding_titration_list'
+   _item.name                  '_binding_param_list.text_data'
+   _item.category_id              'binding_param_list'
    _item.mandatory_code            no
 
    _item_type.code                'text'
@@ -94919,19 +95019,19 @@ A set of pH titration data formatted as ASCII text.
 
 save_
 
-save_binding_titration
+save_binding_param
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'binding_titration'
+   _category.id                   'binding_param'
 
    loop_
      _category_key.name
 
-     '_binding_titration.id'
-     '_binding_titration.entry_id'
-     '_binding_titration.binding_titration_list_id'
+     '_binding_param.id'
+     '_binding_param.entry_id'
+     '_binding_param.binding_param_list_id'
 
    stop_
 
@@ -94939,7 +95039,7 @@ save_binding_titration
      _category_group.id
 
      'inclusive_group'
-     'binding_titration_list'
+     'binding_param_list'
 
    stop_
 
@@ -94958,15 +95058,15 @@ save_binding_titration
 
 save_
 
-save__binding_titration.id
+save__binding_param.id
 
    _item_description.description
 ;
-Unique identifier for the observed NMR parameter value.
+Unique identifier for the observed parameter value.
 ;
 
-   _item.name                  '_binding_titration.id'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.id'
+   _item.category_id              'binding_param'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -94982,15 +95082,15 @@ Unique identifier for the observed NMR parameter value.
 
 save_
 
-save__binding_titration.binding_result_id
+save__binding_param.binding_result_id
 
    _item_description.description
 ;
-Pointer to '_PH_titr_result.ID'
+Pointer to '_Binding_result.ID'
 ;
 
-   _item.name                  '_binding_titration.binding_result_id'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.binding_result_id'
+   _item.category_id              'binding_param'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -95006,15 +95106,15 @@ Pointer to '_PH_titr_result.ID'
 
 save_
 
-save__binding_titration.concentration_val
+save__binding_param.concentration_val
 
    _item_description.description
 ;
-pH value at which the observed NMR parameter value was observed.
+Concentration value at which the observed parameter value was measured.
 ;
 
-   _item.name                  '_binding_titration.concentration_val'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.concentration_val'
+   _item.category_id              'binding_param'
    _item.mandatory_code            yes
 
    _item_type.code                'float'
@@ -95030,15 +95130,15 @@ pH value at which the observed NMR parameter value was observed.
 
 save_
 
-save__binding_titration.concentration_val_err
+save__binding_param.concentration_val_err
 
    _item_description.description
 ;
-Error in the measured pH value.
+Error in the measured value.
 ;
 
-   _item.name                  '_binding_titration.concentration_val_err'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.concentration_val_err'
+   _item.category_id              'binding_param'
    _item.mandatory_code            no
 
    _item_type.code                'float'
@@ -95054,15 +95154,15 @@ Error in the measured pH value.
 
 save_
 
-save__binding_titration.concentration_val_units
+save__binding_param.concentration_val_units
 
    _item_description.description
 ;
 ?
 ;
 
-   _item.name                  '_binding_titration.concentration_val_units'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.concentration_val_units'
+   _item.category_id              'binding_param'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -95078,15 +95178,15 @@ save__binding_titration.concentration_val_units
 
 save_
 
-save__binding_titration.observed_param_val
+save__binding_param.observed_param_val
 
    _item_description.description
 ;
-Value for the observed NMR parameter.
+Value for the observed parameter.
 ;
 
-   _item.name                  '_binding_titration.observed_param_val'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.observed_param_val'
+   _item.category_id              'binding_param'
    _item.mandatory_code            yes
 
    _item_type.code                'float'
@@ -95102,15 +95202,15 @@ Value for the observed NMR parameter.
 
 save_
 
-save__binding_titration.observed_param_val_err
+save__binding_param.observed_param_val_err
 
    _item_description.description
 ;
-Error in the reported NMR parameter value.
+Error in the reported parameter value.
 ;
 
-   _item.name                  '_binding_titration.observed_param_val_err'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.observed_param_val_err'
+   _item.category_id              'binding_param'
    _item.mandatory_code            no
 
    _item_type.code                'float'
@@ -95126,15 +95226,15 @@ Error in the reported NMR parameter value.
 
 save_
 
-save__binding_titration.observed_param
+save__binding_param.observed_param
 
    _item_description.description
 ;
 ?
 ;
 
-   _item.name                  '_binding_titration.observed_param'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.observed_param'
+   _item.category_id              'binding_param'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -95150,15 +95250,15 @@ save__binding_titration.observed_param
 
 save_
 
-save__binding_titration.entry_id
+save__binding_param.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                  '_binding_titration.entry_id'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.entry_id'
+   _item.category_id              'binding_param'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -95174,15 +95274,15 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__binding_titration.binding_titration_list_id
+save__binding_param.binding_param_list_id
 
    _item_description.description
 ;
-Pointer to '_Binding_titration_list.ID'
+Pointer to '_Binding_param_list.ID'
 ;
 
-   _item.name                  '_binding_titration.binding_titration_list_id'
-   _item.category_id              'binding_titration'
+   _item.name                  '_binding_param.binding_param_list_id'
+   _item.category_id              'binding_param'
    _item.mandatory_code            yes
 
    _item_type.code                'int'

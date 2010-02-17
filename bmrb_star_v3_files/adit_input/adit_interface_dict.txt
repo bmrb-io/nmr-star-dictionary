@@ -2762,12 +2762,12 @@ save__Entry.CASP_target
 
    _Description
 ;
-Please indicate if the deposited structure is a target for the CASP project.
+The item indicates whether the entry is a CASP target, a CASD-NMR target, or similar target.
 ;
 
    _Adit_item_view_name
 ;
-CASP target
+CASP/CASD/method development target
 ;
 
    loop_
@@ -2789,7 +2789,7 @@ save__Entry.Details
 
    _Description
 ;
-A text description of the entry can be entered in this field. The text can provide additional information about the entry that cannot be entered in other fields in the deposition.
+participating in methods development experiments.
 ;
 
    _Adit_item_view_name
@@ -89432,7 +89432,7 @@ save__PH_param_list.PH_titration_list_label
 
    _Description
 ;
-Pointer to the saveframe where the measured values used to calculate the reported pKa values are provided.
+Pointer to the saveframe where the pKa values are reported that were calculated from the measured data values provided in this save frame.
 ;
 
    _Adit_item_view_name
@@ -92664,11 +92664,11 @@ Binding value list ID
 
 save_
 
-save__Binding_titration_list.Sf_category
+save__Binding_param_list.Sf_category
 
-   _Tag                  '_Binding_titration_list.Sf_category'
+   _Tag                  '_Binding_param_list.Sf_category'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92691,11 +92691,11 @@ Sf category
 
 save_
 
-save__Binding_titration_list.Sf_framecode
+save__Binding_param_list.Sf_framecode
 
-   _Tag                  '_Binding_titration_list.Sf_framecode'
+   _Tag                  '_Binding_param_list.Sf_framecode'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92718,11 +92718,11 @@ Sf framecode
 
 save_
 
-save__Binding_titration_list.Entry_ID
+save__Binding_param_list.Entry_ID
 
-   _Tag                  '_Binding_titration_list.Entry_ID'
+   _Tag                  '_Binding_param_list.Entry_ID'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92745,11 +92745,11 @@ Entry ID
 
 save_
 
-save__Binding_titration_list.Sf_ID
+save__Binding_param_list.Sf_ID
 
-   _Tag                  '_Binding_titration_list.Sf_ID'
+   _Tag                  '_Binding_param_list.Sf_ID'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92772,11 +92772,11 @@ Sf ID
 
 save_
 
-save__Binding_titration_list.ID
+save__Binding_param_list.ID
 
-   _Tag                  '_Binding_titration_list.ID'
+   _Tag                  '_Binding_param_list.ID'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92799,11 +92799,119 @@ ID
 
 save_
 
-save__Binding_titration_list.Data_file_name
+save__Binding_param_list.Binding_value_list_ID
 
-   _Tag                  '_Binding_titration_list.Data_file_name'
+   _Tag                  '_Binding_param_list.Binding_value_list_ID'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
+
+   _Description
+;
+Pointer to '_Binding_value_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Binding value list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_param_list.Binding_value_list_label
+
+   _Tag                  '_Binding_param_list.Binding_value_list_label'
+
+   _Category              'Binding_param_list'
+
+   _Description
+;
+A label assigned to the section where the binding constants have been reported that were calculated from the data supplied here needs to be entered in this field.
+;
+
+   _Adit_item_view_name
+;
+Enter the label for the list of binding values derived from this set of binding data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_param_list.Concentration_val_units
+
+   _Tag                  '_Binding_param_list.Concentration_val_units'
+
+   _Category              'Binding_param_list'
+
+   _Description
+;
+Provide the units for the concentration values (ie., mM, uM, others).
+;
+
+   _Adit_item_view_name
+;
+Concentrations value units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_param_list.Observed_param
+
+   _Tag                  '_Binding_param_list.Observed_param'
+
+   _Category              'Binding_param_list'
+
+   _Description
+;
+Provide a brief description of the observed parameter.
+;
+
+   _Adit_item_view_name
+;
+Observed parameter
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_param_list.Data_file_name
+
+   _Tag                  '_Binding_param_list.Data_file_name'
+
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92826,11 +92934,11 @@ Deposited data file name
 
 save_
 
-save__Binding_titration_list.Details
+save__Binding_param_list.Details
 
-   _Tag                  '_Binding_titration_list.Details'
+   _Tag                  '_Binding_param_list.Details'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92853,11 +92961,11 @@ Details
 
 save_
 
-save__Binding_titration_list.Text_data_format
+save__Binding_param_list.Text_data_format
 
-   _Tag                  '_Binding_titration_list.Text_data_format'
+   _Tag                  '_Binding_param_list.Text_data_format'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92880,11 +92988,11 @@ Text data format
 
 save_
 
-save__Binding_titration_list.Text_data
+save__Binding_param_list.Text_data
 
-   _Tag                  '_Binding_titration_list.Text_data'
+   _Tag                  '_Binding_param_list.Text_data'
 
-   _Category              'Binding_titration_list'
+   _Category              'Binding_param_list'
 
    _Description
 ;
@@ -92907,11 +93015,11 @@ Text data
 
 save_
 
-save__Binding_titration.ID
+save__Binding_param.ID
 
-   _Tag                  '_Binding_titration.ID'
+   _Tag                  '_Binding_param.ID'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -92934,11 +93042,11 @@ ID
 
 save_
 
-save__Binding_titration.Binding_result_ID
+save__Binding_param.Binding_result_ID
 
-   _Tag                  '_Binding_titration.Binding_result_ID'
+   _Tag                  '_Binding_param.Binding_result_ID'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -92961,11 +93069,11 @@ Binding result ID
 
 save_
 
-save__Binding_titration.Concentration_val
+save__Binding_param.Concentration_val
 
-   _Tag                  '_Binding_titration.Concentration_val'
+   _Tag                  '_Binding_param.Concentration_val'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -92988,11 +93096,11 @@ Concentration val
 
 save_
 
-save__Binding_titration.Concentration_val_err
+save__Binding_param.Concentration_val_err
 
-   _Tag                  '_Binding_titration.Concentration_val_err'
+   _Tag                  '_Binding_param.Concentration_val_err'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -93015,11 +93123,11 @@ Concentration val err
 
 save_
 
-save__Binding_titration.Concentration_val_units
+save__Binding_param.Concentration_val_units
 
-   _Tag                  '_Binding_titration.Concentration_val_units'
+   _Tag                  '_Binding_param.Concentration_val_units'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -93042,11 +93150,11 @@ Concentration val units
 
 save_
 
-save__Binding_titration.Observed_param_val
+save__Binding_param.Observed_param_val
 
-   _Tag                  '_Binding_titration.Observed_param_val'
+   _Tag                  '_Binding_param.Observed_param_val'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -93069,11 +93177,11 @@ Observed NMR param val
 
 save_
 
-save__Binding_titration.Observed_param_val_err
+save__Binding_param.Observed_param_val_err
 
-   _Tag                  '_Binding_titration.Observed_param_val_err'
+   _Tag                  '_Binding_param.Observed_param_val_err'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -93096,11 +93204,11 @@ Observed NMR param val err
 
 save_
 
-save__Binding_titration.Observed_param
+save__Binding_param.Observed_param
 
-   _Tag                  '_Binding_titration.Observed_param'
+   _Tag                  '_Binding_param.Observed_param'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -93123,15 +93231,15 @@ Observed param
 
 save_
 
-save__Binding_titration.Sf_ID
+save__Binding_param.Sf_ID
 
-   _Tag                  '_Binding_titration.Sf_ID'
+   _Tag                  '_Binding_param.Sf_ID'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
-Pointer to '_Binding_titration_list.Sf_ID'
+Pointer to '_Binding_param_list.Sf_ID'
 ;
 
    _Adit_item_view_name
@@ -93150,11 +93258,11 @@ Sf ID
 
 save_
 
-save__Binding_titration.Entry_ID
+save__Binding_param.Entry_ID
 
-   _Tag                  '_Binding_titration.Entry_ID'
+   _Tag                  '_Binding_param.Entry_ID'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
@@ -93177,20 +93285,20 @@ Entry ID
 
 save_
 
-save__Binding_titration.Binding_titration_list_ID
+save__Binding_param.Binding_param_list_ID
 
-   _Tag                  '_Binding_titration.Binding_titration_list_ID'
+   _Tag                  '_Binding_param.Binding_param_list_ID'
 
-   _Category              'Binding_titration'
+   _Category              'Binding_param'
 
    _Description
 ;
-Pointer to '_Binding_titration_list.ID'
+Pointer to '_Binding_param_list.ID'
 ;
 
    _Adit_item_view_name
 ;
-Binding titration list ID
+Binding param list ID
 ;
 
    loop_
