@@ -59,15 +59,16 @@ save_<deposited_data_files>
   _Deposited_data_files.Validate_flag                          # 
 
   loop_
-     _Upload_data.Data_file_ID                     # X
-     _Upload_data.Data_file_name                   # M
-     _Upload_data.Data_file_Sf_category            # M
-     _Upload_data.Data_file_syntax                 # M
-     _Upload_data.Sf_ID                            # X
-     _Upload_data.Entry_ID                         # X
-     _Upload_data.Deposited_data_files_ID          # 
+     _Upload_data.Data_file_ID                      # X
+     _Upload_data.Data_file_name                    # M
+     _Upload_data.Data_file_Sf_category             # M
+     _Upload_data.Data_file_syntax                  # M
+     _Upload_data.Data_file_immutable_flag          # 
+     _Upload_data.Sf_ID                             # X
+     _Upload_data.Entry_ID                          # X
+     _Upload_data.Deposited_data_files_ID           # 
 
-    @ @ @ @ @   @ @ 
+    @ @ @ @ @   @ @ @ 
 
   stop_
 
@@ -1320,23 +1321,23 @@ save_<chem_comp>
   _Chem_comp.Entry_ID                                 # X
   _Chem_comp.Sf_ID                                    # X
   _Chem_comp.ID                                       # M;       Y
+  _Chem_comp.Provenance                               # 
   _Chem_comp.Name                                     # M;       Y
   _Chem_comp.Type                                     # M;       Y
   _Chem_comp.BMRB_code                                # O
   _Chem_comp.PDB_code                                 # O
-  _Chem_comp.PDBX_type                                # 
-  _Chem_comp.PDBX_ambiguous_flag                      # 
-  _Chem_comp.PDBX_initial_date                        # 
-  _Chem_comp.PDBX_modified_date                       # 
-  _Chem_comp.PDBX_release_status                      # 
-  _Chem_comp.PDBX_replaced_by                         # 
-  _Chem_comp.PDBX_replaces                            # 
+  _Chem_comp.Ambiguous_flag                           # 
+  _Chem_comp.Initial_date                             # 
+  _Chem_comp.Modified_date                            # 
+  _Chem_comp.Release_status                           # 
+  _Chem_comp.Replaced_by                              # 
+  _Chem_comp.Replaces                                 # 
   _Chem_comp.One_letter_code                          # 
   _Chem_comp.Three_letter_code                        # 
   _Chem_comp.Number_atoms_all                         # 
   _Chem_comp.Number_atoms_nh                          # 
   _Chem_comp.PubChem_code                             # O
-  _Chem_comp.PDBX_subcomponent_list                   # 
+  _Chem_comp.Subcomponent_list                        # 
   _Chem_comp.InCHi_code                               # 
   _Chem_comp.Mon_nstd_flag                            # X
   _Chem_comp.Mon_nstd_class                           # 
@@ -1348,7 +1349,7 @@ save_<chem_comp>
   _Chem_comp.Std_deriv_BMRB_code                      # O
   _Chem_comp.Std_deriv_PDB_code                       # O
   _Chem_comp.Std_deriv_chem_comp_name                 # O
-  _Chem_comp.PDBX_synonyms                            # 
+  _Chem_comp.Synonyms                                 # 
   _Chem_comp.Formal_charge                            # M;       Y
   _Chem_comp.Paramagnetic                             # M;       Y
   _Chem_comp.Aromatic                                 # M;       Y
@@ -1382,13 +1383,17 @@ save_<chem_comp>
   _Chem_comp.DB_last_query_revised_last_date          # X
 
   loop_
-     _Chem_comp_common_name.Name              # O
-     _Chem_comp_common_name.Type              # 
-     _Chem_comp_common_name.Sf_ID             # X
-     _Chem_comp_common_name.Entry_ID          # X
-     _Chem_comp_common_name.Comp_ID           # X
+     _Chem_comp_common_name.Name                          # O
+     _Chem_comp_common_name.Type                          # 
+     _Chem_comp_common_name.Sf_ID                         # X
+     _Chem_comp_common_name.Entry_ID                      # X
+     _Chem_comp_common_name.Comp_ID                       # X
+     _Chem_comp_bio_function.Biological_function          # SC;      Y
+     _Chem_comp_bio_function.Sf_ID                        # X
+     _Chem_comp_bio_function.Entry_ID                     # X
+     _Chem_comp_bio_function.Comp_ID                      # X
 
-    @ @ @ @ @   
+    @ @ @ @ @   @ @ @ @ 
 
   stop_
 
@@ -1483,6 +1488,7 @@ save_<chem_comp>
 
   loop_
      _Chem_comp_atom.Atom_ID                           # SC;      Y
+     _Chem_comp_atom.BMRB_code                         # 
      _Chem_comp_atom.PDB_atom_ID                       # X
      _Chem_comp_atom.Alt_atom_ID                       # 
      _Chem_comp_atom.Auth_atom_ID                      # 
@@ -1494,9 +1500,9 @@ save_<chem_comp>
      _Chem_comp_atom.Partial_charge                    # 
      _Chem_comp_atom.Oxidation_number                  # SC;      Y
      _Chem_comp_atom.Unpaired_electron_number          # SC;      Y
-     _Chem_comp_atom.PDBX_align                        # 
-     _Chem_comp_atom.PDBX_aromatic_flag                # 
-     _Chem_comp_atom.PDBX_leaving_atom_flag            # 
+     _Chem_comp_atom.Align                             # 
+     _Chem_comp_atom.Aromatic_flag                     # 
+     _Chem_comp_atom.Leaving_atom_flag                 # 
      _Chem_comp_atom.Substruct_code                    # 
      _Chem_comp_atom.Ionizable                         # SC;      Y
      _Chem_comp_atom.Drawing_2D_coord_x                # 
@@ -1516,7 +1522,7 @@ save_<chem_comp>
      _Chem_comp_atom.Entry_ID                          # X
      _Chem_comp_atom.Comp_ID                           # SC;      Y
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ 
 
   stop_
 
@@ -1533,22 +1539,20 @@ save_<chem_comp>
   stop_
 
   loop_
-     _Chem_comp_bond.ID                          # SC;      Y
-     _Chem_comp_bond.Type                        # SC;      Y
-     _Chem_comp_bond.Value_order                 # SC;      Y
-     _Chem_comp_bond.Atom_ID_1                   # SC;      Y
-     _Chem_comp_bond.Atom_ID_2                   # SC;      Y
-     _Chem_comp_bond.PDB_atom_ID_1               # 
-     _Chem_comp_bond.PDB_atom_ID_2               # 
-     _Chem_comp_bond.PDBX_aromatic_flag          # 
-     _Chem_comp_bond.PDBX_stereo_config          # 
-     _Chem_comp_bond.PDBX_ordinal                # 
-     _Chem_comp_bond.Details                     # O;       Y
-     _Chem_comp_bond.Sf_ID                       # X
-     _Chem_comp_bond.Entry_ID                    # X
-     _Chem_comp_bond.Comp_ID                     # X
+     _Chem_comp_bond.ID                     # SC;      Y
+     _Chem_comp_bond.Type                   # SC;      Y
+     _Chem_comp_bond.Value_order            # SC;      Y
+     _Chem_comp_bond.Atom_ID_1              # SC;      Y
+     _Chem_comp_bond.Atom_ID_2              # SC;      Y
+     _Chem_comp_bond.Aromatic_flag          # 
+     _Chem_comp_bond.Stereo_config          # 
+     _Chem_comp_bond.Ordinal                # 
+     _Chem_comp_bond.Details                # O;       Y
+     _Chem_comp_bond.Sf_ID                  # X
+     _Chem_comp_bond.Entry_ID               # X
+     _Chem_comp_bond.Comp_ID                # X
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ 
 
   stop_
 
@@ -1887,6 +1891,7 @@ save_<Mass_spectrometer>
   _Mass_spectrometer.Manufacturer                          # M;       Y
   _Mass_spectrometer.Model                                 # M;       Y
   _Mass_spectrometer.Type                                  # M;       Y
+  _Mass_spectrometer.Fragmentation_method                  # 
   _Mass_spectrometer.Serial_number                         # O
   _Mass_spectrometer.Mass_ref_introduction_method          # 
   _Mass_spectrometer.Details                               # O
@@ -1917,6 +1922,7 @@ save_<Mass_spectrometer_list>
      _Mass_spectrometer_view.Manufacturer                          # M;       Y
      _Mass_spectrometer_view.Model                                 # M;       Y
      _Mass_spectrometer_view.Type                                  # M;       Y
+     _Mass_spectrometer_view.Fragmentation_method                  # 
      _Mass_spectrometer_view.Serial_number                         # O
      _Mass_spectrometer_view.Mass_ref_introduction_method          # 
      _Mass_spectrometer_view.Details                               # O
@@ -1926,7 +1932,7 @@ save_<Mass_spectrometer_list>
      _Mass_spectrometer_view.Entry_ID                              # 
      _Mass_spectrometer_view.Mass_spectrometer_list_ID             # 
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ 
 
   stop_
 
@@ -3101,61 +3107,6 @@ save_<chem_shifts_calc_type>
 
 save_
 
-save_<shielding_tensors>
-  _Shielding_tensor_list.Sf_category     shielding_tensors
-  _Shielding_tensor_list.Sf_framecode            # X
-  _Shielding_tensor_list.Entry_ID                # X
-  _Shielding_tensor_list.Sf_ID                   # X
-  _Shielding_tensor_list.ID                      # MC
-  _Shielding_tensor_list.Data_file_name          # 
-  _Shielding_tensor_list.Details                 # O
-
-  loop_
-     _Shielding_tensor.ID                                  # X
-     _Shielding_tensor.Shieldings_calc_type_ID             # X
-     _Shielding_tensor.Assembly_atom_ID                    # X
-     _Shielding_tensor.Entity_assembly_ID                  # X
-     _Shielding_tensor.Entity_ID                           # X
-     _Shielding_tensor.Comp_index_ID                       # X
-     _Shielding_tensor.Seq_ID                              # X
-     _Shielding_tensor.Comp_ID                             # X
-     _Shielding_tensor.Atom_ID                             # X
-     _Shielding_tensor.Atom_type                           # X
-     _Shielding_tensor.Atom_isotope_number                 # 
-     _Shielding_tensor.Isotropic_comp_1_1_val              # X
-     _Shielding_tensor.Isotropic_comp_2_2_val              # X
-     _Shielding_tensor.Isotropic_comp_3_3_val              # X
-     _Shielding_tensor.Anti_sym_comp_1_2_val               # X
-     _Shielding_tensor.Anti_sym_comp_1_3_val               # X
-     _Shielding_tensor.Anti_sym_comp_2_3_val               # X
-     _Shielding_tensor.Sym_traceless_comp_1_1_val          # X
-     _Shielding_tensor.Sym_traceless_comp_1_2_val          # X
-     _Shielding_tensor.Sym_traceless_comp_1_3_val          # X
-     _Shielding_tensor.Sym_traceless_comp_2_2_val          # X
-     _Shielding_tensor.Sym_traceless_comp_2_3_val          # X
-     _Shielding_tensor.Reduceable_matrix_1_1_val           # X
-     _Shielding_tensor.Reduceable_matrix_1_2_val           # X
-     _Shielding_tensor.Reduceable_matrix_1_3_val           # X
-     _Shielding_tensor.Reduceable_matrix_2_1_val           # X
-     _Shielding_tensor.Reduceable_matrix_2_2_val           # X
-     _Shielding_tensor.Reduceable_matrix_2_3_val           # X
-     _Shielding_tensor.Reduceable_matrix_3_1_val           # X
-     _Shielding_tensor.Reduceable_matrix_3_2_val           # X
-     _Shielding_tensor.Reduceable_matrix_3_3_val           # X
-     _Shielding_tensor.Auth_entity_assembly_ID             # 
-     _Shielding_tensor.Auth_seq_ID                         # X
-     _Shielding_tensor.Auth_comp_ID                        # X
-     _Shielding_tensor.Auth_atom_ID                        # X
-     _Shielding_tensor.Sf_ID                               # X
-     _Shielding_tensor.Entry_ID                            # X
-     _Shielding_tensor.Shielding_tensor_list_ID            # X
-
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ 
-
-  stop_
-
-save_
-
 save_<theoretical_chem_shifts>
   _Theoretical_chem_shift_list.Sf_category     theoretical_chem_shifts
   _Theoretical_chem_shift_list.Sf_framecode                              # X
@@ -3167,8 +3118,8 @@ save_<theoretical_chem_shifts>
   _Theoretical_chem_shift_list.Chem_shifts_calc_type_label               # X
   _Theoretical_chem_shift_list.Model_atomic_coordinates_ID               # MC
   _Theoretical_chem_shift_list.Model_atomic_coordinates_label            # X
-  _Theoretical_chem_shift_list.Shielding_tensor_list_ID                  # MC
-  _Theoretical_chem_shift_list.Shielding_tensor_list_label               # X
+  _Theoretical_chem_shift_list.Tensor_list_ID                            # MC
+  _Theoretical_chem_shift_list.Tensor_list_label                         # X
   _Theoretical_chem_shift_list.Fermi_contact_spin_density_units          # MC
   _Theoretical_chem_shift_list.Chem_shift_1H_err                         # O
   _Theoretical_chem_shift_list.Chem_shift_2H_err                         # O
@@ -4151,77 +4102,79 @@ save_<heteronucl_T2_relaxation>
 
 save_
 
-save_<general_relaxation>
-  _General_relaxation_list.Sf_category     general_relaxation
-  _General_relaxation_list.Sf_framecode                         # X
-  _General_relaxation_list.Entry_ID                             # X
-  _General_relaxation_list.Sf_ID                                # X
-  _General_relaxation_list.ID                                   # MC
-  _General_relaxation_list.Data_file_name                       # 
-  _General_relaxation_list.Sample_condition_list_ID             # MC
-  _General_relaxation_list.Sample_condition_list_label          # X
-  _General_relaxation_list.Temp_calibration_method              # 
-  _General_relaxation_list.Temp_control_method                  # 
-  _General_relaxation_list.Spectrometer_frequency_1H            # MC
-  _General_relaxation_list.Relaxation_coherence_type            # MC
-  _General_relaxation_list.Relaxation_val_units                 # MC
-  _General_relaxation_list.Rex_units                            # MC
-  _General_relaxation_list.Details                              # O
-  _General_relaxation_list.Text_data_format                     # X
-  _General_relaxation_list.Text_data                            # X
+save_<auto_relaxation>
+  _Auto_relaxation_list.Sf_category     auto_relaxation
+  _Auto_relaxation_list.Sf_framecode                         # X
+  _Auto_relaxation_list.Entry_ID                             # X
+  _Auto_relaxation_list.Sf_ID                                # X
+  _Auto_relaxation_list.ID                                   # MC
+  _Auto_relaxation_list.Data_file_name                       # 
+  _Auto_relaxation_list.Sample_condition_list_ID             # MC
+  _Auto_relaxation_list.Sample_condition_list_label          # X
+  _Auto_relaxation_list.Temp_calibration_method              # 
+  _Auto_relaxation_list.Temp_control_method                  # 
+  _Auto_relaxation_list.Spectrometer_frequency_1H            # MC
+  _Auto_relaxation_list.Common_relaxation_type_name          # 
+  _Auto_relaxation_list.Relaxation_coherence_type            # MC
+  _Auto_relaxation_list.Relaxation_val_units                 # MC
+  _Auto_relaxation_list.Rex_units                            # MC
+  _Auto_relaxation_list.Details                              # O
+  _Auto_relaxation_list.Text_data_format                     # X
+  _Auto_relaxation_list.Text_data                            # X
 
   loop_
-     _General_relaxation_experiment.Experiment_ID                       # SC
-     _General_relaxation_experiment.Experiment_name                     # X
-     _General_relaxation_experiment.Sample_ID                           # MC
-     _General_relaxation_experiment.Sample_label                        # X
-     _General_relaxation_experiment.Sample_state                        # MC;      Y
-     _General_relaxation_experiment.Sf_ID                               # X
-     _General_relaxation_experiment.Entry_ID                            # X
-     _General_relaxation_experiment.General_relaxation_list_ID          # X
+     _Auto_relaxation_experiment.Experiment_ID                    # SC
+     _Auto_relaxation_experiment.Experiment_name                  # X
+     _Auto_relaxation_experiment.Sample_ID                        # MC
+     _Auto_relaxation_experiment.Sample_label                     # X
+     _Auto_relaxation_experiment.Sample_state                     # MC;      Y
+     _Auto_relaxation_experiment.Sf_ID                            # X
+     _Auto_relaxation_experiment.Entry_ID                         # X
+     _Auto_relaxation_experiment.Auto_relaxation_list_ID          # X
 
     @ @ @ @ @   @ @ @ 
 
   stop_
 
   loop_
-     _General_relaxation_software.Software_ID                         # SC
-     _General_relaxation_software.Software_label                      # X
-     _General_relaxation_software.Method_ID                           # SC
-     _General_relaxation_software.Method_label                        # X
-     _General_relaxation_software.Sf_ID                               # X
-     _General_relaxation_software.Entry_ID                            # X
-     _General_relaxation_software.General_relaxation_list_ID          # X
+     _Auto_relaxation_software.Software_ID                      # SC
+     _Auto_relaxation_software.Software_label                   # X
+     _Auto_relaxation_software.Method_ID                        # SC
+     _Auto_relaxation_software.Method_label                     # X
+     _Auto_relaxation_software.Sf_ID                            # X
+     _Auto_relaxation_software.Entry_ID                         # X
+     _Auto_relaxation_software.Auto_relaxation_list_ID          # X
 
     @ @ @ @ @   @ @ 
 
   stop_
 
   loop_
-     _General_relaxation.ID                                  # X
-     _General_relaxation.Assembly_atom_ID                    # X
-     _General_relaxation.Entity_assembly_ID                  # X
-     _General_relaxation.Entity_ID                           # X
-     _General_relaxation.Comp_index_ID                       # X
-     _General_relaxation.Seq_ID                              # X
-     _General_relaxation.Comp_ID                             # X
-     _General_relaxation.Atom_ID                             # X
-     _General_relaxation.Atom_type                           # X
-     _General_relaxation.Atom_isotope_number                 # 
-     _General_relaxation.General_relaxation_val              # X
-     _General_relaxation.General_relaxation_val_err          # X
-     _General_relaxation.Rex_val                             # X
-     _General_relaxation.Rex_err                             # X
-     _General_relaxation.Resonance_ID                        # 
-     _General_relaxation.Auth_entity_assembly_ID             # 
-     _General_relaxation.Auth_seq_ID                         # X
-     _General_relaxation.Auth_comp_ID                        # X
-     _General_relaxation.Auth_atom_ID                        # X
-     _General_relaxation.Sf_ID                               # X
-     _General_relaxation.Entry_ID                            # X
-     _General_relaxation.General_relaxation_list_ID          # X
+     _Auto_relaxation.ID                               # X
+     _Auto_relaxation.Assembly_ID                      # 
+     _Auto_relaxation.Assembly_atom_ID                 # X
+     _Auto_relaxation.Entity_assembly_ID               # X
+     _Auto_relaxation.Entity_ID                        # X
+     _Auto_relaxation.Comp_index_ID                    # X
+     _Auto_relaxation.Seq_ID                           # X
+     _Auto_relaxation.Comp_ID                          # X
+     _Auto_relaxation.Atom_ID                          # X
+     _Auto_relaxation.Atom_type                        # X
+     _Auto_relaxation.Atom_isotope_number              # 
+     _Auto_relaxation.Auto_relaxation_val              # X
+     _Auto_relaxation.Auto_relaxation_val_err          # X
+     _Auto_relaxation.Rex_val                          # X
+     _Auto_relaxation.Rex_val_err                      # X
+     _Auto_relaxation.Resonance_ID                     # 
+     _Auto_relaxation.Auth_entity_assembly_ID          # 
+     _Auto_relaxation.Auth_seq_ID                      # X
+     _Auto_relaxation.Auth_comp_ID                     # X
+     _Auto_relaxation.Auth_atom_ID                     # X
+     _Auto_relaxation.Sf_ID                            # X
+     _Auto_relaxation.Entry_ID                         # X
+     _Auto_relaxation.Auto_relaxation_list_ID          # X
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ 
 
   stop_
 
@@ -4810,8 +4763,8 @@ save_<D_H_fractionation_factors>
 
 save_
 
-save_<binding_study>
-  _Binding_value_list.Sf_category     binding_study
+save_<binding_data>
+  _Binding_value_list.Sf_category     binding_data
   _Binding_value_list.Sf_framecode                         # X
   _Binding_value_list.Entry_ID                             # X
   _Binding_value_list.Sf_ID                                # X
@@ -4892,29 +4845,33 @@ save_<binding_study>
 
 save_
 
-save_<binding_titration_list>
-  _Binding_titration_list.Sf_category     binding_titration_list
-  _Binding_titration_list.Sf_framecode              # X
-  _Binding_titration_list.Entry_ID                  # X
-  _Binding_titration_list.Sf_ID                     # X
-  _Binding_titration_list.ID                        # MC
-  _Binding_titration_list.Data_file_name            # 
-  _Binding_titration_list.Details                   # O
-  _Binding_titration_list.Text_data_format          # X
-  _Binding_titration_list.Text_data                 # X
+save_<binding_param_list>
+  _Binding_param_list.Sf_category     binding_param_list
+  _Binding_param_list.Sf_framecode                      # X
+  _Binding_param_list.Entry_ID                          # X
+  _Binding_param_list.Sf_ID                             # X
+  _Binding_param_list.ID                                # MC
+  _Binding_param_list.Binding_value_list_ID             # 
+  _Binding_param_list.Binding_value_list_label          # 
+  _Binding_param_list.Concentration_val_units           # 
+  _Binding_param_list.Observed_param                    # 
+  _Binding_param_list.Data_file_name                    # 
+  _Binding_param_list.Details                           # O
+  _Binding_param_list.Text_data_format                  # X
+  _Binding_param_list.Text_data                         # X
 
   loop_
-     _Binding_titration.ID                                 # X
-     _Binding_titration.Binding_result_ID                  # X
-     _Binding_titration.Concentration_val                  # X
-     _Binding_titration.Concentration_val_err              # X
-     _Binding_titration.Concentration_val_units            # 
-     _Binding_titration.Observed_param_val                 # X
-     _Binding_titration.Observed_param_val_err             # X
-     _Binding_titration.Observed_param                     # 
-     _Binding_titration.Sf_ID                              # X
-     _Binding_titration.Entry_ID                           # X
-     _Binding_titration.Binding_titration_list_ID          # X
+     _Binding_param.ID                               # X
+     _Binding_param.Binding_result_ID                # X
+     _Binding_param.Concentration_val                # X
+     _Binding_param.Concentration_val_err            # X
+     _Binding_param.Concentration_val_units          # 
+     _Binding_param.Observed_param_val               # X
+     _Binding_param.Observed_param_val_err           # X
+     _Binding_param.Observed_param                   # 
+     _Binding_param.Sf_ID                            # X
+     _Binding_param.Entry_ID                         # X
+     _Binding_param.Binding_param_list_ID            # X
 
     @ @ @ @ @   @ @ @ @ @   @ 
 
@@ -5387,8 +5344,8 @@ save_<conformer_family_coord_set>
      _Atom_site.Auth_seq_ID                            # X
      _Atom_site.Auth_comp_ID                           # X
      _Atom_site.Auth_atom_ID                           # X
-     _atom_site.Auth_alt_ID                            # 
-     _atom_site.Auth_atom_name                         # 
+     _Atom_site.Auth_alt_ID                            # 
+     _Atom_site.Auth_atom_name                         # 
      _Atom_site.Details                                # 
      _Atom_site.Sf_ID                                  # X
      _Atom_site.Entry_ID                               # X
@@ -6019,6 +5976,128 @@ save_<other_struct_features>
      _Other_struct_feature.Other_struct_feature_list_ID          # X
 
     @ @ @ @ @   @ @ @ @ 
+
+  stop_
+
+save_
+
+save_<tensor>
+  _Tensor_list.Sf_category     tensor
+  _Tensor_list.Sf_framecode                     # X
+  _Tensor_list.Entry_ID                         # X
+  _Tensor_list.Sf_ID                            # X
+  _Tensor_list.ID                               # MC
+  _Tensor_list.Tensor_type                      # 
+  _Tensor_list.Tensor_shape                     # 
+  _Tensor_list.Matrix_val_units                 # 
+  _Tensor_list.Isotropic_val_type               # 
+  _Tensor_list.Angle_units                      # 
+  _Tensor_list.Isotropic_val_formula            # 
+  _Tensor_list.Anisotropic_val_formula          # 
+  _Tensor_list.Rhombic_val_formula              # 
+  _Tensor_list.Euler_angle_type                 # 
+  _Tensor_list.Data_file_name                   # 
+  _Tensor_list.Details                          # O
+
+  loop_
+     _Tensor.ID                                      # X
+     _Tensor.Interatomic_distance_list_ID            # 
+     _Tensor.Interatomic_dist_set_ID                 # 
+     _Tensor.Calc_type_ID                            # X
+     _Tensor.Assembly_atom_ID                        # X
+     _Tensor.Entity_assembly_ID                      # X
+     _Tensor.Entity_ID                               # X
+     _Tensor.Comp_index_ID                           # X
+     _Tensor.Seq_ID                                  # X
+     _Tensor.Comp_ID                                 # X
+     _Tensor.Atom_ID                                 # X
+     _Tensor.Atom_type                               # X
+     _Tensor.Atom_isotope_number                     # 
+     _Tensor.Axial_sym_axis_polar_angle              # 
+     _Tensor.Axial_sym_axis_aximuthal_angle          # 
+     _Tensor.Isotropic_val                           # 
+     _Tensor.Anisotropic_val                         # 
+     _Tensor.Rhombic_val                             # 
+     _Tensor.Euler_angle_alpha                       # 
+     _Tensor.Euler_angle_beta                        # 
+     _Tensor.Euler_angle_gamma                       # 
+     _Tensor.Isotropic_comp_1_1_val                  # X
+     _Tensor.Isotropic_comp_2_2_val                  # X
+     _Tensor.Isotropic_comp_3_3_val                  # X
+     _Tensor.Anti_sym_comp_1_2_val                   # X
+     _Tensor.Anti_sym_comp_1_3_val                   # X
+     _Tensor.Anti_sym_comp_2_3_val                   # X
+     _Tensor.Sym_traceless_comp_1_1_val              # X
+     _Tensor.Sym_traceless_comp_1_2_val              # X
+     _Tensor.Sym_traceless_comp_1_3_val              # X
+     _Tensor.Sym_traceless_comp_2_2_val              # X
+     _Tensor.Sym_traceless_comp_2_3_val              # X
+     _Tensor.Reduceable_matrix_1_1_val               # X
+     _Tensor.Reduceable_matrix_1_2_val               # X
+     _Tensor.Reduceable_matrix_1_3_val               # X
+     _Tensor.Reduceable_matrix_2_1_val               # X
+     _Tensor.Reduceable_matrix_2_2_val               # X
+     _Tensor.Reduceable_matrix_2_3_val               # X
+     _Tensor.Reduceable_matrix_3_1_val               # X
+     _Tensor.Reduceable_matrix_3_2_val               # X
+     _Tensor.Reduceable_matrix_3_3_val               # X
+     _Tensor.Auth_entity_assembly_ID                 # 
+     _Tensor.Auth_seq_ID                             # X
+     _Tensor.Auth_comp_ID                            # X
+     _Tensor.Auth_atom_ID                            # X
+     _Tensor.Sf_ID                                   # X
+     _Tensor.Entry_ID                                # X
+     _Tensor.Tensor_list_ID                          # X
+
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ 
+
+  stop_
+
+save_
+
+save_<interatomic_distance>
+  _Interatomic_distance_list.Sf_category     interatomic_distance
+  _Interatomic_distance_list.Sf_framecode                 # 
+  _Interatomic_distance_list.Entry_ID                     # 
+  _Interatomic_distance_list.Sf_ID                        # 
+  _Interatomic_distance_list.ID                           # 
+  _Interatomic_distance_list.Details                      # 
+  _Interatomic_distance_list.Text_data_format             # 
+  _Interatomic_distance_list.Text_data                    # 
+  _Interatomic_dist.ID                                    # 
+  _Interatomic_dist.Set_ID                                # 
+  _Interatomic_dist.Assembly_atom_ID_1                    # 
+  _Interatomic_dist.Entity_assembly_ID_1                  # 
+  _Interatomic_dist.Entity_ID_1                           # 
+  _Interatomic_dist.Comp_index_ID_1                       # 
+  _Interatomic_dist.Seq_ID_1                              # 
+  _Interatomic_dist.Comp_ID_1                             # 
+  _Interatomic_dist.Atom_ID_1                             # 
+  _Interatomic_dist.Atom_type_1                           # 
+  _Interatomic_dist.Assembly_atom_ID_2                    # 
+  _Interatomic_dist.Entity_assembly_ID_2                  # 
+  _Interatomic_dist.Entity_ID_2                           # 
+  _Interatomic_dist.Comp_index_ID_2                       # 
+  _Interatomic_dist.Seq_ID_2                              # 
+  _Interatomic_dist.Comp_ID_2                             # 
+  _Interatomic_dist.Atom_ID_2                             # 
+  _Interatomic_dist.Atom_type_2                           # 
+  _Interatomic_dist.Val                                   # 
+  _Interatomic_dist.Auth_asym_ID_1                        # 
+  _Interatomic_dist.Auth_entity_assembly_ID_1             # 
+  _Interatomic_dist.Auth_seq_ID_1                         # 
+  _Interatomic_dist.Auth_comp_ID_1                        # 
+  _Interatomic_dist.Auth_atom_ID_1                        # 
+  _Interatomic_dist.Auth_asym_ID_2                        # 
+  _Interatomic_dist.Auth_entity_assembly_ID_2             # 
+  _Interatomic_dist.Auth_seq_ID_2                         # 
+  _Interatomic_dist.Auth_comp_ID_2                        # 
+  _Interatomic_dist.Auth_atom_ID_2                        # 
+  _Interatomic_dist.Sf_ID                                 # 
+  _Interatomic_dist.Entry_ID                              # 
+  _Interatomic_dist.Interatomic_distance_list_ID          # 
+
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ 
 
   stop_
 
