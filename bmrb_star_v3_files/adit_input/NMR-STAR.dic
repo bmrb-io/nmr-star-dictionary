@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-02-17
+#  version date -  2010-02-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.16
+    _dictionary.version         3.1.0.18
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.16         ?
+     3.1.0.18         ?
 ;
      ?
 ;
@@ -2421,7 +2421,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.16'
+   _item_default.value            '3.1.0.18'
    _item_type.code                'line'
 
    loop_
@@ -37263,6 +37263,7 @@ given in the entry.
   '_chem_shift_software.method_id'                       'chem_shift_software'           yes
   '_coupling_constant_software.method_id'                'coupling_constant_software'         yes
   '_spectral_peak_software.method_id'                    'spectral_peak_software'        yes
+  '_peak_char.derivation_method_id'                      'peak_char'                     yes
   '_isotope_effect_software.method_id'                   'isotope_effect_software'       yes
   '_mol_interaction_diff_software.method_id'             'mol_interaction_diff_software'      yes
   '_cs_anisotropy_software.method_id'                    'cs_anisotropy_software'        yes
@@ -37330,6 +37331,7 @@ given in the entry.
   '_chem_shift_software.method_id'                       '_method.id'
   '_coupling_constant_software.method_id'                '_method.id'
   '_spectral_peak_software.method_id'                    '_method.id'
+  '_peak_char.derivation_method_id'                      '_method.id'
   '_isotope_effect_software.method_id'                   '_method.id'
   '_mol_interaction_diff_software.method_id'             '_method.id'
   '_cs_anisotropy_software.method_id'                    '_method.id'
@@ -52194,7 +52196,7 @@ save__peak_char.derivation_method_id
 
    _item_description.description
 ;
-Derivation methods ID
+Pointer to '_Method.ID'
 ;
 
    _item.name                  '_peak_char.derivation_method_id'
@@ -113220,7 +113222,7 @@ Pointer to '_Method.ID'
 
 save_
 
-save__tertiary_struct_element_sel.method
+save__tertiary_struct_element_sel.method_label
 
    _item_description.description
 ;
@@ -113228,7 +113230,7 @@ Name of the method used to select the chemical components of the system
 that make up the tertiary structural element.
 ;
 
-   _item.name                  '_tertiary_struct_element_sel.method'
+   _item.name                  '_tertiary_struct_element_sel.method_label'
    _item.category_id              'tertiary_struct_element_sel'
    _item.mandatory_code            no
 
