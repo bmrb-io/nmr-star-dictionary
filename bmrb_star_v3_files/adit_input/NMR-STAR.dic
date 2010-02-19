@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.18
+    _dictionary.version         3.1.0.19
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.18         ?
+     3.1.0.19         ?
 ;
      ?
 ;
@@ -671,12 +671,7 @@ save_item_types
 
               framecode   char
               '[.;:"&<>(){}'`~!$%A-Za-z0-9*|+-][_.;:"&<>(){}'`~!$%A-Za-z0-9*|+-]*' 
-;             A value that begins with the character '$' and points to a saveframe.
-;
-
-              label       char
-              '\$[.;:"&<>(){}'`~!$%A-Za-z0-9*|+-][_.;:"&<>(){}'`~!$%A-Za-z0-9*|+-]*'
-;             A value that begins with the character '$' and points to a saveframe.
+;             A value that points to a saveframe.
 ;
 
 
@@ -2421,7 +2416,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.18'
+   _item_default.value            '3.1.0.19'
    _item_type.code                'line'
 
    loop_
@@ -3848,7 +3843,7 @@ as the value to the tag '_Entry_prerelease_seq.Seq_one_letter_code'.
    _item.category_id              'entry_prerelease_seq'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -8958,7 +8953,7 @@ although the assembly contains two monomers.
    _item.category_id              'entity_assembly'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -10687,7 +10682,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'deleted_atom'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -10783,7 +10778,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'deleted_atom'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -12462,7 +12457,7 @@ Pointer to a saveframe of the category chem_comp.
    _item.category_id              'pdbx_poly_seq_scheme'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -14507,7 +14502,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -14555,7 +14550,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -14747,7 +14742,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -14795,7 +14790,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -14987,7 +14982,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -15035,7 +15030,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -15365,7 +15360,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -15413,7 +15408,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -15605,7 +15600,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -15653,7 +15648,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -15845,7 +15840,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -15893,7 +15888,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -16085,7 +16080,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -16133,7 +16128,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'torsion_angle'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -16426,7 +16421,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'assembly_segment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -16498,7 +16493,7 @@ Pointer to a saveframe of the category 'chem_comp'
    _item.category_id              'assembly_segment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -16978,7 +16973,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'assembly_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -18373,7 +18368,7 @@ Pointer to a saveframe of the category entity.
    _item.category_id              'subsystem_component'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -19019,7 +19014,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'subsystem_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -20026,7 +20021,7 @@ Pointer to a saveframe of the category chem_comp.
    _item.category_id              'entity'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -21933,7 +21928,7 @@ Pointer to a saveframe of the category chem_comp.
    _item.category_id              'entity_comp_index'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -22790,7 +22785,7 @@ Pointer to a saveframe of the category chem_comp.
    _item.category_id              'entity_comp_index_alt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -23664,7 +23659,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'entity_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -23993,7 +23988,7 @@ portion of the deposition.
    _item.category_id              'entity_natural_src'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -24986,7 +24981,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'entity_natural_src'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -25148,7 +25143,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'natural_source_db'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -25655,7 +25650,7 @@ portion of the deposition.
    _item.category_id              'entity_experimental_src'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -26461,7 +26456,7 @@ how, for example, the vector was constructed and the host organism picked.
    _item.category_id              'entity_experimental_src'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -30102,7 +30097,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'characteristic'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -32614,7 +32609,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'chem_comp_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -33876,7 +33871,7 @@ Pointer to a saveframe of the category assembly.
    _item.category_id              'sample_component'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -33924,7 +33919,7 @@ Pointer to a saveframe of the category entity.
    _item.category_id              'sample_component'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -34399,7 +34394,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'sample_component_atom_isotope'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -34861,7 +34856,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'sample_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -35458,7 +35453,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'sample_condition_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -35795,7 +35790,7 @@ Pointer to a saveframe of the category sample.
    _item.mandatory_code            no
 
    _item_default.value            'sample_1'
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -35843,7 +35838,7 @@ Pointer to a saveframe of the category entity.
    _item.category_id              'entity_purity'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -36074,7 +36069,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'entity_purity_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -37070,7 +37065,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'software_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -37483,7 +37478,7 @@ Pointer to a saveframe of the category computer.
    _item.category_id              'method'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -37891,7 +37886,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'method_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -38379,7 +38374,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'mass_spectrometer_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -38915,7 +38910,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'mass_spectrometer_view'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -40514,7 +40509,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'nmr_spectrometer_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -41028,7 +41023,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'nmr_spectrometer_view'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -41683,7 +41678,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'nmr_spectrometer_probe_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -42208,7 +42203,7 @@ Pointer to a saveframe of category 'NMR_spectrometer_expt'.
    _item.category_id              'experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -42256,7 +42251,7 @@ Pointer to a saveframe of category 'sample''.
    _item.category_id              'experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -42388,7 +42383,7 @@ Pointer to a saveframe of category 'sample_conditions'.
    _item.category_id              'experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -42510,7 +42505,7 @@ Pointer to a saveframe of category 'NMR_spectrometer'.
    _item.category_id              'experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -42558,7 +42553,7 @@ Pointer to saveframe of category 'NMR_spectrometer_probe'
    _item.category_id              'experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -42606,7 +42601,7 @@ Pointer to a saveframe of category 'NMR_spectral_processing'.
    _item.category_id              'experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -43299,7 +43294,7 @@ Pointer to a saveframe of the category NMR_spectrometer.
    _item.category_id              'nmr_spec_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -43347,7 +43342,7 @@ Pointer to a saveframe of the category NMR_spectrometer_probe.
    _item.category_id              'nmr_spec_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -43419,7 +43414,7 @@ Pointer to a saveframe of the category software.
    _item.category_id              'nmr_spec_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -43467,7 +43462,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'nmr_spec_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -44611,7 +44606,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'nmr_experiment_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -44900,7 +44895,7 @@ Pointer to a saveframe of the category software.
    _item.category_id              'nmr_spectral_proc_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -44948,7 +44943,7 @@ Pointer to a saveframe of the category method.
    _item.category_id              'nmr_spectral_proc_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -45564,7 +45559,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'computer_citation'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -46396,7 +46391,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'chem_shift_ref'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -46494,7 +46489,7 @@ Pointer to a saveframe of the category citation.
    _item.category_id              'chem_shift_ref'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -46778,7 +46773,7 @@ Pointer to a saveframe of category sample_conditions.
    _item.category_id              'assigned_chem_shift_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -46826,7 +46821,7 @@ Pointer to a saveframe of category chem_shift_reference.
    _item.category_id              'assigned_chem_shift_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -47226,7 +47221,7 @@ Pointer to a saveframe of category sample.
    _item.category_id              'chem_shift_experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -47633,7 +47628,7 @@ Pointer to a saveframe of category software.
    _item.category_id              'chem_shift_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -47681,7 +47676,7 @@ Pointer to a saveframe of category method.
    _item.category_id              'chem_shift_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -48904,7 +48899,7 @@ Pointer to a saveframe of the category sample_conditions.
    _item.category_id              'coupling_constant_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -49162,7 +49157,7 @@ Pointer to a saveframe of the category sample.
    _item.category_id              'coupling_constant_experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -49331,7 +49326,7 @@ Pointer to a saveframe of the category software.
    _item.category_id              'coupling_constant_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -49379,7 +49374,7 @@ Pointer to a saveframe of the category method.
    _item.category_id              'coupling_constant_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -50676,7 +50671,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'spectral_peak_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -50725,7 +50720,7 @@ the NMR spectrum from which the peak list originated.
    _item.category_id              'spectral_peak_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -51274,7 +51269,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'spectral_peak_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -51322,7 +51317,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'spectral_peak_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -56024,7 +56019,7 @@ Pointer to a saveframe of the category 'sample_conditions'
    _item.category_id              'chem_shift_isotope_effect_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -56292,7 +56287,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'isotope_effect_experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -56461,7 +56456,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'isotope_effect_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -56509,7 +56504,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'isotope_effect_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -57960,7 +57955,7 @@ Pointer to a saveframe of the category 'sample_conditions'
    _item.category_id              'mol_interaction_chem_shift_diff'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -58009,7 +58004,7 @@ is the saveframe where the chemical shift referencing standards are described.
    _item.category_id              'mol_interaction_chem_shift_diff'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -58230,7 +58225,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'mol_interaction_diff_experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -58399,7 +58394,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'mol_interaction_diff_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -58447,7 +58442,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'mol_interaction_diff_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -59280,7 +59275,7 @@ Pointer to a saveframe of the category 'sample_conditions'
    _item.category_id              'chem_shift_anisotropy'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -59555,7 +59550,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'cs_anisotropy_experiment'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -59724,7 +59719,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'cs_anisotropy_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -59772,7 +59767,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'cs_anisotropy_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -60860,7 +60855,7 @@ in the 'sample conditions' section of the deposition.
    _item.category_id              'chem_shifts_calc_type'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -60909,7 +60904,7 @@ is the saveframe where the chemical shift referencing standards are described.
    _item.category_id              'chem_shifts_calc_type'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -61021,7 +61016,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'chem_shifts_calc_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -61069,7 +61064,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'chem_shifts_calc_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -61340,7 +61335,7 @@ Pointer to the saveframe where the type of calculation carried out is described.
    _item.category_id              'theoretical_chem_shift_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -61389,7 +61384,7 @@ to calculate the theoretical chemical shifts are located.
    _item.category_id              'theoretical_chem_shift_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -61438,7 +61433,7 @@ by the depositor to the set of tensors.
    _item.category_id              'theoretical_chem_shift_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -62413,7 +62408,7 @@ the data for determination of the residual dipolar coupling values.
    _item.category_id              'rdc_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -62855,7 +62850,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'rdc_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -63024,7 +63019,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'rdc_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -63072,7 +63067,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'rdc_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -64346,7 +64341,7 @@ the data for determination of the residual dipolar coupling values.
    _item.category_id              'dipolar_coupling_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -64638,7 +64633,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'dipolar_coupling_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -64807,7 +64802,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'dipolar_coupling_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -64855,7 +64850,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'dipolar_coupling_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -66178,7 +66173,7 @@ the data for determination of the spectral density values.
    _item.category_id              'spectral_density_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -66396,7 +66391,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'spectral_density_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -66565,7 +66560,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'spectral_density_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -66613,7 +66608,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'spectral_density_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -67584,7 +67579,7 @@ Pointer to a saveframe of the category 'sample_conditions'
    _item.category_id              'other_data_type_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -67802,7 +67797,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'other_data_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -67971,7 +67966,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'other_data_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -68019,7 +68014,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'other_data_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -68800,7 +68795,7 @@ the data for determination of the kinetic rates.
    _item.category_id              'kinetic_rate_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -69018,7 +69013,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'kinetic_rate_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -69186,7 +69181,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'kinetic_rate_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -69234,7 +69229,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'kinetic_rate_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -70145,7 +70140,7 @@ the data for determination of the H-exchange rates.
    _item.category_id              'h_exch_rate_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -70400,7 +70395,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'h_exch_rate_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -70569,7 +70564,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'h_exch_rate_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -70617,7 +70612,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'h_exch_rate_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -71449,7 +71444,7 @@ the data for determination of the H-exchange protection factors.
    _item.category_id              'h_exch_protection_factor_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -71499,7 +71494,7 @@ determine the reported protection factors.
    _item.category_id              'h_exch_protection_factor_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -71718,7 +71713,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'h_exch_protection_fact_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -71887,7 +71882,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'h_exch_protect_fact_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -71935,7 +71930,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'h_exch_protect_fact_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -72741,7 +72736,7 @@ NOE data reported.
    _item.category_id              'homonucl_noe_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -73035,7 +73030,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'homonucl_noe_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -73194,7 +73189,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'homonucl_noe_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -73242,7 +73237,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'homonucl_noe_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -74367,7 +74362,7 @@ Pointer to a saveframe of the category 'sample conditions'
    _item.category_id              'heteronucl_noe_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -74693,7 +74688,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'heteronucl_noe_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -74862,7 +74857,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'heteronucl_noe_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -74910,7 +74905,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'heteronucl_noe_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -76037,7 +76032,7 @@ the data for determination of the heteronuclear T1 relaxation values.
    _item.category_id              'heteronucl_t1_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -76350,7 +76345,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'heteronucl_t1_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -76519,7 +76514,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'heteronucl_t1_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -76567,7 +76562,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'heteronucl_t1_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -77349,7 +77344,7 @@ the data for determination of the heteronuclear T1rho relaxation values.
    _item.category_id              'heteronucl_t1rho_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -77762,7 +77757,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'heteronucl_t1rho_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -77931,7 +77926,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'heteronucl_t1rho_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -77979,7 +77974,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'heteronucl_t1rho_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -78809,7 +78804,7 @@ the data for determination of the heteronuclear T2 relaxation values.
    _item.category_id              'heteronucl_t2_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -79222,7 +79217,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'heteronucl_t2_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -79391,7 +79386,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'heteronucl_t2_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -79439,7 +79434,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'heteronucl_t2_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -80269,7 +80264,7 @@ the data for determination of the general relaxation values.
    _item.category_id              'auto_relaxation_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -80737,7 +80732,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'auto_relaxation_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -80906,7 +80901,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'auto_relaxation_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -80954,7 +80949,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'auto_relaxation_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -81807,7 +81802,7 @@ the data for determination of the dipole-dipole relaxation values.
    _item.category_id              'dipole_dipole_relax_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -82085,7 +82080,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'dipole_dipole_relax_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -82254,7 +82249,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'dipole_dipole_relax_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -82302,7 +82297,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'dipole_dipole_relax_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -83427,7 +83422,7 @@ the data for determination of the cross-correlation values.
    _item.category_id              'cross_correlation_dd_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -83706,7 +83701,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'cross_correlation_dd_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -83875,7 +83870,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'cross_correlation_dd_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -83923,7 +83918,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'cross_correlation_dd_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -85739,7 +85734,7 @@ the data for determination of the cross-correlation values.
    _item.category_id              'cross_correlation_d_csa_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -86017,7 +86012,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'cross_correlation_d_csa_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -86186,7 +86181,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'cross_correlation_d_csa_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -86234,7 +86229,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'cross_correlation_d_csa_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -88050,7 +88045,7 @@ the data for determination of the order parameters.
    _item.category_id              'order_parameter_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -88341,7 +88336,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'order_parameter_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -88510,7 +88505,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'order_parameter_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -88558,7 +88553,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'order_parameter_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -89778,7 +89773,7 @@ the pH titration data.
    _item.category_id              'ph_titration_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -90032,7 +90027,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'ph_titration_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -90201,7 +90196,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'ph_titration_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -90249,7 +90244,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'ph_titration_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -91505,7 +91500,7 @@ reported pKa values are provided.
    _item.category_id              'ph_param_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -92099,7 +92094,7 @@ the data for determination of the D/H fractionation factors.
    _item.category_id              'd_h_fractionation_factor_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -92318,7 +92313,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'd_h_fract_factor_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -92487,7 +92482,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'd_h_fract_factor_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -92535,7 +92530,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'd_h_fract_factor_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -93295,7 +93290,7 @@ the binding data.
    _item.category_id              'binding_value_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -93513,7 +93508,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'binding_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -93681,7 +93676,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'binding_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -93729,7 +93724,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'binding_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -94594,7 +94589,7 @@ save__binding_partners.entity_label
    _item.category_id              'binding_partners'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -94865,7 +94860,7 @@ that were calculated from the measured data values provided in this save frame.
    _item.category_id              'binding_param_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -95545,7 +95540,7 @@ Pointer to a saveframe of the category 'sample_conditions'
    _item.category_id              'deduced_secd_struct_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -95765,7 +95760,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'deduced_secd_struct_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -95934,7 +95929,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'deduced_secd_struct_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -95982,7 +95977,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'deduced_secd_struct_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -96412,7 +96407,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'deduced_secd_struct_exptl'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -97244,7 +97239,7 @@ Pointer to a saveframe of the category 'sample_conditions'
    _item.category_id              'deduced_h_bond_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -97438,7 +97433,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'deduced_h_bond_experiment'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -97607,7 +97602,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'deduced_h_bond_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -97655,7 +97650,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'deduced_h_bond_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -99030,7 +99025,7 @@ Pointer to a saveframe of the category conformer_family_coord_set.
    _item.category_id              'conformer_stat_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -99078,7 +99073,7 @@ Pointer to saveframe of category 'representative_conformer'
    _item.category_id              'conformer_stat_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -101598,7 +101593,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'conf_stats_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -101646,7 +101641,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'conf_stats_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -101999,7 +101994,7 @@ for selection.
    _item.category_id              'conformer_family_coord_set'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -102230,7 +102225,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'conformer_family_refinement'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -102365,7 +102360,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'conformer_family_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -102413,7 +102408,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'conformer_family_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -102741,7 +102736,7 @@ Pointer to a saveframe of the category 'sample'
    _item.category_id              'conformer_family_coord_set_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -102936,7 +102931,7 @@ Pointer to a saveframe that contains structural constraint values.
    _item.category_id              'conf_family_coord_set_constr_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -103340,7 +103335,7 @@ The name assigned to the molecular entity where the defined segment is located.
    _item.category_id              'local_structure_quality'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -105399,7 +105394,7 @@ Pointer to a saveframe of the type conformer_family_coord_set.
    _item.category_id              'representative_conformer'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -105633,7 +105628,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'rep_conf_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -105681,7 +105676,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'rep_conf_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -111186,7 +111181,7 @@ Pointer to a saveframe that contains structural constraint values.
    _item.category_id              'constraint_stats_constr_list'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -111401,7 +111396,7 @@ A pointer to a saveframe of category software.
    _item.category_id              'constraint_file'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -112001,7 +111996,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'force_constant_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -112049,7 +112044,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'force_constant_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -113234,7 +113229,7 @@ that make up the tertiary structural element.
    _item.category_id              'tertiary_struct_element_sel'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -113493,7 +113488,7 @@ Pointer to a saveframe of the category 'entity'
    _item.category_id              'tertiary_struct'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -114014,7 +114009,7 @@ Pointer to a saveframe of the category 'representative_conformer'
    _item.category_id              'secondary_struct_list'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -114101,7 +114096,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'secondary_struct_sel'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -114261,7 +114256,7 @@ Pointer to a saveframe of the category 'conformer_family'
    _item.category_id              'secondary_struct'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -120618,7 +120613,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'gen_dist_constraint_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -120666,7 +120661,7 @@ Pointer to a saveframe of the category 'sample'.
    _item.category_id              'gen_dist_constraint_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -120835,7 +120830,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'gen_dist_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -120883,7 +120878,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'gen_dist_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -124074,7 +124069,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'distance_constraint_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -124122,7 +124117,7 @@ Sample(s) used in deriving the data
    _item.category_id              'distance_constraint_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -124291,7 +124286,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'distance_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -124339,7 +124334,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'distance_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -126901,7 +126896,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'floating_chirality_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -126949,7 +126944,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'floating_chirality_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -128273,7 +128268,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'torsion_angle_constraints_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -128321,7 +128316,7 @@ Sample(s) used in deriving the data
    _item.category_id              'torsion_angle_constraints_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -128490,7 +128485,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'torsion_angle_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -128538,7 +128533,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'torsion_angle_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -128697,7 +128692,7 @@ Pointer to a saveframe of the category 'citation'
    _item.category_id              'karplus_equation'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -132784,7 +132779,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'rdc_constraint_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -132832,7 +132827,7 @@ Sample(s) used in deriving the data
    _item.category_id              'rdc_constraint_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -133001,7 +132996,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'rdc_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -133049,7 +133044,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'rdc_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -135884,7 +135879,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'j_three_bond_constraint_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -135932,7 +135927,7 @@ Sample(s) used in deriving the data
    _item.category_id              'j_three_bond_constraint_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -136101,7 +136096,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'j_three_bond_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -136149,7 +136144,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'j_three_bond_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -138292,7 +138287,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'ca_cb_constraint_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -138340,7 +138335,7 @@ Sample(s) used in deriving the data
    _item.category_id              'ca_cb_constraint_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -138509,7 +138504,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'ca_cb_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -138557,7 +138552,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'ca_cb_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -141045,7 +141040,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'h_chem_shift_constraint_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -141093,7 +141088,7 @@ Sample(s) used in deriving the data
    _item.category_id              'h_chem_shift_constraint_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -141262,7 +141257,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'h_chem_shift_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -141310,7 +141305,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'h_chem_shift_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -142472,7 +142467,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'other_constraint_expt'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -142520,7 +142515,7 @@ Sample(s) used in deriving the data
    _item.category_id              'other_constraint_expt'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -142689,7 +142684,7 @@ Pointer to a saveframe of the category 'software'
    _item.category_id              'other_constraint_software'
    _item.mandatory_code            yes
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
@@ -142737,7 +142732,7 @@ Pointer to a saveframe of the category 'method'
    _item.category_id              'other_constraint_software'
    _item.mandatory_code            no
 
-   _item_type.code                'label'
+   _item_type.code                'framecode'
 
    loop_
      _item_examples.case
