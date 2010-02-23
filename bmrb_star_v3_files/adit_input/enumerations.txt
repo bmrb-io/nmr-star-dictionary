@@ -9,7 +9,7 @@
      
 data_NMR-STAR_tag_enumerations
 
-    _Revision_date      2010-02-01
+    _Revision_date      2010-02-17
 
 
 
@@ -2336,6 +2336,7 @@ save__Data_set.Type
    H_exch_protection_factors            .
    pKa_value_data_set                   .
    pH_NMR_param_list                    .
+   binding_constants                    .
    D_H_fractionation_factors            .
    molecular_axis_determinations        .
    deduced_secd_struct_features         .
@@ -2396,6 +2397,7 @@ save__Datum.Type
      'H exchange protection factors'            .
      'pKa values'                               .
      'pH NMR parameter values'                  .
+     'binding constants'                        .
      'D/H fractionation factors'                .
      'bond orientation values'                  .
      'deduced secondary structure values'       .
@@ -3767,7 +3769,20 @@ save__Entry_interview.Assigned_chem_shifts
                                              
    stop_
 
-save_                                        
+save_ 
+
+save__Entry_interview.Binding_constants                                       
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
 
 save__Entry_interview.Chem_shift_anisotropy
 
