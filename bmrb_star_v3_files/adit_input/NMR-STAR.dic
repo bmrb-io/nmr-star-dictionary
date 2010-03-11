@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-03-05
+#  version date -  2010-03-11
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.22
+    _dictionary.version         3.1.0.23
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.22         ?
+     3.1.0.23         ?
 ;
      ?
 ;
@@ -1768,10 +1768,10 @@ BMRB accession number for this entry
   '_other_data_experiment.entry_id'                      'other_data_experiment'         yes
   '_other_data_software.entry_id'                        'other_data_software'           yes
   '_other_data.entry_id'                                 'other_data'                    yes
-  '_kinetic_rate_list.entry_id'                          'kinetic_rate_list'             yes
-  '_kinetic_rate_experiment.entry_id'                    'kinetic_rate_experiment'       yes
-  '_kinetic_rate_software.entry_id'                      'kinetic_rate_software'         yes
-  '_kinetic_rate.entry_id'                               'kinetic_rate'                  yes
+  '_chemical_rate_list.entry_id'                         'chemical_rate_list'            yes
+  '_chemical_rate_experiment.entry_id'                   'chemical_rate_experiment'      yes
+  '_chemical_rate_software.entry_id'                     'chemical_rate_software'        yes
+  '_chemical_rate.entry_id'                              'chemical_rate'                 yes
   '_h_exch_rate_list.entry_id'                           'h_exch_rate_list'              yes
   '_h_exch_rate_experiment.entry_id'                     'h_exch_rate_experiment'        yes
   '_h_exch_rate_software.entry_id'                       'h_exch_rate_software'          yes
@@ -2023,10 +2023,10 @@ BMRB accession number for this entry
   '_other_data_experiment.entry_id'                      '_entry.id'
   '_other_data_software.entry_id'                        '_entry.id'
   '_other_data.entry_id'                                 '_entry.id'
-  '_kinetic_rate_list.entry_id'                          '_entry.id'
-  '_kinetic_rate_experiment.entry_id'                    '_entry.id'
-  '_kinetic_rate_software.entry_id'                      '_entry.id'
-  '_kinetic_rate.entry_id'                               '_entry.id'
+  '_chemical_rate_list.entry_id'                         '_entry.id'
+  '_chemical_rate_experiment.entry_id'                   '_entry.id'
+  '_chemical_rate_software.entry_id'                     '_entry.id'
+  '_chemical_rate.entry_id'                              '_entry.id'
   '_h_exch_rate_list.entry_id'                           '_entry.id'
   '_h_exch_rate_experiment.entry_id'                     '_entry.id'
   '_h_exch_rate_software.entry_id'                       '_entry.id'
@@ -2257,7 +2257,7 @@ or an updated version.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            'new'
+   _item_default.value            'original'
    _item_type.code                'line'
 
    loop_
@@ -2416,7 +2416,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.22'
+   _item_default.value            '3.1.0.23'
    _item_type.code                'line'
 
    loop_
@@ -7930,7 +7930,7 @@ saveframe.
   '_assembly_citation.assembly_id'                       'assembly_citation'             yes
   '_author_annotation.assembly_id'                       'author_annotation'             yes
   '_sample_component.assembly_id'                        'sample_component'              yes
-  '_kinetic_rate.assembly_id'                            'kinetic_rate'                  yes
+  '_chemical_rate.assembly_id'                           'chemical_rate'                 yes
   '_auto_relaxation.assembly_id'                         'auto_relaxation'               yes
   '_binding_result.assembly_id'                          'binding_result'                yes
   '_binding_partners.assembly_id'                        'binding_partners'              yes
@@ -7965,7 +7965,7 @@ saveframe.
   '_assembly_citation.assembly_id'                       '_assembly.id'
   '_author_annotation.assembly_id'                       '_assembly.id'
   '_sample_component.assembly_id'                        '_assembly.id'
-  '_kinetic_rate.assembly_id'                            '_assembly.id'
+  '_chemical_rate.assembly_id'                           '_assembly.id'
   '_auto_relaxation.assembly_id'                         '_assembly.id'
   '_binding_result.assembly_id'                          '_assembly.id'
   '_binding_partners.assembly_id'                        '_assembly.id'
@@ -8680,7 +8680,7 @@ Unique identifier for each component in the entity assembly.
   '_dipolar_coupling.entity_assembly_id_2'               'dipolar_coupling'              yes
   '_spectral_density.entity_assembly_id'                 'spectral_density'              yes
   '_other_data.entity_assembly_id'                       'other_data'                    yes
-  '_kinetic_rate.entity_assembly_id'                     'kinetic_rate'                  yes
+  '_chemical_rate.entity_assembly_id'                    'chemical_rate'                 yes
   '_h_exch_rate.entity_assembly_id'                      'h_exch_rate'                   yes
   '_h_exch_protection_factor.entity_assembly_id'         'h_exch_protection_factor'      yes
   '_homonucl_noe.entity_assembly_id_1'                   'homonucl_noe'                  yes
@@ -8793,7 +8793,7 @@ Unique identifier for each component in the entity assembly.
   '_dipolar_coupling.entity_assembly_id_2'               '_entity_assembly.id'
   '_spectral_density.entity_assembly_id'                 '_entity_assembly.id'
   '_other_data.entity_assembly_id'                       '_entity_assembly.id'
-  '_kinetic_rate.entity_assembly_id'                     '_entity_assembly.id'
+  '_chemical_rate.entity_assembly_id'                    '_entity_assembly.id'
   '_h_exch_rate.entity_assembly_id'                      '_entity_assembly.id'
   '_h_exch_protection_factor.entity_assembly_id'         '_entity_assembly.id'
   '_homonucl_noe.entity_assembly_id_1'                   '_entity_assembly.id'
@@ -13581,7 +13581,7 @@ assembly.
   '_dipolar_coupling.assembly_atom_id_2'                 'dipolar_coupling'              yes
   '_spectral_density.assembly_atom_id'                   'spectral_density'              yes
   '_other_data.assembly_atom_id'                         'other_data'                    yes
-  '_kinetic_rate.assembly_atom_id'                       'kinetic_rate'                  yes
+  '_chemical_rate.assembly_atom_id'                      'chemical_rate'                 yes
   '_h_exch_rate.assembly_atom_id'                        'h_exch_rate'                   yes
   '_h_exch_protection_factor.assembly_atom_id'           'h_exch_protection_factor'      yes
   '_homonucl_noe.assembly_atom_id_1'                     'homonucl_noe'                  yes
@@ -13680,7 +13680,7 @@ assembly.
   '_dipolar_coupling.assembly_atom_id_2'                 '_atom.assembly_atom_id'
   '_spectral_density.assembly_atom_id'                   '_atom.assembly_atom_id'
   '_other_data.assembly_atom_id'                         '_atom.assembly_atom_id'
-  '_kinetic_rate.assembly_atom_id'                       '_atom.assembly_atom_id'
+  '_chemical_rate.assembly_atom_id'                      '_atom.assembly_atom_id'
   '_h_exch_rate.assembly_atom_id'                        '_atom.assembly_atom_id'
   '_h_exch_protection_factor.assembly_atom_id'           '_atom.assembly_atom_id'
   '_homonucl_noe.assembly_atom_id_1'                     '_atom.assembly_atom_id'
@@ -19261,7 +19261,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_dipolar_coupling.entity_id_2'                        'dipolar_coupling'              yes
   '_spectral_density.entity_id'                          'spectral_density'              yes
   '_other_data.entity_id'                                'other_data'                    yes
-  '_kinetic_rate.entity_id'                              'kinetic_rate'                  yes
+  '_chemical_rate.entity_id'                             'chemical_rate'                 yes
   '_h_exch_rate.entity_id'                               'h_exch_rate'                   yes
   '_h_exch_protection_factor.entity_id'                  'h_exch_protection_factor'      yes
   '_homonucl_noe.entity_id_1'                            'homonucl_noe'                  yes
@@ -19396,7 +19396,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_dipolar_coupling.entity_id_2'                        '_entity.id'
   '_spectral_density.entity_id'                          '_entity.id'
   '_other_data.entity_id'                                '_entity.id'
-  '_kinetic_rate.entity_id'                              '_entity.id'
+  '_chemical_rate.entity_id'                             '_entity.id'
   '_h_exch_rate.entity_id'                               '_entity.id'
   '_h_exch_protection_factor.entity_id'                  '_entity.id'
   '_homonucl_noe.entity_id_1'                            '_entity.id'
@@ -21663,7 +21663,7 @@ Unique ID for the compound in the entity
   '_dipolar_coupling.comp_index_id_2'                    'dipolar_coupling'              yes
   '_spectral_density.comp_index_id'                      'spectral_density'              yes
   '_other_data.comp_index_id'                            'other_data'                    yes
-  '_kinetic_rate.comp_index_id'                          'kinetic_rate'                  yes
+  '_chemical_rate.comp_index_id'                         'chemical_rate'                 yes
   '_h_exch_rate.comp_index_id'                           'h_exch_rate'                   yes
   '_h_exch_protection_factor.comp_index_id'              'h_exch_protection_factor'      yes
   '_homonucl_noe.comp_index_id_1'                        'homonucl_noe'                  yes
@@ -21785,7 +21785,7 @@ Unique ID for the compound in the entity
   '_dipolar_coupling.comp_index_id_2'                    '_entity_comp_index.id'
   '_spectral_density.comp_index_id'                      '_entity_comp_index.id'
   '_other_data.comp_index_id'                            '_entity_comp_index.id'
-  '_kinetic_rate.comp_index_id'                          '_entity_comp_index.id'
+  '_chemical_rate.comp_index_id'                         '_entity_comp_index.id'
   '_h_exch_rate.comp_index_id'                           '_entity_comp_index.id'
   '_h_exch_protection_factor.comp_index_id'              '_entity_comp_index.id'
   '_homonucl_noe.comp_index_id_1'                        '_entity_comp_index.id'
@@ -22145,7 +22145,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_dipolar_coupling.seq_id_2'                           'dipolar_coupling'              yes
   '_spectral_density.seq_id'                             'spectral_density'              yes
   '_other_data.seq_id'                                   'other_data'                    yes
-  '_kinetic_rate.seq_id'                                 'kinetic_rate'                  yes
+  '_chemical_rate.seq_id'                                'chemical_rate'                 yes
   '_h_exch_rate.seq_id'                                  'h_exch_rate'                   yes
   '_h_exch_protection_factor.seq_id'                     'h_exch_protection_factor'      yes
   '_homonucl_noe.seq_id_1'                               'homonucl_noe'                  yes
@@ -22255,7 +22255,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_dipolar_coupling.seq_id_2'                           '_entity_poly_seq.num'
   '_spectral_density.seq_id'                             '_entity_poly_seq.num'
   '_other_data.seq_id'                                   '_entity_poly_seq.num'
-  '_kinetic_rate.seq_id'                                 '_entity_poly_seq.num'
+  '_chemical_rate.seq_id'                                '_entity_poly_seq.num'
   '_h_exch_rate.seq_id'                                  '_entity_poly_seq.num'
   '_h_exch_protection_factor.seq_id'                     '_entity_poly_seq.num'
   '_homonucl_noe.seq_id_1'                               '_entity_poly_seq.num'
@@ -26703,7 +26703,7 @@ components in the entry.
   '_dipolar_coupling.comp_id_2'                          'dipolar_coupling'              yes
   '_spectral_density.comp_id'                            'spectral_density'              yes
   '_other_data.comp_id'                                  'other_data'                    yes
-  '_kinetic_rate.comp_id'                                'kinetic_rate'                  yes
+  '_chemical_rate.comp_id'                               'chemical_rate'                 yes
   '_h_exch_rate.comp_id'                                 'h_exch_rate'                   yes
   '_h_exch_protection_factor.comp_id'                    'h_exch_protection_factor'      yes
   '_homonucl_noe.comp_id_1'                              'homonucl_noe'                  yes
@@ -26834,7 +26834,7 @@ components in the entry.
   '_dipolar_coupling.comp_id_2'                          '_chem_comp.id'
   '_spectral_density.comp_id'                            '_chem_comp.id'
   '_other_data.comp_id'                                  '_chem_comp.id'
-  '_kinetic_rate.comp_id'                                '_chem_comp.id'
+  '_chemical_rate.comp_id'                               '_chem_comp.id'
   '_h_exch_rate.comp_id'                                 '_chem_comp.id'
   '_h_exch_protection_factor.comp_id'                    '_chem_comp.id'
   '_homonucl_noe.comp_id_1'                              '_chem_comp.id'
@@ -30259,7 +30259,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_dipolar_coupling.atom_id_2'                          'dipolar_coupling'              yes
   '_spectral_density.atom_id'                            'spectral_density'              yes
   '_other_data.atom_id'                                  'other_data'                    yes
-  '_kinetic_rate.atom_id'                                'kinetic_rate'                  yes
+  '_chemical_rate.atom_id'                               'chemical_rate'                 yes
   '_h_exch_rate.atom_id'                                 'h_exch_rate'                   yes
   '_h_exch_protection_factor.atom_id'                    'h_exch_protection_factor'      yes
   '_homonucl_noe.atom_id_1'                              'homonucl_noe'                  yes
@@ -30374,7 +30374,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_dipolar_coupling.atom_id_2'                          '_chem_comp_atom.atom_id'
   '_spectral_density.atom_id'                            '_chem_comp_atom.atom_id'
   '_other_data.atom_id'                                  '_chem_comp_atom.atom_id'
-  '_kinetic_rate.atom_id'                                '_chem_comp_atom.atom_id'
+  '_chemical_rate.atom_id'                               '_chem_comp_atom.atom_id'
   '_h_exch_rate.atom_id'                                 '_chem_comp_atom.atom_id'
   '_h_exch_protection_factor.atom_id'                    '_chem_comp_atom.atom_id'
   '_homonucl_noe.atom_id_1'                              '_chem_comp_atom.atom_id'
@@ -32816,7 +32816,7 @@ listed in the entry.
   '_dipolar_coupling_experiment.sample_id'               'dipolar_coupling_experiment'        yes
   '_spectral_density_experiment.sample_id'               'spectral_density_experiment'        yes
   '_other_data_experiment.sample_id'                     'other_data_experiment'         yes
-  '_kinetic_rate_experiment.sample_id'                   'kinetic_rate_experiment'       yes
+  '_chemical_rate_experiment.sample_id'                  'chemical_rate_experiment'      yes
   '_h_exch_rate_experiment.sample_id'                    'h_exch_rate_experiment'        yes
   '_h_exch_protection_fact_experiment.sample_id'         'h_exch_protection_fact_experiment'  yes
   '_homonucl_noe_experiment.sample_id'                   'homonucl_noe_experiment'       yes
@@ -32867,7 +32867,7 @@ listed in the entry.
   '_dipolar_coupling_experiment.sample_id'               '_sample.id'
   '_spectral_density_experiment.sample_id'               '_sample.id'
   '_other_data_experiment.sample_id'                     '_sample.id'
-  '_kinetic_rate_experiment.sample_id'                   '_sample.id'
+  '_chemical_rate_experiment.sample_id'                  '_sample.id'
   '_h_exch_rate_experiment.sample_id'                    '_sample.id'
   '_h_exch_protection_fact_experiment.sample_id'         '_sample.id'
   '_homonucl_noe_experiment.sample_id'                   '_sample.id'
@@ -35058,7 +35058,7 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_dipolar_coupling_list.sample_condition_list_id'                         'dipolar_coupling_list'         yes
   '_spectral_density_list.sample_condition_list_id'                         'spectral_density_list'         yes
   '_other_data_type_list.sample_condition_list_id'                          'other_data_type_list'          yes
-  '_kinetic_rate_list.sample_condition_list_id'          'kinetic_rate_list'             yes
+  '_chemical_rate_list.sample_condition_list_id'         'chemical_rate_list'            yes
   '_h_exch_rate_list.sample_condition_list_id'           'h_exch_rate_list'              yes
   '_h_exch_protection_factor_list.sample_condition_list_id'                 'h_exch_protection_factor_list'      yes
   '_homonucl_noe_list.sample_condition_list_id'          'homonucl_noe_list'             yes
@@ -35098,7 +35098,7 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_dipolar_coupling_list.sample_condition_list_id'                         '_sample_condition_list.id'
   '_spectral_density_list.sample_condition_list_id'                         '_sample_condition_list.id'
   '_other_data_type_list.sample_condition_list_id'                          '_sample_condition_list.id'
-  '_kinetic_rate_list.sample_condition_list_id'          '_sample_condition_list.id'
+  '_chemical_rate_list.sample_condition_list_id'         '_sample_condition_list.id'
   '_h_exch_rate_list.sample_condition_list_id'           '_sample_condition_list.id'
   '_h_exch_protection_factor_list.sample_condition_list_id'                 '_sample_condition_list.id'
   '_homonucl_noe_list.sample_condition_list_id'          '_sample_condition_list.id'
@@ -36361,7 +36361,7 @@ in the entry.
   '_dipolar_coupling_software.software_id'               'dipolar_coupling_software'          yes
   '_spectral_density_software.software_id'               'spectral_density_software'          yes
   '_other_data_software.software_id'                     'other_data_software'           yes
-  '_kinetic_rate_software.software_id'                   'kinetic_rate_software'         yes
+  '_chemical_rate_software.software_id'                  'chemical_rate_software'        yes
   '_h_exch_rate_software.software_id'                    'h_exch_rate_software'          yes
   '_h_exch_protect_fact_software.software_id'            'h_exch_protect_fact_software'       yes
   '_homonucl_noe_software.software_id'                   'homonucl_noe_software'         yes
@@ -36419,7 +36419,7 @@ in the entry.
   '_dipolar_coupling_software.software_id'               '_software.id'
   '_spectral_density_software.software_id'               '_software.id'
   '_other_data_software.software_id'                     '_software.id'
-  '_kinetic_rate_software.software_id'                   '_software.id'
+  '_chemical_rate_software.software_id'                  '_software.id'
   '_h_exch_rate_software.software_id'                    '_software.id'
   '_h_exch_protect_fact_software.software_id'            '_software.id'
   '_homonucl_noe_software.software_id'                   '_software.id'
@@ -37269,7 +37269,7 @@ given in the entry.
   '_dipolar_coupling_software.method_id'                 'dipolar_coupling_software'          yes
   '_spectral_density_software.method_id'                 'spectral_density_software'          yes
   '_other_data_software.method_id'                       'other_data_software'           yes
-  '_kinetic_rate_software.method_id'                     'kinetic_rate_software'         yes
+  '_chemical_rate_software.method_id'                    'chemical_rate_software'        yes
   '_h_exch_rate_software.method_id'                      'h_exch_rate_software'          yes
   '_h_exch_protect_fact_software.method_id'              'h_exch_protect_fact_software'       yes
   '_homonucl_noe_software.method_id'                     'homonucl_noe_software'         yes
@@ -37337,7 +37337,7 @@ given in the entry.
   '_dipolar_coupling_software.method_id'                 '_method.id'
   '_spectral_density_software.method_id'                 '_method.id'
   '_other_data_software.method_id'                       '_method.id'
-  '_kinetic_rate_software.method_id'                     '_method.id'
+  '_chemical_rate_software.method_id'                    '_method.id'
   '_h_exch_rate_software.method_id'                      '_method.id'
   '_h_exch_protect_fact_software.method_id'              '_method.id'
   '_homonucl_noe_software.method_id'                     '_method.id'
@@ -41977,7 +41977,7 @@ Unique identifier for each experiment listed.
   '_dipolar_coupling_experiment.experiment_id'           'dipolar_coupling_experiment'        yes
   '_spectral_density_experiment.experiment_id'           'spectral_density_experiment'        yes
   '_other_data_experiment.experiment_id'                 'other_data_experiment'         yes
-  '_kinetic_rate_experiment.experiment_id'               'kinetic_rate_experiment'       yes
+  '_chemical_rate_experiment.experiment_id'              'chemical_rate_experiment'      yes
   '_h_exch_rate_experiment.experiment_id'                'h_exch_rate_experiment'        yes
   '_h_exch_protection_fact_experiment.experiment_id'                        'h_exch_protection_fact_experiment'  yes
   '_homonucl_noe_experiment.experiment_id'               'homonucl_noe_experiment'       yes
@@ -42029,7 +42029,7 @@ Unique identifier for each experiment listed.
   '_dipolar_coupling_experiment.experiment_id'           '_experiment.id'
   '_spectral_density_experiment.experiment_id'           '_experiment.id'
   '_other_data_experiment.experiment_id'                 '_experiment.id'
-  '_kinetic_rate_experiment.experiment_id'               '_experiment.id'
+  '_chemical_rate_experiment.experiment_id'              '_experiment.id'
   '_h_exch_rate_experiment.experiment_id'                '_experiment.id'
   '_h_exch_protection_fact_experiment.experiment_id'                        '_experiment.id'
   '_homonucl_noe_experiment.experiment_id'               '_experiment.id'
@@ -42086,9 +42086,95 @@ save__experiment.name
 Names for NMR experiments commonly found in the literature.
 ;
 
-   _item.name                  '_experiment.name'
-   _item.category_id              'experiment'
-   _item.mandatory_code            yes
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_experiment.name'                                     'experiment'                    yes
+  '_chem_shift_experiment.experiment_name'               'chem_shift_experiment'         yes
+  '_coupling_constant_experiment.experiment_name'                           'coupling_constant_experiment'       yes
+  '_spectral_peak_list.experiment_name'                  'spectral_peak_list'            yes
+  '_isotope_effect_experiment.experiment_name'           'isotope_effect_experiment'          yes
+  '_mol_interaction_diff_experiment.experiment_name'                        'mol_interaction_diff_experiment'    yes
+  '_cs_anisotropy_experiment.experiment_name'            'cs_anisotropy_experiment'      yes
+  '_rdc_experiment.experiment_name'                      'rdc_experiment'                yes
+  '_dipolar_coupling_experiment.experiment_name'         'dipolar_coupling_experiment'        yes
+  '_spectral_density_experiment.experiment_name'         'spectral_density_experiment'        yes
+  '_other_data_experiment.experiment_name'               'other_data_experiment'         yes
+  '_chemical_rate_experiment.experiment_name'            'chemical_rate_experiment'      yes
+  '_h_exch_rate_experiment.experiment_name'              'h_exch_rate_experiment'        yes
+  '_h_exch_protection_fact_experiment.experiment_name'                      'h_exch_protection_fact_experiment'  yes
+  '_homonucl_noe_experiment.experiment_name'             'homonucl_noe_experiment'       yes
+  '_heteronucl_noe_experiment.experiment_name'           'heteronucl_noe_experiment'          yes
+  '_heteronucl_t1_experiment.experiment_name'            'heteronucl_t1_experiment'      yes
+  '_heteronucl_t1rho_experiment.experiment_name'         'heteronucl_t1rho_experiment'        yes
+  '_heteronucl_t2_experiment.experiment_name'            'heteronucl_t2_experiment'      yes
+  '_auto_relaxation_experiment.experiment_name'          'auto_relaxation_experiment'         yes
+  '_dipole_dipole_relax_experiment.experiment_name'                         'dipole_dipole_relax_experiment'     yes
+  '_cross_correlation_dd_experiment.experiment_name'                        'cross_correlation_dd_experiment'    yes
+  '_cross_correlation_d_csa_experiment.experiment_name'                     'cross_correlation_d_csa_experiment' yes
+  '_order_parameter_experiment.experiment_name'          'order_parameter_experiment'         yes
+  '_ph_titration_experiment.experiment_name'             'ph_titration_experiment'       yes
+  '_d_h_fract_factor_experiment.experiment_name'         'd_h_fract_factor_experiment'        yes
+  '_binding_experiment.experiment_name'                  'binding_experiment'            yes
+  '_deduced_secd_struct_experiment.experiment_name'                         'deduced_secd_struct_experiment'     yes
+  '_deduced_h_bond_experiment.experiment_name'           'deduced_h_bond_experiment'          yes
+  '_conformer_family_coord_set_expt.experiment_name'                        'conformer_family_coord_set_expt'    yes
+  '_gen_dist_constraint_expt.experiment_name'            'gen_dist_constraint_expt'      yes
+  '_distance_constraint_expt.experiment_name'            'distance_constraint_expt'      yes
+  '_torsion_angle_constraints_expt.experiment_name'                         'torsion_angle_constraints_expt'     yes
+  '_rdc_constraint_expt.experiment_name'                 'rdc_constraint_expt'           yes
+  '_j_three_bond_constraint_expt.experiment_name'                           'j_three_bond_constraint_expt'       yes
+  '_ca_cb_constraint_expt.experiment_name'               'ca_cb_constraint_expt'         yes
+  '_h_chem_shift_constraint_expt.experiment_name'                           'h_chem_shift_constraint_expt'       yes
+  '_other_constraint_expt.experiment_name'               'other_constraint_expt'         yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_chem_shift_experiment.experiment_name'               '_experiment.name'
+  '_coupling_constant_experiment.experiment_name'                           '_experiment.name'
+  '_spectral_peak_list.experiment_name'                  '_experiment.name'
+  '_isotope_effect_experiment.experiment_name'           '_experiment.name'
+  '_mol_interaction_diff_experiment.experiment_name'                        '_experiment.name'
+  '_cs_anisotropy_experiment.experiment_name'            '_experiment.name'
+  '_rdc_experiment.experiment_name'                      '_experiment.name'
+  '_dipolar_coupling_experiment.experiment_name'         '_experiment.name'
+  '_spectral_density_experiment.experiment_name'         '_experiment.name'
+  '_other_data_experiment.experiment_name'               '_experiment.name'
+  '_chemical_rate_experiment.experiment_name'            '_experiment.name'
+  '_h_exch_rate_experiment.experiment_name'              '_experiment.name'
+  '_h_exch_protection_fact_experiment.experiment_name'                      '_experiment.name'
+  '_homonucl_noe_experiment.experiment_name'             '_experiment.name'
+  '_heteronucl_noe_experiment.experiment_name'           '_experiment.name'
+  '_heteronucl_t1_experiment.experiment_name'            '_experiment.name'
+  '_heteronucl_t1rho_experiment.experiment_name'         '_experiment.name'
+  '_heteronucl_t2_experiment.experiment_name'            '_experiment.name'
+  '_auto_relaxation_experiment.experiment_name'          '_experiment.name'
+  '_dipole_dipole_relax_experiment.experiment_name'                         '_experiment.name'
+  '_cross_correlation_dd_experiment.experiment_name'                        '_experiment.name'
+  '_cross_correlation_d_csa_experiment.experiment_name'                     '_experiment.name'
+  '_order_parameter_experiment.experiment_name'          '_experiment.name'
+  '_ph_titration_experiment.experiment_name'             '_experiment.name'
+  '_d_h_fract_factor_experiment.experiment_name'         '_experiment.name'
+  '_binding_experiment.experiment_name'                  '_experiment.name'
+  '_deduced_secd_struct_experiment.experiment_name'                         '_experiment.name'
+  '_deduced_h_bond_experiment.experiment_name'           '_experiment.name'
+  '_conformer_family_coord_set_expt.experiment_name'                        '_experiment.name'
+  '_gen_dist_constraint_expt.experiment_name'            '_experiment.name'
+  '_distance_constraint_expt.experiment_name'            '_experiment.name'
+  '_torsion_angle_constraints_expt.experiment_name'                         '_experiment.name'
+  '_rdc_constraint_expt.experiment_name'                 '_experiment.name'
+  '_j_three_bond_constraint_expt.experiment_name'                           '_experiment.name'
+  '_ca_cb_constraint_expt.experiment_name'               '_experiment.name'
+  '_h_chem_shift_constraint_expt.experiment_name'                           '_experiment.name'
+  '_other_constraint_expt.experiment_name'               '_experiment.name'
+
+  stop_
 
    _item_type.code                'line'
 
@@ -54459,7 +54545,7 @@ Unique identifier for the specified resonance.
   '_dipolar_coupling.resonance_id_2'                     'dipolar_coupling'              yes
   '_spectral_density.resonance_id'                       'spectral_density'              yes
   '_other_data.resonance_id'                             'other_data'                    yes
-  '_kinetic_rate.resonance_id'                           'kinetic_rate'                  yes
+  '_chemical_rate.resonance_id'                          'chemical_rate'                 yes
   '_h_exch_rate.resonance_id'                            'h_exch_rate'                   yes
   '_h_exch_protection_factor.resonance_id'               'h_exch_protection_factor'      yes
   '_homonucl_noe.resonance_id_1'                         'homonucl_noe'                  yes
@@ -54528,7 +54614,7 @@ Unique identifier for the specified resonance.
   '_dipolar_coupling.resonance_id_2'                     '_resonance.id'
   '_spectral_density.resonance_id'                       '_resonance.id'
   '_other_data.resonance_id'                             '_resonance.id'
-  '_kinetic_rate.resonance_id'                           '_resonance.id'
+  '_chemical_rate.resonance_id'                          '_resonance.id'
   '_h_exch_rate.resonance_id'                            '_resonance.id'
   '_h_exch_protection_factor.resonance_id'               '_resonance.id'
   '_homonucl_noe.resonance_id_1'                         '_resonance.id'
@@ -68413,18 +68499,18 @@ Pointer to '_Other_data_type_list.ID'
 
 save_
 
-save_kinetic_rate_list
+save_chemical_rate_list
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'kinetic_rate_list'
+   _category.id                   'chemical_rate_list'
 
    loop_
      _category_key.name
 
-     '_kinetic_rate_list.entry_id'
-     '_kinetic_rate_list.id'
+     '_chemical_rate_list.entry_id'
+     '_chemical_rate_list.id'
 
    stop_
 
@@ -68432,7 +68518,7 @@ save_kinetic_rate_list
      _category_group.id
 
      'inclusive_group'
-     'kinetic_rates'
+     'chemical_rates'
 
    stop_
 
@@ -68451,15 +68537,15 @@ save_kinetic_rate_list
 
 save_
 
-save__kinetic_rate_list.sf_category
+save__chemical_rate_list.sf_category
 
    _item_description.description
 ;
 Category definition for the information content of the saveframe
 ;
 
-   _item.name                  '_kinetic_rate_list.sf_category'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.sf_category'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -68475,7 +68561,7 @@ Category definition for the information content of the saveframe
 
 save_
 
-save__kinetic_rate_list.sf_framecode
+save__chemical_rate_list.sf_framecode
 
    _item_description.description
 ;
@@ -68483,8 +68569,8 @@ A label for the saveframe that describes in very brief terms the information
 contained in the saveframe.
 ;
 
-   _item.name                  '_kinetic_rate_list.sf_framecode'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.sf_framecode'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            yes
 
    _item_default.value            'kinetic_rates'
@@ -68501,15 +68587,15 @@ contained in the saveframe.
 
 save_
 
-save__kinetic_rate_list.entry_id
+save__chemical_rate_list.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                  '_kinetic_rate_list.entry_id'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.entry_id'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -68525,7 +68611,7 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__kinetic_rate_list.id
+save__chemical_rate_list.id
 
    _item_description.description
 ;
@@ -68537,10 +68623,10 @@ A unique identifier for the list of Kinetic rate data.
       _item.category_id
       _item.mandatory_code
 
-  '_kinetic_rate_list.id'                                'kinetic_rate_list'             yes
-  '_kinetic_rate_experiment.kinetic_rate_list_id'                           'kinetic_rate_experiment'       yes
-  '_kinetic_rate_software.kinetic_rate_list_id'          'kinetic_rate_software'         yes
-  '_kinetic_rate.kinetic_rate_list_id'                   'kinetic_rate'                  yes
+  '_chemical_rate_list.id'                               'chemical_rate_list'            yes
+  '_chemical_rate_experiment.chemical_rate_list_id'                         'chemical_rate_experiment'      yes
+  '_chemical_rate_software.chemical_rate_list_id'                           'chemical_rate_software'        yes
+  '_chemical_rate.chemical_rate_list_id'                 'chemical_rate'                 yes
 
   stop_
 
@@ -68548,9 +68634,9 @@ A unique identifier for the list of Kinetic rate data.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_kinetic_rate_experiment.kinetic_rate_list_id'                           '_kinetic_rate_list.id'
-  '_kinetic_rate_software.kinetic_rate_list_id'          '_kinetic_rate_list.id'
-  '_kinetic_rate.kinetic_rate_list_id'                   '_kinetic_rate_list.id'
+  '_chemical_rate_experiment.chemical_rate_list_id'                         '_chemical_rate_list.id'
+  '_chemical_rate_software.chemical_rate_list_id'                           '_chemical_rate_list.id'
+  '_chemical_rate.chemical_rate_list_id'                 '_chemical_rate_list.id'
 
   stop_
 
@@ -68567,7 +68653,7 @@ A unique identifier for the list of Kinetic rate data.
 
 save_
 
-save__kinetic_rate_list.data_file_name
+save__chemical_rate_list.data_file_name
 
    _item_description.description
 ;
@@ -68575,8 +68661,8 @@ The name of the file submitted with this depostion that contains the quantitativ
 data for this saveframe.
 ;
 
-   _item.name                  '_kinetic_rate_list.data_file_name'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.data_file_name'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            no
 
    _item_type.code                'line'
@@ -68592,15 +68678,15 @@ data for this saveframe.
 
 save_
 
-save__kinetic_rate_list.sample_condition_list_id
+save__chemical_rate_list.sample_condition_list_id
 
    _item_description.description
 ;
 Pointer to '_Sample_condition_list.ID'
 ;
 
-   _item.name                  '_kinetic_rate_list.sample_condition_list_id'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.sample_condition_list_id'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -68616,7 +68702,7 @@ Pointer to '_Sample_condition_list.ID'
 
 save_
 
-save__kinetic_rate_list.sample_condition_list_label
+save__chemical_rate_list.sample_condition_list_label
 
    _item_description.description
 ;
@@ -68624,8 +68710,8 @@ The label for the set of experimental sample conditions used to collect
 the data for determination of the kinetic rates.
 ;
 
-   _item.name                  '_kinetic_rate_list.sample_condition_list_label'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.sample_condition_list_label'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            yes
 
    _item_type.code                'framecode'
@@ -68641,15 +68727,15 @@ the data for determination of the kinetic rates.
 
 save_
 
-save__kinetic_rate_list.details
+save__chemical_rate_list.details
 
    _item_description.description
 ;
 Text describing the reported kinetic rates.
 ;
 
-   _item.name                  '_kinetic_rate_list.details'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.details'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            no
 
    _item_type.code                'text'
@@ -68665,16 +68751,16 @@ Text describing the reported kinetic rates.
 
 save_
 
-save__kinetic_rate_list.text_data_format
+save__chemical_rate_list.text_data_format
 
    _item_description.description
 ;
 The data format used to represent the kinetic data as ASCII text in the 
-text block that is the value to the '_Kinetic_rate_list.Text_data' tag.
+text block that is the value to the '_Chemical_rate_list.Text_data' tag.
 ;
 
-   _item.name                  '_kinetic_rate_list.text_data_format'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.text_data_format'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            no
 
    _item_type.code                'line'
@@ -68690,15 +68776,15 @@ text block that is the value to the '_Kinetic_rate_list.Text_data' tag.
 
 save_
 
-save__kinetic_rate_list.text_data
+save__chemical_rate_list.text_data
 
    _item_description.description
 ;
 A set of kinetic rate data formatted as ASCII text.
 ;
 
-   _item.name                  '_kinetic_rate_list.text_data'
-   _item.category_id              'kinetic_rate_list'
+   _item.name                  '_chemical_rate_list.text_data'
+   _item.category_id              'chemical_rate_list'
    _item.mandatory_code            no
 
    _item_type.code                'text'
@@ -68714,21 +68800,21 @@ A set of kinetic rate data formatted as ASCII text.
 
 save_
 
-save_kinetic_rate_experiment
+save_chemical_rate_experiment
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'kinetic_rate_experiment'
+   _category.id                   'chemical_rate_experiment'
 
    loop_
      _category_key.name
 
-     '_kinetic_rate_experiment.experiment_id'
-     '_kinetic_rate_experiment.sample_id'
-     '_kinetic_rate_experiment.sample_state'
-     '_kinetic_rate_experiment.entry_id'
-     '_kinetic_rate_experiment.kinetic_rate_list_id'
+     '_chemical_rate_experiment.experiment_id'
+     '_chemical_rate_experiment.sample_id'
+     '_chemical_rate_experiment.sample_state'
+     '_chemical_rate_experiment.entry_id'
+     '_chemical_rate_experiment.chemical_rate_list_id'
 
    stop_
 
@@ -68736,7 +68822,7 @@ save_kinetic_rate_experiment
      _category_group.id
 
      'inclusive_group'
-     'kinetic_rates'
+     'chemical_rates'
 
    stop_
 
@@ -68755,15 +68841,15 @@ save_kinetic_rate_experiment
 
 save_
 
-save__kinetic_rate_experiment.experiment_id
+save__chemical_rate_experiment.experiment_id
 
    _item_description.description
 ;
 Pointer to '_Experiment.ID'
 ;
 
-   _item.name                  '_kinetic_rate_experiment.experiment_id'
-   _item.category_id              'kinetic_rate_experiment'
+   _item.name                  '_chemical_rate_experiment.experiment_id'
+   _item.category_id              'chemical_rate_experiment'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -68779,15 +68865,15 @@ Pointer to '_Experiment.ID'
 
 save_
 
-save__kinetic_rate_experiment.experiment_name
+save__chemical_rate_experiment.experiment_name
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'NMR_spectrometer_expt'
 ;
 
-   _item.name                  '_kinetic_rate_experiment.experiment_name'
-   _item.category_id              'kinetic_rate_experiment'
+   _item.name                  '_chemical_rate_experiment.experiment_name'
+   _item.category_id              'chemical_rate_experiment'
    _item.mandatory_code            no
 
    _item_type.code                'line'
@@ -68811,15 +68897,15 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
 
 save_
 
-save__kinetic_rate_experiment.sample_id
+save__chemical_rate_experiment.sample_id
 
    _item_description.description
 ;
 Pointer to '_Sample.ID'
 ;
 
-   _item.name                  '_kinetic_rate_experiment.sample_id'
-   _item.category_id              'kinetic_rate_experiment'
+   _item.name                  '_chemical_rate_experiment.sample_id'
+   _item.category_id              'chemical_rate_experiment'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -68835,15 +68921,15 @@ Pointer to '_Sample.ID'
 
 save_
 
-save__kinetic_rate_experiment.sample_label
+save__chemical_rate_experiment.sample_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'sample'
 ;
 
-   _item.name                  '_kinetic_rate_experiment.sample_label'
-   _item.category_id              'kinetic_rate_experiment'
+   _item.name                  '_chemical_rate_experiment.sample_label'
+   _item.category_id              'chemical_rate_experiment'
    _item.mandatory_code            yes
 
    _item_type.code                'framecode'
@@ -68859,15 +68945,15 @@ Pointer to a saveframe of the category 'sample'
 
 save_
 
-save__kinetic_rate_experiment.sample_state
+save__chemical_rate_experiment.sample_state
 
    _item_description.description
 ;
 Physical state of the sample either anisotropic or isotropic.
 ;
 
-   _item.name                  '_kinetic_rate_experiment.sample_state'
-   _item.category_id              'kinetic_rate_experiment'
+   _item.name                  '_chemical_rate_experiment.sample_state'
+   _item.category_id              'chemical_rate_experiment'
    _item.mandatory_code            yes
 
    _item_type.code                'line'
@@ -68892,15 +68978,15 @@ Physical state of the sample either anisotropic or isotropic.
 
 save_
 
-save__kinetic_rate_experiment.entry_id
+save__chemical_rate_experiment.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                  '_kinetic_rate_experiment.entry_id'
-   _item.category_id              'kinetic_rate_experiment'
+   _item.name                  '_chemical_rate_experiment.entry_id'
+   _item.category_id              'chemical_rate_experiment'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -68916,15 +69002,15 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__kinetic_rate_experiment.kinetic_rate_list_id
+save__chemical_rate_experiment.chemical_rate_list_id
 
    _item_description.description
 ;
-Pointer to '_Kinetic_rate_list.ID'
+Pointer to '_Chemical_rate_list.ID'
 ;
 
-   _item.name                  '_kinetic_rate_experiment.kinetic_rate_list_id'
-   _item.category_id              'kinetic_rate_experiment'
+   _item.name                  '_chemical_rate_experiment.chemical_rate_list_id'
+   _item.category_id              'chemical_rate_experiment'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -68940,19 +69026,19 @@ Pointer to '_Kinetic_rate_list.ID'
 
 save_
 
-save_kinetic_rate_software
+save_chemical_rate_software
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'kinetic_rate_software'
+   _category.id                   'chemical_rate_software'
 
    loop_
      _category_key.name
 
-     '_kinetic_rate_software.software_id'
-     '_kinetic_rate_software.entry_id'
-     '_kinetic_rate_software.kinetic_rate_list_id'
+     '_chemical_rate_software.software_id'
+     '_chemical_rate_software.entry_id'
+     '_chemical_rate_software.chemical_rate_list_id'
 
    stop_
 
@@ -68960,7 +69046,7 @@ save_kinetic_rate_software
      _category_group.id
 
      'inclusive_group'
-     'kinetic_rates'
+     'chemical_rates'
 
    stop_
 
@@ -68979,15 +69065,15 @@ save_kinetic_rate_software
 
 save_
 
-save__kinetic_rate_software.software_id
+save__chemical_rate_software.software_id
 
    _item_description.description
 ;
 Pointer to '_Software.ID'
 ;
 
-   _item.name                  '_kinetic_rate_software.software_id'
-   _item.category_id              'kinetic_rate_software'
+   _item.name                  '_chemical_rate_software.software_id'
+   _item.category_id              'chemical_rate_software'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -69003,15 +69089,15 @@ Pointer to '_Software.ID'
 
 save_
 
-save__kinetic_rate_software.software_label
+save__chemical_rate_software.software_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'software'
 ;
 
-   _item.name                  '_kinetic_rate_software.software_label'
-   _item.category_id              'kinetic_rate_software'
+   _item.name                  '_chemical_rate_software.software_label'
+   _item.category_id              'chemical_rate_software'
    _item.mandatory_code            yes
 
    _item_type.code                'framecode'
@@ -69027,15 +69113,15 @@ Pointer to a saveframe of the category 'software'
 
 save_
 
-save__kinetic_rate_software.method_id
+save__chemical_rate_software.method_id
 
    _item_description.description
 ;
 Pointer to '_Method.ID'
 ;
 
-   _item.name                  '_kinetic_rate_software.method_id'
-   _item.category_id              'kinetic_rate_software'
+   _item.name                  '_chemical_rate_software.method_id'
+   _item.category_id              'chemical_rate_software'
    _item.mandatory_code            no
 
    _item_type.code                'int'
@@ -69051,15 +69137,15 @@ Pointer to '_Method.ID'
 
 save_
 
-save__kinetic_rate_software.method_label
+save__chemical_rate_software.method_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'method'
 ;
 
-   _item.name                  '_kinetic_rate_software.method_label'
-   _item.category_id              'kinetic_rate_software'
+   _item.name                  '_chemical_rate_software.method_label'
+   _item.category_id              'chemical_rate_software'
    _item.mandatory_code            no
 
    _item_type.code                'framecode'
@@ -69075,15 +69161,15 @@ Pointer to a saveframe of the category 'method'
 
 save_
 
-save__kinetic_rate_software.entry_id
+save__chemical_rate_software.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                  '_kinetic_rate_software.entry_id'
-   _item.category_id              'kinetic_rate_software'
+   _item.name                  '_chemical_rate_software.entry_id'
+   _item.category_id              'chemical_rate_software'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -69099,15 +69185,15 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__kinetic_rate_software.kinetic_rate_list_id
+save__chemical_rate_software.chemical_rate_list_id
 
    _item_description.description
 ;
-Pointer to '_Kinetic_rate_list.ID'
+Pointer to '_Chemical_rate_list.ID'
 ;
 
-   _item.name                  '_kinetic_rate_software.kinetic_rate_list_id'
-   _item.category_id              'kinetic_rate_software'
+   _item.name                  '_chemical_rate_software.chemical_rate_list_id'
+   _item.category_id              'chemical_rate_software'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -69123,19 +69209,19 @@ Pointer to '_Kinetic_rate_list.ID'
 
 save_
 
-save_kinetic_rate
+save_chemical_rate
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'kinetic_rate'
+   _category.id                   'chemical_rate'
 
    loop_
      _category_key.name
 
-     '_kinetic_rate.id'
-     '_kinetic_rate.entry_id'
-     '_kinetic_rate.kinetic_rate_list_id'
+     '_chemical_rate.id'
+     '_chemical_rate.entry_id'
+     '_chemical_rate.chemical_rate_list_id'
 
    stop_
 
@@ -69143,7 +69229,7 @@ save_kinetic_rate
      _category_group.id
 
      'inclusive_group'
-     'kinetic_rates'
+     'chemical_rates'
 
    stop_
 
@@ -69162,15 +69248,15 @@ save_kinetic_rate
 
 save_
 
-save__kinetic_rate.id
+save__chemical_rate.id
 
    _item_description.description
 ;
 Unique identifier for the observed rate value.
 ;
 
-   _item.name                  '_kinetic_rate.id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -69186,15 +69272,15 @@ Unique identifier for the observed rate value.
 
 save_
 
-save__kinetic_rate.assembly_id
+save__chemical_rate.assembly_id
 
    _item_description.description
 ;
 Pointer to '_Assembly.ID'
 ;
 
-   _item.name                  '_kinetic_rate.assembly_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.assembly_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'int'
@@ -69210,15 +69296,15 @@ Pointer to '_Assembly.ID'
 
 save_
 
-save__kinetic_rate.assembly_atom_id
+save__chemical_rate.assembly_atom_id
 
    _item_description.description
 ;
 Pointer to '_Atom.Assembly_atom_ID'
 ;
 
-   _item.name                  '_kinetic_rate.assembly_atom_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.assembly_atom_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'int'
@@ -69234,15 +69320,15 @@ Pointer to '_Atom.Assembly_atom_ID'
 
 save_
 
-save__kinetic_rate.entity_assembly_id
+save__chemical_rate.entity_assembly_id
 
    _item_description.description
 ;
 Pointer to '_Entity_assembly.ID'
 ;
 
-   _item.name                  '_kinetic_rate.entity_assembly_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.entity_assembly_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -69258,15 +69344,15 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
-save__kinetic_rate.entity_id
+save__chemical_rate.entity_id
 
    _item_description.description
 ;
 Pointer to '_Entity.ID'
 ;
 
-   _item.name                  '_kinetic_rate.entity_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.entity_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -69282,15 +69368,15 @@ Pointer to '_Entity.ID'
 
 save_
 
-save__kinetic_rate.comp_index_id
+save__chemical_rate.comp_index_id
 
    _item_description.description
 ;
 Pointer to '_Entity_comp_index.ID'
 ;
 
-   _item.name                  '_kinetic_rate.comp_index_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.comp_index_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -69306,15 +69392,15 @@ Pointer to '_Entity_comp_index.ID'
 
 save_
 
-save__kinetic_rate.seq_id
+save__chemical_rate.seq_id
 
    _item_description.description
 ;
 Pointer to '_Entity_poly_seq.Num'
 ;
 
-   _item.name                  '_kinetic_rate.seq_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.seq_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -69330,15 +69416,15 @@ Pointer to '_Entity_poly_seq.Num'
 
 save_
 
-save__kinetic_rate.comp_id
+save__chemical_rate.comp_id
 
    _item_description.description
 ;
 Pointer to '_Chem_comp.ID'
 ;
 
-   _item.name                  '_kinetic_rate.comp_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.comp_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -69354,15 +69440,15 @@ Pointer to '_Chem_comp.ID'
 
 save_
 
-save__kinetic_rate.atom_id
+save__chemical_rate.atom_id
 
    _item_description.description
 ;
 Pointer to '_Chem_comp_atom.Atom_ID'
 ;
 
-   _item.name                  '_kinetic_rate.atom_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.atom_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'atcode'
@@ -69378,7 +69464,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
 save_
 
-save__kinetic_rate.atom_type
+save__chemical_rate.atom_type
 
    _item_description.description
 ;
@@ -69386,8 +69472,8 @@ The value for this tag is a standard IUPAC abbreviation for an element
 (i.e., H, C, P, etc).
 ;
 
-   _item.name                  '_kinetic_rate.atom_type'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.atom_type'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -69403,7 +69489,7 @@ The value for this tag is a standard IUPAC abbreviation for an element
 
 save_
 
-save__kinetic_rate.atom_isotope_number
+save__chemical_rate.atom_isotope_number
 
    _item_description.description
 ;
@@ -69411,8 +69497,8 @@ The mass number for the chemical element defined by the tag '_Atom_type'
 or any of its related tags.
 ;
 
-   _item.name                  '_kinetic_rate.atom_isotope_number'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.atom_isotope_number'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'int'
@@ -69428,15 +69514,15 @@ or any of its related tags.
 
 save_
 
-save__kinetic_rate.val_type
+save__chemical_rate.val_type
 
    _item_description.description
 ;
 The type of rate value reported
 ;
 
-   _item.name                  '_kinetic_rate.val_type'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.val_type'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'line'
@@ -69460,15 +69546,15 @@ The type of rate value reported
 
 save_
 
-save__kinetic_rate.val
+save__chemical_rate.val
 
    _item_description.description
 ;
 Kinetic rate value
 ;
 
-   _item.name                  '_kinetic_rate.val'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.val'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'float'
@@ -69484,7 +69570,7 @@ Kinetic rate value
 
 save_
 
-save__kinetic_rate.val_min
+save__chemical_rate.val_min
 
    _item_description.description
 ;
@@ -69492,8 +69578,8 @@ Estimated minimum value for the observed rate when a specific value cannot
 be obtained.
 ;
 
-   _item.name                  '_kinetic_rate.val_min'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.val_min'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'float'
@@ -69509,7 +69595,7 @@ be obtained.
 
 save_
 
-save__kinetic_rate.val_max
+save__chemical_rate.val_max
 
    _item_description.description
 ;
@@ -69517,8 +69603,8 @@ Estimated maximum value for the observed rate when a specific value cannot
 be obtained.
 ;
 
-   _item.name                  '_kinetic_rate.val_max'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.val_max'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'float'
@@ -69534,15 +69620,15 @@ be obtained.
 
 save_
 
-save__kinetic_rate.val_err
+save__chemical_rate.val_err
 
    _item_description.description
 ;
 Estimated error in the observed rate value.
 ;
 
-   _item.name                  '_kinetic_rate.val_err'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.val_err'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'float'
@@ -69558,15 +69644,15 @@ Estimated error in the observed rate value.
 
 save_
 
-save__kinetic_rate.val_units
+save__chemical_rate.val_units
 
    _item_description.description
 ;
 Units for the reported rate value.
 ;
 
-   _item.name                  '_kinetic_rate.val_units'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.val_units'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -69582,15 +69668,15 @@ s-1
 
 save_
 
-save__kinetic_rate.resonance_id
+save__chemical_rate.resonance_id
 
    _item_description.description
 ;
 Pointer to '_Resonance.ID'
 ;
 
-   _item.name                  '_kinetic_rate.resonance_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.resonance_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'int'
@@ -69606,7 +69692,7 @@ Pointer to '_Resonance.ID'
 
 save_
 
-save__kinetic_rate.auth_entity_assembly_id
+save__chemical_rate.auth_entity_assembly_id
 
    _item_description.description
 ;
@@ -69616,8 +69702,8 @@ data.  Note that the value is not required to be a number and does not
 need to correspond to the value for Entity_assembly_ID.
 ;
 
-   _item.name                  '_kinetic_rate.auth_entity_assembly_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.auth_entity_assembly_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -69633,7 +69719,7 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
-save__kinetic_rate.auth_seq_id
+save__chemical_rate.auth_seq_id
 
    _item_description.description
 ;
@@ -69643,8 +69729,8 @@ in order to match that used in the publication that describes the experimental d
 to the value for Seq_ID or Comp_index_ID.
 ;
 
-   _item.name                  '_kinetic_rate.auth_seq_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.auth_seq_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -69660,7 +69746,7 @@ to the value for Seq_ID or Comp_index_ID.
 
 save_
 
-save__kinetic_rate.auth_comp_id
+save__chemical_rate.auth_comp_id
 
    _item_description.description
 ;
@@ -69668,8 +69754,8 @@ An alternative identifier for Comp_id that may be provided by an author
 in order to match that used in the publication that describes the experimental data.
 ;
 
-   _item.name                  '_kinetic_rate.auth_comp_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.auth_comp_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -69685,7 +69771,7 @@ DPN
 
 save_
 
-save__kinetic_rate.auth_atom_id
+save__chemical_rate.auth_atom_id
 
    _item_description.description
 ;
@@ -69693,8 +69779,8 @@ An alternative identifier for Atom_id that may be provided by an author
 in order to match that used in the publication that describes the experimental data.
 ;
 
-   _item.name                  '_kinetic_rate.auth_atom_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.auth_atom_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            no
 
    _item_type.code                'code'
@@ -69710,15 +69796,15 @@ HB1
 
 save_
 
-save__kinetic_rate.entry_id
+save__chemical_rate.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                  '_kinetic_rate.entry_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.entry_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -69734,15 +69820,15 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__kinetic_rate.kinetic_rate_list_id
+save__chemical_rate.chemical_rate_list_id
 
    _item_description.description
 ;
-Pointer to '_Kinetic_rate_list.ID'
+Pointer to '_Chemical_rate_list.ID'
 ;
 
-   _item.name                  '_kinetic_rate.kinetic_rate_list_id'
-   _item.category_id              'kinetic_rate'
+   _item.name                  '_chemical_rate.chemical_rate_list_id'
+   _item.category_id              'chemical_rate'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
