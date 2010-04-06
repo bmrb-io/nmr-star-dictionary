@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-03-11
+#  version date -  2010-04-06
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.23
+    _dictionary.version         3.1.0.25
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.23         ?
+     3.1.0.25         ?
 ;
      ?
 ;
@@ -2416,7 +2416,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.23'
+   _item_default.value            '3.1.0.25'
    _item_type.code                'line'
 
    loop_
@@ -2766,6 +2766,31 @@ above that given as values to other items in the entry.
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__entry.pdb_coordinate_file_version
+
+   _item_description.description
+;
+Format version code for the PDB coordinate file that is the source of the 
+PDB information included in the entry.
+;
+
+   _item.name                  '_entry.pdb_coordinate_file_version'
+   _item.category_id              'entry'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+1ABC
 ;
 
    stop_
@@ -48282,6 +48307,175 @@ Pointer to '_Resonance.ID'
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__atom_chem_shift.pdb_record_id
+
+   _item_description.description
+;
+The value is an integer that identifies a record in the atom_site list. 
+This is a place holder for the atom record number extracted from a PDB formatted file.
+;
+
+   _item.name                  '_atom_chem_shift.pdb_record_id'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__atom_chem_shift.pdb_model_num
+
+   _item_description.description
+;
+PDB model number.
+;
+
+   _item.name                  '_atom_chem_shift.pdb_model_num'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__atom_chem_shift.pdb_strand_id
+
+   _item_description.description
+;
+PDB strand id.
+;
+
+   _item.name                  '_atom_chem_shift.pdb_strand_id'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__atom_chem_shift.pdb_ins_code
+
+   _item_description.description
+;
+PDB insertion code.
+;
+
+   _item.name                  '_atom_chem_shift.pdb_ins_code'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__atom_chem_shift.pdb_residue_no
+
+   _item_description.description
+;
+PDB residue number.
+;
+
+   _item.name                  '_atom_chem_shift.pdb_residue_no'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__atom_chem_shift.pdb_residue_name
+
+   _item_description.description
+;
+PDB residue name.
+;
+
+   _item.name                  '_atom_chem_shift.pdb_residue_name'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__atom_chem_shift.pdb_atom_name
+
+   _item_description.description
+;
+PDB atom name.
+;
+
+   _item.name                  '_atom_chem_shift.pdb_atom_name'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+CD1
 ;
 
    stop_

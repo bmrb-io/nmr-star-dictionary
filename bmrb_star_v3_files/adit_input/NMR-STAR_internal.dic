@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-03-11
+#  version date -  2010-04-06
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.23
+    _dictionary.version         3.1.0.25
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.23         ?
+     3.1.0.25         ?
 ;
      ?
 ;
@@ -2785,31 +2785,92 @@ The type of data contained in the file that is to be uploaded.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'NMR-STAR 3.1 deposition file'    ?
-   'Assigned chemical shifts'    ?
-   'Coupling constants'    ?
-   'D/H fractionation factors'    ?
-   'H-exchange protection factors'    ?
-   'H-exchange rates'    ?
-   'pH NMR parameter list'    ?
-   'pKa values'    ?
-   'Order parameters'    ?
-   'Dipole-dipole relaxation values'    ?
-   'Cross correlation relaxation values'    ?
-   'Spectral density values'    ?
-   'T1 relaxation values'    ?
-   'T1rho relaxation values'    ?
-   'T2 relaxation values'    ?
-   'Residual dipolar couplings'    ?
-   'Conformer statistical characteristics'    ?
-   'Constraint statistics'    ?
-   'Heteronuclear NOE values'    ?
-   'Homonuclear NOE values'    ?
-   'Other kinds of data'    ?
-   'Torsion angle constraints'    ?
-   'Quadrupolar coupling data'    ?
-   'Dipolar tensors'    ?
-   'CSA tensors'    ?
+   deposited_data_files    ?
+   entry_interview    ?
+   study_list    ?
+   entry_information    ?
+   citations    ?
+   chem_comp    ?
+   entity    ?
+   assembly    ?
+   assembly_annotation    ?
+   assembly_subsystems    ?
+   natural_source    ?
+   experimental_source    ?
+   sample    ?
+   sample_conditions    ?
+   molecule_purity    ?
+   software    ?
+   method    ?
+   Mass_spectrometer    ?
+   Mass_spectrometer_list    ?
+   Mass_spec_ref_compd    ?
+   chromatographic_system    ?
+   chromatographic_column    ?
+   NMR_spectrometer    ?
+   NMR_spectrometer_list    ?
+   NMR_spectrometer_probe    ?
+   experiment_list    ?
+   NMR_spectrometer_expt    ?
+   NMR_spectral_processing    ?
+   computer    ?
+   chem_shift_reference    ?
+   assigned_chemical_shifts    ?
+   coupling_constants    ?
+   spectral_peak_list    ?
+   resonance_linker    ?
+   chem_shift_isotope_effect    ?
+   chem_shift_interaction_diff    ?
+   chem_shift_anisotropy    ?
+   theoretical_chem_shifts    ?
+   chem_shifts_calc_type    ?
+   RDCs    ?
+   dipolar_couplings    ?
+   spectral_density_values    ?
+   other_data_types    ?
+   chemical_rates    ?
+   H_exch_rates    ?
+   H_exch_protection_factors    ?
+   homonucl_NOEs    ?
+   heteronucl_NOEs    ?
+   heteronucl_T1_relaxation    ?
+   heteronucl_T1rho_relaxation    ?
+   heteronucl_T2_relaxation    ?
+   auto_relaxation    ?
+   dipole_dipole_relaxation    ?
+   dipole_dipole_cross_correlations    ?
+   dipole_CSA_cross_correlations    ?
+   order_parameters    ?
+   pH_titration    ?
+   pH_param_list    ?
+   D_H_fractionation_factors    ?
+   binding_data    ?
+   binding_param_list    ?
+   deduced_secd_struct_features    ?
+   deduced_hydrogen_bonds    ?
+   conformer_statistics    ?
+   constraint_statistics    ?
+   representative_conformer    ?
+   conformer_family_coord_set    ?
+   force_constants    ?
+   angular_order_parameters    ?
+   tertiary_struct_elements    ?
+   secondary_structs    ?
+   bond_annotation    ?
+   structure_interactions    ?
+   other_struct_features    ?
+   tensor    ?
+   interatomic_distance    ?
+   general_distance_constraints    ?
+   distance_constraints    ?
+   floating_chiral_stereo_assign    ?
+   torsion_angle_constraints    ?
+   RDC_constraints    ?
+   J_three_bond_constraints    ?
+   CA_CB_chem_shift_constraints    ?
+   H_chem_shift_constraints    ?
+   other_constraints    ?
+   org_constr_file_comment    ?
 
    stop_
 
@@ -4624,7 +4685,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.23'
+   _item_default.value            '3.1.0.25'
    _item_type.code                'line'
 
    loop_
@@ -5098,6 +5159,31 @@ to replace.
 
 ;
 1ccc
+;
+
+   stop_
+
+save_
+
+save__Entry.PDB_coordinate_file_version
+
+   _item_description.description
+;
+Format version code for the PDB coordinate file that is the source of the 
+PDB information included in the entry.
+;
+
+   _item.name                  '_Entry.PDB_coordinate_file_version'
+   _item.category_id              'Entry'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+1ABC
 ;
 
    stop_
@@ -54326,6 +54412,175 @@ Pointer to '_Resonance.ID'
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_record_ID
+
+   _item_description.description
+;
+The value is an integer that identifies a record in the atom_site list. 
+This is a place holder for the atom record number extracted from a PDB formatted file.
+;
+
+   _item.name                  '_Atom_chem_shift.PDB_record_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+14034
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_model_num
+
+   _item_description.description
+;
+PDB model number.
+;
+
+   _item.name                  '_Atom_chem_shift.PDB_model_num'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_strand_ID
+
+   _item_description.description
+;
+PDB strand id.
+;
+
+   _item.name                  '_Atom_chem_shift.PDB_strand_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_ins_code
+
+   _item_description.description
+;
+PDB insertion code.
+;
+
+   _item.name                  '_Atom_chem_shift.PDB_ins_code'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_residue_no
+
+   _item_description.description
+;
+PDB residue number.
+;
+
+   _item.name                  '_Atom_chem_shift.PDB_residue_no'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+6
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_residue_name
+
+   _item_description.description
+;
+PDB residue name.
+;
+
+   _item.name                  '_Atom_chem_shift.PDB_residue_name'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.PDB_atom_name
+
+   _item_description.description
+;
+PDB atom name.
+;
+
+   _item.name                  '_Atom_chem_shift.PDB_atom_name'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+CD1
 ;
 
    stop_
