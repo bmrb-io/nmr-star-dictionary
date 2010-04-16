@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-04-06
+#  version date -  2010-04-16
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.25
+    _dictionary.version         3.1.0.26
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.25         ?
+     3.1.0.26         ?
 ;
      ?
 ;
@@ -2416,7 +2416,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.25'
+   _item_default.value            '3.1.0.26'
    _item_type.code                'line'
 
    loop_
@@ -14054,7 +14054,7 @@ save__atom.pdb_asym_id
 
    _item_description.description
 ;
-Pointer to _Atom_site.Label_asym_id'.
+Pointer to _Atom_site.PDBX_label_asym_id'.
 ;
 
    _item.name                  '_atom.pdb_asym_id'
@@ -39245,7 +39245,9 @@ Items in the mass_spec_ref_compd category records information about the compound
    loop_
      _category_key.name
 
-      ?
+     '_mass_spec_ref_compd.id'
+     '_mass_spec_ref_compd.entry_id'
+     '_mass_spec_ref_compd.mass_spec_ref_compd_set_id'
 
    stop_
 
@@ -54999,7 +55001,10 @@ save_resonance_covalent_link
    loop_
      _category_key.name
 
-      ?
+     '_resonance_covalent_link.resonance_id_1'
+     '_resonance_covalent_link.resonance_id_2'
+     '_resonance_covalent_link.entry_id'
+     '_resonance_covalent_link.resonance_linker_list_id'
 
    stop_
 
@@ -55703,7 +55708,10 @@ save_spin_system_link
    loop_
      _category_key.name
 
-      ?
+     '_spin_system_link.from_spin_system_id'
+     '_spin_system_link.to_spin_system_id'
+     '_spin_system_link.entry_id'
+     '_spin_system_link.resonance_linker_list_id'
 
    stop_
 
@@ -94544,7 +94552,10 @@ save_binding_partners
    loop_
      _category_key.name
 
-      ?
+     '_binding_partners.assembly_id'
+     '_binding_partners.entity_id'
+     '_binding_partners.entry_id'
+     '_binding_partners.binding_value_list_id'
 
    stop_
 
