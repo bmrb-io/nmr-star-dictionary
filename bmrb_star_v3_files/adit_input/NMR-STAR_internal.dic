@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-04-16
+#  version date -  2010-04-17
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.26
+    _dictionary.version         3.1.0.28
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.26         ?
+     3.1.0.28         ?
 ;
      ?
 ;
@@ -1171,6 +1171,66 @@ submitted to BMRB.
 
 ;
 PDB
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Use_previous_BMRB_entry
+
+   _item_description.description
+;
+A flag indicating that the PDB NMR structure deposition has been based 
+on chemical shift data taken from an existing BMRB entry.
+;
+
+   _item.name                  '_Entry_interview.Use_previous_BMRB_entry'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Previous_BMRB_entry_used
+
+   _item_description.description
+;
+The BMRB accession code for the BMRB entry with the chemical shift data 
+used in the determination of the deposited coordinate file.
+;
+
+   _item.name                  '_Entry_interview.Previous_BMRB_entry_used'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+15345
 ;
 
    stop_
@@ -4685,7 +4745,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.26'
+   _item_default.value            '3.1.0.28'
    _item_type.code                'line'
 
    loop_
@@ -44478,7 +44538,7 @@ Pointer to '_Entry.ID'
 
    _item.name                  '_Mass_spec_ref_compd.Entry_ID'
    _item.category_id              'Mass_spec_ref_compd'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'code'
 
@@ -44502,7 +44562,7 @@ Pointer to '_Mass_spec_ref_compd_set.ID'
 
    _item.name                  '_Mass_spec_ref_compd.Mass_spec_ref_compd_set_ID'
    _item.category_id              'Mass_spec_ref_compd'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
@@ -61694,7 +61754,7 @@ Pointer to '_Resonance.ID'
 
    _item.name                  '_Resonance_covalent_link.Resonance_ID_1'
    _item.category_id              'Resonance_covalent_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
@@ -61718,7 +61778,7 @@ Pointer to '_Resonance.ID'
 
    _item.name                  '_Resonance_covalent_link.Resonance_ID_2'
    _item.category_id              'Resonance_covalent_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
@@ -61766,7 +61826,7 @@ Pointer to '_Entry.ID'
 
    _item.name                  '_Resonance_covalent_link.Entry_ID'
    _item.category_id              'Resonance_covalent_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'code'
 
@@ -61790,7 +61850,7 @@ Pointer to '_Resonance_linker_list.ID'
 
    _item.name                  '_Resonance_covalent_link.Resonance_linker_list_ID'
    _item.category_id              'Resonance_covalent_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
@@ -62473,7 +62533,7 @@ Pointer to '_Spin_system.ID'
 
    _item.name                  '_Spin_system_link.From_spin_system_ID'
    _item.category_id              'Spin_system_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
@@ -62497,7 +62557,7 @@ Pointer to '_Spin_system.ID'
 
    _item.name                  '_Spin_system_link.To_spin_system_ID'
    _item.category_id              'Spin_system_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
@@ -62634,7 +62694,7 @@ Pointer to '_Entry.ID'
 
    _item.name                  '_Spin_system_link.Entry_ID'
    _item.category_id              'Spin_system_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'code'
 
@@ -62658,7 +62718,7 @@ Pointer to '_Resonance_linker_list.ID'
 
    _item.name                  '_Spin_system_link.Resonance_linker_list_ID'
    _item.category_id              'Spin_system_link'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
