@@ -3395,7 +3395,7 @@ save__Entity_natural_src.Superkingdom
      _item_enumeration_description
 
      Archaea              .
-     Eubacteria           prokaryotes
+     Bacteria             prokaryotes
      Eukaryota            .
      Viroid               .
      Viruses              .
@@ -3518,6 +3518,23 @@ save__Entry.Dep_release_code_nmr_constraints
     stop_
 
 save_
+save__Entry.Dep_release_code_chemical_shifts
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'RELEASE NOW'            'Release immediately'
+   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
+   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
+   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
+   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
+   'HOLD FOR 1 YEAR'        'Hold for 1 year'
+
+    stop_
+
+save_
+
 
 save__Entry.Dep_release_code_nmr_exptl
 
@@ -3621,8 +3638,6 @@ save__Entry.Recvd_coordinates
 
 save_
 
-
-
 save__Entry.Recvd_nmr_constraints
                     
   loop_
@@ -3636,6 +3651,18 @@ save__Entry.Recvd_nmr_constraints
 
 save_
 
+save__Entry.Recvd_chemical_shifts
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes          .
+    no           .
+
+  stop_
+
+save_
 
 
 save__Entry.Recvd_manuscript
