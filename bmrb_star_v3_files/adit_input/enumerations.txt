@@ -353,6 +353,26 @@ save__Atom_type.Paramagnetic
 
 save_
 
+save__Audit.Update_record
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+      'Preliminary version'                     .
+      'Nomenclature checked'                    .
+      'Nomenclature checked and updated'        .
+      'Chemical shifts checked'                 .
+      'Chemical shifts checked and updated'     .
+      'Data file replaced'                      .
+      'Initial release'                         .
+
+     stop_
+
+save_
+
+
+
 save__Binding_experiment.Experiment_name
 
   loop_
@@ -2777,6 +2797,27 @@ save__Entity_assembly.Chemical_exchange_state
 
 save_
 
+save__Entity_bond.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        covalent               .
+        directed               .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+
+    stop_
+
+save_
+
 
 save__Entity.Nstd_chirality
 
@@ -3055,11 +3096,16 @@ synthesis techniques.
 Method used to synthesize RNA.
 ;
 
+     'obtained from a collaborator'
+;
+Select this option if the molecule was obtained from a collaborator.
+;
+
      'obtained from a vendor'
 ;
-Select this button if the molecule was obtained from a
+Select this option if the molecule was obtained from a
 commercial vendor or academic unit that produces materials
-as a service.  DO NOT select this button if the material was provided
+as a service.  DO NOT select this option if the material was provided
 by an academic or industrial research collaborator.
 ;
 
@@ -6089,6 +6135,8 @@ save__Peak_char.Coupling_pattern
     sxt     sextet
     t       triplet
     td     'triplet of doublets'
+    LR     'long-range coupling'
+    1JCH   'one J carbon-proton couplings'
 
   stop_
 

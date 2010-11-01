@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-09-21
+#  version date -  2010-11-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -8870,6 +8870,206 @@ Pointer to '_Entry.ID'
 
    _item.name                  '_Related_entries.Entry_ID'
    _item.category_id              'Related_entries'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_Audit
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Audit'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Audit.Revision_id'
+     '_Audit.Entry_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_information'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__Audit.Revision_id
+
+   _item_description.description
+;
+The value of _audit.revision_id must uniquely identify a record in the 
+AUDIT list.
+;
+
+   _item.name                  '_Audit.Revision_id'
+   _item.category_id              'Audit'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Audit.Creation_date
+
+   _item_description.description
+;
+A date that the data block was created. The date format is yyyy-mm-dd.
+;
+
+   _item.name                  '_Audit.Creation_date'
+   _item.category_id              'Audit'
+   _item.mandatory_code            yes
+
+   _item_type.code                'yyyy-mm-dd'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Audit.Update_record
+
+   _item_description.description
+;
+A record of any changes to the data block. The update format is a date 
+(yyyy-mm-dd) followed by a description of the changes. The latest update entry is 
+added to the bottom of this record.
+;
+
+   _item.name                  '_Audit.Update_record'
+   _item.category_id              'Audit'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'Preliminary version'    ?
+   'Nomenclature checked'    ?
+   'Nomenclature checked and updated'    ?
+   'Chemical shifts checked'    ?
+   'Chemical shifts checked and updated'    ?
+   'Data file replaced'    ?
+   'Initial release'    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Audit.Creation_method
+
+   _item_description.description
+;
+A description of how data were entered into the data block.
+;
+
+   _item.name                  '_Audit.Creation_method'
+   _item.category_id              'Audit'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Audit.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.Sf_ID'
+;
+
+   _item.name                  '_Audit.Sf_ID'
+   _item.category_id              'Audit'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Audit.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_Audit.Entry_ID'
+   _item.category_id              'Audit'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -30017,6 +30217,7 @@ The laboratory method used to obtain the biopolymers studied.
    'cell free synthesis'    ?
    'enzymatic semisynthesis'    ?
    'reverse transcriptase'    ?
+   'obtained from a collaborator'    ?
    'obtained from a vendor'    ?
 
    stop_
@@ -58778,6 +58979,8 @@ spectral peak.
    sxt    sextet
    t    triplet
    td    'triplet of doublets'
+   LR    'long-range coupling'
+   1JCH    'one J carbon-proton couplings'
 
    stop_
 
