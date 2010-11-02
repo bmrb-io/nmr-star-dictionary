@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-11-01
+#  version date -  2010-11-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.36
+    _dictionary.version         3.1.0.37
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.36         ?
+     3.1.0.37         ?
 ;
      ?
 ;
@@ -4745,7 +4745,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.36'
+   _item_default.value            '3.1.0.37'
    _item_type.code                'line'
 
    loop_
@@ -8896,7 +8896,7 @@ save_Audit
    loop_
      _category_key.name
 
-     '_Audit.Revision_id'
+     '_Audit.Revision_ID'
      '_Audit.Entry_ID'
 
    stop_
@@ -8924,7 +8924,7 @@ save_Audit
 
 save_
 
-save__Audit.Revision_id
+save__Audit.Revision_ID
 
    _item_description.description
 ;
@@ -8932,7 +8932,7 @@ The value of _audit.revision_id must uniquely identify a record in the
 AUDIT list.
 ;
 
-   _item.name                  '_Audit.Revision_id'
+   _item.name                  '_Audit.Revision_ID'
    _item.category_id              'Audit'
    _item.mandatory_code            yes
 
