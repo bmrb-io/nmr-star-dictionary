@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-11-02
+#  version date -  2010-11-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -1231,6 +1231,118 @@ used in the determination of the deposited coordinate file.
 
 ;
 15345
+;
+
+   stop_
+
+save_
+
+save_Entry_interview
+   _category.description
+;
+Items in the entry_interview category capture information from a depositor about the data that is in the entry.
+;
+   _category.id                   'Entry_interview'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Entry_interview.Entry_ID'
+     '_Entry_interview.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_interview'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Previous_BMRB_entry_owner
+
+   _item_description.description
+;
+A flag indicating that the BMRB entry from which chemical shift data was 
+used to determine a structure was (yes) taken from another research group or was 
+not (no).
+;
+
+   _item.name                  '_Entry_interview.Previous_BMRB_entry_owner'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save_Entry_interview
+   _category.description
+;
+Items in the entry_interview category capture information from a depositor about the data that is in the entry.
+;
+   _category.id                   'Entry_interview'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Entry_interview.Entry_ID'
+     '_Entry_interview.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_interview'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
 ;
 
    stop_
