@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.38
+    _dictionary.version         3.1.0.40
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.38         ?
+     3.1.0.40         ?
 ;
      ?
 ;
@@ -4781,7 +4781,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.38'
+   _item_default.value            '3.1.0.40'
    _item_type.code                'line'
 
    loop_
@@ -55013,6 +55013,102 @@ PDB atom name.
 
 ;
 CD1
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Original_PDB_atom_name
+
+   _item_description.description
+;
+PDB atom name.
+;
+
+   _item.name                  '_Atom_chem_shift.Original_PDB_atom_name'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+CD1
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Original_PDB_strand_ID
+
+   _item_description.description
+;
+PDB strand id.
+;
+
+   _item.name                  '_Atom_chem_shift.Original_PDB_strand_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Original_PDB_residue_name
+
+   _item_description.description
+;
+PDB residue name.
+;
+
+   _item.name                  '_Atom_chem_shift.Original_PDB_residue_name'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+TYR
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Original_PDB_residue_no
+
+   _item_description.description
+;
+PDB residue number.
+;
+
+   _item.name                  '_Atom_chem_shift.Original_PDB_residue_no'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+6
 ;
 
    stop_
