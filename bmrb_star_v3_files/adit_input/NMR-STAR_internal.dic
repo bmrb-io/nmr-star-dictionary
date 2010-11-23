@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2010-11-19
+#  version date -  2010-11-23
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.37
+    _dictionary.version         3.1.0.38
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.37         ?
+     3.1.0.38         ?
 ;
      ?
 ;
@@ -1237,45 +1237,6 @@ used in the determination of the deposited coordinate file.
 
 save_
 
-save_Entry_interview
-   _category.description
-;
-Items in the entry_interview category capture information from a depositor about the data that is in the entry.
-;
-   _category.id                   'Entry_interview'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Entry_interview.Entry_ID'
-     '_Entry_interview.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'entry_interview'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__Entry_interview.Previous_BMRB_entry_owner
 
    _item_description.description
@@ -1296,6 +1257,8 @@ not (no).
      _item_enumeration.value
      _item_enumeration.detail
 
+   yes    ?
+   no    ?
 
    stop_
 
@@ -1304,45 +1267,6 @@ not (no).
 
 ;
 no
-;
-
-   stop_
-
-save_
-
-save_Entry_interview
-   _category.description
-;
-Items in the entry_interview category capture information from a depositor about the data that is in the entry.
-;
-   _category.id                   'Entry_interview'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Entry_interview.Entry_ID'
-     '_Entry_interview.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'entry_interview'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_
@@ -4857,7 +4781,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.37'
+   _item_default.value            '3.1.0.38'
    _item_type.code                'line'
 
    loop_
