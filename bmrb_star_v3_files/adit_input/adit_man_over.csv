@@ -388,6 +388,8 @@ TBL_BEGIN,,,,,,,?
 90550,H_exch_protection_factors,*,*,N,Entry_interview,_Entry_interview.H_exchange_protection_factors,yes
 90560,theoretical_chem_shifts,*,*,N,Entry_interview,_Entry_interview.Theoretical_chem_shifts,yes
 90570,chem_shifts_calc_type,*,*,N,Entry_interview,_Entry_interview.Theoretical_chem_shifts,yes
+90572,binding_data,*,*,N,Entry_interview,_Entry_interview.Binding_constants,yes
+90574,chemical_rates,*,*,N,Entry_interview,_Entry_interview.Chem_rate_constants,yes
 90580,pH_titration,*,*,N,Entry_interview,_Entry_interview.PKa_value_data_set,yes
 90590,pH_param_list,*,*,N,Entry_interview,_Entry_interview.PKa_value_data_set,yes
 90600,D_H_fractionation_factors,*,*,N,Entry_interview,_Entry_interview.D_H_fractionation_factors,yes
@@ -967,7 +969,7 @@ TBL_BEGIN,,,,,,,?
 96500,study_list,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96502,study_list,*,*,H,Entry_interview,_Entry_interview.BMRB_deposition,yes
 96510,citations,Citation_keyword,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
-96520,citations,Citation,_Citation.Title,N,Entry_interview,_Entry_interview.PDB_deposition,yes
+96520,citations,Citation,_Citation.Title,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
 96530,citations,Citation,_Citation.Details,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96540,entry_information,Entry,_Entry.Dep_release_code_nmr_exptl,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96550,entry_information,Entry,_Entry.Dep_release_code_nmr_constraints,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
@@ -1061,8 +1063,10 @@ TBL_BEGIN,,,,,,,?
 999162,dipole_CSA_cross_correlations,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999170,H_exch_rates,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999180,H_exch_protection_factors,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
+999182,chemical_rates,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999190,theoretical_chem_shifts,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999200,chem_shifts_calc_type,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
+999202,binding_data,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999210,pH_titration,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999220,pH_param_list,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999230,D_H_fractionation_factors,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
