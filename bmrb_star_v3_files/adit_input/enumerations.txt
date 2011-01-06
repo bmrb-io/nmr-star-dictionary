@@ -3869,6 +3869,20 @@ save__Entry_interview.Chem_shift_anisotropy
 
 save_
 
+save__Entry_interview.Chem_rate_constants
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_
+
+
 save__Entry_interview.Constraints
 
   loop_
@@ -3897,6 +3911,19 @@ save__Entry_interview.PDB_deposition
 save_
 
 save__Entry_interview.BMRB_deposition
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+save__Entry_interview.Previous_BMRB_entry_owner
 
   loop_
      _item_enumeration_value
@@ -5538,6 +5565,7 @@ save__Experiment.Name
      _item_enumeration_description
 
       '2D 1H-15N HSQC'              .
+      '2D 1H-15N HSQC NH2 only'     .
       '2D 1H-13C HSQC'              .
       '2D 1H-13C HSQC aliphatic'    .
       '2D 1H-13C HSQC aromatic'     .   
@@ -5558,6 +5586,8 @@ save__Experiment.Name
       '3D 1H-15N NOESY'             .
       '3D 1H-15N TOCSY'             .
       '3D 1H-13C NOESY'             .
+      '3D 1H-13C NOESY aliphatic'   .
+      '3D 1H-13C NOESY aromatic'    .
       '3D HNHB'                     .
       '3D HCCH-COSY'                .
       '3D HCACO'                    .
