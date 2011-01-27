@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-01-06
+#  version date -  2011-01-27
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.43
+    _dictionary.version         3.1.0.44
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.43         ?
+     3.1.0.44         ?
 ;
      ?
 ;
@@ -4815,7 +4815,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.43'
+   _item_default.value            '3.1.0.44'
    _item_type.code                'line'
 
    loop_
@@ -54887,6 +54887,136 @@ Pointer to '_Resonance.ID'
 
 save_
 
+save__Atom_chem_shift.Auth_entity_assembly_ID
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                  '_Atom_chem_shift.Auth_entity_assembly_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Auth_seq_ID
+
+   _item_description.description
+;
+An alternative identifier for Seq_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                  '_Atom_chem_shift.Auth_seq_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Auth_comp_ID
+
+   _item_description.description
+;
+An alternative identifier for Comp_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_Atom_chem_shift.Auth_comp_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Auth_asym_ID
+
+   _item_description.description
+;
+An alternative identifier for _atom_site.label_asym_id that may be provided 
+by an author in order to match the identification used in the publication that 
+describes the structure.
+;
+
+   _item.name                  '_Atom_chem_shift.Auth_asym_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+A
+;
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Auth_atom_ID
+
+   _item_description.description
+;
+An alternative identifier for Atom_id that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_Atom_chem_shift.Auth_atom_ID'
+   _item.category_id              'Atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
 save__Atom_chem_shift.PDB_record_ID
 
    _item_description.description
@@ -55056,30 +55186,6 @@ CD1
 
 save_
 
-save__Atom_chem_shift.Original_PDB_atom_name
-
-   _item_description.description
-;
-PDB atom name.
-;
-
-   _item.name                  '_Atom_chem_shift.Original_PDB_atom_name'
-   _item.category_id              'Atom_chem_shift'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-CD1
-;
-
-   stop_
-
-save_
-
 save__Atom_chem_shift.Original_PDB_strand_ID
 
    _item_description.description
@@ -55152,17 +55258,14 @@ PDB residue number.
 
 save_
 
-save__Atom_chem_shift.Auth_entity_assembly_ID
+save__Atom_chem_shift.Original_PDB_atom_name
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_ID that may be provided by 
-an author in order to match that used in the publication that describes the experimental 
-data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+PDB atom name.
 ;
 
-   _item.name                  '_Atom_chem_shift.Auth_entity_assembly_ID'
+   _item.name                  '_Atom_chem_shift.Original_PDB_atom_name'
    _item.category_id              'Atom_chem_shift'
    _item.mandatory_code            no
 
@@ -55172,110 +55275,7 @@ need to correspond to the value for Entity_assembly_ID.
      _item_examples.case
 
 ;
-?
-;
-
-   stop_
-
-save_
-
-save__Atom_chem_shift.Auth_seq_ID
-
-   _item_description.description
-;
-An alternative identifier for Seq_id that may be provided by an author 
-in order to match that used in the publication that describes the experimental data. 
- Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
-;
-
-   _item.name                  '_Atom_chem_shift.Auth_seq_ID'
-   _item.category_id              'Atom_chem_shift'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
--3
-;
-
-   stop_
-
-save_
-
-save__Atom_chem_shift.Auth_comp_ID
-
-   _item_description.description
-;
-An alternative identifier for Comp_id that may be provided by an author 
-in order to match that used in the publication that describes the experimental data.
-;
-
-   _item.name                  '_Atom_chem_shift.Auth_comp_ID'
-   _item.category_id              'Atom_chem_shift'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-DPN
-;
-
-   stop_
-
-save_
-
-save__Atom_chem_shift.Auth_asym_ID
-
-   _item_description.description
-;
-An alternative identifier for _atom_site.label_asym_id that may be provided 
-by an author in order to match the identification used in the publication that 
-describes the structure.
-;
-
-   _item.name                  '_Atom_chem_shift.Auth_asym_ID'
-   _item.category_id              'Atom_chem_shift'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-A
-;
-
-   stop_
-
-save_
-
-save__Atom_chem_shift.Auth_atom_ID
-
-   _item_description.description
-;
-An alternative identifier for Atom_id that may be provided by an author 
-in order to match that used in the publication that describes the experimental data.
-;
-
-   _item.name                  '_Atom_chem_shift.Auth_atom_ID'
-   _item.category_id              'Atom_chem_shift'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-HB1
+CD1
 ;
 
    stop_
