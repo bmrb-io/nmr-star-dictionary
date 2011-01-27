@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.44
+    _dictionary.version         3.1.0.45
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.44         ?
+     3.1.0.45         ?
 ;
      ?
 ;
@@ -2416,7 +2416,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.44'
+   _item_default.value            '3.1.0.45'
    _item_type.code                'line'
 
    loop_
@@ -48479,6 +48479,32 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__atom_chem_shift.auth_asym_id
+
+   _item_description.description
+;
+An alternative identifier for _atom_site.label_asym_id that may be provided 
+by an author in order to match the identification used in the publication that 
+describes the structure.
+;
+
+   _item.name                  '_atom_chem_shift.auth_asym_id'
+   _item.category_id              'atom_chem_shift'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+A
+;
+
+   stop_
+
+save_
+
 save__atom_chem_shift.auth_seq_id
 
    _item_description.description
@@ -48525,32 +48551,6 @@ in order to match that used in the publication that describes the experimental d
 
 ;
 DPN
-;
-
-   stop_
-
-save_
-
-save__atom_chem_shift.auth_asym_id
-
-   _item_description.description
-;
-An alternative identifier for _atom_site.label_asym_id that may be provided 
-by an author in order to match the identification used in the publication that 
-describes the structure.
-;
-
-   _item.name                  '_atom_chem_shift.auth_asym_id'
-   _item.category_id              'atom_chem_shift'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-A
 ;
 
    stop_
