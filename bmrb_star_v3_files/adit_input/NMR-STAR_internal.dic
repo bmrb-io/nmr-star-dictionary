@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-01-27
+#  version date -  2011-02-18
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.45
+    _dictionary.version         3.1.0.48
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.45         ?
+     3.1.0.48         ?
 ;
      ?
 ;
@@ -1126,6 +1126,8 @@ left of the screen.
 
    yes    ?
    no    ?
+   yes    ?
+   no    ?
 
    stop_
 
@@ -1657,6 +1659,40 @@ Flag indicating that order parameter values are being deposited.
 ;
 
    _item.name                  '_Entry_interview.Order_parameters'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+yes
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Movie
+
+   _item_description.description
+;
+Flag indicating that a movie file is being deposited.
+;
+
+   _item.name                  '_Entry_interview.Movie'
    _item.category_id              'Entry_interview'
    _item.mandatory_code            no
 
@@ -4815,7 +4851,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.45'
+   _item_default.value            '3.1.0.48'
    _item_type.code                'line'
 
    loop_
@@ -109910,7 +109946,7 @@ of the conformer family.
    'closest to the average'    ?
    'lowest energy'    ?
    'fewest violations'    ?
-   'minimized average'    ?
+   'minimized average structure'    ?
 
    stop_
 

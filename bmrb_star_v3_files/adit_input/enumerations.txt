@@ -1773,7 +1773,7 @@ save__Conformer_stat_list.Rep_conformer_selection_criteria
    'closest to the average'            .
    'lowest energy'                     .
    'fewest violations'                 .
-   'minimized average'       . 
+   'minimized average structure'       . 
 
     stop_
 
@@ -3856,7 +3856,20 @@ save__Entry_interview.Binding_constants
 
 save_ 
 
-save__Entry_interview.Chem_shift_anisotropy
+save__Entry_interview.Chem_shift_anisotropy                                       
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+
+save__Entry_interview.Previous_BMRB_entry_owner
 
   loop_
      _item_enumeration_value
@@ -3923,7 +3936,21 @@ save__Entry_interview.BMRB_deposition
 
 save_
 
-save__Entry_interview.Previous_BMRB_entry_owner
+save__Entry_interview.BMRB_deposition
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Movie
 
   loop_
      _item_enumeration_value
