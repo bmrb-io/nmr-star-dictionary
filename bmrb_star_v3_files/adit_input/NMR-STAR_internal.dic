@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-02-18
+#  version date -  2011-03-29
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.49
+    _dictionary.version         3.1.0.51
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.49         ?
+     3.1.0.51         ?
 ;
      ?
 ;
@@ -4137,9 +4137,6 @@ BMRB accession number for this entry
 
   '_Entry.ID'                                            'Entry'                         yes
   '_Study_list.Entry_ID'                                 'Study_list'                    yes
-  '_Entry_proc_cycle.Entry_ID'                           'Entry_proc_cycle'              yes
-  '_Entry_prerelease_seq.Entry_ID'                       'Entry_prerelease_seq'          yes
-  '_Contact_person.Entry_ID'                             'Contact_person'                yes
   '_Entry_author.Entry_ID'                               'Entry_author'                  yes
   '_SG_project.Entry_ID'                                 'SG_project'                    yes
   '_Entry_src.Entry_ID'                                  'Entry_src'                     yes
@@ -4327,6 +4324,7 @@ BMRB accession number for this entry
   '_Other_struct_feature_list.Entry_ID'                  'Other_struct_feature_list'          yes
   '_Other_struct_feature.Entry_ID'                       'Other_struct_feature'          yes
   '_Tensor_list.Entry_ID'                                'Tensor_list'                   yes
+  '_Interatomic_distance_list.Entry_ID'                  'Interatomic_distance_list'          yes
   '_Interatomic_dist.Entry_ID'                           'Interatomic_dist'              yes
   '_Gen_dist_constraint_list.Entry_ID'                   'Gen_dist_constraint_list'      yes
   '_Gen_dist_constraint_expt.Entry_ID'                   'Gen_dist_constraint_expt'      yes
@@ -4392,9 +4390,6 @@ BMRB accession number for this entry
       _item_linked.parent_name
 
   '_Study_list.Entry_ID'                                 '_Entry.ID'
-  '_Entry_proc_cycle.Entry_ID'                           '_Entry.ID'
-  '_Entry_prerelease_seq.Entry_ID'                       '_Entry.ID'
-  '_Contact_person.Entry_ID'                             '_Entry.ID'
   '_Entry_author.Entry_ID'                               '_Entry.ID'
   '_SG_project.Entry_ID'                                 '_Entry.ID'
   '_Entry_src.Entry_ID'                                  '_Entry.ID'
@@ -4582,6 +4577,7 @@ BMRB accession number for this entry
   '_Other_struct_feature_list.Entry_ID'                  '_Entry.ID'
   '_Other_struct_feature.Entry_ID'                       '_Entry.ID'
   '_Tensor_list.Entry_ID'                                '_Entry.ID'
+  '_Interatomic_distance_list.Entry_ID'                  '_Entry.ID'
   '_Interatomic_dist.Entry_ID'                           '_Entry.ID'
   '_Gen_dist_constraint_list.Entry_ID'                   '_Entry.ID'
   '_Gen_dist_constraint_expt.Entry_ID'                   '_Entry.ID'
@@ -4851,7 +4847,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.49'
+   _item_default.value            '3.1.0.51'
    _item_type.code                'line'
 
    loop_
@@ -6387,7 +6383,7 @@ save_Entry_proc_cycle
 Items in the entry_proc_cycle category provide information about the processing of an entry.
 ;
    _category.id                   'Entry_proc_cycle'
-   _category.mandatory_code       yes
+   _category.mandatory_code       no
 
    loop_
      _category_key.name
@@ -6570,7 +6566,7 @@ save_Entry_prerelease_seq
 Items in the entry_prerelease_seq category capture the sequences in one-letter form of entities that can be released to the public before the release of the full entry.
 ;
    _category.id                   'Entry_prerelease_seq'
-   _category.mandatory_code       yes
+   _category.mandatory_code       no
 
    loop_
      _category_key.name
@@ -6731,7 +6727,7 @@ save_Contact_person
 Items in the contact_person category capture information about the people that can be contacted to provide answers to questions raised during the annotation and processing of an entry.
 ;
    _category.id                   'Contact_person'
-   _category.mandatory_code       yes
+   _category.mandatory_code       no
 
    loop_
      _category_key.name
@@ -7767,7 +7763,7 @@ The value identifies the center using initials or other abbreviation.
 
    _item.name                  '_SG_project.Initial_of_center'
    _item.category_id              'SG_project'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -7909,7 +7905,7 @@ name of the overall project defined by a granting agency.
 
    _item.name                  '_Entry_src.Project_name'
    _item.category_id              'Entry_src'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -7943,7 +7939,7 @@ out the research reported in the entry.
 
    _item.name                  '_Entry_src.Organization_full_name'
    _item.category_id              'Entry_src'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
@@ -7997,7 +7993,7 @@ was conducted.  More than one organization can be provided.
 
    _item.name                  '_Entry_src.Organization_initials'
    _item.category_id              'Entry_src'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -23405,7 +23401,6 @@ An integer value that is the unique identifier for the entity within the entry.
       _item.mandatory_code
 
   '_Entity.ID'                                           'Entity'                        yes
-  '_Entry_prerelease_seq.Entity_ID'                      'Entry_prerelease_seq'          yes
   '_Entity_assembly.Entity_ID'                           'Entity_assembly'               yes
   '_Bond.Entity_ID_1'                                    'Bond'                          yes
   '_Bond.Entity_ID_2'                                    'Bond'                          yes
@@ -23540,7 +23535,6 @@ An integer value that is the unique identifier for the entity within the entry.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Entry_prerelease_seq.Entity_ID'                      '_Entity.ID'
   '_Entity_assembly.Entity_ID'                           '_Entity.ID'
   '_Bond.Entity_ID_1'                                    '_Entity.ID'
   '_Bond.Entity_ID_2'                                    '_Entity.ID'
@@ -31279,8 +31273,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Chem_comp.Sf_ID'                                     'Chem_comp'                     yes
-  '_Chem_comp_descriptor.Sf_ID'                          'Chem_comp_descriptor'          yes
-  '_Chem_comp_identifier.Sf_ID'                          'Chem_comp_identifier'          yes
 
   stop_
 
@@ -31288,8 +31280,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Chem_comp_descriptor.Sf_ID'                          '_Chem_comp.Sf_ID'
-  '_Chem_comp_identifier.Sf_ID'                          '_Chem_comp.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -44145,7 +44136,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Mass_spectrometer_list.Sf_ID'                        'Mass_spectrometer_list'        yes
-  '_Mass_spectrometer_view.Sf_ID'                        'Mass_spectrometer_view'        yes
 
   stop_
 
@@ -44153,7 +44143,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Mass_spectrometer_view.Sf_ID'                        '_Mass_spectrometer_list.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -44745,7 +44735,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Mass_spec_ref_compd_set.Sf_ID'                       'Mass_spec_ref_compd_set'       no
-  '_Mass_spec_ref_compd.Sf_ID'                           'Mass_spec_ref_compd'           no
 
   stop_
 
@@ -44753,7 +44742,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Mass_spec_ref_compd.Sf_ID'                           '_Mass_spec_ref_compd_set.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -47756,7 +47745,6 @@ across the full database of entries.
       _item.mandatory_code
 
   '_Experiment_list.Sf_ID'                               'Experiment_list'               yes
-  '_Experiment_file.Sf_ID'                               'Experiment_file'               yes
 
   stop_
 
@@ -47764,7 +47752,7 @@ across the full database of entries.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Experiment_file.Sf_ID'                               '_Experiment_list.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -49399,7 +49387,7 @@ Pointer to '_NMR_spectrometer_probe.ID'
 
    _item.name                  '_NMR_spec_expt.NMR_spectrometer_probe_ID'
    _item.category_id              'NMR_spec_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -49423,7 +49411,7 @@ Pointer to a saveframe of the category NMR_spectrometer_probe.
 
    _item.name                  '_NMR_spec_expt.NMR_spectrometer_probe_label'
    _item.category_id              'NMR_spec_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -49471,7 +49459,7 @@ Pointer to '_Software.ID'
 
    _item.name                  '_NMR_spec_expt.Software_ID'
    _item.category_id              'NMR_spec_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -49495,7 +49483,7 @@ Pointer to a saveframe of the category software.
 
    _item.name                  '_NMR_spec_expt.Software_label'
    _item.category_id              'NMR_spec_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -53755,6 +53743,8 @@ Items in the chem_shift_experiment category provide pointers to the NMR experime
      _category_key.name
 
      '_Chem_shift_experiment.Experiment_ID'
+     '_Chem_shift_experiment.Entry_ID'
+     '_Chem_shift_experiment.Assigned_chem_shift_list_ID'
 
    stop_
 
@@ -54847,7 +54837,7 @@ residue ambiguities, etc.
    _item.category_id              'Atom_chem_shift'
    _item.mandatory_code            no
 
-   _item_type.code                'uchar3'
+   _item_type.code                'int'
 
    loop_
      _item_enumeration.value
@@ -56007,7 +55997,7 @@ Pointer to '_Experiment.ID'
 
    _item.name                  '_Coupling_constant_experiment.Experiment_ID'
    _item.category_id              'Coupling_constant_experiment'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'int'
 
@@ -56063,7 +56053,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Coupling_constant_experiment.Sample_ID'
    _item.category_id              'Coupling_constant_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -56852,7 +56842,7 @@ Pointer to '_Entity_poly_seq.Num'
 
    _item.name                  '_Coupling_constant.Seq_ID_2'
    _item.category_id              'Coupling_constant'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -63703,8 +63693,6 @@ Items in the isotope_effect_experiment category provide pointers to the NMR expe
      _category_key.name
 
      '_Isotope_effect_experiment.Experiment_ID'
-     '_Isotope_effect_experiment.Sample_ID'
-     '_Isotope_effect_experiment.Sample_state'
      '_Isotope_effect_experiment.Entry_ID'
      '_Isotope_effect_experiment.Chem_shift_isotope_effect_list_ID'
 
@@ -63798,7 +63786,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Isotope_effect_experiment.Sample_ID'
    _item.category_id              'Isotope_effect_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -63846,7 +63834,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Isotope_effect_experiment.Sample_state'
    _item.category_id              'Isotope_effect_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -65776,8 +65764,6 @@ Items in the mol_interaction_diff_experiment category provide pointers to the NM
      _category_key.name
 
      '_Mol_interaction_diff_experiment.Experiment_ID'
-     '_Mol_interaction_diff_experiment.Sample_ID'
-     '_Mol_interaction_diff_experiment.Sample_state'
      '_Mol_interaction_diff_experiment.Entry_ID'
      '_Mol_interaction_diff_experiment.Mol_interaction_chem_shift_diff_ID'
 
@@ -65871,7 +65857,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Mol_interaction_diff_experiment.Sample_ID'
    _item.category_id              'Mol_interaction_diff_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -65919,7 +65905,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Mol_interaction_diff_experiment.Sample_state'
    _item.category_id              'Mol_interaction_diff_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -67212,8 +67198,6 @@ Items in the CS_anisotropy_experiment category provide pointers to the NMR exper
      _category_key.name
 
      '_CS_anisotropy_experiment.Experiment_ID'
-     '_CS_anisotropy_experiment.Sample_ID'
-     '_CS_anisotropy_experiment.Sample_state'
      '_CS_anisotropy_experiment.Entry_ID'
      '_CS_anisotropy_experiment.Chem_shift_anisotropy_ID'
 
@@ -67307,7 +67291,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_CS_anisotropy_experiment.Sample_ID'
    _item.category_id              'CS_anisotropy_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -67355,7 +67339,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_CS_anisotropy_experiment.Sample_state'
    _item.category_id              'CS_anisotropy_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -67548,7 +67532,7 @@ Pointer to '_Method.ID'
 
    _item.name                  '_CS_anisotropy_software.Method_ID'
    _item.category_id              'CS_anisotropy_software'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -70749,8 +70733,6 @@ Items in the RDC_experiment category provide pointers to the NMR experiments and
      _category_key.name
 
      '_RDC_experiment.Experiment_ID'
-     '_RDC_experiment.Sample_ID'
-     '_RDC_experiment.Sample_state'
      '_RDC_experiment.Entry_ID'
      '_RDC_experiment.RDC_list_ID'
 
@@ -70844,7 +70826,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_RDC_experiment.Sample_ID'
    _item.category_id              'RDC_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -70868,7 +70850,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_RDC_experiment.Sample_label'
    _item.category_id              'RDC_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -70892,7 +70874,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_RDC_experiment.Sample_state'
    _item.category_id              'RDC_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -72643,8 +72625,6 @@ Items in the dipolar_coupling_experiment category provide pointers to the NMR ex
      _category_key.name
 
      '_Dipolar_coupling_experiment.Experiment_ID'
-     '_Dipolar_coupling_experiment.Sample_ID'
-     '_Dipolar_coupling_experiment.Sample_state'
      '_Dipolar_coupling_experiment.Entry_ID'
      '_Dipolar_coupling_experiment.Dipolar_coupling_list_ID'
 
@@ -72738,7 +72718,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Dipolar_coupling_experiment.Sample_ID'
    _item.category_id              'Dipolar_coupling_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -72762,7 +72742,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Dipolar_coupling_experiment.Sample_label'
    _item.category_id              'Dipolar_coupling_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -72786,7 +72766,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Dipolar_coupling_experiment.Sample_state'
    _item.category_id              'Dipolar_coupling_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -74512,8 +74492,6 @@ Items in the spectral_density_experiment category provide pointers to the NMR ex
      _category_key.name
 
      '_Spectral_density_experiment.Experiment_ID'
-     '_Spectral_density_experiment.Sample_ID'
-     '_Spectral_density_experiment.Sample_state'
      '_Spectral_density_experiment.Entry_ID'
      '_Spectral_density_experiment.Spectral_density_list_ID'
 
@@ -74607,7 +74585,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Spectral_density_experiment.Sample_ID'
    _item.category_id              'Spectral_density_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -74631,7 +74609,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Spectral_density_experiment.Sample_label'
    _item.category_id              'Spectral_density_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -74655,7 +74633,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Spectral_density_experiment.Sample_state'
    _item.category_id              'Spectral_density_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -76029,8 +76007,6 @@ Items in the other_data_experiment category provide pointers to the NMR experime
      _category_key.name
 
      '_Other_data_experiment.Experiment_ID'
-     '_Other_data_experiment.Sample_ID'
-     '_Other_data_experiment.Sample_state'
      '_Other_data_experiment.Entry_ID'
      '_Other_data_experiment.Other_data_type_list_ID'
 
@@ -76124,7 +76100,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Other_data_experiment.Sample_ID'
    _item.category_id              'Other_data_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -76148,7 +76124,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Other_data_experiment.Sample_label'
    _item.category_id              'Other_data_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -76172,7 +76148,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Other_data_experiment.Sample_state'
    _item.category_id              'Other_data_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -77356,8 +77332,6 @@ save_Chemical_rate_experiment
      _category_key.name
 
      '_Chemical_rate_experiment.Experiment_ID'
-     '_Chemical_rate_experiment.Sample_ID'
-     '_Chemical_rate_experiment.Sample_state'
      '_Chemical_rate_experiment.Entry_ID'
      '_Chemical_rate_experiment.Chemical_rate_list_ID'
 
@@ -77451,7 +77425,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Chemical_rate_experiment.Sample_ID'
    _item.category_id              'Chemical_rate_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -77475,7 +77449,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Chemical_rate_experiment.Sample_label'
    _item.category_id              'Chemical_rate_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -77499,7 +77473,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Chemical_rate_experiment.Sample_state'
    _item.category_id              'Chemical_rate_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -78849,8 +78823,6 @@ Items in the H_exch_rate_experiment category provide pointers to the NMR experim
      _category_key.name
 
      '_H_exch_rate_experiment.Experiment_ID'
-     '_H_exch_rate_experiment.Sample_ID'
-     '_H_exch_rate_experiment.Sample_state'
      '_H_exch_rate_experiment.Entry_ID'
      '_H_exch_rate_experiment.H_exch_rate_list_ID'
 
@@ -78944,7 +78916,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_H_exch_rate_experiment.Sample_ID'
    _item.category_id              'H_exch_rate_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -78968,7 +78940,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_H_exch_rate_experiment.Sample_label'
    _item.category_id              'H_exch_rate_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -78992,7 +78964,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_H_exch_rate_experiment.Sample_state'
    _item.category_id              'H_exch_rate_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -80278,8 +80250,6 @@ Items in the H_exch_protection_fact_experiment category provide pointers to the 
      _category_key.name
 
      '_H_exch_protection_fact_experiment.Experiment_ID'
-     '_H_exch_protection_fact_experiment.Sample_ID'
-     '_H_exch_protection_fact_experiment.Sample_state'
      '_H_exch_protection_fact_experiment.Entry_ID'
      '_H_exch_protection_fact_experiment.H_exch_protection_factor_list_ID'
 
@@ -80373,7 +80343,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_H_exch_protection_fact_experiment.Sample_ID'
    _item.category_id              'H_exch_protection_fact_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -80397,7 +80367,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_H_exch_protection_fact_experiment.Sample_label'
    _item.category_id              'H_exch_protection_fact_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -80421,7 +80391,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_H_exch_protection_fact_experiment.Sample_state'
    _item.category_id              'H_exch_protection_fact_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -81714,8 +81684,6 @@ Items in the homonucl_NOE_experiment category provide pointers to the NMR experi
      _category_key.name
 
      '_Homonucl_NOE_experiment.Experiment_ID'
-     '_Homonucl_NOE_experiment.Sample_ID'
-     '_Homonucl_NOE_experiment.Sample_state'
      '_Homonucl_NOE_experiment.Entry_ID'
      '_Homonucl_NOE_experiment.Homonucl_NOE_list_ID'
 
@@ -81801,7 +81769,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Homonucl_NOE_experiment.Sample_ID'
    _item.category_id              'Homonucl_NOE_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -81825,7 +81793,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Homonucl_NOE_experiment.Sample_label'
    _item.category_id              'Homonucl_NOE_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -81849,7 +81817,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Homonucl_NOE_experiment.Sample_state'
    _item.category_id              'Homonucl_NOE_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -83475,8 +83443,6 @@ Items in the heteronucl_NOE_experiment category provide pointers to the NMR expe
      _category_key.name
 
      '_Heteronucl_NOE_experiment.Experiment_ID'
-     '_Heteronucl_NOE_experiment.Sample_ID'
-     '_Heteronucl_NOE_experiment.Sample_state'
      '_Heteronucl_NOE_experiment.Entry_ID'
      '_Heteronucl_NOE_experiment.Heteronucl_NOE_list_ID'
 
@@ -83570,7 +83536,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Heteronucl_NOE_experiment.Sample_ID'
    _item.category_id              'Heteronucl_NOE_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -83594,7 +83560,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Heteronucl_NOE_experiment.Sample_label'
    _item.category_id              'Heteronucl_NOE_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -83618,7 +83584,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Heteronucl_NOE_experiment.Sample_state'
    _item.category_id              'Heteronucl_NOE_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -85243,8 +85209,6 @@ Items in the heteronucl_T1_experiment category provide pointers to the NMR exper
      _category_key.name
 
      '_Heteronucl_T1_experiment.Experiment_ID'
-     '_Heteronucl_T1_experiment.Sample_ID'
-     '_Heteronucl_T1_experiment.Sample_state'
      '_Heteronucl_T1_experiment.Entry_ID'
      '_Heteronucl_T1_experiment.Heteronucl_T1_list_ID'
 
@@ -85338,7 +85302,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Heteronucl_T1_experiment.Sample_ID'
    _item.category_id              'Heteronucl_T1_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -85362,7 +85326,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Heteronucl_T1_experiment.Sample_label'
    _item.category_id              'Heteronucl_T1_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -85386,7 +85350,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Heteronucl_T1_experiment.Sample_state'
    _item.category_id              'Heteronucl_T1_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -86766,8 +86730,6 @@ Items in the heteronucl_T1rho_experiment category provide pointers to the NMR ex
      _category_key.name
 
      '_Heteronucl_T1rho_experiment.Experiment_ID'
-     '_Heteronucl_T1rho_experiment.Sample_ID'
-     '_Heteronucl_T1rho_experiment.Sample_state'
      '_Heteronucl_T1rho_experiment.Entry_ID'
      '_Heteronucl_T1rho_experiment.Heteronucl_T1rho_list_ID'
 
@@ -86861,7 +86823,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Heteronucl_T1rho_experiment.Sample_ID'
    _item.category_id              'Heteronucl_T1rho_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -86885,7 +86847,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Heteronucl_T1rho_experiment.Sample_label'
    _item.category_id              'Heteronucl_T1rho_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -86909,7 +86871,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Heteronucl_T1rho_experiment.Sample_state'
    _item.category_id              'Heteronucl_T1rho_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -88337,8 +88299,6 @@ Items in the heteronucl_T2_experiment category provide pointers to the NMR exper
      _category_key.name
 
      '_Heteronucl_T2_experiment.Experiment_ID'
-     '_Heteronucl_T2_experiment.Sample_ID'
-     '_Heteronucl_T2_experiment.Sample_state'
      '_Heteronucl_T2_experiment.Entry_ID'
      '_Heteronucl_T2_experiment.Heteronucl_T2_list_ID'
 
@@ -88432,7 +88392,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Heteronucl_T2_experiment.Sample_ID'
    _item.category_id              'Heteronucl_T2_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -88456,7 +88416,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Heteronucl_T2_experiment.Sample_label'
    _item.category_id              'Heteronucl_T2_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -88480,7 +88440,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Heteronucl_T2_experiment.Sample_state'
    _item.category_id              'Heteronucl_T2_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -89879,6 +89839,30 @@ The units used for the reported R exchange values.
 
 save_
 
+save__Auto_relaxation_list.Rex_field_strength
+
+   _item_description.description
+;
+1H spectrometer field strength at which Rex values have been measured.
+;
+
+   _item.name                  '_Auto_relaxation_list.Rex_field_strength'
+   _item.category_id              'Auto_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+600
+;
+
+   stop_
+
+save_
+
 save__Auto_relaxation_list.Details
 
    _item_description.description
@@ -89963,8 +89947,6 @@ save_Auto_relaxation_experiment
      _category_key.name
 
      '_Auto_relaxation_experiment.Experiment_ID'
-     '_Auto_relaxation_experiment.Sample_ID'
-     '_Auto_relaxation_experiment.Sample_state'
      '_Auto_relaxation_experiment.Entry_ID'
      '_Auto_relaxation_experiment.Auto_relaxation_list_ID'
 
@@ -90058,7 +90040,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Auto_relaxation_experiment.Sample_ID'
    _item.category_id              'Auto_relaxation_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -90082,7 +90064,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Auto_relaxation_experiment.Sample_label'
    _item.category_id              'Auto_relaxation_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -90106,7 +90088,7 @@ Physical state of the sample.
 
    _item.name                  '_Auto_relaxation_experiment.Sample_state'
    _item.category_id              'Auto_relaxation_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -91422,8 +91404,6 @@ Items in the dipole_dipole_relax_experiment category provide pointers to the NMR
      _category_key.name
 
      '_Dipole_dipole_relax_experiment.Experiment_ID'
-     '_Dipole_dipole_relax_experiment.Sample_ID'
-     '_Dipole_dipole_relax_experiment.Sample_state'
      '_Dipole_dipole_relax_experiment.Entry_ID'
      '_Dipole_dipole_relax_experiment.Dipole_dipole_relax_list_ID'
 
@@ -91517,7 +91497,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Dipole_dipole_relax_experiment.Sample_ID'
    _item.category_id              'Dipole_dipole_relax_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -91541,7 +91521,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Dipole_dipole_relax_experiment.Sample_label'
    _item.category_id              'Dipole_dipole_relax_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -91565,7 +91545,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Dipole_dipole_relax_experiment.Sample_state'
    _item.category_id              'Dipole_dipole_relax_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -93154,8 +93134,6 @@ Items in the cross_correlation_DD_experiment category provide pointers to the NM
      _category_key.name
 
      '_Cross_correlation_DD_experiment.Experiment_ID'
-     '_Cross_correlation_DD_experiment.Sample_ID'
-     '_Cross_correlation_DD_experiment.Sample_state'
      '_Cross_correlation_DD_experiment.Entry_ID'
      '_Cross_correlation_DD_experiment.Cross_correlation_list_ID'
 
@@ -93249,7 +93227,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Cross_correlation_DD_experiment.Sample_ID'
    _item.category_id              'Cross_correlation_DD_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -93273,7 +93251,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Cross_correlation_DD_experiment.Sample_label'
    _item.category_id              'Cross_correlation_DD_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -93297,7 +93275,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Cross_correlation_DD_experiment.Sample_state'
    _item.category_id              'Cross_correlation_DD_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -95576,8 +95554,6 @@ Items in the cross_correlation_D_CSA_experiment category provide pointers to the
      _category_key.name
 
      '_Cross_correlation_D_CSA_experiment.Experiment_ID'
-     '_Cross_correlation_D_CSA_experiment.Sample_ID'
-     '_Cross_correlation_D_CSA_experiment.Sample_state'
      '_Cross_correlation_D_CSA_experiment.Entry_ID'
      '_Cross_correlation_D_CSA_experiment.Cross_correlation_list_ID'
 
@@ -95671,7 +95647,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Cross_correlation_D_CSA_experiment.Sample_ID'
    _item.category_id              'Cross_correlation_D_CSA_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -95695,7 +95671,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Cross_correlation_D_CSA_experiment.Sample_label'
    _item.category_id              'Cross_correlation_D_CSA_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -95719,7 +95695,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Cross_correlation_D_CSA_experiment.Sample_state'
    _item.category_id              'Cross_correlation_D_CSA_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -97890,12 +97866,49 @@ ps; ns
 
 save_
 
+save__Order_parameter_list.Tau_f_val_units
+
+   _item_description.description
+;
+The units for the correlation time representing fast internal motions of 
+the molecule.
+;
+
+   _item.name                  '_Order_parameter_list.Tau_f_val_units'
+   _item.category_id              'Order_parameter_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s    ?
+   ms    ?
+   us    ?
+   ns    ?
+   ps    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+ps; ns
+;
+
+   stop_
+
+save_
+
 save__Order_parameter_list.Tau_s_val_units
 
    _item_description.description
 ;
-The units for the correlation time representing internal motions of the 
-molecule.
+The units for the correlation time representing slow internal motions of 
+the molecule.
 ;
 
    _item.name                  '_Order_parameter_list.Tau_s_val_units'
@@ -97921,6 +97934,30 @@ molecule.
 
 ;
 ps; ns
+;
+
+   stop_
+
+save_
+
+save__Order_parameter_list.Rex_field_strength
+
+   _item_description.description
+;
+1H spectrometer field strength at which Rex values have been measured.
+;
+
+   _item.name                  '_Order_parameter_list.Rex_field_strength'
+   _item.category_id              'Order_parameter_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+600
 ;
 
    stop_
@@ -98011,8 +98048,6 @@ Items in the order_parameter_experiment category provide pointers to the NMR exp
      _category_key.name
 
      '_Order_parameter_experiment.Experiment_ID'
-     '_Order_parameter_experiment.Sample_ID'
-     '_Order_parameter_experiment.Sample_state'
      '_Order_parameter_experiment.Entry_ID'
      '_Order_parameter_experiment.Order_parameter_list_ID'
 
@@ -98106,7 +98141,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Order_parameter_experiment.Sample_ID'
    _item.category_id              'Order_parameter_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -98130,7 +98165,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Order_parameter_experiment.Sample_label'
    _item.category_id              'Order_parameter_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -98154,7 +98189,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Order_parameter_experiment.Sample_state'
    _item.category_id              'Order_parameter_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -99813,8 +99848,6 @@ Items in the pH_titration_experiment category provide pointers to the NMR experi
      _category_key.name
 
      '_PH_titration_experiment.Experiment_ID'
-     '_PH_titration_experiment.Sample_ID'
-     '_PH_titration_experiment.Sample_state'
      '_PH_titration_experiment.Entry_ID'
      '_PH_titration_experiment.PH_titration_list_ID'
 
@@ -99908,7 +99941,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_PH_titration_experiment.Sample_ID'
    _item.category_id              'PH_titration_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -99932,7 +99965,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_PH_titration_experiment.Sample_label'
    _item.category_id              'PH_titration_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -99956,7 +99989,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_PH_titration_experiment.Sample_state'
    _item.category_id              'PH_titration_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -102273,8 +102306,6 @@ Items in the D_H_fract_factor_experiment category provide pointers to the NMR ex
      _category_key.name
 
      '_D_H_fract_factor_experiment.Experiment_ID'
-     '_D_H_fract_factor_experiment.Sample_ID'
-     '_D_H_fract_factor_experiment.Sample_state'
      '_D_H_fract_factor_experiment.Entry_ID'
      '_D_H_fract_factor_experiment.D_H_fractionation_factor_list_ID'
 
@@ -102368,7 +102399,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_D_H_fract_factor_experiment.Sample_ID'
    _item.category_id              'D_H_fract_factor_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -102392,7 +102423,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_D_H_fract_factor_experiment.Sample_label'
    _item.category_id              'D_H_fract_factor_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -102416,7 +102447,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_D_H_fract_factor_experiment.Sample_state'
    _item.category_id              'D_H_fract_factor_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -103580,8 +103611,6 @@ save_Binding_experiment
      _category_key.name
 
      '_Binding_experiment.Experiment_ID'
-     '_Binding_experiment.Sample_ID'
-     '_Binding_experiment.Sample_state'
      '_Binding_experiment.Entry_ID'
      '_Binding_experiment.Binding_value_list_ID'
 
@@ -103675,7 +103704,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Binding_experiment.Sample_ID'
    _item.category_id              'Binding_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -103699,7 +103728,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Binding_experiment.Sample_label'
    _item.category_id              'Binding_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -103723,7 +103752,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Binding_experiment.Sample_state'
    _item.category_id              'Binding_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -106009,8 +106038,6 @@ Items in the deduced_secd_struct_experiment category provide pointers to the NMR
      _category_key.name
 
      '_Deduced_secd_struct_experiment.Experiment_ID'
-     '_Deduced_secd_struct_experiment.Sample_ID'
-     '_Deduced_secd_struct_experiment.Sample_state'
      '_Deduced_secd_struct_experiment.Entry_ID'
      '_Deduced_secd_struct_experiment.Deduced_secd_struct_list_ID'
 
@@ -106104,7 +106131,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Deduced_secd_struct_experiment.Sample_ID'
    _item.category_id              'Deduced_secd_struct_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -106128,7 +106155,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Deduced_secd_struct_experiment.Sample_label'
    _item.category_id              'Deduced_secd_struct_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -106152,7 +106179,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Deduced_secd_struct_experiment.Sample_state'
    _item.category_id              'Deduced_secd_struct_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -107817,8 +107844,6 @@ Items in the deduced_H_bond_experiment category provide pointers to the NMR expe
      _category_key.name
 
      '_Deduced_H_bond_experiment.Experiment_ID'
-     '_Deduced_H_bond_experiment.Sample_ID'
-     '_Deduced_H_bond_experiment.Sample_state'
      '_Deduced_H_bond_experiment.Entry_ID'
      '_Deduced_H_bond_experiment.Deduced_H_bond_list_ID'
 
@@ -107912,7 +107937,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Deduced_H_bond_experiment.Sample_ID'
    _item.category_id              'Deduced_H_bond_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -107936,7 +107961,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Deduced_H_bond_experiment.Sample_label'
    _item.category_id              'Deduced_H_bond_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -107960,7 +107985,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Deduced_H_bond_experiment.Sample_state'
    _item.category_id              'Deduced_H_bond_experiment'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -112628,8 +112653,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Conformer_family_coord_set.Sf_ID'                    'Conformer_family_coord_set'         yes
-  '_Local_structure_quality.Sf_ID'                       'Local_structure_quality'       yes
-  '_Model_type.Sf_ID'                                    'Model_type'                    yes
 
   stop_
 
@@ -112637,8 +112660,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Local_structure_quality.Sf_ID'                       '_Conformer_family_coord_set.Sf_ID'
-  '_Model_type.Sf_ID'                                    '_Conformer_family_coord_set.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -113528,8 +113550,6 @@ Items in the conformer_family_coord_set_expt category provide pointers to the NM
      _category_key.name
 
      '_Conformer_family_coord_set_expt.Experiment_ID'
-     '_Conformer_family_coord_set_expt.Sample_ID'
-     '_Conformer_family_coord_set_expt.Sample_state'
      '_Conformer_family_coord_set_expt.Entry_ID'
      '_Conformer_family_coord_set_expt.Conformer_family_coord_set_ID'
 
@@ -113623,7 +113643,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Conformer_family_coord_set_expt.Sample_ID'
    _item.category_id              'Conformer_family_coord_set_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -113647,7 +113667,7 @@ Pointer to a saveframe of the category 'sample'
 
    _item.name                  '_Conformer_family_coord_set_expt.Sample_label'
    _item.category_id              'Conformer_family_coord_set_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -113671,7 +113691,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Conformer_family_coord_set_expt.Sample_state'
    _item.category_id              'Conformer_family_coord_set_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -132530,8 +132550,6 @@ save_Gen_dist_constraint_expt
      _category_key.name
 
      '_Gen_dist_constraint_expt.Experiment_ID'
-     '_Gen_dist_constraint_expt.Sample_ID'
-     '_Gen_dist_constraint_expt.Sample_state'
      '_Gen_dist_constraint_expt.Entry_ID'
      '_Gen_dist_constraint_expt.Gen_dist_constraint_list_ID'
 
@@ -132673,7 +132691,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Gen_dist_constraint_expt.Sample_ID'
    _item.category_id              'Gen_dist_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -132697,7 +132715,7 @@ Pointer to a saveframe of the category 'sample'.
 
    _item.name                  '_Gen_dist_constraint_expt.Sample_label'
    _item.category_id              'Gen_dist_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -132721,7 +132739,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Gen_dist_constraint_expt.Sample_state'
    _item.category_id              'Gen_dist_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -136217,8 +136235,6 @@ Items in the distance_constraint_expt category provide pointers to the NMR exper
      _category_key.name
 
      '_Distance_constraint_expt.Experiment_ID'
-     '_Distance_constraint_expt.Sample_ID'
-     '_Distance_constraint_expt.Sample_state'
      '_Distance_constraint_expt.Entry_ID'
      '_Distance_constraint_expt.Distance_constraint_list_ID'
 
@@ -136360,7 +136376,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Distance_constraint_expt.Sample_ID'
    _item.category_id              'Distance_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -136384,7 +136400,7 @@ Sample(s) used in deriving the data
 
    _item.name                  '_Distance_constraint_expt.Sample_label'
    _item.category_id              'Distance_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -136408,7 +136424,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Distance_constraint_expt.Sample_state'
    _item.category_id              'Distance_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -140782,8 +140798,6 @@ Items in the torsion_angle_constraint_expt category provide pointers to the NMR 
      _category_key.name
 
      '_Torsion_angle_constraints_expt.Experiment_ID'
-     '_Torsion_angle_constraints_expt.Sample_ID'
-     '_Torsion_angle_constraints_expt.Sample_state'
      '_Torsion_angle_constraints_expt.Entry_ID'
      '_Torsion_angle_constraints_expt.Torsion_angle_constraint_list_ID'
 
@@ -140925,7 +140939,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Torsion_angle_constraints_expt.Sample_ID'
    _item.category_id              'Torsion_angle_constraints_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -140949,7 +140963,7 @@ Sample(s) used in deriving the data
 
    _item.name                  '_Torsion_angle_constraints_expt.Sample_label'
    _item.category_id              'Torsion_angle_constraints_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -140973,7 +140987,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Torsion_angle_constraints_expt.Sample_state'
    _item.category_id              'Torsion_angle_constraints_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -145524,8 +145538,6 @@ Items in the RDC_constraint_expt category provide pointers to the NMR experiment
      _category_key.name
 
      '_RDC_constraint_expt.Experiment_ID'
-     '_RDC_constraint_expt.Sample_ID'
-     '_RDC_constraint_expt.Sample_state'
      '_RDC_constraint_expt.Entry_ID'
      '_RDC_constraint_expt.RDC_constraint_list_ID'
 
@@ -145667,7 +145679,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_RDC_constraint_expt.Sample_ID'
    _item.category_id              'RDC_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -145691,7 +145703,7 @@ Sample(s) used in deriving the data
 
    _item.name                  '_RDC_constraint_expt.Sample_label'
    _item.category_id              'RDC_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -145715,7 +145727,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_RDC_constraint_expt.Sample_state'
    _item.category_id              'RDC_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -148831,8 +148843,6 @@ Items in the J_three_bond_constraint_expt category provide pointers to the NMR e
      _category_key.name
 
      '_J_three_bond_constraint_expt.Experiment_ID'
-     '_J_three_bond_constraint_expt.Sample_ID'
-     '_J_three_bond_constraint_expt.Sample_state'
      '_J_three_bond_constraint_expt.Entry_ID'
      '_J_three_bond_constraint_expt.J_three_bond_constraint_list_ID'
 
@@ -148974,7 +148984,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_J_three_bond_constraint_expt.Sample_ID'
    _item.category_id              'J_three_bond_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -148998,7 +149008,7 @@ Sample(s) used in deriving the data
 
    _item.name                  '_J_three_bond_constraint_expt.Sample_label'
    _item.category_id              'J_three_bond_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -149022,7 +149032,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_J_three_bond_constraint_expt.Sample_state'
    _item.category_id              'J_three_bond_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -151350,8 +151360,6 @@ Items in the CA_CB_constraint_expt category provide pointers to the NMR experime
      _category_key.name
 
      '_CA_CB_constraint_expt.Experiment_ID'
-     '_CA_CB_constraint_expt.Sample_ID'
-     '_CA_CB_constraint_expt.Sample_state'
      '_CA_CB_constraint_expt.Entry_ID'
      '_CA_CB_constraint_expt.CA_CB_constraint_list_ID'
 
@@ -151493,7 +151501,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_CA_CB_constraint_expt.Sample_ID'
    _item.category_id              'CA_CB_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -151517,7 +151525,7 @@ Sample(s) used in deriving the data
 
    _item.name                  '_CA_CB_constraint_expt.Sample_label'
    _item.category_id              'CA_CB_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -151541,7 +151549,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_CA_CB_constraint_expt.Sample_state'
    _item.category_id              'CA_CB_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -154214,8 +154222,6 @@ Items in the H_chem_shift_constraint_expt category provide pointers to the NMR e
      _category_key.name
 
      '_H_chem_shift_constraint_expt.Experiment_ID'
-     '_H_chem_shift_constraint_expt.Sample_ID'
-     '_H_chem_shift_constraint_expt.Sample_state'
      '_H_chem_shift_constraint_expt.Entry_ID'
      '_H_chem_shift_constraint_expt.H_chem_shift_constraint_list_ID'
 
@@ -154357,7 +154363,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_H_chem_shift_constraint_expt.Sample_ID'
    _item.category_id              'H_chem_shift_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -154381,7 +154387,7 @@ Sample(s) used in deriving the data
 
    _item.name                  '_H_chem_shift_constraint_expt.Sample_label'
    _item.category_id              'H_chem_shift_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -154405,7 +154411,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_H_chem_shift_constraint_expt.Sample_state'
    _item.category_id              'H_chem_shift_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -155752,8 +155758,6 @@ Items in the other_constraint_expt category provide pointers to the NMR experime
      _category_key.name
 
      '_Other_constraint_expt.Experiment_ID'
-     '_Other_constraint_expt.Sample_ID'
-     '_Other_constraint_expt.Sample_state'
      '_Other_constraint_expt.Entry_ID'
      '_Other_constraint_expt.Other_constraint_list_ID'
 
@@ -155895,7 +155899,7 @@ Pointer to '_Sample.ID'
 
    _item.name                  '_Other_constraint_expt.Sample_ID'
    _item.category_id              'Other_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
@@ -155919,7 +155923,7 @@ Sample(s) used in deriving the data
 
    _item.name                  '_Other_constraint_expt.Sample_label'
    _item.category_id              'Other_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'framecode'
 
@@ -155943,7 +155947,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _item.name                  '_Other_constraint_expt.Sample_state'
    _item.category_id              'Other_constraint_expt'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
