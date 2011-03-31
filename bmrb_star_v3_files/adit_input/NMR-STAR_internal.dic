@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-03-29
+#  version date -  2011-03-31
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.51
+    _dictionary.version         3.1.0.53
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.51         ?
+     3.1.0.53         ?
 ;
      ?
 ;
@@ -1659,6 +1659,40 @@ Flag indicating that order parameter values are being deposited.
 ;
 
    _item.name                  '_Entry_interview.Order_parameters'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+yes
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Dynamics_trajectory
+
+   _item_description.description
+;
+Flag indicating that a molecular dynamics trajectory file is being deposited.
+;
+
+   _item.name                  '_Entry_interview.Dynamics_trajectory'
    _item.category_id              'Entry_interview'
    _item.mandatory_code            no
 
@@ -4847,7 +4881,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.51'
+   _item_default.value            '3.1.0.53'
    _item_type.code                'line'
 
    loop_

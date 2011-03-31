@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-03-29
+#  version date -  2011-03-31
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.51
+    _dictionary.version         3.1.0.53
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.51         ?
+     3.1.0.53         ?
 ;
      ?
 ;
@@ -2412,7 +2412,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.51'
+   _item_default.value            '3.1.0.53'
    _item_type.code                'line'
 
    loop_
@@ -2563,31 +2563,6 @@ above that given as values to other items in the entry.
 
 ;
 ?
-;
-
-   stop_
-
-save_
-
-save__entry.pdb_coordinate_file_version
-
-   _item_description.description
-;
-Format version code for the PDB coordinate file that is the source of the 
-PDB information included in the entry.
-;
-
-   _item.name                  '_entry.pdb_coordinate_file_version'
-   _item.category_id              'entry'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-1ABC
 ;
 
    stop_
