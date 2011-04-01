@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-03-31
+#  version date -  2011-04-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.53
+    _dictionary.version         3.1.0.54
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.53         ?
+     3.1.0.54         ?
 ;
      ?
 ;
@@ -591,7 +591,7 @@ save_item_types
                Standard format for CIF dates.
 ;
                uchar3    uchar
-              '[+]?[A-Za-z0-9][A-Za-z0-9][A-Za-z0-9]'
+              '[+]?[A-Za-z0-9]?[A-Za-z0-9][A-Za-z0-9]'
 ;
                data item for 3 character codes
 ;
@@ -601,7 +601,7 @@ save_item_types
                data item for 1 character codes
 ;
                yes_no   char
-               '.?.?.?'
+               '{yes}|{no}'
 ;
                data item for bolean codes that have values of 'yes' or 'no'
 ;
@@ -4881,7 +4881,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.53'
+   _item_default.value            '3.1.0.54'
    _item_type.code                'line'
 
    loop_
@@ -35331,7 +35331,7 @@ A code assigned to the atom by BMRB that is unique within the chemical compound.
 
    _item.name                  '_Chem_comp_atom.BMRB_code'
    _item.category_id              'Chem_comp_atom'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'atcode'
 
@@ -59116,7 +59116,7 @@ Phase val
    _item.category_id              'Peak_char'
    _item.mandatory_code            no
 
-   _item_type.code                'float'
+   _item_type.code                'code'
 
    loop_
      _item_examples.case
