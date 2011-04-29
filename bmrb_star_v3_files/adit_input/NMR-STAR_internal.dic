@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-04-01
+#  version date -  2011-04-29
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.54
+    _dictionary.version         3.1.0.55
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.54         ?
+     3.1.0.55         ?
 ;
      ?
 ;
@@ -4881,7 +4881,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.54'
+   _item_default.value            '3.1.0.55'
    _item_type.code                'line'
 
    loop_
@@ -7899,8 +7899,68 @@ Items in the entry_src category describe the organization that is the source of 
    loop_
      _category_key.name
 
-     '_Entry_src.Project_name'
-     '_Entry_src.Organization_initials'
+     '_Entry_src.Entry_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_information'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__Entry_src.ID
+
+   _item_description.description
+;
+A unique integer identifier for this organization or project within the entry.
+;
+
+   _item.name                  '_Entry_src.ID'
+   _item.category_id              'Entry_src'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save_Entry_src
+   _category.description
+;
+Items in the entry_src category describe the organization that is the source of the data in an entry.
+;
+   _category.id                   'Entry_src'
+   _category.mandatory_code       yes
+
+   loop_
+     _category_key.name
+
      '_Entry_src.Entry_ID'
 
    stop_
