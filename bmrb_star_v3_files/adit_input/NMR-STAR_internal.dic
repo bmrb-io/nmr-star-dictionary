@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-05-05
+#  version date -  2011-06-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.0.56
+    _dictionary.version         3.1.0.57
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.0.56         ?
+     3.1.0.57         ?
 ;
      ?
 ;
@@ -601,7 +601,7 @@ save_item_types
                data item for 1 character codes
 ;
                yes_no   char
-               '{yes}|{no}'
+               '(yes)|(no)'
 ;
                data item for bolean codes that have values of 'yes' or 'no'
 ;
@@ -1124,8 +1124,6 @@ left of the screen.
      _item_enumeration.value
      _item_enumeration.detail
 
-   yes    ?
-   no    ?
    yes    ?
    no    ?
 
@@ -4881,7 +4879,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.0.56'
+   _item_default.value            '3.1.0.57'
    _item_type.code                'line'
 
    loop_
@@ -11350,7 +11348,6 @@ saveframe.
   '_Entity_assembly.Assembly_ID'                         'Entity_assembly'               yes
   '_Bond.Assembly_ID'                                    'Bond'                          yes
   '_Entity_deleted_atom.Assembly_ID'                     'Entity_deleted_atom'           yes
-  '_Deleted_atom.Assembly_ID'                            'Deleted_atom'                  yes
   '_Struct_asym.Assembly_ID'                             'Struct_asym'                   yes
   '_Assembly_db_link.Assembly_ID'                        'Assembly_db_link'              yes
   '_Assembly_common_name.Assembly_ID'                    'Assembly_common_name'          yes
@@ -11385,7 +11382,6 @@ saveframe.
   '_Entity_assembly.Assembly_ID'                         '_Assembly.ID'
   '_Bond.Assembly_ID'                                    '_Assembly.ID'
   '_Entity_deleted_atom.Assembly_ID'                     '_Assembly.ID'
-  '_Deleted_atom.Assembly_ID'                            '_Assembly.ID'
   '_Struct_asym.Assembly_ID'                             '_Assembly.ID'
   '_Assembly_db_link.Assembly_ID'                        '_Assembly.ID'
   '_Assembly_common_name.Assembly_ID'                    '_Assembly.ID'
@@ -12109,7 +12105,6 @@ Unique identifier for each component in the entity assembly.
   '_Bond.Entity_assembly_ID_1'                           'Bond'                          yes
   '_Bond.Entity_assembly_ID_2'                           'Bond'                          yes
   '_Entity_deleted_atom.Entity_assembly_ID'              'Entity_deleted_atom'           yes
-  '_Deleted_atom.Entity_assembly_ID'                     'Deleted_atom'                  yes
   '_Assembly_interaction.Entity_assembly_ID_1'           'Assembly_interaction'          yes
   '_Assembly_interaction.Entity_assembly_ID_2'           'Assembly_interaction'          yes
   '_Chem_comp_assembly.Entity_assembly_ID'               'Chem_comp_assembly'            yes
@@ -12222,7 +12217,6 @@ Unique identifier for each component in the entity assembly.
   '_Bond.Entity_assembly_ID_1'                           '_Entity_assembly.ID'
   '_Bond.Entity_assembly_ID_2'                           '_Entity_assembly.ID'
   '_Entity_deleted_atom.Entity_assembly_ID'              '_Entity_assembly.ID'
-  '_Deleted_atom.Entity_assembly_ID'                     '_Entity_assembly.ID'
   '_Assembly_interaction.Entity_assembly_ID_1'           '_Entity_assembly.ID'
   '_Assembly_interaction.Entity_assembly_ID_2'           '_Entity_assembly.ID'
   '_Chem_comp_assembly.Entity_assembly_ID'               '_Entity_assembly.ID'
@@ -14005,515 +13999,6 @@ Pointer to '_Assembly.ID'
 
    _item.name                  '_Entity_deleted_atom.Assembly_ID'
    _item.category_id              'Entity_deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save_Deleted_atom
-   _category.description
-;
-Items in the deleted_atom category define the atoms that are deleted from molecular entities when intermolecular bonds are formed to construct the molecular assembly.
-;
-   _category.id                   'Deleted_atom'
-   _category.mandatory_code       yes
-
-   loop_
-     _category_key.name
-
-     '_Deleted_atom.ID'
-     '_Deleted_atom.Entry_ID'
-     '_Deleted_atom.Assembly_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'assembly'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.ID
-
-   _item_description.description
-;
-Unique identifier used to index the rows of deleted atoms.
-;
-
-   _item.name                  '_Deleted_atom.ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Assembly_atom_ID
-
-   _item_description.description
-;
-Pointer to '_Atom.Assembly_atom_ID'
-;
-
-   _item.name                  '_Deleted_atom.Assembly_atom_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            no
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Entity_assembly_ID
-
-   _item_description.description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _item.name                  '_Deleted_atom.Entity_assembly_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-2
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Entity_assembly_name
-
-   _item_description.description
-;
-Provide the name given to the molecule in the molecular assembly where 
-the deleted atom is located.  There may be several identical biopolymers in the 
-system, but the one where the specific atom has been deleted needs to be specified. 
- If the same atom is missing from multiple polymers in the system, a row in 
-this table needs to be created for each deleted atom.  In this way a complete and 
-accurate chemical structure for the molecular system can be constructed.
-;
-
-   _item.name                  '_Deleted_atom.Entity_assembly_name'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'line'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Entity_ID
-
-   _item_description.description
-;
-Pointer to '_Entity.ID'
-;
-
-   _item.name                  '_Deleted_atom.Entity_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Entity_label
-
-   _item_description.description
-;
-Pointer to a saveframe of the category 'entity'
-;
-
-   _item.name                  '_Deleted_atom.Entity_label'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'framecode'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Comp_index_ID
-
-   _item_description.description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _item.name                  '_Deleted_atom.Comp_index_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Seq_ID
-
-   _item_description.description
-;
-Pointer to '_Entity_poly_seq.Num'
-;
-
-   _item.name                  '_Deleted_atom.Seq_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-13
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Comp_ID
-
-   _item_description.description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _item.name                  '_Deleted_atom.Comp_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Comp_label
-
-   _item_description.description
-;
-Pointer to a saveframe of the category 'chem_comp'
-;
-
-   _item.name                  '_Deleted_atom.Comp_label'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'framecode'
-
-   loop_
-     _item_examples.case
-
-;
-CYS
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Atom_ID
-
-   _item_description.description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _item.name                  '_Deleted_atom.Atom_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'atcode'
-
-   loop_
-     _item_examples.case
-
-;
-HG
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Auth_entity_assembly_ID
-
-   _item_description.description
-;
-An alternative identifier for Entity_assembly_ID that may be provided by 
-an author in order to match that used in the publication that describes the experimental 
-data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
-;
-
-   _item.name                  '_Deleted_atom.Auth_entity_assembly_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-A
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Auth_seq_ID
-
-   _item_description.description
-;
-An alternative identifier for Seq_id that may be provided by an author 
-in order to match that used in the publication that describes the experimental data. 
- Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
-;
-
-   _item.name                  '_Deleted_atom.Auth_seq_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-42
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Auth_comp_ID
-
-   _item_description.description
-;
-An alternative identifier for Comp_id that may be provided by an author 
-in order to match that used in the publication that describes the experimental data.
-;
-
-   _item.name                  '_Deleted_atom.Auth_comp_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-CYS
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Auth_atom_ID
-
-   _item_description.description
-;
-An alternative identifier for Atom_id that may be provided by an author 
-in order to match that used in the publication that describes the experimental data.
-;
-
-   _item.name                  '_Deleted_atom.Auth_atom_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            no
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-HG
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Atom_type
-
-   _item_description.description
-;
-Standard symbol used to define the atom element type.
-;
-
-   _item.name                  '_Deleted_atom.Atom_type'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-H
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Sf_ID
-
-   _item_description.description
-;
-Pointer to '_Assembly.Sf_ID'
-;
-
-   _item.name                  '_Deleted_atom.Sf_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Entry_ID
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                  '_Deleted_atom.Entry_ID'
-   _item.category_id              'Deleted_atom'
-   _item.mandatory_code            yes
-
-   _item_type.code                'code'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Deleted_atom.Assembly_ID
-
-   _item_description.description
-;
-Pointer to '_Assembly.ID'
-;
-
-   _item.name                  '_Deleted_atom.Assembly_ID'
-   _item.category_id              'Deleted_atom'
    _item.mandatory_code            yes
 
    _item_type.code                'int'
@@ -17305,7 +16790,6 @@ assembly.
   '_Atom.Assembly_atom_ID'                               'Atom'                          yes
   '_Bond.Assembly_atom_ID_1'                             'Bond'                          yes
   '_Bond.Assembly_atom_ID_2'                             'Bond'                          yes
-  '_Deleted_atom.Assembly_atom_ID'                       'Deleted_atom'                  yes
   '_Angle.Assembly_atom_ID_1'                            'Angle'                         yes
   '_Angle.Assembly_atom_ID_2'                            'Angle'                         yes
   '_Angle.Assembly_atom_ID_3'                            'Angle'                         yes
@@ -17404,7 +16888,6 @@ assembly.
 
   '_Bond.Assembly_atom_ID_1'                             '_Atom.Assembly_atom_ID'
   '_Bond.Assembly_atom_ID_2'                             '_Atom.Assembly_atom_ID'
-  '_Deleted_atom.Assembly_atom_ID'                       '_Atom.Assembly_atom_ID'
   '_Angle.Assembly_atom_ID_1'                            '_Atom.Assembly_atom_ID'
   '_Angle.Assembly_atom_ID_2'                            '_Atom.Assembly_atom_ID'
   '_Angle.Assembly_atom_ID_3'                            '_Atom.Assembly_atom_ID'
@@ -23462,7 +22945,6 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Bond.Entity_ID_1'                                    'Bond'                          yes
   '_Bond.Entity_ID_2'                                    'Bond'                          yes
   '_Entity_deleted_atom.Entity_ID'                       'Entity_deleted_atom'           yes
-  '_Deleted_atom.Entity_ID'                              'Deleted_atom'                  yes
   '_Struct_asym.Entity_ID'                               'Struct_asym'                   yes
   '_Chem_comp_assembly.Entity_ID'                        'Chem_comp_assembly'            yes
   '_PDBX_poly_seq_scheme.Entity_ID'                      'PDBX_poly_seq_scheme'          yes
@@ -23596,7 +23078,6 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Bond.Entity_ID_1'                                    '_Entity.ID'
   '_Bond.Entity_ID_2'                                    '_Entity.ID'
   '_Entity_deleted_atom.Entity_ID'                       '_Entity.ID'
-  '_Deleted_atom.Entity_ID'                              '_Entity.ID'
   '_Struct_asym.Entity_ID'                               '_Entity.ID'
   '_Chem_comp_assembly.Entity_ID'                        '_Entity.ID'
   '_PDBX_poly_seq_scheme.Entity_ID'                      '_Entity.ID'
@@ -25994,7 +25475,6 @@ Unique ID for the compound in the entity
   '_Bond.Comp_index_ID_1'                                'Bond'                          yes
   '_Bond.Comp_index_ID_2'                                'Bond'                          yes
   '_Entity_deleted_atom.Comp_index_ID'                   'Entity_deleted_atom'           yes
-  '_Deleted_atom.Comp_index_ID'                          'Deleted_atom'                  yes
   '_Chem_comp_assembly.Comp_index_ID'                    'Chem_comp_assembly'            yes
   '_PDBX_poly_seq_scheme.Comp_index_ID'                  'PDBX_poly_seq_scheme'          yes
   '_PDBX_nonpoly_scheme.Comp_index_ID'                   'PDBX_nonpoly_scheme'           yes
@@ -26116,7 +25596,6 @@ Unique ID for the compound in the entity
   '_Bond.Comp_index_ID_1'                                '_Entity_comp_index.ID'
   '_Bond.Comp_index_ID_2'                                '_Entity_comp_index.ID'
   '_Entity_deleted_atom.Comp_index_ID'                   '_Entity_comp_index.ID'
-  '_Deleted_atom.Comp_index_ID'                          '_Entity_comp_index.ID'
   '_Chem_comp_assembly.Comp_index_ID'                    '_Entity_comp_index.ID'
   '_PDBX_poly_seq_scheme.Comp_index_ID'                  '_Entity_comp_index.ID'
   '_PDBX_nonpoly_scheme.Comp_index_ID'                   '_Entity_comp_index.ID'
@@ -26510,7 +25989,6 @@ that the sequence numbers must progress in increasing numerical order.
   '_Bond.Seq_ID_1'                                       'Bond'                          yes
   '_Bond.Seq_ID_2'                                       'Bond'                          yes
   '_Entity_deleted_atom.Seq_ID'                          'Entity_deleted_atom'           yes
-  '_Deleted_atom.Seq_ID'                                 'Deleted_atom'                  yes
   '_Chem_comp_assembly.Seq_ID'                           'Chem_comp_assembly'            yes
   '_PDBX_poly_seq_scheme.Seq_ID'                         'PDBX_poly_seq_scheme'          yes
   '_Atom.Seq_ID'                                         'Atom'                          yes
@@ -26620,7 +26098,6 @@ that the sequence numbers must progress in increasing numerical order.
   '_Bond.Seq_ID_1'                                       '_Entity_poly_seq.Num'
   '_Bond.Seq_ID_2'                                       '_Entity_poly_seq.Num'
   '_Entity_deleted_atom.Seq_ID'                          '_Entity_poly_seq.Num'
-  '_Deleted_atom.Seq_ID'                                 '_Entity_poly_seq.Num'
   '_Chem_comp_assembly.Seq_ID'                           '_Entity_poly_seq.Num'
   '_PDBX_poly_seq_scheme.Seq_ID'                         '_Entity_poly_seq.Num'
   '_Atom.Seq_ID'                                         '_Entity_poly_seq.Num'
@@ -31371,7 +30848,6 @@ components in the entry.
   '_Bond.Comp_ID_1'                                      'Bond'                          yes
   '_Bond.Comp_ID_2'                                      'Bond'                          yes
   '_Entity_deleted_atom.Comp_ID'                         'Entity_deleted_atom'           yes
-  '_Deleted_atom.Comp_ID'                                'Deleted_atom'                  yes
   '_Chem_comp_assembly.Comp_ID'                          'Chem_comp_assembly'            yes
   '_PDBX_poly_seq_scheme.Comp_ID'                        'PDBX_poly_seq_scheme'          yes
   '_PDBX_nonpoly_scheme.Comp_ID'                         'PDBX_nonpoly_scheme'           yes
@@ -31502,7 +30978,6 @@ components in the entry.
   '_Bond.Comp_ID_1'                                      '_Chem_comp.ID'
   '_Bond.Comp_ID_2'                                      '_Chem_comp.ID'
   '_Entity_deleted_atom.Comp_ID'                         '_Chem_comp.ID'
-  '_Deleted_atom.Comp_ID'                                '_Chem_comp.ID'
   '_Chem_comp_assembly.Comp_ID'                          '_Chem_comp.ID'
   '_PDBX_poly_seq_scheme.Comp_ID'                        '_Chem_comp.ID'
   '_PDBX_nonpoly_scheme.Comp_ID'                         '_Chem_comp.ID'
@@ -35109,7 +34584,6 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Bond.Atom_ID_1'                                      'Bond'                          yes
   '_Bond.Atom_ID_2'                                      'Bond'                          yes
   '_Entity_deleted_atom.Atom_ID'                         'Entity_deleted_atom'           yes
-  '_Deleted_atom.Atom_ID'                                'Deleted_atom'                  yes
   '_Angle.Atom_ID_1'                                     'Angle'                         yes
   '_Angle.Atom_ID_2'                                     'Angle'                         yes
   '_Angle.Atom_ID_3'                                     'Angle'                         yes
@@ -35224,7 +34698,6 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Bond.Atom_ID_1'                                      '_Chem_comp_atom.Atom_ID'
   '_Bond.Atom_ID_2'                                      '_Chem_comp_atom.Atom_ID'
   '_Entity_deleted_atom.Atom_ID'                         '_Chem_comp_atom.Atom_ID'
-  '_Deleted_atom.Atom_ID'                                '_Chem_comp_atom.Atom_ID'
   '_Angle.Atom_ID_1'                                     '_Chem_comp_atom.Atom_ID'
   '_Angle.Atom_ID_2'                                     '_Chem_comp_atom.Atom_ID'
   '_Angle.Atom_ID_3'                                     '_Chem_comp_atom.Atom_ID'
