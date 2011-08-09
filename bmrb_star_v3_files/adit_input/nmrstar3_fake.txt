@@ -316,6 +316,8 @@ save_<entry_information>
 
   loop_
      _Release.Release_number           
+     _Release.Format_type              
+     _Release.Format_version           
      _Release.Date                     
      _Release.Submission_date          
      _Release.Type                     
@@ -324,7 +326,7 @@ save_<entry_information>
      _Release.Sf_ID                    
      _Release.Entry_ID                 
 
-    2  2002-04-15  2002-04-15  "String value"  "String value"    "Possible multiline text"  2  1  
+    2  "Long string value"  "String value"  2002-04-15  2002-04-15    "String value"  "String value"  "Possible multiline text"  2  1    
 
   stop_
 
@@ -1937,25 +1939,60 @@ save_<method>
 save_
 
 save_<Mass_spectrometer>
-  _Mass_spectrometer.Sf_category     Mass_spectrometer
-  _Mass_spectrometer.Sf_framecode     <Mass_spectrometer>
-  _Mass_spectrometer.Entry_ID                              1
-  _Mass_spectrometer.Sf_ID                                 2
-  _Mass_spectrometer.ID                                    2
-  _Mass_spectrometer.Manufacturer                          "Long string value"
-  _Mass_spectrometer.Model                                 "Long string value"
-  _Mass_spectrometer.Type                                  "Long string value"
-  _Mass_spectrometer.Fragmentation_method                  "Long string value"
-  _Mass_spectrometer.Serial_number                         "Long string value"
-  _Mass_spectrometer.Mass_ref_introduction_method          "Long string value"
-  _Mass_spectrometer.Details                               "Possible multiline text"
+  _Mass_spec.Sf_category     Mass_spectrometer
+  _Mass_spec.Sf_framecode     <Mass_spectrometer>
+  _Mass_spec.Entry_ID               1
+  _Mass_spec.Sf_ID                  2
+  _Mass_spec.ID                     2
+  _Mass_spec.Type                   "Long string value"
+  _Mass_spec.Manufacturer           "Long string value"
+  _Mass_spec.Model                  "Long string value"
+  _Mass_spec.Serial_number          "Long string value"
+  _Mass_spec.Details                "Possible multiline text"
 
   loop_
-     _Mass_spectrometer_citation.Citation_ID                   
-     _Mass_spectrometer_citation.Citation_label                
-     _Mass_spectrometer_citation.Sf_ID                         
-     _Mass_spectrometer_citation.Entry_ID                      
-     _Mass_spectrometer_citation.Mass_spectrometer_ID          
+     _Mass_spec_config.ID                      
+     _Mass_spec_config.Ordinal                 
+     _Mass_spec_config.Component_type          
+     _Mass_spec_config.Component_name          
+     _Mass_spec_config.Sf_ID                   
+     _Mass_spec_config.Entry_ID                
+     _Mass_spec_config.Mass_spec_ID            
+
+    2  2  "Long string value"  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Mass_spec_component_param.Mass_spec_config_ID          
+     _Mass_spec_component_param.ID                           
+     _Mass_spec_component_param.Name                         
+     _Mass_spec_component_param.Value                        
+     _Mass_spec_component_param.Sf_ID                        
+     _Mass_spec_component_param.Entry_ID                     
+     _Mass_spec_component_param.Mass_spec_ID                 
+
+    2  2  "Long string value"  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Mass_spec_software.ID                    
+     _Mass_spec_software.Label                 
+     _Mass_spec_software.Sf_ID                 
+     _Mass_spec_software.Entry_ID              
+     _Mass_spec_software.Mass_spec_ID          
+
+    2  "Long string value"  2  1  2    
+
+  stop_
+
+  loop_
+     _Mass_spec_citation.Citation_ID             
+     _Mass_spec_citation.Citation_label          
+     _Mass_spec_citation.Sf_ID                   
+     _Mass_spec_citation.Entry_ID                
+     _Mass_spec_citation.Mass_spec_ID            
 
     2  "Long string value"  2  1  2    
 
@@ -1971,22 +2008,23 @@ save_<Mass_spectrometer_list>
   _Mass_spectrometer_list.ID                2
 
   loop_
-     _Mass_spectrometer_view.ID                                    
-     _Mass_spectrometer_view.Name                                  
-     _Mass_spectrometer_view.Manufacturer                          
-     _Mass_spectrometer_view.Model                                 
-     _Mass_spectrometer_view.Type                                  
-     _Mass_spectrometer_view.Fragmentation_method                  
-     _Mass_spectrometer_view.Serial_number                         
-     _Mass_spectrometer_view.Mass_ref_introduction_method          
-     _Mass_spectrometer_view.Details                               
-     _Mass_spectrometer_view.Citation_ID                           
-     _Mass_spectrometer_view.Citation_label                        
-     _Mass_spectrometer_view.Sf_ID                                 
-     _Mass_spectrometer_view.Entry_ID                              
-     _Mass_spectrometer_view.Mass_spectrometer_list_ID             
+     _Mass_spectrometer_view.ID                                 
+     _Mass_spectrometer_view.Name                               
+     _Mass_spectrometer_view.Manufacturer                       
+     _Mass_spectrometer_view.Model                              
+     _Mass_spectrometer_view.Type                               
+     _Mass_spectrometer_view.Fragmentation_method               
+     _Mass_spectrometer_view.Ionization_method                  
+     _Mass_spectrometer_view.Spectrum_type                      
+     _Mass_spectrometer_view.Serial_number                      
+     _Mass_spectrometer_view.Details                            
+     _Mass_spectrometer_view.Citation_ID                        
+     _Mass_spectrometer_view.Citation_label                     
+     _Mass_spectrometer_view.Sf_ID                              
+     _Mass_spectrometer_view.Entry_ID                           
+     _Mass_spectrometer_view.Mass_spectrometer_list_ID          
 
-    2  "String value"  "Long string value"  "Long string value"  "Long string value"    "Long string value"  "Long string value"  "Long string value"  "Possible multiline text"  2    "Long string value"  2  1  2  
+    2  "String value"  "Long string value"  "Long string value"  "Long string value"    "Long string value"  "Long string value"  "Long string value"  "Long string value"  "Possible multiline text"    2  "Long string value"  2  1  2    
 
   stop_
 
@@ -2047,6 +2085,54 @@ save_<chromatographic_column>
   _Chromatographic_column.Packing_material_pore_size          110.234
   _Chromatographic_column.Width                               110.234
   _Chromatographic_column.Length                              110.234
+save_
+
+save_<fluorescence_instrument>
+  _Fluorescence_instrument.Sf_category     fluorescence_instrument
+  _Fluorescence_instrument.Sf_framecode     <fluorescence_instrument>
+
+  _Fluorescence_instrument.Entry_ID               1
+  _Fluorescence_instrument.Sf_ID                  2
+  _Fluorescence_instrument.ID                     2
+  _Fluorescence_instrument.Details                "Possible multiline text"
+  _Fluorescence_instrument.Type                   "Long string value"
+  _Fluorescence_instrument.Manufacturer           "Long string value"
+  _Fluorescence_instrument.Model                  "Long string value"
+  _Fluorescence_instrument.Serial_number          "Long string value"
+save_
+
+save_<EMR_instrument>
+  _EMR_instrument.Sf_category     EMR_instrument
+  _EMR_instrument.Sf_framecode     <EMR_instrument>
+
+  _EMR_instrument.Entry_ID               1
+  _EMR_instrument.Sf_ID                  2
+  _EMR_instrument.ID                     2
+  _EMR_instrument.Details                "Possible multiline text"
+  _EMR_instrument.Type                   "Long string value"
+  _EMR_instrument.Manufacturer           "Long string value"
+  _EMR_instrument.Model                  "Long string value"
+  _EMR_instrument.Serial_number          "Long string value"
+save_
+
+save_<X_ray_instrument>
+  _X_ray_instrument.Sf_category     X_ray_instrument
+  _X_ray_instrument.Sf_framecode     <X_ray_instrument>
+
+  _X_ray_instrument.Entry_ID                               1
+  _X_ray_instrument.Sf_ID                                  2
+  _X_ray_instrument.ID                                     2
+  _X_ray_instrument.Details                                "Possible multiline text"
+  _X_ray_instrument.Location                               "Long string value"
+  _X_ray_instrument.Type                                   "Long string value"
+  _X_ray_instrument.Manufacturer                           "Long string value"
+  _X_ray_instrument.Model                                  "Long string value"
+  _X_ray_instrument.Serial_number                          "Long string value"
+  _X_ray_instrument.Detector_type                          "Long string value"
+  _X_ray_instrument.Source                                 "Long string value"
+  _X_ray_instrument.Wavelength                             110.234
+  _X_ray_instrument.SAXS_detector_sample_distance          110.234
+  _X_ray_instrument.WAXS_detector_sample_distance          110.234
 save_
 
 save_<NMR_spectrometer>
@@ -2154,6 +2240,14 @@ save_<experiment_list>
      _Experiment.Raw_data_flag                          
      _Experiment.NMR_spec_expt_ID                       
      _Experiment.NMR_spec_expt_label                    
+     _Experiment.MS_expt_ID                             
+     _Experiment.MS_expt_label                          
+     _Experiment.SAXS_expt_ID                           
+     _Experiment.SAXS_expt_label                        
+     _Experiment.FRET_expt_ID                           
+     _Experiment.FRET_expt_label                        
+     _Experiment.EMR_expt_ID                            
+     _Experiment.EMR_expt_label                         
      _Experiment.Sample_ID                              
      _Experiment.Sample_label                           
      _Experiment.Sample_state                           
@@ -2170,11 +2264,23 @@ save_<experiment_list>
      _Experiment.NMR_spectrometer_probe_label           
      _Experiment.NMR_spectral_processing_ID             
      _Experiment.NMR_spectral_processing_label          
+     _Experiment.Mass_spectrometer_ID                   
+     _Experiment.Mass_spectrometer_label                
+     _Experiment.X_ray_instrument_ID                    
+     _Experiment.X_ray_instrument_label                 
+     _Experiment.Fluorescence_instrument_ID             
+     _Experiment.Fluorescence_instrument_label          
+     _Experiment.EMR_instrument_ID                      
+     _Experiment.EMR_instrument_label                   
+     _Experiment.Chromatographic_system_ID              
+     _Experiment.Chromatographic_system_label           
+     _Experiment.Chromatographic_column_ID              
+     _Experiment.Chromatographic_column_label           
      _Experiment.Sf_ID                                  
      _Experiment.Entry_ID                               
      _Experiment.Experiment_list_ID                     
 
-    2  "Long string value"  yes/no  2  "Long string value"    2  "Long string value"  "String value"  110.234  "String value"    2  "Long string value"  110.234  110.234  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  1  2  
+    2  "Long string value"  yes/no  2  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  2  "Long string value"    "String value"  110.234  "String value"  2  "Long string value"    110.234  110.234  "Long string value"  2  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  2  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  1  2  
 
   stop_
 
@@ -2332,6 +2438,104 @@ save_<NMR_spectral_processing>
 
   stop_
 
+save_
+
+save_<MS_expt>
+  _MS_expt.Sf_category     MS_expt
+  _MS_expt.Sf_framecode     <MS_expt>
+  _MS_expt.Entry_ID                 1
+  _MS_expt.Sf_ID                    2
+  _MS_expt.ID                       2
+  _MS_expt.Name                     "Long string value"
+  _MS_expt.Mass_spec_ID             2
+  _MS_expt.Mass_spec_label          "Long string value"
+  _MS_expt.Spectrum_type            "Long string value"
+
+  loop_
+     _MS_expt_param.ID                  
+     _MS_expt_param.Type                
+     _MS_expt_param.Name                
+     _MS_expt_param.Value               
+     _MS_expt_param.Value_err           
+     _MS_expt_param.Sf_ID               
+     _MS_expt_param.Entry_ID            
+     _MS_expt_param.MS_expt_ID          
+
+    2  "Long string value"  "Long string value"  "Long string value"  110.234    2  1  2  
+
+  stop_
+
+  loop_
+     _MS_expt_software.Software_ID             
+     _MS_expt_software.Software_label          
+     _MS_expt_software.Method_ID               
+     _MS_expt_software.Method_label            
+     _MS_expt_software.Details                 
+     _MS_expt_software.Sf_ID                   
+     _MS_expt_software.Entry_ID                
+     _MS_expt_software.MS_expt_ID              
+
+    2  "Long string value"  2  "Long string value"  "Possible multiline text"    2  1  2  
+
+  stop_
+
+save_
+
+save_<FRET_expt>
+  _FRET_expt.Sf_category     FRET_expt
+  _FRET_expt.Sf_framecode     <FRET_expt>
+
+  _FRET_expt.Entry_ID                               1
+  _FRET_expt.Sf_ID                                  2
+  _FRET_expt.ID                                     2
+  _FRET_expt.Name                                   "Long string value"
+  _FRET_expt.Sample_volume                          110.234
+  _FRET_expt.Sample_volume_units                    "String value"
+  _FRET_expt.Fluorescence_instrument_ID             2
+  _FRET_expt.Fluorescence_instrument_label          "Long string value"
+  _FRET_expt.Software_ID                            2
+  _FRET_expt.Software_label                         "Long string value"
+  _FRET_expt.Method_ID                              2
+  _FRET_expt.Method_label                           "Long string value"
+  _FRET_expt.Details                                "Possible multiline text"
+save_
+
+save_<EMR_expt>
+  _EMR_expt.Sf_category     EMR_expt
+  _EMR_expt.Sf_framecode     <EMR_expt>
+
+  _EMR_expt.Entry_ID                      1
+  _EMR_expt.Sf_ID                         2
+  _EMR_expt.ID                            2
+  _EMR_expt.Name                          "Long string value"
+  _EMR_expt.Sample_volume                 110.234
+  _EMR_expt.Sample_volume_units           "String value"
+  _EMR_expt.EMR_instrument_ID             2
+  _EMR_expt.EMR_instrument_label          "Long string value"
+  _EMR_expt.Software_ID                   2
+  _EMR_expt.Software_label                "Long string value"
+  _EMR_expt.Method_ID                     2
+  _EMR_expt.Method_label                  "Long string value"
+  _EMR_expt.Details                       "Possible multiline text"
+save_
+
+save_<SAXS_expt>
+  _SAXS_expt.Sf_category     SAXS_expt
+  _SAXS_expt.Sf_framecode     <SAXS_expt>
+
+  _SAXS_expt.Entry_ID                        1
+  _SAXS_expt.Sf_ID                           2
+  _SAXS_expt.ID                              2
+  _SAXS_expt.Name                            "Long string value"
+  _SAXS_expt.Sample_volume                   110.234
+  _SAXS_expt.Sample_volume_units             "String value"
+  _SAXS_expt.X_ray_instrument_ID             2
+  _SAXS_expt.X_ray_instrument_label          "Long string value"
+  _SAXS_expt.Software_ID                     2
+  _SAXS_expt.Software_label                  "Long string value"
+  _SAXS_expt.Method_ID                       2
+  _SAXS_expt.Method_label                    "Long string value"
+  _SAXS_expt.Details                         "Possible multiline text"
 save_
 
 save_<computer>
@@ -3760,13 +3964,13 @@ save_<H_exch_protection_factors>
   stop_
 
   loop_
-     _H_exch_protect_fact_software.Software_ID                               
-     _H_exch_protect_fact_software.Software_label                            
-     _H_exch_protect_fact_software.Method_ID                                 
-     _H_exch_protect_fact_software.Method_label                              
-     _H_exch_protect_fact_software.Sf_ID                                     
-     _H_exch_protect_fact_software.Entry_ID                                  
-     _H_exch_protect_fact_software.H_exch_protection_factor_list_ID          
+     _H_exch_protection_fact_software.Software_ID                               
+     _H_exch_protection_fact_software.Software_label                            
+     _H_exch_protection_fact_software.Method_ID                                 
+     _H_exch_protection_fact_software.Method_label                              
+     _H_exch_protection_fact_software.Sf_ID                                     
+     _H_exch_protection_fact_software.Entry_ID                                  
+     _H_exch_protection_fact_software.H_exch_protection_factor_list_ID          
 
     2  "Long string value"  2  "Long string value"  2    1  2  
 
@@ -7384,6 +7588,60 @@ save_<H_chem_shift_constraints>
 
 save_
 
+save_<SAXS_constraints>
+  _SAXS_constraint_list.Sf_category     SAXS_constraints
+  _SAXS_constraint_list.Sf_framecode     <SAXS_constraints>
+  _SAXS_constraint_list.Entry_ID                             1
+  _SAXS_constraint_list.Sf_ID                                2
+  _SAXS_constraint_list.ID                                   2
+  _SAXS_constraint_list.Data_file_name                       "Long string value"
+  _SAXS_constraint_list.Sample_condition_list_ID             2
+  _SAXS_constraint_list.Sample_condition_list_label          "Long string value"
+  _SAXS_constraint_list.Details                              "Possible multiline text"
+  _SAXS_constraint_list.Text_data_format                     "String value"
+  _SAXS_constraint_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _SAXS_constraint_expt.Experiment_ID                    
+     _SAXS_constraint_expt.Experiment_name                  
+     _SAXS_constraint_expt.Sample_ID                        
+     _SAXS_constraint_expt.Sample_label                     
+     _SAXS_constraint_expt.Sf_ID                            
+     _SAXS_constraint_expt.Entry_ID                         
+     _SAXS_constraint_expt.SAXS_constraint_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _SAXS_constraint_software.Software_ID                      
+     _SAXS_constraint_software.Software_label                   
+     _SAXS_constraint_software.Method_ID                        
+     _SAXS_constraint_software.Method_label                     
+     _SAXS_constraint_software.Sf_ID                            
+     _SAXS_constraint_software.Entry_ID                         
+     _SAXS_constraint_software.SAXS_constraint_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _SAXS_constraint.ID                               
+     _SAXS_constraint.Q_value                          
+     _SAXS_constraint.Intensity_val                    
+     _SAXS_constraint.Intensity_val_err                
+     _SAXS_constraint.Sf_ID                            
+     _SAXS_constraint.Entry_ID                         
+     _SAXS_constraint.SAXS_constraint_list_ID          
+
+    2  110.234  110.234  110.234  2    1  2  
+
+  stop_
+
+save_
+
 save_<other_constraints>
   _Other_constraint_list.Sf_category     other_constraints
   _Other_constraint_list.Sf_framecode     <other_constraints>
@@ -7436,6 +7694,7 @@ save_
 save_<org_constr_file_comment>
   _Org_constr_file_comment.Sf_category     org_constr_file_comment
   _Org_constr_file_comment.Sf_framecode     <org_constr_file_comment>
+
   _Org_constr_file_comment.Entry_ID                    1
   _Org_constr_file_comment.Sf_ID                       2
   _Org_constr_file_comment.ID                          2
@@ -7443,5 +7702,210 @@ save_<org_constr_file_comment>
   _Org_constr_file_comment.Block_ID                    2
   _Org_constr_file_comment.Details                     "Possible multiline text"
   _Org_constr_file_comment.Comment                     "Possible multiline text"
+save_
+
+save_<MS_MZ_data>
+  _MZ_ratio_data_list.Sf_category     MS_MZ_data
+  _MZ_ratio_data_list.Sf_framecode     <MS_MZ_data>
+  _MZ_ratio_data_list.Entry_ID                               1
+  _MZ_ratio_data_list.Sf_ID                                  2
+  _MZ_ratio_data_list.ID                                     2
+  _MZ_ratio_data_list.Sample_condition_list_ID               2
+  _MZ_ratio_data_list.Sample_condition_list_label            "Long string value"
+  _MZ_ratio_data_list.Mass_spec_ref_compd_set_ID             2
+  _MZ_ratio_data_list.Mass_spec_ref_compd_set_label          "Long string value"
+  _MZ_ratio_data_list.Mass_spec_ref_compd_ID                 2
+  _MZ_ratio_data_list.MZ_error_units                         "String value"
+  _MZ_ratio_data_list.Intensity_units                        "String value"
+  _MZ_ratio_data_list.Error_derivation_method                "Long string value"
+  _MZ_ratio_data_list.Details                                "Possible multiline text"
+  _MZ_ratio_data_list.Text_data_format                       "String value"
+  _MZ_ratio_data_list.Text_data                              "Possible multiline text"
+
+  loop_
+     _MZ_ratio_experiment.Experiment_ID                  
+     _MZ_ratio_experiment.Experiment_name                
+     _MZ_ratio_experiment.Sample_ID                      
+     _MZ_ratio_experiment.Sample_label                   
+     _MZ_ratio_experiment.Sf_ID                          
+     _MZ_ratio_experiment.Entry_ID                       
+     _MZ_ratio_experiment.MZ_ratio_data_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _MZ_ratio_software.Software_ID                    
+     _MZ_ratio_software.Software_label                 
+     _MZ_ratio_software.Method_ID                      
+     _MZ_ratio_software.Method_label                   
+     _MZ_ratio_software.Sf_ID                          
+     _MZ_ratio_software.Entry_ID                       
+     _MZ_ratio_software.MZ_ratio_data_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _MZ_ratio_spectrum_param.ID                             
+     _MZ_ratio_spectrum_param.Name                           
+     _MZ_ratio_spectrum_param.Value                          
+     _MZ_ratio_spectrum_param.Units                          
+     _MZ_ratio_spectrum_param.Sf_ID                          
+     _MZ_ratio_spectrum_param.Entry_ID                       
+     _MZ_ratio_spectrum_param.MZ_ratio_data_list_ID          
+
+    2  "Long string value"  "Long string value"  "String value"  2    1  2  
+
+  stop_
+
+  loop_
+     _MZ_precursor_ion.ID                               
+     _MZ_precursor_ion.MZ_ratio                         
+     _MZ_precursor_ion.MZ_ratio_err                     
+     _MZ_precursor_ion.Intensity                        
+     _MZ_precursor_ion.Relative_intensity               
+     _MZ_precursor_ion.S_N_ratio                        
+     _MZ_precursor_ion.Full_width_half_maximum          
+     _MZ_precursor_ion.Sf_ID                            
+     _MZ_precursor_ion.Entry_ID                         
+     _MZ_precursor_ion.MZ_ratio_data_list_ID            
+
+    2  110.234  110.234  110.234  110.234    110.234  110.234  2  1  2    
+
+  stop_
+
+  loop_
+     _MZ_precursor_ion_annotation.ID                             
+     _MZ_precursor_ion_annotation.MZ_precursor_ion_ID            
+     _MZ_precursor_ion_annotation.Entity_ID                      
+     _MZ_precursor_ion_annotation.Comp_index_ID                  
+     _MZ_precursor_ion_annotation.Comp_ID                        
+     _MZ_precursor_ion_annotation.Chemical_composition           
+     _MZ_precursor_ion_annotation.Sf_ID                          
+     _MZ_precursor_ion_annotation.Entry_ID                       
+     _MZ_precursor_ion_annotation.MZ_ratio_data_list_ID          
+
+    2  2  2  2  1    "Long string value"  2  1  2  
+
+  stop_
+
+  loop_
+     _MZ_product_ion.ID                               
+     _MZ_product_ion.MZ_ratio                         
+     _MZ_product_ion.MZ_ratio_err                     
+     _MZ_product_ion.Intensity                        
+     _MZ_product_ion.Relative_intensity               
+     _MZ_product_ion.S_N_ratio                        
+     _MZ_product_ion.Full_width_half_maximum          
+     _MZ_product_ion.Sf_ID                            
+     _MZ_product_ion.Entry_ID                         
+     _MZ_product_ion.MZ_ratio_data_list_ID            
+
+    2  110.234  110.234  110.234  110.234    110.234  110.234  2  1  2    
+
+  stop_
+
+  loop_
+     _MZ_product_ion_annotation.ID                             
+     _MZ_product_ion_annotation.MZ_product_ion_ID              
+     _MZ_product_ion_annotation.Entity_ID                      
+     _MZ_product_ion_annotation.Comp_index_ID                  
+     _MZ_product_ion_annotation.Comp_ID                        
+     _MZ_product_ion_annotation.Chemical_composition           
+     _MZ_product_ion_annotation.Sf_ID                          
+     _MZ_product_ion_annotation.Entry_ID                       
+     _MZ_product_ion_annotation.MZ_ratio_data_list_ID          
+
+    2  2  2  2  1    "Long string value"  2  1  2  
+
+  stop_
+
+save_
+
+save_<MS_chromatogram>
+  _MS_chromatogram_list.Sf_category     MS_chromatogram
+  _MS_chromatogram_list.Sf_framecode     <MS_chromatogram>
+  _MS_chromatogram_list.Entry_ID                             1
+  _MS_chromatogram_list.Sf_ID                                2
+  _MS_chromatogram_list.ID                                   2
+  _MS_chromatogram_list.Sample_condition_list_ID             2
+  _MS_chromatogram_list.Sample_condition_list_label          "Long string value"
+  _MS_chromatogram_list.Details                              "Possible multiline text"
+  _MS_chromatogram_list.Text_data_format                     "String value"
+  _MS_chromatogram_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _MS_chromatogram_experiment.Experiment_ID                    
+     _MS_chromatogram_experiment.Experiment_name                  
+     _MS_chromatogram_experiment.Sample_ID                        
+     _MS_chromatogram_experiment.Sample_label                     
+     _MS_chromatogram_experiment.Sf_ID                            
+     _MS_chromatogram_experiment.Entry_ID                         
+     _MS_chromatogram_experiment.MS_chromatogram_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _MS_chromatogram_software.Software_ID                      
+     _MS_chromatogram_software.Software_label                   
+     _MS_chromatogram_software.Method_ID                        
+     _MS_chromatogram_software.Method_label                     
+     _MS_chromatogram_software.Sf_ID                            
+     _MS_chromatogram_software.Entry_ID                         
+     _MS_chromatogram_software.MS_chromatogram_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _MS_chromatogram_param.ID                               
+     _MS_chromatogram_param.Name                             
+     _MS_chromatogram_param.Value                            
+     _MS_chromatogram_param.Units                            
+     _MS_chromatogram_param.Sf_ID                            
+     _MS_chromatogram_param.Entry_ID                         
+     _MS_chromatogram_param.MS_chromatogram_list_ID          
+
+    2  "Long string value"  "Long string value"  "String value"  2    1  2  
+
+  stop_
+
+  loop_
+     _MS_chromatogram_ion.ID                               
+     _MS_chromatogram_ion.MZ_ratio                         
+     _MS_chromatogram_ion.MZ_ratio_err                     
+     _MS_chromatogram_ion.MZ_Intensity                     
+     _MS_chromatogram_ion.MZ_relative_intensity            
+     _MS_chromatogram_ion.S_N_ratio                        
+     _MS_chromatogram_ion.Full_width_half_maximum          
+     _MS_chromatogram_ion.Sf_ID                            
+     _MS_chromatogram_ion.Entry_ID                         
+     _MS_chromatogram_ion.MS_chromatogram_list_ID          
+
+    2  110.234  110.234  110.234  110.234    110.234  110.234  2  1  2    
+
+  stop_
+
+  loop_
+     _MS_chrom_ion_annotation.ID                               
+     _MS_chrom_ion_annotation.MS_chromatogram_ion_ID           
+     _MS_chrom_ion_annotation.Entity_ID                        
+     _MS_chrom_ion_annotation.Comp_index_ID                    
+     _MS_chrom_ion_annotation.Comp_ID                          
+     _MS_chrom_ion_annotation.Chemical_composition             
+     _MS_chrom_ion_annotation.Sf_ID                            
+     _MS_chrom_ion_annotation.Entry_ID                         
+     _MS_chrom_ion_annotation.MS_chromatogram_list_ID          
+
+    2  2  2  2  1    "Long string value"  2  1  2  
+
+  stop_
+
 save_
 

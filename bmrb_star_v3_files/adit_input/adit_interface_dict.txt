@@ -5994,6 +5994,60 @@ Release ID
 
 save_
 
+save__Release.Format_type
+
+   _Tag                  '_Release.Format_type'
+
+   _Category              'Release'
+
+   _Description
+;
+n/a
+;
+
+   _Adit_item_view_name
+;
+Format type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Release.Format_version
+
+   _Tag                  '_Release.Format_version'
+
+   _Category              'Release'
+
+   _Description
+;
+n/a
+;
+
+   _Adit_item_view_name
+;
+Format version
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Release.Date
 
    _Tag                  '_Release.Date'
@@ -35343,11 +35397,11 @@ Method ID
 
 save_
 
-save__Mass_spectrometer.Sf_category
+save__Mass_spec.Sf_category
 
-   _Tag                  '_Mass_spectrometer.Sf_category'
+   _Tag                  '_Mass_spec.Sf_category'
 
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35370,11 +35424,11 @@ Sf category
 
 save_
 
-save__Mass_spectrometer.Sf_framecode
+save__Mass_spec.Sf_framecode
 
-   _Tag                  '_Mass_spectrometer.Sf_framecode'
+   _Tag                  '_Mass_spec.Sf_framecode'
 
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35397,11 +35451,11 @@ Mass spectrometer label
 
 save_
 
-save__Mass_spectrometer.Entry_ID
+save__Mass_spec.Entry_ID
 
-   _Tag                  '_Mass_spectrometer.Entry_ID'
+   _Tag                  '_Mass_spec.Entry_ID'
 
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35424,11 +35478,11 @@ Entry ID
 
 save_
 
-save__Mass_spectrometer.Sf_ID
+save__Mass_spec.Sf_ID
 
-   _Tag                  '_Mass_spectrometer.Sf_ID'
+   _Tag                  '_Mass_spec.Sf_ID'
 
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35451,11 +35505,11 @@ Sf ID
 
 save_
 
-save__Mass_spectrometer.ID
+save__Mass_spec.ID
 
-   _Tag                  '_Mass_spectrometer.ID'
+   _Tag                  '_Mass_spec.ID'
 
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35478,65 +35532,11 @@ Mass spectrometer ID
 
 save_
 
-save__Mass_spectrometer.Manufacturer
+save__Mass_spec.Type
 
-   _Tag                  '_Mass_spectrometer.Manufacturer'
+   _Tag                  '_Mass_spec.Type'
 
-   _Category              'Mass_spectrometer'
-
-   _Description
-;
-Name of the company or other entity that built the Mass spectrometer.
-;
-
-   _Adit_item_view_name
-;
-Manufacturer
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Mass_spectrometer.Model
-
-   _Tag                  '_Mass_spectrometer.Model'
-
-   _Category              'Mass_spectrometer'
-
-   _Description
-;
-The name or acronym used to describe the model of the spectrometer.
-;
-
-   _Adit_item_view_name
-;
-Model
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Mass_spectrometer.Type
-
-   _Tag                  '_Mass_spectrometer.Type'
-
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35559,20 +35559,20 @@ Mass spectrometer type
 
 save_
 
-save__Mass_spectrometer.Fragmentation_method
+save__Mass_spec.Manufacturer
 
-   _Tag                  '_Mass_spectrometer.Fragmentation_method'
+   _Tag                  '_Mass_spec.Manufacturer'
 
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
-Enter the method by the mass spectrometer to fragment compounds.
+Name of the company or other entity that built the Mass spectrometer.
 ;
 
    _Adit_item_view_name
 ;
-Fragmentation method
+Manufacturer
 ;
 
    loop_
@@ -35586,11 +35586,38 @@ Fragmentation method
 
 save_
 
-save__Mass_spectrometer.Serial_number
+save__Mass_spec.Model
 
-   _Tag                  '_Mass_spectrometer.Serial_number'
+   _Tag                  '_Mass_spec.Model'
 
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
+
+   _Description
+;
+The name or acronym used to describe the model of the spectrometer.
+;
+
+   _Adit_item_view_name
+;
+Model
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Mass_spec.Serial_number
+
+   _Tag                  '_Mass_spec.Serial_number'
+
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35613,38 +35640,11 @@ Serial number
 
 save_
 
-save__Mass_spectrometer.Mass_ref_introduction_method
+save__Mass_spec.Details
 
-   _Tag                  '_Mass_spectrometer.Mass_ref_introduction_method'
+   _Tag                  '_Mass_spec.Details'
 
-   _Category              'Mass_spectrometer'
-
-   _Description
-;
-?
-;
-
-   _Adit_item_view_name
-;
-Mass ref introduction method
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Mass_spectrometer.Details
-
-   _Tag                  '_Mass_spectrometer.Details'
-
-   _Category              'Mass_spectrometer'
+   _Category              'Mass_spec'
 
    _Description
 ;
@@ -35667,11 +35667,524 @@ Details
 
 save_
 
-save__Mass_spectrometer_citation.Citation_ID
+save__Mass_spec_config.ID
 
-   _Tag                  '_Mass_spectrometer_citation.Citation_ID'
+   _Tag                  '_Mass_spec_config.ID'
 
-   _Category              'Mass_spectrometer_citation'
+   _Category              'Mass_spec_config'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_config.Ordinal
+
+   _Tag                  '_Mass_spec_config.Ordinal'
+
+   _Category              'Mass_spec_config'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Ordinal
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_config.Component_type
+
+   _Tag                  '_Mass_spec_config.Component_type'
+
+   _Category              'Mass_spec_config'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Component type
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_config.Component_name
+
+   _Tag                  '_Mass_spec_config.Component_name'
+
+   _Category              'Mass_spec_config'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Component name
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_config.Sf_ID
+
+   _Tag                  '_Mass_spec_config.Sf_ID'
+
+   _Category              'Mass_spec_config'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_config.Entry_ID
+
+   _Tag                  '_Mass_spec_config.Entry_ID'
+
+   _Category              'Mass_spec_config'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_config.Mass_spec_ID
+
+   _Tag                  '_Mass_spec_config.Mass_spec_ID'
+
+   _Category              'Mass_spec_config'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Mass spec ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_component_param.Mass_spec_config_ID
+
+   _Tag                  '_Mass_spec_component_param.Mass_spec_config_ID'
+
+   _Category              'Mass_spec_component_param'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Mass spec config ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_component_param.ID
+
+   _Tag                  '_Mass_spec_component_param.ID'
+
+   _Category              'Mass_spec_component_param'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_component_param.Name
+
+   _Tag                  '_Mass_spec_component_param.Name'
+
+   _Category              'Mass_spec_component_param'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_component_param.Value
+
+   _Tag                  '_Mass_spec_component_param.Value'
+
+   _Category              'Mass_spec_component_param'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Value
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_component_param.Sf_ID
+
+   _Tag                  '_Mass_spec_component_param.Sf_ID'
+
+   _Category              'Mass_spec_component_param'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_component_param.Entry_ID
+
+   _Tag                  '_Mass_spec_component_param.Entry_ID'
+
+   _Category              'Mass_spec_component_param'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_component_param.Mass_spec_ID
+
+   _Tag                  '_Mass_spec_component_param.Mass_spec_ID'
+
+   _Category              'Mass_spec_component_param'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Mass spec ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_software.ID
+
+   _Tag                  '_Mass_spec_software.ID'
+
+   _Category              'Mass_spec_software'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_software.Label
+
+   _Tag                  '_Mass_spec_software.Label'
+
+   _Category              'Mass_spec_software'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Label
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_software.Sf_ID
+
+   _Tag                  '_Mass_spec_software.Sf_ID'
+
+   _Category              'Mass_spec_software'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_software.Entry_ID
+
+   _Tag                  '_Mass_spec_software.Entry_ID'
+
+   _Category              'Mass_spec_software'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_software.Mass_spec_ID
+
+   _Tag                  '_Mass_spec_software.Mass_spec_ID'
+
+   _Category              'Mass_spec_software'
+
+   _Description
+;
+
+;
+
+   _Adit_item_view_name
+;
+Mass spec ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__Mass_spec_citation.Citation_ID
+
+   _Tag                  '_Mass_spec_citation.Citation_ID'
+
+   _Category              'Mass_spec_citation'
 
    _Description
 ;
@@ -35694,11 +36207,11 @@ Citation ID
 
 save_
 
-save__Mass_spectrometer_citation.Citation_label
+save__Mass_spec_citation.Citation_label
 
-   _Tag                  '_Mass_spectrometer_citation.Citation_label'
+   _Tag                  '_Mass_spec_citation.Citation_label'
 
-   _Category              'Mass_spectrometer_citation'
+   _Category              'Mass_spec_citation'
 
    _Description
 ;
@@ -35721,11 +36234,11 @@ Citation label
 
 save_
 
-save__Mass_spectrometer_citation.Sf_ID
+save__Mass_spec_citation.Sf_ID
 
-   _Tag                  '_Mass_spectrometer_citation.Sf_ID'
+   _Tag                  '_Mass_spec_citation.Sf_ID'
 
-   _Category              'Mass_spectrometer_citation'
+   _Category              'Mass_spec_citation'
 
    _Description
 ;
@@ -35748,11 +36261,11 @@ Sf ID
 
 save_
 
-save__Mass_spectrometer_citation.Entry_ID
+save__Mass_spec_citation.Entry_ID
 
-   _Tag                  '_Mass_spectrometer_citation.Entry_ID'
+   _Tag                  '_Mass_spec_citation.Entry_ID'
 
-   _Category              'Mass_spectrometer_citation'
+   _Category              'Mass_spec_citation'
 
    _Description
 ;
@@ -35775,11 +36288,11 @@ Entry ID
 
 save_
 
-save__Mass_spectrometer_citation.Mass_spectrometer_ID
+save__Mass_spec_citation.Mass_spec_ID
 
-   _Tag                  '_Mass_spectrometer_citation.Mass_spectrometer_ID'
+   _Tag                  '_Mass_spec_citation.Mass_spec_ID'
 
-   _Category              'Mass_spectrometer_citation'
+   _Category              'Mass_spec_citation'
 
    _Description
 ;
@@ -35788,7 +36301,7 @@ Pointer to '_Mass_spectrometer.ID'
 
    _Adit_item_view_name
 ;
-Mass spectrometer ID
+Mass spec ID
 ;
 
    loop_
@@ -36099,6 +36612,60 @@ Fragmentation method
 
 save_
 
+save__Mass_spectrometer_view.Ionization_method
+
+   _Tag                  '_Mass_spectrometer_view.Ionization_method'
+
+   _Category              'Mass_spectrometer_view'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Ionization method
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Mass_spectrometer_view.Spectrum_type
+
+   _Tag                  '_Mass_spectrometer_view.Spectrum_type'
+
+   _Category              'Mass_spectrometer_view'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Spectrum type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Mass_spectrometer_view.Serial_number
 
    _Tag                  '_Mass_spectrometer_view.Serial_number'
@@ -36113,33 +36680,6 @@ Unique code assigned to a specific spectrometer by the manufacturer.
    _Adit_item_view_name
 ;
 Serial number
-;
-
-   loop_
-     _Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Mass_spectrometer_view.Mass_ref_introduction_method
-
-   _Tag                  '_Mass_spectrometer_view.Mass_ref_introduction_method'
-
-   _Category              'Mass_spectrometer_view'
-
-   _Description
-;
-?
-;
-
-   _Adit_item_view_name
-;
-Mass ref introduction method
 ;
 
    loop_
@@ -37355,6 +37895,978 @@ save__Chromatographic_column.Length
    _Adit_item_view_name
 ;
 Length
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Sf_category
+
+   _Tag                  '_Fluorescence_instrument.Sf_category'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Sf_framecode
+
+   _Tag                  '_Fluorescence_instrument.Sf_framecode'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Entry_ID
+
+   _Tag                  '_Fluorescence_instrument.Entry_ID'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Sf_ID
+
+   _Tag                  '_Fluorescence_instrument.Sf_ID'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.ID
+
+   _Tag                  '_Fluorescence_instrument.ID'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Details
+
+   _Tag                  '_Fluorescence_instrument.Details'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Type
+
+   _Tag                  '_Fluorescence_instrument.Type'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Manufacturer
+
+   _Tag                  '_Fluorescence_instrument.Manufacturer'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Manufacturer
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Model
+
+   _Tag                  '_Fluorescence_instrument.Model'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Model
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Fluorescence_instrument.Serial_number
+
+   _Tag                  '_Fluorescence_instrument.Serial_number'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Serial number
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Sf_category
+
+   _Tag                  '_EMR_instrument.Sf_category'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Sf_framecode
+
+   _Tag                  '_EMR_instrument.Sf_framecode'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Entry_ID
+
+   _Tag                  '_EMR_instrument.Entry_ID'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Sf_ID
+
+   _Tag                  '_EMR_instrument.Sf_ID'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.ID
+
+   _Tag                  '_EMR_instrument.ID'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Details
+
+   _Tag                  '_EMR_instrument.Details'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Type
+
+   _Tag                  '_EMR_instrument.Type'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Manufacturer
+
+   _Tag                  '_EMR_instrument.Manufacturer'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Manufacturer
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Model
+
+   _Tag                  '_EMR_instrument.Model'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Model
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Serial_number
+
+   _Tag                  '_EMR_instrument.Serial_number'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Serial number
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Sf_category
+
+   _Tag                  '_X_ray_instrument.Sf_category'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Sf_framecode
+
+   _Tag                  '_X_ray_instrument.Sf_framecode'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Entry_ID
+
+   _Tag                  '_X_ray_instrument.Entry_ID'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Sf_ID
+
+   _Tag                  '_X_ray_instrument.Sf_ID'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.ID
+
+   _Tag                  '_X_ray_instrument.ID'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Details
+
+   _Tag                  '_X_ray_instrument.Details'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Location
+
+   _Tag                  '_X_ray_instrument.Location'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Location
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Type
+
+   _Tag                  '_X_ray_instrument.Type'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Manufacturer
+
+   _Tag                  '_X_ray_instrument.Manufacturer'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Manufacturer
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Model
+
+   _Tag                  '_X_ray_instrument.Model'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Model
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Serial_number
+
+   _Tag                  '_X_ray_instrument.Serial_number'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Serial number
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Detector_type
+
+   _Tag                  '_X_ray_instrument.Detector_type'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Detector type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Source
+
+   _Tag                  '_X_ray_instrument.Source'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Source
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.Wavelength
+
+   _Tag                  '_X_ray_instrument.Wavelength'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Wavelength
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.SAXS_detector_sample_distance
+
+   _Tag                  '_X_ray_instrument.SAXS_detector_sample_distance'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+SAXS detector sample distance
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__X_ray_instrument.WAXS_detector_sample_distance
+
+   _Tag                  '_X_ray_instrument.WAXS_detector_sample_distance'
+
+   _Category              'X_ray_instrument'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+WAXS detector sample distance
 ;
 
    loop_
@@ -39150,6 +40662,222 @@ NMR spec expt label
 
 save_
 
+save__Experiment.MS_expt_ID
+
+   _Tag                  '_Experiment.MS_expt_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS expt ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.MS_expt_label
+
+   _Tag                  '_Experiment.MS_expt_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS expt label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.SAXS_expt_ID
+
+   _Tag                  '_Experiment.SAXS_expt_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+SAXS expt ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.SAXS_expt_label
+
+   _Tag                  '_Experiment.SAXS_expt_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+SAXS expt label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.FRET_expt_ID
+
+   _Tag                  '_Experiment.FRET_expt_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+FRET expt ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.FRET_expt_label
+
+   _Tag                  '_Experiment.FRET_expt_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+FRET expt label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.EMR_expt_ID
+
+   _Tag                  '_Experiment.EMR_expt_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+EMR expt ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.EMR_expt_label
+
+   _Tag                  '_Experiment.EMR_expt_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+EMR expt label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Experiment.Sample_ID
 
    _Tag                  '_Experiment.Sample_ID'
@@ -39569,6 +41297,330 @@ Pointer to a saveframe of category 'NMR_spectral_processing'.
    _Adit_item_view_name
 ;
 NMR spectral processing label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Mass_spectrometer_ID
+
+   _Tag                  '_Experiment.Mass_spectrometer_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Mass spectrometer ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Mass_spectrometer_label
+
+   _Tag                  '_Experiment.Mass_spectrometer_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Mass spectrometer label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.X_ray_instrument_ID
+
+   _Tag                  '_Experiment.X_ray_instrument_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+X ray instrument ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.X_ray_instrument_label
+
+   _Tag                  '_Experiment.X_ray_instrument_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+X ray instrument label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Fluorescence_instrument_ID
+
+   _Tag                  '_Experiment.Fluorescence_instrument_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Fluorescence instrument ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Fluorescence_instrument_label
+
+   _Tag                  '_Experiment.Fluorescence_instrument_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Fluorescence instrument label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.EMR_instrument_ID
+
+   _Tag                  '_Experiment.EMR_instrument_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+EMR instrument ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.EMR_instrument_label
+
+   _Tag                  '_Experiment.EMR_instrument_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+EMR instrument label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Chromatographic_system_ID
+
+   _Tag                  '_Experiment.Chromatographic_system_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Chromatographic system ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Chromatographic_system_label
+
+   _Tag                  '_Experiment.Chromatographic_system_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Chromatographic system label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Chromatographic_column_ID
+
+   _Tag                  '_Experiment.Chromatographic_column_ID'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Chromatographic column ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Experiment.Chromatographic_column_label
+
+   _Tag                  '_Experiment.Chromatographic_column_label'
+
+   _Category              'Experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Chromatographic column label
 ;
 
    loop_
@@ -42134,6 +44186,1896 @@ Pointer to '_NMR_spectral_processing.ID'
    _Adit_item_view_name
 ;
 NMR spectral processing ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Sf_category
+
+   _Tag                  '_MS_expt.Sf_category'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Sf_framecode
+
+   _Tag                  '_MS_expt.Sf_framecode'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Entry_ID
+
+   _Tag                  '_MS_expt.Entry_ID'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Sf_ID
+
+   _Tag                  '_MS_expt.Sf_ID'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.ID
+
+   _Tag                  '_MS_expt.ID'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Name
+
+   _Tag                  '_MS_expt.Name'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Mass_spec_ID
+
+   _Tag                  '_MS_expt.Mass_spec_ID'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Mass spec ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Mass_spec_label
+
+   _Tag                  '_MS_expt.Mass_spec_label'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Mass spec label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt.Spectrum_type
+
+   _Tag                  '_MS_expt.Spectrum_type'
+
+   _Category              'MS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Spectrum type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.ID
+
+   _Tag                  '_MS_expt_param.ID'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.Type
+
+   _Tag                  '_MS_expt_param.Type'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.Name
+
+   _Tag                  '_MS_expt_param.Name'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.Value
+
+   _Tag                  '_MS_expt_param.Value'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Value
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.Value_err
+
+   _Tag                  '_MS_expt_param.Value_err'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Value err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.Sf_ID
+
+   _Tag                  '_MS_expt_param.Sf_ID'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.Entry_ID
+
+   _Tag                  '_MS_expt_param.Entry_ID'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_param.MS_expt_ID
+
+   _Tag                  '_MS_expt_param.MS_expt_ID'
+
+   _Category              'MS_expt_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS expt ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.Software_ID
+
+   _Tag                  '_MS_expt_software.Software_ID'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.Software_label
+
+   _Tag                  '_MS_expt_software.Software_label'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.Method_ID
+
+   _Tag                  '_MS_expt_software.Method_ID'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.Method_label
+
+   _Tag                  '_MS_expt_software.Method_label'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.Details
+
+   _Tag                  '_MS_expt_software.Details'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.Sf_ID
+
+   _Tag                  '_MS_expt_software.Sf_ID'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.Entry_ID
+
+   _Tag                  '_MS_expt_software.Entry_ID'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_expt_software.MS_expt_ID
+
+   _Tag                  '_MS_expt_software.MS_expt_ID'
+
+   _Category              'MS_expt_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS expt ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Sf_category
+
+   _Tag                  '_FRET_expt.Sf_category'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Sf_framecode
+
+   _Tag                  '_FRET_expt.Sf_framecode'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Entry_ID
+
+   _Tag                  '_FRET_expt.Entry_ID'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Sf_ID
+
+   _Tag                  '_FRET_expt.Sf_ID'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.ID
+
+   _Tag                  '_FRET_expt.ID'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Name
+
+   _Tag                  '_FRET_expt.Name'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Sample_volume
+
+   _Tag                  '_FRET_expt.Sample_volume'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample volume
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Sample_volume_units
+
+   _Tag                  '_FRET_expt.Sample_volume_units'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample volume units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Fluorescence_instrument_ID
+
+   _Tag                  '_FRET_expt.Fluorescence_instrument_ID'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Fluorescence instrument ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Fluorescence_instrument_label
+
+   _Tag                  '_FRET_expt.Fluorescence_instrument_label'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Fluorescence instrument label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Software_ID
+
+   _Tag                  '_FRET_expt.Software_ID'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Software_label
+
+   _Tag                  '_FRET_expt.Software_label'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Method_ID
+
+   _Tag                  '_FRET_expt.Method_ID'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Method_label
+
+   _Tag                  '_FRET_expt.Method_label'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__FRET_expt.Details
+
+   _Tag                  '_FRET_expt.Details'
+
+   _Category              'FRET_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Sf_category
+
+   _Tag                  '_EMR_expt.Sf_category'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Sf_framecode
+
+   _Tag                  '_EMR_expt.Sf_framecode'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Entry_ID
+
+   _Tag                  '_EMR_expt.Entry_ID'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Sf_ID
+
+   _Tag                  '_EMR_expt.Sf_ID'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.ID
+
+   _Tag                  '_EMR_expt.ID'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Name
+
+   _Tag                  '_EMR_expt.Name'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Sample_volume
+
+   _Tag                  '_EMR_expt.Sample_volume'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample volume
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Sample_volume_units
+
+   _Tag                  '_EMR_expt.Sample_volume_units'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample volume units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.EMR_instrument_ID
+
+   _Tag                  '_EMR_expt.EMR_instrument_ID'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+EMR instrument ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.EMR_instrument_label
+
+   _Tag                  '_EMR_expt.EMR_instrument_label'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+EMR instrument label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Software_ID
+
+   _Tag                  '_EMR_expt.Software_ID'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Software_label
+
+   _Tag                  '_EMR_expt.Software_label'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Method_ID
+
+   _Tag                  '_EMR_expt.Method_ID'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Method_label
+
+   _Tag                  '_EMR_expt.Method_label'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_expt.Details
+
+   _Tag                  '_EMR_expt.Details'
+
+   _Category              'EMR_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Sf_category
+
+   _Tag                  '_SAXS_expt.Sf_category'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Sf_framecode
+
+   _Tag                  '_SAXS_expt.Sf_framecode'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Entry_ID
+
+   _Tag                  '_SAXS_expt.Entry_ID'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Sf_ID
+
+   _Tag                  '_SAXS_expt.Sf_ID'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.ID
+
+   _Tag                  '_SAXS_expt.ID'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Name
+
+   _Tag                  '_SAXS_expt.Name'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Sample_volume
+
+   _Tag                  '_SAXS_expt.Sample_volume'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample volume
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Sample_volume_units
+
+   _Tag                  '_SAXS_expt.Sample_volume_units'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample volume units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.X_ray_instrument_ID
+
+   _Tag                  '_SAXS_expt.X_ray_instrument_ID'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+X ray instrument ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.X_ray_instrument_label
+
+   _Tag                  '_SAXS_expt.X_ray_instrument_label'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+X ray instrument label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Software_ID
+
+   _Tag                  '_SAXS_expt.Software_ID'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Software_label
+
+   _Tag                  '_SAXS_expt.Software_label'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Method_ID
+
+   _Tag                  '_SAXS_expt.Method_ID'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Method_label
+
+   _Tag                  '_SAXS_expt.Method_label'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_expt.Details
+
+   _Tag                  '_SAXS_expt.Details'
+
+   _Category              'SAXS_expt'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
 ;
 
    loop_
@@ -69336,11 +73278,11 @@ H exch protection factor list ID
 
 save_
 
-save__H_exch_protect_fact_software.Software_ID
+save__H_exch_protection_fact_software.Software_ID
 
-   _Tag                  '_H_exch_protect_fact_software.Software_ID'
+   _Tag                  '_H_exch_protection_fact_software.Software_ID'
 
-   _Category              'H_exch_protect_fact_software'
+   _Category              'H_exch_protection_fact_software'
 
    _Description
 ;
@@ -69363,11 +73305,11 @@ Software ID
 
 save_
 
-save__H_exch_protect_fact_software.Software_label
+save__H_exch_protection_fact_software.Software_label
 
-   _Tag                  '_H_exch_protect_fact_software.Software_label'
+   _Tag                  '_H_exch_protection_fact_software.Software_label'
 
-   _Category              'H_exch_protect_fact_software'
+   _Category              'H_exch_protection_fact_software'
 
    _Description
 ;
@@ -69390,11 +73332,11 @@ Software label
 
 save_
 
-save__H_exch_protect_fact_software.Method_ID
+save__H_exch_protection_fact_software.Method_ID
 
-   _Tag                  '_H_exch_protect_fact_software.Method_ID'
+   _Tag                  '_H_exch_protection_fact_software.Method_ID'
 
-   _Category              'H_exch_protect_fact_software'
+   _Category              'H_exch_protection_fact_software'
 
    _Description
 ;
@@ -69417,11 +73359,11 @@ Method ID
 
 save_
 
-save__H_exch_protect_fact_software.Method_label
+save__H_exch_protection_fact_software.Method_label
 
-   _Tag                  '_H_exch_protect_fact_software.Method_label'
+   _Tag                  '_H_exch_protection_fact_software.Method_label'
 
-   _Category              'H_exch_protect_fact_software'
+   _Category              'H_exch_protection_fact_software'
 
    _Description
 ;
@@ -69444,11 +73386,11 @@ Method label
 
 save_
 
-save__H_exch_protect_fact_software.Sf_ID
+save__H_exch_protection_fact_software.Sf_ID
 
-   _Tag                  '_H_exch_protect_fact_software.Sf_ID'
+   _Tag                  '_H_exch_protection_fact_software.Sf_ID'
 
-   _Category              'H_exch_protect_fact_software'
+   _Category              'H_exch_protection_fact_software'
 
    _Description
 ;
@@ -69471,11 +73413,11 @@ Sf ID
 
 save_
 
-save__H_exch_protect_fact_software.Entry_ID
+save__H_exch_protection_fact_software.Entry_ID
 
-   _Tag                  '_H_exch_protect_fact_software.Entry_ID'
+   _Tag                  '_H_exch_protection_fact_software.Entry_ID'
 
-   _Category              'H_exch_protect_fact_software'
+   _Category              'H_exch_protection_fact_software'
 
    _Description
 ;
@@ -69498,11 +73440,11 @@ Entry ID
 
 save_
 
-save__H_exch_protect_fact_software.H_exch_protection_factor_list_ID
+save__H_exch_protection_fact_software.H_exch_protection_factor_list_ID
 
-   _Tag                  '_H_exch_protect_fact_software.H_exch_protection_factor_list_ID'
+   _Tag                  '_H_exch_protection_fact_software.H_exch_protection_factor_list_ID'
 
-   _Category              'H_exch_protect_fact_software'
+   _Category              'H_exch_protection_fact_software'
 
    _Description
 ;
@@ -141831,6 +145773,870 @@ H chem shift constraint list ID
 
 save_
 
+save__SAXS_constraint_list.Sf_category
+
+   _Tag                  '_SAXS_constraint_list.Sf_category'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+Category definition for the information content of the saveframe
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Sf_framecode
+
+   _Tag                  '_SAXS_constraint_list.Sf_framecode'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+A label for the saveframe that describes in very brief terms the information contained in the saveframe.
+;
+
+   _Adit_item_view_name
+;
+H exchange rate list label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Entry_ID
+
+   _Tag                  '_SAXS_constraint_list.Entry_ID'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Sf_ID
+
+   _Tag                  '_SAXS_constraint_list.Sf_ID'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.ID
+
+   _Tag                  '_SAXS_constraint_list.ID'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+A unique identifier for the list of hydrogen exchange rate data.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Data_file_name
+
+   _Tag                  '_SAXS_constraint_list.Data_file_name'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+The name of the file submitted with this depostion that contains the quantitative data for this saveframe.
+;
+
+   _Adit_item_view_name
+;
+Deposited data file name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Sample_condition_list_ID
+
+   _Tag                  '_SAXS_constraint_list.Sample_condition_list_ID'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample conditions ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Sample_condition_list_label
+
+   _Tag                  '_SAXS_constraint_list.Sample_condition_list_label'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+The label for the set of experimental sample conditions used to collect the data for determination of the H-exchange rates.
+;
+
+   _Adit_item_view_name
+;
+Sample conditions label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Details
+
+   _Tag                  '_SAXS_constraint_list.Details'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+Text describing the reported hydrogen exchange rates.
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Text_data_format
+
+   _Tag                  '_SAXS_constraint_list.Text_data_format'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+The data format used to represent the hydrogen exchange data as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Text_data
+
+   _Tag                  '_SAXS_constraint_list.Text_data'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+A set of hydrogen exchange rate data formatted as ASCII text.
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_expt.Experiment_ID
+
+   _Tag                  '_SAXS_constraint_expt.Experiment_ID'
+
+   _Category              'SAXS_constraint_expt'
+
+   _Description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _Adit_item_view_name
+;
+Experiment ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_expt.Experiment_name
+
+   _Tag                  '_SAXS_constraint_expt.Experiment_name'
+
+   _Category              'SAXS_constraint_expt'
+
+   _Description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _Adit_item_view_name
+;
+NMR experiments (select from NMR experiment and samples list)
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_expt.Sample_ID
+
+   _Tag                  '_SAXS_constraint_expt.Sample_ID'
+
+   _Category              'SAXS_constraint_expt'
+
+   _Description
+;
+Pointer to '_Sample.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_expt.Sample_label
+
+   _Tag                  '_SAXS_constraint_expt.Sample_label'
+
+   _Category              'SAXS_constraint_expt'
+
+   _Description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _Adit_item_view_name
+;
+Sample label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_expt.Sf_ID
+
+   _Tag                  '_SAXS_constraint_expt.Sf_ID'
+
+   _Category              'SAXS_constraint_expt'
+
+   _Description
+;
+Pointer to '_H_exch_rate_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_expt.Entry_ID
+
+   _Tag                  '_SAXS_constraint_expt.Entry_ID'
+
+   _Category              'SAXS_constraint_expt'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_expt.SAXS_constraint_list_ID
+
+   _Tag                  '_SAXS_constraint_expt.SAXS_constraint_list_ID'
+
+   _Category              'SAXS_constraint_expt'
+
+   _Description
+;
+Pointer to '_H_exch_rate_list.ID'
+;
+
+   _Adit_item_view_name
+;
+SAXS constraint list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_software.Software_ID
+
+   _Tag                  '_SAXS_constraint_software.Software_ID'
+
+   _Category              'SAXS_constraint_software'
+
+   _Description
+;
+Pointer to '_Software.ID'
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_software.Software_label
+
+   _Tag                  '_SAXS_constraint_software.Software_label'
+
+   _Category              'SAXS_constraint_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_software.Method_ID
+
+   _Tag                  '_SAXS_constraint_software.Method_ID'
+
+   _Category              'SAXS_constraint_software'
+
+   _Description
+;
+Pointer to '_Method.ID'
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_software.Method_label
+
+   _Tag                  '_SAXS_constraint_software.Method_label'
+
+   _Category              'SAXS_constraint_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_software.Sf_ID
+
+   _Tag                  '_SAXS_constraint_software.Sf_ID'
+
+   _Category              'SAXS_constraint_software'
+
+   _Description
+;
+Pointer to '_H_exch_rate_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_software.Entry_ID
+
+   _Tag                  '_SAXS_constraint_software.Entry_ID'
+
+   _Category              'SAXS_constraint_software'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_software.SAXS_constraint_list_ID
+
+   _Tag                  '_SAXS_constraint_software.SAXS_constraint_list_ID'
+
+   _Category              'SAXS_constraint_software'
+
+   _Description
+;
+Pointer to '_H_exch_rate_list.ID'
+;
+
+   _Adit_item_view_name
+;
+SAXS constraint list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.ID
+
+   _Tag                  '_SAXS_constraint.ID'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+Unique identifier for the observed hydrogen exchange rate.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.Q_value
+
+   _Tag                  '_SAXS_constraint.Q_value'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Q value
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.Intensity_val
+
+   _Tag                  '_SAXS_constraint.Intensity_val'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+Hydrogen exchange rate value
+;
+
+   _Adit_item_view_name
+;
+Intensity val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.Intensity_val_err
+
+   _Tag                  '_SAXS_constraint.Intensity_val_err'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+Estimated minimum value for the hydrogen exchange rate when a specific value cannot be obtained.
+;
+
+   _Adit_item_view_name
+;
+Intensity val err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.Sf_ID
+
+   _Tag                  '_SAXS_constraint.Sf_ID'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+Pointer to '_H_exch_rate_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.Entry_ID
+
+   _Tag                  '_SAXS_constraint.Entry_ID'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.SAXS_constraint_list_ID
+
+   _Tag                  '_SAXS_constraint.SAXS_constraint_list_ID'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+Pointer to '_H_exch_rate_list.ID'
+;
+
+   _Adit_item_view_name
+;
+SAXS constraint list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Other_constraint_list.Sf_category
 
    _Tag                  '_Other_constraint_list.Sf_category'
@@ -142959,6 +147765,3381 @@ Comment
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Sf_category
+
+   _Tag                  '_MZ_ratio_data_list.Sf_category'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Sf_framecode
+
+   _Tag                  '_MZ_ratio_data_list.Sf_framecode'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Entry_ID
+
+   _Tag                  '_MZ_ratio_data_list.Entry_ID'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Sf_ID
+
+   _Tag                  '_MZ_ratio_data_list.Sf_ID'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.ID
+
+   _Tag                  '_MZ_ratio_data_list.ID'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Sample_condition_list_ID
+
+   _Tag                  '_MZ_ratio_data_list.Sample_condition_list_ID'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample condition list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Sample_condition_list_label
+
+   _Tag                  '_MZ_ratio_data_list.Sample_condition_list_label'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample condition list label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Mass_spec_ref_compd_set_ID
+
+   _Tag                  '_MZ_ratio_data_list.Mass_spec_ref_compd_set_ID'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Mass spec ref compd set ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Mass_spec_ref_compd_set_label
+
+   _Tag                  '_MZ_ratio_data_list.Mass_spec_ref_compd_set_label'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Mass spec ref compd set label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Mass_spec_ref_compd_ID
+
+   _Tag                  '_MZ_ratio_data_list.Mass_spec_ref_compd_ID'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Mass spec ref compd ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.MZ_error_units
+
+   _Tag                  '_MZ_ratio_data_list.MZ_error_units'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ error units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Intensity_units
+
+   _Tag                  '_MZ_ratio_data_list.Intensity_units'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Intensity units
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Error_derivation_method
+
+   _Tag                  '_MZ_ratio_data_list.Error_derivation_method'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Error derivation method
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Details
+
+   _Tag                  '_MZ_ratio_data_list.Details'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Text_data_format
+
+   _Tag                  '_MZ_ratio_data_list.Text_data_format'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Text_data
+
+   _Tag                  '_MZ_ratio_data_list.Text_data'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_experiment.Experiment_ID
+
+   _Tag                  '_MZ_ratio_experiment.Experiment_ID'
+
+   _Category              'MZ_ratio_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Experiment ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_experiment.Experiment_name
+
+   _Tag                  '_MZ_ratio_experiment.Experiment_name'
+
+   _Category              'MZ_ratio_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Experiment name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_experiment.Sample_ID
+
+   _Tag                  '_MZ_ratio_experiment.Sample_ID'
+
+   _Category              'MZ_ratio_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_experiment.Sample_label
+
+   _Tag                  '_MZ_ratio_experiment.Sample_label'
+
+   _Category              'MZ_ratio_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_experiment.Sf_ID
+
+   _Tag                  '_MZ_ratio_experiment.Sf_ID'
+
+   _Category              'MZ_ratio_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_experiment.Entry_ID
+
+   _Tag                  '_MZ_ratio_experiment.Entry_ID'
+
+   _Category              'MZ_ratio_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_experiment.MZ_ratio_data_list_ID
+
+   _Tag                  '_MZ_ratio_experiment.MZ_ratio_data_list_ID'
+
+   _Category              'MZ_ratio_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_software.Software_ID
+
+   _Tag                  '_MZ_ratio_software.Software_ID'
+
+   _Category              'MZ_ratio_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_software.Software_label
+
+   _Tag                  '_MZ_ratio_software.Software_label'
+
+   _Category              'MZ_ratio_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_software.Method_ID
+
+   _Tag                  '_MZ_ratio_software.Method_ID'
+
+   _Category              'MZ_ratio_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_software.Method_label
+
+   _Tag                  '_MZ_ratio_software.Method_label'
+
+   _Category              'MZ_ratio_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_software.Sf_ID
+
+   _Tag                  '_MZ_ratio_software.Sf_ID'
+
+   _Category              'MZ_ratio_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_software.Entry_ID
+
+   _Tag                  '_MZ_ratio_software.Entry_ID'
+
+   _Category              'MZ_ratio_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_software.MZ_ratio_data_list_ID
+
+   _Tag                  '_MZ_ratio_software.MZ_ratio_data_list_ID'
+
+   _Category              'MZ_ratio_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.ID
+
+   _Tag                  '_MZ_ratio_spectrum_param.ID'
+
+   _Category              'MZ_ratio_spectrum_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.Name
+
+   _Tag                  '_MZ_ratio_spectrum_param.Name'
+
+   _Category              'MZ_ratio_spectrum_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.Value
+
+   _Tag                  '_MZ_ratio_spectrum_param.Value'
+
+   _Category              'MZ_ratio_spectrum_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Value
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.Units
+
+   _Tag                  '_MZ_ratio_spectrum_param.Units'
+
+   _Category              'MZ_ratio_spectrum_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Units
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.Sf_ID
+
+   _Tag                  '_MZ_ratio_spectrum_param.Sf_ID'
+
+   _Category              'MZ_ratio_spectrum_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.Entry_ID
+
+   _Tag                  '_MZ_ratio_spectrum_param.Entry_ID'
+
+   _Category              'MZ_ratio_spectrum_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.MZ_ratio_data_list_ID
+
+   _Tag                  '_MZ_ratio_spectrum_param.MZ_ratio_data_list_ID'
+
+   _Category              'MZ_ratio_spectrum_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.ID
+
+   _Tag                  '_MZ_precursor_ion.ID'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.MZ_ratio
+
+   _Tag                  '_MZ_precursor_ion.MZ_ratio'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.MZ_ratio_err
+
+   _Tag                  '_MZ_precursor_ion.MZ_ratio_err'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.Intensity
+
+   _Tag                  '_MZ_precursor_ion.Intensity'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Intensity
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.Relative_intensity
+
+   _Tag                  '_MZ_precursor_ion.Relative_intensity'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Relative intensity
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.S_N_ratio
+
+   _Tag                  '_MZ_precursor_ion.S_N_ratio'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+S N ratio
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.Full_width_half_maximum
+
+   _Tag                  '_MZ_precursor_ion.Full_width_half_maximum'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Full width half maximum
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.Sf_ID
+
+   _Tag                  '_MZ_precursor_ion.Sf_ID'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.Entry_ID
+
+   _Tag                  '_MZ_precursor_ion.Entry_ID'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion.MZ_ratio_data_list_ID
+
+   _Tag                  '_MZ_precursor_ion.MZ_ratio_data_list_ID'
+
+   _Category              'MZ_precursor_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.MZ_precursor_ion_ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.MZ_precursor_ion_ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ precursor ion ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.Entity_ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.Entity_ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entity ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.Comp_index_ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.Comp_index_ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Comp index ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.Comp_ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.Comp_ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Comp ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.Chemical_composition
+
+   _Tag                  '_MZ_precursor_ion_annotation.Chemical_composition'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Chemical composition
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.Sf_ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.Sf_ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.Entry_ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.Entry_ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_precursor_ion_annotation.MZ_ratio_data_list_ID
+
+   _Tag                  '_MZ_precursor_ion_annotation.MZ_ratio_data_list_ID'
+
+   _Category              'MZ_precursor_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.ID
+
+   _Tag                  '_MZ_product_ion.ID'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.MZ_ratio
+
+   _Tag                  '_MZ_product_ion.MZ_ratio'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.MZ_ratio_err
+
+   _Tag                  '_MZ_product_ion.MZ_ratio_err'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.Intensity
+
+   _Tag                  '_MZ_product_ion.Intensity'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Intensity
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.Relative_intensity
+
+   _Tag                  '_MZ_product_ion.Relative_intensity'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Relative intensity
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.S_N_ratio
+
+   _Tag                  '_MZ_product_ion.S_N_ratio'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+S N ratio
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.Full_width_half_maximum
+
+   _Tag                  '_MZ_product_ion.Full_width_half_maximum'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Full width half maximum
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.Sf_ID
+
+   _Tag                  '_MZ_product_ion.Sf_ID'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.Entry_ID
+
+   _Tag                  '_MZ_product_ion.Entry_ID'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion.MZ_ratio_data_list_ID
+
+   _Tag                  '_MZ_product_ion.MZ_ratio_data_list_ID'
+
+   _Category              'MZ_product_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.ID
+
+   _Tag                  '_MZ_product_ion_annotation.ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.MZ_product_ion_ID
+
+   _Tag                  '_MZ_product_ion_annotation.MZ_product_ion_ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ product ion ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.Entity_ID
+
+   _Tag                  '_MZ_product_ion_annotation.Entity_ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entity ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.Comp_index_ID
+
+   _Tag                  '_MZ_product_ion_annotation.Comp_index_ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Comp index ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.Comp_ID
+
+   _Tag                  '_MZ_product_ion_annotation.Comp_ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Comp ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.Chemical_composition
+
+   _Tag                  '_MZ_product_ion_annotation.Chemical_composition'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Chemical composition
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.Sf_ID
+
+   _Tag                  '_MZ_product_ion_annotation.Sf_ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.Entry_ID
+
+   _Tag                  '_MZ_product_ion_annotation.Entry_ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_product_ion_annotation.MZ_ratio_data_list_ID
+
+   _Tag                  '_MZ_product_ion_annotation.MZ_ratio_data_list_ID'
+
+   _Category              'MZ_product_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Sf_category
+
+   _Tag                  '_MS_chromatogram_list.Sf_category'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Sf_framecode
+
+   _Tag                  '_MS_chromatogram_list.Sf_framecode'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf framecode
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Entry_ID
+
+   _Tag                  '_MS_chromatogram_list.Entry_ID'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Sf_ID
+
+   _Tag                  '_MS_chromatogram_list.Sf_ID'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.ID
+
+   _Tag                  '_MS_chromatogram_list.ID'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Sample_condition_list_ID
+
+   _Tag                  '_MS_chromatogram_list.Sample_condition_list_ID'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample condition list ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Sample_condition_list_label
+
+   _Tag                  '_MS_chromatogram_list.Sample_condition_list_label'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample condition list label
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Details
+
+   _Tag                  '_MS_chromatogram_list.Details'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Text_data_format
+
+   _Tag                  '_MS_chromatogram_list.Text_data_format'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Text_data
+
+   _Tag                  '_MS_chromatogram_list.Text_data'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_experiment.Experiment_ID
+
+   _Tag                  '_MS_chromatogram_experiment.Experiment_ID'
+
+   _Category              'MS_chromatogram_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Experiment ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_experiment.Experiment_name
+
+   _Tag                  '_MS_chromatogram_experiment.Experiment_name'
+
+   _Category              'MS_chromatogram_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Experiment name
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_experiment.Sample_ID
+
+   _Tag                  '_MS_chromatogram_experiment.Sample_ID'
+
+   _Category              'MS_chromatogram_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_experiment.Sample_label
+
+   _Tag                  '_MS_chromatogram_experiment.Sample_label'
+
+   _Category              'MS_chromatogram_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sample label
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_experiment.Sf_ID
+
+   _Tag                  '_MS_chromatogram_experiment.Sf_ID'
+
+   _Category              'MS_chromatogram_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_experiment.Entry_ID
+
+   _Tag                  '_MS_chromatogram_experiment.Entry_ID'
+
+   _Category              'MS_chromatogram_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_experiment.MS_chromatogram_list_ID
+
+   _Tag                  '_MS_chromatogram_experiment.MS_chromatogram_list_ID'
+
+   _Category              'MS_chromatogram_experiment'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS chromatogram list ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_software.Software_ID
+
+   _Tag                  '_MS_chromatogram_software.Software_ID'
+
+   _Category              'MS_chromatogram_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_software.Software_label
+
+   _Tag                  '_MS_chromatogram_software.Software_label'
+
+   _Category              'MS_chromatogram_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_software.Method_ID
+
+   _Tag                  '_MS_chromatogram_software.Method_ID'
+
+   _Category              'MS_chromatogram_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_software.Method_label
+
+   _Tag                  '_MS_chromatogram_software.Method_label'
+
+   _Category              'MS_chromatogram_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_software.Sf_ID
+
+   _Tag                  '_MS_chromatogram_software.Sf_ID'
+
+   _Category              'MS_chromatogram_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_software.Entry_ID
+
+   _Tag                  '_MS_chromatogram_software.Entry_ID'
+
+   _Category              'MS_chromatogram_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_software.MS_chromatogram_list_ID
+
+   _Tag                  '_MS_chromatogram_software.MS_chromatogram_list_ID'
+
+   _Category              'MS_chromatogram_software'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS chromatogram list ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_param.ID
+
+   _Tag                  '_MS_chromatogram_param.ID'
+
+   _Category              'MS_chromatogram_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_param.Name
+
+   _Tag                  '_MS_chromatogram_param.Name'
+
+   _Category              'MS_chromatogram_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Name
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_param.Value
+
+   _Tag                  '_MS_chromatogram_param.Value'
+
+   _Category              'MS_chromatogram_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Value
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_param.Units
+
+   _Tag                  '_MS_chromatogram_param.Units'
+
+   _Category              'MS_chromatogram_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Units
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_param.Sf_ID
+
+   _Tag                  '_MS_chromatogram_param.Sf_ID'
+
+   _Category              'MS_chromatogram_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_param.Entry_ID
+
+   _Tag                  '_MS_chromatogram_param.Entry_ID'
+
+   _Category              'MS_chromatogram_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_param.MS_chromatogram_list_ID
+
+   _Tag                  '_MS_chromatogram_param.MS_chromatogram_list_ID'
+
+   _Category              'MS_chromatogram_param'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS chromatogram list ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.ID
+
+   _Tag                  '_MS_chromatogram_ion.ID'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.MZ_ratio
+
+   _Tag                  '_MS_chromatogram_ion.MZ_ratio'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.MZ_ratio_err
+
+   _Tag                  '_MS_chromatogram_ion.MZ_ratio_err'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ ratio err
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.MZ_Intensity
+
+   _Tag                  '_MS_chromatogram_ion.MZ_Intensity'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ Intensity
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.MZ_relative_intensity
+
+   _Tag                  '_MS_chromatogram_ion.MZ_relative_intensity'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MZ relative intensity
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.S_N_ratio
+
+   _Tag                  '_MS_chromatogram_ion.S_N_ratio'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+S N ratio
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.Full_width_half_maximum
+
+   _Tag                  '_MS_chromatogram_ion.Full_width_half_maximum'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Full width half maximum
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.Sf_ID
+
+   _Tag                  '_MS_chromatogram_ion.Sf_ID'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.Entry_ID
+
+   _Tag                  '_MS_chromatogram_ion.Entry_ID'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chromatogram_ion.MS_chromatogram_list_ID
+
+   _Tag                  '_MS_chromatogram_ion.MS_chromatogram_list_ID'
+
+   _Category              'MS_chromatogram_ion'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS chromatogram list ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.ID
+
+   _Tag                  '_MS_chrom_ion_annotation.ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.MS_chromatogram_ion_ID
+
+   _Tag                  '_MS_chrom_ion_annotation.MS_chromatogram_ion_ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS chromatogram ion ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.Entity_ID
+
+   _Tag                  '_MS_chrom_ion_annotation.Entity_ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entity ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.Comp_index_ID
+
+   _Tag                  '_MS_chrom_ion_annotation.Comp_index_ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Comp index ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.Comp_ID
+
+   _Tag                  '_MS_chrom_ion_annotation.Comp_ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Comp ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.Chemical_composition
+
+   _Tag                  '_MS_chrom_ion_annotation.Chemical_composition'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Chemical composition
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.Sf_ID
+
+   _Tag                  '_MS_chrom_ion_annotation.Sf_ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.Entry_ID
+
+   _Tag                  '_MS_chrom_ion_annotation.Entry_ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+
+;
+
+   stop_
+
+save_
+
+save__MS_chrom_ion_annotation.MS_chromatogram_list_ID
+
+   _Tag                  '_MS_chrom_ion_annotation.MS_chromatogram_list_ID'
+
+   _Category              'MS_chrom_ion_annotation'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+MS chromatogram list ID
+;
+
+   loop_
+     _Example
+
+;
+
 ;
 
    stop_

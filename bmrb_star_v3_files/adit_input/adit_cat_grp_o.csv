@@ -22,15 +22,22 @@ TBL_BEGIN,,,,,,,validate,viewFlags,,
 4,experimental_details,145,Mass_spectrometer_list,,N,N,OOOOOO,HHHHHH,Mass spectrometer list,Provide a list of the Mass spectrometers used.
 4,experimental_details,146,Mass_spec_ref_compd,,Y,Y,OOOOOO,HHHHHH,Mass spectral reference compounds,List information describing the chemical compounds used as references in carrying out the mass analysis.
 4,experimental_details,147,chromatographic_system,,Y,Y,OOOOOO,HHHHHH,Chromatographic system,Enter a description of the chromatographic system(s) used.
-4,experimental_details,148,chromatographic_column,,Y,Y,OOOOOO,HHHHHH,Chromatographic column,?
-4,experimental_details,149,NMR_spectrometer,,Y,Y,OOOOOO,HHHHHH,NMR spectrometer,Provide details describing the NMR spectrometer(s) used.
-4,experimental_details,150,NMR_spectrometer_list,,N,N,OOOOOO,NHHHHH,NMR spectrometer list,Provide a list of the NMR spectrometers used.
-4,experimental_details,151,NMR_spectrometer_probe,,Y,Y,OOOOOO,HHHHHH,NMR probe descriptions,NMR spectrometer probes are listed and described in this section.
-4,experimental_details,152,experiment_list,,N,N,MMOMMM,NHHHHH,NMR experiments and samples,Please provide a list of the NMR experiments carried out and indicate the sample and sample conditions used for each experiment. If the same NMR experiment was carried out with two or more different samples or two or more different sample conditions$ enter a new row in the table below for each combination of NMR experiment$ sample$ and sample condition used.
-4,experimental_details,154,NMR_spectrometer_expt,,Y,Y,OMOMOO,NHHHHH,NMR experiment details,Enter specific details regarding each NMR experiment here.
-4,experimental_details,156,NMR_spectral_processing,,Y,Y,OOOOOO,HHHHHH,NMR spectral processing protocols,Enter specific details about the protocols used to process the raw NMR spectral data sets.
-4,experimental_details,158,computer,,Y,Y,OOOOOO,HHHHHH,Computer hardware description,Enter details regarding the computer hardware used to collect$ process$ and analyze the data reported.
-5,NMR_parameters,160,chem_shift_reference,,Y,Y,OOOOOO,HHHHHH,Chemical shift references,<B>Accurate chemical shift referencing is critical. Indicate below the nuclei reported (1H$ 13C$ 15N$ etc.) and If the IUPAC recommend chemical shift referencing method was used and then save the page. If other referencing compounds or methods were used$ enter the information in the table provided.</B>
+4,experimental_details,148,chromatographic_column,,Y,Y,OOOOOO,HHHHHH,Chromatographic column,help text
+4,experimental_details,149,fluorescence_instrument,,Y,Y,OOOOOO,HHHHHH,Fluorescence instrument,help text
+4,experimental_details,150,EMR_instrument,,Y,Y,OOOOOO,HHHHHH,EMR instrument,help text
+4,experimental_details,151,X_ray_instrument,,Y,Y,OOOOOO,HHHHHH,X_ray instrument,help text
+4,experimental_details,155,NMR_spectrometer,,Y,Y,OOOOOO,HHHHHH,NMR spectrometer,Provide details describing the NMR spectrometer(s) used.
+4,experimental_details,156,NMR_spectrometer_list,,N,N,OOOOOO,NHHHHH,NMR spectrometer list,Provide a list of the NMR spectrometers used.
+4,experimental_details,157,NMR_spectrometer_probe,,Y,Y,OOOOOO,HHHHHH,NMR probe descriptions,NMR spectrometer probes are listed and described in this section.
+4,experimental_details,158,experiment_list,,N,N,MMOMMM,NHHHHH,NMR experiments and samples,Please provide a list of the NMR experiments carried out and indicate the sample and sample conditions used for each experiment. If the same NMR experiment was carried out with two or more different samples or two or more different sample conditions$ enter a new row in the table below for each combination of NMR experiment$ sample$ and sample condition used.
+4,experimental_details,159,NMR_spectrometer_expt,,Y,Y,OMOMOO,NHHHHH,NMR experiment details,Enter specific details regarding each NMR experiment here.
+4,experimental_details,160,NMR_spectral_processing,,Y,Y,OOOOOO,HHHHHH,NMR spectral processing protocols,Enter specific details about the protocols used to process the raw NMR spectral data sets.
+4,experimental_details,161,MS_expt,,Y,Y,OOOOOO,HHHHHH,Mass spect experiment details,help text
+4,experimental_details,162,FRET_expt,,Y,Y,OOOOOO,HHHHHH,Fluorescence experiment details,help text
+4,experimental_details,163,EMR_expt,,Y,Y,OOOOOO,HHHHHH,Electron magnetic resonance experiment details,help text
+4,experimental_details,164,SAXS_expt,,Y,Y,OOOOOO,HHHHHH,Small-angle X-ray scattering experiment details,help text
+4,experimental_details,167,computer,,Y,Y,OOOOOO,HHHHHH,Computer hardware description,Enter details regarding the computer hardware used to collect$ process$ and analyze the data reported.
+5,NMR_parameters,168,chem_shift_reference,,Y,Y,OOOOOO,HHHHHH,Chemical shift references,<B>Accurate chemical shift referencing is critical. Indicate below the nuclei reported (1H$ 13C$ 15N$ etc.) and If the IUPAC recommend chemical shift referencing method was used and then save the page. If other referencing compounds or methods were used$ enter the information in the table provided.</B>
 5,NMR_parameters,170,assigned_chemical_shifts,,Y,Y,OOOOOO,HHHHHH,Assigned chemical shifts,Please supply the file name$ samples$ conditions$ and NMR experiments used to collect the data in the uploaded assigned chemical shift data file.
 5,NMR_parameters,172,coupling_constants,,Y,Y,OOOOOO,HHHHHH,Coupling constants,For each set of scalar coupling constants deposited$ provide the experimental details (the uploaded file name$ samples$ conditions$ and NMR experiments$ etc.).
 5,NMR_parameters,174,spectral_peak_list,,Y,Y,OOOOOO,HHHHHH,Spectral peak lists,Information linking the uploaded peak list files to the source NMR experiment and other details is entered in this form.
@@ -60,8 +67,8 @@ TBL_BEGIN,,,,,,,validate,viewFlags,,
 7,thermodynamics,480,pH_titration,,Y,Y,OOOOOO,HHHHHH,pKa values,Please supply a label for each set of pKa or pHmid values reported$ the name of the file containing the data$ and links to the sample(s) and sample conditions used to collect the data.
 7,thermodynamics,490,pH_param_list,,Y,Y,OOOOOO,HHHHHH,pKa parameter data sets,Enter a label for each set of pH titration data deposited$ the name of the uploaded file containing the data$ and a link to the reported pKa or pHmid values calculated from the data.
 7,thermodynamics,500,D_H_fractionation_factors,,Y,Y,OOOOOO,HHHHHH,D/H fractionation factors,Please enter the information required to link the deposited set of deuterium/hydrogen fractionation factors with the file name$ sample conditions$ and samples used for the data.
-7,thermodynamics,525,binding_data,,Y,Y,OOOOOO,HHHHHH,binding_data,Please supply a label for each set of binding constant values reported$ the name of the file containing the data$ and links to the sample(s) and sample conditions used to collect the data.
-7,thermodynamics,530,binding_param_list,,Y,Y,OOOOOO,HHHHHH,binding_data,Enter a label for each set of binding titration data deposited$ the name of the uploaded file containing the data$ and a link to the reported binding constant values calculated from the data.
+7,thermodynamics,525,binding_data,,Y,Y,OOOOOO,HHHHHH,Binding data,Please supply a label for each set of binding constant values reported$ the name of the file containing the data$ and links to the sample(s) and sample conditions used to collect the data.
+7,thermodynamics,530,binding_param_list,,Y,Y,OOOOOO,HHHHHH,Binding data parameters,Enter a label for each set of binding titration data deposited$ the name of the uploaded file containing the data$ and a link to the reported binding constant values calculated from the data.
 8,structure,550,deduced_secd_struct_features,,Y,Y,OOOOOO,HHHHHH,Secondary structure features,help text
 8,structure,560,deduced_hydrogen_bonds,,Y,Y,OOOOOO,HHHHHH,Deduced hydrogen bonds,help text
 8,structure,570,conformer_statistics,,N,N,OOOOOO,HHHHHH,Conformer statistics,The selection criteria$ energy values$ statistical parameters$ and other data that describe the calculated ensemble of conformers and representative structure are entered in this section.
@@ -85,6 +92,9 @@ TBL_BEGIN,,,,,,,validate,viewFlags,,
 8,structure,790,J_three_bond_constraints,,Y,Y,OOOOOO,HHHHHH,J three bond constraints,help text
 8,structure,800,CA_CB_chem_shift_constraints,,Y,Y,OOOOOO,HHHHHH,CA/CB chemical shift constraints,help text
 8,structure,810,H_chem_shift_constraints,,Y,Y,OOOOOO,HHHHHH,Proton chemical shift constraints,help text
+8,structure,812,SAXS_constraints,,Y,Y,OOOOOO,HHHHHH,Small-angle X-ray scattering constraints,help text
 8,structure,820,other_constraints,,Y,Y,OOOOOO,HHHHHH,Other constraints,help text
 8,structure,830,org_constr_file_comment,,Y,Y,OOOOOO,HHHHHH,Original constraint file general comments,General text comments extracted from constraint files. These comments could not be assigned to a specific constraint.
+8,structure,840,MS_MZ_data,,Y,Y,OOOOOO,HHHHHH,Mass spec MZ ratios,help text
+8,structure,850,MS_chromatogram,,Y,Y,OOOOOO,HHHHHH,Mass spec chromatogram data,help text
 TBL_END,,,,,,,,,,

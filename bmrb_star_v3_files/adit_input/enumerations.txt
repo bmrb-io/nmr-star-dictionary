@@ -12,8 +12,7 @@ data_NMR-STAR_tag_enumerations
     _Revision_date      2010-04-17
 
 
-
-save__Assembly.Non_standard_bonds
+save__Assembly.Ambiguous_chem_comp_sites
 
   loop_                       
      _item_enumeration_value
@@ -25,7 +24,6 @@ save__Assembly.Non_standard_bonds
    stop_
 
 save_
-
 
 save__Assembly.Ambiguous_conformational_states
 
@@ -40,8 +38,7 @@ save__Assembly.Ambiguous_conformational_states
 
 save_
 
-
-save__Assembly.Ambiguous_chem_comp_sites
+save__Assembly.Metal_ions                                   
 
   loop_                       
      _item_enumeration_value
@@ -53,7 +50,6 @@ save__Assembly.Ambiguous_chem_comp_sites
    stop_
 
 save_
-
 
 save__Assembly.Molecules_in_chemical_exchange
 
@@ -69,7 +65,7 @@ save__Assembly.Molecules_in_chemical_exchange
 save_
 
 
-save__Assembly.Paramagnetic
+save__Assembly.Non_standard_bonds
 
   loop_                       
      _item_enumeration_value
@@ -81,8 +77,6 @@ save__Assembly.Paramagnetic
    stop_
 
 save_
-
-
 
 save__Assembly.Organic_ligands
 
@@ -97,8 +91,7 @@ save__Assembly.Organic_ligands
 
 save_
 
-
-save__Assembly.Metal_ions                                   
+save__Assembly.Paramagnetic
 
   loop_                       
      _item_enumeration_value
@@ -143,7 +136,6 @@ unknown.
     stop_
 
 save_
-
 
 save__Assembly_db_link.Database_code
 
@@ -997,6 +989,7 @@ save__Chem_comp.Processing_site
      _item_enumeration_description
 
      MSD       .
+     PDBE      .
      PDBJ      .
      RCSB      .
 
@@ -2344,6 +2337,7 @@ save__Data_set.Type
      _item_enumeration_description
 
    assigned_chemical_shifts             .
+   chemical_rates                       .
    coupling_constants                   .
    spectral_peak_list                   .
    other_data_list                      .
@@ -2392,6 +2386,7 @@ save__Datum.Type
      '31P chemical shifts'                          .
      '111Cd chemical shifts'                        .
      '113Cd chemical shifts'                        .
+     'chemical rates'                               .
      'coupling constants'                           .
      'chemical shift isotope effects'               .
      'molecule interaction chemical shift values'   .
@@ -2755,7 +2750,17 @@ save__Dist_constr_software_setting.Type
 
 save_
 
+save__EMR_expt.Sample_volume_units
 
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     ml        .
+ 
+   stop_
+
+save_
 
 
 save__Entity_assembly.Experimental_data_reported
@@ -3755,7 +3760,7 @@ Release the entry as soon as processing is complete.
 ;
      'On publication'              
 ;
-Release the entry at the time therelated manuscript is published.
+Release the entry at the time the related manuscript is published.
 ;
      'In one year'                 
 ;Release the entry one year from the BMRB submission date.
@@ -4528,6 +4533,20 @@ save__Entry_src.Project_name
 
 save_
 
+save__Experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+    stop_
+
+save_
+
 save__Force_constant_list.Default_software_values_used
 
   loop_
@@ -4569,20 +4588,6 @@ save__Force_constant.Term
 
 save_
 
-save__Experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    isotropic                    .
-    anisotropic                  .
-    solid                        .
-
-    stop_
-
-save_
-
 save__Force_constant.Units
 
     loop_
@@ -4597,6 +4602,18 @@ kcal/mol*ppm2      "Chemical shifts; pseudocontact shifts"
 
 
      stop_
+
+save_
+
+save__FRET_expt.Sample_volume_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+       ?               .
+
+    stop_
 
 save_
 
@@ -4752,6 +4769,7 @@ save__Heteronucl_NOE_list.Heteronuclear_NOE_val_type
       'peak integral'         .
       'contour count'         .
       'relative intensities'  .
+      'not reported'          .
 
      stop_
 
@@ -5322,47 +5340,42 @@ save__J_three_bond_constraint_expt.Sample_state
 
 save_
 
-save__Mass_spectrometer.Fragmentation_method
+
+save__Mass_spec.Manufacturer
 
     loop_
       _item_enumeration_value
       _item_enumeration_description
 
-      CID          'collision induced'
-      ETD          'electron-transfer dissociation'
-      IRMPD        'infrared multi-photon dissociation'
+      'Alpha Omega Technologies Inc.'                      .
+       Agilent                                             .
+      'Analytica of Branford'                              .
+      'Bear Instruments'                                   .
+      'Bergmann Messgeraete Entwicklung'                   .
+      'Bruker Daltonics'                                   .
+      'Ciphergen Biosystems'                               .
+      'Charles Evans & Associates'                         .
+      'Comstock Inc.'                                      .
+       In-Situ                                             .
+       Micromass                                           .
+      'Hitachi Instruments'                                .
+      'JEOL USA'                                           .
+      'Kore Technology Ltd.'                               .
+      'Kratos Analytical'                                  .
+       LECO                                                .
+      'MKS Instruments'                                    .
+      'PE Biosystems'                                      .
+      'Perkin Elmer'                                       .
+      'Prolab Resources'                                   .
+      'Sensar Larson Davis'                                .
+      'Shimadzu Scientific Instruments Inc.'               .
+      'Thermo Scientific'                                  .
 
     stop_
 
 save_
 
-save__Mass_spectrometer_view.Fragmentation_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      CID          .
-      IRMPD        .
-
-    stop_
-
-save_
-
-
-save__Mass_spectrometer.Manufacturer
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
-
-save__Mass_spectrometer.Model
+save__Mass_spec.Model
 
     loop_
       _item_enumeration_value
@@ -5374,7 +5387,7 @@ save__Mass_spectrometer.Model
 
 save_
 
-save__Mass_spectrometer.Type
+save__Mass_spec.Type
 
     loop_
       _item_enumeration_value
@@ -5388,6 +5401,84 @@ save__Mass_spectrometer.Type
     stop_
 
 save_
+
+save__Mass_spec_config.Component_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     source                 .
+     analyzer               .
+     detector               .
+
+    stop_
+
+save_
+
+save__Mass_spec_config.Component_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?              .
+
+    stop_
+
+save_
+
+save__Mass_spec_component_param.Name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     ?             .
+
+    stop_
+
+save_
+
+save__Mass_spec_component_param.Value
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     ?             .
+
+    stop_
+
+save_
+
+save__MS_expt_param.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     ?             .
+
+    stop_
+
+save_
+
+
+save__Mass_spectrometer_view.Fragmentation_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      CID          .
+      ETD          'electron-transfer dissociation'
+      IRMPD        .
+
+    stop_
+
+save_
+
 
 save__Mass_spectrometer_view.Type
 
@@ -5410,7 +5501,29 @@ save__Mass_spectrometer_view.Manufacturer
       _item_enumeration_value
       _item_enumeration_description
 
-      ?          .
+      'Alpha Omega Technologies Inc.'                      .
+       Agilent                                             .
+      'Analytica of Branford'                              .
+      'Bear Instruments'                                   .
+      'Bergmann Messgeraete Entwicklung'                   .
+      'Bruker Daltonics'                                   .
+      'Ciphergen Biosystems'                               .
+      'Charles Evans & Associates'                         .
+      'Comstock Inc.'                                      .
+       In-Situ                                             .
+       Micromass                                           .
+      'Hitachi Instruments'                                .
+      'JEOL USA'                                           .
+      'Kore Technology Ltd.'                               .
+      'Kratos Analytical'                                  .
+       LECO                                                .
+      'MKS Instruments'                                    .
+      'PE Biosystems'                                      .
+      'Perkin Elmer'                                       .
+      'Prolab Resources'                                   .
+      'Sensar Larson Davis'                                .
+      'Shimadzu Scientific Instruments Inc.'               .
+      'Thermo Scientific'                                  .
 
     stop_
 
@@ -5429,6 +5542,32 @@ save__Mass_spectrometer_view.Model
 save_
 
 save__Mass_spectrometer_view.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?          .
+
+    stop_
+
+save_
+
+save__Mass_spectrometer_view.Ionization_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?          .
+
+    stop_
+
+save_
+
+
+
+save__Mass_spectrometer_view.Spectrum_type
 
     loop_
       _item_enumeration_value
@@ -5466,6 +5605,116 @@ save__Mol_interaction_diff_experiment.Sample_state
     stop_
 
 save_
+
+save__MS_chromatogram_list.Text_data_format
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     mzML         .
+     mzDAta       .
+
+     stop_
+
+save_
+
+save__MS_chromatogram_experiment.Experiment_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?                 .
+
+    stop_
+
+save_
+
+save__MS_chromatogram_param.Name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?                 .
+
+    stop_
+
+save_
+
+save__MS_chromatogram_param.Units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?                 .
+
+    stop_
+
+save_
+
+save__MS_expt_param.Name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     'ion mode'                               .
+     'flow rate'                              .
+     'flow rate units'                        .
+     'collision energy'                       .
+     'collision energy units'                 .
+     'fragmentation method'                   .
+     'ionization method'                      .
+     'detection method'                       .
+     'mass range minimum'                     .
+     'mass range maximum'                     .
+     'mass reference introduction method'     .
+
+   stop_
+
+save_
+
+save__MS_expt.Spectrum_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'single scan'           .  
+       composite              .
+       ramp                   .
+
+    stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.Name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?                   .
+
+    stop_
+
+save_
+
+save__MZ_ratio_spectrum_param.Units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      ?                   .
+
+    stop_
+
+save_
+
 
 save__NMR_experiment_file.Type
 
@@ -5779,6 +6028,7 @@ save__NMR_spectrometer.Field_strength
     920       .
     950       .
    1000       .
+   1200       .
 
   stop_
 
@@ -6021,6 +6271,42 @@ save_
 #  stop_
 
 #save_ 
+
+save__MZ_ratio_data_list.Error_derivation_method
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+       ?           .
+
+  stop_
+
+save_
+
+save__MZ_ratio_data_list.Text_data_format
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+       ?           .
+
+  stop_
+
+save_
+
+save__MZ_ratio_experiment.Experiment_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+       ?           .
+
+  stop_
+
+save_
 
 
 save__Order_param.Model_fit
@@ -6402,6 +6688,20 @@ that represent non-trivial changes in the entry.
 ;
 
      stop_
+
+save_
+
+
+save__Release.Format_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     NMR-STAR            .
+     XML                 .
+
+    stop_
 
 save_
 
@@ -6798,6 +7098,32 @@ Used for variables that do not have units like dielectric constant.
 
 save_
 
+save__SAXS_constraint_expt.Experiment_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ?          .
+
+  stop_
+
+save_
+
+
+save__SAXS_expt.Sample_volume_units
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     ml        .
+ 
+   stop_
+
+save_
+
+
 save__Software.Sf_framecode
 
   loop_
@@ -6930,6 +7256,7 @@ save__Software.Name
     GARANT           .
     Gaussian         .
     GIFA             .
+    HADDOCK          .
     HYPER            .
     InsightII        .
     MARDIGRAS        .
@@ -7484,6 +7811,7 @@ save__Vendor.Name
     '(Gaussian) - Gaussian$ Inc.'                                                                           .
     '(GIFA) - Delsuc'                                                                                       .
     '(GROMOS) - van Gunsteren and Berendsen'                                                                .
+    '(HADDOCK) - Alexandre Bonvin'                                                                          .
     '(HYPER) - Tejero$ Monleon$ Celda$ Powers and Montelione'                                               .
     '(InsightII) -  Accelrys Software Inc.'                                                                 .
     '(ModelFree) - Palmer'                                                                                  .
