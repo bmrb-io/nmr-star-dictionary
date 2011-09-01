@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-08-09
+#  version date -  2011-08-31
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.0
+    _dictionary.version         3.1.1.2
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.0         ?
+     3.1.1.2         ?
 ;
      ?
 ;
@@ -4927,7 +4927,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.0'
+   _item_default.value            '3.1.1.2'
    _item_type.code                'line'
 
    loop_
@@ -30927,6 +30927,7 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Chem_comp.Sf_ID'                                     'Chem_comp'                     yes
+  '_Chem_struct_descriptor.Sf_ID'                        'Chem_struct_descriptor'        yes
 
   stop_
 
@@ -30934,7 +30935,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-   ?      ?
+  '_Chem_struct_descriptor.Sf_ID'                        '_Chem_comp.Sf_ID'
 
   stop_
 
@@ -30991,6 +30992,7 @@ components in the entry.
   '_Entity_bond.Comp_ID_2'                               'Entity_bond'                   yes
   '_Chem_comp_common_name.Comp_ID'                       'Chem_comp_common_name'         yes
   '_Chem_comp_bio_function.Comp_ID'                      'Chem_comp_bio_function'        yes
+  '_Chem_struct_descriptor.Comp_ID'                      'Chem_struct_descriptor'        yes
   '_Chem_comp_descriptor.Comp_ID'                        'Chem_comp_descriptor'          yes
   '_Chem_comp_identifier.Comp_ID'                        'Chem_comp_identifier'          yes
   '_Chem_comp_systematic_name.Comp_ID'                   'Chem_comp_systematic_name'          yes
@@ -31124,6 +31126,7 @@ components in the entry.
   '_Entity_bond.Comp_ID_2'                               '_Chem_comp.ID'
   '_Chem_comp_common_name.Comp_ID'                       '_Chem_comp.ID'
   '_Chem_comp_bio_function.Comp_ID'                      '_Chem_comp.ID'
+  '_Chem_struct_descriptor.Comp_ID'                      '_Chem_comp.ID'
   '_Chem_comp_descriptor.Comp_ID'                        '_Chem_comp.ID'
   '_Chem_comp_identifier.Comp_ID'                        '_Chem_comp.ID'
   '_Chem_comp_systematic_name.Comp_ID'                   '_Chem_comp.ID'
@@ -33161,6 +33164,314 @@ Pointer to '_Chem_comp.ID'
 
    _item.name                  '_Chem_comp_bio_function.Comp_ID'
    _item.category_id              'Chem_comp_bio_function'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_Chem_struct_descriptor
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Chem_struct_descriptor'
+
+   loop_
+     _category_key.name
+
+     '_Chem_struct_descriptor.ID'
+     '_Chem_struct_descriptor.Entry_ID'
+     '_Chem_struct_descriptor.Comp_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_comp'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.ID
+
+   _item_description.description
+;
+A value that uniquely identifies each chemical structure descriptor provided 
+in the list.
+;
+
+   _item.name                  '_Chem_struct_descriptor.ID'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Descriptor
+
+   _item_description.description
+;
+A chemical structure descriptor.
+;
+
+   _item.name                  '_Chem_struct_descriptor.Descriptor'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   alcohol    ?
+   aldehyde    ?
+   alkyne    ?
+   alkene    ?
+   alkane    ?
+   amide    ?
+   'carboxylic acid'    ?
+   ester    ?
+   ether    ?
+   ketone    ?
+   amine    ?
+   nitrile    ?
+   'primary amine'    ?
+   'secondary amine'    ?
+   'teritary amine'    ?
+   thiol    ?
+   'three carbon ring'    ?
+   'four carbon ring'    ?
+   'five carbon ring'    ?
+   'six carbon ring'    ?
+   'seven carbon ring'    ?
+   'eight carbon ring'    ?
+   'three member heterocycle'    ?
+   'four member heterocycle'    ?
+   'five member heterocycle'    ?
+   'six member heterocycle'    ?
+   'seven member heterocycle'    ?
+   'eight member heterocycle'    ?
+   'benzyl group'    ?
+   'phenyl group'    ?
+   phenol    ?
+   imidazole    ?
+   'beta lactam'    ?
+   methyl    ?
+   methylene    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Type
+
+   _item_description.description
+;
+The type of descriptor provided.
+;
+
+   _item.name                  '_Chem_struct_descriptor.Type'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   linkage    ?
+   'chemical fragment'    ?
+   'functional group'    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Count
+
+   _item_description.description
+;
+The number of chemical structures of the same kind in the chemical compound.
+;
+
+   _item.name                  '_Chem_struct_descriptor.Count'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Software_ID
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                  '_Chem_struct_descriptor.Software_ID'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category software.
+;
+
+   _item.name                  '_Chem_struct_descriptor.Software_label'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            no
+
+   _item_type.code                'framecode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.Sf_ID'
+;
+
+   _item.name                  '_Chem_struct_descriptor.Sf_ID'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_Chem_struct_descriptor.Entry_ID'
+   _item.category_id              'Chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_struct_descriptor.Comp_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_Chem_struct_descriptor.Comp_ID'
+   _item.category_id              'Chem_struct_descriptor'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -36066,7 +36377,7 @@ A common chemical bond descriptive name.
 
    _item.name                  '_Chem_comp_bond.Type'
    _item.category_id              'Chem_comp_bond'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -41342,6 +41653,7 @@ in the entry.
       _item.mandatory_code
 
   '_Software.ID'                                         'Software'                      yes
+  '_Chem_struct_descriptor.Software_ID'                  'Chem_struct_descriptor'        yes
   '_Vendor.Software_ID'                                  'Vendor'                        yes
   '_Task.Software_ID'                                    'Task'                          yes
   '_Software_citation.Software_ID'                       'Software_citation'             yes
@@ -41408,6 +41720,7 @@ in the entry.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_Chem_struct_descriptor.Software_ID'                  '_Software.ID'
   '_Vendor.Software_ID'                                  '_Software.ID'
   '_Task.Software_ID'                                    '_Software.ID'
   '_Software_citation.Software_ID'                       '_Software.ID'
@@ -93674,6 +93987,31 @@ the data.
 
 save_
 
+save__Auto_relaxation_list.Exact_field_strength
+
+   _item_description.description
+;
+The actual spectrometer frequency of the nucleus observed expressed at 
+a high level of precision.
+;
+
+   _item.name                  '_Auto_relaxation_list.Exact_field_strength'
+   _item.category_id              'Auto_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+60.777824
+;
+
+   stop_
+
+save_
+
 save__Auto_relaxation_list.Common_relaxation_type_name
 
    _item_description.description
@@ -101950,6 +102288,40 @@ save__Order_parameter_list.Rex_field_strength
 
 ;
 600
+;
+
+   stop_
+
+save_
+
+save__Order_parameter_list.Rex_val_units
+
+   _item_description.description
+;
+The units for the reported R exchange values.
+;
+
+   _item.name                  '_Order_parameter_list.Rex_val_units'
+   _item.category_id              'Order_parameter_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s    ?
+   ms    ?
+   us    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+ms; us
 ;
 
    stop_

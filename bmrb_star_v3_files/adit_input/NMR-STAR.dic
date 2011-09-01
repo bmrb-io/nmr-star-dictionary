@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-08-09
+#  version date -  2011-08-31
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.0
+    _dictionary.version         3.1.1.2
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.0         ?
+     3.1.1.2         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.0'
+   _item_default.value            '3.1.1.2'
    _item_type.code                'line'
 
    loop_
@@ -24418,6 +24418,7 @@ components in the entry.
   '_entity_bond.comp_id_2'                               'entity_bond'                   yes
   '_chem_comp_common_name.comp_id'                       'chem_comp_common_name'         yes
   '_chem_comp_bio_function.comp_id'                      'chem_comp_bio_function'        yes
+  '_chem_struct_descriptor.comp_id'                      'chem_struct_descriptor'        yes
   '_chem_comp_descriptor.comp_id'                        'chem_comp_descriptor'          yes
   '_chem_comp_identifier.comp_id'                        'chem_comp_identifier'          yes
   '_chem_comp_systematic_name.comp_id'                   'chem_comp_systematic_name'          yes
@@ -24551,6 +24552,7 @@ components in the entry.
   '_entity_bond.comp_id_2'                               '_chem_comp.id'
   '_chem_comp_common_name.comp_id'                       '_chem_comp.id'
   '_chem_comp_bio_function.comp_id'                      '_chem_comp.id'
+  '_chem_struct_descriptor.comp_id'                      '_chem_comp.id'
   '_chem_comp_descriptor.comp_id'                        '_chem_comp.id'
   '_chem_comp_identifier.comp_id'                        '_chem_comp.id'
   '_chem_comp_systematic_name.comp_id'                   '_chem_comp.id'
@@ -26540,6 +26542,314 @@ Pointer to '_Chem_comp.ID'
 
    _item.name                  '_chem_comp_bio_function.comp_id'
    _item.category_id              'chem_comp_bio_function'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_chem_struct_descriptor
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'chem_struct_descriptor'
+
+   loop_
+     _category_key.name
+
+     '_chem_struct_descriptor.id'
+     '_chem_struct_descriptor.entry_id'
+     '_chem_struct_descriptor.comp_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_comp'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.id
+
+   _item_description.description
+;
+A value that uniquely identifies each chemical structure descriptor provided 
+in the list.
+;
+
+   _item.name                  '_chem_struct_descriptor.id'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.descriptor
+
+   _item_description.description
+;
+A chemical structure descriptor.
+;
+
+   _item.name                  '_chem_struct_descriptor.descriptor'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   alcohol    ?
+   aldehyde    ?
+   alkyne    ?
+   alkene    ?
+   alkane    ?
+   amide    ?
+   'carboxylic acid'    ?
+   ester    ?
+   ether    ?
+   ketone    ?
+   amine    ?
+   nitrile    ?
+   'primary amine'    ?
+   'secondary amine'    ?
+   'teritary amine'    ?
+   thiol    ?
+   'three carbon ring'    ?
+   'four carbon ring'    ?
+   'five carbon ring'    ?
+   'six carbon ring'    ?
+   'seven carbon ring'    ?
+   'eight carbon ring'    ?
+   'three member heterocycle'    ?
+   'four member heterocycle'    ?
+   'five member heterocycle'    ?
+   'six member heterocycle'    ?
+   'seven member heterocycle'    ?
+   'eight member heterocycle'    ?
+   'benzyl group'    ?
+   'phenyl group'    ?
+   phenol    ?
+   imidazole    ?
+   'beta lactam'    ?
+   methyl    ?
+   methylene    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.type
+
+   _item_description.description
+;
+The type of descriptor provided.
+;
+
+   _item.name                  '_chem_struct_descriptor.type'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   linkage    ?
+   'chemical fragment'    ?
+   'functional group'    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.count
+
+   _item_description.description
+;
+The number of chemical structures of the same kind in the chemical compound.
+;
+
+   _item.name                  '_chem_struct_descriptor.count'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.software_id
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                  '_chem_struct_descriptor.software_id'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            no
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category software.
+;
+
+   _item.name                  '_chem_struct_descriptor.software_label'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            no
+
+   _item_type.code                'framecode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.sf_id
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.Sf_ID'
+;
+
+   _item.name                  '_chem_struct_descriptor.sf_id'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                  '_chem_struct_descriptor.entry_id'
+   _item.category_id              'chem_struct_descriptor'
+   _item.mandatory_code            yes
+
+   _item_type.code                'code'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__chem_struct_descriptor.comp_id
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                  '_chem_struct_descriptor.comp_id'
+   _item.category_id              'chem_struct_descriptor'
    _item.mandatory_code            yes
 
    _item_type.code                'code'
@@ -29229,7 +29539,7 @@ A common chemical bond descriptive name.
 
    _item.name                  '_chem_comp_bond.type'
    _item.category_id              'chem_comp_bond'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -34061,6 +34371,7 @@ in the entry.
       _item.mandatory_code
 
   '_software.id'                                         'software'                      yes
+  '_chem_struct_descriptor.software_id'                  'chem_struct_descriptor'        yes
   '_vendor.software_id'                                  'vendor'                        yes
   '_task.software_id'                                    'task'                          yes
   '_software_citation.software_id'                       'software_citation'             yes
@@ -34127,6 +34438,7 @@ in the entry.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_chem_struct_descriptor.software_id'                  '_software.id'
   '_vendor.software_id'                                  '_software.id'
   '_task.software_id'                                    '_software.id'
   '_software_citation.software_id'                       '_software.id'
@@ -81912,6 +82224,31 @@ the data.
 
 save_
 
+save__auto_relaxation_list.exact_field_strength
+
+   _item_description.description
+;
+The actual spectrometer frequency of the nucleus observed expressed at 
+a high level of precision.
+;
+
+   _item.name                  '_auto_relaxation_list.exact_field_strength'
+   _item.category_id              'auto_relaxation_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+60.777824
+;
+
+   stop_
+
+save_
+
 save__auto_relaxation_list.common_relaxation_type_name
 
    _item_description.description
@@ -89744,6 +90081,40 @@ save__order_parameter_list.rex_field_strength
 
 ;
 600
+;
+
+   stop_
+
+save_
+
+save__order_parameter_list.rex_val_units
+
+   _item_description.description
+;
+The units for the reported R exchange values.
+;
+
+   _item.name                  '_order_parameter_list.rex_val_units'
+   _item.category_id              'order_parameter_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s    ?
+   ms    ?
+   us    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+ms; us
 ;
 
    stop_

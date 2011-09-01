@@ -337,7 +337,7 @@ save_<entry_information>
      _Related_entries.Sf_ID                            
      _Related_entries.Entry_ID                         
 
-    "String value"  "String value"  "Long string value"  2  1    
+    "String value"  "String value"  "Very long phrase"  2  1    
 
   stop_
 
@@ -734,7 +734,7 @@ save_<assembly>
      _Assembly_bio_function.Entry_ID                     
      _Assembly_bio_function.Assembly_ID                  
 
-    "Long string value"  2  1  2  
+    "Very long phrase"  2  1  2  
 
   stop_
 
@@ -1103,7 +1103,7 @@ save_<entity>
      _Entity_common_name.Entry_ID           
      _Entity_common_name.Entity_ID          
 
-    "Long string value"  "Long string value"  2  1  2    
+    "Very long phrase"  "Long string value"  2  1  2    
 
   stop_
 
@@ -1450,6 +1450,21 @@ save_<chem_comp>
      _Chem_comp_bio_function.Comp_ID                      
 
     "Possible multiline text"  2  1  1  
+
+  stop_
+
+  loop_
+     _Chem_struct_descriptor.ID                      
+     _Chem_struct_descriptor.Descriptor              
+     _Chem_struct_descriptor.Type                    
+     _Chem_struct_descriptor.Count                   
+     _Chem_struct_descriptor.Software_ID             
+     _Chem_struct_descriptor.Software_label          
+     _Chem_struct_descriptor.Sf_ID                   
+     _Chem_struct_descriptor.Entry_ID                
+     _Chem_struct_descriptor.Comp_ID                 
+
+    2  "Long string value"  "Long string value"  2  2    "Long string value"  2  1  1  
 
   stop_
 
@@ -1873,7 +1888,7 @@ save_<software>
      _Task.Entry_ID             
      _Task.Software_ID          
 
-    "Long string value"  2  1  2  
+    "Very long phrase"  2  1  2  
 
   stop_
 
@@ -4411,6 +4426,7 @@ save_<auto_relaxation>
   _Auto_relaxation_list.Temp_calibration_method              "Very long phrase"
   _Auto_relaxation_list.Temp_control_method                  "Very long phrase"
   _Auto_relaxation_list.Spectrometer_frequency_1H            110.234
+  _Auto_relaxation_list.Exact_field_strength                 110.234
   _Auto_relaxation_list.Common_relaxation_type_name          "Short string value"
   _Auto_relaxation_list.Relaxation_coherence_type            "String value"
   _Auto_relaxation_list.Relaxation_val_units                 "Short string value"
@@ -4799,6 +4815,7 @@ save_<order_parameters>
   _Order_parameter_list.Tau_f_val_units                      "Short string value"
   _Order_parameter_list.Tau_s_val_units                      "Short string value"
   _Order_parameter_list.Rex_field_strength                   "Short string value"
+  _Order_parameter_list.Rex_val_units                        "Short string value"
   _Order_parameter_list.Details                              "Possible multiline text"
   _Order_parameter_list.Text_data_format                     "String value"
   _Order_parameter_list.Text_data                            "Possible multiline text"
