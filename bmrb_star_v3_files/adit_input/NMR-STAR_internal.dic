@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-08-31
+#  version date -  2011-09-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.2
+    _dictionary.version         3.1.1.4
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.2         ?
+     3.1.1.4         ?
 ;
      ?
 ;
@@ -4927,7 +4927,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.2'
+   _item_default.value            '3.1.1.4'
    _item_type.code                'line'
 
    loop_
@@ -41657,7 +41657,7 @@ in the entry.
   '_Vendor.Software_ID'                                  'Vendor'                        yes
   '_Task.Software_ID'                                    'Task'                          yes
   '_Software_citation.Software_ID'                       'Software_citation'             yes
-  '_Mass_spec_software.ID'                               'Mass_spec_software'            yes
+  '_Mass_spec_software.Software_ID'                      'Mass_spec_software'            yes
   '_NMR_spec_expt.Software_ID'                           'NMR_spec_expt'                 yes
   '_NMR_spectral_proc_software.Software_ID'              'NMR_spectral_proc_software'         yes
   '_MS_expt_software.Software_ID'                        'MS_expt_software'              yes
@@ -41724,7 +41724,7 @@ in the entry.
   '_Vendor.Software_ID'                                  '_Software.ID'
   '_Task.Software_ID'                                    '_Software.ID'
   '_Software_citation.Software_ID'                       '_Software.ID'
-  '_Mass_spec_software.ID'                               '_Software.ID'
+  '_Mass_spec_software.Software_ID'                      '_Software.ID'
   '_NMR_spec_expt.Software_ID'                           '_Software.ID'
   '_NMR_spectral_proc_software.Software_ID'              '_Software.ID'
   '_MS_expt_software.Software_ID'                        '_Software.ID'
@@ -44316,7 +44316,7 @@ save_Mass_spec_software
    loop_
      _category_key.name
 
-     '_Mass_spec_software.ID'
+     '_Mass_spec_software.Software_ID'
      '_Mass_spec_software.Entry_ID'
      '_Mass_spec_software.Mass_spec_ID'
 
@@ -44345,14 +44345,14 @@ save_Mass_spec_software
 
 save_
 
-save__Mass_spec_software.ID
+save__Mass_spec_software.Software_ID
 
    _item_description.description
 ;
 Pointer to '_Software.ID'
 ;
 
-   _item.name                  '_Mass_spec_software.ID'
+   _item.name                  '_Mass_spec_software.Software_ID'
    _item.category_id              'Mass_spec_software'
    _item.mandatory_code            yes
 
@@ -44369,14 +44369,14 @@ Pointer to '_Software.ID'
 
 save_
 
-save__Mass_spec_software.Label
+save__Mass_spec_software.Software_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category software.
 ;
 
-   _item.name                  '_Mass_spec_software.Label'
+   _item.name                  '_Mass_spec_software.Software_label'
    _item.category_id              'Mass_spec_software'
    _item.mandatory_code            yes
 
@@ -161967,10 +161967,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_MZ_ratio_data_list.Sf_ID'                            'MZ_ratio_data_list'            yes
-  '_MZ_precursor_ion.Sf_ID'                              'MZ_precursor_ion'              yes
-  '_MZ_precursor_ion_annotation.Sf_ID'                   'MZ_precursor_ion_annotation'        yes
-  '_MZ_product_ion.Sf_ID'                                'MZ_product_ion'                yes
-  '_MZ_product_ion_annotation.Sf_ID'                     'MZ_product_ion_annotation'          yes
 
   stop_
 
@@ -161978,10 +161974,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_MZ_precursor_ion.Sf_ID'                              '_MZ_ratio_data_list.Sf_ID'
-  '_MZ_precursor_ion_annotation.Sf_ID'                   '_MZ_ratio_data_list.Sf_ID'
-  '_MZ_product_ion.Sf_ID'                                '_MZ_ratio_data_list.Sf_ID'
-  '_MZ_product_ion_annotation.Sf_ID'                     '_MZ_ratio_data_list.Sf_ID'
+   ?      ?
 
   stop_
 

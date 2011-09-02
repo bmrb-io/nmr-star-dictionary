@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-08-31
+#  version date -  2011-09-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.2
+    _dictionary.version         3.1.1.4
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.2         ?
+     3.1.1.4         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.2'
+   _item_default.value            '3.1.1.4'
    _item_type.code                'line'
 
    loop_
@@ -34375,7 +34375,7 @@ in the entry.
   '_vendor.software_id'                                  'vendor'                        yes
   '_task.software_id'                                    'task'                          yes
   '_software_citation.software_id'                       'software_citation'             yes
-  '_mass_spec_software.id'                               'mass_spec_software'            yes
+  '_mass_spec_software.software_id'                      'mass_spec_software'            yes
   '_nmr_spec_expt.software_id'                           'nmr_spec_expt'                 yes
   '_nmr_spectral_proc_software.software_id'              'nmr_spectral_proc_software'         yes
   '_ms_expt_software.software_id'                        'ms_expt_software'              yes
@@ -34442,7 +34442,7 @@ in the entry.
   '_vendor.software_id'                                  '_software.id'
   '_task.software_id'                                    '_software.id'
   '_software_citation.software_id'                       '_software.id'
-  '_mass_spec_software.id'                               '_software.id'
+  '_mass_spec_software.software_id'                      '_software.id'
   '_nmr_spec_expt.software_id'                           '_software.id'
   '_nmr_spectral_proc_software.software_id'              '_software.id'
   '_ms_expt_software.software_id'                        '_software.id'
@@ -36764,7 +36764,7 @@ save_mass_spec_software
    loop_
      _category_key.name
 
-     '_mass_spec_software.id'
+     '_mass_spec_software.software_id'
      '_mass_spec_software.entry_id'
      '_mass_spec_software.mass_spec_id'
 
@@ -36793,14 +36793,14 @@ save_mass_spec_software
 
 save_
 
-save__mass_spec_software.id
+save__mass_spec_software.software_id
 
    _item_description.description
 ;
 Pointer to '_Software.ID'
 ;
 
-   _item.name                  '_mass_spec_software.id'
+   _item.name                  '_mass_spec_software.software_id'
    _item.category_id              'mass_spec_software'
    _item.mandatory_code            yes
 
@@ -36817,14 +36817,14 @@ Pointer to '_Software.ID'
 
 save_
 
-save__mass_spec_software.label
+save__mass_spec_software.software_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category software.
 ;
 
-   _item.name                  '_mass_spec_software.label'
+   _item.name                  '_mass_spec_software.software_label'
    _item.category_id              'mass_spec_software'
    _item.mandatory_code            yes
 
@@ -146973,30 +146973,6 @@ The full width of the mass to charge signal at half maximum intensity.
 
 save_
 
-save__mz_precursor_ion.sf_id
-
-   _item_description.description
-;
-Pointer to '_MZ_ratio_data_list.Sf_ID'
-;
-
-   _item.name                  '_mz_precursor_ion.sf_id'
-   _item.category_id              'mz_precursor_ion'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__mz_precursor_ion.entry_id
 
    _item_description.description
@@ -147217,30 +147193,6 @@ Chemical composition of the chemical fragment assigned to the MZ ratio.
    _item.mandatory_code            no
 
    _item_type.code                'line'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__mz_precursor_ion_annotation.sf_id
-
-   _item_description.description
-;
-Pointer to '_MZ_ratio_data_list.Sf_ID'
-;
-
-   _item.name                  '_mz_precursor_ion_annotation.sf_id'
-   _item.category_id              'mz_precursor_ion_annotation'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
 
    loop_
      _item_examples.case
@@ -147522,30 +147474,6 @@ The full width of the mass to charge signal at half maximum intensity.
 
 save_
 
-save__mz_product_ion.sf_id
-
-   _item_description.description
-;
-Pointer to '_MZ_ratio_data_list.Sf_ID'
-;
-
-   _item.name                  '_mz_product_ion.sf_id'
-   _item.category_id              'mz_product_ion'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__mz_product_ion.entry_id
 
    _item_description.description
@@ -147766,30 +147694,6 @@ Chemical composition of the chemical fragment assigned to the MZ ratio.
    _item.mandatory_code            no
 
    _item_type.code                'line'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__mz_product_ion_annotation.sf_id
-
-   _item_description.description
-;
-Pointer to '_MZ_ratio_data_list.Sf_ID'
-;
-
-   _item.name                  '_mz_product_ion_annotation.sf_id'
-   _item.category_id              'mz_product_ion_annotation'
-   _item.mandatory_code            yes
-
-   _item_type.code                'int'
 
    loop_
      _item_examples.case
