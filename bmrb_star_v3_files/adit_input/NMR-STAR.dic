@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-09-02
+#  version date -  2011-09-08
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.4
+    _dictionary.version         3.1.1.6
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.4         ?
+     3.1.1.6         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.4'
+   _item_default.value            '3.1.1.6'
    _item_type.code                'line'
 
    loop_
@@ -42823,6 +42823,7 @@ save_experiment_file
      _category_key.name
 
      '_experiment_file.experiment_id'
+     '_experiment_file.name'
 
    stop_
 
@@ -42882,7 +42883,7 @@ The name of a computer file containing information related to the experiment.
 
    _item.name                  '_experiment_file.name'
    _item.category_id              'experiment_file'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
@@ -50429,7 +50430,7 @@ Items in the ambiguous_atom_chem_shift category define how ambiguous assigned ch
    loop_
      _category_key.name
 
-     '_ambiguous_atom_chem_shift.ambiguous_shift_set_id'
+     '_ambiguous_atom_chem_shift.atom_chem_shift_id'
      '_ambiguous_atom_chem_shift.entry_id'
      '_ambiguous_atom_chem_shift.assigned_chem_shift_list_id'
 
