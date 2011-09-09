@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-09-08
+#  version date -  2011-09-09
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.6
+    _dictionary.version         3.1.1.7
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.6         ?
+     3.1.1.7         ?
 ;
      ?
 ;
@@ -4927,7 +4927,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.6'
+   _item_default.value            '3.1.1.7'
    _item_type.code                'line'
 
    loop_
@@ -28226,7 +28226,8 @@ save__Entity_natural_src.Type
 
    _item_description.description
 ;
-The molecular entity or biopolymer has no natural source.
+The general type of natural source for the entity or an indication if no 
+natural source or multiple natural sources.
 ;
 
    _item.name                  '_Entity_natural_src.Type'
@@ -28244,6 +28245,7 @@ The molecular entity or biopolymer has no natural source.
    virus    ?
    plasmid    ?
    cosmid    ?
+   'multiple natural sources'    ?
    'no natural source'    ?
    'not applicable'    ?
 
@@ -28264,7 +28266,7 @@ save__Entity_natural_src.Common
 
    _item_description.description
 ;
-The molecular entity of biopolymer is common to more than one natural source.
+The molecular entity or biopolymer is common to more than one natural source.
 ;
 
    _item.name                  '_Entity_natural_src.Common'
@@ -63901,9 +63903,6 @@ Items in the assigned_peak_chem_shift category define the atom(s) assigned to in
    loop_
      _category_key.name
 
-     '_Assigned_peak_chem_shift.Peak_ID'
-     '_Assigned_peak_chem_shift.Spectral_dim_ID'
-     '_Assigned_peak_chem_shift.Atom_ID'
      '_Assigned_peak_chem_shift.Entry_ID'
      '_Assigned_peak_chem_shift.Spectral_peak_list_ID'
 
@@ -65468,8 +65467,6 @@ save_Assigned_spectral_transition
    loop_
      _category_key.name
 
-     '_Assigned_spectral_transition.Spectral_transition_ID'
-     '_Assigned_spectral_transition.Spectral_dim_ID'
      '_Assigned_spectral_transition.Entry_ID'
      '_Assigned_spectral_transition.Spectral_peak_list_ID'
 
