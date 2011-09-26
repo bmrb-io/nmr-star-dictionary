@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-09-20
+#  version date -  2011-09-26
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.9
+    _dictionary.version         3.1.1.11
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.9         ?
+     3.1.1.11         ?
 ;
      ?
 ;
@@ -4927,7 +4927,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.9'
+   _item_default.value            '3.1.1.11'
    _item_type.code                'line'
 
    loop_
@@ -14817,6 +14817,7 @@ Items in the assembly_common_name category define common names associated with t
      _category_key.name
 
      '_Assembly_common_name.Name'
+     '_Assembly_common_name.Type'
      '_Assembly_common_name.Entry_ID'
      '_Assembly_common_name.Assembly_ID'
 
@@ -25109,6 +25110,7 @@ Items in the entity_common_name category provide a list of common names for the 
      _category_key.name
 
      '_Entity_common_name.Name'
+     '_Entity_common_name.Type'
      '_Entity_common_name.Entry_ID'
      '_Entity_common_name.Entity_ID'
 
@@ -28572,7 +28574,7 @@ Kingdom classifications for an organism as defined by NCBI taxonomists.
 
    _item.name                  '_Entity_natural_src.Kingdom'
    _item.category_id              'Entity_natural_src'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'line'
 
@@ -40342,6 +40344,8 @@ Items in the sample_condition_variable category define specific sample condition
      _category_key.name
 
      '_Sample_condition_variable.Type'
+     '_Sample_condition_variable.Entry_ID'
+     '_Sample_condition_variable.Sample_condition_list_ID'
 
    stop_
 
