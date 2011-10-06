@@ -213,12 +213,12 @@ May not observe signals from the component or signals may be quite broad.
     'Fast exchange'
 
 ;
-On the NMR time scale, a single averaged signal will be observed for the
+On the NMR time scale$ a single averaged signal will be observed for the
 components in the bound and free state.
 ;
     'No interaction'
 ;
-The components exist in the sample but do not interact (i.e., a molecule that
+The components exist in the sample but do not interact (i.e.$ a molecule that
 is exchanging between a native and an unfolded conformation).
 ;
 
@@ -753,7 +753,6 @@ save__Chem_comp_identifier.Type
   'PUBCHEM SID'           'PubChem substance identifier'
   'MDL Identifier'        'Molecular Design Limited Identifier'
 
-
    stop_
 
 save_
@@ -765,27 +764,64 @@ save__Chem_comp.Type
      _item_enumeration_value
      _item_enumeration_description
 
-     'L-PEPTIDE LINKING'                      .
-     'L-PEPTIDE NH3 AMINO TERMINUS'           .
-     'L-PEPTIDE COOH CARBOXY TERMINUS'        .
-     'D-PEPTIDE LINKING'                      .
-     'D-PEPTIDE NH3 AMINO TERMINUS'           .
-     'D-PEPTIDE COOH CARBOXY TERMINUS'        .
-     'DNA LINKING'                            .
-     'RNA LINKING'                            .
-     'DNA OH 5 PRIME TERMINUS'                .
-     'RNA OH 5 PRIME TERMINUS'                .
-     'DNA OH 3 PRIME TERMINUS'                .
-     'RNA OH 3 PRIME TERMINUS'                .
-     'D-SACCHARIDE 1,4 AND 1,4 LINKING'       .
-     'L-SACCHARIDE 1,4 AND 1,4 LINKING'       .
-     'D-SACCHARIDE 1,4 AND 1,6 LINKING'       .
-     'L-SACCHARIDE 1,4 AND 1,6 LINKING'       .
-     'L-SACCHARIDE'                           .
-     'D-SACCHARIDE'                           .
-     'SACCHARIDE'                             .
-     'NON-POLYMER'                            .
-     'OTHER'                                  .
+      'D-peptide linking'                         n.a.
+      'D-PEPTIDE LINKING'                         .      
+      'L-peptide linking'                         n.a.
+      'L-PEPTIDE LINKING'                         .
+      'D-peptide NH3 amino terminus'              n.a.
+      'D-PEPTIDE NH3 AMINO TERMINUS'              .
+      'L-peptide NH3 amino terminus'              n.a.
+      'L-PEPTIDE NH3 AMINO TERMINUS'              .
+      'D-peptide COOH carboxy terminus'           n.a.
+      'D-PEPTIDE COOH CARBOXY TERMINUS'           .
+      'L-peptide COOH carboxy terminus'           n.a.
+      'L-PEPTIDE COOH CARBOXY TERMINUS'           .
+      'DNA linking'                               n.a.
+      'DNA LINKING'                               .
+      'RNA linking'                               n.a.
+      'RNA LINKING'                               .
+      'L-RNA linking'                             n.a.
+      'L-RNA LINKING'                             .
+      'L-DNA linking'                             n.a.
+      'L-DNA LINKING'                             .
+      'DNA OH 5 prime terminus'                   n.a.
+      'DNA OH 5 PRIME TERMINUS'                   .
+      'RNA OH 5 prime terminus'                   n.a.
+      'RNA OH 5 PRIME TERMINUS'                   .
+      'DNA OH 3 prime terminus'                   n.a.
+      'DNA OH 3 PRIME TERMINUS'                   .
+      'RNA OH 3 prime terminus'                   n.a.
+      'RNA OH 3 PRIME TERMINUS'                   .
+      'D-saccharide 1$4 and 1$4 linking'          n.a.
+      'D-SACCHARIDE 1$4 AND 1$4 LINKING'          .
+      'L-saccharide 1$4 and 1$4 linking'          n.a.
+      'L-SACCHARIDE 1$4 AND 1$4 LINKING'          .
+      'D-saccharide 1$4 and 1$6 linking'          n.a.
+      'D-SACCHARIDE 1$4 AND 1$6 LINKING'          .
+      'L-saccharide 1$4 and 1$6 linking'          n.a.
+      'L-SACCHARIDE 1$4 AND 1$6 LINKING'          .
+      'L-saccharide'                              n.a.
+      'L-SACCHARIDE'                              .
+      'D-saccharide'                              n.a.
+      'D-SACCHARIDE'                              .
+      'saccharide'                                n.a.
+      'SACCHARIDE'                                .
+      'non-polymer'                               n.a.
+      'NON-POLYMER'                               .
+      'peptide linking'                           n.a.
+      'PEPTIDE LINKING'                           .
+      'peptide-like'                              n.a.
+      'PEPTIDE-LIKE'                              .
+      'L-gamma-peptide$ C-delta linking'         'Iso-peptide linking L-gamma peptide'
+      'L-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
+      'D-gamma-peptide$ C-delta linking'         'Iso-peptide linking D-gamma peptide'
+      'D-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
+      'L-beta-peptide$ C-gamma linking'          'Iso-peptide linking L-beta peptide'
+      'L-BETA-PEPTIDE$ C-GAMMA LINKING'           .
+      'D-beta-peptide$ C-gamma linking'          'Iso-peptide linking D-beta peptide'
+      'D-BETA-PEPTIDE$ C-GAMMA LINKING'           .
+      'other'                                     n.a.
+      'OTHER'                                     .
 
    stop_
 
@@ -1201,7 +1237,7 @@ dioxane                              'C methylene carbons'
 'ammonium hydroxide'                 'N ammonium nitrogen'
 'ammonium nitrate'                   'N ammonium nitrogen' 
 '[15N] ammonium nitrate'             'N ammonium nitrogen'
-'[15N, 15N] ammonium nitrate'        'N ammonium nitrogen'
+'[15N$ 15N] ammonium nitrate'        'N ammonium nitrogen'
 'ammonium nitrite'                   'N ammonium nitrogen'
 'ammonium sulfate'                   'N ammonium nitrogen'
 '[15N] ammonium sulfate'             'N ammonium nitrogen' 
@@ -1556,7 +1592,7 @@ save__Citation.Journal_abbrev
     'RNA'                                       .
     'Science'                                   .
     'Structure'                                 .
-    'Structure (Cambridge, MA, U.S.)'           .
+    'Structure (Cambridge$ MA$ U.S.)'           .
 
    stop_
 
@@ -1579,7 +1615,7 @@ A manuscript has been submitted for publication.
 ;
      'in press'
 ;
-A manuscript has been accepted for publication, but has not yet appeared in
+A manuscript has been accepted for publication$ but has not yet appeared in
 press.
 ;
      published
@@ -1609,12 +1645,12 @@ save__Citation.Type
   thesis
 ;
 A document written and published as a requirement for a degree or other
-scholarly endeavor (e.g., senior, masters, or doctoral thesis)
+scholarly endeavor (e.g.$ senior$ masters$ or doctoral thesis)
 ;
   abstract    
 ;
-A brief text describing the contents of a presentation, oral, poster, or
-other, given at a conference or other formal gathering.          
+A brief text describing the contents of a presentation$ oral$$ poster$ or
+other$ given at a conference or other formal gathering.          
 ;
  'personal communication'  
 ;
@@ -2006,21 +2042,21 @@ save__Constraint_stat_list.NOE_dist_averaging_method
 
      r-6       
 ;
-R=(<Rij^-6>)^(-1/6), X-PLOR formula 18.1. Rij runs over all
+R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all
 combinations of distance constraints between  atoms i in set 1 and atoms j in
 set 2.
 ;
      r-3       
 ;
-R=(<Rij^-3>)^(-1/3), X-PLOR formula 18.2.
+R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
 ;
      sum       
 ;
-R=(SUM(Rij^-6)/n_mono)^(-1/6), X-PLOR formula 18.3.
+R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
 ;
      center    
 ;
-R= r1_center-r2_center, X-PLOR formula 18.4.
+R= r1_center-r2_center$ X-PLOR formula 18.4.
 ;
 
     stop_
@@ -2061,21 +2097,21 @@ save__Constraint_stat_list.ROE_dist_averaging_method
 
      r-6       
 ;
-R=(<Rij^-6>)^(-1/6), X-PLOR formula 18.1. Rij runs over all
+R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all
 combinations of distance constraints between  atoms i in set 1 and atoms j in
 set 2.
 ;
      r-3       
 ;
-R=(<Rij^-3>)^(-1/3), X-PLOR formula 18.2.
+R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
 ;
      sum       
 ;
-R=(SUM(Rij^-6)/n_mono)^(-1/6), X-PLOR formula 18.3.
+R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
 ;
      center    
 ;
-R= r1_center-r2_center, X-PLOR formula 18.4.
+R= r1_center-r2_center$ X-PLOR formula 18.4.
 ;
 
     stop_
@@ -4494,10 +4530,10 @@ save__Entry_src.Organization_full_name
 
     "?"                                                                          .
     "Accelerated Technologies Center for Gene to 3D Structure"                   .
-    "Assembly, Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
+    "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
     "Architecture and Function of Biological Macromolecules Structure Genomics"  ASG           
     "Atoms-to-Animals: The Immune Function Network"                              .
-    "Bacterial targets at IGS-CNRS, France"                                      .
+    "Bacterial targets at IGS-CNRS$ France"                                      .
     "Berkeley Structural Genomics Center"                                        BSGC
     "Center for Eukaryotic Structural Genomics"                                  CESG
     "Center for High-Throughput Structural Biology"                              .
@@ -4543,7 +4579,7 @@ save__Entry_src.Organization_full_name
     "Structural Proteomics in Europe"                                            .
     "Structural Proteomics in Europe 2"                                          .
     "Structure 2 Function Project"                                               .
-    "Structure, Dynamics and Activation Mechanisms of Chemokine Receptors"       .
+    "Structure$ Dynamics and Activation Mechanisms of Chemokine Receptors"       .
     "Structure-Function Studies of Tight Junction Membrane Proteins"             .
     "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"  .
     "TB Structural Genomics Consortium"                                          .
@@ -5831,7 +5867,7 @@ data
 
       'Pulse sequence image file'
 ;
-jpeg, gif, or other file type that is an image of the pulse sequence
+jpeg$ gif$ or other file type that is an image of the pulse sequence
 as shown as a figure in many publications
 ;
 
@@ -6290,24 +6326,24 @@ save_
  #        ''                                                .
  #        'Rex'                                             .
  
-# Original Lipari-Szabo (Lipari and Szabo, 1982), plus additional params
+# Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
 # such as Rex:
 
   #       'S2'                                               .
-  #       'S2, te'                                           .
-  #       'S2, Rex'                                          .
-  #       'S2, te, Rex'                                      .
+  #       'S2$ te'                                           .
+  #       'S2$ Rex'                                          .
+  #       'S2$ te$ Rex'                                      .
  
-# Extended model-free (Clore et al., 1990), plus additional params such as Rex:
+# Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
 
-  #       'S2f, S2, ts'                                      .
-  #       'S2f, S2s, ts'                                     .
-  #       'S2f, tf, S2, ts'                                  .
-  #       'S2f, tf, S2s, ts'                                 .
-  #       'S2f, S2, ts, Rex'                                 .
-  #       'S2f, S2s, ts, Rex'                                .
-  #       'S2f, tf, S2, ts, Rex'                             .
-  #       'S2f, tf, S2s, ts, Rex'                            .
+  #       'S2f$ S2$ ts'                                      .
+  #       'S2f$ S2s$ ts'                                     .
+  #       'S2f$ tf$ S2$ ts'                                  .
+  #       'S2f$ tf$ S2s$ ts'                                 .
+  #       'S2f$ S2$ ts$ Rex'                                 .
+  #       'S2f$ S2s$ ts$ Rex'                                .
+  #       'S2f$ tf$ S2$ ts$ Rex'                             .
+  #       'S2f$ tf$ S2s$ ts$ Rex'                            .
 
 #  stop_
 
@@ -6420,24 +6456,24 @@ save__Order_param.Model_fit
          ''                                                .
          'Rex'                                             .
  
- Original Lipari-Szabo (Lipari and Szabo, 1982), plus additional params
+ Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
  such as Rex:
 
          'S2'                                               .
-         'S2, te'                                           .
-         'S2, Rex'                                          .
-         'S2, te, Rex'                                      .
+         'S2$ te'                                           .
+         'S2$ Rex'                                          .
+         'S2$ te$ Rex'                                      .
  
- Extended model-free (Clore et al., 1990), plus additional params such as Rex:
+ Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
 
-         'S2f, S2, ts'                                      .
-         'S2f, S2s, ts'                                     .
-         'S2f, tf, S2, ts'                                  .
-         'S2f, tf, S2s, ts'                                 .
-         'S2f, S2, ts, Rex'                                 .
-         'S2f, S2s, ts, Rex'                                .
-         'S2f, tf, S2, ts, Rex'                             .
-         'S2f, tf, S2s, ts, Rex'                            .
+         'S2f$ S2$ ts'                                      .
+         'S2f$ S2s$ ts'                                     .
+         'S2f$ tf$ S2$ ts'                                  .
+         'S2f$ tf$ S2s$ ts'                                 .
+         'S2f$ S2$ ts$ Rex'                                 .
+         'S2f$ S2s$ ts$ Rex'                                .
+         'S2f$ tf$ S2$ ts$ Rex'                             .
+         'S2f$ tf$ S2s$ ts$ Rex'                            .
 
   stop_
 
@@ -6854,7 +6890,7 @@ Derived from conformers that fit experimental data
       theoretical                             
 ;
 The coordinates represent a theoretical chemical system.   They may be derived
-from an experimental coordinate set, but have been constructed for use in
+from an experimental coordinate set$ but have been constructed for use in
 carrying out theoretical calculations or for other purposes that have specific
 requirements that necessitate the use of non-standard atoms or other
 conditions.
@@ -6999,9 +7035,9 @@ save__Sample_component.Isotopic_labeling
      "[U-13C; U-15N]-Ura"                    'All uracil nucleotides labeled fully with both 13C and 15N'
      "[U-15N]-Leu"                           'Uniformly labeled 15N Leu residues'
      "[95% 13CA]-Trp"                        'All Trp residues labeled 95 percent with 13C in the CA position'
-#     "[U-98% 13C; NA-F,Y,W]"                 
+#     "[U-98% 13C; NA-F$Y$W]"                 
 #;
-#Uniformly labeled with 13C except for the Phe, Tyr, and Trp residues which are at natural abundance
+#Uniformly labeled with 13C except for the Phe$ Tyr$ and Trp residues which are at natural abundance
 #;
 
   stop_
@@ -7108,9 +7144,9 @@ Preferred unit is bar (10^5 Pa)
 
   'ionic strength' 
 ;
-I = 1/2 of the summation of C(i) times Z(i)^2, where the 
+I = 1/2 of the summation of C(i) times Z(i)^2$ where the 
 summation is taken over all of the different ions (i) in a 
-solution, multiplying the molarity C(i) by the square of 
+solution$ multiplying the molarity C(i) by the square of 
 the charge Z(i). 
 Preferred unit is M (mol/l)
 ;
@@ -7132,7 +7168,7 @@ No unit is required.
 
   'temperature controller setting'
 ;
-For solid-state experiments, this is the temperature setting on the
+For solid-state experiments$ this is the temperature setting on the
 NMR spectrometer control unit.
 ;
 
@@ -7152,21 +7188,21 @@ save__Sample_condition_variable.Val_units
      _item_enumeration_value
      _item_enumeration_description
 
-           Pa           "Pascal, 1 Pa = 1 N m^-2"
-           bar          "bar, 1 bar = 10^5 Pa"
+           Pa           "Pascal$ 1 Pa = 1 N m^-2"
+           bar          "bar$ 1 bar = 10^5 Pa"
            atm          
 ;
-atmosphere, 1 atm = 1.01325 * 10^5 Pa, atm is not a SI unit
+atmosphere$ 1 atm = 1.01325 * 10^5 Pa$ atm is not a SI unit
 ;
 
            mmHg          
 ;
-millimetres of mercury, 1 mmHg = 133.3224 Pa, mmHg is not a SI unit
+millimetres of mercury$ 1 mmHg = 133.3224 Pa$ mmHg is not a SI unit
 ;
 
            Torr          
 ;
-Torricelli, 1 Torr = 133.322 Pa, Torr is not a SI unit
+Torricelli$ 1 Torr = 133.322 Pa$ Torr is not a SI unit
 ;
            mbar         millibar
            K            Kelvin
@@ -7182,11 +7218,11 @@ unit of pH
 ;
              M
 ;
-Molar, concentration unit for ionic strength
+Molar$ concentration unit for ionic strength
 ;
             mM
 ;
-milimolar, concentration unit for ionic strength
+milimolar$ concentration unit for ionic strength
 ;
             P
 ;
