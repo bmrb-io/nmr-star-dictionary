@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-10-06
+#  version date -  2011-10-10
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.13
+    _dictionary.version         3.1.1.14
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.13         ?
+     3.1.1.14         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.13'
+   _item_default.value            '3.1.1.14'
    _item_type.code                'line'
 
    loop_
@@ -9369,7 +9369,6 @@ Items in the assembly_common_name category define common names associated with t
      _category_key.name
 
      '_assembly_common_name.name'
-     '_assembly_common_name.type'
      '_assembly_common_name.entry_id'
      '_assembly_common_name.assembly_id'
 
@@ -18942,7 +18941,6 @@ Items in the entity_common_name category provide a list of common names for the 
      _category_key.name
 
      '_entity_common_name.name'
-     '_entity_common_name.type'
      '_entity_common_name.entry_id'
      '_entity_common_name.entity_id'
 
@@ -75741,7 +75739,55 @@ Homonuclear NOE value
 
    _item.name                  '_homonucl_noe.val'
    _item.category_id              'homonucl_noe'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__homonucl_noe.val_min
+
+   _item_description.description
+;
+Minimum homonuclear NOE value
+;
+
+   _item.name                  '_homonucl_noe.val_min'
+   _item.category_id              'homonucl_noe'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__homonucl_noe.val_max
+
+   _item_description.description
+;
+Maximum homonuclear NOE value
+;
+
+   _item.name                  '_homonucl_noe.val_max'
+   _item.category_id              'homonucl_noe'
+   _item.mandatory_code            no
 
    _item_type.code                'float'
 
