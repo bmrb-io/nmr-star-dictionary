@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-10-10
+#  version date -  2011-10-12
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.14
+    _dictionary.version         3.1.1.15
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.14         ?
+     3.1.1.15         ?
 ;
      ?
 ;
@@ -4927,7 +4927,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.14'
+   _item_default.value            '3.1.1.15'
    _item_type.code                'line'
 
    loop_
@@ -14817,6 +14817,7 @@ Items in the assembly_common_name category define common names associated with t
      _category_key.name
 
      '_Assembly_common_name.Name'
+     '_Assembly_common_name.Type'
      '_Assembly_common_name.Entry_ID'
      '_Assembly_common_name.Assembly_ID'
 
@@ -14878,7 +14879,7 @@ Common names may have different types (full names$ abbreviations$ etc.)
 
    _item.name                  '_Assembly_common_name.Type'
    _item.category_id              'Assembly_common_name'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
@@ -25109,6 +25110,7 @@ Items in the entity_common_name category provide a list of common names for the 
      _category_key.name
 
      '_Entity_common_name.Name'
+     '_Entity_common_name.Type'
      '_Entity_common_name.Entry_ID'
      '_Entity_common_name.Entity_ID'
 
@@ -25171,7 +25173,7 @@ A code defining the type of the common name provided.
 
    _item.name                  '_Entity_common_name.Type'
    _item.category_id              'Entity_common_name'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
@@ -32962,6 +32964,7 @@ Items in the chem_comp_common_name category provide a list of common names for a
      _category_key.name
 
      '_Chem_comp_common_name.Name'
+     '_Chem_comp_common_name.Type'
      '_Chem_comp_common_name.Entry_ID'
      '_Chem_comp_common_name.Comp_ID'
 
@@ -33023,7 +33026,7 @@ The type of name given to the compound (abbreviation$ etc.).
 
    _item.name                  '_Chem_comp_common_name.Type'
    _item.category_id              'Chem_comp_common_name'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
