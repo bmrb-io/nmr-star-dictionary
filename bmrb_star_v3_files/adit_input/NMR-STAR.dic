@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-10-12
+#  version date -  2011-10-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.15
+    _dictionary.version         3.1.1.18
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.15         ?
+     3.1.1.18         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.15'
+   _item_default.value            '3.1.1.18'
    _item_type.code                'line'
 
    loop_
@@ -41784,6 +41784,7 @@ Names for NMR experiments commonly found in the literature.
   '_j_three_bond_constraint_expt.experiment_name'                           'j_three_bond_constraint_expt'       yes
   '_ca_cb_constraint_expt.experiment_name'               'ca_cb_constraint_expt'         yes
   '_h_chem_shift_constraint_expt.experiment_name'                           'h_chem_shift_constraint_expt'       yes
+  '_saxs_constraint_expt.experiment_name'                'saxs_constraint_expt'          yes
   '_other_constraint_expt.experiment_name'               'other_constraint_expt'         yes
   '_mz_ratio_experiment.experiment_name'                 'mz_ratio_experiment'           yes
   '_ms_chromatogram_experiment.experiment_name'          'ms_chromatogram_experiment'         yes
@@ -41830,6 +41831,7 @@ Names for NMR experiments commonly found in the literature.
   '_j_three_bond_constraint_expt.experiment_name'                           '_experiment.name'
   '_ca_cb_constraint_expt.experiment_name'               '_experiment.name'
   '_h_chem_shift_constraint_expt.experiment_name'                           '_experiment.name'
+  '_saxs_constraint_expt.experiment_name'                '_experiment.name'
   '_other_constraint_expt.experiment_name'               '_experiment.name'
   '_mz_ratio_experiment.experiment_name'                 '_experiment.name'
   '_ms_chromatogram_experiment.experiment_name'          '_experiment.name'
@@ -142723,7 +142725,7 @@ save__h_chem_shift_constraint_list.data_file_name
 
    _item_description.description
 ;
-Name of the file that contains the J-three bond coupling constant constraints.
+Name of the file that contains the H chemical shift constraints.
 ;
 
    _item.name                  '_h_chem_shift_constraint_list.data_file_name'
@@ -142747,7 +142749,7 @@ save__h_chem_shift_constraint_list.data_file_format
 
    _item_description.description
 ;
-File format for the proton chemical shift restraints.
+File format for the proton chemical shift constraints.
 ;
 
    _item.name                  '_h_chem_shift_constraint_list.data_file_format'
@@ -142957,7 +142959,7 @@ save__h_chem_shift_constraint_expt.experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+Pointer to '_Experiment.Name'
 ;
 
    _item.name                  '_h_chem_shift_constraint_expt.experiment_name'
@@ -143061,7 +143063,7 @@ save__h_chem_shift_constraint_expt.sample_label
 
    _item_description.description
 ;
-Sample(s) used in deriving the data
+Pointer to a saveframe of the category 'sample'
 ;
 
    _item.name                  '_h_chem_shift_constraint_expt.sample_label'
@@ -144268,7 +144270,7 @@ save__saxs_constraint_expt.experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'SAXS_expt'
+Pointer to '_Experiment.Name'
 ;
 
    _item.name                  '_saxs_constraint_expt.experiment_name'
@@ -145241,7 +145243,7 @@ save__other_constraint_expt.experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+Pointer to '_Experiment.Name'
 ;
 
    _item.name                  '_other_constraint_expt.experiment_name'
@@ -145345,7 +145347,7 @@ save__other_constraint_expt.sample_label
 
    _item_description.description
 ;
-Sample(s) used in deriving the data
+Pointer to a saveframe of the category 'sample'
 ;
 
    _item.name                  '_other_constraint_expt.sample_label'
@@ -146371,7 +146373,7 @@ save__mz_ratio_experiment.experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+Pointer to '_Experiment.Name'
 ;
 
    _item.name                  '_mz_ratio_experiment.experiment_name'
@@ -146920,7 +146922,7 @@ save__mz_precursor_ion.id
 
    _item_description.description
 ;
-Unique identifier for the observed MZ ratio value.
+Unique identifier for the observed precursor ion MZ ratio value.
 ;
 
   loop_
@@ -147421,7 +147423,7 @@ save__mz_product_ion.id
 
    _item_description.description
 ;
-Unique identifier for the observed MZ ratio value.
+Unique identifier for the observed product ion MZ ratio value.
 ;
 
   loop_
@@ -148235,7 +148237,7 @@ save__ms_chromatogram_experiment.experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+Pointer to '_Experiment.Name'
 ;
 
    _item.name                  '_ms_chromatogram_experiment.experiment_name'
