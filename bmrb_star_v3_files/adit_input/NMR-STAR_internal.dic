@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2011-10-19
+#  version date -  2011-12-23
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -9229,7 +9229,7 @@ save__Audit.Revision_ID
 
    _item_description.description
 ;
-The value of _audit.revision_id must uniquely identify a record in the 
+The value of _audit.revision_ID must uniquely identify a record in the 
 AUDIT list.
 ;
 
@@ -13495,7 +13495,7 @@ save__Bond.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -13522,7 +13522,7 @@ save__Bond.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -13547,7 +13547,7 @@ save__Bond.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -13628,7 +13628,7 @@ save__Bond.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -13655,7 +13655,7 @@ save__Bond.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -13680,7 +13680,7 @@ save__Bond.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -14013,7 +14013,7 @@ save__Entity_deleted_atom.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -14040,7 +14040,7 @@ save__Entity_deleted_atom.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -14065,7 +14065,7 @@ save__Entity_deleted_atom.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -17286,7 +17286,7 @@ save__Atom.Atom_ID
 
    _item_description.description
 ;
-The value of _Atom.Atom_id must uniquely identify a record in the atom list.
+The value of _Atom.Atom_ID must uniquely identify a record in the atom list.
 ;
 
    _item.name                  '_Atom.Atom_ID'
@@ -17409,7 +17409,7 @@ save__Atom.PDB_asym_ID
 
    _item_description.description
 ;
-Pointer to _Atom_site.PDBX_label_asym_id'.
+Pointer to _Atom_site.PDBX_label_asym_ID'.
 ;
 
    _item.name                  '_Atom.PDB_asym_ID'
@@ -17507,7 +17507,7 @@ save__Atom.PDB_atom_ID
 
    _item_description.description
 ;
-This data item is a pointer to '_Chem_comp_atom.Atom_id in the chem_comp_atom 
+This data item is a pointer to '_Chem_comp_atom.Atom_ID in the chem_comp_atom 
 category.
 ;
 
@@ -33576,6 +33576,10 @@ Data items in the chem_comp_descriptor category provide string descriptors of co
    loop_
      _category_key.name
 
+     '_Chem_comp_descriptor.Descriptor'
+     '_Chem_comp_descriptor.Type'
+     '_Chem_comp_descriptor.Program'
+     '_Chem_comp_descriptor.Program_version'
      '_Chem_comp_descriptor.Entry_ID'
      '_Chem_comp_descriptor.Comp_ID'
 
@@ -33717,7 +33721,7 @@ This data item contains the version of the program
 
    _item.name                  '_Chem_comp_descriptor.Program_version'
    _item.category_id              'Chem_comp_descriptor'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
@@ -33814,6 +33818,10 @@ Data items in the chem_comp_identifier category provide identifiers for chemical
    loop_
      _category_key.name
 
+     '_Chem_comp_identifier.Identifier'
+     '_Chem_comp_identifier.Type'
+     '_Chem_comp_identifier.Program'
+     '_Chem_comp_identifier.Program_version'
      '_Chem_comp_identifier.Entry_ID'
      '_Chem_comp_identifier.Comp_ID'
 
@@ -33914,7 +33922,7 @@ the identifier.
 
    _item.name                  '_Chem_comp_identifier.Program'
    _item.category_id              'Chem_comp_identifier'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
@@ -33951,7 +33959,7 @@ the identifier.
 
    _item.name                  '_Chem_comp_identifier.Program_version'
    _item.category_id              'Chem_comp_identifier'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'line'
 
@@ -35088,7 +35096,7 @@ save__Chem_comp_atom.Atom_ID
 
    _item_description.description
 ;
-The value of _chem_comp_atom.atom_id must uniquely identify each atom in 
+The value of _chem_comp_atom.atom_ID must uniquely identify each atom in 
 each monomer in the CHEM_COMP_ATOM list.
 ;
 
@@ -35412,7 +35420,7 @@ save__Chem_comp_atom.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -39755,7 +39763,7 @@ save__Sample_component_atom_isotope.Auth_entity_ID
 
    _item_description.description
 ;
-An alternative identifier for Entity_id that may be provided by an author 
+An alternative identifier for Entity_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to 
 correspond to the value for Entity_ID.
@@ -39782,7 +39790,7 @@ save__Sample_component_atom_isotope.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -39809,7 +39817,7 @@ save__Sample_component_atom_isotope.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -39834,7 +39842,7 @@ save__Sample_component_atom_isotope.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -59331,7 +59339,7 @@ save__Atom_chem_shift.Auth_asym_ID
 
    _item_description.description
 ;
-An alternative identifier for _atom_site.label_asym_id that may be provided 
+An alternative identifier for _atom_site.label_asym_ID that may be provided 
 by an author in order to match the identification used in the publication that 
 describes the structure.
 ;
@@ -59357,7 +59365,7 @@ save__Atom_chem_shift.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -59384,7 +59392,7 @@ save__Atom_chem_shift.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -59409,7 +59417,7 @@ save__Atom_chem_shift.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -61545,7 +61553,7 @@ save__Coupling_constant.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -61572,7 +61580,7 @@ save__Coupling_constant.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -61597,7 +61605,7 @@ save__Coupling_constant.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -61649,7 +61657,7 @@ save__Coupling_constant.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -61676,7 +61684,7 @@ save__Coupling_constant.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -61701,7 +61709,7 @@ save__Coupling_constant.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -69126,7 +69134,7 @@ save__Isotope_effect.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -69153,7 +69161,7 @@ save__Isotope_effect.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -69178,7 +69186,7 @@ save__Isotope_effect.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -69599,7 +69607,7 @@ save__Isotope_label_pattern.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -69626,7 +69634,7 @@ save__Isotope_label_pattern.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -69651,7 +69659,7 @@ save__Isotope_label_pattern.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -71028,7 +71036,7 @@ save__Mol_interaction_chem_shift.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -71055,7 +71063,7 @@ save__Mol_interaction_chem_shift.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -71080,7 +71088,7 @@ save__Mol_interaction_chem_shift.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -72578,7 +72586,7 @@ save__CS_anisotropy.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -72605,7 +72613,7 @@ save__CS_anisotropy.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -72630,7 +72638,7 @@ save__CS_anisotropy.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -74396,7 +74404,7 @@ save__Theoretical_chem_shift.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -74423,7 +74431,7 @@ save__Theoretical_chem_shift.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -74448,7 +74456,7 @@ save__Theoretical_chem_shift.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -76334,7 +76342,7 @@ save__RDC.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -76361,7 +76369,7 @@ save__RDC.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -76386,7 +76394,7 @@ save__RDC.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -76438,7 +76446,7 @@ save__RDC.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -76465,7 +76473,7 @@ save__RDC.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -76490,7 +76498,7 @@ save__RDC.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -78274,7 +78282,7 @@ save__Dipolar_coupling.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -78301,7 +78309,7 @@ save__Dipolar_coupling.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -78326,7 +78334,7 @@ save__Dipolar_coupling.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -78378,7 +78386,7 @@ save__Dipolar_coupling.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -78405,7 +78413,7 @@ save__Dipolar_coupling.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -78430,7 +78438,7 @@ save__Dipolar_coupling.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -79848,7 +79856,7 @@ save__Spectral_density.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -79875,7 +79883,7 @@ save__Spectral_density.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -79900,7 +79908,7 @@ save__Spectral_density.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -81219,7 +81227,7 @@ save__Other_data.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -81246,7 +81254,7 @@ save__Other_data.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -81271,7 +81279,7 @@ save__Other_data.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -82673,7 +82681,7 @@ save__Chemical_rate.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -82700,7 +82708,7 @@ save__Chemical_rate.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -82725,7 +82733,7 @@ save__Chemical_rate.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -84085,7 +84093,7 @@ save__H_exch_rate.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -84112,7 +84120,7 @@ save__H_exch_rate.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -84137,7 +84145,7 @@ save__H_exch_rate.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -85486,7 +85494,7 @@ save__H_exch_protection_factor.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -85513,7 +85521,7 @@ save__H_exch_protection_factor.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -85538,7 +85546,7 @@ save__H_exch_protection_factor.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -85950,7 +85958,7 @@ Supply the value used to normalize the NOE intensities.
      _item_examples.case
 
 ;
-1.20E+08
+120000000
 ;
 
    stop_
@@ -87166,7 +87174,7 @@ save__Homonucl_NOE.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -87193,7 +87201,7 @@ save__Homonucl_NOE.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -87218,7 +87226,7 @@ save__Homonucl_NOE.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -87270,7 +87278,7 @@ save__Homonucl_NOE.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -87297,7 +87305,7 @@ save__Homonucl_NOE.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -87322,7 +87330,7 @@ save__Homonucl_NOE.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -87760,7 +87768,7 @@ Value used to calibrate other NOE measurements
      _item_examples.case
 
 ;
-2.00E+07
+20000000
 ;
 
    stop_
@@ -88945,7 +88953,7 @@ save__Heteronucl_NOE.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -88972,7 +88980,7 @@ save__Heteronucl_NOE.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -88997,7 +89005,7 @@ save__Heteronucl_NOE.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -89049,7 +89057,7 @@ save__Heteronucl_NOE.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -89076,7 +89084,7 @@ save__Heteronucl_NOE.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -89101,7 +89109,7 @@ save__Heteronucl_NOE.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -90470,7 +90478,7 @@ save__T1.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -90497,7 +90505,7 @@ save__T1.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -90522,7 +90530,7 @@ save__T1.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -92039,7 +92047,7 @@ save__T1rho.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -92066,7 +92074,7 @@ save__T1rho.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -92091,7 +92099,7 @@ save__T1rho.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -93608,7 +93616,7 @@ save__T2.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -93635,7 +93643,7 @@ save__T2.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -93660,7 +93668,7 @@ save__T2.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -95305,7 +95313,7 @@ save__Auto_relaxation.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -95332,7 +95340,7 @@ save__Auto_relaxation.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -95357,7 +95365,7 @@ save__Auto_relaxation.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -96930,7 +96938,7 @@ save__Dipole_dipole_relax.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -96957,7 +96965,7 @@ save__Dipole_dipole_relax.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -96982,7 +96990,7 @@ save__Dipole_dipole_relax.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -97034,7 +97042,7 @@ save__Dipole_dipole_relax.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -97061,7 +97069,7 @@ save__Dipole_dipole_relax.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -97086,7 +97094,7 @@ save__Dipole_dipole_relax.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99143,7 +99151,7 @@ save__Cross_correlation_DD.Dipole_1_auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -99170,7 +99178,7 @@ save__Cross_correlation_DD.Dipole_1_auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99195,7 +99203,7 @@ save__Cross_correlation_DD.Dipole_1_auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99247,7 +99255,7 @@ save__Cross_correlation_DD.Dipole_1_auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -99274,7 +99282,7 @@ save__Cross_correlation_DD.Dipole_1_auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99299,7 +99307,7 @@ save__Cross_correlation_DD.Dipole_1_auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99351,7 +99359,7 @@ save__Cross_correlation_DD.Dipole_2_auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -99378,7 +99386,7 @@ save__Cross_correlation_DD.Dipole_2_auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99403,7 +99411,7 @@ save__Cross_correlation_DD.Dipole_2_auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99455,7 +99463,7 @@ save__Cross_correlation_DD.Dipole_2_auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -99482,7 +99490,7 @@ save__Cross_correlation_DD.Dipole_2_auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -99507,7 +99515,7 @@ save__Cross_correlation_DD.Dipole_2_auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101563,7 +101571,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -101590,7 +101598,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101615,7 +101623,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101667,7 +101675,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -101694,7 +101702,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101719,7 +101727,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101771,7 +101779,7 @@ save__Cross_correlation_D_CSA.CSA_auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -101798,7 +101806,7 @@ save__Cross_correlation_D_CSA.CSA_auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101823,7 +101831,7 @@ save__Cross_correlation_D_CSA.CSA_auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101875,7 +101883,7 @@ save__Cross_correlation_D_CSA.CSA_auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -101902,7 +101910,7 @@ save__Cross_correlation_D_CSA.CSA_auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -101927,7 +101935,7 @@ save__Cross_correlation_D_CSA.CSA_auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -103805,7 +103813,7 @@ save__Order_param.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -103832,7 +103840,7 @@ save__Order_param.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -103857,7 +103865,7 @@ save__Order_param.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -105109,7 +105117,7 @@ save__PH_titr_result.Atm_obs_auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -105136,7 +105144,7 @@ save__PH_titr_result.Atm_obs_auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -105161,7 +105169,7 @@ save__PH_titr_result.Atm_obs_auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -105430,7 +105438,7 @@ save__PH_titr_result.Atm_titr_auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -105457,7 +105465,7 @@ save__PH_titr_result.Atm_titr_auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -105482,7 +105490,7 @@ save__PH_titr_result.Atm_titr_auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -107601,7 +107609,7 @@ save__D_H_fractionation_factor.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -107628,7 +107636,7 @@ save__D_H_fractionation_factor.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -107653,7 +107661,7 @@ save__D_H_fractionation_factor.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -108940,7 +108948,7 @@ save__Binding_result.Atm_obs_auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -108967,7 +108975,7 @@ save__Binding_result.Atm_obs_auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -108992,7 +109000,7 @@ save__Binding_result.Atm_obs_auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -111184,7 +111192,7 @@ save__Deduced_secd_struct_exptl.Auth_seq_ID_start
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -111211,7 +111219,7 @@ save__Deduced_secd_struct_exptl.Auth_seq_ID_end
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -111838,7 +111846,7 @@ save__Deduced_secd_struct_feature.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -111865,7 +111873,7 @@ save__Deduced_secd_struct_feature.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -111890,7 +111898,7 @@ save__Deduced_secd_struct_feature.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -113282,7 +113290,7 @@ save__Deduced_H_bond.Heavy_atom_auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -113309,7 +113317,7 @@ save__Deduced_H_bond.Heavy_atom_auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -113334,7 +113342,7 @@ save__Deduced_H_bond.Heavy_atom_auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -113386,7 +113394,7 @@ save__Deduced_H_bond.Heavy_atom_auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -113413,7 +113421,7 @@ save__Deduced_H_bond.Heavy_atom_auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -113438,7 +113446,7 @@ save__Deduced_H_bond.Heavy_atom_auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -113658,7 +113666,7 @@ save__Deduced_H_bond.H_atom_auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -113685,7 +113693,7 @@ save__Deduced_H_bond.H_atom_auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -113710,7 +113718,7 @@ save__Deduced_H_bond.H_atom_auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -119883,7 +119891,7 @@ save__Atom_site.PDBX_label_entity_ID
 
    _item_description.description
 ;
-This data item is provided as a place holder for the label_entity_id value 
+This data item is provided as a place holder for the label_entity_ID value 
 extracted from a pdbx file.
 ;
 
@@ -120149,7 +120157,7 @@ save__Atom_site.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -120192,7 +120200,7 @@ save__Atom_site.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -120233,7 +120241,7 @@ save__Atom_site.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -121507,7 +121515,7 @@ save__Terminal_residue.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -121534,7 +121542,7 @@ save__Terminal_residue.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -122131,7 +122139,7 @@ save__Rep_conf.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-An alternative identifier for entity_assembly_id that may be provided by 
+An alternative identifier for entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
 need to correspond to the value for entity_assembly_ID.
@@ -122158,7 +122166,7 @@ save__Rep_conf.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -122185,7 +122193,7 @@ save__Rep_conf.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -122210,7 +122218,7 @@ save__Rep_conf.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -128819,7 +128827,7 @@ save__Angular_order_param.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -128845,7 +128853,7 @@ save__Angular_order_param.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -128872,7 +128880,7 @@ save__Angular_order_param.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -128897,7 +128905,7 @@ save__Angular_order_param.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -129725,7 +129733,7 @@ save__Tertiary_struct.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -129751,7 +129759,7 @@ save__Tertiary_struct.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -129778,7 +129786,7 @@ save__Tertiary_struct.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -129803,7 +129811,7 @@ save__Tertiary_struct.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -130556,7 +130564,7 @@ save__Secondary_struct.Auth_seq_ID_start
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -130583,7 +130591,7 @@ save__Secondary_struct.Auth_seq_ID_end
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -131606,7 +131614,7 @@ save__Bond_annotation.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -131632,7 +131640,7 @@ save__Bond_annotation.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -131659,7 +131667,7 @@ save__Bond_annotation.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -131684,7 +131692,7 @@ save__Bond_annotation.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -131709,7 +131717,7 @@ save__Bond_annotation.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -131735,7 +131743,7 @@ save__Bond_annotation.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -131762,7 +131770,7 @@ save__Bond_annotation.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -131787,7 +131795,7 @@ save__Bond_annotation.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -132818,7 +132826,7 @@ save__Structure_interaction.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -132844,7 +132852,7 @@ save__Structure_interaction.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -132871,7 +132879,7 @@ save__Structure_interaction.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -132896,7 +132904,7 @@ save__Structure_interaction.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -132921,7 +132929,7 @@ save__Structure_interaction.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -132947,7 +132955,7 @@ save__Structure_interaction.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -132974,7 +132982,7 @@ save__Structure_interaction.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -132999,7 +133007,7 @@ save__Structure_interaction.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -133701,7 +133709,7 @@ save__Other_struct_feature.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -135391,7 +135399,7 @@ save__Tensor.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -135418,7 +135426,7 @@ save__Tensor.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -135443,7 +135451,7 @@ save__Tensor.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -136356,7 +136364,7 @@ save__Interatomic_dist.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -136383,7 +136391,7 @@ save__Interatomic_dist.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -136408,7 +136416,7 @@ save__Interatomic_dist.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -136481,7 +136489,7 @@ save__Interatomic_dist.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -136508,7 +136516,7 @@ save__Interatomic_dist.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -136533,7 +136541,7 @@ save__Interatomic_dist.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -138928,7 +138936,7 @@ save__Gen_dist_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -138954,7 +138962,7 @@ save__Gen_dist_constraint.Auth_asym_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author 
+An alternative identifier for Asym_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to correspond 
 to the value for Asym_ID. This item is provided as a place holder for 
@@ -139007,7 +139015,7 @@ save__Gen_dist_constraint.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -139034,7 +139042,7 @@ save__Gen_dist_constraint.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -139059,7 +139067,7 @@ save__Gen_dist_constraint.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -139132,7 +139140,7 @@ save__Gen_dist_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -139158,7 +139166,7 @@ save__Gen_dist_constraint.Auth_asym_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author 
+An alternative identifier for Asym_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to correspond 
 to the value for Asym_ID. This item is provided as a place holder for 
@@ -139211,7 +139219,7 @@ save__Gen_dist_constraint.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -139238,7 +139246,7 @@ save__Gen_dist_constraint.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -139263,7 +139271,7 @@ save__Gen_dist_constraint.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -142094,7 +142102,7 @@ save__Dist_constraint.Auth_asym_ID
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author 
+An alternative identifier for Asym_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to correspond 
 to the value for Asym_ID. This item is provided as a place holder for 
@@ -142123,7 +142131,7 @@ save__Dist_constraint.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -142149,7 +142157,7 @@ save__Dist_constraint.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -142176,7 +142184,7 @@ save__Dist_constraint.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -142201,7 +142209,7 @@ save__Dist_constraint.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -144606,7 +144614,7 @@ save__Floating_chirality.Auth_asym_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_Floating_chirality.Auth_asym_ID_1'
@@ -144630,7 +144638,7 @@ save__Floating_chirality.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -144656,7 +144664,7 @@ save__Floating_chirality.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -144683,7 +144691,7 @@ save__Floating_chirality.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -144708,7 +144716,7 @@ save__Floating_chirality.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -144733,7 +144741,7 @@ save__Floating_chirality.Auth_asym_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_Floating_chirality.Auth_asym_ID_2'
@@ -144757,7 +144765,7 @@ save__Floating_chirality.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -144783,7 +144791,7 @@ save__Floating_chirality.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -144810,7 +144818,7 @@ save__Floating_chirality.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -144835,7 +144843,7 @@ save__Floating_chirality.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -147667,7 +147675,7 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -147693,7 +147701,7 @@ save__Torsion_angle_constraint.Auth_asym_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_asym_ID_1'
@@ -147741,7 +147749,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -147768,7 +147776,7 @@ save__Torsion_angle_constraint.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -147793,7 +147801,7 @@ save__Torsion_angle_constraint.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -147866,7 +147874,7 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -147892,7 +147900,7 @@ save__Torsion_angle_constraint.Auth_asym_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_asym_ID_2'
@@ -147940,7 +147948,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -147967,7 +147975,7 @@ save__Torsion_angle_constraint.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -147992,7 +148000,7 @@ save__Torsion_angle_constraint.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -148065,7 +148073,7 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -148091,7 +148099,7 @@ save__Torsion_angle_constraint.Auth_asym_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_asym_ID_3'
@@ -148139,7 +148147,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -148166,7 +148174,7 @@ save__Torsion_angle_constraint.Auth_comp_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -148191,7 +148199,7 @@ save__Torsion_angle_constraint.Auth_atom_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -148264,7 +148272,7 @@ save__Torsion_angle_constraint.Auth_entity_assembly_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -148290,7 +148298,7 @@ save__Torsion_angle_constraint.Auth_asym_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_Torsion_angle_constraint.Auth_asym_ID_4'
@@ -148338,7 +148346,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -148365,7 +148373,7 @@ save__Torsion_angle_constraint.Auth_comp_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -148390,7 +148398,7 @@ save__Torsion_angle_constraint.Auth_atom_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -151576,7 +151584,7 @@ save__RDC_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -151602,7 +151610,7 @@ save__RDC_constraint.Auth_asym_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_RDC_constraint.Auth_asym_ID_1'
@@ -151650,7 +151658,7 @@ save__RDC_constraint.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -151677,7 +151685,7 @@ save__RDC_constraint.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -151702,7 +151710,7 @@ save__RDC_constraint.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -151775,7 +151783,7 @@ save__RDC_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -151801,7 +151809,7 @@ save__RDC_constraint.Auth_asym_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_RDC_constraint.Auth_asym_ID_2'
@@ -151849,7 +151857,7 @@ save__RDC_constraint.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -151876,7 +151884,7 @@ save__RDC_constraint.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -151901,7 +151909,7 @@ save__RDC_constraint.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -153179,7 +153187,7 @@ save__J_three_bond_constraint_list.Data_file_format
 
    _item_description.description
 ;
-File format for the J-three bond coupling constant restraints.
+File format for the J-three bond coupling constant constraints.
 ;
 
    _item.name                  '_J_three_bond_constraint_list.Data_file_format'
@@ -153251,8 +153259,8 @@ save__J_three_bond_constraint_list.Text_data_format
 
    _item_description.description
 ;
-The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_J_three_bond_constraint_list.Text_data' 
+The data format used to represent the J three bond constraints data as 
+ASCII text in the text block that is the value to the '_J_three_bond_constraint_list.Text_data' 
 tag.
 ;
 
@@ -153277,7 +153285,7 @@ save__J_three_bond_constraint_list.Text_data
 
    _item_description.description
 ;
-A set of order parameter data formatted as ASCII text.
+A set of J-three bond coupling data formatted as ASCII text.
 ;
 
    _item.name                  '_J_three_bond_constraint_list.Text_data'
@@ -153389,7 +153397,7 @@ save__J_three_bond_constraint_expt.Experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+Pointer to '_Experiment.Name'
 ;
 
    _item.name                  '_J_three_bond_constraint_expt.Experiment_name'
@@ -153493,7 +153501,7 @@ save__J_three_bond_constraint_expt.Sample_label
 
    _item_description.description
 ;
-Sample(s) used in deriving the data
+Pointer to a saveframe of the category 'sample'
 ;
 
    _item.name                  '_J_three_bond_constraint_expt.Sample_label'
@@ -154877,7 +154885,7 @@ save__J_three_bond_constraint.Auth_asym_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_asym_ID_1'
@@ -154901,7 +154909,7 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -154927,7 +154935,7 @@ save__J_three_bond_constraint.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -154954,7 +154962,7 @@ save__J_three_bond_constraint.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -154979,7 +154987,7 @@ save__J_three_bond_constraint.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -155004,7 +155012,7 @@ save__J_three_bond_constraint.Auth_asym_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_asym_ID_2'
@@ -155028,7 +155036,7 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -155054,7 +155062,7 @@ save__J_three_bond_constraint.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -155081,7 +155089,7 @@ save__J_three_bond_constraint.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -155106,7 +155114,7 @@ save__J_three_bond_constraint.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -155131,7 +155139,7 @@ save__J_three_bond_constraint.Auth_asym_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_asym_ID_3'
@@ -155155,7 +155163,7 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -155181,7 +155189,7 @@ save__J_three_bond_constraint.Auth_seq_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -155208,7 +155216,7 @@ save__J_three_bond_constraint.Auth_comp_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -155233,7 +155241,7 @@ save__J_three_bond_constraint.Auth_atom_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -155258,7 +155266,7 @@ save__J_three_bond_constraint.Auth_asym_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_J_three_bond_constraint.Auth_asym_ID_4'
@@ -155282,7 +155290,7 @@ save__J_three_bond_constraint.Auth_entity_assembly_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -155308,7 +155316,7 @@ save__J_three_bond_constraint.Auth_seq_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -155335,7 +155343,7 @@ save__J_three_bond_constraint.Auth_comp_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -155360,7 +155368,7 @@ save__J_three_bond_constraint.Auth_atom_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -155649,7 +155657,7 @@ save__CA_CB_constraint_list.Data_file_name
 
    _item_description.description
 ;
-Name of the file that contains the J-three bond coupling constant constraints.
+Name of the file that contains the CA/CB chemical shift constraints.
 ;
 
    _item.name                  '_CA_CB_constraint_list.Data_file_name'
@@ -155794,8 +155802,9 @@ save__CA_CB_constraint_list.Text_data_format
 
    _item_description.description
 ;
-The data format used to represent the order parameter data as ASCII text 
-in the text block that is the value to the '_CA_CB_constraint_list.Text_data' tag.
+The data format used to represent the CA/CB chemical shift constraint data 
+as ASCII text in the text block that is the value to the '_CA_CB_constraint_list.Text_data' 
+tag.
 ;
 
    _item.name                  '_CA_CB_constraint_list.Text_data_format'
@@ -155819,7 +155828,7 @@ save__CA_CB_constraint_list.Text_data
 
    _item_description.description
 ;
-A set of order parameter data formatted as ASCII text.
+A set of CA/CB chemical shift constraint data formatted as ASCII text.
 ;
 
    _item.name                  '_CA_CB_constraint_list.Text_data'
@@ -155906,7 +155915,7 @@ save__CA_CB_constraint_expt.Experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+Pointer to '_Experiment.Name'
 ;
 
    _item.name                  '_CA_CB_constraint_expt.Experiment_name'
@@ -157611,7 +157620,7 @@ save__CA_CB_constraint.Auth_asym_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_asym_ID_1'
@@ -157635,7 +157644,7 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -157661,7 +157670,7 @@ save__CA_CB_constraint.Auth_seq_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -157688,7 +157697,7 @@ save__CA_CB_constraint.Auth_comp_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -157713,7 +157722,7 @@ save__CA_CB_constraint.Auth_atom_ID_1
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -157738,7 +157747,7 @@ save__CA_CB_constraint.Auth_asym_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_asym_ID_2'
@@ -157762,7 +157771,7 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -157788,7 +157797,7 @@ save__CA_CB_constraint.Auth_seq_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -157815,7 +157824,7 @@ save__CA_CB_constraint.Auth_comp_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -157840,7 +157849,7 @@ save__CA_CB_constraint.Auth_atom_ID_2
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -157865,7 +157874,7 @@ save__CA_CB_constraint.Auth_asym_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_asym_ID_3'
@@ -157889,7 +157898,7 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -157915,7 +157924,7 @@ save__CA_CB_constraint.Auth_seq_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -157942,7 +157951,7 @@ save__CA_CB_constraint.Auth_comp_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -157967,7 +157976,7 @@ save__CA_CB_constraint.Auth_atom_ID_3
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -157992,7 +158001,7 @@ save__CA_CB_constraint.Auth_asym_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_asym_ID_4'
@@ -158016,7 +158025,7 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -158042,7 +158051,7 @@ save__CA_CB_constraint.Auth_seq_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -158069,7 +158078,7 @@ save__CA_CB_constraint.Auth_comp_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -158094,7 +158103,7 @@ save__CA_CB_constraint.Auth_atom_ID_4
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -158119,7 +158128,7 @@ save__CA_CB_constraint.Auth_asym_ID_5
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_CA_CB_constraint.Auth_asym_ID_5'
@@ -158143,7 +158152,7 @@ save__CA_CB_constraint.Auth_entity_assembly_ID_5
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -158169,7 +158178,7 @@ save__CA_CB_constraint.Auth_seq_ID_5
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -158196,7 +158205,7 @@ save__CA_CB_constraint.Auth_comp_ID_5
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -158221,7 +158230,7 @@ save__CA_CB_constraint.Auth_atom_ID_5
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -159587,7 +159596,7 @@ save__H_chem_shift_constraint.Auth_asym_ID
 
    _item_description.description
 ;
-An alternative identifier for Asym_id that may be provided by an author.
+An alternative identifier for Asym_ID that may be provided by an author.
 ;
 
    _item.name                  '_H_chem_shift_constraint.Auth_asym_ID'
@@ -159611,7 +159620,7 @@ save__H_chem_shift_constraint.Auth_entity_assembly_ID
 
    _item_description.description
 ;
-An alternative identifier for Entity_assembly_id that may be provided by 
+An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number.
 ;
@@ -159637,7 +159646,7 @@ save__H_chem_shift_constraint.Auth_seq_ID
 
    _item_description.description
 ;
-An alternative identifier for Seq_id that may be provided by an author 
+An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
 to the value for Seq_ID or Comp_index_ID.
@@ -159664,7 +159673,7 @@ save__H_chem_shift_constraint.Auth_comp_ID
 
    _item_description.description
 ;
-An alternative identifier for Comp_id that may be provided by an author 
+An alternative identifier for Comp_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -159689,7 +159698,7 @@ save__H_chem_shift_constraint.Auth_atom_ID
 
    _item_description.description
 ;
-An alternative identifier for Atom_id that may be provided by an author 
+An alternative identifier for Atom_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data.
 ;
 
@@ -160674,6 +160683,109 @@ SAXS intensity value error.
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save_SAXS_constraint
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'SAXS_constraint'
+
+   loop_
+     _category_key.name
+
+     '_SAXS_constraint.ID'
+     '_SAXS_constraint.Entry_ID'
+     '_SAXS_constraint.SAXS_constraint_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'SAXS_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.Weight_val
+
+   _item_description.description
+;
+SAXS weighting value assigned to the data point.
+;
+
+   _item.name                  '_SAXS_constraint.Weight_val'
+   _item.category_id              'SAXS_constraint'
+   _item.mandatory_code            no
+
+   _item_type.code                'float'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_SAXS_constraint
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'SAXS_constraint'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_SAXS_constraint.ID'
+     '_SAXS_constraint.Entry_ID'
+     '_SAXS_constraint.SAXS_constraint_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'SAXS_constraints'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
 ;
 
    stop_

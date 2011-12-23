@@ -74540,7 +74540,7 @@ NOE reference value
      _Example
 
 ;
-1.20E+08
+120000000
 ;
 
    stop_
@@ -76322,7 +76322,7 @@ NOE ref val
      _Example
 
 ;
-2.00E+07
+20000000
 ;
 
    stop_
@@ -146846,7 +146846,7 @@ Q value
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -146894,6 +146894,33 @@ Estimated minimum value for the hydrogen exchange rate when a specific value can
    _Adit_item_view_name
 ;
 Intensity val err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint.Weight_val
+
+   _Tag                  '_SAXS_constraint.Weight_val'
+
+   _Category              'SAXS_constraint'
+
+   _Description
+;
+A weight value assigned to the data point in the SAXS data.
+;
+
+   _Adit_item_view_name
+;
+
 ;
 
    loop_
