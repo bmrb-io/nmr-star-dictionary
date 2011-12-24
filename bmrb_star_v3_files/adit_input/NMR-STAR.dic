@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.18
+    _dictionary.version         3.1.1.19
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.18         ?
+     3.1.1.19         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.18'
+   _item_default.value            '3.1.1.19'
    _item_type.code                'line'
 
    loop_
@@ -144721,45 +144721,6 @@ SAXS intensity value error.
 
 save_
 
-save_saxs_constraint
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'saxs_constraint'
-
-   loop_
-     _category_key.name
-
-     '_saxs_constraint.id'
-     '_saxs_constraint.entry_id'
-     '_saxs_constraint.saxs_constraint_list_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'saxs_constraints'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__saxs_constraint.weight_val
 
    _item_description.description
@@ -144778,45 +144739,6 @@ SAXS weighting value assigned to the data point.
 
 ;
 ?
-;
-
-   stop_
-
-save_
-
-save_saxs_constraint
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'saxs_constraint'
-
-   loop_
-     _category_key.name
-
-     '_saxs_constraint.id'
-     '_saxs_constraint.entry_id'
-     '_saxs_constraint.saxs_constraint_list_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'saxs_constraints'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_

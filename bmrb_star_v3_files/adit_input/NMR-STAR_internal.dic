@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.18
+    _dictionary.version         3.1.1.19
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.18         ?
+     3.1.1.19         ?
 ;
      ?
 ;
@@ -4927,7 +4927,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.18'
+   _item_default.value            '3.1.1.19'
    _item_type.code                'line'
 
    loop_
@@ -160689,45 +160689,6 @@ SAXS intensity value error.
 
 save_
 
-save_SAXS_constraint
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'SAXS_constraint'
-
-   loop_
-     _category_key.name
-
-     '_SAXS_constraint.ID'
-     '_SAXS_constraint.Entry_ID'
-     '_SAXS_constraint.SAXS_constraint_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'SAXS_constraints'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
-;
-
-   stop_
-
-save_
-
 save__SAXS_constraint.Weight_val
 
    _item_description.description
@@ -160746,46 +160707,6 @@ SAXS weighting value assigned to the data point.
 
 ;
 ?
-;
-
-   stop_
-
-save_
-
-save_SAXS_constraint
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'SAXS_constraint'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_SAXS_constraint.ID'
-     '_SAXS_constraint.Entry_ID'
-     '_SAXS_constraint.SAXS_constraint_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'SAXS_constraints'
-
-   stop_
-
-   loop_
-     _category_examples.detail
-     _category_examples.case
-
-;
-   ?
-;
-;
-   ?
 ;
 
    stop_
