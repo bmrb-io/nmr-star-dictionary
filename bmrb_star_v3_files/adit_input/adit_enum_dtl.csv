@@ -785,13 +785,15 @@ TBL_BEGIN,?,?,?
 115,3,RNA,enumeration_text
 115,4,DNA/RNA hybrid,enumeration_text
 115,5,polysaccharide,enumeration_text
-116,1,polypeptide(L),enumeration_text
-116,2,polydeoxyribonucleotide,DNA
-116,3,polyribonucleotide,RNA
-116,4,DNA/RNA hybrid,enumeration_text
-116,5,polypeptide(D),enumeration_text
-116,6,polysaccharide(D),enumeration_text
-116,7,polysaccharide(L),enumeration_text
+116,1,cyclic-pseudo-peptide,enumeration_text
+116,2,polypeptide(L),enumeration_text
+116,3,polydeoxyribonucleotide,DNA
+116,4,polyribonucleotide,RNA
+116,5,polydeoxyribonucleotide/polyribonucleotide hybrid,enumeration_text
+116,6,polypeptide(D),enumeration_text
+116,7,polysaccharide(D),enumeration_text
+116,8,polysaccharide(L),enumeration_text
+116,9,other,enumeration_text
 123,1,all disulfide bound,enumeration_text
 123,2,all other bound,enumeration_text
 123,3,all free,enumeration_text
@@ -992,8 +994,10 @@ TBL_BEGIN,?,?,?
 127,3,CAS registry number,enumeration_text
 127,4,BMRB,enumeration_text
 127,5,Three letter code,enumeration_text
-60,1,yes,enumeration_text
-60,2,no,enumeration_text
+60,1,CASP,enumeration_text
+60,2,CASD-NMR,enumeration_text
+60,3,FoldIt,enumeration_text
+60,4,GPCR Dock,enumeration_text
 55,1,RELEASE NOW,"Release immediately"
 55,2,HOLD FOR PUBLICATION,"Hold until primary citation is published"
 55,3,HOLD FOR 4 WEEKS,"Hold for 4 weeks"

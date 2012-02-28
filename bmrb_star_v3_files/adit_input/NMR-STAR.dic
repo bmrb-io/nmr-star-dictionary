@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-01-06
+#  version date -  2012-02-28
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.20
+    _dictionary.version         3.1.1.21
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.20         ?
+     3.1.1.21         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.20'
+   _item_default.value            '3.1.1.21'
    _item_type.code                'line'
 
    loop_
@@ -17413,13 +17413,15 @@ Entity polymer types include protein, DNA, RNA, DNA/RNA hybrids, and carbohydrat
      _item_enumeration.value
      _item_enumeration.detail
 
+   cyclic-pseudo-peptide    ?
    polypeptide(L)    ?
    polydeoxyribonucleotide    DNA
    polyribonucleotide    RNA
-   'DNA/RNA hybrid'    ?
+   'polydeoxyribonucleotide/polyribonucleotide hybrid'    ?
    polypeptide(D)    ?
    polysaccharide(D)    ?
    polysaccharide(L)    ?
+   other    ?
 
    stop_
 
