@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-02-28
+#  version date -  2012-02-29
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.21
+    _dictionary.version         3.1.1.22
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.21         ?
+     3.1.1.22         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.21'
+   _item_default.value            '3.1.1.22'
    _item_type.code                'line'
 
    loop_
@@ -8411,8 +8411,7 @@ save_entity_deleted_atom
    loop_
      _category_key.name
 
-     '_entity_deleted_atom.entity_atom_list_id'
-     '_entity_deleted_atom.entity_assembly_id'
+     '_entity_deleted_atom.id'
      '_entity_deleted_atom.entry_id'
      '_entity_deleted_atom.assembly_id'
 
@@ -8441,6 +8440,30 @@ save_entity_deleted_atom
 
 save_
 
+save__entity_deleted_atom.id
+
+   _item_description.description
+;
+Unique identifier for the listed deleted atom.
+;
+
+   _item.name                  '_entity_deleted_atom.id'
+   _item.category_id              'entity_deleted_atom'
+   _item.mandatory_code            yes
+
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__entity_deleted_atom.entity_atom_list_id
 
    _item_description.description
@@ -8450,7 +8473,7 @@ Pointer to '_Entity_atom_list.ID'
 
    _item.name                  '_entity_deleted_atom.entity_atom_list_id'
    _item.category_id              'entity_deleted_atom'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'int'
 
