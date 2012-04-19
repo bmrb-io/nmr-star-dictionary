@@ -402,8 +402,30 @@ save__Binding_result.Val_type
 
 save_ 
 
+save__Entity_bond.Type
 
-save__Bond_annotation.Bond_order
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        covalent               .
+        directed               .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+
+    stop_
+
+save_
+
+
+
+save__Entity_bond.Value_order
 
      loop_
        _item_enumeration_value
@@ -421,7 +443,25 @@ save__Bond_annotation.Bond_order
 save_
 
 
-save__Bond_annotation.Bond_type
+save__Bond_annotation.Value_order
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  SING            . 
+  DOUB            . 
+  TRIP            .
+  AROM            .
+  PARTIAL-DOUBLE  .
+  DIRECTED        .
+
+     stop_
+
+save_
+
+
+save__Bond_annotation.Type
 
      loop_
        _item_enumeration_value
@@ -764,63 +804,34 @@ save__Chem_comp.Type
      _item_enumeration_value
      _item_enumeration_description
 
-      'D-peptide linking'                         n.a.
       'D-PEPTIDE LINKING'                         .      
-      'L-peptide linking'                         n.a.
       'L-PEPTIDE LINKING'                         .
-      'D-peptide NH3 amino terminus'              n.a.
       'D-PEPTIDE NH3 AMINO TERMINUS'              .
-      'L-peptide NH3 amino terminus'              n.a.
       'L-PEPTIDE NH3 AMINO TERMINUS'              .
-      'D-peptide COOH carboxy terminus'           n.a.
       'D-PEPTIDE COOH CARBOXY TERMINUS'           .
-      'L-peptide COOH carboxy terminus'           n.a.
       'L-PEPTIDE COOH CARBOXY TERMINUS'           .
-      'DNA linking'                               n.a.
       'DNA LINKING'                               .
-      'RNA linking'                               n.a.
       'RNA LINKING'                               .
-      'L-RNA linking'                             n.a.
       'L-RNA LINKING'                             .
-      'L-DNA linking'                             n.a.
       'L-DNA LINKING'                             .
-      'DNA OH 5 prime terminus'                   n.a.
       'DNA OH 5 PRIME TERMINUS'                   .
-      'RNA OH 5 prime terminus'                   n.a.
       'RNA OH 5 PRIME TERMINUS'                   .
-      'DNA OH 3 prime terminus'                   n.a.
       'DNA OH 3 PRIME TERMINUS'                   .
-      'RNA OH 3 prime terminus'                   n.a.
       'RNA OH 3 PRIME TERMINUS'                   .
-      'D-saccharide 1$4 and 1$4 linking'          n.a.
       'D-SACCHARIDE 1$4 AND 1$4 LINKING'          .
-      'L-saccharide 1$4 and 1$4 linking'          n.a.
       'L-SACCHARIDE 1$4 AND 1$4 LINKING'          .
-      'D-saccharide 1$4 and 1$6 linking'          n.a.
       'D-SACCHARIDE 1$4 AND 1$6 LINKING'          .
-      'L-saccharide 1$4 and 1$6 linking'          n.a.
       'L-SACCHARIDE 1$4 AND 1$6 LINKING'          .
-      'L-saccharide'                              n.a.
       'L-SACCHARIDE'                              .
-      'D-saccharide'                              n.a.
       'D-SACCHARIDE'                              .
-      'saccharide'                                n.a.
       'SACCHARIDE'                                .
-      'non-polymer'                               n.a.
       'NON-POLYMER'                               .
-      'peptide linking'                           n.a.
       'PEPTIDE LINKING'                           .
-      'peptide-like'                              n.a.
       'PEPTIDE-LIKE'                              .
-      'L-gamma-peptide$ C-delta linking'         'Iso-peptide linking L-gamma peptide'
       'L-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
-      'D-gamma-peptide$ C-delta linking'         'Iso-peptide linking D-gamma peptide'
       'D-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
-      'L-beta-peptide$ C-gamma linking'          'Iso-peptide linking L-beta peptide'
       'L-BETA-PEPTIDE$ C-GAMMA LINKING'           .
-      'D-beta-peptide$ C-gamma linking'          'Iso-peptide linking D-beta peptide'
       'D-BETA-PEPTIDE$ C-GAMMA LINKING'           .
-      'other'                                     n.a.
       'OTHER'                                     .
 
    stop_
@@ -879,7 +890,7 @@ save__Chem_comp_bond.Type
  
         amide                  .
         covalent               .
-        directed               .   # N -> O
+        directed               .  
         disulfide              .
         ester                  .
         ether                  .
@@ -894,9 +905,6 @@ save_
 
 
 save__Chem_comp_bond.Value_order
-
-# Take from the mif definitions
-
 
      loop_
        _item_enumeration_value
@@ -2972,6 +2980,7 @@ save__Entity.Polymer_type
      _item_enumeration_value
      _item_enumeration_description
 
+     cyclic-pseudo-peptide                      .
     'polypeptide(L)'             
 ;
 A polypeptide with a majority of amino acids
@@ -2979,7 +2988,7 @@ in the L configuration
 ;
     'polydeoxyribonucleotide'                    DNA
     'polyribonucleotide'                         RNA
-    'DNA/RNA hybrid'      
+    'polydeoxyribonucleotide/polyribonucleotide hybrid'      
 ;
 A nucleic acid containing a combination of DNA and
 RNA monomers
@@ -3001,6 +3010,8 @@ having a D configuration
 A carbohydrate with the majority of the monomers
 having an L configuration
 ;
+
+     other                                   .
 
    stop_
 
@@ -3610,8 +3621,10 @@ save__Entry.CASP_target
       _item_enumeration_value
       _item_enumeration_description
 
-     yes       .
-      no        .
+     CASP            .
+     CASD-NMR        .
+     FoldIt          .
+    'GPCR Dock'      .
 
    stop_
 

@@ -20115,20 +20115,20 @@ Entry details
 
 save_
 
-save__Entity_db_link.Chimera_segment
+save__Entity_db_link.Chimera_segment_ID
 
-   _Tag                  '_Entity_db_link.Chimera_segment'
+   _Tag                  '_Entity_db_link.Chimera_segment_ID'
 
    _Category              'Entity_db_link'
 
    _Description
 ;
-Code indicating if the listed database link is specific to the fragment of the entity described by the tag '_Entity.Fragment'.
+Pointer to '_Entity_chimera_segment.ID'
 ;
 
    _Adit_item_view_name
 ;
-Chimera segment
+Chimera segment ID
 ;
 
    loop_
@@ -21338,7 +21338,7 @@ save__Entity_chimera_segment.ID
 
    _Description
 ;
-The value of _Entity_fragment.id must uniquely identify a record in the Entity_fragment list.
+The value of '_Entity_chimera_segment.ID' must uniquely identify a record in the Entity_fragment list.
 ;
 
    _Adit_item_view_name
@@ -117828,9 +117828,9 @@ ID
 
 save_
 
-save__Bond_annotation.Bond_type
+save__Bond_annotation.Type
 
-   _Tag                  '_Bond_annotation.Bond_type'
+   _Tag                  '_Bond_annotation.Type'
 
    _Category              'Bond_annotation'
 
@@ -117841,7 +117841,7 @@ A commonly used term that describes the chemical nature of the bond.
 
    _Adit_item_view_name
 ;
-Bond type
+Type
 ;
 
    loop_
@@ -117855,9 +117855,9 @@ disufide
 
 save_
 
-save__Bond_annotation.Bond_order
+save__Bond_annotation.Value_order
 
-   _Tag                  '_Bond_annotation.Bond_order'
+   _Tag                  '_Bond_annotation.Value_order'
 
    _Category              'Bond_annotation'
 
@@ -117868,7 +117868,7 @@ The order of the defined bond.
 
    _Adit_item_view_name
 ;
-Bond order
+Value order
 ;
 
    loop_

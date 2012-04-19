@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-03-21
+#  version date -  2012-04-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.23
+    _dictionary.version         3.1.1.24
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.23         ?
+     3.1.1.24         ?
 ;
      ?
 ;
@@ -4927,7 +4927,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.23'
+   _item_default.value            '3.1.1.24'
    _item_type.code                'line'
 
    loop_
@@ -13021,7 +13021,7 @@ A descriptive phrase or word that characterized the bond.
 
    amide    ?
    covalent    ?
-   directed    ?
+   directed    'N -> O'
    disulfide    ?
    ester    ?
    ether    ?
@@ -13060,12 +13060,15 @@ The order of the bond between two atoms (i.e.$ single$ double$ etc.)
      _item_enumeration.value
      _item_enumeration.detail
 
-   SING    ?
-   DOUB    ?
-   TRIP    ?
-   AROM    ?
-   PARTIAL-DOUBLE    ?
-   DIRECTED    ?
+   sing    'single bond'
+   doub    'double bond'
+   trip    'triple bond'
+   quad    'quadruple bond'
+   arom    'aromatic bond'
+   poly    'polymeric bond'
+   delo    'delocalized double bond'
+   pi    'pi bond'
+   directed    'N ->O'
 
    stop_
 
@@ -24694,7 +24697,7 @@ Text providing additional information about the matching entry.
 
 save_
 
-save__Entity_db_link.Chimera_segment
+save__Entity_db_link.Chimera_segment_ID
 
    _item_description.description
 ;
@@ -24702,7 +24705,7 @@ Code indicating if the listed database link is specific to the fragment
 of the entity described by the tag '_Entity.Fragment'.
 ;
 
-   _item.name                  '_Entity_db_link.Chimera_segment'
+   _item.name                  '_Entity_db_link.Chimera_segment_ID'
    _item.category_id              'Entity_db_link'
    _item.mandatory_code            no
 
@@ -26565,8 +26568,8 @@ save__Entity_chimera_segment.ID
 
    _item_description.description
 ;
-The value of '_Entity_fragment.id' must uniquely identify a record in the 
-Entity_fragment list.
+The value of '_Entity_chimera_segment.ID' must uniquely identify a record 
+in the Entity_fragment list.
 ;
 
   loop_
@@ -26575,6 +26578,7 @@ Entity_fragment list.
       _item.mandatory_code
 
   '_Entity_chimera_segment.ID'                           'Entity_chimera_segment'        yes
+  '_Entity_db_link.Chimera_segment_ID'                   'Entity_db_link'                yes
   '_Entity_natural_src.Entity_chimera_segment_ID'                           'Entity_natural_src'            yes
   '_Natural_source_db.Entity_chimera_segment_ID'         'Natural_source_db'             yes
   '_Entity_experimental_src.Entity_chimera_segment_ID'                      'Entity_experimental_src'       yes
@@ -26585,6 +26589,7 @@ Entity_fragment list.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_Entity_db_link.Chimera_segment_ID'                   '_Entity_chimera_segment.ID'
   '_Entity_natural_src.Entity_chimera_segment_ID'                           '_Entity_chimera_segment.ID'
   '_Natural_source_db.Entity_chimera_segment_ID'         '_Entity_chimera_segment.ID'
   '_Entity_experimental_src.Entity_chimera_segment_ID'                      '_Entity_chimera_segment.ID'
@@ -27507,6 +27512,16 @@ A common chemical bond descriptive name.
    'metal coordination'    ?
    peptide    ?
    thioether    ?
+   amide    ?
+   covalent    ?
+   directed    ?
+   disulfide    ?
+   ester    ?
+   ether    ?
+   hydrogen    ?
+   'metal coordination'    ?
+   peptide    ?
+   thioether    ?
 
    stop_
 
@@ -27534,6 +27549,22 @@ with the specified atoms expressed as a bond order.
    _item.mandatory_code            yes
 
    _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   sing    'single bond'
+   doub    'double bond'
+   trip    'triple bond'
+   quad    'quadruple bond'
+   arom    'aromatic bond'
+   poly    'polymeric bond'
+   delo    'delocalized double bond'
+   pi    'pi bond'
+   directed    'N ->O'
+
+   stop_
 
    loop_
      _item_examples.case
@@ -31414,63 +31445,34 @@ compound or a fragment of a complete chemical compound.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'D-peptide linking'    n.a.
    'D-PEPTIDE LINKING'    ?
-   'L-peptide linking'    n.a.
    'L-PEPTIDE LINKING'    ?
-   'D-peptide NH3 amino terminus'    n.a.
    'D-PEPTIDE NH3 AMINO TERMINUS'    ?
-   'L-peptide NH3 amino terminus'    n.a.
    'L-PEPTIDE NH3 AMINO TERMINUS'    ?
-   'D-peptide COOH carboxy terminus'    n.a.
    'D-PEPTIDE COOH CARBOXY TERMINUS'    ?
-   'L-peptide COOH carboxy terminus'    n.a.
    'L-PEPTIDE COOH CARBOXY TERMINUS'    ?
-   'DNA linking'    n.a.
    'DNA LINKING'    ?
-   'RNA linking'    n.a.
    'RNA LINKING'    ?
-   'L-RNA linking'    n.a.
    'L-RNA LINKING'    ?
-   'L-DNA linking'    n.a.
    'L-DNA LINKING'    ?
-   'DNA OH 5 prime terminus'    n.a.
    'DNA OH 5 PRIME TERMINUS'    ?
-   'RNA OH 5 prime terminus'    n.a.
    'RNA OH 5 PRIME TERMINUS'    ?
-   'DNA OH 3 prime terminus'    n.a.
    'DNA OH 3 PRIME TERMINUS'    ?
-   'RNA OH 3 prime terminus'    n.a.
    'RNA OH 3 PRIME TERMINUS'    ?
-   'D-saccharide 1$4 and 1$4 linking'    n.a.
    'D-SACCHARIDE 1$4 AND 1$4 LINKING'    ?
-   'L-saccharide 1$4 and 1$4 linking'    n.a.
    'L-SACCHARIDE 1$4 AND 1$4 LINKING'    ?
-   'D-saccharide 1$4 and 1$6 linking'    n.a.
    'D-SACCHARIDE 1$4 AND 1$6 LINKING'    ?
-   'L-saccharide 1$4 and 1$6 linking'    n.a.
    'L-SACCHARIDE 1$4 AND 1$6 LINKING'    ?
-   L-saccharide    n.a.
    L-SACCHARIDE    ?
-   D-saccharide    n.a.
    D-SACCHARIDE    ?
-   saccharide    n.a.
    SACCHARIDE    ?
-   non-polymer    n.a.
    NON-POLYMER    ?
-   'peptide linking'    n.a.
    'PEPTIDE LINKING'    ?
-   peptide-like    n.a.
    PEPTIDE-LIKE    ?
-   'L-gamma-peptide$ C-delta linking'    'Iso-peptide linking L-gamma peptide'
    'L-GAMMA-PEPTIDE$ C-DELTA LINKING'    ?
-   'D-gamma-peptide$ C-delta linking'    'Iso-peptide linking D-gamma peptide'
    'D-GAMMA-PEPTIDE$ C-DELTA LINKING'    ?
-   'L-beta-peptide$ C-gamma linking'    'Iso-peptide linking L-beta peptide'
    'L-BETA-PEPTIDE$ C-GAMMA LINKING'    ?
-   'D-beta-peptide$ C-gamma linking'    'Iso-peptide linking D-beta peptide'
    'D-BETA-PEPTIDE$ C-GAMMA LINKING'    ?
-   other    n.a.
    OTHER    ?
 
    stop_
@@ -36523,6 +36525,23 @@ A common chemical bond descriptive name.
    _item_type.code                'line'
 
    loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   amide    ?
+   covalent    ?
+   directed    ?
+   disulfide    ?
+   ester    ?
+   ether    ?
+   hydrogen    ?
+   'metal coordination'    ?
+   peptide    ?
+   thioether    ?
+
+   stop_
+
+   loop_
      _item_examples.case
 
 ;
@@ -36546,6 +36565,22 @@ with the specified atoms, expressed as a bond order.
    _item.mandatory_code            yes
 
    _item_type.code                'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   sing    'single bond'
+   doub    'double bond'
+   trip    'triple bond'
+   quad    'quadruple bond'
+   arom    'aromatic bond'
+   poly    'polymeric bond'
+   delo    'delocalized double bond'
+   pi    'pi bond'
+   directed    'N ->O'
+
+   stop_
 
    loop_
      _item_examples.case
@@ -131104,14 +131139,14 @@ Unique identifier for the reported bond annotation.
 
 save_
 
-save__Bond_annotation.Bond_type
+save__Bond_annotation.Type
 
    _item_description.description
 ;
 A commonly used term that describes the chemical nature of the bond.
 ;
 
-   _item.name                  '_Bond_annotation.Bond_type'
+   _item.name                  '_Bond_annotation.Type'
    _item.category_id              'Bond_annotation'
    _item.mandatory_code            yes
 
@@ -131145,14 +131180,14 @@ disufide
 
 save_
 
-save__Bond_annotation.Bond_order
+save__Bond_annotation.Value_order
 
    _item_description.description
 ;
 The order of the defined bond.
 ;
 
-   _item.name                  '_Bond_annotation.Bond_order'
+   _item.name                  '_Bond_annotation.Value_order'
    _item.category_id              'Bond_annotation'
    _item.mandatory_code            yes
 
@@ -131162,12 +131197,15 @@ The order of the defined bond.
      _item_enumeration.value
      _item_enumeration.detail
 
-   SING    ?
-   DOUB    ?
-   TRIP    ?
-   AROM    ?
-   PARTIAL-DOUBLE    ?
-   DIRECTED    ?
+   sing    'single bond'
+   doub    'double bond'
+   trip    'triple bond'
+   quad    'quadruple bond'
+   arom    'aromatic bond'
+   poly    'polymeric bond'
+   delo    'delocalized double bond'
+   pi    'pi bond'
+   directed    'N ->O'
 
    stop_
 
