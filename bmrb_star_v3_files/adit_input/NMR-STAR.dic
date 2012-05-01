@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-04-19
+#  version date -  2012-05-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.24
+    _dictionary.version         3.1.1.26
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.24         ?
+     3.1.1.26         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.24'
+   _item_default.value            '3.1.1.26'
    _item_type.code                'line'
 
    loop_
@@ -18331,6 +18331,7 @@ author (yes) or obtained through another method (no).
    _item.category_id              'entity_db_link'
    _item.mandatory_code            no
 
+   _item_default.value            'yes'
    _item_type.code                'yes_no'
 
    loop_
@@ -32277,9 +32278,11 @@ Units used to express the concentration of the sample component.
    nM    nanomolar
    %    percent
    v/v    'volume to volume'
-   w/v    'weight to volume'
+   w/v    'weight to volume percent'
    mg    'milligram'
    ug    'microgram'
+   mg/mL    'mg per milliliter'
+   g/L    'grams per liter'
 
    stop_
 
