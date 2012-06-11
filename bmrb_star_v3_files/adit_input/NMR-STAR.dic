@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-05-01
+#  version date -  2012-06-11
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.26
+    _dictionary.version         3.1.1.27
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.26         ?
+     3.1.1.27         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.26'
+   _item_default.value            '3.1.1.27'
    _item_type.code                'line'
 
    loop_
@@ -48351,8 +48351,8 @@ save__chem_shift_ref.ref_method
 
    _item_description.description
 ;
-The reference method may be either direct (against a value measured with 
-a chemical compound) or indirect (calculated from chemical shift ratios).
+The chemical shift reference may be either internal (the compound is located 
+in the sample) or external (the compound is in a container external to the sample).
 ;
 
    _item.name                  '_chem_shift_ref.ref_method'
@@ -48386,8 +48386,8 @@ save__chem_shift_ref.ref_type
 
    _item_description.description
 ;
-The chemical shift reference may be either internal (the compound is located 
-in the sample) or external (the compound is in a container external to the sample).
+The reference type may be either direct (against a value measured with 
+a chemical compound) or indirect (calculated from chemical shift ratios).
 ;
 
    _item.name                  '_chem_shift_ref.ref_type'
@@ -48437,7 +48437,7 @@ by the IUPAC Taskforce on the deposition of data to the public databases
      _item_examples.case
 
 ;
-?
+0.25144953
 ;
 
    stop_
@@ -49668,7 +49668,7 @@ the chemical shift referencing that was used.
    _item.category_id              'systematic_chem_shift_offset'
    _item.mandatory_code            yes
 
-   _item_type.code                'code'
+   _item_type.code                'float'
 
    loop_
      _item_examples.case
@@ -49692,7 +49692,7 @@ Error in the reported chemical shift offset value used.
    _item.category_id              'systematic_chem_shift_offset'
    _item.mandatory_code            no
 
-   _item_type.code                'code'
+   _item_type.code                'float'
 
    loop_
      _item_examples.case
@@ -49980,7 +49980,7 @@ save__atom_chem_shift.id
    _item_description.description
 ;
 An integer value that is a unique identifier for the assigned chemical 
-shift value value.
+shift value.
 ;
 
   loop_
@@ -108322,7 +108322,7 @@ Code assigned by the PDB to the chemical component.
 
    _item.name                  '_rep_conf.chem_comp_pdb_id_code'
    _item.category_id              'rep_conf'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
 
    _item_type.code                'code'
 
