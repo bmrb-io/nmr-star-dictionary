@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-07-04
+#  version date -  2012-08-06
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.29
+    _dictionary.version         3.1.1.30
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.29         ?
+     3.1.1.30         ?
 ;
      ?
 ;
@@ -1473,6 +1473,74 @@ Flag indicating that scalar coupling constants are being deposited.
 
 ;
 no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Auto_relaxation
+
+   _item_description.description
+;
+Flag indicating that auto relaxation data are being deposited.
+;
+
+   _item.name                  '_Entry_interview.Auto_relaxation'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+NO
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Tensor
+
+   _item_description.description
+;
+Flag indicating that tensor data are being deposited.
+;
+
+   _item.name                  '_Entry_interview.Tensor'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+YES
 ;
 
    stop_
@@ -4927,7 +4995,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.29'
+   _item_default.value            '3.1.1.30'
    _item_type.code                'line'
 
    loop_
@@ -36571,15 +36639,15 @@ with the specified atoms, expressed as a bond order.
      _item_enumeration.value
      _item_enumeration.detail
 
-   sing    'single bond'
-   doub    'double bond'
-   trip    'triple bond'
-   quad    'quadruple bond'
-   arom    'aromatic bond'
-   poly    'polymeric bond'
-   delo    'delocalized double bond'
-   pi    'pi bond'
-   directed    'N ->O'
+   SING    'single bond'
+   DOUB    'double bond'
+   TRIP    'triple bond'
+   QUAD    'quadruple bond'
+   AROM    'aromatic bond'
+   POLY    'polymeric bond'
+   DELO    'delocalized double bond'
+   PI    'pi bond'
+   DIRECTED    'N ->O'
 
    stop_
 
@@ -61965,7 +62033,7 @@ Category definition for the information content of the saveframe
 
    _item.name                  '_Spectral_peak_list.Sf_category'
    _item.category_id              'Spectral_peak_list'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'code'
 
@@ -61989,7 +62057,7 @@ A descriptive label that uniquely identifies this list of spectral peaks.
 
    _item.name                  '_Spectral_peak_list.Sf_framecode'
    _item.category_id              'Spectral_peak_list'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_default.value            'spectral_peak_list_1'
    _item_type.code                'framecode'

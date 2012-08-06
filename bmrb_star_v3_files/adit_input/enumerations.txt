@@ -431,12 +431,15 @@ save__Entity_bond.Value_order
        _item_enumeration_value
        _item_enumeration_description
 
-  SING            . 
-  DOUB            . 
-  TRIP            .
-  AROM            .
-  PARTIAL-DOUBLE  .
-  DIRECTED        .
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
 
      stop_
 
@@ -449,12 +452,15 @@ save__Bond_annotation.Value_order
        _item_enumeration_value
        _item_enumeration_description
 
-  SING            . 
-  DOUB            . 
-  TRIP            .
-  AROM            .
-  PARTIAL-DOUBLE  .
-  DIRECTED        .
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
 
      stop_
 
@@ -489,12 +495,15 @@ save__Bond.Order
        _item_enumeration_value
        _item_enumeration_description
 
-  SING            . 
-  DOUB            . 
-  TRIP            .
-  AROM            .
-  PARTIAL-DOUBLE  .
-  DIRECTED        .
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
 
      stop_
 
@@ -509,7 +518,7 @@ save__Bond.Type
  
         amide                  .
         covalent               .
-        directed               .   # N -> O
+        directed              'N -> O'
         disulfide              .
         ester                  .
         ether                  .
@@ -910,13 +919,15 @@ save__Chem_comp_bond.Value_order
        _item_enumeration_value
        _item_enumeration_description
 
-
-  SING            . 
-  DOUB            . 
-  TRIP            .
-  AROM            .
-  PARTIAL-DOUBLE  .
-  DIRECTED        .
+  SING           'single bond' 
+  DOUB           'double bond'
+  TRIP           'triple bond'
+  QUAD           'quadruple bond'
+  AROM           'aromatic bond'
+  POLY           'polymeric bond'
+  DELO           'delocalized double bond'
+  PI             'pi bond'
+  DIRECTED       'N ->O'
 
      stop_
 
@@ -3961,6 +3972,20 @@ save__Entry_interview.Assigned_chem_shifts
 
 save_ 
 
+save__Entry_interview.Auto_relaxation                                       
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+
+
 save__Entry_interview.Binding_constants                                       
 
   loop_
@@ -4505,6 +4530,19 @@ save__Entry_interview.Structural_genomics
    stop_
 
 save_
+
+save__Entry_interview.Tensor                                      
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
 
 
 save__Entry_interview.Theoretical_chem_shifts
@@ -7004,9 +7042,11 @@ save__Sample_component.Concentration_val_units
            nM           nanomolar
            %            percent
            v/v          'volume to volume'
-           w/v          'weight to volume'
+           w/v          'weight to volume percent'
            mg           'milligram'
            ug           'microgram'
+          mg/mL         'mg per milliliter'
+           g/L          'grams per liter'
 
     stop_
 

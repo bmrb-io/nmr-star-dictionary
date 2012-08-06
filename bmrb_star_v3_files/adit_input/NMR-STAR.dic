@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-07-04
+#  version date -  2012-08-06
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.29
+    _dictionary.version         3.1.1.30
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.29         ?
+     3.1.1.30         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.29'
+   _item_default.value            '3.1.1.30'
    _item_type.code                'line'
 
    loop_
@@ -29731,15 +29731,15 @@ with the specified atoms, expressed as a bond order.
      _item_enumeration.value
      _item_enumeration.detail
 
-   sing    'single bond'
-   doub    'double bond'
-   trip    'triple bond'
-   quad    'quadruple bond'
-   arom    'aromatic bond'
-   poly    'polymeric bond'
-   delo    'delocalized double bond'
-   pi    'pi bond'
-   directed    'N ->O'
+   SING    'single bond'
+   DOUB    'double bond'
+   TRIP    'triple bond'
+   QUAD    'quadruple bond'
+   AROM    'aromatic bond'
+   POLY    'polymeric bond'
+   DELO    'delocalized double bond'
+   PI    'pi bond'
+   DIRECTED    'N ->O'
 
    stop_
 
@@ -52540,7 +52540,7 @@ Category definition for the information content of the saveframe
 
    _item.name                  '_spectral_peak_list.sf_category'
    _item.category_id              'spectral_peak_list'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_type.code                'code'
 
@@ -52564,7 +52564,7 @@ A descriptive label that uniquely identifies this list of spectral peaks.
 
    _item.name                  '_spectral_peak_list.sf_framecode'
    _item.category_id              'spectral_peak_list'
-   _item.mandatory_code            no
+   _item.mandatory_code            yes
 
    _item_default.value            'spectral_peak_list_1'
    _item_type.code                'framecode'
