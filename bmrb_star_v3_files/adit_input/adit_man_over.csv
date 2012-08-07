@@ -313,12 +313,16 @@ TBL_BEGIN,,,,,,,?
 90240,entry_interview,Entry_interview,_Entry_interview.Spectral_density_values,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
 90250,entry_interview,Entry_interview,_Entry_interview.Timedomain_data,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 90260,entry_interview,Entry_interview,_Entry_interview.Molecular_interactions,H,Entry_interview,_Entry_interview.PDB_deposition,yes
-90262,entry_interview,Entry_interview,_Entry_interview.Secondary_structure_orientations,H,Entry_interview,_Entry_interview.PDB_deposition,yes
+90261,entry_interview,Entry_interview,_Entry_interview.Secondary_structure_orientations,H,Entry_interview,_Entry_interview.PDB_deposition,yes
+90262,entry_interview,Entry_interview,_Entry_interview.Auto_relaxation,H,Entry_interview,_Entry_interview.PDB_deposition,yes
+90263,entry_interview,Entry_interview,_Entry_interview.Tensor,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 90264,entry_interview,Entry_interview,_Entry_interview.Other_kind_of_data,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
 90266,entry_interview,Entry_interview,_Entry_interview.Assigned_chem_shifts,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
 90268,entry_interview,Entry_interview,_Entry_interview.Coupling_constants,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
 90270,entry_interview,Entry_interview,_Entry_interview.Chem_shift_anisotropy,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
-90272,entry_interview,Entry_interview,_Entry_interview.Heteronucl_NOEs,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
+90271,entry_interview,Entry_interview,_Entry_interview.Auto_relaxation,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
+90272,entry_interview,Entry_interview,_Entry_interview.Tensor,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
+90273,entry_interview,Entry_interview,_Entry_interview.Heteronucl_NOEs,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
 90274,entry_interview,Entry_interview,_Entry_interview.Heteronucl_T1_relaxation,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
 90276,entry_interview,Entry_interview,_Entry_interview.Heteronucl_T2_relaxation,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
 90278,entry_interview,Entry_interview,_Entry_interview.Heteronucl_T1rho_relaxation,Y,Entry_interview,_Entry_interview.BMRB_deposition,yes
@@ -375,6 +379,8 @@ TBL_BEGIN,,,,,,,?
 90430,coupling_constants,*,*,N,Entry_interview,_Entry_interview.Coupling_constants,yes
 90432,chem_shift_anisotropy,*,*,N,Entry_interview,_Entry_interview.Chem_shift_anisotropy,yes
 90440,RDCs,*,*,N,Entry_interview,_Entry_interview.Residual_dipolar_couplings,yes
+90442,auto_relaxation,*,*,N,Entry_interview,_Entry_interview.Auto_relaxation,yes
+90444,tensor,*,*,N,Entry_interview,_Entry_interview.Tensor,yes
 90450,homonucl_NOEs,*,*,N,Entry_interview,_Entry_interview.Homonucl_NOEs,yes
 90460,heteronucl_NOEs,*,*,N,Entry_interview,_Entry_interview.Heteronucl_NOEs,yes
 90470,heteronucl_T1_relaxation,*,*,N,Entry_interview,_Entry_interview.Heteronucl_T1_relaxation,yes
@@ -952,6 +958,8 @@ TBL_BEGIN,,,,,,,?
 96320,other_data_types,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96330,H_exch_rates,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96340,H_exch_protection_factors,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
+96342,auto_relaxation,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
+96344,tensor,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96350,homonucl_NOEs,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96360,heteronucl_NOEs,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 96370,heteronucl_T1_relaxation,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
@@ -1053,6 +1061,8 @@ TBL_BEGIN,,,,,,,?
 999070,coupling_constants,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999072,chem_shift_anisotropy,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999080,RDCs,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
+999082,auto_relaxation,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
+999084,tensor,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999090,homonucl_NOEs,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999100,heteronucl_NOEs,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
 999110,heteronucl_T1_relaxation,*,*,H,Deposited_data_files,_Deposited_data_files.ID,^[^1]
