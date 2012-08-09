@@ -1993,6 +1993,7 @@ save__Constraint_file.Software_label
       CNS            .
       CYANA          .
       DISCOVER       .
+      TALOS          .
       X-PLOR         .
       NMR-STAR       .
 
@@ -4327,6 +4328,19 @@ save__Entry_interview.Homonucl_NOEs
 
 save_
 
+save__Entry_interview.Interatomic_distances
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
 save__Entry_interview.Ligands
 
   loop_
@@ -5213,6 +5227,24 @@ save__Heteronucl_T2_list.Temp_control_method
 
 save_
 
+#save__General_relaxation_list.Relaxation_type_common_name
+
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+
+#      R1                                    .
+#      R2                                    .
+#      R1rho                                 .
+#     'ZQ relaxation'                        .
+#     'longitudinal spin order'              .
+#     'single quantum antiphase'             .
+#     'DQ relaxation'                        .
+
+#    stop_
+
+#save_
+
 
 #save__General_relaxation_list.Common_relaxation_term
 #
@@ -5309,24 +5341,6 @@ save__Auto_relaxation_list.Relaxation_coherence_type
 save_
 
 
-#save__General_relaxation_list.Relaxation_type_common_name
-
-#    loop_
-#      _item_enumeration_value
-#      _item_enumeration_description
-
-#      R1                                    .
-#      R2                                    .
-#      R1rho                                 .
-#     'ZQ relaxation'                        .
-#     'longitudinal spin order'              .
-#     'single quantum antiphase'             .
-#     'DQ relaxation'                        .
-
-#    stop_
-
-#save_
-
 save__Auto_relaxation_list.Relaxation_val_units
 
     loop_
@@ -5349,8 +5363,8 @@ save__Auto_relaxation_list.Temp_calibration_method
       _item_enumeration_value
       _item_enumeration_description
 
-    methanol                    .
-   'monoethylene glycol'        .
+    methanol                    MeOH
+   'monoethylene glycol'        MEG
    'no calibration applied'     .
 
    stop_
@@ -5363,7 +5377,10 @@ save__Auto_relaxation_list.Temp_control_method
       _item_enumeration_value
       _item_enumeration_description
 
-    ?               .
+    'single scan interleaving'                                             .
+    'temperature compensation block'                                       .
+    'single scan interleaving and temperature compensation block'          .
+    'no temperature control applied'                                       .
 
    stop_
 
@@ -5375,10 +5392,13 @@ save__Auto_relaxation_list.Common_relaxation_type_name
       _item_enumeration_value
       _item_enumeration_description
 
-    'single scan interleaving'                                             .
-    'temperature compensation block'                                       .
-    'single scan interleaving and temperature compensation block'          .
-    'no temperature control applied'                                       .
+      R1                                    .
+      R2                                    .
+      R1rho                                 .
+     'ZQ relaxation'                        .
+     'longitudinal spin order'              .
+     'single quantum antiphase'             .
+     'DQ relaxation'                        .
 
    stop_
 
@@ -7352,6 +7372,7 @@ save__Software.Sf_framecode
     CNSSOLVE         .
     CORMA            .
     CSI              .
+    CS-Rosetta       .
     CURVES           .
     CYANA            .
     DELTA            .
@@ -7447,6 +7468,7 @@ save__Software.Name
     CNSSOLVE         .
     CORMA            .
     CSI              .
+    CS-Rosetta       .
     CURVES           .
     CYANA            .
     DGII             .
@@ -7855,7 +7877,10 @@ save__Tensor_list.Tensor_type
      _item_enumeration_value
      _item_enumeration_description
 
-    ?            .
+    diffusion            .
+    CS                   .
+    shielding            .
+    alignment            .
 
   stop_
 
@@ -7867,7 +7892,11 @@ save__Tensor_list.Tensor_shape
      _item_enumeration_value
      _item_enumeration_description
 
-    ?            .
+     sphere              .
+     spheroid            .
+    'oblate spheroid'    .
+    'prolate spheroid'   .
+     ellipsoid           .
 
   stop_
 
@@ -7879,7 +7908,7 @@ save__Tensor_list.Matrix_val_units
      _item_enumeration_value
      _item_enumeration_description
 
-    ?            .
+    s-1            .
 
   stop_
 
@@ -8027,6 +8056,7 @@ save__Vendor.Name
     '(CARA) - Keller and Wuthrich'                                                                          .
     '(CcpNMR) - CCPN'                                                                                       .
     '(CNS) - Brunger$ Adams$ Clore$ Gros$ Nilges and Read'                                                  .
+    '(CS-Rosetta) - Shen$ Vernon$ Baker and Bax'                                                            .
     '(CYANA) -  Guntert$ Mumenthaler and Wuthrich'                                                          .
     '(DGII) - Accelrys Software Inc.'                                                                       .
     '(DIANA) - Guntert$ Braun and Wuthrich'                                                                 .

@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-08-07
+#  version date -  2012-08-09
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.30
+    _dictionary.version         3.1.1.32
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.30         ?
+     3.1.1.32         ?
 ;
      ?
 ;
@@ -1506,7 +1506,7 @@ Flag indicating that auto relaxation data are being deposited.
      _item_examples.case
 
 ;
-NO
+no
 ;
 
    stop_
@@ -1540,7 +1540,41 @@ Flag indicating that tensor data are being deposited.
      _item_examples.case
 
 ;
-YES
+yes
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Interatomic_distances
+
+   _item_description.description
+;
+Flag indicating that interatomic distance data are being deposited.
+;
+
+   _item.name                  '_Entry_interview.Interatomic_distances'
+   _item.category_id              'Entry_interview'
+   _item.mandatory_code            no
+
+   _item_default.value            'no'
+   _item_type.code                'yes_no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+yes
 ;
 
    stop_
@@ -4995,7 +5029,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.30'
+   _item_default.value            '3.1.1.32'
    _item_type.code                'line'
 
    loop_
@@ -41748,6 +41782,7 @@ in the entry.
    CNSSOLVE    ?
    CORMA    ?
    CSI    ?
+   CS-Rosetta    ?
    CURVES    ?
    CYANA    ?
    DELTA    ?
@@ -42083,6 +42118,7 @@ The name of the software defined by the author or provider of the software.
    CNSSOLVE    ?
    CORMA    ?
    CSI    ?
+   CS-Rosetta    ?
    CURVES    ?
    CYANA    ?
    DGII    ?
@@ -42274,6 +42310,7 @@ Commercial or academic supplier of the software product.
    '(CARA) - Keller and Wuthrich'    ?
    '(CcpNMR) - CCPN'    ?
    '(CNS) - Brunger$ Adams$ Clore$ Gros$ Nilges and Read'    ?
+   '(CS-Rosetta) - Shen$ Vernon$ Baker and Bax'    ?
    '(CYANA) -  Guntert$ Mumenthaler and Wuthrich'    ?
    '(DGII) - Accelrys Software Inc.'    ?
    '(DIANA) - Guntert$ Braun and Wuthrich'    ?
@@ -42539,7 +42576,7 @@ was used to carry out.
      _item_examples.case
 
 ;
-'automated peak assignments'
+chemical shift assignments'
 ;
 
    stop_
@@ -58615,7 +58652,7 @@ save__Systematic_chem_shift_offset.Atom_type
 
    _item_description.description
 ;
-Standard symbol used to define the atom element type.
+The kind of atom to which the chemical shift offset value applies.
 ;
 
    _item.name                  '_Systematic_chem_shift_offset.Atom_type'
@@ -94207,8 +94244,8 @@ to collect the experimental data.
      _item_enumeration.value
      _item_enumeration.detail
 
-   methanol    ?
-   'monoethylene glycol'    ?
+   methanol    MeOH
+   'monoethylene glycol'    MEG
    'no calibration applied'    ?
 
    stop_
@@ -94242,7 +94279,10 @@ caused by the long spin-lock pulse.
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?    ?
+   'single scan interleaving'    ?
+   'temperature compensation block'    ?
+   'single scan interleaving and temperature compensation block'    ?
+   'no temperature control applied'    ?
 
    stop_
 
@@ -94324,10 +94364,13 @@ Common term used for the type of relaxation phenomena reported.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'single scan interleaving'    ?
-   'temperature compensation block'    ?
-   'single scan interleaving and temperature compensation block'    ?
-   'no temperature control applied'    ?
+   R1    ?
+   R2    ?
+   R1rho    ?
+   'ZQ relaxation'    ?
+   'longitudinal spin order'    ?
+   'single quantum antiphase'    ?
+   'DQ relaxation'    ?
 
    stop_
 
@@ -134182,6 +134225,30 @@ Unique identifier for the list of chemical shift tensors.
 
 save_
 
+save__Tensor_list.Data_file_name
+
+   _item_description.description
+;
+Name of the file containing tensor data.
+;
+
+   _item.name                  '_Tensor_list.Data_file_name'
+   _item.category_id              'Tensor_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Tensor_list.Tensor_type
 
    _item_description.description
@@ -134199,7 +134266,10 @@ save__Tensor_list.Tensor_type
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?    ?
+   diffusion    ?
+   CS    ?
+   shielding    ?
+   alignment    ?
 
    stop_
 
@@ -134231,7 +134301,11 @@ save__Tensor_list.Tensor_shape
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?    ?
+   sphere    ?
+   spheroid    ?
+   'oblate spheroid'    ?
+   'prolate spheroid'    ?
+   ellipsoid    ?
 
    stop_
 
@@ -134263,7 +134337,7 @@ save__Tensor_list.Matrix_val_units
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?    ?
+   s-1    ?
 
    stop_
 
@@ -134434,30 +134508,6 @@ save__Tensor_list.Euler_angle_type
    ?    ?
 
    stop_
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Tensor_list.Data_file_name
-
-   _item_description.description
-;
-Name of the file containing theoretical chemical shift data.
-;
-
-   _item.name                  '_Tensor_list.Data_file_name'
-   _item.category_id              'Tensor_list'
-   _item.mandatory_code            no
-
-   _item_type.code                'line'
 
    loop_
      _item_examples.case
@@ -135880,6 +135930,30 @@ save__Interatomic_distance_list.ID
   stop_
 
    _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Interatomic_distance_list.Data_file_name
+
+   _item_description.description
+;
+Name of the file containing interatomic distance data.
+;
+
+   _item.name                  '_Interatomic_distance_list.Data_file_name'
+   _item.category_id              'Interatomic_distance_list'
+   _item.mandatory_code            no
+
+   _item_type.code                'line'
 
    loop_
      _item_examples.case
