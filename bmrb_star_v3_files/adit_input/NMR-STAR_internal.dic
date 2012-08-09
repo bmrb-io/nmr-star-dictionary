@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.34
+    _dictionary.version         3.1.1.35
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.34         ?
+     3.1.1.35         ?
 ;
      ?
 ;
@@ -1565,6 +1565,8 @@ Flag indicating that interatomic distance data are being deposited.
      _item_enumeration.value
      _item_enumeration.detail
 
+   yes    ?
+   no    ?
 
    stop_
 
@@ -5027,7 +5029,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.34'
+   _item_default.value            '3.1.1.35'
    _item_type.code                'line'
 
    loop_
@@ -134106,7 +134108,7 @@ contained in the saveframe.
    _item.category_id              'Tensor_list'
    _item.mandatory_code            no
 
-   _item_default.value            'Chem_shielding_tensor_list_1'
+   _item_default.value            'Tensor_data_1'
    _item_type.code                'framecode'
 
    loop_
@@ -135828,6 +135830,7 @@ save__Interatomic_distance_list.Sf_framecode
    _item.category_id              'Interatomic_distance_list'
    _item.mandatory_code            no
 
+   _item_default.value            'Interatomic_distance_data_1'
    _item_type.code                'framecode'
 
    loop_
