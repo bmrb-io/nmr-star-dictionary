@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-08-09
+#  version date -  2012-09-06
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.35
+    _dictionary.version         3.1.1.36
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.35         ?
+     3.1.1.36         ?
 ;
      ?
 ;
@@ -2460,7 +2460,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.35'
+   _item_default.value            '3.1.1.36'
    _item_type.code                'line'
 
    loop_
@@ -82537,25 +82537,25 @@ A code describing the spin(s) involved in the measured relaxation coherence.
 
    Iz    'R1    longitudinal'
    Sz    'R1    longitudinal'
+   (I+)+(I-)    'R1rho or R2      transverse'
+   (S+)+(S-)    'R1rho or R2      transverse'
    I+    'R1rho or R2      transverse'
    I-    'R1rho or R2      transverse'
    S+    'R1rho or R2      transverse'
    S-    'R1rho or R2      transverse'
-   (I+)+(I-)    'R1rho or R2      transverse'
-   (S+)+(S-)    'R1rho or R2      transverse'
+   (I+S-)+(I-S+)    'ZQ relaxation'
    I-S+    'ZQ relaxation'
    I+S-    'ZQ relaxation'
-   (I+S-)+(I-S+)    'ZQ relaxation'
    IzSz    'longitudinal spin order'
+   ((I+)+(I-))Sz    'single quantum antiphase'
+   Iz((S+)+(S-))    'single quantum antiphase'
    I+Sz    'single quantum antiphase'
    I-Sz    'single quantum antiphase'
    IzS+    'single quantum antiphase'
    IzS-    'single quantum antiphase'
-   ((I+)+(I-))Sz    'single quantum antiphase'
-   Iz((S+)+(S-))    'single quantum antiphase'
+   (I+S+)+(I-S-)    'DQ relaxation'
    I+S+    'DQ relaxation'
    I-S-    'DQ relaxation'
-   (I+S+)+(I-S-)    'DQ relaxation'
 
    stop_
 
