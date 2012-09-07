@@ -1774,9 +1774,9 @@ TBL_BEGIN,,,,,,,?
 17720,Chem_shift_ref,Chem_shift_reference_ID,Chemical shift reference data,Chem shift reference ID,N,?,?
 17730,Assigned_chem_shift_list,Sf_category,Assigned chemical shifts,Sf category,N,?,?
 17740,Assigned_chem_shift_list,Sf_framecode,Assigned chemical shifts,Sf framecode,N,?,?
-17750,Assigned_chem_shift_list,Entry_ID,Assigned chemical shifts,Entry ID,N,?,?
+17750,Assigned_chem_shift_list,Entry_ID,Assigned chemical shifts,Entry ID,N,?,C
 17760,Assigned_chem_shift_list,Sf_ID,Assigned chemical shifts,Sf ID,N,?,?
-17770,Assigned_chem_shift_list,ID,Assigned chemical shifts,ID,N,?,?
+17770,Assigned_chem_shift_list,ID,Assigned chemical shifts,ID,N,?,C
 17780,Assigned_chem_shift_list,Data_file_name,Assigned chemical shifts,Data file name,N,?,?
 17790,Assigned_chem_shift_list,Sample_condition_list_ID,Assigned chemical shifts,Sample condition list ID,N,?,?
 17800,Assigned_chem_shift_list,Sample_condition_list_label,Assigned chemical shifts,Sample condition list label,N,?,?
@@ -1793,7 +1793,7 @@ TBL_BEGIN,,,,,,,?
 17910,Assigned_chem_shift_list,Text_data_format,Assigned chemical shifts,Text data format,N,?,?
 17920,Assigned_chem_shift_list,Text_data,Assigned chemical shifts,Text data,N,?,?
 17930,Chem_shift_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-17940,Chem_shift_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+17940,Chem_shift_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 17950,Chem_shift_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 17960,Chem_shift_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
 17970,Chem_shift_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,C
@@ -1809,13 +1809,13 @@ TBL_BEGIN,,,,,,,?
 18070,Systematic_chem_shift_offset,Entry_ID,Systematic chemical shift offsets,Entry ID,N,?,?
 18080,Systematic_chem_shift_offset,Assigned_chem_shift_list_ID,Systematic chemical shift offsets,Assigned chem shift list ID,N,?,?
 18090,Chem_shift_software,Software_ID,Software,Software ID,N,?,?
-18100,Chem_shift_software,Software_label,Software,Software label,N,?,?
+18100,Chem_shift_software,Software_label,Software,Software label,N,?,C
 18110,Chem_shift_software,Method_ID,Software,Method ID,N,?,?
 18120,Chem_shift_software,Method_label,Software,Method label,N,?,?
 18130,Chem_shift_software,Sf_ID,Software,Sf ID,N,?,?
 18140,Chem_shift_software,Entry_ID,Software,Entry ID,N,?,?
 18150,Chem_shift_software,Assigned_chem_shift_list_ID,Software,Assigned chem shift list ID,N,?,?
-18160,Atom_chem_shift,ID,Atom chem shift,ID,N,?,?
+18160,Atom_chem_shift,ID,Atom chem shift,ID,N,?,C
 18170,Atom_chem_shift,Assembly_atom_ID,Atom chem shift,Assembly atom ID,N,?,?
 18180,Atom_chem_shift,Entity_assembly_ID,Atom chem shift,Entity assembly ID,N,?,?
 18190,Atom_chem_shift,Entity_ID,Atom chem shift,Entity ID,N,?,?
@@ -1858,9 +1858,9 @@ TBL_BEGIN,,,,,,,?
 18560,Ambiguous_atom_chem_shift,Assigned_chem_shift_list_ID,Ambiguous atom chem shift,Assigned chem shift list ID,N,?,?
 18570,Coupling_constant_list,Sf_category,Coupling constants,Sf category,N,?,?
 18580,Coupling_constant_list,Sf_framecode,Coupling constants,Sf framecode,N,?,?
-18590,Coupling_constant_list,Entry_ID,Coupling constants,Entry ID,N,?,?
+18590,Coupling_constant_list,Entry_ID,Coupling constants,Entry ID,N,?,C
 18600,Coupling_constant_list,Sf_ID,Coupling constants,Sf ID,N,?,?
-18610,Coupling_constant_list,ID,Coupling constants,ID,N,?,?
+18610,Coupling_constant_list,ID,Coupling constants,ID,N,?,C
 18620,Coupling_constant_list,Data_file_name,Coupling constants,Data file name,N,?,?
 18630,Coupling_constant_list,Sample_condition_list_ID,Coupling constants,Sample condition list ID,N,?,?
 18640,Coupling_constant_list,Sample_condition_list_label,Coupling constants,Sample condition list label,N,?,?
@@ -1877,7 +1877,7 @@ TBL_BEGIN,,,,,,,?
 18750,Coupling_constant_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 18760,Coupling_constant_experiment,Coupling_constant_list_ID,NMR experiments used to derive these data,Coupling constant list ID,N,?,?
 18770,Coupling_constant_software,Software_ID,Software,Software ID,N,?,?
-18780,Coupling_constant_software,Software_label,Software,Software label,N,?,?
+18780,Coupling_constant_software,Software_label,Software,Software label,N,?,C
 18790,Coupling_constant_software,Method_ID,Software,Method ID,N,?,?
 18800,Coupling_constant_software,Method_label,Software,Method label,N,?,?
 18810,Coupling_constant_software,Sf_ID,Software,Sf ID,N,?,?
@@ -1925,16 +1925,16 @@ TBL_BEGIN,,,,,,,?
 19230,Coupling_constant,Coupling_constant_list_ID,Coupling constant,Coupling constant list ID,N,?,?
 19240,Spectral_peak_list,Sf_category,Spectral peak list,Sf category,N,?,?
 19250,Spectral_peak_list,Sf_framecode,Spectral peak list,Sf framecode,N,?,?
-19260,Spectral_peak_list,Entry_ID,Spectral peak list,Entry ID,N,?,?
+19260,Spectral_peak_list,Entry_ID,Spectral peak list,Entry ID,N,?,C
 19270,Spectral_peak_list,Sf_ID,Spectral peak list,Sf ID,N,?,?
-19280,Spectral_peak_list,ID,Spectral peak list,ID,N,?,?
+19280,Spectral_peak_list,ID,Spectral peak list,ID,N,?,C
 19290,Spectral_peak_list,Data_file_name,Spectral peak list,Data file name,N,?,?
 19300,Spectral_peak_list,Sample_ID,Spectral peak list,Sample ID,N,?,?
 19310,Spectral_peak_list,Sample_label,Spectral peak list,Sample label,N,?,?
 19320,Spectral_peak_list,Sample_condition_list_ID,Spectral peak list,Sample condition list ID,N,?,?
 19330,Spectral_peak_list,Sample_condition_list_label,Spectral peak list,Sample condition list label,N,?,?
-19340,Spectral_peak_list,Experiment_ID,Spectral peak list,Experiment ID,N,?,?
-19350,Spectral_peak_list,Experiment_name,Spectral peak list,Experiment name,Y,Y,?
+19340,Spectral_peak_list,Experiment_ID,Spectral peak list,Experiment ID,N,?,C
+19350,Spectral_peak_list,Experiment_name,Spectral peak list,Experiment name,Y,Y,C
 19360,Spectral_peak_list,Number_of_spectral_dimensions,Spectral peak list,Number of spectral dimensions,N,?,?
 19370,Spectral_peak_list,Details,Spectral peak list,Details,N,?,?
 19380,Spectral_peak_list,Text_data_format,Spectral peak list,Text data format,N,?,?
@@ -1951,7 +1951,7 @@ TBL_BEGIN,,,,,,,?
 19490,Spectral_dim,Entry_ID,Spectral dimensions,Entry ID,N,?,?
 19500,Spectral_dim,Spectral_peak_list_ID,Spectral dimensions,Spectral peak list ID,N,?,?
 19510,Spectral_peak_software,Software_ID,Software,Software ID,N,?,?
-19520,Spectral_peak_software,Software_label,Software,Software label,N,?,?
+19520,Spectral_peak_software,Software_label,Software,Software label,N,?,C
 19530,Spectral_peak_software,Method_ID,Software,Method ID,N,?,?
 19540,Spectral_peak_software,Method_label,Software,Method label,N,?,?
 19550,Spectral_peak_software,Sf_ID,Software,Sf ID,N,?,?
@@ -2014,11 +2014,11 @@ TBL_BEGIN,,,,,,,?
 20120,Assigned_peak_chem_shift,Sf_ID,Assigned peak chem shift,Sf ID,N,?,?
 20130,Assigned_peak_chem_shift,Entry_ID,Assigned peak chem shift,Entry ID,N,?,?
 20140,Assigned_peak_chem_shift,Spectral_peak_list_ID,Assigned peak chem shift,Spectral peak list ID,N,?,?
-20150,Spectral_transition,ID,Spectral_transition,ID,N,?,?
+20150,Spectral_transition,ID,Spectral_transition,ID,N,?,C
 20160,Spectral_transition,Figure_of_merit,Spectral_transition,Figure of merit,N,?,?
 20170,Spectral_transition,Details,Spectral_transition,Details,N,?,?
 20180,Spectral_transition,Sf_ID,Spectral_transition,Sf ID,N,?,?
-20190,Spectral_transition,Entry_ID,Spectral_transition,Entry ID,N,?,?
+20190,Spectral_transition,Entry_ID,Spectral_transition,Entry ID,N,?,C
 20200,Spectral_transition,Spectral_peak_list_ID,Spectral_transition,Spectral peak list ID,N,?,?
 20210,Spectral_transition_general_char,Spectral_transition_ID,Spectral_transition general char,Spectral transition ID,N,?,?
 20220,Spectral_transition_general_char,Intensity_val,Spectral_transition general char,Intensity val,N,?,?
@@ -2243,33 +2243,33 @@ TBL_BEGIN,,,,,,,?
 22410,Mol_interaction_chem_shift,Mol_interaction_chem_shift_diff_ID,Mol interaction chem shift,Mol interaction chem shift diff ID,N,?,?
 22420,Chem_shift_anisotropy,Sf_category,Chemical shift anisotropy,Sf category,N,?,?
 22430,Chem_shift_anisotropy,Sf_framecode,Chemical shift anisotropy,Sf framecode,N,?,?
-22440,Chem_shift_anisotropy,Entry_ID,Chemical shift anisotropy,Entry ID,N,?,?
+22440,Chem_shift_anisotropy,Entry_ID,Chemical shift anisotropy,Entry ID,N,?,C
 22450,Chem_shift_anisotropy,Sf_ID,Chemical shift anisotropy,Sf ID,N,?,?
-22460,Chem_shift_anisotropy,ID,Chemical shift anisotropy,ID,N,?,?
+22460,Chem_shift_anisotropy,ID,Chemical shift anisotropy,ID,N,?,C
 22470,Chem_shift_anisotropy,Data_file_name,Chemical shift anisotropy,Data file name,N,?,?
 22480,Chem_shift_anisotropy,Sample_condition_list_ID,Chemical shift anisotropy,Sample condition list ID,N,?,?
 22490,Chem_shift_anisotropy,Sample_condition_list_label,Chemical shift anisotropy,Sample condition list label,N,?,?
-22500,Chem_shift_anisotropy,Spectrometer_frequency_1H,Chemical shift anisotropy,Spectrometer frequency 1H,N,?,?
+22500,Chem_shift_anisotropy,Spectrometer_frequency_1H,Chemical shift anisotropy,Spectrometer frequency 1H,N,?,C
 22510,Chem_shift_anisotropy,Val_units,Chemical shift anisotropy,Val units,Y,N,?
 22520,Chem_shift_anisotropy,Details,Chemical shift anisotropy,Details,N,?,?
 22530,Chem_shift_anisotropy,Text_data_format,Chemical shift anisotropy,Text data format,N,?,?
 22540,Chem_shift_anisotropy,Text_data,Chemical shift anisotropy,Text data,N,?,?
 22550,CS_anisotropy_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-22560,CS_anisotropy_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+22560,CS_anisotropy_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 22570,CS_anisotropy_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 22580,CS_anisotropy_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
-22590,CS_anisotropy_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
+22590,CS_anisotropy_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,C
 22600,CS_anisotropy_experiment,Sf_ID,NMR experiments used to derive these data,Sf ID,N,?,?
 22610,CS_anisotropy_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 22620,CS_anisotropy_experiment,Chem_shift_anisotropy_ID,NMR experiments used to derive these data,Chem shift anisotropy ID,N,?,?
 22630,CS_anisotropy_software,Software_ID,Software,Software ID,N,?,?
-22640,CS_anisotropy_software,Software_label,Software,Software label,N,?,?
+22640,CS_anisotropy_software,Software_label,Software,Software label,N,?,C
 22650,CS_anisotropy_software,Method_ID,Software,Method ID,N,?,?
 22660,CS_anisotropy_software,Method_label,Software,Method label,N,?,?
 22670,CS_anisotropy_software,Sf_ID,Software,Sf ID,N,?,?
 22680,CS_anisotropy_software,Entry_ID,Software,Entry ID,N,?,?
 22690,CS_anisotropy_software,Chem_shift_anisotropy_ID,Software,Chem shift anisotropy ID,N,?,?
-22700,CS_anisotropy,ID,CS anisotropy,ID,N,?,?
+22700,CS_anisotropy,ID,CS anisotropy,ID,N,?,C
 22710,CS_anisotropy,Assembly_atom_ID,CS anisotropy,Assembly atom ID,N,?,?
 22720,CS_anisotropy,Entity_assembly_ID,CS anisotropy,Entity assembly ID,N,?,?
 22730,CS_anisotropy,Entity_ID,CS anisotropy,Entity ID,N,?,?
@@ -2362,9 +2362,9 @@ TBL_BEGIN,,,,,,,?
 23600,Theoretical_chem_shift,Theoretical_chem_shift_list_ID,Theoretical chem shift,Theoretical chem shift list ID,N,?,?
 23610,RDC_list,Sf_category,Residual dipolar couplings,Sf category,N,?,?
 23620,RDC_list,Sf_framecode,Residual dipolar couplings,Sf framecode,N,?,?
-23630,RDC_list,Entry_ID,Residual dipolar couplings,Entry ID,N,?,?
+23630,RDC_list,Entry_ID,Residual dipolar couplings,Entry ID,N,?,C
 23640,RDC_list,Sf_ID,Residual dipolar couplings,Sf ID,N,?,?
-23650,RDC_list,ID,Residual dipolar couplings,ID,N,?,?
+23650,RDC_list,ID,Residual dipolar couplings,ID,N,?,C
 23660,RDC_list,Data_file_name,Residual dipolar couplings,Data file name,N,?,?
 23670,RDC_list,Sample_condition_list_ID,Residual dipolar couplings,Sample condition list ID,N,?,?
 23680,RDC_list,Sample_condition_list_label,Residual dipolar couplings,Sample condition list label,N,?,?
@@ -2381,10 +2381,10 @@ TBL_BEGIN,,,,,,,?
 23790,RDC_list,Text_data_format,Residual dipolar couplings,Text data format,N,?,?
 23800,RDC_list,Text_data,Residual dipolar couplings,Text data,N,?,?
 23810,RDC_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-23820,RDC_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+23820,RDC_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 23830,RDC_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 23840,RDC_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
-23850,RDC_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
+23850,RDC_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,C
 23860,RDC_experiment,Sf_ID,NMR experiments used to derive these data,Sf ID,N,?,?
 23870,RDC_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 23880,RDC_experiment,RDC_list_ID,NMR experiments used to derive these data,RDC list ID,N,?,?
@@ -2395,7 +2395,7 @@ TBL_BEGIN,,,,,,,?
 23930,RDC_software,Sf_ID,Software,Sf ID,N,?,?
 23940,RDC_software,Entry_ID,Software,Entry ID,N,?,?
 23950,RDC_software,RDC_list_ID,Software,RDC list ID,N,?,?
-23960,RDC,ID,RDC,ID,N,?,?
+23960,RDC,ID,RDC,ID,N,?,C
 23970,RDC,RDC_code,RDC,RDC code,N,?,C
 23980,RDC,Assembly_atom_ID_1,RDC,Assembly atom ID 1,N,?,?
 23990,RDC,Entity_assembly_ID_1,RDC,Entity assembly ID 1,N,?,?
@@ -2822,9 +2822,9 @@ TBL_BEGIN,,,,,,,?
 28200,Homonucl_NOE,Homonucl_NOE_list_ID,Homonucl NOE,Homonucl NOE list ID,N,?,?
 28210,Heteronucl_NOE_list,Sf_category,Heteronuclear NOEs,Sf category,N,?,?
 28220,Heteronucl_NOE_list,Sf_framecode,Heteronuclear NOEs,Sf framecode,N,?,?
-28230,Heteronucl_NOE_list,Entry_ID,Heteronuclear NOEs,Entry ID,N,?,?
+28230,Heteronucl_NOE_list,Entry_ID,Heteronuclear NOEs,Entry ID,N,?,C
 28240,Heteronucl_NOE_list,Sf_ID,Heteronuclear NOEs,Sf ID,N,?,?
-28250,Heteronucl_NOE_list,ID,Heteronuclear NOEs,ID,N,?,?
+28250,Heteronucl_NOE_list,ID,Heteronuclear NOEs,ID,N,?,C
 28260,Heteronucl_NOE_list,Data_file_name,Heteronuclear NOEs,Data file name,N,?,?
 28270,Heteronucl_NOE_list,Sample_condition_list_ID,Heteronuclear NOEs,Sample condition list ID,N,?,?
 28280,Heteronucl_NOE_list,Sample_condition_list_label,Heteronuclear NOEs,Sample condition list label,N,?,?
@@ -2836,7 +2836,7 @@ TBL_BEGIN,,,,,,,?
 28340,Heteronucl_NOE_list,Text_data_format,Heteronuclear NOEs,Text data format,N,?,?
 28350,Heteronucl_NOE_list,Text_data,Heteronuclear NOEs,Text data,N,?,?
 28360,Heteronucl_NOE_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-28370,Heteronucl_NOE_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+28370,Heteronucl_NOE_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 28380,Heteronucl_NOE_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 28390,Heteronucl_NOE_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
 28400,Heteronucl_NOE_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
@@ -2844,13 +2844,13 @@ TBL_BEGIN,,,,,,,?
 28420,Heteronucl_NOE_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 28430,Heteronucl_NOE_experiment,Heteronucl_NOE_list_ID,NMR experiments used to derive these data,Heteronucl NOE list ID,N,?,?
 28440,Heteronucl_NOE_software,Software_ID,Software,Software ID,N,?,?
-28450,Heteronucl_NOE_software,Software_label,Software,Software label,N,?,?
+28450,Heteronucl_NOE_software,Software_label,Software,Software label,N,?,C
 28460,Heteronucl_NOE_software,Method_ID,Software,Method ID,N,?,?
 28470,Heteronucl_NOE_software,Method_label,Software,Method label,N,?,?
 28480,Heteronucl_NOE_software,Sf_ID,Software,Sf ID,N,?,?
 28490,Heteronucl_NOE_software,Entry_ID,Software,Entry ID,N,?,?
 28500,Heteronucl_NOE_software,Heteronucl_NOE_list_ID,Software,Heteronucl NOE list ID,N,?,?
-28510,Heteronucl_NOE,ID,Heteronucl NOE,ID,N,?,?
+28510,Heteronucl_NOE,ID,Heteronucl NOE,ID,N,?,C
 28520,Heteronucl_NOE,Assembly_atom_ID_1,Heteronucl NOE,Assembly atom ID 1,N,?,?
 28530,Heteronucl_NOE,Entity_assembly_ID_1,Heteronucl NOE,Entity assembly ID 1,N,?,?
 28540,Heteronucl_NOE,Entity_ID_1,Heteronucl NOE,Entity ID 1,N,?,?
@@ -2886,9 +2886,9 @@ TBL_BEGIN,,,,,,,?
 28840,Heteronucl_NOE,Heteronucl_NOE_list_ID,Heteronucl NOE,Heteronucl NOE list ID,N,?,?
 28850,Heteronucl_T1_list,Sf_category,Heteronuclear T1 relaxation values,Sf category,N,?,?
 28860,Heteronucl_T1_list,Sf_framecode,Heteronuclear T1 relaxation values,Sf framecode,N,?,?
-28870,Heteronucl_T1_list,Entry_ID,Heteronuclear T1 relaxation values,Entry ID,N,?,?
+28870,Heteronucl_T1_list,Entry_ID,Heteronuclear T1 relaxation values,Entry ID,N,?,C
 28880,Heteronucl_T1_list,Sf_ID,Heteronuclear T1 relaxation values,Sf ID,N,?,?
-28890,Heteronucl_T1_list,ID,Heteronuclear T1 relaxation values,ID,N,?,?
+28890,Heteronucl_T1_list,ID,Heteronuclear T1 relaxation values,ID,N,?,C
 28900,Heteronucl_T1_list,Data_file_name,Heteronuclear T1 relaxation values,Data file name,N,?,?
 28910,Heteronucl_T1_list,Sample_condition_list_ID,Heteronuclear T1 relaxation values,Sample condition list ID,N,?,?
 28920,Heteronucl_T1_list,Sample_condition_list_label,Heteronuclear T1 relaxation values,Sample condition list label,N,?,?
@@ -2899,7 +2899,7 @@ TBL_BEGIN,,,,,,,?
 28970,Heteronucl_T1_list,Text_data_format,Heteronuclear T1 relaxation values,Text data format,N,?,?
 28980,Heteronucl_T1_list,Text_data,Heteronuclear T1 relaxation values,Text data,N,?,?
 28990,Heteronucl_T1_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-29000,Heteronucl_T1_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+29000,Heteronucl_T1_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 29010,Heteronucl_T1_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 29020,Heteronucl_T1_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
 29030,Heteronucl_T1_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
@@ -2907,13 +2907,13 @@ TBL_BEGIN,,,,,,,?
 29050,Heteronucl_T1_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 29060,Heteronucl_T1_experiment,Heteronucl_T1_list_ID,NMR experiments used to derive these data,Heteronucl T1 list ID,N,?,?
 29070,Heteronucl_T1_software,Software_ID,Software,Software ID,N,?,?
-29080,Heteronucl_T1_software,Software_label,Software,Software label,N,?,?
+29080,Heteronucl_T1_software,Software_label,Software,Software label,N,?,C
 29090,Heteronucl_T1_software,Method_ID,Software,Method ID,N,?,?
 29100,Heteronucl_T1_software,Method_label,Software,Method label,N,?,?
 29110,Heteronucl_T1_software,Sf_ID,Software,Sf ID,N,?,?
 29120,Heteronucl_T1_software,Entry_ID,Software,Entry ID,N,?,?
 29130,Heteronucl_T1_software,Heteronucl_T1_list_ID,Software,Heteronucl T1 list ID,N,?,?
-29140,T1,ID,T1,ID,N,?,?
+29140,T1,ID,T1,ID,N,?,C
 29150,T1,Assembly_atom_ID,T1,Assembly atom ID,N,?,?
 29160,T1,Entity_assembly_ID,T1,Entity assembly ID,N,?,?
 29170,T1,Entity_ID,T1,Entity ID,N,?,?
@@ -2935,45 +2935,45 @@ TBL_BEGIN,,,,,,,?
 29330,T1,Heteronucl_T1_list_ID,T1,Heteronucl T1 list ID,N,?,?
 29340,Heteronucl_T1rho_list,Sf_category,Heteronuclear T1rho relaxation values,Sf category,N,?,?
 29350,Heteronucl_T1rho_list,Sf_framecode,Heteronuclear T1rho relaxation values,Sf framecode,N,?,?
-29360,Heteronucl_T1rho_list,Entry_ID,Heteronuclear T1rho relaxation values,Entry ID,N,?,?
+29360,Heteronucl_T1rho_list,Entry_ID,Heteronuclear T1rho relaxation values,Entry ID,N,?,C
 29370,Heteronucl_T1rho_list,Sf_ID,Heteronuclear T1rho relaxation values,Sf ID,N,?,?
-29380,Heteronucl_T1rho_list,ID,Heteronuclear T1rho relaxation values,ID,N,?,?
+29380,Heteronucl_T1rho_list,ID,Heteronuclear T1rho relaxation values,ID,N,?,C
 29390,Heteronucl_T1rho_list,Data_file_name,Heteronuclear T1rho relaxation values,Data file name,N,?,?
 29400,Heteronucl_T1rho_list,Sample_condition_list_ID,Heteronuclear T1rho relaxation values,Sample condition list ID,N,?,?
 29410,Heteronucl_T1rho_list,Sample_condition_list_label,Heteronuclear T1rho relaxation values,Sample condition list label,N,?,?
-29420,Heteronucl_T1rho_list,Spectrometer_frequency_1H,Heteronuclear T1rho relaxation values,Spectrometer frequency 1H,N,?,?
+29420,Heteronucl_T1rho_list,Spectrometer_frequency_1H,Heteronuclear T1rho relaxation values,Spectrometer frequency 1H,N,?,C
 29430,Heteronucl_T1rho_list,Temp_calibration_method,Heteronuclear T1rho relaxation values,Temp calibration method,Y,N,?
 29440,Heteronucl_T1rho_list,Temp_control_method,Heteronuclear T1rho relaxation values,Temp control method,Y,N,?
-29450,Heteronucl_T1rho_list,T1rho_coherence_type,Heteronuclear T1rho relaxation values,T1rho coherence type,Y,N,?
+29450,Heteronucl_T1rho_list,T1rho_coherence_type,Heteronuclear T1rho relaxation values,T1rho coherence type,Y,N,C
 29460,Heteronucl_T1rho_list,T1rho_val_units,Heteronuclear T1rho relaxation values,T1rho val units,Y,N,?
 29470,Heteronucl_T1rho_list,Rex_units,Heteronuclear T1rho relaxation values,Rex units,Y,N,?
 29480,Heteronucl_T1rho_list,Details,Heteronuclear T1rho relaxation values,Details,N,?,?
 29490,Heteronucl_T1rho_list,Text_data_format,Heteronuclear T1rho relaxation values,Text data format,N,?,?
 29500,Heteronucl_T1rho_list,Text_data,Heteronuclear T1rho relaxation values,Text data,N,?,?
 29510,Heteronucl_T1rho_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-29520,Heteronucl_T1rho_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+29520,Heteronucl_T1rho_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 29530,Heteronucl_T1rho_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 29540,Heteronucl_T1rho_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
-29550,Heteronucl_T1rho_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
+29550,Heteronucl_T1rho_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,C
 29560,Heteronucl_T1rho_experiment,Sf_ID,NMR experiments used to derive these data,Sf ID,N,?,?
 29570,Heteronucl_T1rho_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 29580,Heteronucl_T1rho_experiment,Heteronucl_T1rho_list_ID,NMR experiments used to derive these data,Heteronucl T1rho list ID,N,?,?
 29590,Heteronucl_T1rho_software,Software_ID,Software,Software ID,N,?,?
-29600,Heteronucl_T1rho_software,Software_label,Software,Software label,N,?,?
+29600,Heteronucl_T1rho_software,Software_label,Software,Software label,N,?,C
 29610,Heteronucl_T1rho_software,Method_ID,Software,Method ID,N,?,?
 29620,Heteronucl_T1rho_software,Method_label,Software,Method label,N,?,?
 29630,Heteronucl_T1rho_software,Sf_ID,Software,Sf ID,N,?,?
 29640,Heteronucl_T1rho_software,Entry_ID,Software,Entry ID,N,?,?
 29650,Heteronucl_T1rho_software,Heteronucl_T1rho_list_ID,Software,Heteronucl T1rho list ID,N,?,?
-29660,T1rho,ID,T1rho,ID,N,?,?
+29660,T1rho,ID,T1rho,ID,N,?,C
 29670,T1rho,Assembly_atom_ID,T1rho,Assembly atom ID,N,?,?
 29680,T1rho,Entity_assembly_ID,T1rho,Entity assembly ID,N,?,?
 29690,T1rho,Entity_ID,T1rho,Entity ID,N,?,?
 29700,T1rho,Comp_index_ID,T1rho,Comp index ID,N,?,?
 29710,T1rho,Seq_ID,T1rho,Seq ID,N,?,?
-29720,T1rho,Comp_ID,T1rho,Comp ID,N,?,?
-29730,T1rho,Atom_ID,T1rho,Atom ID,N,?,?
-29740,T1rho,Atom_type,T1rho,Atom type,N,?,?
+29720,T1rho,Comp_ID,T1rho,Comp ID,N,?,C
+29730,T1rho,Atom_ID,T1rho,Atom ID,N,?,C
+29740,T1rho,Atom_type,T1rho,Atom type,N,?,C
 29750,T1rho,Atom_isotope_number,T1rho,Atom isotope number,N,?,?
 29760,T1rho,T1rho_val,T1rho,T1rho val,N,?,?
 29770,T1rho,T1rho_val_err,T1rho,T1rho val err,N,?,?
@@ -2989,23 +2989,23 @@ TBL_BEGIN,,,,,,,?
 29870,T1rho,Heteronucl_T1rho_list_ID,T1rho,Heteronucl T1rho list ID,N,?,?
 29880,Heteronucl_T2_list,Sf_category,Heteronuclear T2 relaxation values,Sf category,N,?,?
 29890,Heteronucl_T2_list,Sf_framecode,Heteronuclear T2 relaxation values,Sf framecode,N,?,?
-29900,Heteronucl_T2_list,Entry_ID,Heteronuclear T2 relaxation values,Entry ID,N,?,?
+29900,Heteronucl_T2_list,Entry_ID,Heteronuclear T2 relaxation values,Entry ID,N,?,C
 29910,Heteronucl_T2_list,Sf_ID,Heteronuclear T2 relaxation values,Sf ID,N,?,?
-29920,Heteronucl_T2_list,ID,Heteronuclear T2 relaxation values,ID,N,?,?
+29920,Heteronucl_T2_list,ID,Heteronuclear T2 relaxation values,ID,N,?,C
 29930,Heteronucl_T2_list,Data_file_name,Heteronuclear T2 relaxation values,Data file name,N,?,?
 29940,Heteronucl_T2_list,Sample_condition_list_ID,Heteronuclear T2 relaxation values,Sample condition list ID,N,?,?
 29950,Heteronucl_T2_list,Sample_condition_list_label,Heteronuclear T2 relaxation values,Sample condition list label,N,?,?
 29960,Heteronucl_T2_list,Temp_calibration_method,Heteronuclear T2 relaxation values,Temp calibration method,Y,N,?
 29970,Heteronucl_T2_list,Temp_control_method,Heteronuclear T2 relaxation values,Temp control method,Y,N,?
-29980,Heteronucl_T2_list,Spectrometer_frequency_1H,Heteronuclear T2 relaxation values,Spectrometer frequency 1H,N,?,?
-29990,Heteronucl_T2_list,T2_coherence_type,Heteronuclear T2 relaxation values,T2 coherence type,Y,N,?
+29980,Heteronucl_T2_list,Spectrometer_frequency_1H,Heteronuclear T2 relaxation values,Spectrometer frequency 1H,N,?,C
+29990,Heteronucl_T2_list,T2_coherence_type,Heteronuclear T2 relaxation values,T2 coherence type,Y,N,C
 30000,Heteronucl_T2_list,T2_val_units,Heteronuclear T2 relaxation values,T2 val units,Y,N,?
 30010,Heteronucl_T2_list,Rex_units,Heteronuclear T2 relaxation values,Rex units,Y,N,?
 30020,Heteronucl_T2_list,Details,Heteronuclear T2 relaxation values,Details,N,?,?
 30030,Heteronucl_T2_list,Text_data_format,Heteronuclear T2 relaxation values,Text data format,N,?,?
 30040,Heteronucl_T2_list,Text_data,Heteronuclear T2 relaxation values,Text data,N,?,?
 30050,Heteronucl_T2_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-30060,Heteronucl_T2_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+30060,Heteronucl_T2_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 30070,Heteronucl_T2_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 30080,Heteronucl_T2_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
 30090,Heteronucl_T2_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
@@ -3013,25 +3013,25 @@ TBL_BEGIN,,,,,,,?
 30110,Heteronucl_T2_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 30120,Heteronucl_T2_experiment,Heteronucl_T2_list_ID,NMR experiments used to derive these data,Heteronucl T2 list ID,N,?,?
 30130,Heteronucl_T2_software,Software_ID,Software,Software ID,N,?,?
-30140,Heteronucl_T2_software,Software_label,Software,Software label,N,?,?
+30140,Heteronucl_T2_software,Software_label,Software,Software label,N,?,C
 30150,Heteronucl_T2_software,Method_ID,Software,Method ID,N,?,?
 30160,Heteronucl_T2_software,Method_label,Software,Method label,N,?,?
 30170,Heteronucl_T2_software,Sf_ID,Software,Sf ID,N,?,?
 30180,Heteronucl_T2_software,Entry_ID,Software,Entry ID,N,?,?
 30190,Heteronucl_T2_software,Heteronucl_T2_list_ID,Software,Heteronucl T2 list ID,N,?,?
-30200,T2,ID,T2,ID,N,?,?
+30200,T2,ID,T2,ID,N,?,C
 30210,T2,Assembly_atom_ID,T2,Assembly atom ID,N,?,?
 30220,T2,Entity_assembly_ID,T2,Entity assembly ID,N,?,?
 30230,T2,Entity_ID,T2,Entity ID,N,?,?
 30240,T2,Comp_index_ID,T2,Comp index ID,N,?,?
 30250,T2,Seq_ID,T2,Seq ID,N,?,?
-30260,T2,Comp_ID,T2,Comp ID,N,?,?
-30270,T2,Atom_ID,T2,Atom ID,N,?,?
-30280,T2,Atom_type,T2,Atom type,N,?,?
+30260,T2,Comp_ID,T2,Comp ID,N,?,C
+30270,T2,Atom_ID,T2,Atom ID,N,?,C
+30280,T2,Atom_type,T2,Atom type,N,?,C
 30290,T2,Atom_isotope_number,T2,Atom isotope number,N,?,?
 30300,T2,T2_val,T2,T2 val,N,?,?
 30310,T2,T2_val_err,T2,T2 val err,N,?,?
-30320,T2,Rex_val,T2,Rex val,N,?,?
+30320,T2,Rex_val,T2,Rex val,N,?,C
 30330,T2,Rex_err,T2,Rex err,N,?,?
 30340,T2,Resonance_ID,T2,Resonance ID,N,?,?
 30350,T2,Auth_entity_assembly_ID,T2,Auth entity assembly ID,N,?,?
@@ -3343,22 +3343,22 @@ TBL_BEGIN,,,,,,,?
 33410,Cross_correlation_D_CSA,Cross_correlation_list_ID,Dipole CSA cross correlation,Cross correlation list ID,N,?,?
 33420,Order_parameter_list,Sf_category,Order parameters,Sf category,N,?,?
 33430,Order_parameter_list,Sf_framecode,Order parameters,Sf framecode,N,?,?
-33440,Order_parameter_list,Entry_ID,Order parameters,Entry ID,N,?,?
+33440,Order_parameter_list,Entry_ID,Order parameters,Entry ID,N,?,C
 33450,Order_parameter_list,Sf_ID,Order parameters,Sf ID,N,?,?
-33460,Order_parameter_list,ID,Order parameters,ID,N,?,?
+33460,Order_parameter_list,ID,Order parameters,ID,N,?,C
 33470,Order_parameter_list,Data_file_name,Order parameters,Data file name,N,?,?
 33480,Order_parameter_list,Sample_condition_list_ID,Order parameters,Sample condition list ID,N,?,?
 33490,Order_parameter_list,Sample_condition_list_label,Order parameters,Sample condition list label,N,?,?
-33500,Order_parameter_list,Tau_e_val_units,Order parameters,Tau e val units,Y,N,?
-33510,Order_parameter_list,Tau_f_val_units,Order parameters,Tau f val units,Y,N,?
-33520,Order_parameter_list,Tau_s_val_units,Order parameters,Tau s val units,Y,N,?
-33530,Order_parameter_list,Rex_field_strength,Order parameters,Rex field strength,N,?,?
+33500,Order_parameter_list,Tau_e_val_units,Order parameters,Tau e val units,Y,N,C
+33510,Order_parameter_list,Tau_f_val_units,Order parameters,Tau f val units,Y,N,C
+33520,Order_parameter_list,Tau_s_val_units,Order parameters,Tau s val units,Y,N,C
+33530,Order_parameter_list,Rex_field_strength,Order parameters,Rex field strength,N,?,C
 33540,Order_parameter_list,Rex_val_units,Order parameters,Rex val units,Y,N,?
 33550,Order_parameter_list,Details,Order parameters,Details,N,?,?
 33560,Order_parameter_list,Text_data_format,Order parameters,Text data format,N,?,?
 33570,Order_parameter_list,Text_data,Order parameters,Text data,N,?,?
 33580,Order_parameter_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-33590,Order_parameter_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,?
+33590,Order_parameter_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,Y,C
 33600,Order_parameter_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 33610,Order_parameter_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
 33620,Order_parameter_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
@@ -3366,21 +3366,21 @@ TBL_BEGIN,,,,,,,?
 33640,Order_parameter_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 33650,Order_parameter_experiment,Order_parameter_list_ID,NMR experiments used to derive these data,Order parameter list ID,N,?,?
 33660,Order_parameter_software,Software_ID,Software,Software ID,N,?,?
-33670,Order_parameter_software,Software_label,Software,Software label,N,?,?
+33670,Order_parameter_software,Software_label,Software,Software label,N,?,C
 33680,Order_parameter_software,Method_ID,Software,Method ID,N,?,?
 33690,Order_parameter_software,Method_label,Software,Method label,N,?,?
 33700,Order_parameter_software,Sf_ID,Software,Sf ID,N,?,?
 33710,Order_parameter_software,Entry_ID,Software,Entry ID,N,?,?
 33720,Order_parameter_software,Order_parameter_list_ID,Software,Order parameter list ID,N,?,?
-33730,Order_param,ID,Order param,ID,N,?,?
+33730,Order_param,ID,Order param,ID,N,?,C
 33740,Order_param,Assembly_atom_ID,Order param,Assembly atom ID,N,?,?
 33750,Order_param,Entity_assembly_ID,Order param,Entity assembly ID,N,?,?
 33760,Order_param,Entity_ID,Order param,Entity ID,N,?,?
 33770,Order_param,Comp_index_ID,Order param,Comp index ID,N,?,?
 33780,Order_param,Seq_ID,Order param,Seq ID,N,?,?
-33790,Order_param,Comp_ID,Order param,Comp ID,N,?,?
-33800,Order_param,Atom_ID,Order param,Atom ID,N,?,?
-33810,Order_param,Atom_type,Order param,Atom type,N,?,?
+33790,Order_param,Comp_ID,Order param,Comp ID,N,?,C
+33800,Order_param,Atom_ID,Order param,Atom ID,N,?,C
+33810,Order_param,Atom_type,Order param,Atom type,N,?,C
 33820,Order_param,Atom_isotope_number,Order param,Atom isotope number,N,?,?
 33830,Order_param,Order_param_val,Order param,Order param val,N,?,?
 33840,Order_param,Order_param_val_fit_err,Order param,Order param val fit err,N,?,?
@@ -3545,9 +3545,9 @@ TBL_BEGIN,,,,,,,?
 35430,D_H_fractionation_factor,D_H_fractionation_factor_list_ID,D H fractionation factor,D H fractionation factor list ID,N,?,?
 35440,Binding_value_list,Sf_category,Binding study results (Kd; Ka; IC50; etc),Sf category,N,?,?
 35450,Binding_value_list,Sf_framecode,Binding study results (Kd; Ka; IC50; etc),Sf framecode,N,?,?
-35460,Binding_value_list,Entry_ID,Binding study results (Kd; Ka; IC50; etc),Entry ID,N,?,?
+35460,Binding_value_list,Entry_ID,Binding study results (Kd; Ka; IC50; etc),Entry ID,N,?,C
 35470,Binding_value_list,Sf_ID,Binding study results (Kd; Ka; IC50; etc),Sf ID,N,?,?
-35480,Binding_value_list,ID,Binding study results (Kd; Ka; IC50; etc),ID,N,?,?
+35480,Binding_value_list,ID,Binding study results (Kd; Ka; IC50; etc),ID,N,?,C
 35490,Binding_value_list,Data_file_name,Binding study results (Kd; Ka; IC50; etc),Data file name,N,?,?
 35500,Binding_value_list,Sample_condition_list_ID,Binding study results (Kd; Ka; IC50; etc),Sample condition list ID,N,?,?
 35510,Binding_value_list,Sample_condition_list_label,Binding study results (Kd; Ka; IC50; etc),Sample condition list label,N,?,?
@@ -3555,7 +3555,7 @@ TBL_BEGIN,,,,,,,?
 35530,Binding_value_list,Text_data_format,Binding study results (Kd; Ka; IC50; etc),Text data format,N,?,?
 35540,Binding_value_list,Text_data,Binding study results (Kd; Ka; IC50; etc),Text data,N,?,?
 35550,Binding_experiment,Experiment_ID,NMR experiments used to derive these data,Experiment ID,N,?,?
-35560,Binding_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,N,?
+35560,Binding_experiment,Experiment_name,NMR experiments used to derive these data,Experiment name,Y,N,C
 35570,Binding_experiment,Sample_ID,NMR experiments used to derive these data,Sample ID,N,?,?
 35580,Binding_experiment,Sample_label,NMR experiments used to derive these data,Sample label,N,?,?
 35590,Binding_experiment,Sample_state,NMR experiments used to derive these data,Sample state,Y,N,?
@@ -3563,13 +3563,13 @@ TBL_BEGIN,,,,,,,?
 35610,Binding_experiment,Entry_ID,NMR experiments used to derive these data,Entry ID,N,?,?
 35620,Binding_experiment,Binding_value_list_ID,NMR experiments used to derive these data,Binding value list ID,N,?,?
 35630,Binding_software,Software_ID,Software,Software ID,N,?,?
-35640,Binding_software,Software_label,Software,Software label,N,?,?
+35640,Binding_software,Software_label,Software,Software label,N,?,C
 35650,Binding_software,Method_ID,Software,Method ID,N,?,?
 35660,Binding_software,Method_label,Software,Method label,N,?,?
 35670,Binding_software,Sf_ID,Software,Sf ID,N,?,?
 35680,Binding_software,Entry_ID,Software,Entry ID,N,?,?
 35690,Binding_software,Binding_value_list_ID,Software,Binding value list ID,N,?,?
-35700,Binding_result,ID,Binding study result,ID,N,?,?
+35700,Binding_result,ID,Binding study result,ID,N,?,C
 35710,Binding_result,Experiment_ID,Binding study result,Experiment ID,N,?,?
 35720,Binding_result,Assembly_ID,Binding study result,Assembly ID,N,?,?
 35730,Binding_result,Atm_obs_assembly_atom_ID,Binding study result,Atm obs assembly atom ID,N,?,?
