@@ -295,6 +295,16 @@ save_comment
 #  Kinetic parameters  #
 ########################
 
+    ####################
+    #  Chemical rates  #
+    ####################
+
+
+;
+	N        chemical_rates             .
+	
+
+
     #############################
     #  Hydrogen exchange rates  #
     #############################
@@ -364,6 +374,15 @@ save_comment
 ;
 	N        heteronucl_T2_relaxation             .
 	
+;
+    ############################
+    #  Auto relaxation values  #
+    ############################
+
+
+;
+	N        auto_relaxation             .
+	
 
 ;
     #####################################
@@ -376,13 +395,22 @@ save_comment
 	
 
 ;
-    #########################################
-    #  Cross correlation relaxation values  #
-    #########################################
+    #######################################################
+    #  Dipole-dipole cross correlation relaxation values  #
+    #######################################################
 
 
 ;
-	N        cross_correlations             .
+	N        dipole_dipole_cross_correlations             .
+	
+;
+    ####################################################
+    #  Dipole-CSA cross correlation relaxation values  #
+    ####################################################
+
+
+;
+	N        dipole_CSA_cross_correlations             .
 	
 
 ;
@@ -416,13 +444,23 @@ save_comment
 	
 
 ;
+    ##################
+    #  Binding data  #
+    ##################
+
+
+;
+	N        binding_data             .
+	
+
+;
     ##########################################
     #  Deduced secondary structure features  #
     ##########################################
 
 
 ;
-	N        secondary_struct_features             .
+	N        deduced_secd_struct_features             .
 	
 
 ;
