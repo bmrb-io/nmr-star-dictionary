@@ -423,8 +423,6 @@ save__Entity_bond.Type
 
 save_
 
-
-
 save__Entity_bond.Value_order
 
      loop_
@@ -2921,27 +2919,6 @@ save__Entity_assembly.Chemical_exchange_state
 
 save_
 
-save__Entity_bond.Type
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
- 
-        amide                  .
-        covalent               .
-        directed               .   # N -> O
-        disulfide              .
-        ester                  .
-        ether                  .
-        hydrogen               .
-        'metal coordination'   .
-        peptide                .
-        thioether              .
-
-    stop_
-
-save_
-
 
 save__Entity.Nstd_chirality
 
@@ -5312,29 +5289,29 @@ save__Auto_relaxation_list.Relaxation_coherence_type
    Iz               'R1    longitudinal'
    Sz               'R1    longitudinal'
                          
+   (I+)+(I-)        'R1rho or R2      transverse'
+   (S+)+(S-)        'R1rho or R2      transverse'
    I+               'R1rho or R2      transverse'
    I-               'R1rho or R2      transverse'
    S+               'R1rho or R2      transverse'
    S-               'R1rho or R2      transverse'
-   (I+)+(I-)        'R1rho or R2      transverse'
-   (S+)+(S-)        'R1rho or R2      transverse'
 
+   (I+S-)+(I-S+)    'ZQ relaxation'
    I-S+             'ZQ relaxation'
    I+S-             'ZQ relaxation'
-   (I+S-)+(I-S+)    'ZQ relaxation'
 
    IzSz             'longitudinal spin order'
 
+  ((I+)+(I-))Sz     'single quantum antiphase'
+  Iz((S+)+(S-))     'single quantum antiphase'
    I+Sz             'single quantum antiphase'
    I-Sz             'single quantum antiphase'
    IzS+             'single quantum antiphase'
    IzS-             'single quantum antiphase'
-  ((I+)+(I-))Sz     'single quantum antiphase'
-  Iz((S+)+(S-))     'single quantum antiphase'
    
+ (I+S+)+(I-S-)      'DQ relaxation'
    I+S+             'DQ relaxation'
    I-S-             'DQ relaxation'
- (I+S+)+(I-S-)      'DQ relaxation'
          
     stop_
 
