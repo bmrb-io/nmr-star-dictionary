@@ -712,18 +712,18 @@ TBL_BEGIN,,,,?
 7100,Entity,Polymer_type_details,?,?
 7110,Entity,Polymer_strand_ID,?,?
 7120,Entity,Polymer_seq_one_letter_code_can,?,?
-7130,Entity,Polymer_seq_one_letter_code,?,?
+7130,Entity,Polymer_seq_one_letter_code,C,Polymer sequence
 7140,Entity,Target_identifier,?,?
 7150,Entity,Polymer_author_defined_seq,?,?
 7160,Entity,Polymer_author_seq_details,?,?
 7170,Entity,Ambiguous_conformational_states,?,?
 7180,Entity,Ambiguous_chem_comp_sites,?,?
-7190,Entity,Nstd_monomer,?,?
+7190,Entity,Nstd_monomer,C,Non-standard monomer
 7200,Entity,Nstd_chirality,?,?
 7210,Entity,Nstd_linkage,?,?
 7220,Entity,Nonpolymer_comp_ID,?,?
 7230,Entity,Nonpolymer_comp_label,?,?
-7240,Entity,Number_of_monomers,?,?
+7240,Entity,Number_of_monomers,C,Number of residues
 7250,Entity,Number_of_nonpolymer_components,?,?
 7260,Entity,Paramagnetic,SFAV-P,Paramagnetic (yes; no)
 7270,Entity,Thiol_state,C,Thiol state
@@ -824,7 +824,7 @@ TBL_BEGIN,,,,?
 8220,Entity_chem_comp_deleted_atom,Entity_ID,?,?
 8230,Entity_bond,ID,?,?
 8240,Entity_bond,Type,C,Bond type
-8250,Entity_bond,Value_order,?,?
+8250,Entity_bond,Value_order,C,Bond order
 8260,Entity_bond,Comp_index_ID_1,?,?
 8270,Entity_bond,Comp_ID_1,?,?
 8280,Entity_bond,Atom_ID_1,?,?
@@ -860,7 +860,7 @@ TBL_BEGIN,,,,?
 8580,Entity_natural_src,Kingdom,C,Kingdom
 8590,Entity_natural_src,Genus,C,Genus
 8600,Entity_natural_src,Species,C,Species
-8610,Entity_natural_src,Strain,?,?
+8610,Entity_natural_src,Strain,C,Strain
 8620,Entity_natural_src,Variant,?,?
 8630,Entity_natural_src,Subvariant,?,?
 8640,Entity_natural_src,Organ,C,Organ
@@ -868,8 +868,8 @@ TBL_BEGIN,,,,?
 8660,Entity_natural_src,Tissue_fraction,?,?
 8670,Entity_natural_src,Cell_line,?,?
 8680,Entity_natural_src,Cell_type,?,?
-8690,Entity_natural_src,ATCC_number,?,?
-8700,Entity_natural_src,Organelle,?,?
+8690,Entity_natural_src,ATCC_number,C,ATCC number
+8700,Entity_natural_src,Organelle,C,Organelle
 8710,Entity_natural_src,Cellular_location,C,Cellular location
 8720,Entity_natural_src,Fragment,?,?
 8730,Entity_natural_src,Fraction,?,?
@@ -930,7 +930,7 @@ TBL_BEGIN,,,,?
 9280,Entity_experimental_src,Vector_type,?,?
 9290,Entity_experimental_src,PDBview_host_org_vector_name,?,?
 9300,Entity_experimental_src,PDBview_plasmid_name,?,?
-9310,Entity_experimental_src,Vector_name,?,?
+9310,Entity_experimental_src,Vector_name,C,Vector name
 9320,Entity_experimental_src,Vector_details,?,?
 9330,Entity_experimental_src,Vendor_name,?,?
 9340,Entity_experimental_src,Host_org_dev_stage,?,?
@@ -960,7 +960,7 @@ TBL_BEGIN,,,,?
 9580,Chem_comp,Three_letter_code,?,?
 9590,Chem_comp,Number_atoms_all,?,?
 9600,Chem_comp,Number_atoms_nh,?,?
-9610,Chem_comp,PubChem_code,?,?
+9610,Chem_comp,PubChem_code,C,PubChem code
 9620,Chem_comp,Subcomponent_list,?,?
 9630,Chem_comp,InCHi_code,C,InCHi code
 9640,Chem_comp,Mon_nstd_flag,?,?
@@ -1283,7 +1283,7 @@ TBL_BEGIN,,,,?
 12810,Software,Name,C,Software name
 12820,Software,Version,C,Version
 12830,Software,Details,?,?
-12840,Vendor,Name,?,?
+12840,Vendor,Name,C,Software vendor
 12850,Vendor,Address,?,?
 12860,Vendor,Electronic_address,?,?
 12870,Vendor,Sf_ID,?,?
@@ -1529,7 +1529,7 @@ TBL_BEGIN,,,,?
 15270,Experiment,EMR_expt_label,?,?
 15280,Experiment,Sample_ID,?,?
 15290,Experiment,Sample_label,?,?
-15300,Experiment,Sample_state,?,?
+15300,Experiment,Sample_state,C,Sample state
 15310,Experiment,Sample_volume,?,?
 15320,Experiment,Sample_volume_units,?,?
 15330,Experiment,Sample_condition_list_ID,?,?
@@ -1747,9 +1747,9 @@ TBL_BEGIN,,,,?
 17450,Chem_shift_reference,Phosphorus_shifts_flag,?,?
 17460,Chem_shift_reference,Other_shifts_flag,?,?
 17470,Chem_shift_reference,Details,?,?
-17480,Chem_shift_ref,Atom_type,?,?
-17490,Chem_shift_ref,Atom_isotope_number,?,?
-17500,Chem_shift_ref,Mol_common_name,?,?
+17480,Chem_shift_ref,Atom_type,C,Atom type
+17490,Chem_shift_ref,Atom_isotope_number,C,Isotope number
+17500,Chem_shift_ref,Mol_common_name,C,Reference molecule name
 17510,Chem_shift_ref,Atom_group,?,?
 17520,Chem_shift_ref,Concentration_val,?,?
 17530,Chem_shift_ref,Concentration_units,?,?
@@ -1759,7 +1759,7 @@ TBL_BEGIN,,,,?
 17570,Chem_shift_ref,Chem_shift_val,?,?
 17580,Chem_shift_ref,Ref_method,SFAV-P,Reference method
 17590,Chem_shift_ref,Ref_type,SFAV-P,Reference type
-17600,Chem_shift_ref,Indirect_shift_ratio,?,?
+17600,Chem_shift_ref,Indirect_shift_ratio,C,Indirect shift ratio
 17610,Chem_shift_ref,External_ref_loc,?,?
 17620,Chem_shift_ref,External_ref_sample_geometry,?,?
 17630,Chem_shift_ref,External_ref_axis,?,?
@@ -1818,7 +1818,7 @@ TBL_BEGIN,,,,?
 18160,Atom_chem_shift,ID,C,Atom chemical shift ID
 18170,Atom_chem_shift,Assembly_atom_ID,?,?
 18180,Atom_chem_shift,Entity_assembly_ID,?,?
-18190,Atom_chem_shift,Entity_ID,?,?
+18190,Atom_chem_shift,Entity_ID,C,Molecular entity ID
 18200,Atom_chem_shift,Comp_index_ID,C,Residue sequence number
 18210,Atom_chem_shift,Seq_ID,?,?
 18220,Atom_chem_shift,Comp_ID,C,Compound code (ALA; DT; U)
@@ -1826,7 +1826,7 @@ TBL_BEGIN,,,,?
 18240,Atom_chem_shift,Atom_type,C,Atom type (H; C; N; P)
 18250,Atom_chem_shift,Atom_isotope_number,C,Atom isotope number
 18260,Atom_chem_shift,Val,C,Chemical shift value
-18270,Atom_chem_shift,Val_err,?,?
+18270,Atom_chem_shift,Val_err,C,Chemical shift value error
 18280,Atom_chem_shift,Assign_fig_of_merit,?,?
 18290,Atom_chem_shift,Ambiguity_code,SFAV-P,Ambiguity code
 18300,Atom_chem_shift,Occupancy,?,?
@@ -1883,7 +1883,7 @@ TBL_BEGIN,,,,?
 18810,Coupling_constant_software,Sf_ID,?,?
 18820,Coupling_constant_software,Entry_ID,?,?
 18830,Coupling_constant_software,Coupling_constant_list_ID,?,?
-18840,Coupling_constant,ID,?,?
+18840,Coupling_constant,ID,C,Coupling constant ID
 18850,Coupling_constant,Code,C,Coupling consant code (3JHNHA)
 18860,Coupling_constant,Assembly_atom_ID_1,?,?
 18870,Coupling_constant,Entity_assembly_ID_1,?,?
@@ -1906,9 +1906,9 @@ TBL_BEGIN,,,,?
 19040,Coupling_constant,Atom_isotope_number_2,?,?
 19050,Coupling_constant,Ambiguity_code_2,?,?
 19060,Coupling_constant,Val,C,Coupling constant value
-19070,Coupling_constant,Val_min,?,Val min
-19080,Coupling_constant,Val_max,?,Val max
-19090,Coupling_constant,Val_err,?,?
+19070,Coupling_constant,Val_min,?,Mininum value
+19080,Coupling_constant,Val_max,?,Maximum value
+19090,Coupling_constant,Val_err,C,Coupling constant value error
 19100,Coupling_constant,Resonance_ID_1,?,?
 19110,Coupling_constant,Resonance_ID_2,?,?
 19120,Coupling_constant,Auth_entity_assembly_ID_1,?,?
@@ -2014,25 +2014,25 @@ TBL_BEGIN,,,,?
 20120,Assigned_peak_chem_shift,Sf_ID,?,?
 20130,Assigned_peak_chem_shift,Entry_ID,?,?
 20140,Assigned_peak_chem_shift,Spectral_peak_list_ID,?,?
-20150,Spectral_transition,ID,C,ID
-20160,Spectral_transition,Figure_of_merit,?,?
+20150,Spectral_transition,ID,C,Spectral transition ID
+20160,Spectral_transition,Figure_of_merit,C,Figure of merit
 20170,Spectral_transition,Details,?,?
 20180,Spectral_transition,Sf_ID,?,?
 20190,Spectral_transition,Entry_ID,C,Entry ID
 20200,Spectral_transition,Spectral_peak_list_ID,?,?
-20210,Spectral_transition_general_char,Spectral_transition_ID,?,?
-20220,Spectral_transition_general_char,Intensity_val,?,?
-20230,Spectral_transition_general_char,Intensity_val_err,?,?
-20240,Spectral_transition_general_char,Measurement_method,?,?
+20210,Spectral_transition_general_char,Spectral_transition_ID,C,Spectral transition ID
+20220,Spectral_transition_general_char,Intensity_val,C,Intensity value
+20230,Spectral_transition_general_char,Intensity_val_err,C,Intensity value error
+20240,Spectral_transition_general_char,Measurement_method,C,Measurement method
 20250,Spectral_transition_general_char,Sf_ID,?,?
 20260,Spectral_transition_general_char,Entry_ID,?,?
 20270,Spectral_transition_general_char,Spectral_peak_list_ID,?,?
-20280,Spectral_transition_char,Spectral_transition_ID,?,?
-20290,Spectral_transition_char,Spectral_dim_ID,?,?
-20300,Spectral_transition_char,Chem_shift_val,?,?
-20310,Spectral_transition_char,Chem_shift_val_err,?,?
-20320,Spectral_transition_char,Line_width_val,?,?
-20330,Spectral_transition_char,Line_width_val_err,?,?
+20280,Spectral_transition_char,Spectral_transition_ID,C,Spectral transition ID
+20290,Spectral_transition_char,Spectral_dim_ID,C,Spectral dimension
+20300,Spectral_transition_char,Chem_shift_val,C,Chemical shift value
+20310,Spectral_transition_char,Chem_shift_val_err,C,Chemical shift value error
+20320,Spectral_transition_char,Line_width_val,C,Line width value
+20330,Spectral_transition_char,Line_width_val_err,C,Line width value error
 20340,Spectral_transition_char,Phase_val,?,?
 20350,Spectral_transition_char,Phase_val_err,?,?
 20360,Spectral_transition_char,Decay_rate_val,?,?
@@ -3763,7 +3763,7 @@ TBL_BEGIN,,,,?
 37610,Conformer_stat_list,Sf_framecode,?,?
 37620,Conformer_stat_list,Entry_ID,?,?
 37630,Conformer_stat_list,Sf_ID,?,?
-37640,Conformer_stat_list,ID,?,?
+37640,Conformer_stat_list,ID,C,Conformer statistics
 37650,Conformer_stat_list,Conformer_ensemble_only,?,?
 37660,Conformer_stat_list,Both_ensemble_and_rep_conformer,?,?
 37670,Conformer_stat_list,Representative_conformer_only,?,?
@@ -3775,11 +3775,11 @@ TBL_BEGIN,,,,?
 37730,Conformer_stat_list,Conf_family_coord_set_label,?,?
 37740,Conformer_stat_list,Representative_conformer_ID,?,?
 37750,Conformer_stat_list,Representative_conformer_label,?,?
-37760,Conformer_stat_list,Conformer_calculated_total_num,?,?
-37770,Conformer_stat_list,Conformer_submitted_total_num,?,?
+37760,Conformer_stat_list,Conformer_calculated_total_num,C,Number of calculated conformers
+37770,Conformer_stat_list,Conformer_submitted_total_num,C,Number of submitted conformers
 37780,Conformer_stat_list,Conformer_selection_criteria,?,?
 37790,Conformer_stat_list,Representative_conformer,?,?
-37800,Conformer_stat_list,Rep_conformer_selection_criteria,?,?
+37800,Conformer_stat_list,Rep_conformer_selection_criteria,C,Representative conformer selection criteria
 37810,Conformer_stat_list,Statistical_struct_param_details,?,?
 37820,Conformer_stat_list,Details,?,?
 37830,Conformer_stat_list_ens,Stats_not_available,?,?
@@ -4576,9 +4576,9 @@ TBL_BEGIN,,,,?
 45740,Gen_dist_constraint_list,Sf_framecode,?,?
 45750,Gen_dist_constraint_list,Entry_ID,?,?
 45760,Gen_dist_constraint_list,Sf_ID,?,?
-45770,Gen_dist_constraint_list,ID,?,?
+45770,Gen_dist_constraint_list,ID,C,General distance constraint
 45780,Gen_dist_constraint_list,Data_file_name,?,?
-45790,Gen_dist_constraint_list,Constraint_type,?,?
+45790,Gen_dist_constraint_list,Constraint_type,C,Distance constraint type
 45800,Gen_dist_constraint_list,Constraint_file_ID,?,?
 45810,Gen_dist_constraint_list,Block_ID,?,?
 45820,Gen_dist_constraint_list,Details,?,?
@@ -4819,7 +4819,7 @@ TBL_BEGIN,,,,?
 48170,Floating_chirality_assign,Sf_framecode,?,?
 48180,Floating_chirality_assign,Entry_ID,?,?
 48190,Floating_chirality_assign,Sf_ID,?,?
-48200,Floating_chirality_assign,ID,?,?
+48200,Floating_chirality_assign,ID,C,Floating chirality assigned
 48210,Floating_chirality_assign,Data_file_name,?,?
 48220,Floating_chirality_assign,Details,?,?
 48230,Floating_chirality_assign,Stereo_count,?,?
@@ -4868,7 +4868,7 @@ TBL_BEGIN,,,,?
 48660,Torsion_angle_constraint_list,Sf_framecode,?,?
 48670,Torsion_angle_constraint_list,Entry_ID,?,?
 48680,Torsion_angle_constraint_list,Sf_ID,?,?
-48690,Torsion_angle_constraint_list,ID,?,?
+48690,Torsion_angle_constraint_list,ID,C,Torsion angle constraint
 48700,Torsion_angle_constraint_list,Data_file_name,?,?
 48710,Torsion_angle_constraint_list,Constraint_file_ID,?,?
 48720,Torsion_angle_constraint_list,Block_ID,?,?
@@ -4898,8 +4898,8 @@ TBL_BEGIN,,,,?
 48960,Karplus_equation,Sf_ID,?,?
 48970,Karplus_equation,Entry_ID,?,?
 48980,Karplus_equation,Torsion_angle_constraint_list_ID,?,?
-48990,Torsion_angle_constraint,ID,?,?
-49000,Torsion_angle_constraint,Torsion_angle_name,?,?
+48990,Torsion_angle_constraint,ID,C,Torsion angle constraint ID
+49000,Torsion_angle_constraint,Torsion_angle_name,C,Torsion angle name
 49010,Torsion_angle_constraint,Assembly_atom_ID_1,?,?
 49020,Torsion_angle_constraint,Entity_assembly_ID_1,?,?
 49030,Torsion_angle_constraint,Entity_ID_1,?,?
@@ -5037,18 +5037,18 @@ TBL_BEGIN,,,,?
 50350,RDC_constraint_list,Sf_framecode,?,?
 50360,RDC_constraint_list,Entry_ID,?,?
 50370,RDC_constraint_list,Sf_ID,?,?
-50380,RDC_constraint_list,ID,?,?
+50380,RDC_constraint_list,ID,C,RDC constraint
 50390,RDC_constraint_list,Data_file_name,?,?
 50400,RDC_constraint_list,Constraint_file_ID,?,?
 50410,RDC_constraint_list,Block_ID,?,?
-50420,RDC_constraint_list,Dipolar_constraint_calib_method,?,?
+50420,RDC_constraint_list,Dipolar_constraint_calib_method,C,Calibration method
 50430,RDC_constraint_list,Mol_align_tensor_axial_sym_mol,?,?
 50440,RDC_constraint_list,Mol_align_tensor_rhombic_mol,?,?
 50450,RDC_constraint_list,General_order_param_int_motions,?,?
-50460,RDC_constraint_list,Bond_length_usage_flag,?,?
-50470,RDC_constraint_list,Assumed_H_N_bond_length,?,?
-50480,RDC_constraint_list,Assumed_H_C_bond_length,?,?
-50490,RDC_constraint_list,Assumed_C_N_bond_length,?,?
+50460,RDC_constraint_list,Bond_length_usage_flag,C,Bond length usage
+50470,RDC_constraint_list,Assumed_H_N_bond_length,C,H-N bond length
+50480,RDC_constraint_list,Assumed_H_C_bond_length,C,N-C bond length
+50490,RDC_constraint_list,Assumed_C_N_bond_length,C,C-N bond length
 50500,RDC_constraint_list,Data_file_format,?,?
 50510,RDC_constraint_list,Details,?,?
 50520,RDC_constraint_list,Text_data_format,?,?
@@ -5162,11 +5162,11 @@ TBL_BEGIN,,,,?
 51600,RDC_constraint_conv_err,Sf_ID,?,?
 51610,RDC_constraint_conv_err,Entry_ID,?,?
 51620,RDC_constraint_conv_err,RDC_constraint_list_ID,?,?
-51630,J_three_bond_constraint_list,Sf_category,F,Sf category
+51630,J_three_bond_constraint_list,Sf_category,?,?
 51640,J_three_bond_constraint_list,Sf_framecode,?,?
 51650,J_three_bond_constraint_list,Entry_ID,?,?
 51660,J_three_bond_constraint_list,Sf_ID,?,?
-51670,J_three_bond_constraint_list,ID,?,?
+51670,J_three_bond_constraint_list,ID,C,J coupling constraint
 51680,J_three_bond_constraint_list,Data_file_name,?,?
 51690,J_three_bond_constraint_list,Data_file_format,?,?
 51700,J_three_bond_constraint_list,Constraint_file_ID,?,?
@@ -5369,7 +5369,7 @@ TBL_BEGIN,,,,?
 53670,H_chem_shift_constraint_list,Sf_framecode,?,?
 53680,H_chem_shift_constraint_list,Entry_ID,?,?
 53690,H_chem_shift_constraint_list,Sf_ID,?,?
-53700,H_chem_shift_constraint_list,ID,?,?
+53700,H_chem_shift_constraint_list,ID,C,H chemical shift constraints
 53710,H_chem_shift_constraint_list,Units,?,?
 53720,H_chem_shift_constraint_list,Data_file_name,?,?
 53730,H_chem_shift_constraint_list,Data_file_format,?,?
@@ -5395,7 +5395,7 @@ TBL_BEGIN,,,,?
 53930,H_chem_shift_constraint_software,Sf_ID,?,?
 53940,H_chem_shift_constraint_software,Entry_ID,?,?
 53950,H_chem_shift_constraint_software,H_chem_shift_constraint_list_ID,?,?
-53960,H_chem_shift_constraint,ID,X,ID
+53960,H_chem_shift_constraint,ID,C,H chemical shift constraint ID
 53970,H_chem_shift_constraint,Assembly_atom_ID,?,?
 53980,H_chem_shift_constraint,Entity_assembly_ID,?,?
 53990,H_chem_shift_constraint,Entity_ID,?,?
@@ -5421,7 +5421,7 @@ TBL_BEGIN,,,,?
 54190,SAXS_constraint_list,Sf_framecode,?,?
 54200,SAXS_constraint_list,Entry_ID,?,?
 54210,SAXS_constraint_list,Sf_ID,?,?
-54220,SAXS_constraint_list,ID,?,?
+54220,SAXS_constraint_list,ID,C,SAXS constraints
 54230,SAXS_constraint_list,Data_file_name,?,?
 54240,SAXS_constraint_list,Sample_condition_list_ID,?,?
 54250,SAXS_constraint_list,Sample_condition_list_label,?,?
@@ -5454,12 +5454,12 @@ TBL_BEGIN,,,,?
 54520,Other_constraint_list,Sf_framecode,?,?
 54530,Other_constraint_list,Entry_ID,?,?
 54540,Other_constraint_list,Sf_ID,?,?
-54550,Other_constraint_list,ID,?,?
+54550,Other_constraint_list,ID,C,Other constraints
 54560,Other_constraint_list,Details,?,?
 54570,Other_constraint_list,Entity_assembly_ID,?,?
 54580,Other_constraint_list,Entity_ID,?,?
-54590,Other_constraint_list,Type,?,?
-54600,Other_constraint_list,Subtype,?,?
+54590,Other_constraint_list,Type,C,Type of constraint
+54600,Other_constraint_list,Subtype,C,Subtype of constraint
 54610,Other_constraint_list,File_name,?,?
 54620,Other_constraint_list,File_format,?,?
 54630,Other_constraint_list,Constraint_file_ID,?,?
