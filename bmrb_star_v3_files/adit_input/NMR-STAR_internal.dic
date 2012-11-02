@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-10-26
+#  version date -  2012-11-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -13145,14 +13145,14 @@ disulfide
 
 save_
 
-save__Bond.Order
+save__Bond.Value_order
 
    _item_description.description
 ;
 The order of the bond between two atoms (i.e.$ single$ double$ etc.)
 ;
 
-   _item.name                  '_Bond.Order'
+   _item.name                  '_Bond.Value_order'
    _item.category_id              'Bond'
    _item.mandatory_code            yes
 
@@ -13162,15 +13162,6 @@ The order of the bond between two atoms (i.e.$ single$ double$ etc.)
      _item_enumeration.value
      _item_enumeration.detail
 
-   sing    'single bond'
-   doub    'double bond'
-   trip    'triple bond'
-   quad    'quadruple bond'
-   arom    'aromatic bond'
-   poly    'polymeric bond'
-   delo    'delocalized double bond'
-   pi    'pi bond'
-   directed    'N ->O'
 
    stop_
 

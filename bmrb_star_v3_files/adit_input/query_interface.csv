@@ -199,31 +199,31 @@ TBL_BEGIN,,,,?
 1970,Entry_author,Middle_initials,C,Middle initials
 1980,Entry_author,Family_title,?,?
 1990,Entry_author,Sf_ID,?,?
-2000,Entry_author,Entry_ID,?,?
+2000,Entry_author,Entry_ID,C,Entry ID
 2010,SG_project,SG_project_ID,?,?
 2020,SG_project,Project_name,C,Project name
 2030,SG_project,Full_name_of_center,?,?
 2040,SG_project,Initial_of_center,C,Initials of center
 2050,SG_project,Sf_ID,?,?
-2060,SG_project,Entry_ID,?,?
+2060,SG_project,Entry_ID,C,Entry ID
 2070,Entry_src,ID,?,?
 2080,Entry_src,Project_name,C,Project name
 2090,Entry_src,Organization_full_name,?,?
 2100,Entry_src,Organization_initials,?,?
 2110,Entry_src,Sf_ID,?,?
-2120,Entry_src,Entry_ID,?,?
+2120,Entry_src,Entry_ID,C,Entry ID
 2130,Struct_keywords,Keywords,C,Keywords
 2140,Struct_keywords,Text,?,?
 2150,Struct_keywords,Sf_ID,?,?
-2160,Struct_keywords,Entry_ID,?,?
+2160,Struct_keywords,Entry_ID,C,Entry ID
 2170,Data_set,Type,SFAV-P,Data set type
 2180,Data_set,Count,?,?
 2190,Data_set,Sf_ID,?,?
-2200,Data_set,Entry_ID,?,?
+2200,Data_set,Entry_ID,C,Entry ID
 2210,Datum,Type,SFAV-P,Datum type
 2220,Datum,Count,C,Datum count
 2230,Datum,Sf_ID,?,?
-2240,Datum,Entry_ID,?,?
+2240,Datum,Entry_ID,C,Entry ID
 2250,Release,Release_number,?,?
 2260,Release,Format_type,?,?
 2270,Release,Format_version,?,?
@@ -247,7 +247,7 @@ TBL_BEGIN,,,,?
 2450,Audit,Entry_ID,?,?
 2460,Citation,Sf_category,?,?
 2470,Citation,Sf_framecode,?,?
-2480,Citation,Entry_ID,?,?
+2480,Citation,Entry_ID,C,Entry ID
 2490,Citation,Sf_ID,?,?
 2500,Citation,ID,?,?
 2510,Citation,Class,SFAV-P,Class (entry; reference)
@@ -295,11 +295,11 @@ TBL_BEGIN,,,,?
 2930,Citation_author,Middle_initials,C,Middle initials
 2940,Citation_author,Family_title,?,?
 2950,Citation_author,Sf_ID,?,?
-2960,Citation_author,Entry_ID,?,?
+2960,Citation_author,Entry_ID,C,Entry ID
 2970,Citation_author,Citation_ID,?,?
 2980,Citation_keyword,Keyword,C,Keyword
 2990,Citation_keyword,Sf_ID,?,?
-3000,Citation_keyword,Entry_ID,?,?
+3000,Citation_keyword,Entry_ID,C,Entry ID
 3010,Citation_keyword,Citation_ID,?,?
 3020,Citation_editor,Ordinal,?,?
 3030,Citation_editor,Given_name,?,?
@@ -312,7 +312,7 @@ TBL_BEGIN,,,,?
 3100,Citation_editor,Citation_ID,?,?
 3110,Assembly,Sf_category,?,?
 3120,Assembly,Sf_framecode,?,?
-3130,Assembly,Entry_ID,?,?
+3130,Assembly,Entry_ID,C,Entry ID
 3140,Assembly,Sf_ID,?,?
 3150,Assembly,ID,?,?
 3160,Assembly,Name,C,Name
@@ -333,7 +333,7 @@ TBL_BEGIN,,,,?
 3310,Assembly,DB_query_revised_last_date,?,?
 3320,Assembly_type,Type,C,Type
 3330,Assembly_type,Sf_ID,?,?
-3340,Assembly_type,Entry_ID,?,?
+3340,Assembly_type,Entry_ID,C,Entry ID
 3350,Assembly_type,Assembly_ID,?,?
 3360,Entity_assembly,ID,?,?
 3370,Entity_assembly,Entity_assembly_name,?,?
@@ -341,19 +341,19 @@ TBL_BEGIN,,,,?
 3390,Entity_assembly,Entity_label,?,?
 3400,Entity_assembly,Asym_ID,?,?
 3410,Entity_assembly,PDB_chain_ID,?,?
-3420,Entity_assembly,Experimental_data_reported,?,?
+3420,Entity_assembly,Experimental_data_reported,C,Experimental data reported
 3430,Entity_assembly,Physical_state,C,Physical state
-3440,Entity_assembly,Conformational_isomer,?,?
-3450,Entity_assembly,Chemical_exchange_state,?,?
-3460,Entity_assembly,Magnetic_equivalence_group_code,?,?
+3440,Entity_assembly,Conformational_isomer,C,Conformational isomer
+3450,Entity_assembly,Chemical_exchange_state,C,Chemical exchange state
+3460,Entity_assembly,Magnetic_equivalence_group_code,C,Magnetically equivalent group
 3470,Entity_assembly,Role,?,?
 3480,Entity_assembly,Details,?,?
 3490,Entity_assembly,Sf_ID,?,?
-3500,Entity_assembly,Entry_ID,?,?
+3500,Entity_assembly,Entry_ID,C,Entry ID
 3510,Entity_assembly,Assembly_ID,?,?
 3520,Bond,ID,?,?
 3530,Bond,Type,C,Type
-3540,Bond,Order,?,?
+3540,Bond,Value_order,?,?
 3550,Bond,Assembly_atom_ID_1,?,?
 3560,Bond,Entity_assembly_ID_1,?,?
 3570,Bond,Entity_assembly_name_1,?,?
@@ -381,7 +381,7 @@ TBL_BEGIN,,,,?
 3790,Bond,Auth_comp_ID_2,?,?
 3800,Bond,Auth_atom_ID_2,?,?
 3810,Bond,Sf_ID,?,?
-3820,Bond,Entry_ID,?,?
+3820,Bond,Entry_ID,C,Entry ID
 3830,Bond,Assembly_ID,?,?
 3840,Entity_deleted_atom,ID,?,?
 3850,Entity_deleted_atom,Entity_atom_list_ID,?,?
@@ -701,13 +701,13 @@ TBL_BEGIN,,,,?
 6990,Subsystem_citation,Assembly_subsystem_ID,?,?
 7000,Entity,Sf_category,?,?
 7010,Entity,Sf_framecode,?,?
-7020,Entity,Entry_ID,?,?
+7020,Entity,Entry_ID,C,Entry ID
 7030,Entity,Sf_ID,?,?
 7040,Entity,ID,?,?
 7050,Entity,BMRB_code,?,?
 7060,Entity,Name,C,Molecular entity name
 7070,Entity,Type,SFAV-P,Molecular entity type
-7080,Entity,Polymer_common_type,SFAV-P,Polymer common type (protein; DNA; RNA; DNA/RNA hybrid; carbohydrate)
+7080,Entity,Polymer_common_type,?,?
 7090,Entity,Polymer_type,SFAV-P,Polymer type (polypeptide(L))
 7100,Entity,Polymer_type_details,?,?
 7110,Entity,Polymer_strand_ID,?,?
@@ -737,20 +737,20 @@ TBL_BEGIN,,,,?
 7350,Entity,Formula_weight_exptl,?,?
 7360,Entity,Formula_weight_exptl_meth,?,?
 7370,Entity,Details,?,?
-7380,Entity,DB_query_date,?,?
-7390,Entity,DB_query_revised_last_date,?,?
+7380,Entity,DB_query_date,C,Data base query data
+7390,Entity,DB_query_revised_last_date,C,Last date revised (2011-05-12)
 7400,Entity_db_link,Author_supplied,SFAV-P,Author supplied
 7410,Entity_db_link,Database_code,C,Database code
 7420,Entity_db_link,Accession_code,C,Accession code
 7430,Entity_db_link,Entry_mol_code,?,?
-7440,Entity_db_link,Entry_mol_name,?,?
+7440,Entity_db_link,Entry_mol_name,C,Molecule name
 7450,Entity_db_link,Entry_experimental_method,C,Entry experimental method
 7460,Entity_db_link,Entry_structure_resolution,C,Entry structure resolution
 7470,Entity_db_link,Entry_relation_type,?,?
 7480,Entity_db_link,Entry_details,?,?
 7490,Entity_db_link,Chimera_segment_ID,?,?
 7500,Entity_db_link,Seq_query_to_submitted_percent,C,Sequence query to submitted sequence percentage
-7510,Entity_db_link,Seq_subject_length,?,?
+7510,Entity_db_link,Seq_subject_length,C,Subject length
 7520,Entity_db_link,Seq_identity,C,Sequence identity percentage
 7530,Entity_db_link,Seq_positive,C,Sequence positive percentage
 7540,Entity_db_link,Seq_homology_expectation_val,C,Sequence homology expectation value
@@ -759,11 +759,11 @@ TBL_BEGIN,,,,?
 7570,Entity_db_link,Seq_difference_details,?,?
 7580,Entity_db_link,Seq_alignment_details,?,?
 7590,Entity_db_link,Sf_ID,?,?
-7600,Entity_db_link,Entry_ID,?,?
+7600,Entity_db_link,Entry_ID,C,Entry ID
 7610,Entity_db_link,Entity_ID,?,?
 7620,Entity_biological_function,Biological_function,C,Biological function
 7630,Entity_biological_function,Sf_ID,?,?
-7640,Entity_biological_function,Entry_ID,?,?
+7640,Entity_biological_function,Entry_ID,C,Entry ID
 7650,Entity_biological_function,Entity_ID,?,?
 7660,Entity_common_name,Name,C,Molecular entity name
 7670,Entity_common_name,Type,?,?
@@ -773,11 +773,11 @@ TBL_BEGIN,,,,?
 7710,Entity_systematic_name,Name,C,Molecular entity systematic name
 7720,Entity_systematic_name,Naming_system,?,?
 7730,Entity_systematic_name,Sf_ID,?,?
-7740,Entity_systematic_name,Entry_ID,?,?
+7740,Entity_systematic_name,Entry_ID,C,Entry ID
 7750,Entity_systematic_name,Entity_ID,?,?
 7760,Entity_keyword,Keyword,C,Keyword
 7770,Entity_keyword,Sf_ID,?,?
-7780,Entity_keyword,Entry_ID,?,?
+7780,Entity_keyword,Entry_ID,C,Entry ID
 7790,Entity_keyword,Entity_ID,?,?
 7800,Entity_comp_index,ID,?,?
 7810,Entity_comp_index,Auth_seq_ID,?,?
@@ -833,7 +833,7 @@ TBL_BEGIN,,,,?
 8310,Entity_bond,Atom_ID_2,?,?
 8320,Entity_bond,Details,?,?
 8330,Entity_bond,Sf_ID,?,?
-8340,Entity_bond,Entry_ID,?,?
+8340,Entity_bond,Entry_ID,C,Entry ID
 8350,Entity_bond,Entity_ID,?,?
 8360,Entity_citation,Citation_ID,?,?
 8370,Entity_citation,Citation_label,?,?
@@ -882,7 +882,7 @@ TBL_BEGIN,,,,?
 8800,Entity_natural_src,Citation_ID,?,?
 8810,Entity_natural_src,Citation_label,?,?
 8820,Entity_natural_src,Sf_ID,?,?
-8830,Entity_natural_src,Entry_ID,?,?
+8830,Entity_natural_src,Entry_ID,C,Entry ID
 8840,Entity_natural_src,Entity_natural_src_list_ID,?,?
 8850,Natural_source_db,Entity_natural_src_ID,?,?
 8860,Natural_source_db,Entity_ID,?,?
@@ -927,7 +927,7 @@ TBL_BEGIN,,,,?
 9250,Entity_experimental_src,Host_org_gene,?,?
 9260,Entity_experimental_src,Host_org_culture_collection,?,?
 9270,Entity_experimental_src,Host_org_ATCC_number,?,?
-9280,Entity_experimental_src,Vector_type,?,?
+9280,Entity_experimental_src,Vector_type,C,Vector type
 9290,Entity_experimental_src,PDBview_host_org_vector_name,?,?
 9300,Entity_experimental_src,PDBview_plasmid_name,?,?
 9310,Entity_experimental_src,Vector_name,C,Vector name
@@ -938,11 +938,11 @@ TBL_BEGIN,,,,?
 9360,Entity_experimental_src,Citation_ID,?,?
 9370,Entity_experimental_src,Citation_label,?,?
 9380,Entity_experimental_src,Sf_ID,?,?
-9390,Entity_experimental_src,Entry_ID,?,?
+9390,Entity_experimental_src,Entry_ID,C,Entry ID
 9400,Entity_experimental_src,Entity_experimental_src_list_ID,?,?
 9410,Chem_comp,Sf_category,?,?
 9420,Chem_comp,Sf_framecode,?,?
-9430,Chem_comp,Entry_ID,?,?
+9430,Chem_comp,Entry_ID,C,Entry ID
 9440,Chem_comp,Sf_ID,?,?
 9450,Chem_comp,ID,C,Chemical compound code
 9460,Chem_comp,Provenance,?,?
@@ -977,7 +977,7 @@ TBL_BEGIN,,,,?
 9750,Chem_comp,Formal_charge,?,?
 9760,Chem_comp,Paramagnetic,SFAV-P,Paramagnetic (yes; no)
 9770,Chem_comp,Aromatic,SFAV-P,Aromatic (yes; no)
-9780,Chem_comp,Formula,?,?
+9780,Chem_comp,Formula,C,Chemical formula
 9790,Chem_comp,Formula_weight,?,?
 9800,Chem_comp,Formula_mono_iso_wt_nat,?,?
 9810,Chem_comp,Formula_mono_iso_wt_13C,?,?
@@ -1008,7 +1008,7 @@ TBL_BEGIN,,,,?
 10060,Chem_comp_common_name,Name,C,Chemical compound common name
 10070,Chem_comp_common_name,Type,?,?
 10080,Chem_comp_common_name,Sf_ID,?,?
-10090,Chem_comp_common_name,Entry_ID,?,?
+10090,Chem_comp_common_name,Entry_ID,C,Entry ID
 10100,Chem_comp_common_name,Comp_ID,?,?
 10110,Chem_comp_bio_function,Biological_function,?,?
 10120,Chem_comp_bio_function,Sf_ID,?,?
@@ -1045,7 +1045,7 @@ TBL_BEGIN,,,,?
 10430,Chem_comp_SMILES,Type,C,Smiles string type
 10440,Chem_comp_SMILES,String,C,Smiles string
 10450,Chem_comp_SMILES,Sf_ID,?,?
-10460,Chem_comp_SMILES,Entry_ID,?,?
+10460,Chem_comp_SMILES,Entry_ID,C,Entry ID
 10470,Chem_comp_SMILES,Comp_ID,?,?
 10480,Chem_comp_keyword,Keyword,?,?
 10490,Chem_comp_keyword,Sf_ID,?,?
@@ -1158,14 +1158,14 @@ TBL_BEGIN,,,,?
 11560,Chem_comp_citation,Comp_ID,?,?
 11570,Sample,Sf_category,?,?
 11580,Sample,Sf_framecode,?,?
-11590,Sample,Entry_ID,?,?
+11590,Sample,Entry_ID,C,Entry ID
 11600,Sample,Sf_ID,?,?
 11610,Sample,ID,?,?
 11620,Sample,Type,C,Type
 11630,Sample,Sub_type,C,Sub type
 11640,Sample,Details,?,?
 11650,Sample,Aggregate_sample_number,?,?
-11660,Sample,Solvent_system,?,?
+11660,Sample,Solvent_system,C,Solvent system
 11670,Sample,Preparation_date,?,?
 11680,Sample,Preparation_expiration_date,?,?
 11690,Sample,Polycrystallization_protocol,?,?
@@ -1206,7 +1206,7 @@ TBL_BEGIN,,,,?
 12040,Sample_component,Vendor_product_name,?,?
 12050,Sample_component,Vendor_product_code,?,?
 12060,Sample_component,Sf_ID,?,?
-12070,Sample_component,Entry_ID,?,?
+12070,Sample_component,Entry_ID,C,Entry ID
 12080,Sample_component,Sample_ID,?,?
 12090,Sample_component_atom_isotope,Sample_component_ID,?,?
 12100,Sample_component_atom_isotope,Mol_common_name,?,?
@@ -1245,7 +1245,7 @@ TBL_BEGIN,,,,?
 12430,Sample_condition_variable,Val_err,C,Value error
 12440,Sample_condition_variable,Val_units,C,Value units
 12450,Sample_condition_variable,Sf_ID,?,?
-12460,Sample_condition_variable,Entry_ID,?,?
+12460,Sample_condition_variable,Entry_ID,C,Entry ID
 12470,Sample_condition_variable,Sample_condition_list_ID,?,?
 12480,Sample_condition_citation,Citation_ID,?,?
 12490,Sample_condition_citation,Citation_label,?,?
@@ -1277,7 +1277,7 @@ TBL_BEGIN,,,,?
 12750,Entity_purity_citation,Entity_purity_list_ID,?,?
 12760,Software,Sf_category,?,?
 12770,Software,Sf_framecode,?,?
-12780,Software,Entry_ID,?,?
+12780,Software,Entry_ID,C,Entry ID
 12790,Software,Sf_ID,?,?
 12800,Software,ID,?,?
 12810,Software,Name,C,Software name
@@ -1287,11 +1287,11 @@ TBL_BEGIN,,,,?
 12850,Vendor,Address,?,?
 12860,Vendor,Electronic_address,?,?
 12870,Vendor,Sf_ID,?,?
-12880,Vendor,Entry_ID,?,?
+12880,Vendor,Entry_ID,C,Entry ID
 12890,Vendor,Software_ID,?,?
 12900,Task,Task,C,Software task
 12910,Task,Sf_ID,?,?
-12920,Task,Entry_ID,?,?
+12920,Task,Entry_ID,C,Entry ID
 12930,Task,Software_ID,?,?
 12940,Software_citation,Citation_ID,?,?
 12950,Software_citation,Citation_label,?,?
@@ -1455,7 +1455,7 @@ TBL_BEGIN,,,,?
 14530,X_ray_instrument,WAXS_detector_sample_distance,?,?
 14540,NMR_spectrometer,Sf_category,?,?
 14550,NMR_spectrometer,Sf_framecode,?,?
-14560,NMR_spectrometer,Entry_ID,?,?
+14560,NMR_spectrometer,Entry_ID,C,Entry ID
 14570,NMR_spectrometer,Sf_ID,?,?
 14580,NMR_spectrometer,ID,?,?
 14590,NMR_spectrometer,Details,?,?
@@ -1556,7 +1556,7 @@ TBL_BEGIN,,,,?
 15540,Experiment,Chromatographic_column_ID,?,?
 15550,Experiment,Chromatographic_column_label,?,?
 15560,Experiment,Sf_ID,?,?
-15570,Experiment,Entry_ID,?,?
+15570,Experiment,Entry_ID,C,Entry ID
 15580,Experiment,Experiment_list_ID,?,?
 15590,Experiment_file,Experiment_ID,?,?
 15600,Experiment_file,Name,?,?
@@ -1738,7 +1738,7 @@ TBL_BEGIN,,,,?
 17360,Computer_citation,Computer_ID,?,?
 17370,Chem_shift_reference,Sf_category,?,?
 17380,Chem_shift_reference,Sf_framecode,?,?
-17390,Chem_shift_reference,Entry_ID,?,?
+17390,Chem_shift_reference,Entry_ID,C,Entry ID
 17400,Chem_shift_reference,Sf_ID,?,?
 17410,Chem_shift_reference,ID,?,?
 17420,Chem_shift_reference,Proton_shifts_flag,SFAV-P,Proton shifts flag
@@ -1770,7 +1770,7 @@ TBL_BEGIN,,,,?
 17680,Chem_shift_ref,Correction_val_cit_ID,?,?
 17690,Chem_shift_ref,Correction_val_cit_label,?,?
 17700,Chem_shift_ref,Sf_ID,?,?
-17710,Chem_shift_ref,Entry_ID,?,?
+17710,Chem_shift_ref,Entry_ID,C,Entry ID
 17720,Chem_shift_ref,Chem_shift_reference_ID,?,?
 17730,Assigned_chem_shift_list,Sf_category,?,?
 17740,Assigned_chem_shift_list,Sf_framecode,?,?
@@ -1798,7 +1798,7 @@ TBL_BEGIN,,,,?
 17960,Chem_shift_experiment,Sample_label,?,?
 17970,Chem_shift_experiment,Sample_state,C,Sample state (isotropic; anisotropic)
 17980,Chem_shift_experiment,Sf_ID,?,?
-17990,Chem_shift_experiment,Entry_ID,?,?
+17990,Chem_shift_experiment,Entry_ID,C,Entry ID
 18000,Chem_shift_experiment,Assigned_chem_shift_list_ID,?,?
 18010,Systematic_chem_shift_offset,Type,?,?
 18020,Systematic_chem_shift_offset,Atom_type,?,?
@@ -1813,7 +1813,7 @@ TBL_BEGIN,,,,?
 18110,Chem_shift_software,Method_ID,?,?
 18120,Chem_shift_software,Method_label,?,?
 18130,Chem_shift_software,Sf_ID,?,?
-18140,Chem_shift_software,Entry_ID,?,?
+18140,Chem_shift_software,Entry_ID,C,Entry ID
 18150,Chem_shift_software,Assigned_chem_shift_list_ID,?,?
 18160,Atom_chem_shift,ID,C,Atom chemical shift ID
 18170,Atom_chem_shift,Assembly_atom_ID,?,?
@@ -1849,7 +1849,7 @@ TBL_BEGIN,,,,?
 18470,Atom_chem_shift,Original_PDB_atom_name,?,?
 18480,Atom_chem_shift,Details,?,?
 18490,Atom_chem_shift,Sf_ID,?,?
-18500,Atom_chem_shift,Entry_ID,?,?
+18500,Atom_chem_shift,Entry_ID,C,Entry ID
 18510,Atom_chem_shift,Assigned_chem_shift_list_ID,?,?
 18520,Ambiguous_atom_chem_shift,Ambiguous_shift_set_ID,?,?
 18530,Ambiguous_atom_chem_shift,Atom_chem_shift_ID,?,?
@@ -1881,7 +1881,7 @@ TBL_BEGIN,,,,?
 18790,Coupling_constant_software,Method_ID,?,?
 18800,Coupling_constant_software,Method_label,?,?
 18810,Coupling_constant_software,Sf_ID,?,?
-18820,Coupling_constant_software,Entry_ID,?,?
+18820,Coupling_constant_software,Entry_ID,C,Entry ID
 18830,Coupling_constant_software,Coupling_constant_list_ID,?,?
 18840,Coupling_constant,ID,C,Coupling constant ID
 18850,Coupling_constant,Code,C,Coupling consant code (3JHNHA)
@@ -1921,7 +1921,7 @@ TBL_BEGIN,,,,?
 19190,Coupling_constant,Auth_atom_ID_2,?,?
 19200,Coupling_constant,Details,?,?
 19210,Coupling_constant,Sf_ID,?,?
-19220,Coupling_constant,Entry_ID,?,?
+19220,Coupling_constant,Entry_ID,C,Entry ID
 19230,Coupling_constant,Coupling_constant_list_ID,?,?
 19240,Spectral_peak_list,Sf_category,?,?
 19250,Spectral_peak_list,Sf_framecode,?,?
@@ -1955,7 +1955,7 @@ TBL_BEGIN,,,,?
 19530,Spectral_peak_software,Method_ID,?,?
 19540,Spectral_peak_software,Method_label,?,?
 19550,Spectral_peak_software,Sf_ID,?,?
-19560,Spectral_peak_software,Entry_ID,?,?
+19560,Spectral_peak_software,Entry_ID,C,Entry ID
 19570,Spectral_peak_software,Spectral_peak_list_ID,?,?
 19580,Peak,ID,?,?
 19590,Peak,Figure_of_merit,?,?
@@ -2025,7 +2025,7 @@ TBL_BEGIN,,,,?
 20230,Spectral_transition_general_char,Intensity_val_err,C,Intensity value error
 20240,Spectral_transition_general_char,Measurement_method,C,Measurement method
 20250,Spectral_transition_general_char,Sf_ID,?,?
-20260,Spectral_transition_general_char,Entry_ID,?,?
+20260,Spectral_transition_general_char,Entry_ID,C,Entry ID
 20270,Spectral_transition_general_char,Spectral_peak_list_ID,?,?
 20280,Spectral_transition_char,Spectral_transition_ID,C,Spectral transition ID
 20290,Spectral_transition_char,Spectral_dim_ID,C,Spectral dimension
@@ -2042,7 +2042,7 @@ TBL_BEGIN,,,,?
 20400,Spectral_transition_char,Bounding_box_width_val,?,?
 20410,Spectral_transition_char,Derivation_method_ID,?,?
 20420,Spectral_transition_char,Sf_ID,?,?
-20430,Spectral_transition_char,Entry_ID,?,?
+20430,Spectral_transition_char,Entry_ID,C,Entry ID
 20440,Spectral_transition_char,Spectral_peak_list_ID,?,?
 20450,Spectral_transition_contrib,ID,?,?
 20460,Spectral_transition_contrib,Contribution_fractional_val,?,?
@@ -2250,26 +2250,26 @@ TBL_BEGIN,,,,?
 22480,Chem_shift_anisotropy,Sample_condition_list_ID,?,?
 22490,Chem_shift_anisotropy,Sample_condition_list_label,?,?
 22500,Chem_shift_anisotropy,Spectrometer_frequency_1H,C,Spectrometer frequency 1H
-22510,Chem_shift_anisotropy,Val_units,?,?
+22510,Chem_shift_anisotropy,Val_units,C,Value units
 22520,Chem_shift_anisotropy,Details,?,?
 22530,Chem_shift_anisotropy,Text_data_format,?,?
 22540,Chem_shift_anisotropy,Text_data,?,?
 22550,CS_anisotropy_experiment,Experiment_ID,?,?
-22560,CS_anisotropy_experiment,Experiment_name,?,Experiment name
+22560,CS_anisotropy_experiment,Experiment_name,C,Experiment name
 22570,CS_anisotropy_experiment,Sample_ID,?,?
 22580,CS_anisotropy_experiment,Sample_label,?,?
-22590,CS_anisotropy_experiment,Sample_state,?,Sample state (isotropic; anisotropic)
+22590,CS_anisotropy_experiment,Sample_state,C,Sample state (isotropic; anisotropic)
 22600,CS_anisotropy_experiment,Sf_ID,?,?
-22610,CS_anisotropy_experiment,Entry_ID,?,?
+22610,CS_anisotropy_experiment,Entry_ID,C,Entry ID
 22620,CS_anisotropy_experiment,Chem_shift_anisotropy_ID,?,?
 22630,CS_anisotropy_software,Software_ID,?,?
-22640,CS_anisotropy_software,Software_label,?,Software label
+22640,CS_anisotropy_software,Software_label,C,Software label
 22650,CS_anisotropy_software,Method_ID,?,?
 22660,CS_anisotropy_software,Method_label,?,?
 22670,CS_anisotropy_software,Sf_ID,?,?
-22680,CS_anisotropy_software,Entry_ID,?,?
+22680,CS_anisotropy_software,Entry_ID,C,Entry ID
 22690,CS_anisotropy_software,Chem_shift_anisotropy_ID,?,?
-22700,CS_anisotropy,ID,?,Chemical shift anisotropy ID
+22700,CS_anisotropy,ID,C,Chemical shift anisotropy ID
 22710,CS_anisotropy,Assembly_atom_ID,?,?
 22720,CS_anisotropy,Entity_assembly_ID,?,?
 22730,CS_anisotropy,Entity_ID,?,?
@@ -2279,8 +2279,8 @@ TBL_BEGIN,,,,?
 22770,CS_anisotropy,Atom_ID,?,?
 22780,CS_anisotropy,Atom_type,?,?
 22790,CS_anisotropy,Atom_isotope_number,?,?
-22800,CS_anisotropy,Val,?,?
-22810,CS_anisotropy,Val_err,?,?
+22800,CS_anisotropy,Val,C,Chemical shift anisotropy value
+22810,CS_anisotropy,Val_err,C,Value error
 22820,CS_anisotropy,Principal_value_sigma_11_val,?,?
 22830,CS_anisotropy,Principal_value_sigma_22_val,?,?
 22840,CS_anisotropy,Principal_value_sigma_33_val,?,?
@@ -2294,7 +2294,7 @@ TBL_BEGIN,,,,?
 22920,CS_anisotropy,Auth_comp_ID,?,?
 22930,CS_anisotropy,Auth_atom_ID,?,?
 22940,CS_anisotropy,Sf_ID,?,?
-22950,CS_anisotropy,Entry_ID,?,?
+22950,CS_anisotropy,Entry_ID,C,Entry ID
 22960,CS_anisotropy,Chem_shift_anisotropy_ID,?,?
 22970,Chem_shifts_calc_type,Sf_category,?,?
 22980,Chem_shifts_calc_type,Sf_framecode,?,?
@@ -2386,7 +2386,7 @@ TBL_BEGIN,,,,?
 23840,RDC_experiment,Sample_label,?,?
 23850,RDC_experiment,Sample_state,?,Sample state
 23860,RDC_experiment,Sf_ID,?,?
-23870,RDC_experiment,Entry_ID,?,?
+23870,RDC_experiment,Entry_ID,C,Entry ID
 23880,RDC_experiment,RDC_list_ID,?,?
 23890,RDC_software,Software_ID,?,?
 23900,RDC_software,Software_label,?,?
@@ -2403,7 +2403,7 @@ TBL_BEGIN,,,,?
 24010,RDC,Comp_index_ID_1,?,?
 24020,RDC,Seq_ID_1,?,?
 24030,RDC,Comp_ID_1,?,?
-24040,RDC,Atom_ID_1,?,Atom name one (HN)
+24040,RDC,Atom_ID_1,C,Atom name one (HN)
 24050,RDC,Atom_type_1,C,Atom type one (H)
 24060,RDC,Atom_isotope_number_1,?,?
 24070,RDC,Ambiguity_code_1,?,?
@@ -2420,7 +2420,7 @@ TBL_BEGIN,,,,?
 24180,RDC,Val,C,RDC value
 24190,RDC,Val_min,?,Val min
 24200,RDC,Val_max,?,Val max
-24210,RDC,Val_err,?,?
+24210,RDC,Val_err,C,RDC value error
 24220,RDC,Val_bond_length,?,?
 24230,RDC,Resonance_ID_1,?,?
 24240,RDC,Resonance_ID_2,?,?
@@ -2433,7 +2433,7 @@ TBL_BEGIN,,,,?
 24310,RDC,Auth_comp_ID_2,?,?
 24320,RDC,Auth_atom_ID_2,?,?
 24330,RDC,Sf_ID,?,?
-24340,RDC,Entry_ID,?,?
+24340,RDC,Entry_ID,C,Entry ID
 24350,RDC,RDC_list_ID,?,?
 24360,Dipolar_coupling_list,Sf_category,?,?
 24370,Dipolar_coupling_list,Sf_framecode,?,?
@@ -2643,11 +2643,11 @@ TBL_BEGIN,,,,?
 26410,Chemical_rate,Atom_ID,?,?
 26420,Chemical_rate,Atom_type,?,?
 26430,Chemical_rate,Atom_isotope_number,?,?
-26440,Chemical_rate,Val_type,?,?
+26440,Chemical_rate,Val_type,C,Chemical rate value type
 26450,Chemical_rate,Val,C,Chemical rate values
 26460,Chemical_rate,Val_min,?,?
 26470,Chemical_rate,Val_max,?,?
-26480,Chemical_rate,Val_err,?,?
+26480,Chemical_rate,Val_err,C,Value error
 26490,Chemical_rate,Val_units,?,?
 26500,Chemical_rate,Resonance_ID,?,?
 26510,Chemical_rate,Auth_entity_assembly_ID,?,?
@@ -2655,7 +2655,7 @@ TBL_BEGIN,,,,?
 26530,Chemical_rate,Auth_comp_ID,?,?
 26540,Chemical_rate,Auth_atom_ID,?,?
 26550,Chemical_rate,Sf_ID,?,?
-26560,Chemical_rate,Entry_ID,?,?
+26560,Chemical_rate,Entry_ID,C,Entry ID
 26570,Chemical_rate,Chemical_rate_list_ID,?,?
 26580,H_exch_rate_list,Sf_category,?,?
 26590,H_exch_rate_list,Sf_framecode,?,?
@@ -2697,14 +2697,14 @@ TBL_BEGIN,,,,?
 26950,H_exch_rate,Val,C,H exchange rate values
 26960,H_exch_rate,Val_min,?,?
 26970,H_exch_rate,Val_max,?,?
-26980,H_exch_rate,Val_err,?,?
+26980,H_exch_rate,Val_err,C,Value error
 26990,H_exch_rate,Resonance_ID,?,?
 27000,H_exch_rate,Auth_entity_assembly_ID,?,?
 27010,H_exch_rate,Auth_seq_ID,?,?
 27020,H_exch_rate,Auth_comp_ID,?,?
 27030,H_exch_rate,Auth_atom_ID,?,?
 27040,H_exch_rate,Sf_ID,?,?
-27050,H_exch_rate,Entry_ID,?,?
+27050,H_exch_rate,Entry_ID,C,Entry ID
 27060,H_exch_rate,H_exch_rate_list_ID,?,?
 27070,H_exch_protection_factor_list,Sf_category,?,?
 27080,H_exch_protection_factor_list,Sf_framecode,?,?
@@ -2746,14 +2746,14 @@ TBL_BEGIN,,,,?
 27440,H_exch_protection_factor,Atom_isotope_number,?,?
 27450,H_exch_protection_factor,Calculated_intrinsic_rate,?,?
 27460,H_exch_protection_factor,Val,C,H exchange protection factor values
-27470,H_exch_protection_factor,Val_err,?,?
+27470,H_exch_protection_factor,Val_err,C,Value error
 27480,H_exch_protection_factor,Resonance_ID,?,?
 27490,H_exch_protection_factor,Auth_entity_assembly_ID,?,?
 27500,H_exch_protection_factor,Auth_seq_ID,?,?
 27510,H_exch_protection_factor,Auth_comp_ID,?,?
 27520,H_exch_protection_factor,Auth_atom_ID,?,?
 27530,H_exch_protection_factor,Sf_ID,?,?
-27540,H_exch_protection_factor,Entry_ID,?,?
+27540,H_exch_protection_factor,Entry_ID,C,Entry ID
 27550,H_exch_protection_factor,H_exch_protection_factor_list_ID,?,?
 27560,Homonucl_NOE_list,Sf_category,?,?
 27570,Homonucl_NOE_list,Sf_framecode,?,?
@@ -2848,7 +2848,7 @@ TBL_BEGIN,,,,?
 28460,Heteronucl_NOE_software,Method_ID,?,?
 28470,Heteronucl_NOE_software,Method_label,?,?
 28480,Heteronucl_NOE_software,Sf_ID,?,?
-28490,Heteronucl_NOE_software,Entry_ID,?,?
+28490,Heteronucl_NOE_software,Entry_ID,C,Entry ID
 28500,Heteronucl_NOE_software,Heteronucl_NOE_list_ID,?,?
 28510,Heteronucl_NOE,ID,C,Heteronuclear NOE ID
 28520,Heteronucl_NOE,Assembly_atom_ID_1,?,?
@@ -2870,7 +2870,7 @@ TBL_BEGIN,,,,?
 28680,Heteronucl_NOE,Atom_type_2,C,Atom type two (n)
 28690,Heteronucl_NOE,Atom_isotope_number_2,?,?
 28700,Heteronucl_NOE,Val,C,Heteronuclear value
-28710,Heteronucl_NOE,Val_err,?,?
+28710,Heteronucl_NOE,Val_err,C,Value error
 28720,Heteronucl_NOE,Resonance_ID_1,?,?
 28730,Heteronucl_NOE,Resonance_ID_2,?,?
 28740,Heteronucl_NOE,Auth_entity_assembly_ID_1,?,?
@@ -2882,7 +2882,7 @@ TBL_BEGIN,,,,?
 28800,Heteronucl_NOE,Auth_comp_ID_2,?,?
 28810,Heteronucl_NOE,Auth_atom_ID_2,?,?
 28820,Heteronucl_NOE,Sf_ID,?,?
-28830,Heteronucl_NOE,Entry_ID,?,?
+28830,Heteronucl_NOE,Entry_ID,C,Entry ID
 28840,Heteronucl_NOE,Heteronucl_NOE_list_ID,?,?
 28850,Heteronucl_T1_list,Sf_category,?,?
 28860,Heteronucl_T1_list,Sf_framecode,?,?
@@ -2904,14 +2904,14 @@ TBL_BEGIN,,,,?
 29020,Heteronucl_T1_experiment,Sample_label,?,?
 29030,Heteronucl_T1_experiment,Sample_state,?,?
 29040,Heteronucl_T1_experiment,Sf_ID,?,?
-29050,Heteronucl_T1_experiment,Entry_ID,?,?
+29050,Heteronucl_T1_experiment,Entry_ID,C,Entry ID
 29060,Heteronucl_T1_experiment,Heteronucl_T1_list_ID,?,?
 29070,Heteronucl_T1_software,Software_ID,?,?
 29080,Heteronucl_T1_software,Software_label,C,Software label
 29090,Heteronucl_T1_software,Method_ID,?,?
 29100,Heteronucl_T1_software,Method_label,?,?
 29110,Heteronucl_T1_software,Sf_ID,?,?
-29120,Heteronucl_T1_software,Entry_ID,?,?
+29120,Heteronucl_T1_software,Entry_ID,C,Entry ID
 29130,Heteronucl_T1_software,Heteronucl_T1_list_ID,?,?
 29140,T1,ID,C,R1 (T1) ID
 29150,T1,Assembly_atom_ID,?,?
@@ -2924,14 +2924,14 @@ TBL_BEGIN,,,,?
 29220,T1,Atom_type,C,Atom type (H; C; N)
 29230,T1,Atom_isotope_number,?,?
 29240,T1,Val,C,R1 (T1) value
-29250,T1,Val_err,?,?
+29250,T1,Val_err,C,Value error
 29260,T1,Resonance_ID,?,?
 29270,T1,Auth_entity_assembly_ID,?,?
 29280,T1,Auth_seq_ID,?,?
 29290,T1,Auth_comp_ID,?,?
 29300,T1,Auth_atom_ID,?,?
 29310,T1,Sf_ID,?,?
-29320,T1,Entry_ID,?,?
+29320,T1,Entry_ID,C,Entry ID
 29330,T1,Heteronucl_T1_list_ID,?,?
 29340,Heteronucl_T1rho_list,Sf_category,?,?
 29350,Heteronucl_T1rho_list,Sf_framecode,?,?
@@ -2945,8 +2945,8 @@ TBL_BEGIN,,,,?
 29430,Heteronucl_T1rho_list,Temp_calibration_method,?,?
 29440,Heteronucl_T1rho_list,Temp_control_method,?,?
 29450,Heteronucl_T1rho_list,T1rho_coherence_type,C,R1 (T1) rho coherence type
-29460,Heteronucl_T1rho_list,T1rho_val_units,?,?
-29470,Heteronucl_T1rho_list,Rex_units,?,?
+29460,Heteronucl_T1rho_list,T1rho_val_units,C,Value units
+29470,Heteronucl_T1rho_list,Rex_units,C,Rex value units
 29480,Heteronucl_T1rho_list,Details,?,?
 29490,Heteronucl_T1rho_list,Text_data_format,?,?
 29500,Heteronucl_T1rho_list,Text_data,?,?
@@ -2956,14 +2956,14 @@ TBL_BEGIN,,,,?
 29540,Heteronucl_T1rho_experiment,Sample_label,?,?
 29550,Heteronucl_T1rho_experiment,Sample_state,C,Sample state
 29560,Heteronucl_T1rho_experiment,Sf_ID,?,?
-29570,Heteronucl_T1rho_experiment,Entry_ID,?,?
+29570,Heteronucl_T1rho_experiment,Entry_ID,C,Entry ID
 29580,Heteronucl_T1rho_experiment,Heteronucl_T1rho_list_ID,?,?
 29590,Heteronucl_T1rho_software,Software_ID,?,?
 29600,Heteronucl_T1rho_software,Software_label,C,Software label
 29610,Heteronucl_T1rho_software,Method_ID,?,?
 29620,Heteronucl_T1rho_software,Method_label,?,?
 29630,Heteronucl_T1rho_software,Sf_ID,?,?
-29640,Heteronucl_T1rho_software,Entry_ID,?,?
+29640,Heteronucl_T1rho_software,Entry_ID,C,Entry ID
 29650,Heteronucl_T1rho_software,Heteronucl_T1rho_list_ID,?,?
 29660,T1rho,ID,C,R1 (T1) rho ID
 29670,T1rho,Assembly_atom_ID,?,?
@@ -2975,8 +2975,8 @@ TBL_BEGIN,,,,?
 29730,T1rho,Atom_ID,C,Atom name (N; CA)
 29740,T1rho,Atom_type,C,Atom type (N; C)
 29750,T1rho,Atom_isotope_number,?,?
-29760,T1rho,T1rho_val,?,?
-29770,T1rho,T1rho_val_err,?,?
+29760,T1rho,T1rho_val,C,R1(T1) rho value
+29770,T1rho,T1rho_val_err,C,Value error
 29780,T1rho,Rex_val,?,?
 29790,T1rho,Rex_val_err,?,?
 29800,T1rho,Resonance_ID,?,?
@@ -2985,7 +2985,7 @@ TBL_BEGIN,,,,?
 29830,T1rho,Auth_comp_ID,?,?
 29840,T1rho,Auth_atom_ID,?,?
 29850,T1rho,Sf_ID,?,?
-29860,T1rho,Entry_ID,?,?
+29860,T1rho,Entry_ID,C,Entry ID
 29870,T1rho,Heteronucl_T1rho_list_ID,?,?
 29880,Heteronucl_T2_list,Sf_category,?,?
 29890,Heteronucl_T2_list,Sf_framecode,?,?
@@ -2999,8 +2999,8 @@ TBL_BEGIN,,,,?
 29970,Heteronucl_T2_list,Temp_control_method,?,?
 29980,Heteronucl_T2_list,Spectrometer_frequency_1H,C,Spectrometer frequency 1H
 29990,Heteronucl_T2_list,T2_coherence_type,C,R2 (T2) coherence type
-30000,Heteronucl_T2_list,T2_val_units,?,?
-30010,Heteronucl_T2_list,Rex_units,?,?
+30000,Heteronucl_T2_list,T2_val_units,C,Value units
+30010,Heteronucl_T2_list,Rex_units,C,Rex value units
 30020,Heteronucl_T2_list,Details,?,?
 30030,Heteronucl_T2_list,Text_data_format,?,?
 30040,Heteronucl_T2_list,Text_data,?,?
@@ -3010,14 +3010,14 @@ TBL_BEGIN,,,,?
 30080,Heteronucl_T2_experiment,Sample_label,?,?
 30090,Heteronucl_T2_experiment,Sample_state,?,?
 30100,Heteronucl_T2_experiment,Sf_ID,?,?
-30110,Heteronucl_T2_experiment,Entry_ID,?,?
+30110,Heteronucl_T2_experiment,Entry_ID,C,Entry ID
 30120,Heteronucl_T2_experiment,Heteronucl_T2_list_ID,?,?
 30130,Heteronucl_T2_software,Software_ID,?,?
 30140,Heteronucl_T2_software,Software_label,C,Software label
 30150,Heteronucl_T2_software,Method_ID,?,?
 30160,Heteronucl_T2_software,Method_label,?,?
 30170,Heteronucl_T2_software,Sf_ID,?,?
-30180,Heteronucl_T2_software,Entry_ID,?,?
+30180,Heteronucl_T2_software,Entry_ID,C,Entry ID
 30190,Heteronucl_T2_software,Heteronucl_T2_list_ID,?,?
 30200,T2,ID,C,R2 (T2) ID
 30210,T2,Assembly_atom_ID,?,?
@@ -3030,16 +3030,16 @@ TBL_BEGIN,,,,?
 30280,T2,Atom_type,C,Atom type (N; C)
 30290,T2,Atom_isotope_number,?,?
 30300,T2,T2_val,C,R2 (T2) value
-30310,T2,T2_val_err,?,?
-30320,T2,Rex_val,C,Rex val
-30330,T2,Rex_err,?,?
+30310,T2,T2_val_err,C,Value error
+30320,T2,Rex_val,C,Rex value
+30330,T2,Rex_err,C,Rex value error
 30340,T2,Resonance_ID,?,?
 30350,T2,Auth_entity_assembly_ID,?,?
 30360,T2,Auth_seq_ID,?,?
 30370,T2,Auth_comp_ID,?,?
 30380,T2,Auth_atom_ID,?,?
 30390,T2,Sf_ID,?,?
-30400,T2,Entry_ID,?,?
+30400,T2,Entry_ID,C,Entry ID
 30410,T2,Heteronucl_T2_list_ID,?,?
 30420,Auto_relaxation_list,Sf_category,?,?
 30430,Auto_relaxation_list,Sf_framecode,?,?
@@ -3353,7 +3353,7 @@ TBL_BEGIN,,,,?
 33510,Order_parameter_list,Tau_f_val_units,C,Tau f value units
 33520,Order_parameter_list,Tau_s_val_units,C,Tau s value units
 33530,Order_parameter_list,Rex_field_strength,C,Rex field strength
-33540,Order_parameter_list,Rex_val_units,?,?
+33540,Order_parameter_list,Rex_val_units,C,Rex value units
 33550,Order_parameter_list,Details,?,?
 33560,Order_parameter_list,Text_data_format,?,?
 33570,Order_parameter_list,Text_data,?,?
@@ -3363,14 +3363,14 @@ TBL_BEGIN,,,,?
 33610,Order_parameter_experiment,Sample_label,?,?
 33620,Order_parameter_experiment,Sample_state,?,?
 33630,Order_parameter_experiment,Sf_ID,?,?
-33640,Order_parameter_experiment,Entry_ID,?,?
+33640,Order_parameter_experiment,Entry_ID,C,Entry ID
 33650,Order_parameter_experiment,Order_parameter_list_ID,?,?
 33660,Order_parameter_software,Software_ID,?,?
 33670,Order_parameter_software,Software_label,C,Software label
 33680,Order_parameter_software,Method_ID,?,?
 33690,Order_parameter_software,Method_label,?,?
 33700,Order_parameter_software,Sf_ID,?,?
-33710,Order_parameter_software,Entry_ID,?,?
+33710,Order_parameter_software,Entry_ID,C,Entry ID
 33720,Order_parameter_software,Order_parameter_list_ID,?,?
 33730,Order_param,ID,C,Order parameter ID
 33740,Order_param,Assembly_atom_ID,?,?
@@ -3383,32 +3383,32 @@ TBL_BEGIN,,,,?
 33810,Order_param,Atom_type,C,Atom type (N; C)
 33820,Order_param,Atom_isotope_number,?,?
 33830,Order_param,Order_param_val,C,Order parameter value
-33840,Order_param,Order_param_val_fit_err,?,?
+33840,Order_param,Order_param_val_fit_err,C,Value fit error
 33850,Order_param,Tau_e_val,C,Tau e value
-33860,Order_param,Tau_e_val_fit_err,?,?
+33860,Order_param,Tau_e_val_fit_err,C,Tau e value error
 33870,Order_param,Tau_f_val,C,Tau f value
-33880,Order_param,Tau_f_val_fit_err,?,?
+33880,Order_param,Tau_f_val_fit_err,C,Tau f value error
 33890,Order_param,Tau_s_val,C,Tau s value
-33900,Order_param,Tau_s_val_fit_err,?,?
+33900,Order_param,Tau_s_val_fit_err,C,Tau s value error
 33910,Order_param,Rex_val,C,Rex value
-33920,Order_param,Rex_val_fit_err,?,?
+33920,Order_param,Rex_val_fit_err,C,Rex value error
 33930,Order_param,Model_free_sum_squared_errs,C,Model free sum squared errors
-33940,Order_param,Model_fit,?,?
+33940,Order_param,Model_fit,C,Model fit
 33950,Order_param,Sf2_val,C,Sf2 value
-33960,Order_param,Sf2_val_fit_err,?,?
+33960,Order_param,Sf2_val_fit_err,C,Sf2 value error
 33970,Order_param,Ss2_val,C,Ss2 value
-33980,Order_param,Ss2_val_fit_err,?,?
+33980,Order_param,Ss2_val_fit_err,C,Ss2 value error
 33990,Order_param,SH2_val,C,SH2 value
-34000,Order_param,SH2_val_fit_err,?,?
+34000,Order_param,SH2_val_fit_err,C,SH2 value error
 34010,Order_param,SN2_val,C,SN2 value
-34020,Order_param,SN2_val_fit_err,?,?
+34020,Order_param,SN2_val_fit_err,C,SN2 value error
 34030,Order_param,Resonance_ID,?,?
 34040,Order_param,Auth_entity_assembly_ID,?,?
 34050,Order_param,Auth_seq_ID,?,?
 34060,Order_param,Auth_comp_ID,?,?
 34070,Order_param,Auth_atom_ID,?,?
 34080,Order_param,Sf_ID,?,?
-34090,Order_param,Entry_ID,?,?
+34090,Order_param,Entry_ID,C,Entry ID
 34100,Order_param,Order_parameter_list_ID,?,?
 34110,PH_titration_list,Sf_category,?,?
 34120,PH_titration_list,Sf_framecode,?,?
@@ -3465,17 +3465,17 @@ TBL_BEGIN,,,,?
 34630,PH_titr_result,Atm_titr_auth_comp_ID,?,?
 34640,PH_titr_result,Atm_titr_auth_atom_ID,?,?
 34650,PH_titr_result,Hill_coeff_val,C,Hill coefficient value
-34660,PH_titr_result,Hill_coeff_val_fit_err,?,?
+34660,PH_titr_result,Hill_coeff_val_fit_err,C,Hill coefficient value error
 34670,PH_titr_result,High_PH_param_fit_val,?,?
 34680,PH_titr_result,High_PH_param_fit_val_err,?,?
 34690,PH_titr_result,Low_PH_param_fit_val,?,?
 34700,PH_titr_result,Low_PH_param_fit_val_err,?,?
 34710,PH_titr_result,PKa_val,C,pKa value
-34720,PH_titr_result,PKa_val_fit_err,?,?
+34720,PH_titr_result,PKa_val_fit_err,C,pKa value error
 34730,PH_titr_result,PHmid_val,?,?
 34740,PH_titr_result,PHmid_val_fit_err,?,?
 34750,PH_titr_result,Sf_ID,?,?
-34760,PH_titr_result,Entry_ID,?,?
+34760,PH_titr_result,Entry_ID,C,Entry ID
 34770,PH_titr_result,PH_titration_list_ID,?,?
 34780,PH_param_list,Sf_category,?,?
 34790,PH_param_list,Sf_framecode,?,?
@@ -3560,14 +3560,14 @@ TBL_BEGIN,,,,?
 35580,Binding_experiment,Sample_label,?,?
 35590,Binding_experiment,Sample_state,?,?
 35600,Binding_experiment,Sf_ID,?,?
-35610,Binding_experiment,Entry_ID,?,?
+35610,Binding_experiment,Entry_ID,C,Entry ID
 35620,Binding_experiment,Binding_value_list_ID,?,?
 35630,Binding_software,Software_ID,?,?
 35640,Binding_software,Software_label,C,Software label
 35650,Binding_software,Method_ID,?,?
 35660,Binding_software,Method_label,?,?
 35670,Binding_software,Sf_ID,?,?
-35680,Binding_software,Entry_ID,?,?
+35680,Binding_software,Entry_ID,C,Entry ID
 35690,Binding_software,Binding_value_list_ID,?,?
 35700,Binding_result,ID,C,Binding result ID
 35710,Binding_result,Experiment_ID,?,?
@@ -3589,8 +3589,8 @@ TBL_BEGIN,,,,?
 35870,Binding_result,Expt_observed_param,?,?
 35880,Binding_result,Val_type,C,Binding value type
 35890,Binding_result,Val,C,Binding value
-35900,Binding_result,Val_err,?,?
-35910,Binding_result,Val_units,?,?
+35900,Binding_result,Val_err,C,Binding value error
+35910,Binding_result,Val_units,C,Value units
 35920,Binding_result,Sf_ID,?,?
 35930,Binding_result,Entry_ID,?,?
 35940,Binding_result,Binding_value_list_ID,?,?
@@ -3601,7 +3601,7 @@ TBL_BEGIN,,,,?
 35990,Binding_partners,Entity_ID,?,?
 36000,Binding_partners,Entity_label,?,?
 36010,Binding_partners,Sf_ID,?,?
-36020,Binding_partners,Entry_ID,?,?
+36020,Binding_partners,Entry_ID,C,Entry ID
 36030,Binding_partners,Binding_value_list_ID,?,?
 36040,Binding_param_list,Sf_category,?,?
 36050,Binding_param_list,Sf_framecode,?,?
@@ -3761,7 +3761,7 @@ TBL_BEGIN,,,,?
 37590,Deduced_H_bond,Deduced_hydrogen_bond_list_ID,?,?
 37600,Conformer_stat_list,Sf_category,?,?
 37610,Conformer_stat_list,Sf_framecode,?,?
-37620,Conformer_stat_list,Entry_ID,?,?
+37620,Conformer_stat_list,Entry_ID,C,Entry ID
 37630,Conformer_stat_list,Sf_ID,?,?
 37640,Conformer_stat_list,ID,C,Conformer statistics
 37650,Conformer_stat_list,Conformer_ensemble_only,?,?
@@ -3777,7 +3777,7 @@ TBL_BEGIN,,,,?
 37750,Conformer_stat_list,Representative_conformer_label,?,?
 37760,Conformer_stat_list,Conformer_calculated_total_num,C,Number of calculated conformers
 37770,Conformer_stat_list,Conformer_submitted_total_num,C,Number of submitted conformers
-37780,Conformer_stat_list,Conformer_selection_criteria,?,?
+37780,Conformer_stat_list,Conformer_selection_criteria,C,Selection criteria
 37790,Conformer_stat_list,Representative_conformer,?,?
 37800,Conformer_stat_list,Rep_conformer_selection_criteria,C,Representative conformer selection criteria
 37810,Conformer_stat_list,Statistical_struct_param_details,?,?
@@ -4574,7 +4574,7 @@ TBL_BEGIN,,,,?
 45720,Interatomic_dist,Interatomic_distance_list_ID,?,?
 45730,Gen_dist_constraint_list,Sf_category,?,?
 45740,Gen_dist_constraint_list,Sf_framecode,?,?
-45750,Gen_dist_constraint_list,Entry_ID,?,?
+45750,Gen_dist_constraint_list,Entry_ID,C,Entry ID
 45760,Gen_dist_constraint_list,Sf_ID,?,?
 45770,Gen_dist_constraint_list,ID,C,General distance constraint
 45780,Gen_dist_constraint_list,Data_file_name,?,?
@@ -4817,7 +4817,7 @@ TBL_BEGIN,,,,?
 48150,Dist_constraint_conv_err,Distance_constraint_list_ID,?,?
 48160,Floating_chirality_assign,Sf_category,?,?
 48170,Floating_chirality_assign,Sf_framecode,?,?
-48180,Floating_chirality_assign,Entry_ID,?,?
+48180,Floating_chirality_assign,Entry_ID,C,Entry ID
 48190,Floating_chirality_assign,Sf_ID,?,?
 48200,Floating_chirality_assign,ID,C,Floating chirality assigned
 48210,Floating_chirality_assign,Data_file_name,?,?
@@ -4866,7 +4866,7 @@ TBL_BEGIN,,,,?
 48640,Floating_chirality,Floating_chirality_assign_ID,?,?
 48650,Torsion_angle_constraint_list,Sf_category,?,?
 48660,Torsion_angle_constraint_list,Sf_framecode,?,?
-48670,Torsion_angle_constraint_list,Entry_ID,?,?
+48670,Torsion_angle_constraint_list,Entry_ID,C,Entry ID
 48680,Torsion_angle_constraint_list,Sf_ID,?,?
 48690,Torsion_angle_constraint_list,ID,C,Torsion angle constraint
 48700,Torsion_angle_constraint_list,Data_file_name,?,?
@@ -5000,7 +5000,7 @@ TBL_BEGIN,,,,?
 49980,Torsion_angle_constraint,Auth_alt_ID_4,?,?
 49990,Torsion_angle_constraint,Auth_atom_name_4,?,?
 50000,Torsion_angle_constraint,Sf_ID,?,?
-50010,Torsion_angle_constraint,Entry_ID,?,?
+50010,Torsion_angle_constraint,Entry_ID,C,Entry ID
 50020,Torsion_angle_constraint,Torsion_angle_constraint_list_ID,?,?
 50030,TA_constraint_comment_org,ID,?,?
 50040,TA_constraint_comment_org,Comment_text,?,?
@@ -5035,7 +5035,7 @@ TBL_BEGIN,,,,?
 50330,TA_constraint_conv_err,Torsion_angle_constraint_list_ID,?,?
 50340,RDC_constraint_list,Sf_category,?,?
 50350,RDC_constraint_list,Sf_framecode,?,?
-50360,RDC_constraint_list,Entry_ID,?,?
+50360,RDC_constraint_list,Entry_ID,C,Entry ID
 50370,RDC_constraint_list,Sf_ID,?,?
 50380,RDC_constraint_list,ID,C,RDC constraint
 50390,RDC_constraint_list,Data_file_name,?,?
@@ -5070,14 +5070,14 @@ TBL_BEGIN,,,,?
 50680,RDC_constraint_software,Sf_ID,?,?
 50690,RDC_constraint_software,Entry_ID,?,?
 50700,RDC_constraint_software,RDC_constraint_list_ID,?,?
-50710,RDC_constraint,ID,?,?
+50710,RDC_constraint,ID,C,RDC constraint ID
 50720,RDC_constraint,Assembly_atom_ID_1,?,?
 50730,RDC_constraint,Entity_assembly_ID_1,?,?
 50740,RDC_constraint,Entity_ID_1,?,?
 50750,RDC_constraint,Comp_index_ID_1,?,?
 50760,RDC_constraint,Seq_ID_1,?,?
 50770,RDC_constraint,Comp_ID_1,?,?
-50780,RDC_constraint,Atom_ID_1,?,?
+50780,RDC_constraint,Atom_ID_1,C,Atom one name
 50790,RDC_constraint,Atom_type_1,?,?
 50800,RDC_constraint,Atom_isotope_number_1,?,?
 50810,RDC_constraint,Resonance_ID_1,?,?
@@ -5087,14 +5087,14 @@ TBL_BEGIN,,,,?
 50850,RDC_constraint,Comp_index_ID_2,?,?
 50860,RDC_constraint,Seq_ID_2,?,?
 50870,RDC_constraint,Comp_ID_2,?,?
-50880,RDC_constraint,Atom_ID_2,?,?
+50880,RDC_constraint,Atom_ID_2,C,Atom two name
 50890,RDC_constraint,Atom_type_2,?,?
 50900,RDC_constraint,Atom_isotope_number_2,?,?
 50910,RDC_constraint,Resonance_ID_2,?,?
-50920,RDC_constraint,RDC_val,?,?
+50920,RDC_constraint,RDC_val,C,RDC value
 50930,RDC_constraint,RDC_lower_bound,?,?
 50940,RDC_constraint,RDC_upper_bound,?,?
-50950,RDC_constraint,RDC_val_err,?,?
+50950,RDC_constraint,RDC_val_err,C,RDC value error
 50960,RDC_constraint,RDC_val_scale_factor,?,?
 50970,RDC_constraint,RDC_bond_length,?,?
 50980,RDC_constraint,Source_experiment_ID,?,?
@@ -5129,7 +5129,7 @@ TBL_BEGIN,,,,?
 51270,RDC_constraint,Auth_alt_ID_2,?,?
 51280,RDC_constraint,Auth_atom_name_2,?,?
 51290,RDC_constraint,Sf_ID,?,?
-51300,RDC_constraint,Entry_ID,?,?
+51300,RDC_constraint,Entry_ID,C,Entry ID
 51310,RDC_constraint,RDC_constraint_list_ID,?,?
 51320,RDC_constraint_comment_org,ID,?,?
 51330,RDC_constraint_comment_org,Comment_text,?,?
@@ -5164,7 +5164,7 @@ TBL_BEGIN,,,,?
 51620,RDC_constraint_conv_err,RDC_constraint_list_ID,?,?
 51630,J_three_bond_constraint_list,Sf_category,?,?
 51640,J_three_bond_constraint_list,Sf_framecode,?,?
-51650,J_three_bond_constraint_list,Entry_ID,?,?
+51650,J_three_bond_constraint_list,Entry_ID,C,Entry ID
 51660,J_three_bond_constraint_list,Sf_ID,?,?
 51670,J_three_bond_constraint_list,ID,C,J coupling constraint
 51680,J_three_bond_constraint_list,Data_file_name,?,?
@@ -5369,7 +5369,7 @@ TBL_BEGIN,,,,?
 53670,H_chem_shift_constraint_list,Sf_framecode,?,?
 53680,H_chem_shift_constraint_list,Entry_ID,?,?
 53690,H_chem_shift_constraint_list,Sf_ID,?,?
-53700,H_chem_shift_constraint_list,ID,C,H chemical shift constraints
+53700,H_chem_shift_constraint_list,ID,?,H chemical shift constraints
 53710,H_chem_shift_constraint_list,Units,?,?
 53720,H_chem_shift_constraint_list,Data_file_name,?,?
 53730,H_chem_shift_constraint_list,Data_file_format,?,?
@@ -5395,7 +5395,7 @@ TBL_BEGIN,,,,?
 53930,H_chem_shift_constraint_software,Sf_ID,?,?
 53940,H_chem_shift_constraint_software,Entry_ID,?,?
 53950,H_chem_shift_constraint_software,H_chem_shift_constraint_list_ID,?,?
-53960,H_chem_shift_constraint,ID,C,H chemical shift constraint ID
+53960,H_chem_shift_constraint,ID,?,H chemical shift constraint ID
 53970,H_chem_shift_constraint,Assembly_atom_ID,?,?
 53980,H_chem_shift_constraint,Entity_assembly_ID,?,?
 53990,H_chem_shift_constraint,Entity_ID,?,?
@@ -5419,7 +5419,7 @@ TBL_BEGIN,,,,?
 54170,H_chem_shift_constraint,H_chem_shift_constraint_list_ID,?,?
 54180,SAXS_constraint_list,Sf_category,?,?
 54190,SAXS_constraint_list,Sf_framecode,?,?
-54200,SAXS_constraint_list,Entry_ID,?,?
+54200,SAXS_constraint_list,Entry_ID,C,Entry ID
 54210,SAXS_constraint_list,Sf_ID,?,?
 54220,SAXS_constraint_list,ID,C,SAXS constraints
 54230,SAXS_constraint_list,Data_file_name,?,?
@@ -5452,7 +5452,7 @@ TBL_BEGIN,,,,?
 54500,SAXS_constraint,SAXS_constraint_list_ID,?,?
 54510,Other_constraint_list,Sf_category,?,?
 54520,Other_constraint_list,Sf_framecode,?,?
-54530,Other_constraint_list,Entry_ID,?,?
+54530,Other_constraint_list,Entry_ID,C,Entry ID
 54540,Other_constraint_list,Sf_ID,?,?
 54550,Other_constraint_list,ID,C,Other constraints
 54560,Other_constraint_list,Details,?,?
