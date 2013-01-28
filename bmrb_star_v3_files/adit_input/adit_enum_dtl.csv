@@ -132,6 +132,15 @@ TBL_BEGIN,?,?,?
 372,8,metal coordination,enumeration_text
 372,9,peptide,enumeration_text
 372,10,thioether,enumeration_text
+106,1,sing,"single bond"
+106,2,doub,"double bond"
+106,3,trip,"triple bond"
+106,4,quad,"quadruple bond"
+106,5,arom,"aromatic bond"
+106,6,poly,"polymeric bond"
+106,7,delo,"delocalized double bond"
+106,8,pi,"pi bond"
+106,9,directed,"N ->O"
 105,1,amide,enumeration_text
 105,2,covalent,enumeration_text
 105,3,directed,"N -> O"
@@ -1956,21 +1965,23 @@ TBL_BEGIN,?,?,?
 184,65,RESCUE,enumeration_text
 184,66,SANE,enumeration_text
 184,67,SPARKY,enumeration_text
-184,68,SPSCAN,enumeration_text
-184,69,SYBYL,enumeration_text
-184,70,TALOS,enumeration_text
-184,71,TINKER,enumeration_text
-184,72,TOPSPIN,enumeration_text
-184,73,TRIPOS,enumeration_text
-184,74,UXNMR,enumeration_text
-184,75,VNMR,enumeration_text
-184,76,VNMRJ,enumeration_text
-184,77,WhatIF,enumeration_text
-184,78,Wattos,enumeration_text
-184,79,XEASY,enumeration_text
-184,80,X-PLOR,enumeration_text
-184,81,X-PLOR NIH,enumeration_text
-184,82,xwinnmr,enumeration_text
+184,68,SPARTA,enumeration_text
+184,69,SPARTA+,enumeration_text
+184,70,SPSCAN,enumeration_text
+184,71,SYBYL,enumeration_text
+184,72,TALOS,enumeration_text
+184,73,TINKER,enumeration_text
+184,74,TOPSPIN,enumeration_text
+184,75,TRIPOS,enumeration_text
+184,76,UXNMR,enumeration_text
+184,77,VNMR,enumeration_text
+184,78,VNMRJ,enumeration_text
+184,79,WhatIF,enumeration_text
+184,80,Wattos,enumeration_text
+184,81,XEASY,enumeration_text
+184,82,X-PLOR,enumeration_text
+184,83,X-PLOR NIH,enumeration_text
+184,84,xwinnmr,enumeration_text
 185,1,AMBER,enumeration_text
 185,2,AngleSearch,enumeration_text
 185,3,ANSIG,enumeration_text
@@ -1980,7 +1991,7 @@ TBL_BEGIN,?,?,?
 185,7,AURELIA,enumeration_text
 185,8,AUREMOL,enumeration_text
 185,9,AutoAssign,enumeration_text
-185,10,AutoStruct,enumeration_text
+185,10,AutoStructure,enumeration_text
 185,11,AVS,enumeration_text
 185,12,AZARA,enumeration_text
 185,13,BIRDER,enumeration_text
@@ -2037,18 +2048,20 @@ TBL_BEGIN,?,?,?
 185,64,RESCUE,enumeration_text
 185,65,SANE,enumeration_text
 185,66,SPARKY,enumeration_text
-185,67,SPSCAN,enumeration_text
-185,68,SYBYL,enumeration_text
-185,69,TALOS,enumeration_text
-185,70,TOPSPIN,enumeration_text
-185,71,UXNMR,enumeration_text
-185,72,VNMR,enumeration_text
-185,73,WhatIF,enumeration_text
-185,74,Wattos,enumeration_text
-185,75,XEASY,enumeration_text
-185,76,X-PLOR,enumeration_text
-185,77,X-PLOR NIH,enumeration_text
-185,78,xwinnmr,enumeration_text
+185,67,SPARTA,enumeration_text
+185,68,SPARTA+,enumeration_text
+185,69,SPSCAN,enumeration_text
+185,70,SYBYL,enumeration_text
+185,71,TALOS,enumeration_text
+185,72,TOPSPIN,enumeration_text
+185,73,UXNMR,enumeration_text
+185,74,VNMR,enumeration_text
+185,75,WhatIF,enumeration_text
+185,76,Wattos,enumeration_text
+185,77,XEASY,enumeration_text
+185,78,X-PLOR,enumeration_text
+185,79,X-PLOR NIH,enumeration_text
+185,80,xwinnmr,enumeration_text
 255,1,identity,enumeration_text
 255,2,sequential,enumeration_text
 255,3,basepair,enumeration_text
@@ -2346,21 +2359,23 @@ TBL_BEGIN,?,?,?
 186,57,(RESCUE) - Pons and Delsuc,enumeration_text
 186,58,(SANE) - Duggan$ Legge$ Dyson & Wright,enumeration_text
 186,59,(SPARKY) - Goddard,enumeration_text
-186,60,(SPSCAN) - Glaser,enumeration_text
-186,61,(STAPP) - Garrett,enumeration_text
-186,62,(Surflex-Dock) - Tripos,enumeration_text
-186,63,(SYBYL) - Tripos,enumeration_text
-186,64,(TALOS) - Cornilescu$ Delaglio and Bax,enumeration_text
-186,65,(TINKER) - Ponder,enumeration_text
-186,66,(TOPSPIN) - Bruker Biospin,enumeration_text
-186,67,(TRIAD) - Tripos,enumeration_text
-186,68,(TRIPOS) - Tripos,enumeration_text
-186,69,(UXNMR) - Bruker Biospin,enumeration_text
-186,70,(VNMR) - Varian,enumeration_text
-186,71,(WhatIF) - Vriend,enumeration_text
-186,72,(Wattos) - Doreleijers,enumeration_text
-186,73,(XEASY) - Bartels et al.,enumeration_text
-186,74,(X-PLOR) - Brunger,enumeration_text
-186,75,(X-PLOR NIH) - Schwieters$ Kuszewski$ Tjandra and Clore,enumeration_text
-186,76,(xwinnmr) - Bruker Biospin,enumeration_text
+186,60,(SPARTA) - Shen and Bax,enumeration_text
+186,61,(SPARTA+) - Shen and Bax,enumeration_text
+186,62,(SPSCAN) - Glaser,enumeration_text
+186,63,(STAPP) - Garrett,enumeration_text
+186,64,(Surflex-Dock) - Tripos,enumeration_text
+186,65,(SYBYL) - Tripos,enumeration_text
+186,66,(TALOS) - Cornilescu$ Delaglio and Bax,enumeration_text
+186,67,(TINKER) - Ponder,enumeration_text
+186,68,(TOPSPIN) - Bruker Biospin,enumeration_text
+186,69,(TRIAD) - Tripos,enumeration_text
+186,70,(TRIPOS) - Tripos,enumeration_text
+186,71,(UXNMR) - Bruker Biospin,enumeration_text
+186,72,(VNMR) - Varian,enumeration_text
+186,73,(WhatIF) - Vriend,enumeration_text
+186,74,(Wattos) - Doreleijers,enumeration_text
+186,75,(XEASY) - Bartels et al.,enumeration_text
+186,76,(X-PLOR) - Brunger,enumeration_text
+186,77,(X-PLOR NIH) - Schwieters$ Kuszewski$ Tjandra and Clore,enumeration_text
+186,78,(xwinnmr) - Bruker Biospin,enumeration_text
 TBL_END,?,?,?

@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2012-11-02
+#  version date -  2013-01-25
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.36
+    _dictionary.version         3.1.1.37
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.36         ?
+     3.1.1.37         ?
 ;
      ?
 ;
@@ -5029,7 +5029,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.category_id              'Entry'
    _item.mandatory_code            yes
 
-   _item_default.value            '3.1.1.36'
+   _item_default.value            '3.1.1.37'
    _item_type.code                'line'
 
    loop_
@@ -13162,6 +13162,15 @@ The order of the bond between two atoms (i.e.$ single$ double$ etc.)
      _item_enumeration.value
      _item_enumeration.detail
 
+   sing    'single bond'
+   doub    'double bond'
+   trip    'triple bond'
+   quad    'quadruple bond'
+   arom    'aromatic bond'
+   poly    'polymeric bond'
+   delo    'delocalized double bond'
+   pi    'pi bond'
+   directed    'N ->O'
 
    stop_
 
@@ -41812,6 +41821,8 @@ in the entry.
    RESCUE    ?
    SANE    ?
    SPARKY    ?
+   SPARTA    ?
+   SPARTA+    ?
    SPSCAN    ?
    SYBYL    ?
    TALOS    ?
@@ -42087,7 +42098,7 @@ The name of the software defined by the author or provider of the software.
    AURELIA    ?
    AUREMOL    ?
    AutoAssign    ?
-   AutoStruct    ?
+   AutoStructure    ?
    AVS    ?
    AZARA    ?
    BIRDER    ?
@@ -42144,6 +42155,8 @@ The name of the software defined by the author or provider of the software.
    RESCUE    ?
    SANE    ?
    SPARKY    ?
+   SPARTA    ?
+   SPARTA+    ?
    SPSCAN    ?
    SYBYL    ?
    TALOS    ?
@@ -42333,6 +42346,8 @@ Commercial or academic supplier of the software product.
    '(RESCUE) - Pons and Delsuc'    ?
    '(SANE) - Duggan$ Legge$ Dyson & Wright'    ?
    '(SPARKY) - Goddard'    ?
+   '(SPARTA) - Shen and Bax'    ?
+   '(SPARTA+) - Shen and Bax'    ?
    '(SPSCAN) - Glaser'    ?
    '(STAPP) - Garrett'    ?
    '(Surflex-Dock) - Tripos'    ?

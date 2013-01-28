@@ -102,7 +102,7 @@ TBL_BEGIN,,,,?
 1000,Entry,Submission_date,C,Submission date
 1010,Entry,Accession_date,?,?
 1020,Entry,Last_release_date,?,?
-1030,Entry,Original_release_date,C,Original release date
+1030,Entry,Original_release_date,?,Original release date
 1040,Entry,Origination,?,?
 1050,Entry,NMR_STAR_version,?,?
 1060,Entry,Original_NMR_STAR_version,?,?
@@ -224,14 +224,14 @@ TBL_BEGIN,,,,?
 2220,Datum,Count,C,Datum count
 2230,Datum,Sf_ID,?,?
 2240,Datum,Entry_ID,C,Entry ID
-2250,Release,Release_number,?,?
+2250,Release,Release_number,C,Release ordinal
 2260,Release,Format_type,?,?
 2270,Release,Format_version,?,?
-2280,Release,Date,?,?
+2280,Release,Date,C,Release date
 2290,Release,Submission_date,?,?
-2300,Release,Type,?,?
-2310,Release,Author,?,?
-2320,Release,Detail,?,?
+2300,Release,Type,C,Release type
+2310,Release,Author,C,Release author
+2320,Release,Detail,C,Release description
 2330,Release,Sf_ID,?,?
 2340,Release,Entry_ID,?,?
 2350,Related_entries,Database_name,?,?
@@ -2915,11 +2915,11 @@ TBL_BEGIN,,,,?
 29130,Heteronucl_T1_software,Heteronucl_T1_list_ID,?,?
 29140,T1,ID,C,R1 (T1) ID
 29150,T1,Assembly_atom_ID,?,?
-29160,T1,Entity_assembly_ID,?,?
-29170,T1,Entity_ID,?,?
-29180,T1,Comp_index_ID,?,?
+29160,T1,Entity_assembly_ID,C,Entity assembly ID
+29170,T1,Entity_ID,C,Entity ID
+29180,T1,Comp_index_ID,C,Sequence number
 29190,T1,Seq_ID,?,?
-29200,T1,Comp_ID,?,?
+29200,T1,Comp_ID,C,Chem compound code
 29210,T1,Atom_ID,C,Atom name (N)
 29220,T1,Atom_type,C,Atom type (H; C; N)
 29230,T1,Atom_isotope_number,?,?
@@ -2967,9 +2967,9 @@ TBL_BEGIN,,,,?
 29650,Heteronucl_T1rho_software,Heteronucl_T1rho_list_ID,?,?
 29660,T1rho,ID,C,R1 (T1) rho ID
 29670,T1rho,Assembly_atom_ID,?,?
-29680,T1rho,Entity_assembly_ID,?,?
-29690,T1rho,Entity_ID,?,?
-29700,T1rho,Comp_index_ID,?,?
+29680,T1rho,Entity_assembly_ID,C,Entity assembly ID
+29690,T1rho,Entity_ID,C,Entity ID
+29700,T1rho,Comp_index_ID,C,Sequence number
 29710,T1rho,Seq_ID,?,?
 29720,T1rho,Comp_ID,C,Compound code (VAL; DT; U)
 29730,T1rho,Atom_ID,C,Atom name (N; CA)
@@ -3021,9 +3021,9 @@ TBL_BEGIN,,,,?
 30190,Heteronucl_T2_software,Heteronucl_T2_list_ID,?,?
 30200,T2,ID,C,R2 (T2) ID
 30210,T2,Assembly_atom_ID,?,?
-30220,T2,Entity_assembly_ID,?,?
-30230,T2,Entity_ID,?,?
-30240,T2,Comp_index_ID,?,?
+30220,T2,Entity_assembly_ID,C,Entity assembly ID
+30230,T2,Entity_ID,C,Entity ID
+30240,T2,Comp_index_ID,C,Sequence number
 30250,T2,Seq_ID,?,?
 30260,T2,Comp_ID,C,Compound code (VAL; DT; U)
 30270,T2,Atom_ID,C,Atom name (N; CA)
@@ -4576,7 +4576,7 @@ TBL_BEGIN,,,,?
 45740,Gen_dist_constraint_list,Sf_framecode,?,?
 45750,Gen_dist_constraint_list,Entry_ID,C,Entry ID
 45760,Gen_dist_constraint_list,Sf_ID,?,?
-45770,Gen_dist_constraint_list,ID,C,General distance constraint
+45770,Gen_dist_constraint_list,ID,C,Distance constraints list ID
 45780,Gen_dist_constraint_list,Data_file_name,?,?
 45790,Gen_dist_constraint_list,Constraint_type,C,Distance constraint type
 45800,Gen_dist_constraint_list,Constraint_file_ID,?,?
@@ -4608,26 +4608,26 @@ TBL_BEGIN,,,,?
 46060,Gen_dist_constraint_software_param,Sf_ID,?,?
 46070,Gen_dist_constraint_software_param,Entry_ID,?,?
 46080,Gen_dist_constraint_software_param,Gen_dist_constraint_list_ID,?,?
-46090,Gen_dist_constraint,ID,?,?
+46090,Gen_dist_constraint,ID,C,Constraint ID
 46100,Gen_dist_constraint,Member_ID,?,?
 46110,Gen_dist_constraint,Member_logic_code,?,?
 46120,Gen_dist_constraint,Assembly_atom_ID_1,?,?
-46130,Gen_dist_constraint,Entity_assembly_ID_1,?,?
-46140,Gen_dist_constraint,Entity_ID_1,?,?
-46150,Gen_dist_constraint,Comp_index_ID_1,?,?
+46130,Gen_dist_constraint,Entity_assembly_ID_1,C,Entity assembly ID (atom 1)
+46140,Gen_dist_constraint,Entity_ID_1,C,Entity ID (atom 1)
+46150,Gen_dist_constraint,Comp_index_ID_1,C,Sequence number (atom 1)
 46160,Gen_dist_constraint,Seq_ID_1,?,?
-46170,Gen_dist_constraint,Comp_ID_1,?,?
-46180,Gen_dist_constraint,Atom_ID_1,?,?
+46170,Gen_dist_constraint,Comp_ID_1,C,Chem compound code (atom 1)
+46180,Gen_dist_constraint,Atom_ID_1,C,Atom name (atom 1)
 46190,Gen_dist_constraint,Atom_type_1,?,?
 46200,Gen_dist_constraint,Atom_isotope_number_1,?,?
 46210,Gen_dist_constraint,Resonance_ID_1,?,?
 46220,Gen_dist_constraint,Assembly_atom_ID_2,?,?
-46230,Gen_dist_constraint,Entity_assembly_ID_2,?,?
-46240,Gen_dist_constraint,Entity_ID_2,?,?
-46250,Gen_dist_constraint,Comp_index_ID_2,?,?
+46230,Gen_dist_constraint,Entity_assembly_ID_2,C,Entity assembly ID (atom 2)
+46240,Gen_dist_constraint,Entity_ID_2,C,Entity ID (atom 2)
+46250,Gen_dist_constraint,Comp_index_ID_2,C,Sequence number (atom 2)
 46260,Gen_dist_constraint,Seq_ID_2,?,?
-46270,Gen_dist_constraint,Comp_ID_2,?,?
-46280,Gen_dist_constraint,Atom_ID_2,?,?
+46270,Gen_dist_constraint,Comp_ID_2,C,Chem compound code (atom 2)
+46280,Gen_dist_constraint,Atom_ID_2,C,Atom name (atom 2)
 46290,Gen_dist_constraint,Atom_type_2,?,?
 46300,Gen_dist_constraint,Atom_isotope_number_2,?,?
 46310,Gen_dist_constraint,Resonance_ID_2,?,?
@@ -4635,8 +4635,8 @@ TBL_BEGIN,,,,?
 46330,Gen_dist_constraint,Intensity_lower_val_err,?,?
 46340,Gen_dist_constraint,Intensity_upper_val_err,?,?
 46350,Gen_dist_constraint,Distance_val,?,?
-46360,Gen_dist_constraint,Distance_lower_bound_val,?,?
-46370,Gen_dist_constraint,Distance_upper_bound_val,?,?
+46360,Gen_dist_constraint,Distance_lower_bound_val,C,Distance constraint lower bound
+46370,Gen_dist_constraint,Distance_upper_bound_val,C,Distance constraint upper bound
 46380,Gen_dist_constraint,Contribution_fractional_val,?,?
 46390,Gen_dist_constraint,Spectral_peak_ID,?,?
 46400,Gen_dist_constraint,Spectral_peak_list_ID,?,?
@@ -4819,7 +4819,7 @@ TBL_BEGIN,,,,?
 48170,Floating_chirality_assign,Sf_framecode,?,?
 48180,Floating_chirality_assign,Entry_ID,C,Entry ID
 48190,Floating_chirality_assign,Sf_ID,?,?
-48200,Floating_chirality_assign,ID,C,Floating chirality assigned
+48200,Floating_chirality_assign,ID,C,Floating chirality assigned list ID
 48210,Floating_chirality_assign,Data_file_name,?,?
 48220,Floating_chirality_assign,Details,?,?
 48230,Floating_chirality_assign,Stereo_count,?,?
@@ -4868,7 +4868,7 @@ TBL_BEGIN,,,,?
 48660,Torsion_angle_constraint_list,Sf_framecode,?,?
 48670,Torsion_angle_constraint_list,Entry_ID,C,Entry ID
 48680,Torsion_angle_constraint_list,Sf_ID,?,?
-48690,Torsion_angle_constraint_list,ID,C,Torsion angle constraint
+48690,Torsion_angle_constraint_list,ID,C,Torsion angle constraint list ID
 48700,Torsion_angle_constraint_list,Data_file_name,?,?
 48710,Torsion_angle_constraint_list,Constraint_file_ID,?,?
 48720,Torsion_angle_constraint_list,Block_ID,?,?
@@ -4901,11 +4901,11 @@ TBL_BEGIN,,,,?
 48990,Torsion_angle_constraint,ID,C,Torsion angle constraint ID
 49000,Torsion_angle_constraint,Torsion_angle_name,C,Torsion angle name
 49010,Torsion_angle_constraint,Assembly_atom_ID_1,?,?
-49020,Torsion_angle_constraint,Entity_assembly_ID_1,?,?
-49030,Torsion_angle_constraint,Entity_ID_1,?,?
-49040,Torsion_angle_constraint,Comp_index_ID_1,?,?
+49020,Torsion_angle_constraint,Entity_assembly_ID_1,?,Entity assembly ID
+49030,Torsion_angle_constraint,Entity_ID_1,?,Entity ID
+49040,Torsion_angle_constraint,Comp_index_ID_1,?,Sequence number
 49050,Torsion_angle_constraint,Seq_ID_1,?,?
-49060,Torsion_angle_constraint,Comp_ID_1,?,?
+49060,Torsion_angle_constraint,Comp_ID_1,?,Chem compound code
 49070,Torsion_angle_constraint,Atom_ID_1,?,?
 49080,Torsion_angle_constraint,Atom_type_1,?,?
 49090,Torsion_angle_constraint,Resonance_ID_1,?,?
@@ -4936,8 +4936,8 @@ TBL_BEGIN,,,,?
 49340,Torsion_angle_constraint,Atom_ID_4,?,?
 49350,Torsion_angle_constraint,Atom_type_4,?,?
 49360,Torsion_angle_constraint,Resonance_ID_4,?,?
-49370,Torsion_angle_constraint,Angle_lower_bound_val,?,?
-49380,Torsion_angle_constraint,Angle_upper_bound_val,?,?
+49370,Torsion_angle_constraint,Angle_lower_bound_val,C,Lower bound
+49380,Torsion_angle_constraint,Angle_upper_bound_val,C,Upper bound
 49390,Torsion_angle_constraint,Source_experiment_ID,?,?
 49400,Torsion_angle_constraint,PDB_record_ID_1,?,?
 49410,Torsion_angle_constraint,PDB_model_num_1,?,?
@@ -5072,11 +5072,11 @@ TBL_BEGIN,,,,?
 50700,RDC_constraint_software,RDC_constraint_list_ID,?,?
 50710,RDC_constraint,ID,C,RDC constraint ID
 50720,RDC_constraint,Assembly_atom_ID_1,?,?
-50730,RDC_constraint,Entity_assembly_ID_1,?,?
-50740,RDC_constraint,Entity_ID_1,?,?
-50750,RDC_constraint,Comp_index_ID_1,?,?
+50730,RDC_constraint,Entity_assembly_ID_1,C,Entity assembly ID
+50740,RDC_constraint,Entity_ID_1,C,Entity ID
+50750,RDC_constraint,Comp_index_ID_1,C,Sequence number
 50760,RDC_constraint,Seq_ID_1,?,?
-50770,RDC_constraint,Comp_ID_1,?,?
+50770,RDC_constraint,Comp_ID_1,C,Chem compound code
 50780,RDC_constraint,Atom_ID_1,C,Atom one name
 50790,RDC_constraint,Atom_type_1,?,?
 50800,RDC_constraint,Atom_isotope_number_1,?,?
@@ -5166,7 +5166,7 @@ TBL_BEGIN,,,,?
 51640,J_three_bond_constraint_list,Sf_framecode,?,?
 51650,J_three_bond_constraint_list,Entry_ID,C,Entry ID
 51660,J_three_bond_constraint_list,Sf_ID,?,?
-51670,J_three_bond_constraint_list,ID,C,J coupling constraint
+51670,J_three_bond_constraint_list,ID,C,J coupling constraint list ID
 51680,J_three_bond_constraint_list,Data_file_name,?,?
 51690,J_three_bond_constraint_list,Data_file_format,?,?
 51700,J_three_bond_constraint_list,Constraint_file_ID,?,?
@@ -5191,13 +5191,13 @@ TBL_BEGIN,,,,?
 51890,J_three_bond_constraint_software,Sf_ID,?,?
 51900,J_three_bond_constraint_software,Entry_ID,?,?
 51910,J_three_bond_constraint_software,J_three_bond_constraint_list_ID,?,?
-51920,J_three_bond_constraint,ID,?,?
+51920,J_three_bond_constraint,ID,C,Coupling constant constraint ID
 51930,J_three_bond_constraint,Assembly_atom_ID_1,?,?
-51940,J_three_bond_constraint,Entity_assembly_ID_1,?,?
-51950,J_three_bond_constraint,Entity_ID_1,?,?
-51960,J_three_bond_constraint,Comp_index_ID_1,?,?
+51940,J_three_bond_constraint,Entity_assembly_ID_1,C,Entity assembly ID
+51950,J_three_bond_constraint,Entity_ID_1,C,Entity ID
+51960,J_three_bond_constraint,Comp_index_ID_1,C,Sequence number
 51970,J_three_bond_constraint,Seq_ID_1,?,?
-51980,J_three_bond_constraint,Comp_ID_1,?,?
+51980,J_three_bond_constraint,Comp_ID_1,C,Chem compound code
 51990,J_three_bond_constraint,Atom_ID_1,?,?
 52000,J_three_bond_constraint,Atom_type_1,?,?
 52010,J_three_bond_constraint,Resonance_ID_1,?,?
@@ -5228,7 +5228,7 @@ TBL_BEGIN,,,,?
 52260,J_three_bond_constraint,Atom_ID_4,?,?
 52270,J_three_bond_constraint,Atom_type_4,?,?
 52280,J_three_bond_constraint,Resonance_ID_4,?,?
-52290,J_three_bond_constraint,Coupling_constant_val,?,?
+52290,J_three_bond_constraint,Coupling_constant_val,C,Coupling constant
 52300,J_three_bond_constraint,Coupling_constant_lower_bound,?,?
 52310,J_three_bond_constraint,Coupling_constant_upper_bound,?,?
 52320,J_three_bond_constraint,Coupling_constant_err,?,?
@@ -5421,7 +5421,7 @@ TBL_BEGIN,,,,?
 54190,SAXS_constraint_list,Sf_framecode,?,?
 54200,SAXS_constraint_list,Entry_ID,C,Entry ID
 54210,SAXS_constraint_list,Sf_ID,?,?
-54220,SAXS_constraint_list,ID,C,SAXS constraints
+54220,SAXS_constraint_list,ID,C,SAXS constraints list ID
 54230,SAXS_constraint_list,Data_file_name,?,?
 54240,SAXS_constraint_list,Sample_condition_list_ID,?,?
 54250,SAXS_constraint_list,Sample_condition_list_label,?,?
@@ -5442,11 +5442,11 @@ TBL_BEGIN,,,,?
 54400,SAXS_constraint_software,Sf_ID,?,?
 54410,SAXS_constraint_software,Entry_ID,?,?
 54420,SAXS_constraint_software,SAXS_constraint_list_ID,?,?
-54430,SAXS_constraint,ID,?,?
-54440,SAXS_constraint,Q_value,?,?
-54450,SAXS_constraint,Intensity_val,?,?
-54460,SAXS_constraint,Intensity_val_err,?,?
-54470,SAXS_constraint,Weight_val,?,?
+54430,SAXS_constraint,ID,C,SAXS constriant value ID
+54440,SAXS_constraint,Q_value,C,Q value
+54450,SAXS_constraint,Intensity_val,C,Intensity value
+54460,SAXS_constraint,Intensity_val_err,C,Intensity value error
+54470,SAXS_constraint,Weight_val,C,Weight value
 54480,SAXS_constraint,Sf_ID,?,?
 54490,SAXS_constraint,Entry_ID,?,?
 54500,SAXS_constraint,SAXS_constraint_list_ID,?,?
