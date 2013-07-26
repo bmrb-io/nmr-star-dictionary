@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2013-06-12
+#  version date -  2013-07-12
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.39
+    _dictionary.version         3.1.1.41
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.39         ?
+     3.1.1.41         ?
 ;
      ?
 ;
@@ -2458,7 +2458,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item_enumeration.flag          yes
    _item_enumeration.closed_flag   no
    _item_type.code                'line'
-   _item_default.value            '3.1.1.39'
+   _item_default.value            '3.1.1.41'
 
    loop_
      _item_enumeration.value
@@ -27111,8 +27111,8 @@ This data item contains the descriptor type.
      _item_enumeration.value
      _item_enumeration.detail
 
-   SMILES_CANNONICAL    deprecated
    SMILES_CANONICAL    'Canonical SMILES descriptor'
+   SMILES_ISOMERIC    'Isomeric SMILES descriptor'
    SMILES    'SMILES descriptor'
    INCHI    'InChi descriptor'
    INCHI_MAIN    'InChi descriptor- main layer'
@@ -54901,6 +54901,160 @@ Pointer to '_Chem_comp_atom.Atom_ID'
    _item.mandatory_code            yes
    _item_enumeration.flag          no
    _item_type.code                'atcode'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__assigned_peak_chem_shift.auth_atom peak_num
+
+   _item_description.description
+;
+An alternative identifier found in the original peak list data that is 
+a pointer to information in another author provided data table or file.  Note that 
+the value does not need to  to the value for Peak_ID.
+;
+
+   _item.name                  '_assigned_peak_chem_shift.auth_atom peak_num'
+   _item.category_id              'assigned_peak_chem_shift'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__assigned_peak_chem_shift.auth_entity_id
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not need to 
+correspond to the value for Entity_ID.
+;
+
+   _item.name                  '_assigned_peak_chem_shift.auth_entity_id'
+   _item.category_id              'assigned_peak_chem_shift'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__assigned_peak_chem_shift.auth_seq_id
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                  '_assigned_peak_chem_shift.auth_seq_id'
+   _item.category_id              'assigned_peak_chem_shift'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__assigned_peak_chem_shift.auth_comp_id
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_assigned_peak_chem_shift.auth_comp_id'
+   _item.category_id              'assigned_peak_chem_shift'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__assigned_peak_chem_shift.auth_atom_id
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                  '_assigned_peak_chem_shift.auth_atom_id'
+   _item.category_id              'assigned_peak_chem_shift'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'line'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__assigned_peak_chem_shift.auth_amb_atom_grp_id
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                  '_assigned_peak_chem_shift.auth_amb_atom_grp_id'
+   _item.category_id              'assigned_peak_chem_shift'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'int'
 
    loop_
      _item_examples.case
