@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2013-08-14
+#  version date -  2013-08-20
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.44
+    _dictionary.version         3.1.1.46
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.44         ?
+     3.1.1.46         ?
 ;
      ?
 ;
@@ -5070,7 +5070,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item_enumeration.flag          yes
    _item_enumeration.closed_flag   no
    _item_type.code                'line'
-   _item_default.value            '3.1.1.44'
+   _item_default.value            '3.1.1.46'
 
    loop_
      _item_enumeration.value
@@ -24615,6 +24615,31 @@ Items in the entity_db_link provide the names of databases and accession numbers
 ;
 ;
    ?
+;
+
+   stop_
+
+save_
+
+save__Entity_db_link.Ordinal
+
+   _item_description.description
+;
+An integer value used to maintain the order of the rows in the entity DB 
+loop when reading and writing NMR-STAR files.
+;
+
+   _item.name                  '_Entity_db_link.Ordinal'
+   _item.category_id              'Entity_db_link'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
 ;
 
    stop_
@@ -146380,6 +146405,32 @@ Unique identifier for the reported torsion angle constraint.
 
 save_
 
+save__Torsion_angle_constraint.Set_ID
+
+   _item_description.description
+;
+An optional identifier used to group two or more constraints. One application 
+would be in defining multiple sets of phi-psi angle constraints for a single 
+residue.
+;
+
+   _item.name                  '_Torsion_angle_constraint.Set_ID'
+   _item.category_id              'Torsion_angle_constraint'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Torsion_angle_constraint.Torsion_angle_name
 
    _item_description.description
@@ -147328,6 +147379,30 @@ Pointer to '_Experiment.ID'
    _item.mandatory_code            no
    _item_enumeration.flag          no
    _item_type.code                'int'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint.Figure_of_merit
+
+   _item_description.description
+;
+Figure of merit value assigned to the torsion angle constraint
+;
+
+   _item.name                  '_Torsion_angle_constraint.Figure_of_merit'
+   _item.category_id              'Torsion_angle_constraint'
+   _item.mandatory_code            no
+   _item_enumeration.flag          no
+   _item_type.code                'float'
 
    loop_
      _item_examples.case
