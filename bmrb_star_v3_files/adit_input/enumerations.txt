@@ -148,12 +148,19 @@ save__Assembly_db_link.Database_code
     DBJ            .
     EMBL           .
     GB             .
-    NDB            'Nucleic Acid Data Bank'
     PIR            .
     PRF            .
     REF            .
     SP             .
     UNP            .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   NCBI            .
+   PubMed          'NCBI PubMed'
+   SGD             'Saccharomyces Genome Database'
+   SMART           'Simple Modular Architecture Research Tool'
+   TargetDB        'Target registration database'
+# PDBj-BMRB: BMRB(withdrawn) expresses withdrawn accession code referring to current BMRB release status.
+   BMRB(withdrawn)    'BMRB withdrawn accession code'
 
   stop_
 
@@ -186,6 +193,12 @@ save__Assembly_db_link.Entry_experimental_method
     'FTIR'                      .
     'mass spectrometry'         .
     'XAFS'                      .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'NMR'                        .
+   'X-ray crystallography'      .
+   'X-ray fiber diffraction'    .
+   'solid-state NMR and X-ray fiber diffraction'    .
+    na                          .
 
   stop_
 
@@ -221,6 +234,10 @@ components in the bound and free state.
 The components exist in the sample but do not interact (i.e.$ a molecule that
 is exchanging between a native and an unfolded conformation).
 ;
+     na
+;
+not available or equivalent
+;
 
   stop_
 
@@ -237,6 +254,10 @@ save__Assembly_systematic_name.Naming_system
    'CAS name'                                    .
    'CAS registry number'                         .
     BMRB                                         .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Pfam    ?
+   Swiss-Prot    ?
+   MEROPS    ?
 
    stop_
 
@@ -249,6 +270,7 @@ save__Assembly_type.Type
      _item_enumeration_value
      _item_enumeration_description
 
+      'peptide'                                .
       'protein monomer'                        .
       'protein homo-multimer'                  .
       'protein hetero-multimer'                .
@@ -273,6 +295,7 @@ save__Assembly_type.Type
       'DNA-drug complex'                       .
       'DNA-RNA complex'                        .
       'RNA-drug complex'                       . 
+      'non-polymer'                            .
 
     stop_
 
@@ -364,19 +387,6 @@ save__Audit.Update_record
 save_
 
 
-
-save__Binding_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?            .
-
-  stop_
-
-save_ 
-
 save__Binding_experiment.Sample_state
 
   loop_
@@ -418,6 +428,13 @@ save__Entity_bond.Type
         'metal coordination'   .
         peptide                .
         thioether              .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   oxime                       .
+   thioester                   .
+   phosphoester                .
+   phosphodiester              .
+   diselenide                  .
+   na                          .
 
     stop_
 
@@ -481,6 +498,13 @@ save__Bond_annotation.Type
         'metal coordination'   .
         peptide                .
         thioether              .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   oxime                       .
+   thioester                   .
+   phosphoester                .
+   phosphodiester              .
+   diselenide                  .
+   na                          .
 
     stop_
 
@@ -524,23 +548,19 @@ save__Bond.Type
         'metal coordination'   .
         peptide                .
         thioether              .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   oxime                       .
+   thioester                   .
+   phosphoester                .
+   phosphodiester              .
+   diselenide                  .
+   na                          .
 
     stop_
 
 save_
 
 
-save__CA_CB_constraint_expt.Experiment_name
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     ?           .
-
-    stop_
-
-save_
 
 save__CA_CB_constraint_expt.Sample_state
 
@@ -735,10 +755,12 @@ save__Chem_comp_descriptor.Program
      _item_enumeration_value
      _item_enumeration_description
 
+  ACD       'Advanced Chemistry Development' 
   OECHEM    'OpenEye OECHEM library'
   CACTVS    'CACTVS program library'
   DAYLIGHT  'Daylight program library'
   OTHER     'Other program or library'
+  na        'not available'
 
    stop_
 
@@ -752,8 +774,8 @@ save__Chem_comp_descriptor.Type
      _item_enumeration_value
      _item_enumeration_description
 
-  SMILES_CANNONICAL           deprecated
   SMILES_CANONICAL           'Canonical SMILES descriptor'
+  SMILES_ISOMERIC            'Isomeric SMILES descriptor'
   SMILES                     'SMILES descriptor'
   INCHI                      'InChi descriptor'
   INCHI_MAIN                 'InChi descriptor- main layer'
@@ -939,6 +961,7 @@ save__Chem_comp_common_name.Type
 
     abbreviation     .
     name             .
+    na               'not available'
 
   stop_
 
@@ -966,6 +989,8 @@ save__Chem_comp.Formal_charge
      _item_enumeration_value
      _item_enumeration_description
 
+   5+    .
+   4+    .
       3+    .
       2+    .
       1+    .
@@ -973,6 +998,9 @@ save__Chem_comp.Formal_charge
       1-    .
       2-    .
       3-    .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   4-    .
+   5-    .
    
   stop_
 
@@ -1082,6 +1110,8 @@ save__Chem_comp_systematic_name.Naming_system
     BMRB                                         .
    'One letter code'                             .
    'Three letter code'                           .
+    Beilstein                                    .
+   'Lignin abbreviation'                         .
 
    stop_
 
@@ -1094,18 +1124,7 @@ save__Chem_shift_anisotropy.Val_units
      _item_enumeration_description
 
     ppm                    .
-
-  stop_
-
-save_
-
-save__Chem_shift_experiment.Experiment_name
-
- loop_
-     _item_enumeration_value
-     _item_enumeration_description
-  
-     ?      .
+    ppb                    .
 
   stop_
 
@@ -1179,6 +1198,9 @@ save__Chem_shift_ref.Chem_shift_units
  
       ppm                 'parts per million'
       Hz                  Hertz
+# PDBj-BMRB: Added MHz and na by extraction from current BMRB database.
+   MHz                    'megahertz'
+   na                     'not available'
 
      stop_
 
@@ -1193,6 +1215,8 @@ save__Chem_shift_ref.External_ref_axis
 
    'parallel'        .
    'perpendicular'   .
+   'magic angle'     .
+    na               .
 
    stop_
 
@@ -1495,43 +1519,8 @@ save__Chem_struct_descriptor.Type
 
 save_
 
-save__Chromatographic_column.Type
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-  
-     ?           .
-
-     stop_
-
-save_
 
 
-save__Chromatographic_column.Vendor
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-  
-     ?           .
-
-     stop_
-
-save_
-
-
-save__Chromatographic_system.Pump_manufacturer
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-  
-     ?           .
-
-     stop_
-
-save_
 
 save__Chromatographic_system.Pump_model
 
@@ -1643,7 +1632,11 @@ A published article exists that contains or describes the data in the entry.
 ;
 A published article has been retracted by the authors or journal.
 ;
-
+     na
+;
+The status of the citation is not available. This value is for older entries where
+the status can not be determined but should not be allowed for current entries.
+;
 
     stop_
 
@@ -1682,6 +1675,10 @@ available.
 ;
 The only publication related to the data submitted will be the BMRB entry.
 ;
+     'other publication'
+;
+Used only when none of the others apply.
+;
      stop_
 
 save_
@@ -1699,6 +1696,7 @@ save__Citation_author.Family_title
       II               Second
       III              Third
       IV               Fourth
+      V                Fifth
       
     stop_
 
@@ -1717,6 +1715,7 @@ save__Citation_editor.Family_title
       II               Second
       III              Third
       IV               Fourth
+      V                Fifth
       
 
     stop_
@@ -1789,17 +1788,6 @@ save__Conformer_family_refinement.Refine_method
 
 save_
 
-save__Conformer_family_coord_set_expt.Experiment_name
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-       ?        .
-
-     stop_
-
-save_
 
 save__Conformer_family_coord_set_expt.Sample_state
 
@@ -2241,17 +2229,6 @@ save__Contact_person.Role
 
 save_
 
-save__Coupling_constant_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?                    .
-
-  stop_
-
-save_
 
 
 save__Coupling_constant_experiment.Sample_state
@@ -2291,18 +2268,6 @@ save__Coupling_constant_list.Spectrometer_frequency_1H
 save_ 
 
 
-save__Cross_correlation_DD_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?                    .
-
-  stop_
-
-save_
-
 
 save__Cross_correlation_DD_experiment.Sample_state
 
@@ -2330,18 +2295,6 @@ save__Cross_correlation_DD_list.Val_units
    us-1     .
 
     stop_
-
-save_
-
-save__Cross_correlation_D_CSA_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?                    .
-
-  stop_
 
 save_
 
@@ -2376,19 +2329,6 @@ save__Cross_correlation_D_CSA_list.Val_units
 save_
 
 
-#save__Cross_correlation_CSA_CSA_expt.Experiment_name
-#
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
-#
-#    ?                    .
-#
-#  stop_
-#
-#save_
-
-
 #save__Cross_correlation_CSA_CSA_expt.Sample_state
 #
 #  loop_
@@ -2417,18 +2357,6 @@ save_
 #    stop_
 #
 #save_
-
-save__CS_anisotropy_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?                    .
-
-  stop_
-
-save_
 
 
 save__CS_anisotropy_experiment.Sample_state
@@ -2534,7 +2462,7 @@ save__Datum.Type
      'deduced secondary structure values'       .
      'deduced hydrogen bonds'                   .
 
-     'Distance constraints'                  
+     'distance constraints'                  
 ;
 NOE distance constraints between two sets of atoms in which each set has at
 least one atom. Multiple atoms in one set should be represented by a standard
@@ -2573,23 +2501,21 @@ Chemical shift of e.g. a proton or carbon nucleus implemented as a constraint.
 Restraining (or constraining) symmetry between multiple copies of (part of) 
 similar structures.
 ;
+   '19F chemical shifts'                .
+   '6Li chemical shifts'                .
+   '10B chemical shifts'                .
+   '11B chemical shifts'                .
+   '17O chemical shifts'                .
+   '23Na chemical shifts'               .
+   '29Si chemical shifts'               .
+   '35Cl chemical shifts'               .
+   '129Xe chemical shifts'              .
+   '195Pt chemical shifts'              .
      
     stop_
 
 save_
 
-
-save__Deduced_H_bond_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?        .
-
-    stop_
-
-save_
 
 save__Deduced_H_bond_experiment.Sample_state
 
@@ -2600,19 +2526,6 @@ save__Deduced_H_bond_experiment.Sample_state
      isotropic       .
      anisotropic     .
      solid           .
-
-    stop_
-
-save_
-
-
-save__Deduced_secd_struct_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?        .
 
     stop_
 
@@ -2695,19 +2608,6 @@ save__Deposited_data_files.Validate_flag
 save_
 
 
-save__D_H_fract_factor_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-        ?        .
-
- 
-    stop_
-
-save_
-
 save__D_H_fract_factor_experiment.Sample_state
 
     loop_
@@ -2721,22 +2621,6 @@ save__D_H_fract_factor_experiment.Sample_state
     stop_
 
 save_
-
-
-
-save__Dipolar_coupling_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-        ?        .
-
- 
-    stop_
-
-save_
-
 
 
 save__Dipolar_coupling_experiment.Sample_state
@@ -2753,19 +2637,6 @@ save__Dipolar_coupling_experiment.Sample_state
 
 save_
 
-
-save__Dipole_dipole_relax_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-        ?        .
-
- 
-    stop_
-
-save_
 
 
 save__Dipole_dipole_relax_experiment.Sample_state
@@ -2797,17 +2668,6 @@ save__Dipole_dipole_relax_list.Val_units
 
 save_
 
-save__Distance_constraint_expt.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?      .
-
-    stop_
-
-save_
 
 save__Distance_constraint_expt.Sample_state
 
@@ -3084,6 +2944,8 @@ save__Entity_assembly.Physical_state
   'molten globule'     .
   unfolded             .
  'intrinsically disordered'     .
+ 'partially disordered'         .
+  na                            .
  
   stop_
 
@@ -3115,13 +2977,18 @@ save__Entity_db_link.Database_code
     DBJ            .
     EMBL           .
     GB             .
-    NDB            .
     PDB            .
     PIR            .
     PRF            .
     REF            .
     SP             .
     UNP            .
+# PDBj-BMRB: Added NCBI, tRNADB and HUGO.
+   NCBI    ?
+   HUGO    'HUGO Gene Nomenclature Committee'
+   tRNADB    'transfer RNA database'
+# PDBj-BMRB: BMRB(withdrawn) expresses withdrawn accession code referring to current BMRB release status.
+   BMRB(withdrawn)    ?
 
   stop_
 
@@ -3212,7 +3079,10 @@ commercial vendor or academic unit that produces materials
 as a service.  DO NOT select this option if the material was provided
 by an academic or industrial research collaborator.
 ;
-
+       na
+;
+not available
+;
 
   stop_
 
@@ -3397,8 +3267,41 @@ save__Entity_natural_src.Organ
       pancreas      .
       skin          .
       testicle      .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   leaf                     .
+   'venom gland'            .
+   'oral mucosa, submandibular-sublingual glands'    .
+   'salivary glands'        .
+   oocyte                   .
+   'breast'                 .
+    stomach                 .
+   'electric organ'         .
+   eye                      .
+   ileum                    .
+   'small intestine'        .
+   seed                     .
+   blood                    .
+   duodendum                .
+   jejunum                  .
+   vulva                    .
+   hepatopancreas           .
+   placenta                 .
+   'skeletal muscle'        .
+   aorta                    .
+   telson                   .
+   ubiquitous               .
+   'aciniform gland'        .
+   endoskeleton             .
+   heamolymph               .
+   'mucous epithelium'      .
+   'cardiac skeletal muscle'    .
+   'seminal vesicles'       .
+   antennae                 .
+   fruit                    .
+   thymus                   .
+   'egg white'              .
+   na                       .
 
-# Many more needed
 
     stop_
 
@@ -3412,11 +3315,35 @@ save__Entity_natural_src.Organelle
  
     chloroplast             .
    'endoplamic reticulum'   .
-    golgi                   .
+   'golgi apparatus'        .
     mitochondria            .
     nucleus                 .
-   
-# need more here
+    vacuole                 .   
+   acrosome                 .
+   autophagosome            .
+   centriole                .
+   cilium                   .
+   'eyespot apparatus'      .
+   glycosome                .
+   glyoxysome               .
+   hydrogenosome            .
+   lysosome                 .
+   melanosome               .
+   mitosome                 .
+   myofibril                .
+   nucleolus                .
+   parenthesome             .
+   peroxisome               .
+   proteasome               .
+   ribosome                 .
+   vesicle                  .
+   cytosol                  .
+   cytoskeleton             .
+   'endomembrane system'    .
+   nucleosome               .
+   microtubule              .
+   'cell membrane'          .
+ 
 
      stop_
 
@@ -3532,8 +3459,16 @@ save__Entity_natural_src.Secretion
        semen             .
       'vaginal fluid'    .
        venom             .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'hen egg white'      .
+   'sensillum lymph'    .
+   milk                 .
+   blood                .
+   dermal               .
+   urine                .
+    extracellular       .
+   cement               .
 
-# gather more from entries
 
     stop_
 
@@ -3583,6 +3518,12 @@ save__Entity_systematic_name.Naming_system
    'CAS registry number'                         .
     BMRB                                         .
    'Three letter code'                           .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Pfam                                          .
+   Swiss-Prot                                    .
+   EC                                            .
+   NCBI                                          .
+
 
    stop_
 
@@ -3713,7 +3654,8 @@ save__Entry.Experimental_method
       _item_enumeration_description
 
        NMR                    .
-
+# PDBj-BMRB: Added 'theoretical'.
+       Theoretical            .
     stop_
 
 save_
@@ -3744,6 +3686,44 @@ save__Entry.NMR_STAR_version
       '2.1.1'     .
       '3.1'       .
 
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   3.0.8.59     .
+   3.0.8.112    .
+   3.1.1.15     .
+   3.1.0.44     .
+   3.1.1.1      .
+   3.1.0.52     .
+   3.0.9.14     .
+   3.0.8.125    .
+   3.1.1.16     .
+   3.0.2.8      .
+   3.0.8.76     .
+   3.0.8.96     .
+   3.0.8.78     .
+   3.0.8.34     .
+   3.0.8.109    .
+   3.1.1.20     .
+   3.0.8.120    .
+   3.0.2.3      .
+   3.0.9.2      .
+   3.0          .
+   3.1.1.24     .
+   3.0.8.116    .
+   3.0.8.100    .
+   3.1.1.29     .
+   3.1.1.19     .
+   3.0.8.111    .
+   3.0.2.2      .
+   3.1.0.29     .
+   3.1.1.14     .
+   3.1.1.31     .
+   3.0.8.94     .
+   3.0.9.13     .
+   3.1.0.41     .
+   3.0.8.53     .
+   3.1.1.21     .
+   3.1.1.7      .
+
     stop_
 
 save_
@@ -3759,6 +3739,31 @@ save__Entry.Original_NMR_STAR_version
       '2.1'       .
       '2.1.1'     .
       '3.1'       .
+
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   3.0.8.100    .
+   3.0.8.59     .
+   3.0.8.58     .
+   3.1.1.15     .
+   3.0.8.112    .
+   3.0.8.111    .
+   3.0.2.8      .
+   3.0.9.14     .
+   3.0.8.125    .
+   3.0.9.2      .
+   3.0.8.96     .
+   3.0.8.78     .
+   3.0.8.34     .
+   3.0.8.109    .
+   3.0.8.120    .
+   3.1.0.46     .
+   3.1.1.31     .
+   3.0.8.94     .
+   3.1.1.21     .
+   3.0.9.13     .
+   3.0.8.116    .
+   3.0.8.53     .
+
 
     stop_
 
@@ -3931,6 +3936,8 @@ save__Entry_author.Family_title
       II               Second
       III              Third
       IV               Fourth
+# PDBj-BMRB: Added V.
+      V                 Fifth
       
 
     stop_
@@ -4634,82 +4641,6 @@ save__Entry_src.Organization_full_name
 save_
 
 
-save__Entry_src.Organization_initials
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    BSGC          
-;
-Berkeley Structural Genomics Center
-;
-    CESG          
-;
-Center for Eukaryotic Structural Genomics
-;
-    JCSG          
-;
-Joint Center for Structural Genomics
-;
-    MCSG          
-;
-Midwest Center for Structural Genomics
-;
-    NYSGRC        
-;
-New York Structural Genomics Research Consortium
-;
-    NESGC         
-;
-Northeast Structural Genomics
-;
-    SECSG         
-;
-Southeast Collaboratory for Structural Genomics
-;
-    SGPPC         
-;
-Structural Genomics of Pathogenic Protozoa Consortium
-;
-    TBSGC         
-;
-TB Structural Genomics Consortium
-;
-    PSF           
-;
-Protein Structure Factory
-;
-    YSG           
-;
-Yeast Structural Genomics
-;
-    NWSGC         
-;
-North West Structural Genomics Centre
-;
-    ASG           
-;
-Architecture and Function of Biological Macromolecules
-Structure Genomics
-;
-
-  stop_
-
-save_
-
-save__Entry_src.Project_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-    'Not applicable'                   .
-    'Protein Structure Initiative'     .
-
-  stop_
-
-save_
 
 save__Experiment.Sample_state
 
@@ -4783,17 +4714,8 @@ kcal/mol*ppm2      "Chemical shifts; pseudocontact shifts"
 
 save_
 
-save__FRET_expt.Sample_volume_units
 
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
 
-       ?               .
-
-    stop_
-
-save_
 
 
 save__Gen_dist_constraint_list.Constraint_type
@@ -4817,18 +4739,6 @@ save__Gen_dist_constraint_list.Constraint_type
 
 save_
 
-
-save__Gen_dist_constraint_expt.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?       .
-
-    stop_
-
-save_
 
 save__Gen_dist_constraint_expt.Sample_state
 
@@ -4883,20 +4793,6 @@ save__Gen_dist_constraint.Member_logic_code
 save_
 
 
-
-save__H_chem_shift_constraint_expt.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     ?       .
-
-     stop_
-
-save_
-
-
 save__H_chem_shift_constraint_expt.Sample_state
 
     loop_
@@ -4911,17 +4807,6 @@ save__H_chem_shift_constraint_expt.Sample_state
 
 save_
 
-save__Heteronucl_NOE_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     ?       .
-
-     stop_
-
-save_
 
 save__Heteronucl_NOE_experiment.Sample_state
 
@@ -4953,17 +4838,6 @@ save__Heteronucl_NOE_list.Heteronuclear_NOE_val_type
 
 save_
 
-save__Heteronucl_T1_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-        ?        .
-
-     stop_
-
-save_
 
 save__Heteronucl_T1_experiment.Sample_state
 
@@ -5008,18 +4882,6 @@ save__Heteronucl_T1_list.T1_val_units
 
 save_
 
-
-save__Heteronucl_T1rho_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?        .
-    
-    stop_
-
-save_
 
 save__Heteronucl_T1rho_experiment.Sample_state
 
@@ -5106,19 +4968,6 @@ save__Heteronucl_T1rho_list.Temp_control_method
 
 save_
 
-
-
-save__Heteronucl_T2_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?             .
-            
-    stop_
-
-save_
 
 save__Heteronucl_T2_experiment.Sample_state
 
@@ -5240,17 +5089,6 @@ save_
 #
 #save_
 
-save__Auto_relaxation_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?             .
-            
-    stop_
-
-save_
 
 save__Auto_relaxation_experiment.Sample_state
 
@@ -5392,22 +5230,12 @@ save__Homonucl_NOE_list.Homonuclear_NOE_val_type
     'peak volume'             .
     'peak height'             .
     'contour count'           .
+     na                       .
     
     stop_
 
 save_
 
-save__H_exch_protection_fact_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
 
 
 save__H_exch_protection_fact_experiment.Sample_state
@@ -5424,18 +5252,6 @@ save__H_exch_protection_fact_experiment.Sample_state
 
 save_
 
-
-save__H_exch_rate_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
 
 
 save__H_exch_rate_experiment.Sample_state
@@ -5470,17 +5286,6 @@ save__H_exch_rate_list.Val_units
 
 save_
 
-save__Isotope_effect_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
 
 
 save__Isotope_effect_experiment.Sample_state
@@ -5492,18 +5297,6 @@ save__Isotope_effect_experiment.Sample_state
     isotropic        .
     anisotropic      .
     solid            .
-
-    stop_
-
-save_
-
-save__J_three_bond_constraint_expt.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
 
     stop_
 
@@ -5559,18 +5352,6 @@ save__Mass_spec.Manufacturer
 
 save_
 
-save__Mass_spec.Model
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
-
 save__Mass_spec.Type
 
     loop_
@@ -5600,53 +5381,6 @@ save__Mass_spec_config.Component_type
 
 save_
 
-save__Mass_spec_config.Component_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?              .
-
-    stop_
-
-save_
-
-save__Mass_spec_component_param.Name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     ?             .
-
-    stop_
-
-save_
-
-save__Mass_spec_component_param.Value
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     ?             .
-
-    stop_
-
-save_
-
-save__MS_expt_param.Type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     ?             .
-
-    stop_
-
-save_
 
 
 save__Mass_spectrometer_view.Fragmentation_method
@@ -5713,68 +5447,8 @@ save__Mass_spectrometer_view.Manufacturer
 
 save_
 
-save__Mass_spectrometer_view.Model
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
-
-save__Mass_spectrometer_view.Type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
-
-save__Mass_spectrometer_view.Ionization_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
-
-
-
-save__Mass_spectrometer_view.Spectrum_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
 
    
-save__Mol_interaction_diff_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
 
 save__Mol_interaction_diff_experiment.Sample_state  
 
@@ -5803,17 +5477,6 @@ save__MS_chromatogram_list.Text_data_format
 
 save_
 
-save__MS_chromatogram_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?                 .
-
-    stop_
-
-save_
 
 save__MS_chromatogram_param.Name
 
@@ -5923,20 +5586,12 @@ as shown as a figure in many publications
       'Pulse field gradient'                    .
       'Peak list'                               .
       'Spectral image'                          .       
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'Acquisition parameters'    .
+   'Processing parameters'     .
+    na                         .
 
     stop_
-
-save_
-
-save__NMR_expt_systematic_name.Name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-   ?      .
-
-  stop_
 
 save_
 
@@ -5968,6 +5623,7 @@ save__NMR_probe.Type
     'saddle coil'              .
     'room temperature'         .
     'cryogenically cooled'     .
+     na                        .
 
   stop_
 
@@ -5980,7 +5636,7 @@ save__NMR_spec_expt.NMR_tube_type
       _item_enumeration_description
 
       'cylindrical microcell'       .
-       Shegami                      .
+       Shigemi                      .
       'spherical microcell'         .
       'standard cylindrical'        .
  
@@ -6070,17 +5726,6 @@ save__Experiment.Raw_data_flag
 
 save_ 
 
-save__Chemical_rate_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?            .
-
-  stop_
-
-save_ 
 
 save__Chemical_rate_experiment.Sample_state
 
@@ -6090,18 +5735,6 @@ save__Chemical_rate_experiment.Sample_state
 
     anisotropic            .
     isotropic              .
-
-  stop_
-
-save_ 
-
-save__Chemical_rate.Val_type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?            .
 
   stop_
 
@@ -6140,17 +5773,6 @@ save__Model_type.Type
 
 save_
                          
-save__NMR_spec_expt.Name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?   .
-
-  stop_
-
-save_
 
 #save__NMR_spec_expt.Temp_calibration_method
 
@@ -6228,6 +5850,14 @@ save__NMR_spectrometer.Manufacturer
     GE       .
     JEOL     .
     Varian   .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Agilent      .
+   Cambridge    .
+   Oxford       .
+   FBML         .
+   Nicolet      .
+   Home-build   .
+   na           .
 
   stop_
 
@@ -6282,6 +5912,23 @@ save__NMR_spectrometer_view.Field_strength
     920       .
     950       .
    1000
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   200    ?
+   250    ?
+   300    ?
+   350    ?
+   450    ?
+   550    ?
+   720    ?
+   590    ?
+   470    ?
+   360    ?
+   270    ?
+   140    ?
+   120    ?
+   90    ?
+   na    'not available'
+
 
   stop_
 
@@ -6297,7 +5944,15 @@ save__NMR_spectrometer_view.Manufacturer
     GE       .
     JEOL     .
     Varian   .
-
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Agilent       .
+   Cambridge     .
+   Oxford        .
+   FBML          .
+   Nicolet       .
+   Home-built    .
+   na            .
+   
   stop_
 
 save_ 
@@ -6339,11 +5994,13 @@ save__NMR_spectrometer_probe.Manufacturer
      _item_enumeration_value
      _item_enumeration_description
 
+    Agilent  .
     Bruker   .
     DOTY     .
     GE       .
     JEOL     .
     Varian   .
+    na       .
 
   stop_
 
@@ -6398,17 +6055,6 @@ save_
 #save_ 
 
 
-#save__Model_free_experiment.Experiment_name
-
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
-
-#     ?       .
-
-#  stop_
-
-#save_ 
 
 #save__Model_free_experiment.Sample_state
 
@@ -6480,18 +6126,6 @@ save__MZ_ratio_data_list.Text_data_format
 
 save_
 
-save__MZ_ratio_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-       ?           .
-
-  stop_
-
-save_
-
 
 save__Order_param.Model_fit
 
@@ -6528,17 +6162,6 @@ save__Order_param.Model_fit
 save_ 
 
 
-save__Order_parameter_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     ?       .
-
-  stop_
-
-save_ 
 
 save__Order_parameter_experiment.Sample_state
 
@@ -6617,17 +6240,6 @@ save__Order_parameter_list.Tau_s_val_units
 
 save_ 
 
-save__Other_constraint_expt.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
 
 
 save__Other_constraint_expt.Sample_state
@@ -6645,17 +6257,6 @@ save__Other_constraint_expt.Sample_state
 save_
 
 
-save__Other_data_experiment.Experiment_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?          .
-
-    stop_
-
-save_
 
 
 save__Other_data_experiment.Sample_state
@@ -6725,23 +6326,13 @@ save__Peak_general_char.Measurement_method
     'relative height'             .
      volume                       .
     'number of contours'          .
+     integration                  .
 
   stop_
 
 save_ 
 
 
-save__PH_titration_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     ?        .
-
-  stop_
-
-save_ 
 
 save__PH_titration_experiment.Sample_state
 
@@ -6789,17 +6380,6 @@ save__PH_param_list.Observed_NMR_param
 
 save_ 
 
-save__RDC_constraint_expt.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?        .
-
-  stop_
-
-save_ 
 
 
 save__RDC_constraint_expt.Sample_state
@@ -6811,18 +6391,6 @@ save__RDC_constraint_expt.Sample_state
     isotropic         .
     anisotropic       .
     solid             .
-
-  stop_
-
-save_ 
-
-save__RDC_experiment.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?        .
 
   stop_
 
@@ -6863,11 +6431,19 @@ save__Related_entries.Database_name
        _item_enumeration_description
 
     BMRB          'BioMagResBank'
+    BMRB(withdrawn)    .
     PDB           'Protein Databank'
-    NDB           'Nucleic Acid Database'
     TargetDB      'Target registration database'
     EMDB          'Electron Microscopy Volume Data Bank'
     BMCD          'Biological Macromolecule Crystallization Database'
+    GB    'GenBank'
+    DBJ    'DNA Data Bank of Japan'
+    EMBL    'European Molecular Biology Laboratory'
+    NCBI    .
+    PIR    'Protein Information Resource'
+    REF    'NCBI Reference Sequence'
+    SGD    'Saccharomyces Genome Database'
+    SP    'UniProtKB/Swiss-Prot' 
 
   stop_
 
@@ -6880,6 +6456,7 @@ save__Release.Type
        _item_enumeration_description
 
     original      'First release of the data to the public.'
+    na            'not available'
     update        
 
 ;
@@ -6887,6 +6464,9 @@ Additional releases of the entry that involve changes in the
 reported quantitative data$ dictionary changes$ or other revisions
 that represent non-trivial changes in the entry.
 ;
+
+     revision     'not used now as it is redundant with update aa all revisions are updates'
+     reformat     'reformatted for new format specification'
 
      stop_
 
@@ -7022,6 +6602,9 @@ Solid-state micro crystal powder
 ;
    'reverse micelle'                  .
    'single crystal'                   .
+    microcrystalline                  .
+   'liquid crystal'                   .
+    in-cell                           .
 
     stop_
 
@@ -7046,6 +6629,24 @@ save__Sample_component.Concentration_val_units
            ug           'microgram'
           mg/mL         'mg per milliliter'
            g/L          'grams per liter'
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   pM                    picomolar
+   w/w                   .
+   '% v/v'               .
+   '% w/v'               .
+   '% w/w'               .
+   mg/L                  .
+   mg/uL                 .
+   ug/mL                 .
+   ug/uL                 .
+   mL                    .
+   uL                    .
+   A260                  .
+   eq                    .
+   ratio                 .
+   saturated             .
+   tablet/100mL          .
+   na                    .
 
     stop_
 
@@ -7296,22 +6897,16 @@ dynamic viscosity
 ;
 Used for variables that do not have units like dielectric constant.
 ;
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   hPa    "hecto Pascal"
+   pD       .
+   %        .
+   s        second
 
   stop_
 
 save_
 
-save__SAXS_constraint_expt.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?          .
-
-  stop_
-
-save_
 
 
 save__SAXS_expt.Sample_volume_units
@@ -7513,6 +7108,19 @@ save__Software.Name
 
 save_
 
+save__Spectral_dim.Sweep_width_units
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+      Hz           Hertz
+      ppm         'parts per million'
+
+   stop_
+
+save_
+
 save__Spin_system_link.Type
 
     loop_
@@ -7595,6 +7203,24 @@ save__SG_project.Full_name_of_center
     "Transcontinental EM Initiative for Membrane Protein Structure"                  .
     "Transmembrane Protein Center"                                                   .  
     "Yeast Structural Genomics"                                                      YSG
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'Bijvoet Centre, Utrecht'                                                         .
+   'Brazilian Sincrotron Light Laboratory'                                           .
+   'Center for Experimental Therapeutics and Pharmacoinformatics'                    .
+   'FAPESP'                                                                          .
+   'Functional and Structural Proteomics of the SARS Coronavirus'                    .
+   'Hefei National Laboratory for Physical Sciences at Microscale'                   .
+   'Institute of Genetics and Molecular and Cellular Biology-CNRS France'            .
+   'Institute of Zoology, Beijing'                                                   .
+   'IRB Barcelona'                                                                   .
+   'Magnetic Resonance Center'                                                       .
+   'Membrane Protein Structures by NMR'                                              .
+   'Nanoworld Institute'                                                             .
+   'Protein Research Group, RIKEN Genomic Sciences Center'                           .
+   'State Key Laboratory of Magnetic Resonance and Atomic and Molecular Physics'     .
+   'Structural Molecular Biology Network'                                            .
+   'University of Calcutta CU'                                                       .
+   'University of Georgia'                                                           .
    
     stop_
 
@@ -7627,6 +7253,9 @@ save__SG_project.Initial_of_center
    SPINE  .
    S2F    .
    TBSGC  .
+# PDBj-BMRB: Added 'RIKEN GSC' and CU.
+  'RIKEN GSC'    .
+   CU            .
 
      stop_
 
@@ -7644,6 +7273,14 @@ save__SG_project.Project_name
       'PSI:Biology'                                                             .
       'PSI$ Protein Structure Initiative'                                       .
       'NPPSFA$ National Project on Protein Structural and Functional Analyses'  .
+# PDBj-BMRB: Added the following projects which contributed more than three entries in current BMRB database.
+   SPINE                     .
+   SPINE2                    .
+   'Protein 3000'            .
+   SSGCID                    .
+   NIAID                     .
+   SMolBNet                  .
+   Other                     .
 
      stop_
 
@@ -7669,18 +7306,6 @@ save__Spectral_acq_param.Name
 
 save_
 
-save__Spectral_density_experiment.Experiment_name
-                                        
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-      ?        .
-
-     stop_
-
-save_
-
 save__Spectral_density_experiment.Sample_state
                                         
      loop_
@@ -7690,18 +7315,6 @@ save__Spectral_density_experiment.Sample_state
      isotropic        .
      anisotropic      .
      solid            .
-
-     stop_
-
-save_
-
-save__Spectral_peak_list.Experiment_name                      
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-    ?        .
 
      stop_
 
@@ -7779,7 +7392,21 @@ save__Study.Type
     'Structure analysis'                       .
     'Mutant comparison'                        .
     'Interactions with different ligands'      .
+
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
     
+    'Chemical shift mapping'                   .
+    'NMR signal assignment'                    .
+    'Protein-protein interaction'              .
+    'Protein-ligand interaction'               .
+    'Structural and dynamics analysis'         .
+    'Stoichiometry problems'                   .
+    'Dynamics analysis'                        .
+    'pH titration'                             .
+
+
+
+
   stop_
 
 save_
@@ -7809,6 +7436,8 @@ save__Systematic_chem_shift_offset.Type
     '13C isotope effect'      .
     '15N isotope effect'      .
     'SAIL isotope labeling'   .
+    'spectrometer error'      .
+     na                       .
 
   stop_
 
@@ -7829,6 +7458,9 @@ save__Systematic_chem_shift_offset.Atom_type
    'all 15N'                             .
    'all 19F'                             .
    'all 31P'                             .
+   'backbone CA'                         .
+   'backbone CB'                         .
+    na                                   .
  
   stop_
 
@@ -7948,17 +7580,6 @@ save_
 
 #save_
 
-save__Torsion_angle_constraints_expt.Experiment_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     ?          .
-
-  stop_
-
-save_
 
 save__Torsion_angle_constraints_expt.Sample_state
 

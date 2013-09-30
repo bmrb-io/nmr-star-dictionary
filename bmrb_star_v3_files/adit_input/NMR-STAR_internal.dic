@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2013-08-20
+#  version date -  2013-09-30
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.46
+    _dictionary.version         3.1.1.50
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.46         ?
+     3.1.1.50         ?
 ;
      ?
 ;
@@ -3689,6 +3689,14 @@ description if none of the enumerated values are appropriate.
    'Structure analysis'    ?
    'Mutant comparison'    ?
    'Interactions with different ligands'    ?
+   'Chemical shift mapping'    ?
+   'NMR signal assignment'    ?
+   'Protein-protein interaction'    ?
+   'Protein-ligand interaction'    ?
+   'Structural and dynamics analysis'    ?
+   'Stoichiometry problems'    ?
+   'Dynamics analysis'    ?
+   'pH titration'    ?
 
    stop_
 
@@ -5070,7 +5078,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item_enumeration.flag          yes
    _item_enumeration.closed_flag   no
    _item_type.code                'line'
-   _item_default.value            '3.1.1.46'
+   _item_default.value            '3.1.1.50'
 
    loop_
      _item_enumeration.value
@@ -5081,6 +5089,42 @@ Version of NMR-STAR in which the current entry is formatted.
    2.1    ?
    2.1.1    ?
    3.1    ?
+   3.0.8.59    ?
+   3.0.8.112    ?
+   3.1.1.15    ?
+   3.1.0.44    ?
+   3.1.1.1    ?
+   3.1.0.52    ?
+   3.0.9.14    ?
+   3.0.8.125    ?
+   3.1.1.16    ?
+   3.0.2.8    ?
+   3.0.8.76    ?
+   3.0.8.96    ?
+   3.0.8.78    ?
+   3.0.8.34    ?
+   3.0.8.109    ?
+   3.1.1.20    ?
+   3.0.8.120    ?
+   3.0.2.3    ?
+   3.0.9.2    ?
+   3.0    ?
+   3.1.1.24    ?
+   3.0.8.116    ?
+   3.0.8.100    ?
+   3.1.1.29    ?
+   3.1.1.19    ?
+   3.0.8.111    ?
+   3.0.2.2    ?
+   3.1.0.29    ?
+   3.1.1.14    ?
+   3.1.1.31    ?
+   3.0.8.94    ?
+   3.0.9.13    ?
+   3.1.0.41    ?
+   3.0.8.53    ?
+   3.1.1.21    ?
+   3.1.1.7    ?
 
    stop_
 
@@ -5118,6 +5162,28 @@ Version of NMR-STAR in which the original entry was generated.
    2.1    ?
    2.1.1    ?
    3.1    ?
+   3.0.8.100    ?
+   3.0.8.59    ?
+   3.0.8.58    ?
+   3.1.1.15    ?
+   3.0.8.112    ?
+   3.0.8.111    ?
+   3.0.2.8    ?
+   3.0.9.14    ?
+   3.0.8.125    ?
+   3.0.9.2    ?
+   3.0.8.96    ?
+   3.0.8.78    ?
+   3.0.8.34    ?
+   3.0.8.109    ?
+   3.0.8.120    ?
+   3.1.0.46    ?
+   3.1.1.31    ?
+   3.0.8.94    ?
+   3.1.1.21    ?
+   3.0.9.13    ?
+   3.0.8.116    ?
+   3.0.8.53    ?
 
    stop_
 
@@ -5153,6 +5219,7 @@ the value to this tag.
      _item_enumeration.detail
 
    NMR    ?
+   Theoretical    ?
 
    stop_
 
@@ -7776,6 +7843,7 @@ A common family title (not a professional title).
    II    Second
    III    Third
    IV    Fourth
+   V    Fifth
 
    stop_
 
@@ -7922,8 +7990,15 @@ The value identifies the Structural Genomics project of the granting agency.
    'not applicable'    ?
    'Enzyme Function Initiative'    ?
    PSI:Biology    ?
-   'PSI$ Protein Structure Initiative'    ?
-   'NPPSFA$ National Project on Protein Structural and Functional Analyses'    ?
+   'PSI, Protein Structure Initiative'    ?
+   'NPPSFA, National Project on Protein Structural and Functional Analyses'    ?
+   SPINE    ?
+   SPINE2    ?
+   'Protein 3000'    ?
+   SSGCID    ?
+   NIAID    ?
+   SMolBNet    ?
+   Other    ?
 
    stop_
 
@@ -7958,10 +8033,10 @@ The value identifies the full name of center.
 
    'not applicable'    ?
    'Accelerated Technologies Center for Gene to 3D Structure'    ?
-   'Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions'    ?
+   'Assembly, Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions'    ?
    'Atoms-to-Animals: The Immune Function Network'    ?
    'Architecture and Function of Biological Macromolecules Structure Genomics'    ASG
-   'Bacterial targets at IGS-CNRS$ France'    ?
+   'Bacterial targets at IGS-CNRS, France'    ?
    'Berkeley Structural Genomics Center'    BSGC
    'Center for Eukaryotic Structural Genomics'    CESG
    'Center for High-Throughput Structural Biology'    ?
@@ -8014,6 +8089,23 @@ The value identifies the full name of center.
    'Transcontinental EM Initiative for Membrane Protein Structure'    ?
    'Transmembrane Protein Center'    ?
    'Yeast Structural Genomics'    YSG
+   'Bijvoet Centre Utrecht'    ?
+   'Brazilian Sincrotron Light Laboratory'    ?
+   'Center for Experimental Therapeutics and Pharmacoinformatics'    ?
+   FAPESP    ?
+   'Functional and Structural Proteomics of the SARS Coronavirus'    ?
+   'Hefei National Laboratory for Physical Sciences at Microscale'    ?
+   'Institute of Genetics and Molecular and Cellular Biology-CNRS France'    ?
+   'Institute of Zoology Beijing'    ?
+   'IRB Barcelona'    ?
+   'Magnetic Resonance Center'    ?
+   'Membrane Protein Structures by NMR'    ?
+   'Nanoworld Institute'    ?
+   'Protein Research Group RIKEN Genomic Sciences Center'    ?
+   'State Key Laboratory of Magnetic Resonance and Atomic and Molecular Physics'    ?
+   'Structural Molecular Biology Network'    ?
+   'University of Calcutta CU'    ?
+   'University of Georgia'    ?
 
    stop_
 
@@ -8067,6 +8159,8 @@ The value identifies the center using initials or other abbreviation.
    SPINE    ?
    S2F    ?
    TBSGC    ?
+   'RIKEN GSC'    ?
+   CU    ?
 
    stop_
 
@@ -8204,18 +8298,8 @@ name of the overall project defined by a granting agency.
    _item.name                  '_Entry_src.Project_name'
    _item.category_id              'Entry_src'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   'Not applicable'    ?
-   'Protein Structure Initiative'    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -8249,10 +8333,10 @@ out the research reported in the entry.
 
    ?    ?
    'Accelerated Technologies Center for Gene to 3D Structure'    ?
-   'Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions'    ?
+   'Assembly, Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions'    ?
    'Architecture and Function of Biological Macromolecules Structure Genomics'    ASG
    'Atoms-to-Animals: The Immune Function Network'    ?
-   'Bacterial targets at IGS-CNRS$ France'    ?
+   'Bacterial targets at IGS-CNRS, France'    ?
    'Berkeley Structural Genomics Center'    BSGC
    'Center for Eukaryotic Structural Genomics'    CESG
    'Center for High-Throughput Structural Biology'    ?
@@ -8298,7 +8382,7 @@ out the research reported in the entry.
    'Structural Proteomics in Europe'    ?
    'Structural Proteomics in Europe 2'    ?
    'Structure 2 Function Project'    ?
-   'Structure$ Dynamics and Activation Mechanisms of Chemokine Receptors'    ?
+   'Structure, Dynamics and Activation Mechanisms of Chemokine Receptors'    ?
    'Structure-Function Studies of Tight Junction Membrane Proteins'    ?
    'Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors'    ?
    'TB Structural Genomics Consortium'    ?
@@ -8330,29 +8414,8 @@ was conducted.  More than one organization can be provided.
    _item.name                  '_Entry_src.Organization_initials'
    _item.category_id              'Entry_src'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   BSGC    ?
-   CESG    ?
-   JCSG    ?
-   MCSG    ?
-   NYSGRC    ?
-   NESGC    ?
-   SECSG    ?
-   SGPPC    ?
-   TBSGC    ?
-   PSF    ?
-   YSG    ?
-   NWSGC    ?
-   ASG    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -8819,12 +8882,22 @@ A type of quantitative data found in the entry.
    'bond orientation values'    ?
    'deduced secondary structure values'    ?
    'deduced hydrogen bonds'    ?
-   'Distance constraints'    ?
+   'distance constraints'    ?
    'ambiguous distance constraints'    ?
    'hydrogen bond distance constraints'    ?
    'torsion angle constraints'    ?
    'chemical shift constraints'    ?
    'symmetry constraints'    ?
+   '19F chemical shifts'    ?
+   '6Li chemical shifts'    ?
+   '10B chemical shifts'    ?
+   '11B chemical shifts'    ?
+   '17O chemical shifts'    ?
+   '23Na chemical shifts'    ?
+   '29Si chemical shifts'    ?
+   '35Cl chemical shifts'    ?
+   '129Xe chemical shifts'    ?
+   '195Pt chemical shifts'    ?
 
    stop_
 
@@ -9101,7 +9174,10 @@ Value describing with a key word the type of entry that was released.
      _item_enumeration.detail
 
    original    'First release of the data to the public.'
+   na    'not available'
    update    ?
+   revision    'not used now as it is redundant with update aa all revisions are updates'
+   reformat    'reformatted for new format specification'
 
    stop_
 
@@ -9272,11 +9348,19 @@ to the current entry.
      _item_enumeration.detail
 
    BMRB    'BioMagResBank'
+   BMRB(withdrawn)    ?
    PDB    'Protein Databank'
-   NDB    'Nucleic Acid Database'
    TargetDB    'Target registration database'
    EMDB    'Electron Microscopy Volume Data Bank'
    BMCD    'Biological Macromolecule Crystallization Database'
+   GB    'GenBank'
+   DBJ    'DNA Data Bank of Japan'
+   EMBL    'European Molecular Biology Laboratory'
+   NCBI    ?
+   PIR    'Protein Information Resource'
+   REF    'NCBI Reference Sequence'
+   SGD    'Saccharomyces Genome Database'
+   SP    'UniProtKB/Swiss-Prot'
 
    stop_
 
@@ -10038,6 +10122,7 @@ Status for the current publication (in preparation submitted in press published)
    'in press'    ?
    published    ?
    retracted    ?
+   na    ?
 
    stop_
 
@@ -10080,6 +10165,7 @@ book; thesis; etc.)
    'personal communication'    ?
    internet    ?
    'BMRB only'    ?
+   'other publication'    ?
 
    stop_
 
@@ -10154,7 +10240,7 @@ depositor truly does not know the journal a value of 'not known' is acceptable.
    RNA    ?
    Science    ?
    Structure    ?
-   'Structure (Cambridge$ MA$ U.S.)'    ?
+   'Structure (Cambridge, MA, U.S.)'    ?
 
    stop_
 
@@ -11034,6 +11120,7 @@ A common family title (not a professional title).
    II    Second
    III    Third
    IV    Fourth
+   V    Fifth
 
    stop_
 
@@ -11443,6 +11530,7 @@ A common family title (not a professional title).
    II    Second
    III    Third
    IV    Fourth
+   V    Fifth
 
    stop_
 
@@ -12292,6 +12380,7 @@ appropriate values may be used for any specific system.
      _item_enumeration.value
      _item_enumeration.detail
 
+   peptide    ?
    'protein monomer'    ?
    'protein homo-multimer'    ?
    'protein hetero-multimer'    ?
@@ -12316,6 +12405,7 @@ appropriate values may be used for any specific system.
    'DNA-drug complex'    ?
    'DNA-RNA complex'    ?
    'RNA-drug complex'    ?
+   non-polymer    ?
 
    stop_
 
@@ -12883,6 +12973,8 @@ state of the component of the assembly.
    'molten globule'    ?
    unfolded    ?
    'intrinsically disordered'    ?
+   'partially disordered'    ?
+   na    ?
 
    stop_
 
@@ -13209,6 +13301,12 @@ A descriptive phrase or word that characterized the bond.
    'metal coordination'    ?
    peptide    ?
    thioether    ?
+   oxime    ?
+   thioester    ?
+   phosphoester    ?
+   phosphodiester    ?
+   diselenide    ?
+   na    ?
 
    stop_
 
@@ -14770,12 +14868,17 @@ Abbreviation for the database
    DBJ    ?
    EMBL    ?
    GB    ?
-   NDB    'Nucleic Acid Data Bank'
    PIR    ?
    PRF    ?
    REF    ?
    SP    ?
    UNP    ?
+   NCBI    ?
+   PubMed    'NCBI PubMed'
+   SGD    'Saccharomyces Genome Database'
+   SMART    'Simple Modular Architecture Research Tool'
+   TargetDB    'Target registration database'
+   BMRB(withdrawn)    'BMRB withdrawn accession code'
 
    stop_
 
@@ -14886,6 +14989,11 @@ Experimental method used to generate the data in the database entry.
    FTIR    ?
    'mass spectrometry'    ?
    XAFS    ?
+   NMR    ?
+   'X-ray crystallography'    ?
+   'X-ray fiber diffraction'    ?
+   'solid-state NMR and X-ray fiber diffraction'    ?
+   na    ?
 
    stop_
 
@@ -15293,6 +15401,9 @@ systems.
    'CAS name'    ?
    'CAS registry number'    ?
    BMRB    ?
+   Pfam    ?
+   Swiss-Prot    ?
+   MEROPS    ?
 
    stop_
 
@@ -15517,6 +15628,7 @@ chemical exchange
    'Intermediate exchange'    ?
    'Fast exchange'    ?
    'No interaction'    ?
+   na    ?
 
    stop_
 
@@ -24704,13 +24816,16 @@ Code assigned to a database.
    DBJ    ?
    EMBL    ?
    GB    ?
-   NDB    ?
    PDB    ?
    PIR    ?
    PRF    ?
    REF    ?
    SP    ?
    UNP    ?
+   NCBI    ?
+   HUGO    'HUGO Gene Nomenclature Committee'
+   tRNADB    'transfer RNA database'
+   BMRB(withdrawn)    ?
 
    stop_
 
@@ -25616,6 +25731,10 @@ recognized by the scientific community.
    'CAS registry number'    ?
    BMRB    ?
    'Three letter code'    ?
+   Pfam    ?
+   Swiss-Prot    ?
+   EC    ?
+   NCBI    ?
 
    stop_
 
@@ -27713,6 +27832,12 @@ A common chemical bond descriptive name.
    'metal coordination'    ?
    peptide    ?
    thioether    ?
+   oxime    ?
+   thioester    ?
+   phosphoester    ?
+   phosphodiester    ?
+   diselenide    ?
+   na    ?
 
    stop_
 
@@ -29023,6 +29148,39 @@ The organ of a higher organism where the biopolymer is found in nature.
    pancreas    ?
    skin    ?
    testicle    ?
+   leaf    ?
+   'venom gland'    ?
+   'oral mucosa submandibular-sublingual glands'    ?
+   'salivary glands'    ?
+   oocyte    ?
+   breast    ?
+   stomach    ?
+   'electric organ'    ?
+   eye    ?
+   ileum    ?
+   'small intestine'    ?
+   seed    ?
+   blood    ?
+   duodendum    ?
+   jejunum    ?
+   vulva    ?
+   hepatopancreas    ?
+   placenta    ?
+   'skeletal muscle'    ?
+   aorta    ?
+   telson    ?
+   ubiquitous    ?
+   'aciniform gland'    ?
+   endoskeleton    ?
+   heamolymph    ?
+   'mucous epithelium'    ?
+   'cardiac skeletal muscle'    ?
+   'seminal vesicles'    ?
+   antennae    ?
+   fruit    ?
+   thymus    ?
+   'egg white'    ?
+   na    ?
 
    stop_
 
@@ -29187,9 +29345,34 @@ Organized structure within a cell.
 
    chloroplast    ?
    'endoplamic reticulum'    ?
-   golgi    ?
+   'golgi apparatus'    ?
    mitochondria    ?
    nucleus    ?
+   vacuole    ?
+   acrosome    ?
+   autophagosome    ?
+   centriole    ?
+   cilium    ?
+   'eyespot apparatus'    ?
+   glycosome    ?
+   glyoxysome    ?
+   hydrogenosome    ?
+   lysosome    ?
+   melanosome    ?
+   mitosome    ?
+   myofibril    ?
+   nucleolus    ?
+   parenthesome    ?
+   peroxisome    ?
+   proteasome    ?
+   ribosome    ?
+   vesicle    ?
+   cytosol    ?
+   cytoskeleton    ?
+   'endomembrane system'    ?
+   nucleosome    ?
+   microtubule    ?
+   'cell membrane'    ?
 
    stop_
 
@@ -29300,6 +29483,14 @@ urine or venom this is stated here.
    semen    ?
    'vaginal fluid'    ?
    venom    ?
+   'hen egg white'    ?
+   'sensillum lymph'    ?
+   milk    ?
+   blood    ?
+   dermal    ?
+   urine    ?
+   extracellular    ?
+   cement    ?
 
    stop_
 
@@ -30288,6 +30479,7 @@ The laboratory method used to obtain the biopolymers studied.
    'reverse transcriptase'    ?
    'obtained from a collaborator'    ?
    'obtained from a vendor'    ?
+   na    ?
 
    stop_
 
@@ -31648,20 +31840,20 @@ compound or a fragment of a complete chemical compound.
    'RNA OH 5 PRIME TERMINUS'    ?
    'DNA OH 3 PRIME TERMINUS'    ?
    'RNA OH 3 PRIME TERMINUS'    ?
-   'D-SACCHARIDE 1$4 AND 1$4 LINKING'    ?
-   'L-SACCHARIDE 1$4 AND 1$4 LINKING'    ?
-   'D-SACCHARIDE 1$4 AND 1$6 LINKING'    ?
-   'L-SACCHARIDE 1$4 AND 1$6 LINKING'    ?
+   'D-SACCHARIDE 1,4 AND 1,4 LINKING'    ?
+   'L-SACCHARIDE 1,4 AND 1,4 LINKING'    ?
+   'D-SACCHARIDE 1,4 AND 1,6 LINKING'    ?
+   'L-SACCHARIDE 1,4 AND 1,6 LINKING'    ?
    L-SACCHARIDE    ?
    D-SACCHARIDE    ?
    SACCHARIDE    ?
    NON-POLYMER    ?
    'PEPTIDE LINKING'    ?
    PEPTIDE-LIKE    ?
-   'L-GAMMA-PEPTIDE$ C-DELTA LINKING'    ?
-   'D-GAMMA-PEPTIDE$ C-DELTA LINKING'    ?
-   'L-BETA-PEPTIDE$ C-GAMMA LINKING'    ?
-   'D-BETA-PEPTIDE$ C-GAMMA LINKING'    ?
+   'L-GAMMA-PEPTIDE, C-DELTA LINKING'    ?
+   'D-GAMMA-PEPTIDE, C-DELTA LINKING'    ?
+   'L-BETA-PEPTIDE, C-GAMMA LINKING'    ?
+   'D-BETA-PEPTIDE, C-GAMMA LINKING'    ?
    OTHER    ?
 
    stop_
@@ -32361,6 +32553,8 @@ The formal electrical charge on the chemical compound.
      _item_enumeration.value
      _item_enumeration.detail
 
+   5+    ?
+   4+    ?
    3+    ?
    2+    ?
    1+    ?
@@ -32368,6 +32562,8 @@ The formal electrical charge on the chemical compound.
    1-    ?
    2-    ?
    3-    ?
+   4-    ?
+   5-    ?
 
    stop_
 
@@ -33291,6 +33487,7 @@ The type of name given to the compound (abbreviation$ etc.).
 
    abbreviation    ?
    name    ?
+   na    'not available'
 
    stop_
 
@@ -33953,10 +34150,12 @@ the descriptor.
      _item_enumeration.value
      _item_enumeration.detail
 
+   ACD    'Advanced Chemistry Development'
    OECHEM    'OpenEye OECHEM library'
    CACTVS    'CACTVS program library'
    DAYLIGHT    'Daylight program library'
    OTHER    'Other program or library'
+   na    'not available'
 
    stop_
 
@@ -34397,6 +34596,8 @@ compounds recognized by the scientific community.
    BMRB    ?
    'One letter code'    ?
    'Three letter code'    ?
+   Beilstein    ?
+   'Lignin abbreviation'    ?
 
    stop_
 
@@ -38351,6 +38552,9 @@ of the sample.
    'polycrystalline powder'    ?
    'reverse micelle'    ?
    'single crystal'    ?
+   microcrystalline    ?
+   'liquid crystal'    ?
+   in-cell    ?
 
    stop_
 
@@ -39495,6 +39699,23 @@ Units used to express the concentration of the sample component.
    ug    'microgram'
    mg/mL    'mg per milliliter'
    g/L    'grams per liter'
+   pM    picomolar
+   w/w    ?
+   '% v/v'    ?
+   '% w/v'    ?
+   '% w/w'    ?
+   mg/L    ?
+   mg/uL    ?
+   ug/mL    ?
+   ug/uL    ?
+   mL    ?
+   uL    ?
+   A260    ?
+   eq    ?
+   ratio    ?
+   saturated    ?
+   tablet/100mL    ?
+   na    ?
 
    stop_
 
@@ -40845,6 +41066,10 @@ Units for the value of the sample condition (temperature pressure pH).
    m^2/s    ?
    Pa.s    ?
    'Not defined'    ?
+   hPa    "hecto Pascal"
+   pD    ?
+   %    ?
+   s    second
 
    stop_
 
@@ -42401,64 +42626,64 @@ Commercial or academic supplier of the software product.
      _item_enumeration.value
      _item_enumeration.detail
 
-   '(ACME) - Delaglio$ Zhengrong and Bax'    ?
-   '(AMBER) - Case$ Darden$ Cheatham$ III$ Simmerling$ Wang$ Duke$ Luo$ ... and Kollman'    ?
+   '(ACME) - Delaglio, Zhengrong and Bax'    ?
+   '(AMBER) - Case, Darden, Cheatham, III, Simmerling, Wang, Duke, Luo, ... and Kollman'    ?
    '(ANSIG) - Kraulis'    ?
    '(Analysis) - CCPN'    ?
-   '(AQUA) - Rullmann$ Doreleijers and Kaptein'    ?
-   "(ARIA) - Linge$ O'Donoghue and Nilges"    ?
-   '(AURELIA) - Neidig$ Geyer$ Gorler$ Antz$ Saffrich$ Beneicke$ Kalbitzer'    ?
+   '(AQUA) - Rullmann, Doreleijers and Kaptein'    ?
+   "(ARIA) - Linge, O'Donoghue and Nilges"    ?
+   '(AURELIA) - Neidig, Geyer, Gorler, Antz, Saffrich, Beneicke, Kalbitzer'    ?
    '(AUREMOL) - Bruker Biospin'    ?
-   '(AutoAssign) - Zimmerman$ Moseley$ Kulikowski and Montelione'    ?
-   '(AutoStructure) - Huang$ Tejero$ Powers and Montelione'    ?
+   '(AutoAssign) - Zimmerman, Moseley, Kulikowski and Montelione'    ?
+   '(AutoStructure) - Huang, Tejero, Powers and Montelione'    ?
    '(AVS) - Moseley and Montelione'    ?
    '(AZARA) - Boucher'    ?
-   '(CANDID) - Herrmann$ Guntert and Wuthrich'    ?
+   '(CANDID) - Herrmann, Guntert and Wuthrich'    ?
    '(CAPP) - Garrett'    ?
    '(CARA) - Keller and Wuthrich'    ?
    '(CcpNMR) - CCPN'    ?
-   '(CNS) - Brunger$ Adams$ Clore$ Gros$ Nilges and Read'    ?
-   '(CS-Rosetta) - Shen$ Vernon$ Baker and Bax'    ?
-   '(CYANA) -  Guntert$ Mumenthaler and Wuthrich'    ?
+   '(CNS) - Brunger, Adams, Clore, Gros, Nilges and Read'    ?
+   '(CS-Rosetta) - Shen, Vernon, Baker and Bax'    ?
+   '(CYANA) -  Guntert, Mumenthaler and Wuthrich'    ?
    '(DGII) - Accelrys Software Inc.'    ?
-   '(DIANA) - Guntert$ Braun and Wuthrich'    ?
+   '(DIANA) - Guntert, Braun and Wuthrich'    ?
    '(DISCOVER) - Accelrys Software Inc.'    ?
    '(DSPACE) - Hare'    ?
-   '(DYANA) - Guntert$ Braun and Wuthrich'    ?
+   '(DYANA) - Guntert, Braun and Wuthrich'    ?
    '(DYNAMO) - Delaglio and Kuszewski'    ?
-   '(EMBOSS - Rice$ Longden and Bleasby'    ?
+   '(EMBOSS - Rice, Longden and Bleasby'    ?
    '(FANTOM) - Braun'    ?
    '(Felix) - Accelrys Software Inc.'    ?
-   '(GARANT) - Bartels$ Guntert$ Billeter and Wuthrich'    ?
-   '(Gaussian) - Gaussian$ Inc.'    ?
+   '(GARANT) - Bartels, Guntert, Billeter and Wuthrich'    ?
+   '(Gaussian) - Gaussian, Inc.'    ?
    '(GIFA) - Delsuc'    ?
    '(GROMOS) - van Gunsteren and Berendsen'    ?
    '(HADDOCK) - Alexandre Bonvin'    ?
-   '(HYPER) - Tejero$ Monleon$ Celda$ Powers and Montelione'    ?
+   '(HYPER) - Tejero, Monleon, Celda, Powers and Montelione'    ?
    '(InsightII) -  Accelrys Software Inc.'    ?
    '(ModelFree) - Palmer'    ?
-   '(Molmol) - Koradi$ Billeter and Wuthrich'    ?
+   '(Molmol) - Koradi, Billeter and Wuthrich'    ?
    '(MOLPROBITY) - Richardson'    ?
    '(MORASS) - Luxon'    ?
    '(NDEE) - Roesch and Herrmann'    ?
-   '(NMRDraw) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'    ?
-   '(NMRPipe) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'    ?
-   '(NMRView) - Johnson$ One Moon Scientific'    ?
+   '(NMRDraw) - Delaglio, Grzesiek, Vuister, Zhu, Pfeifer and Bax'    ?
+   '(NMRPipe) - Delaglio, Grzesiek, Vuister, Zhu, Pfeifer and Bax'    ?
+   '(NMRView) - Johnson, One Moon Scientific'    ?
    '(NUTS) - Acorn NMR Inc.'    ?
-   '(OPAL) - Luginbuhl$ Guntert$ Billeter and Wuthrich'    ?
-   '(PECAN) - Eghbalnia$ Wang$ Bahrami$ Assadi$ and Markley'    ?
-   '(PINE) - Bahrami$ Markley$ Assadi$ and Eghbalnia'    ?
+   '(OPAL) - Luginbuhl, Guntert, Billeter and Wuthrich'    ?
+   '(PECAN) - Eghbalnia, Wang, Bahrami, Assadi, and Markley'    ?
+   '(PINE) - Bahrami, Markley, Assadi, and Eghbalnia'    ?
    '(PIPP) - Garrett'    ?
-   '(PISTACHIO) - Eghbalnia$ Bahrami$ Wang$ Assadi and Markley'    ?
-   '(Procheck) - Laskowski$ MacArthur$ Smith$ Jones$ Hutchinson$ Morris$ Moss and Thornton'    ?
+   '(PISTACHIO) - Eghbalnia, Bahrami, Wang, Assadi and Markley'    ?
+   '(Procheck) - Laskowski, MacArthur, Smith, Jones, Hutchinson, Morris, Moss and Thornton'    ?
    '(ProcheckNMR) - Laskowski and MacArthur'    ?
    '(P-ROI) - Kohda'    ?
-   '(PRONTO) - Kjur$ Andersen and Poulsen'    ?
+   '(PRONTO) - Kjur, Andersen and Poulsen'    ?
    '(PROSA) - Guntert'    ?
    '(PSVS) - Bhattacharya and Montelione'    ?
-   '(QUEEN) - Nabuurs$ Spronk$ Krieger$ Maassen$ Vriend and Vuister'    ?
+   '(QUEEN) - Nabuurs, Spronk, Krieger, Maassen, Vriend and Vuister'    ?
    '(RESCUE) - Pons and Delsuc'    ?
-   '(SANE) - Duggan$ Legge$ Dyson & Wright'    ?
+   '(SANE) - Duggan, Legge, Dyson & Wright'    ?
    '(SPARKY) - Goddard'    ?
    '(SPARTA) - Shen and Bax'    ?
    '(SPARTA+) - Shen and Bax'    ?
@@ -42466,7 +42691,7 @@ Commercial or academic supplier of the software product.
    '(STAPP) - Garrett'    ?
    '(Surflex-Dock) - Tripos'    ?
    '(SYBYL) - Tripos'    ?
-   '(TALOS) - Cornilescu$ Delaglio and Bax'    ?
+   '(TALOS) - Cornilescu, Delaglio and Bax'    ?
    '(TINKER) - Ponder'    ?
    '(TOPSPIN) - Bruker Biospin'    ?
    '(TRIAD) - Tripos'    ?
@@ -42477,7 +42702,7 @@ Commercial or academic supplier of the software product.
    '(Wattos) - Doreleijers'    ?
    '(XEASY) - Bartels et al.'    ?
    '(X-PLOR) - Brunger'    ?
-   '(X-PLOR NIH) - Schwieters$ Kuszewski$ Tjandra and Clore'    ?
+   '(X-PLOR NIH) - Schwieters, Kuszewski, Tjandra and Clore'    ?
    '(xwinnmr) - Bruker Biospin'    ?
 
    stop_
@@ -43877,7 +44102,8 @@ save_Mass_spec
    loop_
      _category_key.name
 
-     '_Mass_spec.Sf_ID'
+     '_Mass_spec.Entry_ID'
+     '_Mass_spec.ID'
 
    stop_
 
@@ -44162,17 +44388,8 @@ The name or acronym used to describe the model of the spectrometer.
    _item.name                  '_Mass_spec.Model'
    _item.category_id              'Mass_spec'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -44378,17 +44595,8 @@ The name of the component in the mass spectrometer.
    _item.name                  '_Mass_spec_config.Component_name'
    _item.category_id              'Mass_spec_config'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -44572,17 +44780,8 @@ a depositor.
    _item.name                  '_Mass_spec_component_param.Name'
    _item.category_id              'Mass_spec_component_param'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -44605,17 +44804,8 @@ The value for the parameter. This value may be numeric or a character string.
    _item.name                  '_Mass_spec_component_param.Value'
    _item.category_id              'Mass_spec_component_param'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -45028,7 +45218,7 @@ Items in the mass_spectrometer_list category provide meta information regarding 
    loop_
      _category_key.name
 
-     '_Mass_spectrometer_list.Sf_ID'
+     '_Mass_spectrometer_list.Entry_ID'
 
    stop_
 
@@ -45352,17 +45542,8 @@ The name or acronym used to describe the model of the spectrometer.
    _item.name                  '_Mass_spectrometer_view.Model'
    _item.category_id              'Mass_spectrometer_view'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -45386,21 +45567,8 @@ by the proton frequency of the instrument expressed in MHz.
    _item.name                  '_Mass_spectrometer_view.Type'
    _item.category_id              'Mass_spectrometer_view'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   Q-TOF    ?
-   'ion TRAP'    ?
-   FTMS    ?
-   Quadrupole    ?
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -45458,17 +45626,8 @@ The kind of ionization method used by the defined mass spectrometer.
    _item.name                  '_Mass_spectrometer_view.Ionization_method'
    _item.category_id              'Mass_spectrometer_view'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -45491,17 +45650,8 @@ The type of spectrum produced by the mass spectrometer.
    _item.name                  '_Mass_spectrometer_view.Spectrum_type'
    _item.category_id              'Mass_spectrometer_view'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -46297,17 +46447,8 @@ Name of the company or other entity that built the Mass spectrometer.
    _item.name                  '_Chromatographic_system.Pump_manufacturer'
    _item.category_id              'Chromatographic_system'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -46330,17 +46471,8 @@ The name or acronym used to describe the model of the spectrometer.
    _item.name                  '_Chromatographic_system.Pump_model'
    _item.category_id              'Chromatographic_system'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -46729,17 +46861,8 @@ Vendor from whom the chromatographic column was purchased.
    _item.name                  '_Chromatographic_column.Vendor'
    _item.category_id              'Chromatographic_column'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -46762,17 +46885,8 @@ The type of chromatographic column listed.
    _item.name                  '_Chromatographic_column.Type'
    _item.category_id              'Chromatographic_column'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -48148,6 +48262,13 @@ Name of the company or other entity that built the NMR spectrometer.
    GE    ?
    JEOL    ?
    Varian    ?
+   Agilent    ?
+   Cambridge    ?
+   Oxford    ?
+   FBML    ?
+   Nicolet    ?
+   Home-build    ?
+   na    ?
 
    stop_
 
@@ -48741,6 +48862,13 @@ Name of the company or other entity that built the NMR spectrometer.
    GE    ?
    JEOL    ?
    Varian    ?
+   Agilent    ?
+   Cambridge    ?
+   Oxford    ?
+   FBML    ?
+   Nicolet    ?
+   Home-built    ?
+   na    ?
 
    stop_
 
@@ -48861,6 +48989,21 @@ by the proton frequency of the instrument expressed in MHz.
    920    ?
    950    ?
    1000    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   ?    ?
+   'not available'    ?
 
    stop_
 
@@ -49252,11 +49395,13 @@ Name of the company or other entity that built the NMR probe.
      _item_enumeration.value
      _item_enumeration.detail
 
+   Agilent    ?
    Bruker    ?
    DOTY    ?
    GE    ?
    JEOL    ?
    Varian    ?
+   na    ?
 
    stop_
 
@@ -49515,6 +49660,7 @@ The type of probe.
    'saddle coil'    ?
    'room temperature'    ?
    'cryogenically cooled'    ?
+   na    ?
 
    stop_
 
@@ -51757,17 +51903,9 @@ A commonly used name for the NMR experiment found in the literature.
    _item.name                  '_NMR_spec_expt.Name'
    _item.category_id              'NMR_spec_expt'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
+   _item_enumeration.closed_flag   yes
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -51892,7 +52030,7 @@ Type of NMR tube used to contain the sample during data acquisition.
      _item_enumeration.detail
 
    'cylindrical microcell'    ?
-   Shegami    ?
+   Shigemi    ?
    'spherical microcell'    ?
    'standard cylindrical'    ?
 
@@ -52270,16 +52408,8 @@ Name for the NMR experiment as defined by a systematic naming system.
    _item.name                  '_NMR_expt_systematic_name.Name'
    _item.category_id              'NMR_expt_systematic_name'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -52304,6 +52434,7 @@ NMR experiment.
    _item.category_id              'NMR_expt_systematic_name'
    _item.mandatory_code            no
    _item_enumeration.flag          yes
+   _item_enumeration.closed_flag   no
    _item_type.code                'line'
 
    loop_
@@ -52488,6 +52619,9 @@ The type of time-domain file being deposited.
    'Pulse field gradient'    ?
    'Peak list'    ?
    'Spectral image'    ?
+   'Acquisition parameters'    ?
+   'Processing parameters'    ?
+   na    ?
 
    stop_
 
@@ -54481,17 +54615,8 @@ The type of parameter specified (acquisition or processing).
    _item.name                  '_MS_expt_param.Type'
    _item.category_id              'MS_expt_param'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -55129,17 +55254,8 @@ The units of the measure for the volume of the sample.
    _item.name                  '_FRET_expt.Sample_volume_units'
    _item.category_id              'FRET_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -57175,7 +57291,7 @@ as a chemical shift reference.
    'ammonium hydroxide'    'N ammonium nitrogen'
    'ammonium nitrate'    'N ammonium nitrogen'
    '[15N] ammonium nitrate'    'N ammonium nitrogen'
-   '[15N$ 15N] ammonium nitrate'    'N ammonium nitrogen'
+   '[15N, 15N] ammonium nitrate'    'N ammonium nitrogen'
    'ammonium nitrite'    'N ammonium nitrogen'
    'ammonium sulfate'    'N ammonium nitrogen'
    '[15N] ammonium sulfate'    'N ammonium nitrogen'
@@ -57362,6 +57478,8 @@ shift reference.
 
    ppm    'parts per million'
    Hz    Hertz
+   MHz    'megahertz'
+   na    'not available'
 
    stop_
 
@@ -57597,6 +57715,8 @@ static field (Bo) of the spectrometer.
 
    parallel    ?
    perpendicular    ?
+   'magic angle'    ?
+   na    ?
 
    stop_
 
@@ -58480,17 +58600,8 @@ The name of an experiment used to determine the data reported.
    _item.name                  '_Chem_shift_experiment.Experiment_name'
    _item.category_id              'Chem_shift_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -58720,6 +58831,8 @@ shifts observed for a specific type of atom.
    '13C isotope effect'    ?
    '15N isotope effect'    ?
    'SAIL isotope labeling'    ?
+   'spectrometer error'    ?
+   na    ?
 
    stop_
 
@@ -58761,6 +58874,9 @@ The kind of atom to which the chemical shift offset value applies.
    'all 15N'    ?
    'all 19F'    ?
    'all 31P'    ?
+   'backbone CA'    ?
+   'backbone CB'    ?
+   na    ?
 
    stop_
 
@@ -60698,17 +60814,8 @@ Pointer to a saveframe of the category NMR spectrometer experiment.
    _item.name                  '_Coupling_constant_experiment.Experiment_name'
    _item.category_id              'Coupling_constant_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -62474,17 +62581,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Spectral_peak_list.Experiment_name'
    _item.category_id              'Spectral_peak_list'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -62797,6 +62895,40 @@ The width of the spectral window observed in Hz.
 
 ;
 6132.234
+;
+
+   stop_
+
+save_
+
+save__Spectral_dim.Sweep_width_units
+
+   _item_description.description
+;
+The units for the sweep width value (Hz or ppm)
+;
+
+   _item.name                  '_Spectral_dim.Sweep_width_units'
+   _item.category_id              'Spectral_dim'
+   _item.mandatory_code            no
+   _item_enumeration.flag          yes
+   _item_enumeration.closed_flag   yes
+   _item_type.code                'float'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   Hz    Hertz
+   ppm    'parts per million'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+ppm
 ;
 
    stop_
@@ -63187,7 +63319,6 @@ Unique identifier for the spectral peak.
   '_Peak_general_char.Peak_ID'                           'Peak_general_char'             yes
   '_Peak_char.Peak_ID'                                   'Peak_char'                     yes
   '_Assigned_peak_chem_shift.Peak_ID'                    'Assigned_peak_chem_shift'      yes
-  '_Spectral_transition_general_char.Spectral_transition_ID'                'Spectral_transition_general_char'   yes
   '_Assigned_spectral_transition.Peak_ID'                'Assigned_spectral_transition'       yes
   '_Gen_dist_constraint.Spectral_peak_ID'                'Gen_dist_constraint'           yes
   '_Dist_constraint_value.Spectral_peak_ID'              'Dist_constraint_value'         yes
@@ -63201,7 +63332,6 @@ Unique identifier for the spectral peak.
   '_Peak_general_char.Peak_ID'                           '_Peak.ID'
   '_Peak_char.Peak_ID'                                   '_Peak.ID'
   '_Assigned_peak_chem_shift.Peak_ID'                    '_Peak.ID'
-  '_Spectral_transition_general_char.Spectral_transition_ID'                '_Peak.ID'
   '_Assigned_spectral_transition.Peak_ID'                '_Peak.ID'
   '_Gen_dist_constraint.Spectral_peak_ID'                '_Peak.ID'
   '_Dist_constraint_value.Spectral_peak_ID'              '_Peak.ID'
@@ -63475,6 +63605,7 @@ Method used to determine the intensity value for the peak.
    'relative height'    ?
    volume    ?
    'number of contours'    ?
+   integration    ?
 
    stop_
 
@@ -64643,7 +64774,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _item.name                  '_Assigned_peak_chem_shift.Atom_ID'
    _item.category_id              'Assigned_peak_chem_shift'
-   _item.mandatory_code            yes
+   _item.mandatory_code            no
    _item_enumeration.flag          no
    _item_type.code                'atcode'
 
@@ -64984,6 +65115,7 @@ Unique identifier for the spectral peak.
       _item.mandatory_code
 
   '_Spectral_transition.ID'                              'Spectral_transition'           yes
+  '_Spectral_transition_general_char.Spectral_transition_ID'                'Spectral_transition_general_char'   yes
   '_Spectral_transition_char.Spectral_transition_ID'                        'Spectral_transition_char'      yes
   '_Assigned_spectral_transition.Spectral_transition_ID'                    'Assigned_spectral_transition'       yes
 
@@ -64993,6 +65125,7 @@ Unique identifier for the spectral peak.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_Spectral_transition_general_char.Spectral_transition_ID'                '_Spectral_transition.ID'
   '_Spectral_transition_char.Spectral_transition_ID'                        '_Spectral_transition.ID'
   '_Assigned_spectral_transition.Spectral_transition_ID'                    '_Spectral_transition.ID'
 
@@ -65174,7 +65307,7 @@ save__Spectral_transition_general_char.Spectral_transition_ID
 
    _item_description.description
 ;
-Pointer to '_Peak.ID'
+Pointer to '_Spectral_transition.ID'
 ;
 
    _item.name                  '_Spectral_transition_general_char.Spectral_transition_ID'
@@ -68563,17 +68696,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Isotope_effect_experiment.Experiment_name'
    _item.category_id              'Isotope_effect_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -70630,17 +70754,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Mol_interaction_diff_experiment.Experiment_name'
    _item.category_id              'Mol_interaction_diff_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -71902,6 +72017,7 @@ Provide the units used for the chemical shift anisotropy values reported.
      _item_enumeration.detail
 
    ppm    ?
+   ppb    ?
 
    stop_
 
@@ -72063,17 +72179,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_CS_anisotropy_experiment.Experiment_name'
    _item.category_id              'CS_anisotropy_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -75592,17 +75699,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_RDC_experiment.Experiment_name'
    _item.category_id              'RDC_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -77482,17 +77580,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Dipolar_coupling_experiment.Experiment_name'
    _item.category_id              'Dipolar_coupling_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -79347,17 +79436,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Spectral_density_experiment.Experiment_name'
    _item.category_id              'Spectral_density_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -80860,17 +80940,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Other_data_experiment.Experiment_name'
    _item.category_id              'Other_data_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -82183,17 +82254,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Chemical_rate_experiment.Experiment_name'
    _item.category_id              'Chemical_rate_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -82882,17 +82944,8 @@ The type of rate value reported
    _item.name                  '_Chemical_rate.Val_type'
    _item.category_id              'Chemical_rate'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -83674,17 +83727,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_H_exch_rate_experiment.Experiment_name'
    _item.category_id              'H_exch_rate_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -85099,17 +85143,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_H_exch_protection_fact_experiment.Experiment_name'
    _item.category_id              'H_exch_protection_fact_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -86322,6 +86357,7 @@ Enter the method used to measure the intensities of the NOE peaks.
    'peak volume'    ?
    'peak height'    ?
    'contour count'    ?
+   na    ?
 
    stop_
 
@@ -88337,17 +88373,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Heteronucl_NOE_experiment.Experiment_name'
    _item.category_id              'Heteronucl_NOE_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -90103,17 +90130,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Heteronucl_T1_experiment.Experiment_name'
    _item.category_id              'Heteronucl_T1_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -91393,8 +91411,8 @@ A code describing the nuclei involved in the measured T1rho coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   I(+$-)    'single quantum'
-   S(+$-)    'single quantum'
+   I(+,-)    'single quantum'
+   S(+,-)    'single quantum'
 
    stop_
 
@@ -91627,17 +91645,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Heteronucl_T1rho_experiment.Experiment_name'
    _item.category_id              'Heteronucl_T1rho_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -92965,8 +92974,8 @@ A code describing the nuclei involved in the measured T2 coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   I(+$-)    'single quantum'
-   S(+$-)    'single quantum'
+   I(+,-)    'single quantum'
+   S(+,-)    'single quantum'
 
    stop_
 
@@ -93199,17 +93208,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Heteronucl_T2_experiment.Experiment_name'
    _item.category_id              'Heteronucl_T2_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -94882,17 +94882,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Auto_relaxation_experiment.Experiment_name'
    _item.category_id              'Auto_relaxation_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -96338,17 +96329,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Dipole_dipole_relax_experiment.Experiment_name'
    _item.category_id              'Dipole_dipole_relax_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -98067,17 +98049,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Cross_correlation_DD_experiment.Experiment_name'
    _item.category_id              'Cross_correlation_DD_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -100486,17 +100459,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Cross_correlation_D_CSA_experiment.Experiment_name'
    _item.category_id              'Cross_correlation_D_CSA_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -103016,17 +102980,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Order_parameter_experiment.Experiment_name'
    _item.category_id              'Order_parameter_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -104815,17 +104770,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_PH_titration_experiment.Experiment_name'
    _item.category_id              'PH_titration_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -107266,17 +107212,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_D_H_fract_factor_experiment.Experiment_name'
    _item.category_id              'D_H_fract_factor_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -108568,17 +108505,8 @@ save__Binding_experiment.Experiment_name
    _item.name                  '_Binding_experiment.Experiment_name'
    _item.category_id              'Binding_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -110987,17 +110915,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Deduced_secd_struct_experiment.Experiment_name'
    _item.category_id              'Deduced_secd_struct_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -112791,17 +112710,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Deduced_H_bond_experiment.Experiment_name'
    _item.category_id              'Deduced_H_bond_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -118500,17 +118410,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Conformer_family_coord_set_expt.Experiment_name'
    _item.category_id              'Conformer_family_coord_set_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -131446,6 +131347,12 @@ A commonly used term that describes the chemical nature of the bond.
    'metal coordination'    ?
    peptide    ?
    thioether    ?
+   oxime    ?
+   thioester    ?
+   phosphoester    ?
+   phosphodiester    ?
+   diselenide    ?
+   na    ?
 
    stop_
 
@@ -137490,17 +137397,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Gen_dist_constraint_expt.Experiment_name'
    _item.category_id              'Gen_dist_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -141174,17 +141072,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Distance_constraint_expt.Experiment_name'
    _item.category_id              'Distance_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -145726,17 +145615,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_Torsion_angle_constraints_expt.Experiment_name'
    _item.category_id              'Torsion_angle_constraints_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -150512,17 +150392,8 @@ Pointer to a saveframe of the category 'NMR_spectrometer_expt'
    _item.name                  '_RDC_constraint_expt.Experiment_name'
    _item.category_id              'RDC_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -153813,17 +153684,8 @@ Pointer to '_Experiment.Name'
    _item.name                  '_J_three_bond_constraint_expt.Experiment_name'
    _item.category_id              'J_three_bond_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -156329,17 +156191,8 @@ Pointer to '_Experiment.Name'
    _item.name                  '_CA_CB_constraint_expt.Experiment_name'
    _item.category_id              'CA_CB_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -159189,17 +159042,8 @@ Pointer to '_Experiment.Name'
    _item.name                  '_H_chem_shift_constraint_expt.Experiment_name'
    _item.category_id              'H_chem_shift_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -160609,17 +160453,8 @@ Pointer to '_Experiment.Name'
    _item.name                  '_SAXS_constraint_expt.Experiment_name'
    _item.category_id              'SAXS_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -161714,17 +161549,8 @@ Pointer to '_Experiment.Name'
    _item.name                  '_Other_constraint_expt.Experiment_name'
    _item.category_id              'Other_constraint_expt'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -162957,17 +162783,8 @@ Pointer to '_Experiment.Name'
    _item.name                  '_MZ_ratio_experiment.Experiment_name'
    _item.category_id              'MZ_ratio_experiment'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -165024,17 +164841,8 @@ Pointer to '_Experiment.Name'
    _item.name                  '_MS_chromatogram_experiment.Experiment_name'
    _item.category_id              'MS_chromatogram_experiment'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
