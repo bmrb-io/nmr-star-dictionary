@@ -9,7 +9,7 @@
      
 data_NMR-STAR_tag_enumerations
 
-    _Revision_date      2013-06-12
+    _Revision_date      2013-10-01
 
 
 save__Assembly.Ambiguous_chem_comp_sites
@@ -400,17 +400,6 @@ save__Binding_experiment.Sample_state
 
 save_ 
 
-save__Binding_result.Val_type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?            .
-
-  stop_
-
-save_ 
 
 save__Entity_bond.Type
 
@@ -1182,6 +1171,7 @@ save__Chem_shift_ref.Atom_type
    H          .
    C          .
    N          .
+   F          .
    P          .
    Cd         . 
 
@@ -1521,19 +1511,6 @@ save_
 
 
 
-
-save__Chromatographic_system.Pump_model
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-  
-     ?           .
-
-     stop_
-
-save_
-
 save__Citation.Class
 
      loop_
@@ -1758,18 +1735,6 @@ Windows New Technology operating system
 
 save_
 
-
-save__Conformer_family_coord_set.Atom_site_uncertainty_desc
-
-    loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-       ?      ?
-
-    stop_
-
-save_
 
 save__Conformer_family_refinement.Refine_method
 
@@ -2178,8 +2143,8 @@ save__Contact_person.Family_title
       II               Second
       III              Third
       IV               Fourth
+      V                Fifth
       
-
     stop_
 
 save_
@@ -3460,15 +3425,14 @@ save__Entity_natural_src.Secretion
       'vaginal fluid'    .
        venom             .
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
-   'hen egg white'      .
-   'sensillum lymph'    .
-   milk                 .
-   blood                .
-   dermal               .
-   urine                .
-    extracellular       .
-   cement               .
-
+   'hen egg white'       .
+   'sensillum lymph'     .
+    milk                 .
+    blood                .
+    dermal               .
+    urine                .
+    extracellular        .
+    cement               .
 
     stop_
 
@@ -5478,30 +5442,6 @@ save__MS_chromatogram_list.Text_data_format
 save_
 
 
-save__MS_chromatogram_param.Name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?                 .
-
-    stop_
-
-save_
-
-save__MS_chromatogram_param.Units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?                 .
-
-    stop_
-
-save_
-
 save__MS_expt_param.Name
 
     loop_
@@ -5538,29 +5478,6 @@ save__MS_expt.Spectrum_type
 
 save_
 
-save__MZ_ratio_spectrum_param.Name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?                   .
-
-    stop_
-
-save_
-
-save__MZ_ratio_spectrum_param.Units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      ?                   .
-
-    stop_
-
-save_
 
 
 save__NMR_experiment_file.Type
@@ -5856,7 +5773,7 @@ save__NMR_spectrometer.Manufacturer
    Oxford       .
    FBML         .
    Nicolet      .
-   Home-build   .
+   Home-built   .
    na           .
 
   stop_
@@ -6101,30 +6018,6 @@ save_
 #  stop_
 
 #save_ 
-
-save__MZ_ratio_data_list.Error_derivation_method
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-       ?           .
-
-  stop_
-
-save_
-
-save__MZ_ratio_data_list.Text_data_format
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-       ?           .
-
-  stop_
-
-save_
 
 
 save__Order_param.Model_fit
@@ -6554,18 +6447,6 @@ save__Sample.Solvent_system
 save_
 
 
-save__Sample.Sub_type
-
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?     .
-
-  stop_
-
-save_
 
 save__Sample.Type
 
@@ -7524,42 +7405,6 @@ save__Tensor_list.Matrix_val_units
      _item_enumeration_description
 
     s-1            .
-
-  stop_
-
-save_
-
-save__Tensor_list.Isotropic_val_type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?            .
-
-  stop_
-
-save_
-
-save__Tensor_list.Angle_units
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?            .
-
-  stop_
-
-save_
-
-save__Tensor_list.Euler_angle_type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ?            .
 
   stop_
 

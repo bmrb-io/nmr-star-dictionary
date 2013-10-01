@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2013-09-30
+#  version date -  2013-10-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.50
+    _dictionary.version         3.1.1.51
 
      loop_
        _dictionary_history.version
@@ -39,7 +39,7 @@ data_mmcif_nmr-star.dic
 ;
 
 
-     3.1.1.50         ?
+     3.1.1.51         ?
 ;
      ?
 ;
@@ -2466,7 +2466,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item_enumeration.flag          yes
    _item_enumeration.closed_flag   no
    _item_type.code                'line'
-   _item_default.value            '3.1.1.50'
+   _item_default.value            '3.1.1.51'
 
    loop_
      _item_enumeration.value
@@ -40241,7 +40241,7 @@ Name of the company or other entity that built the NMR spectrometer.
    Oxford    ?
    FBML    ?
    Nicolet    ?
-   Home-build    ?
+   Home-built    ?
    na    ?
 
    stop_
@@ -104355,17 +104355,8 @@ in the atomic coordinates.
    _item.name                  '_conformer_family_coord_set.atom_site_uncertainty_desc'
    _item.category_id              'conformer_family_coord_set'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'text'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -119961,16 +119952,8 @@ save__tensor_list.isotropic_val_type
    _item.name                  '_tensor_list.isotropic_val_type'
    _item.category_id              'tensor_list'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -119993,16 +119976,8 @@ save__tensor_list.angle_units
    _item.name                  '_tensor_list.angle_units'
    _item.category_id              'tensor_list'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
+   _item_enumeration.flag          no
    _item_type.code                'code'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -120097,16 +120072,8 @@ save__tensor_list.euler_angle_type
    _item.name                  '_tensor_list.euler_angle_type'
    _item.category_id              'tensor_list'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -146452,17 +146419,8 @@ Method used to derive the reported error values.
    _item.name                  '_mz_ratio_data_list.error_derivation_method'
    _item.category_id              'mz_ratio_data_list'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -146510,17 +146468,8 @@ text block that is the value to the '_MZ_ratio_data_list.Text_data' tag.
    _item.name                  '_mz_ratio_data_list.text_data_format'
    _item.category_id              'mz_ratio_data_list'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'code'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -146996,17 +146945,8 @@ The name given the parameter
    _item.name                  '_mz_ratio_spectrum_param.name'
    _item.category_id              'mz_ratio_spectrum_param'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -147053,17 +146993,8 @@ The units used for the value of the parameter.
    _item.name                  '_mz_ratio_spectrum_param.units'
    _item.category_id              'mz_ratio_spectrum_param'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'code'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -148849,17 +148780,8 @@ The name given the parameter
    _item.name                  '_ms_chromatogram_param.name'
    _item.category_id              'ms_chromatogram_param'
    _item.mandatory_code            yes
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -148906,17 +148828,8 @@ The units used for the value of the parameter.
    _item.name                  '_ms_chromatogram_param.units'
    _item.category_id              'ms_chromatogram_param'
    _item.mandatory_code            no
-   _item_enumeration.flag          yes
-   _item_enumeration.closed_flag   no
+   _item_enumeration.flag          no
    _item_type.code                'code'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   ?    ?
-
-   stop_
 
    loop_
      _item_examples.case
