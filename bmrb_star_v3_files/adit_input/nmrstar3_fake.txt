@@ -136,6 +136,7 @@ save_<entry_information>
   _Entry.Sf_ID                                     2
   _Entry.ID                                        1
   _Entry.Title                                     "Possible multiline text"
+  _Entry.Type                                      "Long string value"
   _Entry.Version_type                              "String value"
   _Entry.Submission_date                           2002-04-15
   _Entry.Accession_date                            2002-04-15
@@ -2135,24 +2136,24 @@ save_<EMR_instrument>
   _EMR_instrument.Serial_number          "Long string value"
 save_
 
-save_<X_ray_instrument>
-  _X_ray_instrument.Sf_category     X_ray_instrument
-  _X_ray_instrument.Sf_framecode     <X_ray_instrument>
+save_<Xray_instrument>
+  _Xray_instrument.Sf_category     Xray_instrument
+  _Xray_instrument.Sf_framecode     <Xray_instrument>
 
-  _X_ray_instrument.Entry_ID                               1
-  _X_ray_instrument.Sf_ID                                  2
-  _X_ray_instrument.ID                                     2
-  _X_ray_instrument.Details                                "Possible multiline text"
-  _X_ray_instrument.Location                               "Long string value"
-  _X_ray_instrument.Type                                   "Long string value"
-  _X_ray_instrument.Manufacturer                           "Long string value"
-  _X_ray_instrument.Model                                  "Long string value"
-  _X_ray_instrument.Serial_number                          "Long string value"
-  _X_ray_instrument.Detector_type                          "Long string value"
-  _X_ray_instrument.Source                                 "Long string value"
-  _X_ray_instrument.Wavelength                             110.234
-  _X_ray_instrument.SAXS_detector_sample_distance          110.234
-  _X_ray_instrument.WAXS_detector_sample_distance          110.234
+  _Xray_instrument.Entry_ID                               1
+  _Xray_instrument.Sf_ID                                  2
+  _Xray_instrument.ID                                     2
+  _Xray_instrument.Details                                "Possible multiline text"
+  _Xray_instrument.Location                               "Long string value"
+  _Xray_instrument.Type                                   "Long string value"
+  _Xray_instrument.Manufacturer                           "Long string value"
+  _Xray_instrument.Model                                  "Long string value"
+  _Xray_instrument.Serial_number                          "Long string value"
+  _Xray_instrument.Detector_type                          "Long string value"
+  _Xray_instrument.Source                                 "Long string value"
+  _Xray_instrument.Wavelength                             110.234
+  _Xray_instrument.SAXS_detector_sample_distance          110.234
+  _Xray_instrument.WAXS_detector_sample_distance          110.234
 save_
 
 save_<NMR_spectrometer>
@@ -2286,8 +2287,8 @@ save_<experiment_list>
      _Experiment.NMR_spectral_processing_label          
      _Experiment.Mass_spectrometer_ID                   
      _Experiment.Mass_spectrometer_label                
-     _Experiment.X_ray_instrument_ID                    
-     _Experiment.X_ray_instrument_label                 
+     _Experiment.Xray_instrument_ID                     
+     _Experiment.Xray_instrument_label                  
      _Experiment.Fluorescence_instrument_ID             
      _Experiment.Fluorescence_instrument_label          
      _Experiment.EMR_instrument_ID                      
@@ -2543,19 +2544,19 @@ save_<SAXS_expt>
   _SAXS_expt.Sf_category     SAXS_expt
   _SAXS_expt.Sf_framecode     <SAXS_expt>
 
-  _SAXS_expt.Entry_ID                        1
-  _SAXS_expt.Sf_ID                           2
-  _SAXS_expt.ID                              2
-  _SAXS_expt.Name                            "Long string value"
-  _SAXS_expt.Sample_volume                   110.234
-  _SAXS_expt.Sample_volume_units             "String value"
-  _SAXS_expt.X_ray_instrument_ID             2
-  _SAXS_expt.X_ray_instrument_label          "Long string value"
-  _SAXS_expt.Software_ID                     2
-  _SAXS_expt.Software_label                  "Long string value"
-  _SAXS_expt.Method_ID                       2
-  _SAXS_expt.Method_label                    "Long string value"
-  _SAXS_expt.Details                         "Possible multiline text"
+  _SAXS_expt.Entry_ID                       1
+  _SAXS_expt.Sf_ID                          2
+  _SAXS_expt.ID                             2
+  _SAXS_expt.Name                           "Long string value"
+  _SAXS_expt.Sample_volume                  110.234
+  _SAXS_expt.Sample_volume_units            "String value"
+  _SAXS_expt.Xray_instrument_ID             2
+  _SAXS_expt.Xray_instrument_label          "Long string value"
+  _SAXS_expt.Software_ID                    2
+  _SAXS_expt.Software_label                 "Long string value"
+  _SAXS_expt.Method_ID                      2
+  _SAXS_expt.Method_label                   "Long string value"
+  _SAXS_expt.Details                        "Possible multiline text"
 save_
 
 save_<computer>
@@ -6155,6 +6156,75 @@ save_<tertiary_struct_elements>
      _Tertiary_struct.Tertiary_struct_element_list_ID          
 
     2  "Short string value"  "Long string value"  2  2    2  "Long string value"  2  2  1    1  "Short string value"  "Short string value"  "Possible multiline text"  2    "Short string value"  "Short string value"  "Short string value"  2  1    2  
+
+  stop_
+
+save_
+
+save_<structure_annotation>
+  _Structure_annotation.Sf_category     structure_annotation
+  _Structure_annotation.Sf_framecode     <structure_annotation>
+  _Structure_annotation.Entry_ID                               1
+  _Structure_annotation.Sf_ID                                  2
+  _Structure_annotation.ID                                     2
+  _Structure_annotation.PDB_ID                                 "Short string value"
+  _Structure_annotation.DB_queried_date                        2002-04-15
+  _Structure_annotation.DB_source                              "Long string value"
+  _Structure_annotation.DB_electronic_address                  "Very very long phrase"
+  _Structure_annotation.DB_source_release_designation          "Long string value"
+  _Structure_annotation.DB_source_release_date                 2002-04-15
+  _Structure_annotation.Details                                "Possible multiline text"
+
+  loop_
+     _Struct_anno_software.Software_ID                      
+     _Struct_anno_software.Software_label                   
+     _Struct_anno_software.Method_ID                        
+     _Struct_anno_software.Method_label                     
+     _Struct_anno_software.Sf_ID                            
+     _Struct_anno_software.Entry_ID                         
+     _Struct_anno_software.Structure_annotation_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Struct_classification.ID                               
+     _Struct_classification.Code                             
+     _Struct_classification.Class                            
+     _Struct_classification.Fold                             
+     _Struct_classification.Superfamily                      
+     _Struct_classification.Family                           
+     _Struct_classification.DB_source_ID                     
+     _Struct_classification.Description                      
+     _Struct_classification.Sf_ID                            
+     _Struct_classification.Entry_ID                         
+     _Struct_classification.Structure_annotation_ID          
+
+    2  "Short string value"  "Long string value"  "Long string value"  "Long string value"    "Long string value"  "String value"  "Possible multiline text"  2  1    2  
+
+  stop_
+
+  loop_
+     _Struct_anno_char.ID                                       
+     _Struct_anno_char.Atom_site_model_ID                       
+     _Struct_anno_char.Assembly_ID                              
+     _Struct_anno_char.Entity_assembly_ID                       
+     _Struct_anno_char.Entity_ID                                
+     _Struct_anno_char.Comp_index_ID                            
+     _Struct_anno_char.Comp_ID                                  
+     _Struct_anno_char.PDB_strand_ID                            
+     _Struct_anno_char.Secondary_structure_code                 
+     _Struct_anno_char.Edge_designation                         
+     _Struct_anno_char.Phi_angle                                
+     _Struct_anno_char.Psi_angle                                
+     _Struct_anno_char.Hydrophobicity                           
+     _Struct_anno_char.Solvent_accessible_surface_area          
+     _Struct_anno_char.Sf_ID                                    
+     _Struct_anno_char.Entry_ID                                 
+     _Struct_anno_char.Structure_annotation_ID                  
+
+    2  2  2  2  2    2  1  "Short string value"  "Short string value"  "Short string value"    110.234  110.234  110.234  110.234  2    1  2  
 
   stop_
 
