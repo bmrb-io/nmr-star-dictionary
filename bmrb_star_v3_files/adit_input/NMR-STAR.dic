@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2013-10-17
+#  version date -  2013-10-21
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.59
+    _dictionary.version         3.1.1.60
 
      loop_
        _dictionary_history.version
@@ -57,7 +57,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
 
 
-     3.1.1.59         ?
+     3.1.1.60         ?
 ;
      ?
 ;
@@ -2404,6 +2404,7 @@ The type of BMRB entry.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
+   _item_default.value            'macromolecule'
 
    loop_
      _item_enumeration.value
@@ -2592,7 +2593,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.59'
+   _item_default.value            '3.1.1.60'
 
    loop_
      _item_enumeration.value
@@ -14506,7 +14507,7 @@ save__entity.type
 
    _item_description.description
 ;
-Entities are of two types polymer or non-polymer.
+Entities are of two types: polymer or non-polymer.
 ;
 
    _item.name                                  '_entity.type'
