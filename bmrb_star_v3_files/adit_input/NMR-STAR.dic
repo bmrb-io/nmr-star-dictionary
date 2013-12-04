@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2013-11-12
+#  version date -  2013-12-03
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.61
+    _dictionary.version         3.1.1.63
 
      loop_
        _dictionary_history.version
@@ -57,7 +57,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
 
 
-     3.1.1.61         ?
+     3.1.1.63         ?
 ;
      ?
 ;
@@ -2593,7 +2593,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.61'
+   _item_default.value            '3.1.1.63'
 
    loop_
      _item_enumeration.value
@@ -2640,6 +2640,9 @@ Version of NMR-STAR in which the current entry is formatted.
    3.0.8.53    ?
    3.1.1.21    ?
    3.1.1.7    ?
+   3.1.1.40    ?
+   3.1.1.44    ?
+   3.1.1.61    ?
 
    stop_
 
@@ -18838,7 +18841,7 @@ Organized structure within a cell.
      _item_enumeration.detail
 
    chloroplast    ?
-   'endoplamic reticulum'    ?
+   'endoplasmic reticulum'    ?
    'golgi apparatus'    ?
    mitochondria    ?
    nucleus    ?
@@ -21587,17 +21590,9 @@ Name of the file that contains an image of the chemical compound.
    _item.name                                  '_chem_comp.image_file_name'
    _item.category_id                           'chem_comp'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          yes
-   _pdbx_item_enumeration_details.closed_flag   no
+   _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   'not applicable'    ?
-
-   stop_
+   _item_default.value            'not applicable'
 
    loop_
      _item_examples.case
@@ -23959,7 +23954,7 @@ A flag indicating an aromatic atom.
      _item_examples.case
 
 ;
-Y
+yes
 ;
 
    stop_
@@ -24552,7 +24547,7 @@ A flag indicating an aromatic bond.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   yes
-   _item_type.code                             'ucode'
+   _item_type.code                             'yes_no'
 
    loop_
      _item_enumeration.value
@@ -38016,14 +38011,35 @@ as a chemical shift reference.
    '[15N] ammonium sulfate'    'N ammonium nitrogen'
    'liquid anhydrous ammonia'    'N ammonium nitrogen'
    formamide    'N ammonium nitrogen'
+   'nitric acid'    ?
    '[15N] nitric acid'    'N nitrogen'
-   Nitromethane    'N nitro group'
+   nitromethane    'N nitro group'
    '[15N] nitromethane'    'N nitro group'
    urea    'N nitrogen'
    'phosphoric acid'    'P phosphate'
    'phosphoric acid (85%)'    'P phosphate'
    TMP    'P phosphate'
    'cadmium perchlorate'    'Cd cadmium'
+   adamantane    ?
+   DMPC    ?
+   HFIP    ?
+   TFA    ?
+   TFE    ?
+   TFE-d2    ?
+   TMPS    ?
+   TMSPA    ?
+   TSP-d4    ?
+   TSPA    ?
+   borate    ?
+   glucose    ?
+   hexamethylbenzene    ?
+   'methyl iodide'    ?
+   p-dioxane    ?
+   'sodium acetate'    ?
+   'sodium phosphate'    ?
+   'suberic acid bis'    ?
+   trichlorofluoromethane    ?
+   na    ?
 
    stop_
 
@@ -58469,7 +58485,7 @@ A keyword that defines the type of value reported as the heteronuclear NOE.
    'peak integral'    ?
    'contour count'    ?
    'relative intensities'    ?
-   'not reported'    ?
+   na    ?
 
    stop_
 
@@ -60851,6 +60867,8 @@ to collect the experimental data.
      _item_enumeration.detail
 
    methanol    ?
+   'monoethylene glycol'    ?
+   'no calibration applied'    ?
 
    stop_
 
@@ -60878,6 +60896,7 @@ caused by the long spin-lock pulse.
 
    'single scan interleaving'    ?
    'temperature compensation block'    ?
+   'no temperature control applied'    ?
 
    stop_
 
@@ -61870,6 +61889,8 @@ to collect the experimental data.
      _item_enumeration.detail
 
    methanol    ?
+   'monoethylene glycol'    ?
+   'no calibration applied'    ?
 
    stop_
 
@@ -61897,6 +61918,7 @@ caused by the long spin-lock pulse.
 
    'single scan interleaving'    ?
    'temperature compensation block'    ?
+   'no temperature control applied'    ?
 
    stop_
 
@@ -68730,9 +68752,9 @@ The units for the reported R exchange values.
      _item_enumeration.value
      _item_enumeration.detail
 
-   s    ?
-   ms    ?
-   us    ?
+   s-1    ?
+   ms-1    ?
+   us-1    ?
 
    stop_
 
@@ -78757,6 +78779,7 @@ The method used to determine the structure.
    'molecular dynamics'    ?
    'matrix relaxation'    ?
    'torsion angle dynamics'    ?
+   na    ?
 
    stop_
 
@@ -81268,10 +81291,12 @@ The method used to determine the structure.
      _item_enumeration.detail
 
    'distance geometry'    ?
+   'DGSA-distance geometry simulated annealing'    ?
    'simulated annealing'    ?
    'molecular dynamics'    ?
    'matrix relaxation'    ?
    'torsion angle dynamics'    ?
+   na    ?
 
    stop_
 
@@ -85832,6 +85857,7 @@ Specific type of constraint.
    ROE    ?
    peptide    ?
    ring    ?
+   PRE    ?
 
    stop_
 
@@ -100653,6 +100679,7 @@ data.  Note that the value is not required to be a number.
 save_
 
 save__torsion_angle_constraint.auth_asym_id_1
+
 
    _item_description.description
 ;
