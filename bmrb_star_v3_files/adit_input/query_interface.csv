@@ -1780,9 +1780,9 @@ TBL_BEGIN,,,,?
 17780,Assigned_chem_shift_list,Sf_ID,?,?
 17790,Assigned_chem_shift_list,ID,C,Assigned chemical shift list ID
 17800,Assigned_chem_shift_list,Data_file_name,?,?
-17810,Assigned_chem_shift_list,Sample_condition_list_ID,?,?
+17810,Assigned_chem_shift_list,Sample_condition_list_ID,C,Sample conditions ID
 17820,Assigned_chem_shift_list,Sample_condition_list_label,?,?
-17830,Assigned_chem_shift_list,Chem_shift_reference_ID,?,?
+17830,Assigned_chem_shift_list,Chem_shift_reference_ID,C,Chemical shift referencing ID
 17840,Assigned_chem_shift_list,Chem_shift_reference_label,?,?
 17850,Assigned_chem_shift_list,Chem_shift_1H_err,?,?
 17860,Assigned_chem_shift_list,Chem_shift_13C_err,?,?
@@ -3384,10 +3384,10 @@ TBL_BEGIN,,,,?
 33820,Order_param,ID,C,Order parameter ID
 33830,Order_param,Assembly_atom_ID,?,?
 33840,Order_param,Entity_assembly_ID,?,?
-33850,Order_param,Entity_ID,?,?
-33860,Order_param,Comp_index_ID,?,?
+33850,Order_param,Entity_ID,?,Molecular entity ID
+33860,Order_param,Comp_index_ID,C,Residue sequence number
 33870,Order_param,Seq_ID,?,?
-33880,Order_param,Comp_ID,C,Compound code (VAL; DT; U)
+33880,Order_param,Comp_ID,C,Residue code (VAL; DT; U)
 33890,Order_param,Atom_ID,C,Atom name (N; CA)
 33900,Order_param,Atom_type,C,Atom type (N; C)
 33910,Order_param,Atom_isotope_number,?,?
@@ -3449,11 +3449,11 @@ TBL_BEGIN,,,,?
 34470,PH_titr_result,ID,C,pH titration result ID
 34480,PH_titr_result,Atm_obs_assembly_atom_ID,?,?
 34490,PH_titr_result,Atm_obs_entity_assembly_ID,?,?
-34500,PH_titr_result,Atm_obs_entity_ID,?,?
-34510,PH_titr_result,Atm_obs_comp_index_ID,?,?
+34500,PH_titr_result,Atm_obs_entity_ID,C,Observed molecular entity ID
+34510,PH_titr_result,Atm_obs_comp_index_ID,C,Observed residue sequence number
 34520,PH_titr_result,Atm_obs_seq_ID,?,?
-34530,PH_titr_result,Atm_obs_comp_ID,?,?
-34540,PH_titr_result,Atm_obs_atom_ID,?,?
+34530,PH_titr_result,Atm_obs_comp_ID,C,Observed residue code (VAL; DT; U)
+34540,PH_titr_result,Atm_obs_atom_ID,C,Observed Atom name (N; CA)
 34550,PH_titr_result,Atm_obs_atom_type,?,?
 34560,PH_titr_result,Atm_obs_atom_isotope_number,?,?
 34570,PH_titr_result,Atm_obs_auth_entity_assembly_ID,?,?
@@ -3462,11 +3462,11 @@ TBL_BEGIN,,,,?
 34600,PH_titr_result,Atm_obs_auth_atom_ID,?,?
 34610,PH_titr_result,Atm_titr_assembly_atom_ID,?,?
 34620,PH_titr_result,Atm_titr_entity_assembly_ID,?,?
-34630,PH_titr_result,Atm_titr_entity_ID,?,?
-34640,PH_titr_result,Atm_titr_comp_index_ID,?,?
+34630,PH_titr_result,Atm_titr_entity_ID,C,Titrated molecular entity ID
+34640,PH_titr_result,Atm_titr_comp_index_ID,C,Titrated residue sequence number
 34650,PH_titr_result,Atm_titr_seq_ID,?,?
-34660,PH_titr_result,Atm_titr_comp_ID,?,?
-34670,PH_titr_result,Atm_titr_atom_ID,?,?
+34660,PH_titr_result,Atm_titr_comp_ID,?,Titrated residue code
+34670,PH_titr_result,Atm_titr_atom_ID,?,Titrated atom name
 34680,PH_titr_result,Atm_titr_atom_type,?,?
 34690,PH_titr_result,Atm_titr_atom_isotope_number,?,?
 34700,PH_titr_result,Atm_titr_auth_entity_assembly_ID,?,?
@@ -3956,19 +3956,19 @@ TBL_BEGIN,,,,?
 39540,Model_type,Entry_ID,?,?
 39550,Model_type,Conformer_family_coord_set_ID,?,?
 39560,Atom_site,Assembly_ID,?,?
-39570,Atom_site,Model_ID,?,?
+39570,Atom_site,Model_ID,C,Model number
 39580,Atom_site,Model_site_ID,?,?
 39590,Atom_site,ID,?,?
 39600,Atom_site,Assembly_atom_ID,?,?
-39610,Atom_site,Label_entity_assembly_ID,?,?
-39620,Atom_site,Label_entity_ID,?,?
-39630,Atom_site,Label_comp_index_ID,?,?
-39640,Atom_site,Label_comp_ID,?,?
-39650,Atom_site,Label_atom_ID,?,?
+39610,Atom_site,Label_entity_assembly_ID,C,Molecular entity assembly ID
+39620,Atom_site,Label_entity_ID,C,Molecular entity ID
+39630,Atom_site,Label_comp_index_ID,C,Residue sequence number
+39640,Atom_site,Label_comp_ID,C,Residue code
+39650,Atom_site,Label_atom_ID,C,Atom name
 39660,Atom_site,Type_symbol,?,?
-39670,Atom_site,Cartn_x,?,?
-39680,Atom_site,Cartn_y,?,?
-39690,Atom_site,Cartn_z,?,?
+39670,Atom_site,Cartn_x,C,X coordinate
+39680,Atom_site,Cartn_y,C,Y coordinate
+39690,Atom_site,Cartn_z,C,Z coordinate
 39700,Atom_site,Cartn_x_esd,?,?
 39710,Atom_site,Cartn_y_esd,?,?
 39720,Atom_site,Cartn_z_esd,?,?
@@ -3977,7 +3977,7 @@ TBL_BEGIN,,,,?
 39750,Atom_site,Uncertainty,?,?
 39760,Atom_site,Ordered_flag,?,?
 39770,Atom_site,Footnote_ID,?,?
-39780,Atom_site,PDBX_label_asym_ID,?,?
+39780,Atom_site,PDBX_label_asym_ID,C,Asymetry code
 39790,Atom_site,PDBX_label_seq_ID,?,?
 39800,Atom_site,PDBX_label_comp_ID,?,?
 39810,Atom_site,PDBX_label_atom_ID,?,?
@@ -4000,7 +4000,7 @@ TBL_BEGIN,,,,?
 39980,Atom_site,Auth_atom_name,?,?
 39990,Atom_site,Details,?,?
 40000,Atom_site,Sf_ID,?,?
-40010,Atom_site,Entry_ID,?,?
+40010,Atom_site,Entry_ID,C,Entry ID
 40020,Atom_site,Conformer_family_coord_set_ID,?,?
 40030,Atom_sites_footnote,Footnote_ID,?,?
 40040,Atom_sites_footnote,Text,?,?
@@ -4668,7 +4668,7 @@ TBL_BEGIN,,,,?
 46660,Gen_dist_constraint,Member_ID,?,?
 46670,Gen_dist_constraint,Member_logic_code,?,?
 46680,Gen_dist_constraint,Assembly_atom_ID_1,?,?
-46690,Gen_dist_constraint,Entity_assembly_ID_1,C,Entity assembly ID (atom 1)
+46690,Gen_dist_constraint,Entity_assembly_ID_1,C,Molecular entity assembly ID (atom 1)
 46700,Gen_dist_constraint,Entity_ID_1,C,Entity ID (atom 1)
 46710,Gen_dist_constraint,Comp_index_ID_1,C,Sequence number (atom 1)
 46720,Gen_dist_constraint,Seq_ID_1,?,?
@@ -4678,7 +4678,7 @@ TBL_BEGIN,,,,?
 46760,Gen_dist_constraint,Atom_isotope_number_1,?,?
 46770,Gen_dist_constraint,Resonance_ID_1,?,?
 46780,Gen_dist_constraint,Assembly_atom_ID_2,?,?
-46790,Gen_dist_constraint,Entity_assembly_ID_2,C,Entity assembly ID (atom 2)
+46790,Gen_dist_constraint,Entity_assembly_ID_2,C,Molecular entity assembly ID (atom 2)
 46800,Gen_dist_constraint,Entity_ID_2,C,Entity ID (atom 2)
 46810,Gen_dist_constraint,Comp_index_ID_2,C,Sequence number (atom 2)
 46820,Gen_dist_constraint,Seq_ID_2,?,?
@@ -4690,7 +4690,7 @@ TBL_BEGIN,,,,?
 46880,Gen_dist_constraint,Intensity_val,?,?
 46890,Gen_dist_constraint,Intensity_lower_val_err,?,?
 46900,Gen_dist_constraint,Intensity_upper_val_err,?,?
-46910,Gen_dist_constraint,Distance_val,?,?
+46910,Gen_dist_constraint,Distance_val,C,Distance value
 46920,Gen_dist_constraint,Distance_lower_bound_val,C,Distance constraint lower bound
 46930,Gen_dist_constraint,Distance_upper_bound_val,C,Distance constraint upper bound
 46940,Gen_dist_constraint,Contribution_fractional_val,?,?
@@ -4727,7 +4727,7 @@ TBL_BEGIN,,,,?
 47250,Gen_dist_constraint,Auth_alt_ID_2,?,?
 47260,Gen_dist_constraint,Auth_atom_name_2,?,?
 47270,Gen_dist_constraint,Sf_ID,?,?
-47280,Gen_dist_constraint,Entry_ID,?,?
+47280,Gen_dist_constraint,Entry_ID,C,Entry ID
 47290,Gen_dist_constraint,Gen_dist_constraint_list_ID,?,?
 47300,Gen_dist_constraint_comment_org,ID,?,?
 47310,Gen_dist_constraint_comment_org,Comment_text,?,?
@@ -4873,9 +4873,9 @@ TBL_BEGIN,,,,?
 48710,Dist_constraint_conv_err,Distance_constraint_list_ID,?,?
 48720,Floating_chirality_assign,Sf_category,?,?
 48730,Floating_chirality_assign,Sf_framecode,?,?
-48740,Floating_chirality_assign,Entry_ID,C,Entry ID
+48740,Floating_chirality_assign,Entry_ID,?,?
 48750,Floating_chirality_assign,Sf_ID,?,?
-48760,Floating_chirality_assign,ID,C,Floating chirality assigned list ID
+48760,Floating_chirality_assign,ID,?,?
 48770,Floating_chirality_assign,Data_file_name,?,?
 48780,Floating_chirality_assign,Details,?,?
 48790,Floating_chirality_assign,Stereo_count,?,?
@@ -4958,39 +4958,39 @@ TBL_BEGIN,,,,?
 49560,Torsion_angle_constraint,Set_ID,?,?
 49570,Torsion_angle_constraint,Torsion_angle_name,C,Torsion angle name
 49580,Torsion_angle_constraint,Assembly_atom_ID_1,?,?
-49590,Torsion_angle_constraint,Entity_assembly_ID_1,?,Entity assembly ID
-49600,Torsion_angle_constraint,Entity_ID_1,?,Entity ID
-49610,Torsion_angle_constraint,Comp_index_ID_1,?,Sequence number
+49590,Torsion_angle_constraint,Entity_assembly_ID_1,C,Entity assembly ID
+49600,Torsion_angle_constraint,Entity_ID_1,C,Entity ID
+49610,Torsion_angle_constraint,Comp_index_ID_1,C,Sequence number
 49620,Torsion_angle_constraint,Seq_ID_1,?,?
-49630,Torsion_angle_constraint,Comp_ID_1,?,Chem compound code
-49640,Torsion_angle_constraint,Atom_ID_1,?,?
+49630,Torsion_angle_constraint,Comp_ID_1,C,Residue code (Res 1)
+49640,Torsion_angle_constraint,Atom_ID_1,C,Atom name (Atom 1)
 49650,Torsion_angle_constraint,Atom_type_1,?,?
 49660,Torsion_angle_constraint,Resonance_ID_1,?,?
 49670,Torsion_angle_constraint,Assembly_atom_ID_2,?,?
-49680,Torsion_angle_constraint,Entity_assembly_ID_2,?,?
-49690,Torsion_angle_constraint,Entity_ID_2,?,?
-49700,Torsion_angle_constraint,Comp_index_ID_2,?,?
+49680,Torsion_angle_constraint,Entity_assembly_ID_2,C,Entity assembly ID
+49690,Torsion_angle_constraint,Entity_ID_2,C,Entity ID
+49700,Torsion_angle_constraint,Comp_index_ID_2,C,Sequence number
 49710,Torsion_angle_constraint,Seq_ID_2,?,?
-49720,Torsion_angle_constraint,Comp_ID_2,?,?
-49730,Torsion_angle_constraint,Atom_ID_2,?,?
+49720,Torsion_angle_constraint,Comp_ID_2,C,Residue code (Res 2)
+49730,Torsion_angle_constraint,Atom_ID_2,C,Atom name (Atom 2)
 49740,Torsion_angle_constraint,Atom_type_2,?,?
 49750,Torsion_angle_constraint,Resonance_ID_2,?,?
 49760,Torsion_angle_constraint,Assembly_atom_ID_3,?,?
-49770,Torsion_angle_constraint,Entity_assembly_ID_3,?,?
-49780,Torsion_angle_constraint,Entity_ID_3,?,?
-49790,Torsion_angle_constraint,Comp_index_ID_3,?,?
+49770,Torsion_angle_constraint,Entity_assembly_ID_3,C,Entity assembly ID
+49780,Torsion_angle_constraint,Entity_ID_3,C,Entity ID
+49790,Torsion_angle_constraint,Comp_index_ID_3,C,Sequence number
 49800,Torsion_angle_constraint,Seq_ID_3,?,?
-49810,Torsion_angle_constraint,Comp_ID_3,?,?
-49820,Torsion_angle_constraint,Atom_ID_3,?,?
+49810,Torsion_angle_constraint,Comp_ID_3,C,Residue code (Res 3)
+49820,Torsion_angle_constraint,Atom_ID_3,C,Atom name (Atom 3)
 49830,Torsion_angle_constraint,Atom_type_3,?,?
 49840,Torsion_angle_constraint,Resonance_ID_3,?,?
 49850,Torsion_angle_constraint,Assembly_atom_ID_4,?,?
-49860,Torsion_angle_constraint,Entity_assembly_ID_4,?,?
-49870,Torsion_angle_constraint,Entity_ID_4,?,?
-49880,Torsion_angle_constraint,Comp_index_ID_4,?,?
+49860,Torsion_angle_constraint,Entity_assembly_ID_4,C,Entity assembly ID
+49870,Torsion_angle_constraint,Entity_ID_4,C,Entity ID
+49880,Torsion_angle_constraint,Comp_index_ID_4,C,Sequence number
 49890,Torsion_angle_constraint,Seq_ID_4,?,?
-49900,Torsion_angle_constraint,Comp_ID_4,?,?
-49910,Torsion_angle_constraint,Atom_ID_4,?,?
+49900,Torsion_angle_constraint,Comp_ID_4,C,Residue code (Res 4)
+49910,Torsion_angle_constraint,Atom_ID_4,C,Atom name (Atom 4)
 49920,Torsion_angle_constraint,Atom_type_4,?,?
 49930,Torsion_angle_constraint,Resonance_ID_4,?,?
 49940,Torsion_angle_constraint,Angle_lower_bound_val,C,Lower bound
