@@ -1,0 +1,7604 @@
+
+##########################################
+#                                        #
+#   This file is under construction!!    #
+# Your help and suggestions are welcome. #
+#                                        #
+##########################################
+
+     
+data_NMR-STAR_tag_enumerations
+
+    _Revision_date      2013-10-01
+
+
+save__Assembly.Ambiguous_chem_comp_sites
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+save__Assembly.Ambiguous_conformational_states
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+save__Assembly.Metal_ions                                   
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+save__Assembly.Molecules_in_chemical_exchange
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+
+save__Assembly.Non_standard_bonds
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+save__Assembly.Organic_ligands
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+save__Assembly.Paramagnetic
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+save__Assembly.Thiol_state
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'all disulfide bound'       .
+     'all other bound'           .
+     'all free'                  .
+     'not present'               
+;
+Thiols are not present in the system.
+;
+     'not available'    
+;
+The oxidation state of the thiols could not be extracted from the literature
+or was not provided by the authors of the entry.
+;
+     unknown     
+;
+The author reported that the oxidation state of the thiols is
+unknown.
+;
+     'not reported'                      .
+     'free and disulfide bound'          .
+     'free and other bound'              .
+     'free disulfide and other bound'    .
+     'disulfide and other bound'         .
+
+    stop_
+
+save_
+
+save__Assembly_db_link.Database_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    PDB            'Protein Data Bank'
+    BMRB           'BioMagResBank'
+    DBJ            .
+    EMBL           .
+    GB             .
+    PIR            .
+    PRF            .
+    REF            .
+    SP             .
+    UNP            .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   NCBI            .
+   PubMed          'NCBI PubMed'
+   SGD             'Saccharomyces Genome Database'
+   SMART           'Simple Modular Architecture Research Tool'
+   TargetDB        'Target registration database'
+# PDBj-BMRB: BMRB(withdrawn) expresses withdrawn accession code referring to current BMRB release status.
+   BMRB(withdrawn)    'BMRB withdrawn accession code'
+
+  stop_
+
+
+save_
+
+save__Assembly_db_link.Author_supplied
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes   .
+    no    .
+
+   stop_
+
+save_
+
+
+save__Assembly_db_link.Entry_experimental_method
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     X-ray                      .
+    'solution NMR'              .
+    'solid-state NMR'           .
+    'FTIR'                      .
+    'mass spectrometry'         .
+    'XAFS'                      .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'NMR'                        .
+   'X-ray crystallography'      .
+   'X-ray fiber diffraction'    .
+   'solid-state NMR and X-ray fiber diffraction'    .
+    na                          .
+
+  stop_
+
+save_
+
+save__Assembly_interaction.Mol_interaction_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'Extremely slow exchange'      
+;
+Components are very tightly bound
+;
+    'Slow exchange'                
+;
+Would expect to observe separate resonances for the bound and free components
+of the system.
+;
+    'Intermediate exchange'        
+;
+May not observe signals from the component or signals may be quite broad.
+;
+    'Fast exchange'
+
+;
+On the NMR time scale$ a single averaged signal will be observed for the
+components in the bound and free state.
+;
+    'No interaction'
+;
+The components exist in the sample but do not interact (i.e.$ a molecule that
+is exchanging between a native and an unfolded conformation).
+;
+     na
+;
+not available or equivalent
+;
+
+  stop_
+
+save_
+
+
+save__Assembly_systematic_name.Naming_system
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    IUPAC                                        .
+   'CAS name'                                    .
+   'CAS registry number'                         .
+    BMRB                                         .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Pfam    ?
+   Swiss-Prot    ?
+   MEROPS    ?
+
+   stop_
+
+save_
+
+
+save__Assembly_type.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      'peptide'                                .
+      'protein monomer'                        .
+      'protein homo-multimer'                  .
+      'protein hetero-multimer'                .
+      'RNA single strand'                      .
+      'RNA double strand'                      .
+      'DNA single strand'                      .
+      'DNA double strand'                      .
+      'DNA-RNA hybrid'                         .
+      'polysaccharide'                         .
+      'protein-nucleic acid complex'           .
+      'protein-inhibitor complex'              .
+      'protein-drug complex'                   .
+      'protein-ligand complex'                 .
+      'protein-protein complex'                .
+      'protein-DNA complex'                    .
+      'protein-DNA-ligand complex'             .
+      'protein-DNA-inhibitor complex'          .
+      'protein-RNA complex'                    .
+      'protein-RNA-ligand complex'             .
+      'protein-RNA-inhibitor complex'          .
+      'protein-carbohydrate complex'           .
+      'DNA-drug complex'                       .
+      'DNA-RNA complex'                        .
+      'RNA-drug complex'                       . 
+      'non-polymer'                            .
+
+    stop_
+
+save_
+
+
+save__Atom_chem_shift.Ambiguity_code
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+           1                
+;
+Unique$ not ambiguous
+;
+           2 
+;
+Ambiguity of geminal atoms or geminal groups 
+;
+           3
+;
+Aromatic atoms on opposite sides of the ring (e.g. Tyr HE1 and HE2 protons)    
+;
+           4
+;
+Intraresidue ambiguities (e.g. Lys HG and HD protons)
+;
+           5                
+;
+Interresidue ambiguities (Lys 12 vs. Lys 27)
+;
+           6
+;
+Chemical shift ambiguity is between atoms that are located on
+different entities within the molecular assembly
+;
+           9                
+;
+Ambiguous$ but specific ambiguity not defined
+;
+
+     stop_
+
+save_
+
+save__Atom_site.Ordered_flag
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+      '1'    'Flag indicating that the atom is in an ordered region of the structure.'
+      '0'    'Flag indicating that the atom is in a poorly ordered region of the structure.'
+
+     stop_
+
+save_
+
+save__Atom_type.Paramagnetic
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     yes    .
+     no     .
+
+     stop_
+
+save_
+
+save__Audit.Update_record
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+      'Preliminary version'                     .
+      'Nomenclature checked'                    .
+      'Nomenclature checked and updated'        .
+      'Chemical shifts checked'                 .
+      'Chemical shifts checked and updated'     .
+      'Data file replaced'                      .
+      'Initial release'                         .
+
+     stop_
+
+save_
+
+
+save__Binding_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    anisotropic            .
+    isotropic              .
+
+  stop_
+
+save_ 
+
+
+save__Entity_bond.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        covalent               .
+        directed               .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   oxime                       .
+   thioester                   .
+   phosphoester                .
+   phosphodiester              .
+   diselenide                  .
+   na                          .
+
+    stop_
+
+save_
+
+save__Entity_bond.Value_order
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
+
+     stop_
+
+save_
+
+
+save__Bond_annotation.Value_order
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
+
+     stop_
+
+save_
+
+
+save__Bond_annotation.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        covalent               .
+        directed               .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   oxime                       .
+   thioester                   .
+   phosphoester                .
+   phosphodiester              .
+   diselenide                  .
+   na                          .
+
+    stop_
+
+save_
+
+
+save__Bond.Value_order
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
+
+     stop_
+
+save_
+
+
+save__Bond.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        covalent               .
+        directed              'N -> O'
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   oxime                       .
+   thioester                   .
+   phosphoester                .
+   phosphodiester              .
+   diselenide                  .
+   na                          .
+
+    stop_
+
+save_
+
+
+
+save__CA_CB_constraint_expt.Sample_state
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     isotropic        .
+     anisotropic      .
+     solid            .
+
+    stop_
+
+save_
+
+save__Chem_comp.Aromatic
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+      
+save__Chem_comp.Paramagnetic
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
+save__Chem_comp.Provenance
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     BMRB           .
+     PDB            .
+     PubChem        .
+
+    stop_
+
+save_
+                                       
+save__Chem_comp.Mon_nstd_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
+
+save__Chem_comp.Ambiguous_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
+
+
+save__Chem_comp_atom.Aromatic_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
+save__Chem_comp_atom.Leaving_atom_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
+save__Chem_comp_atom.Ionizable
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
+save__Chem_comp_db_link.Author_supplied
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes           .
+     no            .
+
+    stop_
+
+save_
+
+save__Chem_comp_atom.Chirality
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     N      'atom is not a chiral center'
+     E      '(E)- alkene (German$ entgegen = opposite)'
+     Z      '(Z)- alkene (German$ zusammen = together)'
+     R      'rectus - right handed configuration'
+     S      'sinister - left handed configuration'
+     pro-R  'If substituted for a higher molecular weight entity will make the attached atom an R chiral center'
+     pro-S  'If substituted for a higher molecular weight entity will make the attached atom an S chiral center' 
+
+   stop_
+
+save_
+
+
+save__Chem_comp_atom.Stereo_config
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     N      'atom is not a chiral center'
+     E      '(E)- alkene (German$ entgegen = opposite)'
+     Z      '(Z)- alkene (German$ zusammen = together)'
+     R      'rectus - right handed configuration'
+     S      'sinister - left handed configuration'
+
+   stop_
+
+save_
+
+save__Chem_comp_atom.Substruct_code
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   main     'main chain of an amino acid'
+   side     'side chain of an amino acid'
+   base     'base of a nucleic acid'
+   phos     'phosphate of a nucleic acid'
+   sugar    'sugar of a nucleic acid'
+   none     'not appropriate for this monomer'
+
+   stop_
+
+save_
+
+save__Chem_comp_descriptor.Program
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  ACD       'Advanced Chemistry Development' 
+  OECHEM    'OpenEye OECHEM library'
+  CACTVS    'CACTVS program library'
+  DAYLIGHT  'Daylight program library'
+  OTHER     'Other program or library'
+  na        'not available'
+
+   stop_
+
+save_
+
+
+
+save__Chem_comp_descriptor.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  SMILES_CANONICAL           'Canonical SMILES descriptor'
+  SMILES_ISOMERIC            'Isomeric SMILES descriptor'
+  SMILES                     'SMILES descriptor'
+  INCHI                      'InChi descriptor'
+  INCHI_MAIN                 'InChi descriptor- main layer'
+  INCHI_MAIN_FORMULA         'InChi descriptor- main layer - chemical formula sub-layer'
+  INCHI_MAIN_CONNECT         'InChi descriptor- main layer - atom connection sub-layer'
+  INCHI_MAIN_HATOM           'InChi descriptor- main layer - hydrogen atom sub-layer'
+  INCHI_CHARGE               'InChi descriptor- charge layer'
+  INCHI_STEREO               'InChi descriptor- stereochemical layer'
+  INCHI_ISOTOPE              'InChi descriptor- isotopic layer'
+  INCHI_FIXEDH               'InChi descriptor- fixed hydrogren layer'
+  INCHI_RECONNECT            'InChi descriptor- reconnected layer'
+
+   stop_
+
+save_
+
+save__Chem_comp_identifier.Program
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  OECHEM    'OpenEye OECHEM program'
+  DAYLIGHT  'Daylight program library'
+  ACD       'Advanced Chemistry Development Naming Program'
+  AUTONOM   'Belstein AutoNom Naming Program'
+  OTHER     'Other program or library'
+
+   stop_
+
+save_
+
+save__Chem_comp_identifier.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  'COMMON NAME'           'Common chemical name'
+  'SYSTEMATIC NAME'       'Systematic chemical name'
+  'CAS REGISTRY NUMBER'   'Chemical Abstracts Registry Number'
+  'PUBCHEM Identifier'    'PubChem accession number'
+  'PUBCHEM CID'           'PubChem compound identifier'
+  'PUBCHEM SID'           'PubChem substance identifier'
+  'MDL Identifier'        'Molecular Design Limited Identifier'
+
+   stop_
+
+save_
+
+
+save__Chem_comp.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      'D-PEPTIDE LINKING'                         .      
+      'L-PEPTIDE LINKING'                         .
+      'D-PEPTIDE NH3 AMINO TERMINUS'              .
+      'L-PEPTIDE NH3 AMINO TERMINUS'              .
+      'D-PEPTIDE COOH CARBOXY TERMINUS'           .
+      'L-PEPTIDE COOH CARBOXY TERMINUS'           .
+      'DNA LINKING'                               .
+      'RNA LINKING'                               .
+      'L-RNA LINKING'                             .
+      'L-DNA LINKING'                             .
+      'DNA OH 5 PRIME TERMINUS'                   .
+      'RNA OH 5 PRIME TERMINUS'                   .
+      'DNA OH 3 PRIME TERMINUS'                   .
+      'RNA OH 3 PRIME TERMINUS'                   .
+      'D-SACCHARIDE 1$4 AND 1$4 LINKING'          .
+      'L-SACCHARIDE 1$4 AND 1$4 LINKING'          .
+      'D-SACCHARIDE 1$4 AND 1$6 LINKING'          .
+      'L-SACCHARIDE 1$4 AND 1$6 LINKING'          .
+      'L-SACCHARIDE'                              .
+      'D-SACCHARIDE'                              .
+      'SACCHARIDE'                                .
+      'NON-POLYMER'                               .
+      'PEPTIDE LINKING'                           .
+      'PEPTIDE-LIKE'                              .
+      'L-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
+      'D-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
+      'L-BETA-PEPTIDE$ C-GAMMA LINKING'           .
+      'D-BETA-PEPTIDE$ C-GAMMA LINKING'           .
+      'OTHER'                                     .
+
+   stop_
+
+save_
+
+
+save__Chem_comp.Vendor
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   Sigma                    .
+   Aldrich                  .
+   Sigma/Aldrich            .
+
+   stop_
+
+save_
+
+save__Chem_comp_bond.Aromatic_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   yes      'Yes - an aromatic bond'
+   no       'No  - not an aromatic bond'
+
+   stop_
+
+save_
+
+
+save__Chem_comp_bond.Stereo_config
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   E      'zusammen for together'
+   Z      'entgegen for opposite'
+   N      'none'
+
+   stop_
+
+save_
+
+
+save__Chem_comp_bond.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        covalent               .
+        directed               .  
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+
+    stop_
+
+save_
+
+
+save__Chem_comp_bond.Value_order
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  SING           'single bond' 
+  DOUB           'double bond'
+  TRIP           'triple bond'
+  QUAD           'quadruple bond'
+  AROM           'aromatic bond'
+  POLY           'polymeric bond'
+  DELO           'delocalized double bond'
+  PI             'pi bond'
+  DIRECTED       'N ->O'
+
+     stop_
+
+save_
+
+save__Chem_comp_common_name.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    abbreviation     .
+    name             .
+    na               'not available'
+
+  stop_
+
+save_
+
+save__Chem_comp_db_link.Database_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description        
+
+    CDDC               .
+    PDB               "PDB ligand library"
+   'PubChem SID'      "NCBI PubChem substance ID"
+   'PubChem CID'      "NCBI PubChem chemical ID" 
+   'KEGG'             "Kyoto Encyclopedia of Genes and Genomes"
+
+  stop_
+
+save_
+
+save__Chem_comp.Formal_charge
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   5+    .
+   4+    .
+      3+    .
+      2+    .
+      1+    .
+      0     .
+      1-    .
+      2-    .
+      3-    .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   4-    .
+   5-    .
+   
+  stop_
+
+save_
+
+save__Chem_comp.Image_file_format
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      gif               .
+      jpeg              .
+      pdf               .
+      png               .
+      ps                .
+      tiff              .
+     'not applicable'   .
+
+   stop_
+
+save_
+
+
+save__Chem_comp.Ideal_coordinates_missing_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes     .
+    no      .
+
+   stop_
+
+save_                                                       
+
+save__Chem_comp.Model_coordinates_missing_flag
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes     .
+    no      .
+
+   stop_
+
+save_
+
+save__Chem_comp.Processing_site
+
+    loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     EBI       .   
+     MSD       .
+     PDBE      .
+     PDBJ      .
+     RCSB      .
+
+   stop_
+
+save_
+
+
+
+save__Chem_comp.Release_status
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'REL'   'Released
+    'HOLD'  'On hold until yyyy-mm-dd'
+    'HPUB'  'On hold until publication'
+    'OBS'   'Entry has been obsoleted and replaced by another entry'
+    'DEL'   'Entry has been deleted'
+
+   stop_
+
+save_
+
+
+save__Chem_comp_systematic_name.Naming_system
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    IUPAC                                        .
+   'CAS name'                                    .
+   'CAS registry number'                         .
+    BMRB                                         .
+   'One letter code'                             .
+   'Three letter code'                           .
+    Beilstein                                    .
+   'Lignin abbreviation'                         .
+
+   stop_
+
+save_
+
+save__Chem_shift_anisotropy.Val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ppm                    .
+    ppb                    .
+
+  stop_
+
+save_
+
+
+save__Chem_shift_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+
+  stop_
+
+save_
+
+
+save__Chem_shift_ref.Atom_group
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+     'methyl carbon'                    .
+     'methyl carbons'                   .
+     'methyl protons'                   .
+     'methylene protons'                .
+      nitrogen                        
+;
+There is only one nitrogen nucleus or all nitrogen nuclei are magnetically 
+equivalent
+;
+     protons                         
+;
+There is only one proton nucleus or all proton nuclei are magnetically 
+equivalent
+;
+
+
+# find more values from existing database
+
+    stop_
+
+save_
+
+save__Chem_shift_ref.Atom_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+   H          .
+   C          .
+   N          .
+   F          .
+   P          .
+   Cd         . 
+
+     stop_
+
+save_
+
+
+save__Chem_shift_ref.Chem_shift_units
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+      ppm                 'parts per million'
+      Hz                  Hertz
+# PDBj-BMRB: Added MHz and na by extraction from current BMRB database.
+   MHz                    'megahertz'
+   na                     'not available'
+
+     stop_
+
+save_
+
+
+save__Chem_shift_ref.External_ref_axis
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'parallel'        .
+   'perpendicular'   .
+   'magic angle'     .
+    na               .
+
+   stop_
+
+save_
+
+
+save__Chem_shift_ref.External_ref_loc
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'insert at center of experimental sample tube'                              .
+   'insert at outer edge of experimental sample tube'                          .
+   'insert at center of a separate sample tube'                                .
+   'insert at outer edge of a separate sample tube'                            .
+   'separate tube (no insert) similar to the experimental sample tube'         .
+   'separate tube (no insert) not similar to the experimental sample tube'     .
+    other                                                                      .
+
+   stop_
+
+save_
+
+
+save__Chem_shift_ref.External_ref_sample_geometry
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   cylindrical      .
+   spherical        .
+   other            .
+
+   stop_
+
+save_
+
+
+save__Chem_shift_ref.Mol_common_name
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+DSS                                  'H; C; and N methyl protons'
+TSP                                  'H; C; and N methyl protons' 
+water                                'H protons' 
+DMSO                                 'H methyl protons'
+DMSO-d5                              'H methyl proton'
+DMSO-d6                              'H methyl deuterons' 
+methanol                             'H methyl protons'
+TMS                                  'H methyl protons' 
+acetate                              'C methyl carbons'
+dioxane                              'C methylene carbons'
+'ammonium chloride'                  'N ammonium nitrogen' 
+'[15N] ammonium chloride'            'N ammonium nitrogen' 
+'ammonium hydroxide'                 'N ammonium nitrogen'
+'ammonium nitrate'                   'N ammonium nitrogen' 
+'[15N] ammonium nitrate'             'N ammonium nitrogen'
+'[15N$ 15N] ammonium nitrate'        'N ammonium nitrogen'
+'ammonium nitrite'                   'N ammonium nitrogen'
+'ammonium sulfate'                   'N ammonium nitrogen'
+'[15N] ammonium sulfate'             'N ammonium nitrogen' 
+'liquid anhydrous ammonia'           'N ammonium nitrogen'
+formamide                            'N ammonium nitrogen'
+   'nitric acid'                      .
+'[15N] nitric acid'                  'N nitrogen' 
+nitromethane                         'N nitro group'
+'[15N] nitromethane'                 'N nitro group' 
+urea                                 'N nitrogen'
+'phosphoric acid'                    'P phosphate' 
+'phosphoric acid (85%)'              'P phosphate'
+TMP                                  'P phosphate'
+'cadmium perchlorate'                'Cd cadmium'
+   adamantane                         .
+   DMPC                               .
+   HFIP                               .
+   TFA                                .
+   TFE                                .
+   TFE-d2                             .
+   TMPS                               .
+   TMSPA                              .
+   TSP-d4                             .
+   TSPA                               .
+   borate                             .
+   glucose                            .
+   hexamethylbenzene                  .
+   'methyl iodide'                    .
+   p-dioxane                          .
+   'sodium acetate'                   .
+   'sodium phosphate'                 .
+   'suberic acid bis'                 .
+   trichlorofluoromethane             .
+   na                                 .
+
+   stop_
+
+save_
+
+save__Chem_shift_ref.Ref_method
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   internal     .
+   external     .
+   na           .
+     
+
+   stop_
+
+save_
+
+
+save__Chem_shift_ref.Ref_type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   direct       .
+   indirect     .
+
+   stop_
+
+save_
+
+save__Chem_shift_reference.Carbon_shifts_flag
+
+   loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    no     .
+    yes    .
+   'yes with IUPAC referencing'     .
+
+   stop_
+
+save_
+
+
+save__Chem_shift_reference.Nitrogen_shifts_flag
+
+   loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    no     .
+    yes    .
+   'yes with IUPAC referencing'     .
+
+   stop_
+
+save_
+
+
+save__Chem_shift_reference.Other_shifts_flag
+
+   loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    no     .
+    yes    .
+
+   stop_
+
+save_
+
+
+
+save__Chem_shift_reference.Phosphorus_shifts_flag
+
+   loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    no     .
+    yes    .
+   'yes with IUPAC referencing'     .
+
+   stop_
+
+save_
+
+
+save__Chem_shift_reference.Proton_shifts_flag
+
+   loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    no     .
+    yes    .
+   'yes with IUPAC referencing'     .
+
+   stop_
+
+save_
+
+save__Chem_shifts_calc_type.Calculation_level
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    empirical               .
+   'ab initio'              .
+    semi-empirical          .
+
+     stop_
+
+save_
+
+save__Chem_shifts_calc_type.Chem_shift_nucleus
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+      1H            .
+     13C            .
+     15N            .
+     31P            .
+
+     stop_
+
+save_
+
+
+save__Chem_shifts_calc_type.Quantum_mechanical_method
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+      GIAO        'Gauge-Independent Atomic Orbital'
+      IGLO         .
+      CSGT        'Continuous Set of Gauge Transformations' 
+
+     stop_
+
+save_
+
+save__Chem_shifts_calc_type.Quantum_mechanical_theory_level
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+         B3LYP               .
+         MP2                 .
+
+     stop_
+
+save_
+
+save__Chem_struct_descriptor.Descriptor
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    alcohol                            .
+    aldehyde                           .
+    alkyne                             .
+    alkene                             .
+    alkane                             .
+    amide                              .
+   'carboxylic acid'                   .
+    ester                              .
+    ether                              .
+    ketone                             .
+    amine                              .
+    nitrile                            .
+   'primary amine'                     .
+   'secondary amine'                   .
+   'teritary amine'                    .
+    thiol                              .
+   'three carbon ring'                 .
+   'four carbon ring'                  .
+   'five carbon ring'                  .
+   'six carbon ring'                   .
+   'seven carbon ring'                 .
+   'eight carbon ring'                 .
+   'three member heterocycle'          .
+   'four member heterocycle'           .
+   'five member heterocycle'           .
+   'six member heterocycle'            .
+   'seven member heterocycle'          .
+   'eight member heterocycle'          .
+   'benzyl group'                      .
+   'phenyl group'                      .
+    phenol                             .
+    imidazole                          .
+   'beta lactam'                       .
+    methyl                             .
+    methylene                          .
+
+
+
+     stop_
+
+save_
+
+save__Chem_struct_descriptor.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     linkage                         .
+    'chemical fragment'              .
+    'functional group'               .
+
+     stop_
+
+save_
+
+
+
+save__Citation.Class
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    'entry citation'       
+;
+Citation where the reported data are described
+;
+    'reference citation'   
+;
+Citation used as a reference in the entry
+;
+
+     stop_
+
+save_
+
+
+save__Citation.Journal_abbrev
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'Not known'                                 .
+    'Arch. Biochem. Biophys.'                   .
+    'Biochemistry'                              .
+    'Biochem. Biophys. Res. Commun.'            .
+    'Biochem. J.'                               .
+    'Biochim. Biophys. Acta'                    .
+    'Biomol. NMR Assignments'                   .
+    'Biophys. J.'                               .
+    'Biopolymers'                               .
+    'Cell'                                      .
+    'EMBO J.'                                   . 
+    'Eur. J. Biochem.'                          .
+    'FEBS Lett.'                                .
+    'Inorg. Chem.'                              .
+    'Int. J. Pept. Protein Res.'                .
+    'J. Am. Chem. Soc.'                         .
+    'J. Biochem.'                               .
+    'J. Biol. Chem.'                            .
+    'J. Biol. Inorg. Chem.'                     .
+    'J. Biomol. NMR'                            .                      
+    'J. Biomol. Struct. Dyn.'                   .
+    'J. Inorg. Biochem.'                        .
+    'J. Magn. Reson.'                           .
+    'J. Mol. Biol.'                             .
+    'J. Pept. Res.'                             .
+    'J. Protein Chem.'                          .
+    'Mol. Cell'                                 .
+    'Nature'                                    .
+    'Nat. Struct. Biol.'                        .
+    'Nucleic Acids Res.'                        .
+    'Proc. Natl. Acad. Sci. U.S.A.'             .
+    'Protein Eng.'                              .
+    'Proteins'                                  .
+    'Protein Sci.'                              .
+    'Proteins: Struct. Funct. Genet.'           .
+    'RNA'                                       .
+    'Science'                                   .
+    'Structure'                                 .
+    'Structure (Cambridge$ MA$ U.S.)'           .
+
+   stop_
+
+save_
+
+
+save__Citation.Status
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+     'in preparation'        
+;
+A manuscript is being prepared but has not been submitted for publication.
+;
+     submitted
+;
+A manuscript has been submitted for publication.
+;
+     'in press'
+;
+A manuscript has been accepted for publication$ but has not yet appeared in
+press.
+;
+     published
+;
+A published article exists that contains or describes the data in the entry.
+;
+     retracted
+;
+A published article has been retracted by the authors or journal.
+;
+     na
+;
+The status of the citation is not available. This value is for older entries where
+the status can not be determined but should not be allowed for current entries.
+;
+
+    stop_
+
+save_
+
+
+save__Citation.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  journal              .
+  book                 .
+ 'book chapter'        .
+  thesis
+;
+A document written and published as a requirement for a degree or other
+scholarly endeavor (e.g.$ senior$ masters$ or doctoral thesis)
+;
+  abstract    
+;
+A brief text describing the contents of a presentation$ oral$$ poster$ or
+other$ given at a conference or other formal gathering.          
+;
+ 'personal communication'  
+;
+The BMRB entry is the only known published source for the data.
+;
+ internet    
+;
+The data were only found published on the internet and no other publication is 
+available.
+;
+     'BMRB only'
+;
+The only publication related to the data submitted will be the BMRB entry.
+;
+     'other publication'
+;
+Used only when none of the others apply.
+;
+     stop_
+
+save_
+
+
+save__Citation_author.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      V                Fifth
+      
+    stop_
+
+save_
+
+
+save__Citation_editor.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      V                Fifth
+      
+
+    stop_
+
+save_
+
+
+save__Computer.Operating_system
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      IRIX            
+;
+Version of UNIX developed by SGI
+;
+      UNIX            
+;
+Originally developed by AT&T and UC Berkeley
+;
+      Linux           
+;
+Linux Is Not Unix; but closely resembles it
+;
+      DOS             
+;
+Operating system used on many IBM and IBM compatible personal computers
+;
+      NT              
+;
+Windows New Technology operating system
+;
+
+     'Windows VISTA'  .
+     'Windows 2000'   .
+     'Windows XP'     .
+
+     stop_
+
+save_
+
+
+save__Conformer_family_refinement.Refine_method
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+ 'DGSA-distance geometry simulated annealing'      .
+ 'distance geometry'           .
+ 'simulated annealing'         .
+ 'molecular dynamics'          .
+ 'matrix relaxation'           .
+ 'torsion angle dynamics'      .
+  na                           .
+
+     stop_
+
+save_
+
+
+save__Conformer_family_coord_set_expt.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+   isotropic               .
+   anisotropic             .
+   solid                   .
+
+   stop_
+
+save_
+
+save__Conformer_stat_list.Representative_conformer_only
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    yes     .
+    no      .
+
+   stop_
+
+save_
+
+save__Conformer_stat_list.Conformer_ensemble_only
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    yes     .
+    no      .
+
+   stop_
+
+save_
+
+
+save__Conformer_stat_list.Both_ensemble_and_rep_conformer
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    yes     .
+    no      .            
+
+   stop_
+
+save_
+
+save__Conformer_stat_list.Conformer_selection_criteria
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'all calculated structures submitted'                           .
+    'back calculated data agree with experimental NOESY spectrum'   .
+    'structures with the lowest energy'                             .
+    'structures with the least restraint violations'                .
+    'structures with acceptable covalent geometry'                  .
+    'structures with favorable non-bond energy'                     .
+    'target function'                                               .
+
+    stop_
+
+save_
+
+save__Conformer_stat_list.Rep_conformer_selection_criteria
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'closest to the average'            .
+   'lowest energy'                     .
+   'fewest violations'                 .
+   'minimized average structure'       . 
+
+    stop_
+
+save_
+
+save__Conformer_stat_list_ens.Stats_not_available
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   yes    .
+   no     .
+
+    stop_
+
+save_
+
+save__Conformer_stat_list_rep.Stats_not_available
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   yes    .
+   no     .
+
+    stop_
+
+save_
+
+save__Constraint_file.Constraint_subtype
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description             
+ 
+   'Not applicable'                 .
+    NOE                             .
+   'NOE buildup'                    .
+   'NOE not seen'                   .
+   'general distance'               .
+   'alignment tensor'               .
+    chirality                       .
+    prochirality                    .
+   'disulfide bond'                 .
+   'hydrogen bond'                  .
+    symmetry                        .
+    ROE                             .
+    peptide                         .
+    ring                            .
+    PRE                             .
+
+   stop_
+
+save_
+
+save__Constraint_file.Constraint_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+   'distance'                                         .
+   'dipolar coupling'                                 .
+   'protein dihedral angle'                           .
+   'nucleic acid dihedral angle'                      . 
+   'coupling constant'                                .
+   'chemical shift'                                   .
+   'other angle'                                      .
+   'chemical shift anisotropy'                        .
+   'hydrogen exchange'                                .
+   'line broadening'                                  .
+   'pseudocontact shift'                              .
+   'intervector projection angle'                     .
+   'protein peptide planarity'                        .
+   'protein other kinds of constraints'               .
+   'nucleic acid base planarity'                      .
+   'nucleic acid other kinds of constraints'          .
+
+   stop_
+
+save_
+
+
+save__Constraint_file.Constraint_subsubtype
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    ambi            .
+    simple          .
+
+   stop_
+
+save_
+
+save__Constraint_file.Software_label
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+      AMBER          .
+      ARIA           .
+      CNS            .
+      CYANA          .
+      DISCOVER       .
+      TALOS          .
+      X-PLOR         .
+      NMR-STAR       .
+
+   stop_
+
+save_
+
+save__Constraint_stat_list_ens.Constraint_stats_not_available
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    yes            .
+    no             .
+
+   stop_
+
+save_
+
+
+save__Constraint_stat_list.Dist_constr_violat_stat_calc_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'calculated over all distance constraints'           .
+    'calculated for distance violations only'            .
+
+    stop_
+
+save_
+
+save__Constraint_stat_list.NOE_interproton_dist_evaluation
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'Tryptophan ring proton NOE intensities'          .
+    'Glycine alpha proton NOE intensities'            .
+
+    stop_
+
+save_
+
+save__Constraint_stat_list.NOE_pseudoatom_corrections
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    yes          .
+    no           .
+
+    stop_
+
+save_
+
+save__Constraint_stat_list.NOE_dist_averaging_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     r-6       
+;
+R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all
+combinations of distance constraints between  atoms i in set 1 and atoms j in
+set 2.
+;
+     r-3       
+;
+R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
+;
+     sum       
+;
+R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
+;
+     center    
+;
+R= r1_center-r2_center$ X-PLOR formula 18.4.
+;
+
+    stop_
+
+save_
+
+save__Constraint_stat_list.ROE_interproton_dist_evaluation
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'Tryptophan ring proton NOE intensities'          .
+    'Glycine alpha proton NOE intensities'            .
+
+    stop_
+
+save_
+
+save__Constraint_stat_list.ROE_pseudoatom_corrections
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    yes         .
+    no           .
+
+    stop_
+
+save_
+
+save__Constraint_stat_list.ROE_dist_averaging_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     r-6       
+;
+R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all
+combinations of distance constraints between  atoms i in set 1 and atoms j in
+set 2.
+;
+     r-3       
+;
+R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
+;
+     sum       
+;
+R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
+;
+     center    
+;
+R= r1_center-r2_center$ X-PLOR formula 18.4.
+;
+
+    stop_
+
+save_
+
+save__Constraint_stat_list_ens.Dihedral_const_stat_calc_meth
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'calculated over all dihedral constraints'           .
+    'calculated for dihedral violations only'            .
+
+    stop_
+
+save_
+
+save__Constraint_stat_list_rep.Constraint_stats_not_available
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    yes            .
+    no             .
+
+   stop_
+
+save_
+
+
+save__Constraint_stat_list.Stats_not_available
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    yes         .
+    no          .
+
+   stop_
+
+save_
+
+
+
+save__Contact_person.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      V                Fifth
+      
+    stop_
+
+save_
+
+save__Contact_person.Name_salutation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   Dr.    .
+   Prof.  .
+   Mr.    .
+   Ms.    .
+   Mrs.   .
+
+   stop_
+
+save_
+
+save__Contact_person.Organization_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   academic      .
+   commercial    .
+   government    .
+   other         .
+
+  stop_
+
+save_
+
+save__Contact_person.Role
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'principal investigator'     .
+   'responsible scientist'      .
+    investigator                .
+
+  stop_
+
+save_
+
+
+
+save__Coupling_constant_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+save__Coupling_constant_list.Spectrometer_frequency_1H
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    400       .
+    500       .
+    600       .
+    700       .
+    750       .
+    800       .
+    850       .
+    900       .
+    920       .
+    950       .
+   1000       .
+
+  stop_
+
+save_ 
+
+
+
+save__Cross_correlation_DD_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+
+save__Cross_correlation_DD_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   s-1      .
+   ms-1     .
+   us-1     .
+
+    stop_
+
+save_
+
+
+save__Cross_correlation_D_CSA_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+
+save__Cross_correlation_D_CSA_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   s-1      .
+   ms-1     .
+   us-1     .
+
+    stop_
+
+save_
+
+
+#save__Cross_correlation_CSA_CSA_expt.Sample_state
+#
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+#
+#    isotropic                    .
+#    anisotropic                  .
+#    solid                        .
+#
+#  stop_
+#
+#save_
+
+
+#save__Cross_correlation_CSA_CSA_list.Val_units
+#
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+#
+#   s-1      .
+#   ms-1     .
+#   us-1     .
+#
+#    stop_
+#
+#save_
+
+
+save__CS_anisotropy_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+
+
+save__Data_set.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   assigned_chemical_shifts             .
+   chemical_rates                       .
+   coupling_constants                   .
+   spectral_peak_list                   .
+   other_data_list                      .
+   RDCs                                 .
+   order_parameters                     .
+   dipolar_couplings                    .
+   spectral_density_values              .
+   H_exch_rates                         .
+   H_exch_protection_factors            .
+   pKa_value_data_set                   .
+   pH_NMR_param_list                    .
+   binding_constants                    .
+   D_H_fractionation_factors            .
+   molecular_axis_determinations        .
+   deduced_secd_struct_features         .
+   deduced_hydrogen_bonds               .
+   representative_conformer             .
+   conformer_family_coord_set           .
+   general_relaxation                   .
+   heteronucl_T1_relaxation             .
+   heteronucl_T1rho_relaxation          .
+   heteronucl_T2_relaxation             .
+   heteronucl_NOEs                      .
+   homonucl_NOEs                                          .
+   dipole_dipole_relaxation                               .
+   dipole_dipole_cross_correlation_relaxation             .
+   CSA_CSA_cross_correlation_relaxation                   .
+   dipole_CSA_cross_correlation_relaxation                .
+
+    stop_
+
+save_
+
+
+save__Datum.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     '1H chemical shifts'                           .
+     '2H chemical shifts'                           .
+     '3H chemical shifts'                           .
+     '13C chemical shifts'                          .
+     '15N chemical shifts'                          .
+     '31P chemical shifts'                          .
+     '111Cd chemical shifts'                        .
+     '113Cd chemical shifts'                        .
+     'chemical rates'                               .
+     'coupling constants'                           .
+     'chemical shift isotope effects'               .
+     'molecule interaction chemical shift values'   .
+     'T1 relaxation values'                         .
+     'T1rho relaxation values'                      .
+     'T2 relaxation values'                         .
+     'dipole-dipole relaxation values'              .
+     'cross correlation relaxation values'          .
+     'chemical shift anisotropy values'             .
+     'chemical shift anisotropy tensor values'      .
+     'quadrupolar couplings'                    .
+     'theoretical chemical shifts'              .
+     'chemical shift tensors'                   .
+     'residual dipolar couplings'               .
+     'dipolar coupling values'                  .
+     'dipolar coupling tensor values'           .
+     'heteronuclear NOE values'                 .
+     'homonuclear NOE values'                   .
+     'order parameters'                         .
+     'spectral density values'                  .
+     'H exchange rates'                         .
+     'H exchange protection factors'            .
+     'pKa values'                               .
+     'pH NMR parameter values'                  .
+     'binding constants'                        .
+     'D/H fractionation factors'                .
+     'bond orientation values'                  .
+     'deduced secondary structure values'       .
+     'deduced hydrogen bonds'                   .
+
+     'distance constraints'                  
+;
+NOE distance constraints between two sets of atoms in which each set has at
+least one atom. Multiple atoms in one set should be represented by a standard
+single pseudoatom. If this is not possible then the constraint having such a set of 
+atoms should be considered an ambiguous NOE distance constraint for this 
+purpose.
+E.g. restaint between
+( Chain A Residue number 1 Residue name LEU Atom name QD) and
+( Chain A Residue number 1 Residue name LEU Atom name HA)
+;
+
+     'ambiguous distance constraints'
+;
+Any NOE distance constraint that has at least one set of atoms that can not
+be represented by a standard single pseudoatom.
+E.g. restaint between
+( Chain (A or B) Residue number 1 Residue name LEU Atom name HB2) and
+( Chain A        Residue number 1 Residue name LEU Atom name HA)
+;
+     'hydrogen bond distance constraints'        
+;
+Distance constraints to constraint a hydrogen bond.
+Often two distance constraints for one hydrogen bond in order to set the bond 
+length as well as the directionality of the bond.
+;
+     'torsion angle constraints'                 
+;
+Dihedral angle constraint
+;
+    'chemical shift constraints'                
+;
+Chemical shift of e.g. a proton or carbon nucleus implemented as a constraint.
+;
+     'symmetry constraints'                      
+;
+Restraining (or constraining) symmetry between multiple copies of (part of) 
+similar structures.
+;
+   '19F chemical shifts'                .
+   '6Li chemical shifts'                .
+   '10B chemical shifts'                .
+   '11B chemical shifts'                .
+   '17O chemical shifts'                .
+   '23Na chemical shifts'               .
+   '29Si chemical shifts'               .
+   '35Cl chemical shifts'               .
+   '129Xe chemical shifts'              .
+   '195Pt chemical shifts'              .
+     
+    stop_
+
+save_
+
+
+save__Deduced_H_bond_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic       .
+     anisotropic     .
+     solid           .
+
+    stop_
+
+save_
+
+
+save__Deduced_secd_struct_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic       .
+     anisotropic     .
+     solid           .
+
+    stop_
+
+save_
+
+
+save__Deposited_data_files.Atomic_coordinate_file_syntax
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   mmCIF     .
+   PDB       .
+
+    stop_
+
+save_
+
+save__Deposited_data_files.Constraint_file_syntax
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+       ARIA       .
+       CNS        .
+       CYANA      .
+       DISCOVER   .         
+       X-PLOR     .
+
+    stop_
+
+save_
+
+
+save__Deposited_data_files.Precheck_flag
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+     yes         .
+     no          .
+
+
+    stop_
+
+save_
+
+save__Deposited_data_files.Validate_flag
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+     yes         .
+     no          .
+
+
+    stop_
+
+save_
+
+
+save__D_H_fract_factor_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic              .
+     anisotropic            .
+     solid                  .
+
+    stop_
+
+save_
+
+
+save__Dipolar_coupling_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic              .
+     anisotropic            .
+     solid                  .
+
+    stop_
+
+save_
+
+
+
+save__Dipole_dipole_relax_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic              .
+     anisotropic            .
+     solid                  .
+
+    stop_
+
+save_
+
+
+save__Dipole_dipole_relax_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   s-1      .
+   ms-1     .
+   us-1     .
+
+    stop_
+
+save_
+
+
+save__Distance_constraint_expt.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic         .
+    anisotropic       .
+    solid             .
+
+    stop_
+
+save_
+
+save__Distance_constraint_list.Constraint_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      NOE                               'Distance constraints determined from NOE experiments'
+     'NOE build-up'                     'Distance constraints determined from a series of NOE experiments with different mixing times'
+     'NOE not seen'                     'Distance constraints supplied when an expected NOE was not observed'
+      ROE                               'Distance constraints determined from ROE experiments'
+     'ROE build-up'                     'Distance constraints determine from a series of ROE experiments with different mixing times'
+     'hydrogen bond'                    'Hydrogen bond distance constraints'
+     'disulfide bond'                   'Disulfide bond distance constraints'
+     'paramagnetic relaxation'          'Distance constraints determined from paramagnetic relaxation studies'
+     'symmetry'                         'Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer'
+     'general distance'                 'Specific distance constraint is not known'
+
+    stop_
+
+save_
+
+save__Dist_constr_software_setting.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'averaging method'                 .
+      'number monomers'                  .
+      'pseudoatom corrections'           .
+      'potential function'               .
+      'temperature'                      .
+      'exponent'                         .
+      'switch distance'                  .
+      'asymptote slope'                  .
+      'B_high'                           .
+      'ceiling'                          .
+      'negative offset'                  .
+      'scaling constant'                 .
+
+    stop_
+
+save_
+
+save__EMR_expt.Sample_volume_units
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     ml        .
+ 
+   stop_
+
+save_
+
+
+save__Entity_assembly.Experimental_data_reported
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes    .
+    no     .
+
+    stop_
+
+save_
+
+save__Entity_assembly.Conformational_isomer
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes    .
+    no     .
+
+    stop_
+
+save_
+
+save__Entity_assembly.Chemical_exchange_state
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes    .
+    no     .
+
+    stop_
+
+save_
+
+
+save__Entity.Nstd_chirality
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes    'polymer contains at least one monomer with different chirality'
+    no     'polymer contains no monomers with different chirality'
+
+    stop_
+
+save_                                   
+
+
+save__Entity.Nstd_monomer
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes    .
+    no     .
+
+    stop_
+
+save_
+
+save__Entity.Polymer_common_type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    protein               .
+    DNA                   .
+    RNA                   .
+   'DNA/RNA hybrid'       .
+    polysaccharide        .             
+
+   stop_
+
+save_
+
+save__Entity.Polymer_type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     cyclic-pseudo-peptide                      .
+    'polypeptide(L)'             
+;
+A polypeptide with a majority of amino acids
+in the L configuration
+;
+    'polydeoxyribonucleotide'                    DNA
+    'polyribonucleotide'                         RNA
+    'polydeoxyribonucleotide/polyribonucleotide hybrid'      
+;
+A nucleic acid containing a combination of DNA and
+RNA monomers
+;
+
+    'polypeptide(D)'             
+;
+A polypeptide with a majority of amino acids
+in the D configuration
+;
+
+    'polysaccharide(D)'   
+;
+A carbohydrate with the majority of the monomers
+having a D configuration
+;
+    'polysaccharide(L)'   
+;
+A carbohydrate with the majority of the monomers
+having an L configuration
+;
+
+     other                                   .
+
+   stop_
+
+save_
+
+
+save__Entity.Thiol_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'all disulfide bound'       .
+     'all other bound'           .
+     'all free'                  .
+     'not present'               
+;
+Thiols are not present in the system.
+;
+     'not available'    
+;
+The oxidation state of the thiols could not be extracted from the literature
+or was not provided by the authors of the entry.
+;
+     unknown     
+;
+The author reported that the oxidation state of the thiols is
+unknown.
+;
+     'not reported'                      .
+     'free and disulfide bound'          .
+     'free and other bound'              .
+     'free disulfide and other bound'    .
+     'disulfide and other bound'         .
+
+    stop_
+
+save_
+
+
+save__Entity.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    polymer             'A biological polymer (protein$ peptide$ nucleic acid$ etc.)'
+    non-polymer         'Ligand$ metal ion$ or other non-polymeric molecule'
+    water               
+;
+Water is defined as a special case. Multiple water molecules may be components
+of the molecular assembly$ but are not assigned unique entity_assembly_ID values.
+;
+    aggregate           
+;
+Used where a large number of molecules are reported as part of a molecular
+assembly$ but are not listed individually as components of the assembly and are not
+assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to
+represent the aggregate number of molecules of a specific compound.
+;
+    solvent
+;
+Applies to compounds other than water that are part of molecular assembly$ but
+are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is
+used to represent all molecules of a specific compound.
+;
+
+   stop_
+
+save_
+
+
+save__Entity_assembly.Physical_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  native               .
+  denatured            .
+  'molten globule'     .
+  unfolded             .
+ 'intrinsically disordered'     .
+ 'partially disordered'         .
+  na                            .
+ 
+  stop_
+
+save_
+
+
+save__Entity_common_name.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    common           'An often used full name for the entity'
+    abbreviation     'Common abbreviation used in the literature for the entity'
+    synonym          'A synonym used for the entity'
+
+  stop_
+
+save_
+
+
+save__Entity_db_link.Database_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    BMRB           .
+    DBJ            .
+    EMBL           .
+    GB             .
+    PDB            .
+    PIR            .
+    PRF            .
+    REF            .
+    SP             .
+    UNP            .
+# PDBj-BMRB: Added NCBI, tRNADB and HUGO.
+   NCBI    ?
+   HUGO    'HUGO Gene Nomenclature Committee'
+   tRNADB    'transfer RNA database'
+# PDBj-BMRB: BMRB(withdrawn) expresses withdrawn accession code referring to current BMRB release status.
+   BMRB(withdrawn)    ?
+
+  stop_
+
+save_
+               
+
+save__Entity_db_link.Entry_experimental_method
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'solution NMR'               .
+     'solid-state NMR'            .
+     'X-ray crystallography'      .
+
+  stop_
+
+save_
+
+
+save__Entity_experimental_src.Host_org_scientific_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'Escherichia coli'                       .
+     'Aspergillus niger'                      .
+     'Cricetulus griseus'                     .
+     'Desulfovibrio desulfuricans'            .
+     'Pichia pastoris'                        .
+     'Saccharomyces cerevisiae'               .
+     'Spodoptera frugiperda'                  .
+     'wheat germ - cell free'                 .
+     'E. coli - cell free'                    .
+
+  stop_
+
+save_
+
+save__Entity_experimental_src.Production_method
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'recombinant technology'
+;
+?
+;                                  
+
+     'purified from the natural source'
+;
+Obtained from the native organism that produces the biomolecule in nature.
+;
+
+     'chemical synthesis'
+;
+Select this option if the molecule was generated primarily by chemical
+synthesis techniques.
+;
+
+     'cell free synthesis'
+;
+?
+;
+
+     'enzymatic semisynthesis'
+;
+?
+;
+
+     'reverse transcriptase'
+;
+Method used to synthesize RNA.
+;
+
+     'obtained from a collaborator'
+;
+Select this option if the molecule was obtained from a collaborator.
+;
+
+     'obtained from a vendor'
+;
+Select this option if the molecule was obtained from a
+commercial vendor or academic unit that produces materials
+as a service.  DO NOT select this option if the material was provided
+by an academic or industrial research collaborator.
+;
+       na
+;
+not available
+;
+
+  stop_
+
+save_
+
+save__Entity_experimental_src.Host_org_genus
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   Escherichia      .
+
+  stop_
+
+save_
+
+
+save__Entity_experimental_src.Host_org_species
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    coli        .
+
+  stop_
+
+save_
+
+save__Entity_experimental_src.Vector_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    plasmid               .
+    baculovirus           .
+   'other virus'          .
+    cosmid                .
+
+  stop_
+
+save_
+
+save__Entity.Ambiguous_conformational_states
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entity.Ambiguous_chem_comp_sites
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_                        
+                                        
+save_
+
+save__Entity.Nstd_linkage
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entity.Paramagnetic
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entity_db_link.Author_supplied
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entity_natural_src.Common
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+
+save__Entity_natural_src.Kingdom
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+
+      Metazoa      
+;
+multi-cellular motile organisms that feed heterotrophically
+;
+      Fungi            .
+      Viridiplantae         
+;
+multi-cellular organisms that feed by photosynthesis
+;
+      Protista         
+;
+protozoa and single-celled eukaryotic algae
+;
+      "Not applicable"    .
+
+  stop_
+
+save_
+
+
+save__Entity_natural_src.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       organism                     .
+       virus                        .
+       plasmid                      .
+       cosmid                       .
+      'multiple natural sources'    .
+      'no natural source'           .
+      'not applicable'              .
+
+   stop_
+
+save_
+
+save__Entity_natural_src.Organ
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      brain         .
+      heart         .
+      intestine     .
+      kidney        .
+      liver         .
+      lung          .
+      pancreas      .
+      skin          .
+      testicle      .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   leaf                     .
+   'venom gland'            .
+   'oral mucosa, submandibular-sublingual glands'    .
+   'salivary glands'        .
+   oocyte                   .
+   'breast'                 .
+    stomach                 .
+   'electric organ'         .
+   eye                      .
+   ileum                    .
+   'small intestine'        .
+   seed                     .
+   blood                    .
+   duodendum                .
+   jejunum                  .
+   vulva                    .
+   hepatopancreas           .
+   placenta                 .
+   'skeletal muscle'        .
+   aorta                    .
+   telson                   .
+   ubiquitous               .
+   'aciniform gland'        .
+   endoskeleton             .
+   heamolymph               .
+   'mucous epithelium'      .
+   'cardiac skeletal muscle'    .
+   'seminal vesicles'       .
+   antennae                 .
+   fruit                    .
+   thymus                   .
+   'egg white'              .
+   na                       .
+
+
+    stop_
+
+save_
+
+save__Entity_natural_src.Organelle
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    chloroplast             .
+   'endoplasmic reticulum'  .
+   'golgi apparatus'        .
+    mitochondria            .
+    nucleus                 .
+    vacuole                 .   
+   acrosome                 .
+   autophagosome            .
+   centriole                .
+   cilium                   .
+   'eyespot apparatus'      .
+   glycosome                .
+   glyoxysome               .
+   hydrogenosome            .
+   lysosome                 .
+   melanosome               .
+   mitosome                 .
+   myofibril                .
+   nucleolus                .
+   parenthesome             .
+   peroxisome               .
+   proteasome               .
+   ribosome                 .
+   vesicle                  .
+   cytosol                  .
+   cytoskeleton             .
+   'endomembrane system'    .
+   nucleosome               .
+   microtubule              .
+   'cell membrane'          .
+ 
+
+     stop_
+
+save_
+
+save__Entity_natural_src.Organism_name_scientific
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'Homo sapiens'                                 .
+     'Escherichia coli'                             .
+     'Mus musculus'                                 .
+     'Rattus norvegicus'                            .
+     'Saccharomyces cerevisiae'                     . 
+     'Bos taurus'                                   .
+     'Bos primigenius'                              .
+     'Gallus gallus'                                .
+     'Maleagris gallopavo'                          .
+     'Drosophila melanogaster'                      .
+     'Bacillus subtilis'                            .
+     'Arabidopsis thaliana'                         .
+     'Staphylococcus aureus'                        .
+     'Oryctolagus cuniculus'                        .
+     'Clostridium pasteurianum'                     .
+     'Equus caballus'                               .
+     'Pseudomonas aeruginosa'                       .
+     'Thermotoga maritima'                          .
+     'Thermus thermophilus'                         .
+     'Methanobacterium thermoautotrophicum'         .
+     'Xenopus laevis'                               .
+     'Amaranthus caudatus'                          .
+     'Anabaena variabilis'                          .
+     'Anemonia sulcata'                             .
+     'Apis mellifera'                               .
+     'Aquifex aeolicus'                             .
+     'Arachis hypogea'                              .
+     'Azotobacter vinelandii'                       .
+     'Bacillus amyloliquefaciens'                   .
+     'Bacillus circulans'                           .
+     'Bacillus pasteurii'                           .
+     'Bacillus stearothermophilus'                  .
+     'Bombyx mori'                                  .
+     'Borrelia burgdorferi'                         .
+     'Bungarus multicinctus'                        .
+     'Caenorhabditis elegans'                       .
+     'Canis familiaris'                             .
+     'Centruroides noxius'                          .
+     'Chlamydomonas reinhardtii'                    .
+     'Conus geographus'                             .
+     'Conus imperialis'                             .
+     'Conus purpurascens'                           .
+     'Cricetulus griseus'                           .
+     'Cucurbita maxima'                             .
+     'Desulfovibrio gigas'                          .
+     'Desulfovibrio vulgaris'                       .
+     'Enterococcus faecalis'                        .
+     'Glycera dibranchiata'                         .
+     'Hadronyche versuta'                           .
+     'Haemophilus influenzae'                       .
+     'Halobacterium halobium'                       .
+     'Hirudo medicinalis'                           .
+     'HIV'                                          .
+     'Hordeum vulgare'                              .
+     'Hydrogenobacter thermophilus'                 .
+     'Lactobacillus casei'                          .
+     'Lactococcus lactis'                           .
+     'Leiurus quinquestriatus'                      .
+     'Lentivirus human immunodeficiency virus'      .
+     'Methanococcus jannaschii'                     .
+     'Methanococcus thermolithotrophicus'           .
+     'Methanothermobacter thermautotrophicus'       .
+     'Morbillivirus'                                .
+     'Mycobacterium tuberculosis'                   .
+     'Naja oxiana'                                  .
+     'Neisseria meningitidis'                       .
+     'Neurospora crassa'                            .
+     'Opisthacanthus madagascariensis'              .
+     'Oryza sativa'                                 .
+     'Ovis aries'                                   .
+     'Pandinus imperator'                           .
+     'Paracoccus denitrificans'                     .
+     'Physeter catodon'                             .
+     'Pisum sativum'                                .
+     'Pseudomonas putida'                           .
+     'Pyrococcus furiosus'                          .
+     'Rana catesbeiana'                             .
+     'Rhodobacter sphaeroides'                      .
+     'Rhodospirillum rubrum'                        .
+     'Salmonella typhimurium'                       .
+     'Schizosaccharomyces pombe'                    .
+     'Selenocosmia hainana'                         .
+     'Solanum tuberosum'                            .
+     'Streptomyces carzinostaticus'                 .
+     'Sulfolobus solfataricus'                      .
+     'Sus scrofa'                                   .
+     'Thermoplasma acidophilum'                     .
+     'Thermosynechococcus elongatus'                .
+     'Trichoderma reesei'                           .
+
+    stop_
+
+save_
+
+save__Entity_natural_src.Secretion
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+       saliva            .
+       semen             .
+      'vaginal fluid'    .
+       venom             .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'hen egg white'       .
+   'sensillum lymph'     .
+    milk                 .
+    blood                .
+    dermal               .
+    urine                .
+    extracellular        .
+    cement               .
+
+    stop_
+
+save_
+
+save__Entity_natural_src.Superkingdom
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     Archaea              .
+     Bacteria             prokaryotes
+     Eukaryota            .
+     Viroid               .
+     Viruses              .
+     Other                .
+     Unclassified         .
+               
+  stop_
+
+save_
+
+save__Entity_natural_src.Tissue
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    skin         ?
+# gather from current entries 
+
+ 
+    stop_
+
+save_
+
+
+save__Entity_systematic_name.Naming_system
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    IUPAC                                        .
+   'CAS name'                                    .
+   'CAS registry number'                         .
+    BMRB                                         .
+   'Three letter code'                           .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Pfam                                          .
+   Swiss-Prot                                    .
+   EC                                            .
+   NCBI                                          .
+
+
+   stop_
+
+save_
+
+save__Entry.Author_release_status_code
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     REL    'Release' 
+     HOLD   'On hold until yyyy-mm-dd'
+     HPUB   'On hold until publication'
+     OBS    'Entry has been obsoleted and replaced by another entry'
+     WDRN   'Entry has been withdrawn by depositor'
+
+    stop_
+
+save_
+
+save__Entry.CASP_target
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     CASP            .
+     CASD-NMR        .
+     FoldIt          .
+    'GPCR Dock'      .
+
+   stop_
+
+save_
+
+save__Entry.Dep_release_code_coordinates
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'RELEASE NOW'            'Release immediately'
+   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
+   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
+   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
+   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
+   'HOLD FOR 1 YEAR'        'Hold for 1 year'
+     
+   stop_
+
+save_
+
+
+save__Entry.Dep_release_code_sequence
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'RELEASE NOW'         'Release sequence information in status reports immediately'
+   'HOLD FOR RELEASE'    
+;
+Conceal sequence information in status reports until coordinate data are
+released
+;
+
+    stop_
+
+save_
+
+
+save__Entry.Dep_release_code_nmr_constraints
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'RELEASE NOW'            'Release immediately'
+   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
+   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
+   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
+   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
+   'HOLD FOR 1 YEAR'        'Hold for 1 year'
+
+    stop_
+
+save_
+save__Entry.Dep_release_code_chemical_shifts
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'RELEASE NOW'            'Release immediately'
+   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
+   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
+   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
+   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
+   'HOLD FOR 1 YEAR'        'Hold for 1 year'
+
+    stop_
+
+save_
+
+
+save__Entry.Dep_release_code_nmr_exptl
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'RELEASE NOW'            'Release immediately'
+   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
+   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
+   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
+   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
+   'HOLD FOR 1 YEAR'        'Hold for 1 year'
+
+    stop_
+
+save_
+
+save__Entry.Experimental_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+       NMR                    .
+# PDBj-BMRB: Added 'theoretical'.
+       Theoretical            .
+    stop_
+
+save_
+
+save__Entry.Experimental_method_subtype
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     SOLUTION              'Experiments using solution samples'
+     SOLID-STATE           'Experiments using samples in the solid-state'
+     THEORETICAL           'Data derived from theoretical calculations'
+    
+    stop_
+
+save_
+
+save__Entry.NMR_STAR_version
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      '1.0'       .
+      '2.0'       .
+      '2.1'       .
+      '2.1.1'     .
+      '3.1'       .
+
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   3.0.8.59     .
+   3.0.8.112    .
+   3.1.1.15     .
+   3.1.0.44     .
+   3.1.1.1      .
+   3.1.0.52     .
+   3.0.9.14     .
+   3.0.8.125    .
+   3.1.1.16     .
+   3.0.2.8      .
+   3.0.8.76     .
+   3.0.8.96     .
+   3.0.8.78     .
+   3.0.8.34     .
+   3.0.8.109    .
+   3.1.1.20     .
+   3.0.8.120    .
+   3.0.2.3      .
+   3.0.9.2      .
+   3.0          .
+   3.1.1.24     .
+   3.0.8.116    .
+   3.0.8.100    .
+   3.1.1.29     .
+   3.1.1.19     .
+   3.0.8.111    .
+   3.0.2.2      .
+   3.1.0.29     .
+   3.1.1.14     .
+   3.1.1.31     .
+   3.0.8.94     .
+   3.0.9.13     .
+   3.1.0.41     .
+   3.0.8.53     .
+   3.1.1.21     .
+   3.1.1.7      .
+   3.1.1.40     .
+   3.1.1.44     .
+   3.1.1.61     .
+
+    stop_
+
+save_
+
+save__Entry.Original_NMR_STAR_version
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      '1.0'       .
+      '2.0'       .
+      '2.1'       .
+      '2.1.1'     .
+      '3.1'       .
+
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   3.0.8.100    .
+   3.0.8.59     .
+   3.0.8.58     .
+   3.1.1.15     .
+   3.0.8.112    .
+   3.0.8.111    .
+   3.0.2.8      .
+   3.0.9.14     .
+   3.0.8.125    .
+   3.0.9.2      .
+   3.0.8.96     .
+   3.0.8.78     .
+   3.0.8.34     .
+   3.0.8.109    .
+   3.0.8.120    .
+   3.1.0.46     .
+   3.1.1.31     .
+   3.0.8.94     .
+   3.1.1.21     .
+   3.0.9.13     .
+   3.0.8.116    .
+   3.0.8.53     .
+
+
+    stop_
+
+save_
+
+save__Entry.Recvd_deposit_form
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes          .
+    no           .
+
+  stop_
+
+save_
+
+
+save__Entry.Recvd_coordinates
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes          .
+    no           .
+
+  stop_
+
+save_
+
+save__Entry.Recvd_nmr_constraints
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes          .
+    no           .
+
+  stop_
+
+save_
+
+save__Entry.Recvd_chemical_shifts
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes          .
+    no           .
+
+  stop_
+
+save_
+
+
+save__Entry.Recvd_manuscript
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes          .
+    no           .
+
+  stop_
+
+save_
+
+
+
+save__Entry.Recvd_author_approval
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes          .
+    no           .
+
+  stop_
+
+save_
+
+
+
+
+save__Entry.Release_request
+                    
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+
+     'Immediately'                 
+;
+Release the entry as soon as processing is complete.
+;
+     'On publication'              
+;
+Release the entry at the time the related manuscript is published.
+;
+     'In one year'                 
+;Release the entry one year from the BMRB submission date.
+
+;
+     'At a specific future date'   
+;
+Release the entry on the date specified but not later than one year from
+submission.
+;
+   stop_
+
+save_
+
+save__Entry.Status_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   REL        .
+   HOLD       .
+   REV        .
+   BIB        .
+
+  stop_
+
+save_
+
+save__Entry.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'macromolecule'                          .
+    'small molecule structure'               .
+    'metabolite/natural product'             .
+
+  stop_
+
+save_
+
+save__Entry.Version_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  original           
+;
+The molecular system and reported data have not been deposited in the past by
+these authors.
+;
+
+  update
+;
+The existing data in the entry with this BMRB accession number has been
+updated.
+;
+
+  obsolete
+;
+The entry is no longer released by BMRB to the public.
+;
+  stop_
+
+save_
+
+
+save__Entry_author.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+# PDBj-BMRB: Added V.
+      V                 Fifth
+      
+
+    stop_
+
+save_
+
+save__Entry_interview.Assigned_chem_shifts
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+
+save__Entry_interview.Auto_relaxation                                       
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+
+
+save__Entry_interview.Binding_constants                                       
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+
+save__Entry_interview.Chem_shift_anisotropy                                       
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+save__Entry_interview.Dynamics_trajectory                                       
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+
+
+save__Entry_interview.Previous_BMRB_entry_owner
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_
+
+save__Entry_interview.Chem_rate_constants
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_
+
+
+save__Entry_interview.Constraints
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.PDB_deposition
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.BMRB_deposition
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Movie
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Use_previous_BMRB_entry
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.View_mode
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       PDB/BMRB        .
+      'BMRB Only'      .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Coupling_constants
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+
+   stop_
+
+save_
+
+#save__Entry_interview.CSA_CSA_cross_correlation
+#
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+#     
+#       yes      .
+#       no       .
+#
+#   stop_
+#
+#save_
+
+
+save__Entry_interview.DD_cross_correlation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+
+   stop_
+
+save_
+
+save__Entry_interview.Dipole_CSA_cross_correlation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+
+   stop_
+
+save_
+
+save__Entry_interview.Dipole_dipole_couplings
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no     .
+
+   stop_
+
+save_
+
+save__Entry_interview.Dipole_dipole_relaxation
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no     .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.D_H_fractionation_factors
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no     .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.H_exchange_protection_factors
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.H_exchange_rate
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Heteronucl_NOEs
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Heteronucl_T1_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Heteronucl_T1rho_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Heteronucl_T2_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entry_interview.Homonucl_NOEs
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entry_interview.Interatomic_distance
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+save__Entry_interview.Ligands
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes     .
+      no     .
+
+   stop_
+      
+save_
+
+save__Entry_interview.Mass_spec_data
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes     .
+      no     .
+
+   stop_
+      
+save_
+
+
+save__Entry_interview.Metabolite_coordinates
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes     .
+      no     .
+
+   stop_
+      
+save_
+
+
+save__Entry_interview.Molecular_interactions
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes     .
+      no     .
+
+   stop_
+      
+save_
+
+
+save__Entry_interview.Non_standard_residues
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     yes     .
+      no     .
+
+   stop_
+      
+save_
+
+save__Entry_interview.Order_parameters
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no     .
+
+   stop_
+
+save_
+
+save__Entry_interview.Other_kind_of_data
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no     .
+
+   stop_
+
+save_
+
+#save__Entry_interview.PH_parameter_list
+
+#  loop_
+#    _item_enumeration_value
+#   _item_enumeration_description
+     
+#      yes     .
+#     no      .
+#
+#   stop_
+#
+#save_
+
+
+save__Entry_interview.PKa_value_data_set
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Quadrupolar_couplings
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes    .
+       no     .
+
+   stop_
+
+save_
+
+
+
+save__Entry_interview.Residual_dipolar_couplings
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+save__Entry_interview.Secondary_structure_orientations
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+save__Entry_interview.Spectral_density_values
+                                   
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Spectral_peak_lists
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Structural_genomics
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_
+
+save__Entry_interview.Tensor                                      
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+                                             
+   stop_
+
+save_ 
+
+
+save__Entry_interview.Theoretical_chem_shifts
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .              
+
+   stop_
+
+save_
+
+
+save__Entry_interview.Timedomain_data
+
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes       .
+       no        .
+
+   stop_
+
+save_
+
+save__Entry_src.Organization_full_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    "Accelerated Technologies Center for Gene to 3D Structure"                   .
+    "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
+    "Architecture and Function of Biological Macromolecules Structure Genomics"  ASG           
+    "Atoms-to-Animals: The Immune Function Network"                              .
+    "Bacterial targets at IGS-CNRS$ France"                                      .
+    "Berkeley Structural Genomics Center"                                        BSGC
+    "Center for Eukaryotic Structural Genomics"                                  CESG
+    "Center for High-Throughput Structural Biology"                              .
+    "Center for Membrane Proteins of Infectious Diseases"                        .
+    "Center for Structural Genomics of Infectious Diseases"                      .
+    "Center for Structures of Membrane Proteins"                                 .
+    "Center for the X-ray Structure Determination of Human Transporters"         .
+    "Chaperone-Enabled Studies of Epigenetic Regulation Enzymes"                 .
+    "Enzyme Discovery for Natural Product Biosynthesis"                          .
+    "GPCR Network"                                                               .
+    "Integrated Center for Structure and Function Innovation"                    .
+    "Israel Structural Proteomics Center"                                        .
+    "Joint Center for Structural Genomics"                                       JCSG
+    "Marseilles Structural Genomics Program @ AFMB"                              .
+    "Medical Structural Genomics of Pathogenic Protozoa"                         .
+    "Membrane Protein Structural Biology Consortium"                             .
+    "Membrane Protein Structures by Solution NMR"                                .
+    "Midwest Center for Structural Genomics"                                     MCSG
+    "Mitochondrial Protein Partnership"                                          .
+    "Montreal-Kingston Bacterial Structural Genomics Initiative"                 .
+    "Mycobacterium Tuberculosis Structural Proteomics Project"                   .
+    "New York Consortium on Membrane Protein Structure"                          .
+    "New York SGX Research Center for Structural Genomics"                       .
+    "New York Structural Genomics Research Consortium"                           NYSGRC
+    "New York Structural GenomiX Research Consortium"                            .
+    "Northeast Structural Genomics Consortium"                                   .
+    "North West Structural Genomics Centre"                                      NWSGC   
+    "Nucleocytoplasmic Transport: a Target for Cellular Control"                 .
+    "Ontario Centre for Structural Proteomics"                                   .
+    "Oxford Protein Production Facility"                                         .
+    "Paris-Sud Yeast Structural Genomics"                                        .
+    "Partnership for Stem Cell Biology"                                          .
+    "Partnership for T-Cell Biology"                                             .
+    "Program for the Characterization of Secreted Effector Proteins"             .
+    "Protein Structure Factory"                                                  .
+    "RIKEN Structural Genomics/Proteomics Initiative"                            .
+    "Scottish Structural Proteomics Facility"                                    .
+    "Seattle Structural Genomics Center for Infectious Disease"                  .
+    "Southeast Collaboratory for Structural Genomics"                            .
+    "Structural Genomics Consortium"                                             .
+    "Structural Genomics Consortium for Research on Gene Expression"             .
+    "Structural Genomics of Pathogenic Protozoa Consortium"                      .
+    "Structural Proteomics in Europe"                                            .
+    "Structural Proteomics in Europe 2"                                          .
+    "Structure 2 Function Project"                                               .
+    "Structure$ Dynamics and Activation Mechanisms of Chemokine Receptors"       .
+    "Structure-Function Studies of Tight Junction Membrane Proteins"             .
+    "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"  .
+    "TB Structural Genomics Consortium"                                          .
+    "Transcontinental EM Initiative for Membrane Protein Structure"              .
+    "Transmembrane Protein Center"                                               .
+    "Yeast Structural Genomics"                                                  YSG 
+
+  stop_
+
+save_
+
+
+
+save__Experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+
+    stop_
+
+save_
+
+save__Force_constant_list.Default_software_values_used
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes     .
+    no      .
+
+  stop_
+
+save_
+
+save__Force_constant.Term
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'distance term'                                      .
+    'torsion angle term'                                 .
+    '1J coupling term'                                   .
+    '3J coupling term'                                   .
+    '13C shift term'                                     .
+    '1H shift term'                                      .
+    'dipolar couplings term'                             .
+    '2H isotope shift term'                              .
+    'T1 term'                                            .
+    'T2 term'                                            .
+    'CSA term'                                           .
+    'Pseudocontact shift term'                           .
+    'covalent geometry bond term'                        .
+    'covalent geometry angles term'                      .
+    'covalent geometry impropers term'                   .
+    'non-bonded van der Waals interaction term'          .
+    'non-bonded radius of gyration interaction term'     .
+
+  stop_
+
+save_
+
+save__Force_constant.Units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+kcal/mol*A2        'bonds; distance; radius of gyration; planarity'            
+kcal/mol*rad2      'angle or dihedral angle'              
+kcal/mol*A4        "van der Waals"                        
+kcal/mol*Hz2       "dipolar coupling; scalar couplings; T1/T2; CSA"    
+kcal/mol*ppm2      "Chemical shifts; pseudocontact shifts"          
+
+
+     stop_
+
+save_
+
+
+
+
+
+save__Gen_dist_constraint_list.Constraint_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      NOE                               'Distance constraints determined from NOE experiments'
+     'NOE build-up'                     'Distance constraints determined from a series of NOE experiments with different mixing times'
+     'NOE not seen'                     'Distance constraints supplied when an expected NOE was not observed'
+      ROE                               'Distance constraints determined from ROE experiments'
+     'ROE build-up'                     'Distance constraints determine from a series of ROE experiments with different mixing times'
+     'hydrogen bond'                    'Hydrogen bond distance constraints'
+     'disulfide bond'                   'Disulfide bond distance constraints'
+     'paramagnetic relaxation'          'Distance constraints determined from paramagnetic relaxation studies'
+     'symmetry'                         'Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer'
+     'general distance'                 'Specific distance constraint is not known'
+
+    stop_
+
+save_
+
+
+save__Gen_dist_constraint_expt.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+    isotropic         .
+    anisotropic       .
+    solid             .
+
+    stop_
+
+save_
+
+save__Gen_dist_constraint_software_param.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'averaging method'                 .
+      'number monomers'                  .
+      'pseudoatom corrections'           .
+      'potential function'               .
+      'temperature'                      .
+      'exponent'                         .
+      'switch distance'                  .
+      'asymptote slope'                  .
+      'B_high'                           .
+      'ceiling'                          .
+      'negative offset'                  .
+      'scaling constant'                 .
+
+    stop_
+
+save_
+
+
+save__Gen_dist_constraint.Member_logic_code
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     OR          .
+     AND         .
+
+  stop_
+
+save_
+
+
+save__H_chem_shift_constraint_expt.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic      .
+    anisotropic    .
+    solid          .
+
+     stop_
+
+save_
+
+
+save__Heteronucl_NOE_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic      .
+    anisotropic    .
+    solid          .
+
+     stop_
+
+save_
+
+save__Heteronucl_NOE_list.Heteronuclear_NOE_val_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'peak height'           .
+      'peak integral'         .
+      'contour count'         .
+      'relative intensities'  .
+      'na'                    .
+
+     stop_
+
+save_
+
+
+save__Heteronucl_T1_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic        .
+     anisotropic      .
+     solid            .
+
+     stop_
+
+save_
+
+save__Heteronucl_T1_list.T1_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         Iz              'zero quantum$ longitudinal'
+         Sz              'zero quantum$ longitudinal'
+                         
+    stop_
+
+save_
+
+
+save__Heteronucl_T1_list.T1_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s             .
+         s-1           .
+         ms            .
+         ms-1          .
+             
+    stop_
+
+save_
+
+
+save__Heteronucl_T1rho_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic     .
+    anisotropic   .
+    solid         .
+    
+    stop_
+
+save_
+
+save__Heteronucl_T1rho_list.Rex_units  
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+                         
+    stop_
+
+save_
+
+
+
+save__Heteronucl_T1rho_list.T1rho_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         I(+$-)              'single quantum'
+         S(+$-)              'single quantum'
+    
+    stop_
+
+save_
+
+save__Heteronucl_T1rho_list.T1rho_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         s             .
+         ms            .
+             
+    stop_
+
+save_
+
+
+save__Heteronucl_T1rho_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     methanol                    .
+    "monoethylene glycol"        .
+    "no calibration applied"     .
+
+   stop_
+
+save_
+
+
+save__Heteronucl_T1rho_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'           .
+    'temperature compensation block'     .
+    'no temperature control applied'     .
+
+   stop_
+
+save_
+
+
+save__Heteronucl_T2_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__Heteronucl_T2_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__Heteronucl_T2_list.T2_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+         I(+$-)              'single quantum'
+         S(+$-)              'single quantum'
+    
+    stop_
+
+save_
+
+save__Heteronucl_T2_list.T2_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         s             .
+         ms            .
+             
+    stop_
+
+save_
+
+save__Heteronucl_T2_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+    methanol                          .
+   "monoethylene glycol"              .
+   "no calibration applied"           .
+   stop_
+
+save_
+
+
+save__Heteronucl_T2_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'           .
+    'temperature compensation block'     .
+    'no temperature control applied'     .
+
+   stop_
+
+save_
+
+#save__General_relaxation_list.Relaxation_type_common_name
+
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+
+#      R1                                    .
+#      R2                                    .
+#      R1rho                                 .
+#     'ZQ relaxation'                        .
+#     'longitudinal spin order'              .
+#     'single quantum antiphase'             .
+#     'DQ relaxation'                        .
+
+#    stop_
+
+#save_
+
+
+#save__General_relaxation_list.Common_relaxation_term
+#
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+#
+#      R1             .
+#      R1rho          .
+#      R2             .
+#      T1             .
+#      T1rho          .
+#      T2             .
+#            
+#    stop_
+#
+#save_
+
+
+save__Auto_relaxation_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__Auto_relaxation_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__Auto_relaxation_list.Relaxation_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   Iz               'R1    longitudinal'
+   Sz               'R1    longitudinal'
+                         
+   (I+)+(I-)        'R1rho or R2      transverse'
+   (S+)+(S-)        'R1rho or R2      transverse'
+   I+               'R1rho or R2      transverse'
+   I-               'R1rho or R2      transverse'
+   S+               'R1rho or R2      transverse'
+   S-               'R1rho or R2      transverse'
+
+   (I+S-)+(I-S+)    'ZQ relaxation'
+   I-S+             'ZQ relaxation'
+   I+S-             'ZQ relaxation'
+
+   IzSz             'longitudinal spin order'
+
+  ((I+)+(I-))Sz     'single quantum antiphase'
+  Iz((S+)+(S-))     'single quantum antiphase'
+   I+Sz             'single quantum antiphase'
+   I-Sz             'single quantum antiphase'
+   IzS+             'single quantum antiphase'
+   IzS-             'single quantum antiphase'
+   
+ (I+S+)+(I-S-)      'DQ relaxation'
+   I+S+             'DQ relaxation'
+   I-S-             'DQ relaxation'
+         
+    stop_
+
+save_
+
+
+save__Auto_relaxation_list.Relaxation_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         us-1          .
+         ns-1          .
+         ps-1          .
+             
+    stop_
+
+save_
+
+save__Auto_relaxation_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    methanol                    MeOH
+   'monoethylene glycol'        MEG
+   'no calibration applied'     .
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'                                             .
+    'temperature compensation block'                                       .
+    'single scan interleaving and temperature compensation block'          .
+    'no temperature control applied'                                       .
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Common_relaxation_type_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      R1                                    .
+      R2                                    .
+      R1rho                                 .
+     'ZQ relaxation'                        .
+     'longitudinal spin order'              .
+     'single quantum antiphase'             .
+     'DQ relaxation'                        .
+
+   stop_
+
+save_
+
+
+
+save__Homonucl_NOE_list.Homonuclear_NOE_val_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'peak volume'             .
+    'peak height'             .
+    'contour count'           .
+     na                       .
+    
+    stop_
+
+save_
+
+
+
+save__H_exch_protection_fact_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+
+
+save__H_exch_rate_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+
+save__H_exch_rate_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    s           'half-time'
+    s-1         'rate'
+    min         'half-time'
+    min-1       'rate'
+    hr          'half-time'
+    hr-1        'rate'
+
+    stop_
+
+save_
+
+
+
+save__Isotope_effect_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+
+save__J_three_bond_constraint_expt.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+
+save__Mass_spec.Manufacturer
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'Alpha Omega Technologies Inc.'                      .
+       Agilent                                             .
+      'Analytica of Branford'                              .
+      'Bear Instruments'                                   .
+      'Bergmann Messgeraete Entwicklung'                   .
+      'Bruker Daltonics'                                   .
+      'Ciphergen Biosystems'                               .
+      'Charles Evans & Associates'                         .
+      'Comstock Inc.'                                      .
+       In-Situ                                             .
+       Micromass                                           .
+      'Hitachi Instruments'                                .
+      'JEOL USA'                                           .
+      'Kore Technology Ltd.'                               .
+      'Kratos Analytical'                                  .
+       LECO                                                .
+      'MKS Instruments'                                    .
+      'PE Biosystems'                                      .
+      'Perkin Elmer'                                       .
+      'Prolab Resources'                                   .
+      'Sensar Larson Davis'                                .
+      'Shimadzu Scientific Instruments Inc.'               .
+      'Thermo Scientific'                                  .
+
+    stop_
+
+save_
+
+save__Mass_spec.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Q-TOF          .
+     'ion TRAP'      .
+      FTMS           .
+      Quadrupole     .
+
+    stop_
+
+save_
+
+save__Mass_spec_config.Component_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     source                 .
+     analyzer               .
+     detector               .
+
+    stop_
+
+save_
+
+
+
+save__Mass_spectrometer_view.Fragmentation_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      CID          .
+      ETD          'electron-transfer dissociation'
+      IRMPD        .
+
+    stop_
+
+save_
+
+
+save__Mass_spectrometer_view.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Q-TOF          .
+     'ion TRAP'      .
+      FTMS           .
+      Quadrupole     .
+
+    stop_
+
+save_
+
+save__Mass_spectrometer_view.Manufacturer
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'Alpha Omega Technologies Inc.'                      .
+       Agilent                                             .
+      'Analytica of Branford'                              .
+      'Bear Instruments'                                   .
+      'Bergmann Messgeraete Entwicklung'                   .
+      'Bruker Daltonics'                                   .
+      'Ciphergen Biosystems'                               .
+      'Charles Evans & Associates'                         .
+      'Comstock Inc.'                                      .
+       In-Situ                                             .
+       Micromass                                           .
+      'Hitachi Instruments'                                .
+      'JEOL USA'                                           .
+      'Kore Technology Ltd.'                               .
+      'Kratos Analytical'                                  .
+       LECO                                                .
+      'MKS Instruments'                                    .
+      'PE Biosystems'                                      .
+      'Perkin Elmer'                                       .
+      'Prolab Resources'                                   .
+      'Sensar Larson Davis'                                .
+      'Shimadzu Scientific Instruments Inc.'               .
+      'Thermo Scientific'                                  .
+
+    stop_
+
+save_
+
+
+   
+
+save__Mol_interaction_diff_experiment.Sample_state  
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+save__MS_chromatogram_list.Text_data_format
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     mzML         .
+     mzDAta       .
+
+     stop_
+
+save_
+
+
+save__MS_expt_param.Name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     'ion mode'                               .
+     'flow rate'                              .
+     'flow rate units'                        .
+     'collision energy'                       .
+     'collision energy units'                 .
+     'fragmentation method'                   .
+     'ionization method'                      .
+     'detection method'                       .
+     'mass range minimum'                     .
+     'mass range maximum'                     .
+     'mass reference introduction method'     .
+
+   stop_
+
+save_
+
+save__MS_expt.Spectrum_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'single scan'           .  
+       composite              .
+       ramp                   .
+
+    stop_
+
+save_
+
+
+
+save__NMR_experiment_file.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'NMR experiment directory'
+;
+Contains variety of files for acquiring and processing the NMR experimental
+data
+;
+      'Time-domain (raw spectral data)'         .
+
+      'Pulse sequence image file'
+;
+jpeg$ gif$ or other file type that is an image of the pulse sequence
+as shown as a figure in many publications
+;
+
+      'Pulse sequence'                          .
+      'Pulse field gradient'                    .
+      'Peak list'                               .
+      'Spectral image'                          .       
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'Acquisition parameters'    .
+   'Processing parameters'     .
+    na                         .
+
+    stop_
+
+save_
+
+
+save__NMR_expt_systematic_name.Naming_system
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'CCPN convention'      .
+
+  stop_
+
+save_
+
+save__NMR_probe.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'transmission line'        .
+    'home built'               .
+    'triple resonance'         .
+    'double resonance'         .
+    'inverse coil'             .
+    'solenoid coil'            .
+    'saddle coil'              .
+    'room temperature'         .
+    'cryogenically cooled'     .
+     na                        .
+
+  stop_
+
+save_
+
+save__NMR_spec_expt.NMR_tube_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'cylindrical microcell'       .
+       Shigemi                      .
+      'spherical microcell'         .
+      'standard cylindrical'        .
+ 
+    stop_
+
+save_
+
+save__NMR_spec_expt.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'NOE'         .
+      'COSY'        .
+
+    stop_
+
+save_
+
+save__NMR_spectrometer_probe.Diameter
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   '1.7 mm'          .
+   '3 mm'            .
+   '5 mm'            .
+   '8 mm'            .
+   '10 mm'           .
+   '20 mm'           .
+
+  stop_
+
+save_
+
+save__Experiment.Name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      '2D 1H-15N HSQC'              .
+      '2D 1H-15N HSQC NH2 only'     .
+      '2D 1H-13C HSQC'              .
+      '2D 1H-13C HSQC aliphatic'    .
+      '2D 1H-13C HSQC aromatic'     .   
+      '2D 1H-1H TOCSY'              .
+      '2D DQF-COSY'                 .
+      '2D 1H-1H COSY'               .
+      '2D 1H-1H NOESY'              .
+      '3D CBCA(CO)NH'               .
+      '3D C(CO)NH'                  .
+      '3D HNCO'                     .
+      '3D HNCA'                     .
+      '3D HNCACB'                   .
+      '3D HBHA(CO)NH'               .
+      '3D HN(CO)CA'                 .
+      '3D H(CCO)NH'                 .
+      '3D HCCH-TOCSY'               .
+      '3D HNHA'                     .
+      '3D 1H-15N NOESY'             .
+      '3D 1H-15N TOCSY'             .
+      '3D 1H-13C NOESY'             .
+      '3D 1H-13C NOESY aliphatic'   .
+      '3D 1H-13C NOESY aromatic'    .
+      '3D HNHB'                     .
+      '3D HCCH-COSY'                .
+      '3D HCACO'                    .
+      '3D HN(COCA)CB'               .
+
+  stop_
+
+save_ 
+
+save__Experiment.Raw_data_flag
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    no            .
+    yes           .
+
+  stop_
+
+save_ 
+
+
+save__Chemical_rate_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    anisotropic            .
+    isotropic              .
+
+  stop_
+
+save_ 
+
+save__Local_structure_quality.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'not observed'                            ?
+    'not well defined'                        ?
+    'low restraint density'                   ?
+    'well defined'                            ?
+    'high restraint density'                  ?
+
+  stop_
+
+save_
+
+
+save__Model_type.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'experimental ensemble member'                    ?
+     'representative lowest energy'                    ?
+     'representative closest to the mean'              ?
+     'representative average minimized'                ?
+     'representative lowest overall target function'   ?
+
+  stop_
+
+save_
+                         
+
+#save__NMR_spec_expt.Temp_calibration_method
+
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+
+#    methanol                    .
+#   'monoethylene glycol'        .
+#   'no calibration applied'     .
+
+#   stop_
+
+#save_
+
+
+#save__NMR_spec_expt.Temp_control_method
+
+#    loop_
+#      _item_enumeration_value
+#      _item_enumeration_description
+
+#    'single scan interleaving'                                             .
+#    'temperature compensation block'                                       .
+#    'single scan interleaving and temperature compensation block'          .
+#    'no temperature control applied'                                       .
+
+#   stop_
+
+#save_
+
+save__NMR_spec_expt.Sample_volume_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    uL   .
+    mL   .
+
+  stop_
+
+save_
+
+save__NMR_spectrometer.Field_strength
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    400       .
+    500       .
+    600       .
+    700       .
+    750       .
+    800       .
+    850       .
+    900       .
+    920       .
+    950       .
+   1000       .
+   1200       .
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer.Manufacturer
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    Bruker   .
+    GE       .
+    JEOL     .
+    Varian   .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Agilent      .
+   Cambridge    .
+   Oxford       .
+   FBML         .
+   Nicolet      .
+   Home-built   .
+   na           .
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer.Model
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   AM                       "from Bruker"
+   AMX                      "from Bruker"
+   ARX                      "from Bruker"
+   Avance                   "from Bruker"
+   CMX                      'from Bruker'
+   DMX                      "from Bruker"
+   DPX                      "from Bruker"
+   DRX                      "from Bruker"
+   MSL                      "from Bruker"
+   ECA                      "from JEOL"
+   ECP                      "from JEOL"
+  'Uniform NMR System'      "from Varian"
+   INOVA                    "from Varian"
+   Unity                    "from Varian"
+   UnityPlus                "from Varian"
+   VXRS                     "from Varian"
+   Gemini                   "from General Electric"
+   GSX                      "from General Electric"
+   GX                       "from General Electric"
+   OMEGA                    "from General Electric"
+  'OMEGA PSG'               "from General Electric"
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_view.Field_strength
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    400       .
+    500       .
+    600       .
+    700       .
+    800       .
+    900       .
+     90       .
+    120       .
+    140       .
+    200       .
+    250       .
+    270       .
+    300       .
+    350       .
+    360       .
+    450       .
+    470       .
+    550       .
+    590       .
+    720       .
+    750       .
+    850       .
+    920       .
+    950       .
+   1000       .
+   na    'not available'
+
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_view.Manufacturer
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    Bruker   .
+    GE       .
+    JEOL     .
+    Varian   .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Agilent       .
+   Cambridge     .
+   Oxford        .
+   FBML          .
+   Nicolet       .
+   Home-built    .
+   na            .
+   
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_view.Model
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   AM        "from Bruker"
+   AMX       "from Bruker"
+   ARX       'from Bruker'
+   Avance    "from Bruker"
+   DMX       "from Bruker"
+   DPX       "from Bruker"
+   DRX       "from Bruker"
+   MSL       "from Bruker"
+   ECA       "from JEOL"
+   ECP       "from JEOL"
+  'Uniform NMR System'   "From Varian"
+   INOVA     "from Varian"
+   Unity     "from Varian"
+   UnityPlus "from Varian"
+   VXRS      "from Varian"
+   Gemini    "from General Electric"
+   GSX       "from General Electric"
+   GX        "from General Electric"
+   OMEGA     "from General Electric"
+  'OMEGA PSG' "from General Electric"
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_probe.Manufacturer
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    Agilent  .
+    Bruker   .
+    DOTY     .
+    GE       .
+    JEOL     .
+    Varian   .
+    na       .
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_probe.Spacer_present
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    no   .
+    yes  .
+
+  stop_
+
+save_ 
+
+
+#save__Model_free.Model_fit
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+# No internal model-free motions:
+
+ #        ''                                                .
+ #        'Rex'                                             .
+ 
+# Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
+# such as Rex:
+
+  #       'S2'                                               .
+  #       'S2$ te'                                           .
+  #       'S2$ Rex'                                          .
+  #       'S2$ te$ Rex'                                      .
+ 
+# Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
+
+  #       'S2f$ S2$ ts'                                      .
+  #       'S2f$ S2s$ ts'                                     .
+  #       'S2f$ tf$ S2$ ts'                                  .
+  #       'S2f$ tf$ S2s$ ts'                                 .
+  #       'S2f$ S2$ ts$ Rex'                                 .
+  #       'S2f$ S2s$ ts$ Rex'                                .
+  #       'S2f$ tf$ S2$ ts$ Rex'                             .
+  #       'S2f$ tf$ S2s$ ts$ Rex'                            .
+
+#  stop_
+
+#save_ 
+
+
+
+#save__Model_free_experiment.Sample_state
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    isotropic         .
+#    anisotropic       .
+#    solid             .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_list.Tau_e_val_units
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    s    .
+#    ms   .
+#    us   .
+#    ns   .
+#    ps   .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_list.Tau_s_val_units
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    s    .
+#    ms   .
+#    us   .
+#    ns   .
+#    ps   .
+
+#  stop_
+
+#save_ 
+
+
+save__Order_param.Model_fit
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+ No internal model-free motions:
+
+         ''                                                .
+         'Rex'                                             .
+ 
+ Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
+ such as Rex:
+
+         'S2'                                               .
+         'S2$ te'                                           .
+         'S2$ Rex'                                          .
+         'S2$ te$ Rex'                                      .
+ 
+ Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
+
+         'S2f$ S2$ ts'                                      .
+         'S2f$ S2s$ ts'                                     .
+         'S2f$ tf$ S2$ ts'                                  .
+         'S2f$ tf$ S2s$ ts'                                 .
+         'S2f$ S2$ ts$ Rex'                                 .
+         'S2f$ S2s$ ts$ Rex'                                .
+         'S2f$ tf$ S2$ ts$ Rex'                             .
+         'S2f$ tf$ S2s$ ts$ Rex'                            .
+
+  stop_
+
+save_ 
+
+
+
+save__Order_parameter_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic         .
+    anisotropic       .
+    solid             .
+
+  stop_
+
+save_ 
+
+save__Order_parameter_list.Tau_e_val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    s    .
+    ms   .
+    us   .
+    ns   .
+    ps   .
+
+  stop_
+
+save_ 
+
+
+save__Order_parameter_list.Rex_val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    s-1    .
+    ms-1   .
+    us-1   .
+
+  stop_
+
+save_ 
+
+save__Order_parameter_list.Tau_f_val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    s    .
+    ms   .
+    us   .
+    ns   .
+    ps   .
+
+  stop_
+
+save_ 
+
+save__Order_parameter_list.Tau_s_val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    s    .
+    ms   .
+    us   .
+    ns   .
+    ps   .
+
+  stop_
+
+save_ 
+
+
+
+save__Other_constraint_expt.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+
+
+
+save__Other_data_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+save__Peak_char.Coupling_pattern
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    d       doublet
+    dd     'doublet of doublets'
+    ddd    'doublet of doublets of doublets'
+    dm     'doublet of multiplets'
+    dt     'doublet of triplets'
+    hxt     hextet
+    hpt     heptet
+    m       multiplet
+    q       quartet
+    qd     'quartet of doublets'
+    qn      quintet
+    s       singlet
+    sxt     sextet
+    t       triplet
+    td     'triplet of doublets'
+    LR     'long-range coupling'
+    1JCH   'one J carbon-proton couplings'
+
+  stop_
+
+save_ 
+
+save__PDBX_poly_seq_scheme.Hetero
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    no     .
+    yes    .
+
+  stop_
+
+save_ 
+
+
+save__Peak_general_char.Measurement_method
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'absolute height'             .
+     height                       .
+    'relative height'             .
+     volume                       .
+    'number of contours'          .
+     integration                  .
+
+  stop_
+
+save_ 
+
+
+
+save__PH_titration_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     isotropic     .
+     anisotropic   .
+     solid         .
+
+  stop_
+
+save_ 
+
+save__PH_titration_list.Expt_observed_param
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+
+    'chemical shift'       .
+    'coupling constant'    .
+    'peak height'          .
+    'peak volume'          .
+
+  stop_
+
+save_ 
+
+save__PH_param_list.Observed_NMR_param
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+
+    'chemical shift'       .
+    'coupling constant'    .
+    'peak height'          .
+    'peak volume'          .
+
+  stop_
+
+save_ 
+
+
+
+save__RDC_constraint_expt.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic         .
+    anisotropic       .
+    solid             .
+
+  stop_
+
+save_ 
+
+
+save__RDC_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic         .
+    anisotropic       .
+    solid             .
+
+  stop_
+
+save_ 
+
+save__RDC_list.Bond_length_usage_flag
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     yes      .
+     no       .
+
+     stop_
+
+save_
+
+save__Related_entries.Database_name
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    BMRB          'BioMagResBank'
+    BMRB(withdrawn)    .
+    PDB           'Protein Databank'
+    TargetDB      'Target registration database'
+    EMDB          'Electron Microscopy Volume Data Bank'
+    BMCD          'Biological Macromolecule Crystallization Database'
+    GB    'GenBank'
+    DBJ    'DNA Data Bank of Japan'
+    EMBL    'European Molecular Biology Laboratory'
+    NCBI    .
+    PIR    'Protein Information Resource'
+    REF    'NCBI Reference Sequence'
+    SGD    'Saccharomyces Genome Database'
+    SP    'UniProtKB/Swiss-Prot' 
+
+  stop_
+
+save_ 
+
+save__Release.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    original      'First release of the data to the public.'
+    na            'not available'
+    update        
+
+;
+Additional releases of the entry that involve changes in the
+reported quantitative data$ dictionary changes$ or other revisions
+that represent non-trivial changes in the entry.
+;
+
+     revision     'not used now as it is redundant with update aa all revisions are updates'
+     reformat     'reformatted for new format specification'
+
+     stop_
+
+save_
+
+
+save__Release.Format_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     NMR-STAR            .
+     XML                 .
+
+    stop_
+
+save_
+
+save__Rep_conf_refinement.Refine_method
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     'distance geometry'                               .
+     'DGSA-distance geometry simulated annealing'      .
+     'simulated annealing'                             .
+     'molecular dynamics'                              .
+     'matrix relaxation'                               .
+     'torsion angle dynamics'                          .
+      na                                               .
+
+     stop_               
+
+save_
+
+
+save__Representative_conformer.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     experimental                         
+;
+Derived directly from experimental data
+;
+    'derived experimentally'          
+;
+Derived from conformers that fit experimental data
+;
+      theoretical                             
+;
+The coordinates represent a theoretical chemical system.   They may be derived
+from an experimental coordinate set$ but have been constructed for use in
+carrying out theoretical calculations or for other purposes that have specific
+requirements that necessitate the use of non-standard atoms or other
+conditions.
+;
+     stop_
+
+save_
+
+
+save__Sample.Solvent_system
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   "90% H2O/10% D2O"          .
+   "93% H2O/7% D2O"           .
+   "95% H2O/5% D2O"           .
+   "50% H2O/50% D2O"          .
+   "100% D2O"                 .
+   acetone                    .
+   chloroform                 .
+   DMSO                       .
+   ethanol/water              .
+   methanol                   .
+   "trifluoroacetic acid"     .
+   "trifluoroethanol/water"   .
+   
+  stop_
+
+save_
+
+
+
+save__Sample.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    solution                          .
+    solid                             .
+    bicelle                           .
+    emulsion                          .
+    fiber                            'solid-state fiber sample'
+    'filamentous virus'               .
+    'gel solution'                   'gel samples used for solution NMR'
+    'gel solid'                      'gel samples used for solid-state NMR'
+    liposome                          .
+    membrane                          .
+    micelle                           .
+   'lyophilized powder'               
+;
+Solid-state lyophilized powder sample
+;
+   'oriented membrane film'           
+;
+Solid-state glass plate with a membrane film
+;
+   'fibrous protein'
+;
+Solid-state fibrous protein
+;
+   'polycrystalline powder'           
+;
+Solid-state micro crystal powder
+;
+   'reverse micelle'                  .
+   'single crystal'                   .
+    microcrystalline                  .
+   'liquid crystal'                   .
+    in-cell                           .
+
+    stop_
+
+save_
+
+
+save__Sample_component.Concentration_val_units
+
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+           M            Molar
+           mM           millimolar
+           uM           micromolar
+           nM           nanomolar
+           %            percent
+           v/v          'volume to volume'
+           w/v          'weight to volume percent'
+           mg           'milligram'
+           ug           'microgram'
+          mg/mL         'mg per milliliter'
+           g/L          'grams per liter'
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   pM                    picomolar
+   w/w                   .
+   '% v/v'               .
+   '% w/v'               .
+   '% w/w'               .
+   mg/L                  .
+   mg/uL                 .
+   ug/mL                 .
+   ug/uL                 .
+   mL                    .
+   uL                    .
+   A260                  .
+   eq                    .
+   ratio                 .
+   saturated             .
+   tablet/100mL          .
+   na                    .
+
+    stop_
+
+save_
+
+save__Sample_component.Isotopic_labeling
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     "natural abundance"                    .
+     "[U-100% 15N]"                         .
+     "[U-99% 15N]"                          'Uniformly labeled with 15N at a level of 99 percent'
+     "[U-98% 15N]"                          .
+     "[U-95% 15N]"                          .
+     "[U-90% 15N]"                          .
+     "[U-15N]"                              'Uniformly labeled with 15N at an unknown percentage'
+     "[U-100% 13C]"                         .
+     "[U-95% 13C]"                          .
+     "[U-10% 13C]"                          'Uniformly labeled with 13C at a level of 10 percent'
+     "[U-13C]"                              'Uniformly labeled with 13C at an unknown percentage'
+     "[U-100% 13C; U-100% 15N]"             .
+     "[U-99% 13C; U-99% 15N]"               'Uniformly labeled with 13C at 99 percent and 15N at 99 percent'
+     "[U-98% 13C; U-98% 15N]"               .
+     "[U-95% 13C; U-95% 15N]"               .
+     "[U-95% 13C; U-90% 15N]"               .
+     "[U-10% 13C; U-100% 15N]"              .
+     "[U-10% 13C; U-99% 15N]"               .
+     "[U-13C; U-15N]"                        'Uniformly labeled with 13C and 15N at unknown percentages'
+     "[U-100% 13C; U-100% 15N; U-80% 2H]"      .
+     "[U-13C; U-15N; U-2H]"                  'Uniformly labeled with 13C$ 15N$ and 2H at unknown percentages'
+     "[U-100% 2H]"                           .
+     "[U-99% 2H]"                            .
+     "[U-2H]"                                .
+     "[U-13C; U-15N]-Ade"                    'All adenine nucleotides labeled fully with both 13C and 15N'
+     "[U-13C; U-15N]-Cyt"                    'All cytosine nucleotides labeled fully with both 13C and 15N'
+     "[U-13C; U-15N]-Gua"                    'All guanine nucleotides labeled fully with both 13C and 15N'
+     "[U-13C; U-15N]-Ura"                    'All uracil nucleotides labeled fully with both 13C and 15N'
+     "[U-15N]-Leu"                           'Uniformly labeled 15N Leu residues'
+     "[95% 13CA]-Trp"                        'All Trp residues labeled 95 percent with 13C in the CA position'
+#     "[U-98% 13C; NA-F$Y$W]"                 
+#;
+#Uniformly labeled with 13C except for the Phe$ Tyr$ and Trp residues which are at natural abundance
+#;
+
+  stop_
+
+save_
+
+
+save__Sample_component.Mol_common_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    D2O                                  .
+    DSS                                  .
+    DTT                                  .
+    H2O                                  .
+    PMSF                                 .
+   'potassium chloride'                  .
+   'potassium phosphate'                 .
+   'sodium azide'                        .
+   'sodium chloride'                     .
+   'sodium phosphate'                    .
+    TRIS                                 .
+    TSP                                  .
+   'acetic acid'                         .
+   'AEBSF protease inhibitor'            .
+   'ammonium acetate'                    .
+   'ammonium citrate'                    .
+   'ammonium sulfate'                    .
+    APMSF                                .
+    ascorbate                            .
+    beta-mercaptoethanol                 .
+    cacodylate                           .
+    CHAPS                                .
+    chloroform                           .
+    DHPC                                 .
+    DMPC                                 .
+    DMPG                                 .
+    DMSO                                 .
+    DPC                                  .
+    EDTA                                 .
+    ethanol                              .
+    formate                              .
+    glycerol                             .
+    glycine                              .
+    HEPES                                .
+    imidazole                            .
+    MES                                  .
+    methanol                             .
+    pefabloc                             .
+   'Pf1 phage'                           .
+    PIPES                                .
+   'potassium cyanide'                   .
+    SDS                                  .
+   'sodium acetate'                      .
+   'sodium dithionite'                   .
+   'sodium sulfate'                      .
+   'succinic acid'                       .
+    t-butanol                            .
+    TCEP                                 .
+    TES                                  .
+    TFA                                  .
+    TFE                                  .
+    urea                                 .
+
+   stop_
+
+save_
+
+save__Sample_condition_variable.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  pH                    
+;
+Glass electrode pH meter reading for solution in water.
+No unit is required
+;
+
+  pH*                   
+;
+Uncorrected pH meter reading for solution in D2O
+No unit is required
+;
+
+  pD                    
+;
+Reading for a D2O solution measured with a glass electrode filled with D2O
+No unit is required
+;
+
+  temperature           
+;
+Preferred unit is Kelvin (K)
+;
+
+  pressure         
+;
+Preferred unit is bar (10^5 Pa)
+;
+
+  'ionic strength' 
+;
+I = 1/2 of the summation of C(i) times Z(i)^2$ where the 
+summation is taken over all of the different ions (i) in a 
+solution$ multiplying the molarity C(i) by the square of 
+the charge Z(i). 
+Preferred unit is M (mol/l)
+;
+
+  viscosity
+;
+dynamic viscosity is Pa.s which equals (kg) x (m^-1) x (s^-1)
+1 poise (P) is (g) x (cm^-1) x (s^-1) 
+1 centipoise (cP) is 10^-3 kg.m^-1.s^-1
+kinematic viscosity is m^2/s or (m^2) x (s^-1)
+;
+
+  'dielectric constant' 
+;
+Pure water at 298 K has a dielectric 
+constant of 78.54.
+No unit is required.
+;
+
+  'temperature controller setting'
+;
+For solid-state experiments$ this is the temperature setting on the
+NMR spectrometer control unit.
+;
+
+#  'calibration agent'
+#;
+#The compound used to calibrate the temperature setting of the spectrometer.
+#;
+
+  stop_
+
+save_
+
+
+save__Sample_condition_variable.Val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+           Pa           "Pascal$ 1 Pa = 1 N m^-2"
+           bar          "bar$ 1 bar = 10^5 Pa"
+           atm          
+;
+atmosphere$ 1 atm = 1.01325 * 10^5 Pa$ atm is not a SI unit
+;
+
+           mmHg          
+;
+millimetres of mercury$ 1 mmHg = 133.3224 Pa$ mmHg is not a SI unit
+;
+
+           Torr          
+;
+Torricelli$ 1 Torr = 133.322 Pa$ Torr is not a SI unit
+;
+           mbar         millibar
+           K            Kelvin
+           C            
+;
+Celsius
+1 degree Celcius equals 1 K but is always 273.150 lower.
+E.g. 25.000 C equals 298.150 K.
+;
+            pH
+;
+unit of pH
+;
+             M
+;
+Molar$ concentration unit for ionic strength
+;
+            mM
+;
+milimolar$ concentration unit for ionic strength
+;
+            P
+;
+Poise
+;
+           cP
+;
+Centipoise
+;
+           m^2/s
+;
+kinematic viscosity
+;
+           Pa.s
+;
+dynamic viscosity
+;
+           'Not defined'
+;
+Used for variables that do not have units like dielectric constant.
+;
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   hPa    "hecto Pascal"
+   pD       .
+   %        .
+   s        second
+
+  stop_
+
+save_
+
+
+
+save__SAXS_expt.Sample_volume_units
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     ml        .
+ 
+   stop_
+
+save_
+
+
+save__Software.Sf_framecode
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    AMBER            .
+    AngleSearch      .
+    ANSIG            .
+    AQUA             .
+    ARIA             .
+    AURELIA          .
+    Auremol          .
+    AutoAssign       .
+    AutoStructure    .
+    AVS              .
+    AZARA            .
+    BIRDER           .
+    CAPP             .
+    CING             .
+    CNS              .
+    CNSSOLVE         .
+    CORMA            .
+    CSI              .
+    CS-Rosetta       .
+    CURVES           .
+    CYANA            .
+    DELTA            .
+    DGII             .
+    DIAMOD           .
+    DIANA            .
+    DISCOVER         .
+    DSPACE           .
+    DYANA            .
+    EMBOSS           .
+    FANTOM           .
+    Felix            .
+    GARANT           .
+    GIFA             .
+    GROMOS           .
+    HYPER            .
+    InsightII        .
+    MARDIGRAS        .
+    ModelFree        .
+    Molmol           .
+    MORASS           .
+    NDEE             .
+    NMRCOMPASS       .
+    NMRDraw          .
+    NMRPipe          .
+    NMR-STAR         .
+    NMRView          .
+    NOAH             .
+    NOEID            .
+    NUCFIT           .
+    NUTS             .
+    OPAL             .
+    PDB              .
+    PECAN            .
+    PINE             .
+    PIPP             .
+    PISTACHIO        .
+    Procheck         .                  
+    ProcheckNMR      .
+    P-ROI            .
+    PRONTO           .
+    PROSA            .
+    PSVS             .
+    QUEEN            .
+    Relax            .
+    RESCUE           .
+    SANE             .
+    SPARKY           .
+    SPARTA           .
+    SPARTA+          .
+    SPSCAN           .
+    SYBYL            .
+    TALOS            .
+    TINKER           .
+    TOPSPIN          .
+    TRIPOS           .
+    UXNMR            .
+    VNMR             .
+    VNMRJ            .
+    WhatIF           .
+    Wattos           .
+    XEASY            .
+    X-PLOR           .
+   'X-PLOR NIH'      .
+    xwinnmr          .
+
+  stop_   
+
+save_
+
+save__Software.Name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    AMBER            .
+    AngleSearch      .
+    ANSIG            .
+    Analysis         .
+    AQUA             .
+    ARIA             .
+    AURELIA          .
+    AUREMOL          .
+    AutoAssign       .
+    AutoStructure    .
+    AVS              .
+    AZARA            .
+    BIRDER           .
+    CARA             .
+    CAPP             .
+    CING             .
+    CcpNMR           .
+    CNS              .             
+    CNSSOLVE         .
+    CORMA            .
+    CSI              .
+    CS-Rosetta       .
+    CURVES           .
+    CYANA            .
+    DGII             .
+    DIAMOD           .
+    DISCOVER         .
+    DYANA            .
+    DYNAMO           .
+    EMBOSS           .
+    FANTOM           .
+    Felix            .
+    GARANT           .
+    Gaussian         .
+    GIFA             .
+    HADDOCK          .
+    HYPER            .
+    InsightII        .
+    MARDIGRAS        .
+    ModelFree        .
+    Molmol           .
+    MORASS           .
+    NDEE             .
+    NMRDraw          .
+    NMRPipe          .
+    NMRView          .
+    NOAH             .
+    NOEID            .
+    NUCFIT           .
+    NUTS             .
+    OPAL             .
+    PECAN            .
+    PINE             .
+    PIPP             .
+    PISTACHIO        .
+    Procheck         .
+    ProcheckNMR      .                       
+    P-ROI            .
+    PRONTO           .
+    PROSA            .
+    PSVS             .
+    QUEEN            .
+    Relax            .
+    RESCUE           .
+    SANE             .
+    SPARKY           .
+    SPARTA           .
+    SPARTA+          .
+    SPSCAN           .
+    SYBYL            .
+    TALOS            .
+    TOPSPIN          .
+    UXNMR            .
+    VNMR             .
+    WhatIF           .
+    Wattos           .
+    XEASY            .
+    X-PLOR           .
+   'X-PLOR NIH'      .
+    xwinnmr          .
+
+  stop_
+
+save_
+
+save__Spectral_dim.Sweep_width_units
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+      Hz           Hertz
+      ppm         'parts per million'
+
+   stop_
+
+save_
+
+save__Spin_system_link.Type
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+   identity          .
+   sequential        .
+   basepair          .
+   covalent          .
+   hbond             .
+   saltbridge        .
+   dative            .
+
+    stop_
+
+save_
+
+save__SG_project.Full_name_of_center
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+    "not applicable"                                                                 .
+    "Accelerated Technologies Center for Gene to 3D Structure"                       .
+    "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"        .
+    "Atoms-to-Animals: The Immune Function Network"                                  .
+    "Architecture and Function of Biological Macromolecules Structure Genomics"      ASG           
+    'Bacterial targets at IGS-CNRS$ France'                                          .
+    "Berkeley Structural Genomics Center"                                            BSGC          
+    "Center for Eukaryotic Structural Genomics"                                      CESG          
+    "Center for High-Throughput Structural Biology"                                  .
+    "Center for Membrane Proteins of Infectious Diseases"                            .
+    "Center for Structural Genomics of Infectious Diseases"                          .
+    "Center for Structures of Membrane Proteins"                                     .
+    "Center for the X-ray Structure Determination of Human Transporters"             . 
+    "Chaperone-Enabled Studies of Epigenetic Regulation Enzymes"                     .
+    "Enzyme Discovery for Natural Product Biosynthesis"                              .
+    "GPCR Network"                                                                   . 
+    "Integrated Center for Structure and Function Innovation"                        .
+    'Israel Structural Proteomics Center'                                            .
+    "Joint Center for Structural Genomics"                                           JCSG          
+    'Marseilles Structural Genomics Program @ AFMB'                                  .
+    "Medical Structural Genomics of Pathogenic Protozoa"                             .
+    "Membrane Protein Structural Biology Consortium"                                 .
+    "Membrane Protein Structures by Solution NMR"                                    . 
+    "Midwest Center for Structural Genomics"                                         MCSG
+    "Mitochondrial Protein Partnership"                                              . 
+    'Montreal-Kingston Bacterial Structural Genomics Initiative'                     .
+    'Mycobacterium Tuberculosis Structural Proteomics Project'                       .
+    "New York Consortium on Membrane Protein Structure"                              .
+    "New York SGX Research Center for Structural Genomics"                           . 
+    "New York Structural Genomics Research Consortium"                               NYSGRC        
+    "New York Structural GenomiX Research Consortium"                                .
+    "Northeast Structural Genomics Consortium"                                       NESGC 
+    "North West Structural Genomics Centre"                                          NWSGC
+    "Nucleocytoplasmic Transport: a Target for Cellular Control"                     .   
+    "Ontario Centre for Structural Proteomics"                                       .
+    'Oxford Protein Production Facility'                                             .
+    'Paris-Sud Yeast Structural Genomics'                                            .
+    "Partnership for Stem Cell Biology"                                              .
+    "Partnership for T-Cell Biology"                                                 .
+    "Program for the Characterization of Secreted Effector Proteins"                 . 
+    "Protein Structure Factory"                                                      PSF
+    'RIKEN Structural Genomics/Proteomics Initiative'                                .
+    "Scottish Structural Proteomics Facility"                                        . 
+    "Seattle Structural Genomics Center for Infectious Disease"                      . 
+    "Southeast Collaboratory for Structural Genomics"                                SECSG         
+    'Structural Genomics Consortium'                                                 .
+    "Structural Genomics Consortium for Research on Gene Expression"                 . 
+    "Structural Genomics of Pathogenic Protozoa Consortium"                          SGPPC
+    'Structural Proteomics in Europe'                                                .
+    "Structural Proteomics in Europe 2"                                              . 
+    'Structure 2 Function Project'                                                   .
+    "Structure, Dynamics and Activation Mechanisms of Chemokine Receptors"           .
+    "Structure-Function Studies of Tight Junction Membrane Proteins"                 .
+    "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"   .     
+    "TB Structural Genomics Consortium"                                              TBSGC    
+    "Transcontinental EM Initiative for Membrane Protein Structure"                  .
+    "Transmembrane Protein Center"                                                   .  
+    "Yeast Structural Genomics"                                                      YSG
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'Bijvoet Centre, Utrecht'                                                         .
+   'Brazilian Sincrotron Light Laboratory'                                           .
+   'Center for Experimental Therapeutics and Pharmacoinformatics'                    .
+   'FAPESP'                                                                          .
+   'Functional and Structural Proteomics of the SARS Coronavirus'                    .
+   'Hefei National Laboratory for Physical Sciences at Microscale'                   .
+   'Institute of Genetics and Molecular and Cellular Biology-CNRS France'            .
+   'Institute of Zoology, Beijing'                                                   .
+   'IRB Barcelona'                                                                   .
+   'Magnetic Resonance Center'                                                       .
+   'Membrane Protein Structures by NMR'                                              .
+   'Nanoworld Institute'                                                             .
+   'Protein Research Group, RIKEN Genomic Sciences Center'                           .
+   'State Key Laboratory of Magnetic Resonance and Atomic and Molecular Physics'     .
+   'Structural Molecular Biology Network'                                            .
+   'University of Calcutta CU'                                                       .
+   'University of Georgia'                                                           .
+   
+    stop_
+
+save_
+
+save__SG_project.Initial_of_center
+                                        
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+   BIGS   .
+   BSGC   .
+   CESG   .
+   ISPC   .
+   JCSG   .
+   MSGP   .
+   MCSG   .
+   BSGI   .
+   XMTB   .
+   NYSGRC .
+   NESG   .
+   OPPF   .
+   YSG    .
+   PSF    .
+   RSGI   .
+   SECSG  .
+   SGC    .
+   SGPP   .
+   SPINE  .
+   S2F    .
+   TBSGC  .
+# PDBj-BMRB: Added 'RIKEN GSC' and CU.
+  'RIKEN GSC'    .
+   CU            .
+
+     stop_
+
+save_
+
+
+save__SG_project.Project_name
+                                        
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+      'not applicable'                                                          .
+      'Enzyme Function Initiative'                                              .
+      'PSI:Biology'                                                             .
+      'PSI$ Protein Structure Initiative'                                       .
+      'NPPSFA$ National Project on Protein Structural and Functional Analyses'  .
+# PDBj-BMRB: Added the following projects which contributed more than three entries in current BMRB database.
+   SPINE                     .
+   SPINE2                    .
+   'Protein 3000'            .
+   SSGCID                    .
+   NIAID                     .
+   SMolBNet                  .
+   Other                     .
+
+     stop_
+
+save_
+
+save__Spectral_acq_param.Name
+                                        
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+          'spectrometer carrier frequency'         .
+          'spectrometer offset frequency'          .
+          'acquisition time'                       .
+          'mixing time'                            .
+          'spectral width'                         .
+          'spectral folding'                       . 
+          'data point number'                      .
+          'data point type'                        .
+          'data point spacing'                     .
+
+     stop_
+
+save_
+
+save__Spectral_density_experiment.Sample_state
+                                        
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+     isotropic        .
+     anisotropic      .
+     solid            .
+
+     stop_
+
+save_
+
+save__Spectral_processing_param.Name
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+        'Exponential factor'                .
+        'Gaussian factor'                   .
+        'Zero filling'                      .
+        'Lnear prediction'                  .
+        'Processed real points'             .
+        'Submatrix block size'              .
+        'Full spectrum width points'        .
+        'Spectrum offset'                   .
+        'Data type'                         .
+
+     stop_
+
+save_
+
+save__Spectral_transition_general_char.Measurement_method
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+    'absolute height'             .
+     height                       .
+    'relative height'             .
+     volume                       .
+    'number of contours'          .
+
+     stop_
+
+save_
+
+
+save__Struct_asym.PDBX_blank_PDB_chainid_flag
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes         .
+    no          .                         
+
+  stop_
+
+save_
+
+save__Struct_asym.PDBX_modified
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes         .
+    no          .
+
+  stop_
+
+save_
+
+save__Study.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'Structure analysis'                       .
+    'Mutant comparison'                        .
+    'Interactions with different ligands'      .
+
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+    
+    'Chemical shift mapping'                   .
+    'NMR signal assignment'                    .
+    'Protein-protein interaction'              .
+    'Protein-ligand interaction'               .
+    'Structural and dynamics analysis'         .
+    'Stoichiometry problems'                   .
+    'Dynamics analysis'                        .
+    'pH titration'                             .
+
+
+
+
+  stop_
+
+save_
+
+
+save__Subsystem_db_link.Author_supplied
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    yes     .
+    no      .
+
+  stop_
+
+save_
+
+save__Systematic_chem_shift_offset.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'TROSY offset'            .
+    '2H isotope effect'       .
+    '13C isotope effect'      .
+    '15N isotope effect'      .
+    'SAIL isotope labeling'   .
+    'spectrometer error'      .
+     na                       .
+
+  stop_
+
+save_
+
+save__Systematic_chem_shift_offset.Atom_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   'amide protons'                       .
+   'amide nitrogens'                     .
+   'all nitrogen bonded protons'         .
+   'all nitrogens'                       .
+   'all 1H'                              .
+   'all 13C'                             .
+   'all 15N'                             .
+   'all 19F'                             .
+   'all 31P'                             .
+   'backbone CA'                         .
+   'backbone CB'                         .
+    na                                   .
+ 
+  stop_
+
+save_
+
+save__Task.Task
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     collection                     .
+    'chemical shift assignment'     .
+    'chemical shift calculation'    .
+    'data analysis'                 .
+    'geometry optimization'         .
+    'peak picking'                  .
+     processing                     .
+     refinement                     .
+    'structure solution'            .
+
+  stop_
+
+save_
+
+save__Tensor_list.Tensor_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    diffusion            .
+    CS                   .
+    shielding            .
+    alignment            .
+
+  stop_
+
+save_
+
+save__Tensor_list.Tensor_shape
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     sphere              .
+     spheroid            .
+    'oblate spheroid'    .
+    'prolate spheroid'   .
+     ellipsoid           .
+
+  stop_
+
+save_
+
+save__Tensor_list.Matrix_val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    s-1            .
+
+  stop_
+
+save_
+
+
+
+#save__Torsion_angle_constraint.Member_logic_code
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#     OR          .
+#     AND         .
+
+#  stop_
+
+#save_
+
+
+save__Torsion_angle_constraints_expt.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     isotropic         .
+     anisotropic       .
+     solid             .
+
+  stop_
+
+save_
+
+save__Upload_data.Data_file_immutable_flag
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     no         .
+     yes        .
+
+  stop_
+
+save_
+
+save__Upload_data.Data_file_Sf_category
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    deposited_data_files                        .    entry_interview                             .    study_list                                  .    entry_information                           .    citations                                   .    chem_comp                                   .    entity                                      .    assembly                                    .    assembly_annotation                         .    assembly_subsystems                         .    natural_source                              .    experimental_source                         .    sample                                      .    sample_conditions                           .    molecule_purity                             .    software                                    .    method                                      .    Mass_spectrometer                           .    Mass_spectrometer_list                      .    Mass_spec_ref_compd                         .    chromatographic_system                      .    chromatographic_column                      .    NMR_spectrometer                            .    NMR_spectrometer_list                       .    NMR_spectrometer_probe                      .    experiment_list                             .    NMR_spectrometer_expt                       .    NMR_spectral_processing                     .    computer                                    .    chem_shift_reference                        .    assigned_chemical_shifts                    .    coupling_constants                          .    spectral_peak_list                          .    resonance_linker                            .    chem_shift_isotope_effect                   .    chem_shift_interaction_diff                 .    chem_shift_anisotropy                       .    theoretical_chem_shifts                     .    chem_shifts_calc_type                       .    RDCs                                        .    dipolar_couplings                           .    spectral_density_values                     .    other_data_types                            .    chemical_rates                              .    H_exch_rates                                .    H_exch_protection_factors                   .    homonucl_NOEs                               .    heteronucl_NOEs                             .    heteronucl_T1_relaxation                    .    heteronucl_T1rho_relaxation                 .    heteronucl_T2_relaxation                    .    auto_relaxation                             .    dipole_dipole_relaxation                    .    dipole_dipole_cross_correlations            .    dipole_CSA_cross_correlations               .    order_parameters                            .    pH_titration                                .    pH_param_list                               .    D_H_fractionation_factors                   .    binding_data                                .    binding_param_list                          .    deduced_secd_struct_features                .    deduced_hydrogen_bonds                      .    conformer_statistics                        .    constraint_statistics                       .    representative_conformer                    .    conformer_family_coord_set                  .    force_constants                             .    angular_order_parameters                    .    tertiary_struct_elements                    .    secondary_structs                           .    bond_annotation                             .    structure_interactions                      .    other_struct_features                       .    tensor                                      .    interatomic_distance                        .    general_distance_constraints                .    distance_constraints                        .    floating_chiral_stereo_assign               .    torsion_angle_constraints                   .    RDC_constraints                             .    J_three_bond_constraints                    .    CA_CB_chem_shift_constraints                .    H_chem_shift_constraints                    .    other_constraints                           .    org_constr_file_comment                     .
+
+   stop_
+
+save_
+
+
+save__Upload_data.Data_file_syntax
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'NMR-STAR 3.1'     .
+    'NMR-STAR 2.1'     .
+#     NMRIF             .
+#    'mmCIF (pdbx)'      .
+#     PDB               .
+
+  stop_
+
+save_
+
+save__Vendor.Name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    '(ACME) - Delaglio$ Zhengrong and Bax'                                                                  .
+    '(AMBER) - Case$ Darden$ Cheatham$ III$ Simmerling$ Wang$ Duke$ Luo$ ... and Kollman'                   .
+    '(ANSIG) - Kraulis'                                                                                     .
+    '(Analysis) - CCPN'                                                                                     .
+    '(AQUA) - Rullmann$ Doreleijers and Kaptein'                                                            .
+    "(ARIA) - Linge$ O'Donoghue and Nilges"                                                                 .
+    '(AURELIA) - Neidig$ Geyer$ Gorler$ Antz$ Saffrich$ Beneicke$ Kalbitzer'                                .
+    '(AUREMOL) - Bruker Biospin'                                                                            .
+    '(AutoAssign) - Zimmerman$ Moseley$ Kulikowski and Montelione'                                          .
+    '(AutoStructure) - Huang$ Tejero$ Powers and Montelione'                                                .
+    '(AVS) - Moseley and Montelione'                                                                        .
+    '(AZARA) - Boucher'                                                                                     .
+    '(CANDID) - Herrmann$ Guntert and Wuthrich'                                                             .
+    '(CAPP) - Garrett'                                                                                      .
+    '(CARA) - Keller and Wuthrich'                                                                          .
+    '(CcpNMR) - CCPN'                                                                                       .
+    '(CNS) - Brunger$ Adams$ Clore$ Gros$ Nilges and Read'                                                  .
+    '(CS-Rosetta) - Shen$ Vernon$ Baker and Bax'                                                            .
+    '(CYANA) -  Guntert$ Mumenthaler and Wuthrich'                                                          .
+    '(DGII) - Accelrys Software Inc.'                                                                       .
+    '(DIANA) - Guntert$ Braun and Wuthrich'                                                                 .
+    '(DISCOVER) - Accelrys Software Inc.'                                                                   .
+    '(DSPACE) - Hare'                                                                                       .
+    '(DYANA) - Guntert$ Braun and Wuthrich'                                                                 .
+    '(DYNAMO) - Delaglio and Kuszewski'                                                                     .
+    '(EMBOSS - Rice$ Longden and Bleasby'                                                                   .
+    '(FANTOM) - Braun'                                                                                      .
+    '(Felix) - Accelrys Software Inc.'                                                                      .
+    '(GARANT) - Bartels$ Guntert$ Billeter and Wuthrich'                                                    .
+    '(Gaussian) - Gaussian$ Inc.'                                                                           .
+    '(GIFA) - Delsuc'                                                                                       .
+    '(GROMOS) - van Gunsteren and Berendsen'                                                                .
+    '(HADDOCK) - Alexandre Bonvin'                                                                          .
+    '(HYPER) - Tejero$ Monleon$ Celda$ Powers and Montelione'                                               .
+    '(InsightII) -  Accelrys Software Inc.'                                                                 .
+    '(ModelFree) - Palmer'                                                                                  .
+    '(Molmol) - Koradi$ Billeter and Wuthrich'                                                              .
+    '(MOLPROBITY) - Richardson'                                                                             .
+    '(MORASS) - Luxon'                                                                                      .
+    '(NDEE) - Roesch and Herrmann'                                                                          .
+    '(NMRDraw) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'                                         .
+    '(NMRPipe) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'                                         .
+    '(NMRView) - Johnson$ One Moon Scientific'                                                              .
+    '(NUTS) - Acorn NMR Inc.'                                                                               .
+    '(OPAL) - Luginbuhl$ Guntert$ Billeter and Wuthrich'                                                    .
+    '(PECAN) - Eghbalnia$ Wang$ Bahrami$ Assadi$ and Markley'                                               .
+    '(PINE) - Bahrami$ Markley$ Assadi$ and Eghbalnia'                                                      . 
+    '(PIPP) - Garrett'                                                                                      .
+    '(PISTACHIO) - Eghbalnia$ Bahrami$ Wang$ Assadi and Markley'                                            .
+    '(Procheck) - Laskowski$ MacArthur$ Smith$ Jones$ Hutchinson$ Morris$ Moss and Thornton'                .
+    '(ProcheckNMR) - Laskowski and MacArthur'                                                               .
+    '(P-ROI) - Kohda'                                                                                       .
+    '(PRONTO) - Kjur$ Andersen and Poulsen'                                                                 .
+    '(PROSA) - Guntert'                                                                                     .
+    '(PSVS) - Bhattacharya and Montelione'                                                                  .
+    '(QUEEN) - Nabuurs$ Spronk$ Krieger$ Maassen$ Vriend and Vuister'                                       .
+    '(RESCUE) - Pons and Delsuc'                                                                            .
+    '(SANE) - Duggan$ Legge$ Dyson & Wright'                                                                .
+    '(SPARKY) - Goddard'                                                                                    .
+    '(SPARTA) - Shen and Bax'                                                                               .
+    '(SPARTA+) - Shen and Bax'                                                                              .
+    '(SPSCAN) - Glaser'                                                                                     .
+    '(STAPP) - Garrett'                                                                                     .
+    '(Surflex-Dock) - Tripos'                                                                               .
+    '(SYBYL) - Tripos'                                                                                      .
+    '(TALOS) - Cornilescu$ Delaglio and Bax'                                                                .
+    '(TINKER) - Ponder'                                                                                     .
+    '(TOPSPIN) - Bruker Biospin'                                                                            .
+    '(TRIAD) - Tripos'                                                                                      .
+    '(TRIPOS) - Tripos'                                                                                     .
+    '(UXNMR) - Bruker Biospin'                                                                              .
+    '(VNMR) - Varian'                                                                                       .
+    '(WhatIF) - Vriend'                                                                                     .
+    '(Wattos) - Doreleijers'                                                                                .
+    '(XEASY) - Bartels et al.'                                                                              .
+    '(X-PLOR) - Brunger'                                                                                    .
+    '(X-PLOR NIH) - Schwieters$ Kuszewski$ Tjandra and Clore'                                               .
+    '(xwinnmr) - Bruker Biospin'                                                                            .
+
+  stop_
+                    
+save_
