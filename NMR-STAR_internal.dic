@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2014-05-27
+#  version date -  2014-08-20
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.65
+    _dictionary.version         3.1.1.66
 
      loop_
        _dictionary_history.version
@@ -57,7 +57,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
 
 
-     3.1.1.65         ?
+     3.1.1.66         ?
 ;
      ?
 ;
@@ -5158,7 +5158,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.65'
+   _item_default.value            '3.1.1.66'
 
    loop_
      _item_enumeration.value
@@ -49943,11 +49943,45 @@ nitrogen in an 1H-15N HSQC experiment.
 
 save_
 
+save__Spectral_dim.Folding_type
+
+   _item_description.description
+;
+The type of spectral folding caused by undersampling in the spectral dimension.
+;
+
+   _item.name                                  '_Spectral_dim.Folding_type'
+   _item.category_id                           'Spectral_dim'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   yes
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   aliased    ?
+   folded    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+aliased
+;
+
+   stop_
+
+save_
+
 save__Spectral_dim.Sweep_width
 
    _item_description.description
 ;
-The width of the spectral window observed in Hz.
+The width of the spectral window observed in Hz or ppm.
 ;
 
    _item.name                                  '_Spectral_dim.Sweep_width'
@@ -51104,7 +51138,8 @@ save__Assigned_peak_chem_shift.Set_ID
 
    _item_description.description
 ;
-Set ID
+The Set ID allows assigned peaks to be grouped. This might be by spin-system 
+or other form of grouping implemented by software or by the user.
 ;
 
    _item.name                                  '_Assigned_peak_chem_shift.Set_ID'
@@ -51120,7 +51155,8 @@ save__Assigned_peak_chem_shift.Magnetization_linkage_ID
 
    _item_description.description
 ;
-Magnetization linkage ID
+The Magnetization linkage ID is used to group peaks that may be related 
+through a magnetization transfer event.
 ;
 
    _item.name                                  '_Assigned_peak_chem_shift.Magnetization_linkage_ID'
@@ -52298,7 +52334,8 @@ save__Assigned_spectral_transition.Set_ID
 
    _item_description.description
 ;
-Set ID
+The Set ID allows assigned spectral transitions to be grouped. This might 
+be by spin-system or other form of grouping implemented by software or by the user.
 ;
 
    _item.name                                  '_Assigned_spectral_transition.Set_ID'
@@ -52314,7 +52351,8 @@ save__Assigned_spectral_transition.Magnetization_linkage_ID
 
    _item_description.description
 ;
-Magnetization linkage ID
+The Magnetization linkage ID is used to group transitions that may be related 
+through a magnetization transfer event.
 ;
 
    _item.name                                  '_Assigned_spectral_transition.Magnetization_linkage_ID'
