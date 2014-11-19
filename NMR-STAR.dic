@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2014-10-21
+#  version date -  2014-11-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.73
+    _dictionary.version         3.1.1.74
 
      loop_
        _dictionary_history.version
@@ -57,7 +57,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
 
 
-     3.1.1.73         ?
+     3.1.1.74         ?
 ;
      ?
 ;
@@ -2411,8 +2411,10 @@ The type of BMRB entry.
      _item_enumeration.detail
 
    macromolecule    ?
-   'small molecule structure'    ?
    'metabolite/natural product'    ?
+   ‘small    molecule’
+   .    ?
+   .    ?
 
    stop_
 
@@ -2593,7 +2595,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.73'
+   _item_default.value            '3.1.1.74'
 
    loop_
      _item_enumeration.value
@@ -18178,7 +18180,7 @@ NCBI taxonomy ID
 
    _item.name                                  '_entity_natural_src.ncbi_taxonomy_id'
    _item.category_id                           'entity_natural_src'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'code'
 
@@ -18391,7 +18393,7 @@ Common name used for the biological organism.
 
    _item.name                                  '_entity_natural_src.organism_name_common'
    _item.category_id                           'entity_natural_src'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'line'
 
@@ -18448,7 +18450,7 @@ taxonomists.
 
    _item.name                                  '_entity_natural_src.superkingdom'
    _item.category_id                           'entity_natural_src'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          yes
    _item_type.code                             'line'
 
@@ -18522,7 +18524,7 @@ Genus for the natural organism
 
    _item.name                                  '_entity_natural_src.genus'
    _item.category_id                           'entity_natural_src'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'line'
 
@@ -18547,7 +18549,7 @@ whenever possible.
 
    _item.name                                  '_entity_natural_src.species'
    _item.category_id                           'entity_natural_src'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'line'
 
@@ -27463,6 +27465,7 @@ Units for the value of the sample condition (temperature pressure pH).
    'Not defined'    ?
    hPa    "hecto Pascal"
    pD    ?
+   pH*    ?
    %    ?
    s    second
 
