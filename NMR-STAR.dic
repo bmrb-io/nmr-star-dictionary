@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.76
+    _dictionary.version         3.1.1.77
 
      loop_
        _dictionary_history.version
@@ -57,7 +57,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
 
 
-     3.1.1.76         ?
+     3.1.1.77         ?
 ;
      ?
 ;
@@ -2594,7 +2594,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.76'
+   _item_default.value            '3.1.1.77'
 
    loop_
      _item_enumeration.value
@@ -38723,23 +38723,6 @@ shifts from other saveframes of this category in an entry.
 
 save_
 
-save__assigned_chem_shift_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_assigned_chem_shift_list.data_file_name'
-   _item.category_id                           'assigned_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__assigned_chem_shift_list.sample_condition_list_id
 
    _item_description.description
@@ -40215,23 +40198,6 @@ constant values from other saveframes of this category in an entry.
 
 save_
 
-save__coupling_constant_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_coupling_constant_list.data_file_name'
-   _item.category_id                           'coupling_constant_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__coupling_constant_list.sample_condition_list_id
 
    _item_description.description
@@ -41478,23 +41444,6 @@ Spectral peak list ID
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__spectral_peak_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_spectral_peak_list.data_file_name'
-   _item.category_id                           'spectral_peak_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -45447,23 +45396,6 @@ isotope effect values from other saveframes of this category in an entry.
 
 save_
 
-save__chem_shift_isotope_effect_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_chem_shift_isotope_effect_list.data_file_name'
-   _item.category_id                           'chem_shift_isotope_effect_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__chem_shift_isotope_effect_list.sample_condition_list_id
 
    _item_description.description
@@ -46813,23 +46745,6 @@ information from other saveframes of this category in an entry.
 
 save_
 
-save__mol_interaction_chem_shift_diff.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_mol_interaction_chem_shift_diff.data_file_name'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__mol_interaction_chem_shift_diff.sample_condition_list_id
 
    _item_description.description
@@ -47724,23 +47639,6 @@ anisotropy data from other saveframes of this category in an entry.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__chem_shift_anisotropy.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_chem_shift_anisotropy.data_file_name'
-   _item.category_id                           'chem_shift_anisotropy'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -49220,22 +49118,6 @@ chemical shift data from other saveframes of this category in an entry.
 
 save_
 
-save__theoretical_chem_shift_list.data_file_name
-
-   _item_description.description
-;
-Name of the file containing theoretical chemical shift data.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.data_file_name'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__theoretical_chem_shift_list.chem_shifts_calc_type_id
 
    _item_description.description
@@ -49965,23 +49847,6 @@ Unique identifier for the list of observed residual dipolar couplings.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__rdc_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_rdc_list.data_file_name'
-   _item.category_id                           'rdc_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -51337,23 +51202,6 @@ Unique identifier for the list of observed residual dipolar couplings.
 
 save_
 
-save__dipolar_coupling_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_dipolar_coupling_list.data_file_name'
-   _item.category_id                           'dipolar_coupling_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__dipolar_coupling_list.sample_condition_list_id
 
    _item_description.description
@@ -52628,23 +52476,6 @@ data from other saveframes of this category in an entry.
 
 save_
 
-save__spectral_density_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_spectral_density_list.data_file_name'
-   _item.category_id                           'spectral_density_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__spectral_density_list.sample_condition_list_id
 
    _item_description.description
@@ -53598,23 +53429,6 @@ A definition for the new kind of data that are being reported.
 
 save_
 
-save__other_data_type_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_other_data_type_list.data_file_name'
-   _item.category_id                           'other_data_type_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__other_data_type_list.sample_condition_list_id
 
    _item_description.description
@@ -54436,23 +54250,6 @@ A unique identifier for the list of Kinetic rate data.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__chemical_rate_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_chemical_rate_list.data_file_name'
-   _item.category_id                           'chemical_rate_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -55372,23 +55169,6 @@ A unique identifier for the list of hydrogen exchange rate data.
 
 save_
 
-save__h_exch_rate_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_h_exch_rate_list.data_file_name'
-   _item.category_id                           'h_exch_rate_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__h_exch_rate_list.sample_condition_list_id
 
    _item_description.description
@@ -56288,23 +56068,6 @@ protection factor data from other saveframes of this category in an entry.
 
 save_
 
-save__h_exch_protection_factor_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_h_exch_protection_factor_list.data_file_name'
-   _item.category_id                           'h_exch_protection_factor_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__h_exch_protection_factor_list.sample_condition_list_id
 
    _item_description.description
@@ -57183,23 +56946,6 @@ NOE data from other saveframes of this category in an entry.
 
 save_
 
-save__homonucl_noe_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_homonucl_noe_list.data_file_name'
-   _item.category_id                           'homonucl_noe_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__homonucl_noe_list.sample_condition_list_id
 
    _item_description.description
@@ -57245,7 +56991,7 @@ Enter the method used to measure the intensities of the NOE peaks.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'code'
+   _item_type.code                             'line'
 
    loop_
      _item_enumeration.value
@@ -58406,31 +58152,6 @@ NOE data from other saveframes of this category in an entry.
 
 save_
 
-save__heteronucl_noe_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_heteronucl_noe_list.data_file_name'
-   _item.category_id                           'heteronucl_noe_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-   loop_
-     _item_examples.case
-
-;
-HN_hetnoe.tbl
-;
-
-   stop_
-
-save_
-
 save__heteronucl_noe_list.sample_condition_list_id
 
    _item_description.description
@@ -58516,7 +58237,7 @@ A keyword that defines the type of value reported as the heteronuclear NOE.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'code'
+   _item_type.code                             'line'
 
    loop_
      _item_enumeration.value
@@ -59872,23 +59593,6 @@ T1 data from other saveframes of this category in an entry.
 
 save_
 
-save__heteronucl_t1_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_heteronucl_t1_list.data_file_name'
-   _item.category_id                           'heteronucl_t1_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__heteronucl_t1_list.sample_condition_list_id
 
    _item_description.description
@@ -60809,23 +60513,6 @@ T1rho data from other saveframes of this category in an entry.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__heteronucl_t1rho_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_heteronucl_t1rho_list.data_file_name'
-   _item.category_id                           'heteronucl_t1rho_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -61860,23 +61547,6 @@ T2 data from other saveframes of this category in an entry.
 
 save_
 
-save__heteronucl_t2_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_heteronucl_t2_list.data_file_name'
-   _item.category_id                           'heteronucl_t2_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__heteronucl_t2_list.sample_condition_list_id
 
    _item_description.description
@@ -62903,23 +62573,6 @@ data from other saveframes of this category in an entry.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__auto_relaxation_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_auto_relaxation_list.data_file_name'
-   _item.category_id                           'auto_relaxation_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -64085,23 +63738,6 @@ Unique identifier for the list of Dipole-dipole relaxation values.
 
 save_
 
-save__dipole_dipole_relax_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_dipole_dipole_relax_list.data_file_name'
-   _item.category_id                           'dipole_dipole_relax_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__dipole_dipole_relax_list.sample_condition_list_id
 
    _item_description.description
@@ -65233,23 +64869,6 @@ Unique identifier for the list of cross-correlation values.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__cross_correlation_dd_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_cross_correlation_dd_list.data_file_name'
-   _item.category_id                           'cross_correlation_dd_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -66913,23 +66532,6 @@ Unique identifier for the list of cross-correlation values.
 
 save_
 
-save__cross_correlation_d_csa_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_cross_correlation_d_csa_list.data_file_name'
-   _item.category_id                           'cross_correlation_d_csa_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__cross_correlation_d_csa_list.sample_condition_list_id
 
    _item_description.description
@@ -68588,23 +68190,6 @@ Unique identifier for the list of reported order parameter values.
 
 save_
 
-save__order_parameter_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_order_parameter_list.data_file_name'
-   _item.category_id                           'order_parameter_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__order_parameter_list.sample_condition_list_id
 
    _item_description.description
@@ -69894,23 +69479,6 @@ Unique identifier for the list of pKa values.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__ph_titration_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_ph_titration_list.data_file_name'
-   _item.category_id                           'ph_titration_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -71212,23 +70780,6 @@ chemical shift; peak height
 
 save_
 
-save__ph_param_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_ph_param_list.data_file_name'
-   _item.category_id                           'ph_param_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__ph_param_list.details
 
    _item_description.description
@@ -71538,23 +71089,6 @@ factors.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__d_h_fractionation_factor_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_d_h_fractionation_factor_list.data_file_name'
-   _item.category_id                           'd_h_fractionation_factor_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -72369,23 +71903,6 @@ save__binding_value_list.id
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__binding_value_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_binding_value_list.data_file_name'
-   _item.category_id                           'binding_value_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -73523,23 +73040,6 @@ binding constants.
 
 save_
 
-save__binding_param_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_binding_param_list.data_file_name'
-   _item.category_id                           'binding_param_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__binding_param_list.details
 
    _item_description.description
@@ -73882,23 +73382,6 @@ Unique identifier for the list of reported secondary structure features.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__deduced_secd_struct_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_deduced_secd_struct_list.data_file_name'
-   _item.category_id                           'deduced_secd_struct_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -75060,23 +74543,6 @@ experimental data.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__deduced_h_bond_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_deduced_h_bond_list.data_file_name'
-   _item.category_id                           'deduced_h_bond_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -76303,23 +75769,6 @@ from other saveframes of this category in an entry.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__conformer_stat_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_conformer_stat_list.data_file_name'
-   _item.category_id                           'conformer_stat_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -86111,23 +85560,6 @@ structures.
 
 save_
 
-save__force_constant_list.data_file_name
-
-   _item_description.description
-;
-Name of the uploaded data file that contains the list of force constant 
-values used in calculating the structure.
-;
-
-   _item.name                                  '_force_constant_list.data_file_name'
-   _item.category_id                           'force_constant_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__force_constant_list.default_software_values_used
 
    _item_description.description
@@ -86563,23 +85995,6 @@ Unique identifier for the list of reported angular order parameters.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__angular_order_parameter_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_angular_order_parameter_list.data_file_name'
-   _item.category_id                           'angular_order_parameter_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -91339,22 +90754,6 @@ Unique identifier for the list of chemical shift tensors.
 
 save_
 
-save__tensor_list.data_file_name
-
-   _item_description.description
-;
-Name of the file containing tensor data.
-;
-
-   _item.name                                  '_tensor_list.data_file_name'
-   _item.category_id                           'tensor_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__tensor_list.tensor_type
 
    _item_description.description
@@ -92474,22 +91873,6 @@ save__interatomic_distance_list.id
 
 save_
 
-save__interatomic_distance_list.data_file_name
-
-   _item_description.description
-;
-Name of the file containing interatomic distance data.
-;
-
-   _item.name                                  '_interatomic_distance_list.data_file_name'
-   _item.category_id                           'interatomic_distance_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__interatomic_distance_list.details
 
    _item_description.description
@@ -93214,22 +92597,6 @@ Unique identifier for the list of reported distance constraints.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__gen_dist_constraint_list.data_file_name
-
-   _item_description.description
-;
-Name of the uploaded file that contains the distance constraint data.
-;
-
-   _item.name                                  '_gen_dist_constraint_list.data_file_name'
-   _item.category_id                           'gen_dist_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -95775,22 +95142,6 @@ Unique identifier for the list of reported distance constraints.
 
 save_
 
-save__distance_constraint_list.data_file_name
-
-   _item_description.description
-;
-Name of the uploaded file that contains the distance constraint data.
-;
-
-   _item.name                                  '_distance_constraint_list.data_file_name'
-   _item.category_id                           'distance_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__distance_constraint_list.constraint_type
 
    _item_description.description
@@ -97895,23 +97246,6 @@ Unique identifier for the reported list of floating chirality stereoassignments.
 
 save_
 
-save__floating_chirality_assign.data_file_name
-
-   _item_description.description
-;
-Name of the file that contains the definitions for the floating chirality 
-assignments.
-;
-
-   _item.name                                  '_floating_chirality_assign.data_file_name'
-   _item.category_id                           'floating_chirality_assign'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__floating_chirality_assign.details
 
    _item_description.description
@@ -98813,22 +98147,6 @@ Unique identifier for the list of torsion angle constraints.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__torsion_angle_constraint_list.data_file_name
-
-   _item_description.description
-;
-Name of the file that contains the Torsion angle constraint data.
-;
-
-   _item.name                                  '_torsion_angle_constraint_list.data_file_name'
-   _item.category_id                           'torsion_angle_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -102094,22 +101412,6 @@ Unique identifier for the list of reported residual dipolar coupling constraints
 
 save_
 
-save__rdc_constraint_list.data_file_name
-
-   _item_description.description
-;
-Name of the file that contains the RDC constraint data.
-;
-
-   _item.name                                  '_rdc_constraint_list.data_file_name'
-   _item.category_id                           'rdc_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__rdc_constraint_list.constraint_file_id
 
    _item_description.description
@@ -104503,22 +103805,6 @@ Unique identifier for the list of reported three bond scalar coupling constraint
 
 save_
 
-save__j_three_bond_constraint_list.data_file_name
-
-   _item_description.description
-;
-Name of the file that contains the J-three bond coupling constant constraints.
-;
-
-   _item.name                                  '_j_three_bond_constraint_list.data_file_name'
-   _item.category_id                           'j_three_bond_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__j_three_bond_constraint_list.data_file_format
 
    _item_description.description
@@ -106239,22 +105525,6 @@ Unique identifier for the list of reported CA/CB chemical shift constraints..
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__ca_cb_constraint_list.data_file_name
-
-   _item_description.description
-;
-Name of the file that contains the CA/CB chemical shift constraints.
-;
-
-   _item.name                                  '_ca_cb_constraint_list.data_file_name'
-   _item.category_id                           'ca_cb_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
@@ -108279,22 +107549,6 @@ The units assigned to the H chemical shift constraint values.
 
 save_
 
-save__h_chem_shift_constraint_list.data_file_name
-
-   _item_description.description
-;
-Name of the file that contains the H chemical shift constraints.
-;
-
-   _item.name                                  '_h_chem_shift_constraint_list.data_file_name'
-   _item.category_id                           'h_chem_shift_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
 save__h_chem_shift_constraint_list.data_file_format
 
    _item_description.description
@@ -109214,23 +108468,6 @@ A unique identifier for the list of SAXS data.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__saxs_constraint_list.data_file_name
-
-   _item_description.description
-;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this saveframe.
-;
-
-   _item.name                                  '_saxs_constraint_list.data_file_name'
-   _item.category_id                           'saxs_constraint_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
 
 
 save_
