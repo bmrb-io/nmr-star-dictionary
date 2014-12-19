@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2014-12-03
+#  version date -  2014-12-16
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -9073,7 +9073,7 @@ entry with the corresponding BMRB accession number given as a value to the tag
    _item.category_id                           'Related_entries'
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
+   _item_type.code                             'text'
 
    loop_
      _item_examples.case
@@ -46936,7 +46936,7 @@ The kind of atom to which the chemical shift offset value applies.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'code'
+   _item_type.code                             'line'
 
    loop_
      _item_enumeration.value
@@ -51073,6 +51073,8 @@ Items in the assigned_peak_chem_shift category define the atom(s) assigned to in
    loop_
      _category_key.name
 
+     '_Assigned_peak_chem_shift.Peak_ID'
+     '_Assigned_peak_chem_shift.Spectral_dim_ID'
      '_Assigned_peak_chem_shift.Entry_ID'
      '_Assigned_peak_chem_shift.Spectral_peak_list_ID'
 
@@ -89532,7 +89534,7 @@ coordinate set was extracted.
 
    _item.name                                  '_Conformer_family_coord_set.PDB_accession_code'
    _item.category_id                           'Conformer_family_coord_set'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'code'
 
