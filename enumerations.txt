@@ -9,7 +9,7 @@
      
 data_NMR-STAR_tag_enumerations
 
-    _Revision_date      2014-05-27
+    _Revision_date      2015-02-25
 
 
 save__Assembly.Ambiguous_chem_comp_sites
@@ -1249,7 +1249,7 @@ DMSO-d5                              'H methyl proton'
 DMSO-d6                              'H methyl deuterons' 
 methanol                             'H methyl protons'
 TMS                                  'H methyl protons' 
-acetate                              'C methyl carbons'
+acetate                              'C methyl carbon'
 dioxane                              'C methylene carbons'
 'ammonium chloride'                  'N ammonium nitrogen' 
 '[15N] ammonium chloride'            'N ammonium nitrogen' 
@@ -2368,8 +2368,8 @@ save__Data_set.Type
    spectral_density_values              .
    H_exch_rates                         .
    H_exch_protection_factors            .
-   pH_titration                         .
-   pH_param_list                        .
+   pKa_value_data_set                   .
+   pH_NMR_param_list                    .
    binding_constants                    .
    D_H_fractionation_factors            .
    molecular_axis_determinations        .
@@ -5049,41 +5049,6 @@ save__Heteronucl_T2_list.Temp_control_method
 
 save_
 
-#save__General_relaxation_list.Relaxation_type_common_name
-
-#    loop_
-#      _item_enumeration_value
-#      _item_enumeration_description
-
-#      R1                                    .
-#      R2                                    .
-#      R1rho                                 .
-#     'ZQ relaxation'                        .
-#     'longitudinal spin order'              .
-#     'single quantum antiphase'             .
-#     'DQ relaxation'                        .
-
-#    stop_
-
-#save_
-
-
-#save__General_relaxation_list.Common_relaxation_term
-#
-#    loop_
-#      _item_enumeration_value
-#      _item_enumeration_description
-#
-#      R1             .
-#      R1rho          .
-#      R2             .
-#      T1             .
-#      T1rho          .
-#      T2             .
-#            
-#    stop_
-#
-#save_
 
 
 save__Auto_relaxation_experiment.Sample_state
@@ -5657,6 +5622,8 @@ save__Experiment.Name
       '3D HCCH-COSY'                .
       '3D HCACO'                    .
       '3D HN(COCA)CB'               .
+      Õ15N-{1H} NOEÕ                .
+      Õ13C-{1H} NOEÕ                .
 
   stop_
 
