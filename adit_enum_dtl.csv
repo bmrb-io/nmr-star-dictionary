@@ -385,7 +385,7 @@ TBL_BEGIN,?,?,?
 217,6,DMSO-d6,"H methyl deuterons"
 217,7,methanol,"H methyl protons"
 217,8,TMS,"H methyl protons"
-217,9,acetate,"C methyl carbons"
+217,9,acetate,"C methyl carbon"
 217,10,dioxane,"C methylene carbons"
 217,11,ammonium chloride,"N ammonium nitrogen"
 217,12,[15N] ammonium chloride,"N ammonium nitrogen"
@@ -713,8 +713,8 @@ TBL_BEGIN,?,?,?
 81,9,spectral_density_values,enumeration_text
 81,10,H_exch_rates,enumeration_text
 81,11,H_exch_protection_factors,enumeration_text
-81,12,pH_titration,enumeration_text
-81,13,pH_param_list,enumeration_text
+81,12,pKa_value_data_set,enumeration_text
+81,13,pH_NMR_param_list,enumeration_text
 81,14,binding_constants,enumeration_text
 81,15,D_H_fractionation_factors,enumeration_text
 81,16,molecular_axis_determinations,enumeration_text
@@ -1265,8 +1265,9 @@ TBL_BEGIN,?,?,?
 65,4,At a specific future date,enumeration_text
 53,1,macromolecule,enumeration_text
 53,2,metabolite/natural product,enumeration_text
-53,3,small molecule,enumeration_text
-53,4,small molecule structure,enumeration_text
+53,3,‘small,molecule’
+53,4,.,enumeration_text
+53,5,.,enumeration_text
 54,1,original,enumeration_text
 54,2,update,enumeration_text
 54,3,obsolete,enumeration_text
@@ -1729,6 +1730,9 @@ TBL_BEGIN,?,?,?
 200,26,3D HCCH-COSY,enumeration_text
 200,27,3D HCACO,enumeration_text
 200,28,3D HN(COCA)CB,enumeration_text
+200,29,’15N-{1H},NOE’
+200,30,.,enumeration_text
+200,31,NOE’,enumeration_text
 201,1,no,enumeration_text
 201,2,yes,enumeration_text
 249,1,anisotropic,enumeration_text

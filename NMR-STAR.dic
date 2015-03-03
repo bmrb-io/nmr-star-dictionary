@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2015-02-25
+#  version date -  2015-03-03
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.78
+    _dictionary.version         3.1.1.80
 
      loop_
        _dictionary_history.version
@@ -57,7 +57,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
 
 
-     3.1.1.78         ?
+     3.1.1.80         ?
 ;
      ?
 ;
@@ -2412,8 +2412,9 @@ The type of BMRB entry.
 
    macromolecule    ?
    'metabolite/natural product'    ?
-   'small molecule'    ?
-   'small molecule structure'    ?
+   ‘small    molecule’
+   .    ?
+   .    ?
 
    stop_
 
@@ -2594,7 +2595,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.78'
+   _item_default.value            '3.1.1.80'
 
    loop_
      _item_enumeration.value
@@ -3653,8 +3654,8 @@ of the full list of saveframe categories available in constructing an NMR-STAR f
    spectral_density_values    ?
    H_exch_rates    ?
    H_exch_protection_factors    ?
-   pH_titration    ?
-   pH_param_list    ?
+   pKa_value_data_set    ?
+   pH_NMR_param_list    ?
    binding_constants    ?
    D_H_fractionation_factors    ?
    molecular_axis_determinations    ?
@@ -33654,6 +33655,9 @@ Names for NMR experiments commonly found in the literature.
    '3D HCCH-COSY'    ?
    '3D HCACO'    ?
    '3D HN(COCA)CB'    ?
+   ’15N-{1H}    NOE’
+   .    ?
+   NOE’    ?
 
    stop_
 
@@ -37999,7 +38003,7 @@ as a chemical shift reference.
    DMSO-d6    'H methyl deuterons'
    methanol    'H methyl protons'
    TMS    'H methyl protons'
-   acetate    'C methyl carbons'
+   acetate    'C methyl carbon'
    dioxane    'C methylene carbons'
    'ammonium chloride'    'N ammonium nitrogen'
    '[15N] ammonium chloride'    'N ammonium nitrogen'
@@ -54721,7 +54725,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _item.name                                  '_chemical_rate.comp_index_id'
    _item.category_id                           'chemical_rate'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'int'
 
@@ -54737,7 +54741,7 @@ Pointer to '_Entity_poly_seq.Num'
 
    _item.name                                  '_chemical_rate.seq_id'
    _item.category_id                           'chemical_rate'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'int'
 
@@ -54753,7 +54757,7 @@ Pointer to '_Chem_comp.ID'
 
    _item.name                                  '_chemical_rate.comp_id'
    _item.category_id                           'chemical_rate'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'code'
 
@@ -54769,7 +54773,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _item.name                                  '_chemical_rate.atom_id'
    _item.category_id                           'chemical_rate'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'atcode'
 
