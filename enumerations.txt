@@ -5622,8 +5622,8 @@ save__Experiment.Name
       '3D HCCH-COSY'                .
       '3D HCACO'                    .
       '3D HN(COCA)CB'               .
-      Õ15N-{1H} NOEÕ                .
-      Õ13C-{1H} NOEÕ                .
+      '15N-{1H} NOE'                .
+      '13C-{1H} NOE'                .
 
   stop_
 
@@ -6327,14 +6327,14 @@ save__Related_entries.Database_name
     TargetDB      'Target registration database'
     EMDB          'Electron Microscopy Volume Data Bank'
     BMCD          'Biological Macromolecule Crystallization Database'
-    GB    'GenBank'
-    DBJ    'DNA Data Bank of Japan'
-    EMBL    'European Molecular Biology Laboratory'
-    NCBI    .
-    PIR    'Protein Information Resource'
-    REF    'NCBI Reference Sequence'
-    SGD    'Saccharomyces Genome Database'
-    SP    'UniProtKB/Swiss-Prot' 
+    GB            'GenBank'
+    DBJ           'DNA Data Bank of Japan'
+    EMBL          'European Molecular Biology Laboratory'
+    NCBI          .
+    PIR           'Protein Information Resource'
+    REF           'NCBI Reference Sequence'
+    SGD           'Saccharomyces Genome Database'
+    SP            'UniProtKB/Swiss-Prot' 
 
   stop_
 
@@ -7474,7 +7474,92 @@ save__Upload_data.Data_file_Sf_category
      _item_enumeration_value
      _item_enumeration_description
 
-    deposited_data_files                        .    entry_interview                             .    study_list                                  .    entry_information                           .    citations                                   .    chem_comp                                   .    entity                                      .    assembly                                    .    assembly_annotation                         .    assembly_subsystems                         .    natural_source                              .    experimental_source                         .    sample                                      .    sample_conditions                           .    molecule_purity                             .    software                                    .    method                                      .    Mass_spectrometer                           .    Mass_spectrometer_list                      .    Mass_spec_ref_compd                         .    chromatographic_system                      .    chromatographic_column                      .    NMR_spectrometer                            .    NMR_spectrometer_list                       .    NMR_spectrometer_probe                      .    experiment_list                             .    NMR_spectrometer_expt                       .    NMR_spectral_processing                     .    computer                                    .    chem_shift_reference                        .    assigned_chemical_shifts                    .    coupling_constants                          .    spectral_peak_list                          .    resonance_linker                            .    chem_shift_isotope_effect                   .    chem_shift_interaction_diff                 .    chem_shift_anisotropy                       .    theoretical_chem_shifts                     .    chem_shifts_calc_type                       .    RDCs                                        .    dipolar_couplings                           .    spectral_density_values                     .    other_data_types                            .    chemical_rates                              .    H_exch_rates                                .    H_exch_protection_factors                   .    homonucl_NOEs                               .    heteronucl_NOEs                             .    heteronucl_T1_relaxation                    .    heteronucl_T1rho_relaxation                 .    heteronucl_T2_relaxation                    .    auto_relaxation                             .    dipole_dipole_relaxation                    .    dipole_dipole_cross_correlations            .    dipole_CSA_cross_correlations               .    order_parameters                            .    pH_titration                                .    pH_param_list                               .    D_H_fractionation_factors                   .    binding_data                                .    binding_param_list                          .    deduced_secd_struct_features                .    deduced_hydrogen_bonds                      .    conformer_statistics                        .    constraint_statistics                       .    representative_conformer                    .    conformer_family_coord_set                  .    force_constants                             .    angular_order_parameters                    .    tertiary_struct_elements                    .    secondary_structs                           .    bond_annotation                             .    structure_interactions                      .    other_struct_features                       .    tensor                                      .    interatomic_distance                        .    general_distance_constraints                .    distance_constraints                        .    floating_chiral_stereo_assign               .    torsion_angle_constraints                   .    RDC_constraints                             .    J_three_bond_constraints                    .    CA_CB_chem_shift_constraints                .    H_chem_shift_constraints                    .    other_constraints                           .    org_constr_file_comment                     .
+    deposited_data_files                            .
+    entry_interview                             .
+    study_list                                  .
+    entry_information                           .
+    citations                                   .
+    chem_comp                                   .
+    entity                                      .
+    assembly                                    .
+    assembly_annotation                         .
+    assembly_subsystems                         .
+    natural_source                              .
+    experimental_source                         .
+    sample                                      .
+    sample_conditions                           .
+    molecule_purity                             .
+    software                                    .
+    method                                      .
+    Mass_spectrometer                           .
+    Mass_spectrometer_list                      .
+    Mass_spec_ref_compd                         .
+    chromatographic_system                      .
+    chromatographic_column                      .
+    NMR_spectrometer                            .
+    NMR_spectrometer_list                       .
+    NMR_spectrometer_probe                      .
+    experiment_list                             .
+    NMR_spectrometer_expt                       .
+    NMR_spectral_processing                     .
+    computer                                    .
+    chem_shift_reference                        .
+    assigned_chemical_shifts                    .
+    coupling_constants                          .
+    spectral_peak_list                          .
+    resonance_linker                            .
+    chem_shift_isotope_effect                   .
+    chem_shift_interaction_diff                 .
+    chem_shift_anisotropy                       .
+    theoretical_chem_shifts                     .
+    chem_shifts_calc_type                       .
+    RDCs                                        .
+    dipolar_couplings                           .
+    spectral_density_values                     .
+    other_data_types                            .
+    chemical_rates                              .
+    H_exch_rates                                .
+    H_exch_protection_factors                   .
+    homonucl_NOEs                               .
+    heteronucl_NOEs                             .
+    heteronucl_T1_relaxation                    .
+    heteronucl_T1rho_relaxation                 .
+    heteronucl_T2_relaxation                    .
+    auto_relaxation                             .
+    dipole_dipole_relaxation                    .
+    dipole_dipole_cross_correlations            .
+    dipole_CSA_cross_correlations               .
+    order_parameters                            .
+    pH_titration                                .
+    pH_param_list                               .
+    D_H_fractionation_factors                   .
+    binding_data                                .
+    binding_param_list                          .
+    deduced_secd_struct_features                .
+    deduced_hydrogen_bonds                      .
+    conformer_statistics                        .
+    constraint_statistics                       .
+    representative_conformer                    .
+    conformer_family_coord_set                  .
+    force_constants                             .
+    angular_order_parameters                    .
+    tertiary_struct_elements                    .
+    secondary_structs                           .
+    bond_annotation                             .
+    structure_interactions                      .
+    other_struct_features                       .
+    tensor                                      .
+    interatomic_distance                        .
+    general_distance_constraints                .
+    distance_constraints                        .
+    floating_chiral_stereo_assign               .
+    torsion_angle_constraints                   .
+    RDC_constraints                             .
+    J_three_bond_constraints                    .
+    CA_CB_chem_shift_constraints                .
+    H_chem_shift_constraints                    .
+    other_constraints                           .
+    org_constr_file_comment                     .
 
    stop_
 
