@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2015-03-03
+#  version date -  2015-08-28
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.80
+    _dictionary.version         3.1.1.81
 
      loop_
        _dictionary_history.version
@@ -57,7 +57,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
 
 
-     3.1.1.80         ?
+     3.1.1.81         ?
 ;
      ?
 ;
@@ -2594,7 +2594,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.80'
+   _item_default.value            '3.1.1.81'
 
    loop_
      _item_enumeration.value
@@ -12210,6 +12210,8 @@ Items in the assembly_segment category define at levels from atom to chemical co
      _category_key.name
 
      '_assembly_segment.id'
+     '_assembly_segment.entry_id'
+     '_assembly_segment.assembly_id'
 
    stop_
 
@@ -12441,6 +12443,7 @@ Items in the assembly_segment_description category provide a description of an a
    loop_
      _category_key.name
 
+     '_assembly_segment_description.assembly_segment_id'
      '_assembly_segment_description.entry_id'
      '_assembly_segment_description.assembly_id'
 
@@ -13829,6 +13832,8 @@ Items in the subsystem_db_link category define databases and the entries in the 
 
      '_subsystem_db_link.database_code'
      '_subsystem_db_link.accession_code'
+     '_subsystem_db_link.entry_id'
+     '_subsystem_db_link.assembly_subsystem_id'
 
    stop_
 
@@ -14006,7 +14011,7 @@ Pointer to '_Assembly_subsystem.ID'
 
    _item.name                                  '_subsystem_db_link.assembly_subsystem_id'
    _item.category_id                           'subsystem_db_link'
-   _item.mandatory_code                         no
+   _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'int'
 
@@ -30301,6 +30306,8 @@ Items in the mass_spectrometer_view category provide the characteristics of mass
      _category_key.name
 
      '_mass_spectrometer_view.id'
+     '_mass_spectrometer_view.entry_id'
+     '_mass_spectrometer_view.mass_spectrometer_list_id'
 
    stop_
 
@@ -33380,6 +33387,8 @@ Items in the experiment category define the experiments carried out and the samp
      _category_key.name
 
      '_experiment.id'
+     '_experiment.entry_id'
+     '_experiment.experiment_list_id'
 
    stop_
 
@@ -35019,6 +35028,8 @@ NOT AVAILABLE
    loop_
      _category_key.name
 
+     '_nmr_expt_systematic_name.name'
+     '_nmr_expt_systematic_name.naming_system'
      '_nmr_expt_systematic_name.entry_id'
      '_nmr_expt_systematic_name.nmr_spec_expt_id'
 
@@ -41786,14 +41797,14 @@ nitrogen in an 1H-15N HSQC experiment.
 
 save_
 
-save__spectral_dim.folding_type
+save__spectral_dim.under_sampling_type
 
    _item_description.description
 ;
 The type of spectral folding caused by undersampling in the spectral dimension.
 ;
 
-   _item.name                                  '_spectral_dim.folding_type'
+   _item.name                                  '_spectral_dim.under_sampling_type'
    _item.category_id                           'spectral_dim'
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          yes
@@ -41804,8 +41815,6 @@ The type of spectral folding caused by undersampling in the spectral dimension.
      _item_enumeration.value
      _item_enumeration.detail
 
-   aliased    ?
-   folded    ?
 
    stop_
 
@@ -42716,6 +42725,8 @@ NOT AVAILABLE
      _category_key.name
 
      '_peak_contribution.id'
+     '_peak_contribution.entry_id'
+     '_peak_contribution.spectral_peak_list_id'
 
    stop_
 
@@ -43920,6 +43931,8 @@ NOT AVAILABLE
    loop_
      _category_key.name
 
+     '_assigned_spectral_transition.spectral_transition_id'
+     '_assigned_spectral_transition.spectral_dim_id'
      '_assigned_spectral_transition.entry_id'
      '_assigned_spectral_transition.spectral_peak_list_id'
 
