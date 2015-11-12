@@ -4671,6 +4671,33 @@ jsmith@home_addr.gov
 
 save_
 
+save__Contact_person.ORCID
+
+   _Tag                  '_Contact_person.ORCID'
+
+   _Category              'Contact_person'
+
+   _Description
+;
+Unique researcher identifier (Open Researcher and Contributor ID)
+;
+
+   _Adit_item_view_name
+;
+ORCID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Contact_person.Name_salutation
 
    _Tag                  '_Contact_person.Name_salutation'
@@ -36971,12 +36998,12 @@ save__Mass_spectrometer_view.Type
 
    _Description
 ;
-Approximate strength of the magnetic field for the spectrometer as defined by the proton frequency of the instrument expressed in MHz.
+?
 ;
 
    _Adit_item_view_name
 ;
-Field strength
+Type
 ;
 
    loop_
@@ -36998,7 +37025,7 @@ save__Mass_spectrometer_view.Fragmentation_method
 
    _Description
 ;
-Enter the method by the mass spectrometer to fragment compounds.
+Enter the method used by the mass spectrometer to fragment compounds.
 ;
 
    _Adit_item_view_name
@@ -52617,6 +52644,33 @@ The units for the sweep width value (Hz or ppm)
 
 ;
 ppm
+;
+
+   stop_
+
+save_
+
+save__Spectral_dim.Center_frequency_offset
+
+   _Tag                  '_Spectral_dim.Center_frequency_offset'
+
+   _Category              'Spectral_dim'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Center frequency offset
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_

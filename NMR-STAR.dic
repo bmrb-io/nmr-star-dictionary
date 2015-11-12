@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2015-08-28
+#  version date -  2015-11-12
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -56,6 +56,10 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Changed category group, and item group for X-ray_instrument to Xray_instrument
 ;
 
+     3.1.1.98         2015-08-19
+;
+     Added tags for FID sampling
+;
 
      3.1.1.81         ?
 ;
@@ -2819,6 +2823,49 @@ The name of the disk directory where data is stored at BMRB.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'text'
+
+
+save_
+
+save_contact_person
+   _category.description
+;
+Items in the contact_person category capture information about the people that can be contacted to provide answers to questions raised during the annotation and processing of an entry.
+;
+   _category.id                   'contact_person'
+   _category.mandatory_code       yes
+
+   loop_
+     _category_key.name
+
+     '_contact_person.id'
+     '_contact_person.entry_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_information'
+
+   stop_
+
+save_
+
+save__contact_person.orcid
+
+   _item_description.description
+;
+Unique personal identifier for researchers(Open Researcher and Contributor 
+ID) used to link a researcher to their publications and grants.
+;
+
+   _item.name                                  '_contact_person.orcid'
+   _item.category_id                           'contact_person'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
 
 
 save_
@@ -41815,6 +41862,8 @@ The type of spectral folding caused by undersampling in the spectral dimension.
      _item_enumeration.value
      _item_enumeration.detail
 
+   aliased    ?
+   folded    ?
 
    stop_
 
@@ -41884,6 +41933,22 @@ ppm
 ;
 
    stop_
+
+save_
+
+save__spectral_dim.center_frequency_offset
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                                  '_spectral_dim.center_frequency_offset'
+   _item.category_id                           'spectral_dim'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
 
 save_
 
