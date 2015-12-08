@@ -71,6 +71,7 @@ save_<deposited_data_files>
   loop_
      _Upload_data.Data_file_ID                      
      _Upload_data.Data_file_name                    
+     _Upload_data.Data_file_content_type            
      _Upload_data.Data_file_Sf_category             
      _Upload_data.Data_file_syntax                  
      _Upload_data.Data_file_immutable_flag          
@@ -78,7 +79,7 @@ save_<deposited_data_files>
      _Upload_data.Entry_ID                          
      _Upload_data.Deposited_data_files_ID           
 
-    2  "Long string value"  "Long string value"  "Long string value"  yes/no    2  1  2  
+    2  "Long string value"  "Long string value"  "Long string value"  "Long string value"    yes/no  2  1  2  
 
   stop_
 
@@ -258,10 +259,11 @@ save_<entry_information>
      _Entry_author.First_initial            
      _Entry_author.Middle_initials          
      _Entry_author.Family_title             
+     _Entry_author.ORCID                    
      _Entry_author.Sf_ID                    
      _Entry_author.Entry_ID                 
 
-    2  "String value"  "Long string value"  "Short string value"  "Short string value"    "Short string value"  2  1  
+    2  "String value"  "Long string value"  "Short string value"  "Short string value"    "Short string value"  "Long string value"  2  1  
 
   stop_
 
@@ -407,17 +409,17 @@ save_<citations>
 
   loop_
      _Citation_author.Ordinal                  
-     _Citation_author.ORCID                    
      _Citation_author.Given_name               
      _Citation_author.Family_name              
      _Citation_author.First_initial            
      _Citation_author.Middle_initials          
      _Citation_author.Family_title             
+     _Citation_author.ORCID                    
      _Citation_author.Sf_ID                    
      _Citation_author.Entry_ID                 
      _Citation_author.Citation_ID              
 
-    2  "Long string value"  "String value"  "String value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
+    2  "String value"  "String value"  "Short string value"  "Short string value"    "Short string value"  "Long string value"  2  1  2    
 
   stop_
 
@@ -2840,6 +2842,95 @@ save_<coupling_constants>
 
 save_
 
+save_<theoretical_coupling_constants>
+  _Theoretical_coupling_constant_list.Sf_category     theoretical_coupling_constants
+  _Theoretical_coupling_constant_list.Sf_framecode     <theoretical_coupling_constants>
+  _Theoretical_coupling_constant_list.Entry_ID                             1
+  _Theoretical_coupling_constant_list.Sf_ID                                2
+  _Theoretical_coupling_constant_list.ID                                   2
+  _Theoretical_coupling_constant_list.Data_file_name                       "Long string value"
+  _Theoretical_coupling_constant_list.Sample_condition_list_ID             2
+  _Theoretical_coupling_constant_list.Sample_condition_list_label          "Long string value"
+  _Theoretical_coupling_constant_list.Spectrometer_frequency_1H            110.234
+  _Theoretical_coupling_constant_list.Details                              "Possible multiline text"
+  _Theoretical_coupling_constant_list.Text_data_format                     "String value"
+  _Theoretical_coupling_constant_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Theoretical_coupling_constant_experiment.Experiment_ID                                  
+     _Theoretical_coupling_constant_experiment.Experiment_name                                
+     _Theoretical_coupling_constant_experiment.Sample_ID                                      
+     _Theoretical_coupling_constant_experiment.Sample_label                                   
+     _Theoretical_coupling_constant_experiment.Sample_state                                   
+     _Theoretical_coupling_constant_experiment.Sf_ID                                          
+     _Theoretical_coupling_constant_experiment.Entry_ID                                       
+     _Theoretical_coupling_constant_experiment.Theoretical_coupling_constant_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_coupling_constant_software.Software_ID                                    
+     _Theoretical_coupling_constant_software.Software_label                                 
+     _Theoretical_coupling_constant_software.Method_ID                                      
+     _Theoretical_coupling_constant_software.Method_label                                   
+     _Theoretical_coupling_constant_software.Sf_ID                                          
+     _Theoretical_coupling_constant_software.Entry_ID                                       
+     _Theoretical_coupling_constant_software.Theoretical_coupling_constant_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_coupling_constant.ID                                             
+     _Theoretical_coupling_constant.Code                                           
+     _Theoretical_coupling_constant.Assembly_atom_ID_1                             
+     _Theoretical_coupling_constant.Entity_assembly_ID_1                           
+     _Theoretical_coupling_constant.Entity_ID_1                                    
+     _Theoretical_coupling_constant.Theoretical_comp_index_ID_1                    
+     _Theoretical_coupling_constant.Seq_ID_1                                       
+     _Theoretical_coupling_constant.Theoretical_comp_ID_1                          
+     _Theoretical_coupling_constant.Atom_ID_1                                      
+     _Theoretical_coupling_constant.Atom_type_1                                    
+     _Theoretical_coupling_constant.Atom_isotope_number_1                          
+     _Theoretical_coupling_constant.Ambiguity_code_1                               
+     _Theoretical_coupling_constant.Assembly_atom_ID_2                             
+     _Theoretical_coupling_constant.Entity_assembly_ID_2                           
+     _Theoretical_coupling_constant.Entity_ID_2                                    
+     _Theoretical_coupling_constant.Theoretical_comp_index_ID_2                    
+     _Theoretical_coupling_constant.Seq_ID_2                                       
+     _Theoretical_coupling_constant.Theoretical_comp_ID_2                          
+     _Theoretical_coupling_constant.Atom_ID_2                                      
+     _Theoretical_coupling_constant.Atom_type_2                                    
+     _Theoretical_coupling_constant.Atom_isotope_number_2                          
+     _Theoretical_coupling_constant.Ambiguity_code_2                               
+     _Theoretical_coupling_constant.Val                                            
+     _Theoretical_coupling_constant.Val_min                                        
+     _Theoretical_coupling_constant.Val_max                                        
+     _Theoretical_coupling_constant.Val_err                                        
+     _Theoretical_coupling_constant.Resonance_ID_1                                 
+     _Theoretical_coupling_constant.Resonance_ID_2                                 
+     _Theoretical_coupling_constant.Auth_entity_assembly_ID_1                      
+     _Theoretical_coupling_constant.Auth_seq_ID_1                                  
+     _Theoretical_coupling_constant.Auth_comp_ID_1                                 
+     _Theoretical_coupling_constant.Auth_atom_ID_1                                 
+     _Theoretical_coupling_constant.Auth_entity_assembly_ID_2                      
+     _Theoretical_coupling_constant.Auth_seq_ID_2                                  
+     _Theoretical_coupling_constant.Auth_comp_ID_2                                 
+     _Theoretical_coupling_constant.Auth_atom_ID_2                                 
+     _Theoretical_coupling_constant.Details                                        
+     _Theoretical_coupling_constant.Sf_ID                                          
+     _Theoretical_coupling_constant.Entry_ID                                       
+     _Theoretical_coupling_constant.Theoretical_coupling_constant_list_ID          
+
+    2  "String value"  2  2  2    2  2  1  1  "Short string value"    2  yes/no  2  2  2    2  2  1  1  "Short string value"    2  yes/no  110.234  110.234  110.234    110.234  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Possible multiline text"  2  1  2    
+
+  stop_
+
+save_
+
 save_<spectral_peak_list>
   _Spectral_peak_list.Sf_category     spectral_peak_list
   _Spectral_peak_list.Sf_framecode     <spectral_peak_list>
@@ -4203,6 +4294,92 @@ save_<heteronucl_NOEs>
      _Heteronucl_NOE.Sf_ID                              
      _Heteronucl_NOE.Entry_ID                           
      _Heteronucl_NOE.Heteronucl_NOE_list_ID             
+
+    2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    1  1  "Short string value"  2  110.234    110.234  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  2  1  2  
+
+  stop_
+
+save_
+
+save_<theoretical_heteronucl_NOEs>
+  _Theoretical_heteronucl_NOE_list.Sf_category     theoretical_heteronucl_NOEs
+  _Theoretical_heteronucl_NOE_list.Sf_framecode     <theoretical_heteronucl_NOEs>
+  _Theoretical_heteronucl_NOE_list.Entry_ID                             1
+  _Theoretical_heteronucl_NOE_list.Sf_ID                                2
+  _Theoretical_heteronucl_NOE_list.ID                                   2
+  _Theoretical_heteronucl_NOE_list.Data_file_name                       "Long string value"
+  _Theoretical_heteronucl_NOE_list.Sample_condition_list_ID             2
+  _Theoretical_heteronucl_NOE_list.Sample_condition_list_label          "Long string value"
+  _Theoretical_heteronucl_NOE_list.Spectrometer_frequency_1H            110.234
+  _Theoretical_heteronucl_NOE_list.Heteronuclear_NOE_val_type           "String value"
+  _Theoretical_heteronucl_NOE_list.NOE_ref_val                          110.234
+  _Theoretical_heteronucl_NOE_list.NOE_ref_description                  "Possible multiline text"
+  _Theoretical_heteronucl_NOE_list.Details                              "Possible multiline text"
+  _Theoretical_heteronucl_NOE_list.Text_data_format                     "String value"
+  _Theoretical_heteronucl_NOE_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Theoretical_heteronucl_NOE_experiment.Experiment_ID                   
+     _Theoretical_heteronucl_NOE_experiment.Experiment_name                 
+     _Theoretical_heteronucl_NOE_experiment.Sample_ID                       
+     _Theoretical_heteronucl_NOE_experiment.Sample_label                    
+     _Theoretical_heteronucl_NOE_experiment.Sample_state                    
+     _Theoretical_heteronucl_NOE_experiment.Sf_ID                           
+     _Theoretical_heteronucl_NOE_experiment.Entry_ID                        
+     _Theoretical_heteronucl_NOE_experiment.Heteronucl_NOE_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_heteronucl_NOE_software.Software_ID                     
+     _Theoretical_heteronucl_NOE_software.Software_label                  
+     _Theoretical_heteronucl_NOE_software.Method_ID                       
+     _Theoretical_heteronucl_NOE_software.Method_label                    
+     _Theoretical_heteronucl_NOE_software.Sf_ID                           
+     _Theoretical_heteronucl_NOE_software.Entry_ID                        
+     _Theoretical_heteronucl_NOE_software.Heteronucl_NOE_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_heteronucl_NOE.ID                                 
+     _Theoretical_heteronucl_NOE.Assembly_atom_ID_1                 
+     _Theoretical_heteronucl_NOE.Entity_assembly_ID_1               
+     _Theoretical_heteronucl_NOE.Entity_ID_1                        
+     _Theoretical_heteronucl_NOE.Comp_index_ID_1                    
+     _Theoretical_heteronucl_NOE.Seq_ID_1                           
+     _Theoretical_heteronucl_NOE.Comp_ID_1                          
+     _Theoretical_heteronucl_NOE.Atom_ID_1                          
+     _Theoretical_heteronucl_NOE.Atom_type_1                        
+     _Theoretical_heteronucl_NOE.Atom_isotope_number_1              
+     _Theoretical_heteronucl_NOE.Assembly_atom_ID_2                 
+     _Theoretical_heteronucl_NOE.Entity_assembly_ID_2               
+     _Theoretical_heteronucl_NOE.Entity_ID_2                        
+     _Theoretical_heteronucl_NOE.Comp_index_ID_2                    
+     _Theoretical_heteronucl_NOE.Seq_ID_2                           
+     _Theoretical_heteronucl_NOE.Comp_ID_2                          
+     _Theoretical_heteronucl_NOE.Atom_ID_2                          
+     _Theoretical_heteronucl_NOE.Atom_type_2                        
+     _Theoretical_heteronucl_NOE.Atom_isotope_number_2              
+     _Theoretical_heteronucl_NOE.Val                                
+     _Theoretical_heteronucl_NOE.Val_err                            
+     _Theoretical_heteronucl_NOE.Resonance_ID_1                     
+     _Theoretical_heteronucl_NOE.Resonance_ID_2                     
+     _Theoretical_heteronucl_NOE.Auth_entity_assembly_ID_1          
+     _Theoretical_heteronucl_NOE.Auth_seq_ID_1                      
+     _Theoretical_heteronucl_NOE.Auth_comp_ID_1                     
+     _Theoretical_heteronucl_NOE.Auth_atom_ID_1                     
+     _Theoretical_heteronucl_NOE.Auth_entity_assembly_ID_2          
+     _Theoretical_heteronucl_NOE.Auth_seq_ID_2                      
+     _Theoretical_heteronucl_NOE.Auth_comp_ID_2                     
+     _Theoretical_heteronucl_NOE.Auth_atom_ID_2                     
+     _Theoretical_heteronucl_NOE.Sf_ID                              
+     _Theoretical_heteronucl_NOE.Entry_ID                           
+     _Theoretical_heteronucl_NOE.Heteronucl_NOE_list_ID             
 
     2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    1  1  "Short string value"  2  110.234    110.234  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  2  1  2  
 
