@@ -958,7 +958,7 @@ Check this box, if you are depositing one or more sets of homonuclear NOE data. 
 
    _Adit_item_view_name
 ;
-Homonuclear NOEs (not for NOE restraints, <BR> restraints are uploaded as part of a PDB deposition)
+Homonuclear NOEs
 ;
 
    loop_
@@ -1148,6 +1148,114 @@ Check this box, if you are depositing theoretical chemical shift values (calcula
    _Adit_item_view_name
 ;
 Theoretical (calculated) chemical shift values
+;
+
+   loop_
+     _Example
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_coupling_constants
+
+   _Tag                  '_Entry_interview.Theoretical_coupling_constants'
+
+   _Category              'Entry_interview'
+
+   _Description
+;
+Check this box, if you are depositing theoretical coupling constant values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+;
+
+   _Adit_item_view_name
+;
+Theoretical coupling constants
+;
+
+   loop_
+     _Example
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_heteronucl_NOEs
+
+   _Tag                  '_Entry_interview.Theoretical_heteronucl_NOEs'
+
+   _Category              'Entry_interview'
+
+   _Description
+;
+Check this box, if you are depositing theoretical heteronuclear NOE values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+;
+
+   _Adit_item_view_name
+;
+Theoretical heteronuclear NOEs
+;
+
+   loop_
+     _Example
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_T1_relaxation
+
+   _Tag                  '_Entry_interview.Theoretical_T1_relaxation'
+
+   _Category              'Entry_interview'
+
+   _Description
+;
+Check this box, if you are depositing theoretical T1(R1) values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+;
+
+   _Adit_item_view_name
+;
+Theoretical T1 values
+;
+
+   loop_
+     _Example
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_T2_relaxation
+
+   _Tag                  '_Entry_interview.Theoretical_T2_relaxation'
+
+   _Category              'Entry_interview'
+
+   _Description
+;
+Check this box, if you are depositing theoretical T2(R2) values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+;
+
+   _Adit_item_view_name
+;
+Theoretical T2 values
 ;
 
    loop_
@@ -83120,6 +83228,1329 @@ Pointer to '_Heteronucl_T1_list.ID'
    _Adit_item_view_name
 ;
 Heteronucl T1 list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Sf_category
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Sf_category'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+Category definition for the information content of the saveframe
+;
+
+   _Adit_item_view_name
+;
+Sf category
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Sf_framecode
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Sf_framecode'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+A label for the saveframe that describes in very brief terms the information contained in the saveframe.
+;
+
+   _Adit_item_view_name
+;
+Heteronuclear T1 list label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Entry_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Entry_ID'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Sf_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Sf_ID'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.ID'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+An integer value that uniquely identifies this saveframe of theoretical heteronuclear T1 data from other saveframes of this category in an entry.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Data_file_name
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Data_file_name'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+The name of the file submitted with this depostion that contains the quantitative data for this saveframe.
+;
+
+   _Adit_item_view_name
+;
+Deposited data file name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Sample_condition_list_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Sample_condition_list_ID'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample conditions ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Sample_condition_list_label
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Sample_condition_list_label'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+The label for the set of experimental sample conditions used to collect the data for determination of the theoretical heteronuclear T1 relaxation values.
+;
+
+   _Adit_item_view_name
+;
+Sample conditions label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Spectrometer_frequency_1H
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Spectrometer_frequency_1H'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+The operating proton frequency in MHz of the NMR spectrometer used to collect the data.
+;
+
+   _Adit_item_view_name
+;
+Spectrometer frequency 1H
+;
+
+   loop_
+     _Example
+
+;
+600.1283731
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.T1_coherence_type
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.T1_coherence_type'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+A code describing the nuclei involved in the measured T1 coherence.
+;
+
+   _Adit_item_view_name
+;
+T1 coherence type
+;
+
+   loop_
+     _Example
+
+;
+Iz;Sz
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.T1_val_units
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.T1_val_units'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+The units used for the reported T1 relaxation values.  This will define the form of the reported data as either time or rate.
+;
+
+   _Adit_item_view_name
+;
+T1 value units
+;
+
+   loop_
+     _Example
+
+;
+s; s-1; ms
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Details
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Details'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+Text describing the reported theoretical heteronuclear T1 relaxation data.
+;
+
+   _Adit_item_view_name
+;
+Details
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Text_data_format
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Text_data_format'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+The data format used to represent the theoretical heteronuclear T1 relaxation data as ASCII text in the text block that is the value to the '_Theoretical_heteronucl_T1_list.Text_data' tag.
+;
+
+   _Adit_item_view_name
+;
+Text data format
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Text_data
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Text_data'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+A set of theoretical heteronuclear T1 relaxation data formatted as ASCII text.
+;
+
+   _Adit_item_view_name
+;
+Text data
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Experiment_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Experiment_ID'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _Adit_item_view_name
+;
+Experiment ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Experiment_name
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Experiment_name'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _Adit_item_view_name
+;
+NMR experiments (select from NMR experiment and samples list)
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Sample_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Sample_ID'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Pointer to '_Sample.ID'
+;
+
+   _Adit_item_view_name
+;
+Sample ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Sample_label
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Sample_label'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _Adit_item_view_name
+;
+Sample label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Sample_state
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Sample_state'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Physical state of the sample either anisotropic or isotropic.
+;
+
+   _Adit_item_view_name
+;
+Sample state
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Sf_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Sf_ID'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Pointer to '_Theoretical_heteronucl_T1_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Entry_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Entry_ID'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_experiment.Heteronucl_T1_list_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_experiment.Heteronucl_T1_list_ID'
+
+   _Category              'Theoretical_heteronucl_T1_experiment'
+
+   _Description
+;
+Pointer to '_Theoretical_heteronucl_T1_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Theoretical heteronucl T1 list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_software.Software_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_software.Software_ID'
+
+   _Category              'Theoretical_heteronucl_T1_software'
+
+   _Description
+;
+Pointer to '_Software.ID'
+;
+
+   _Adit_item_view_name
+;
+Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_software.Software_label
+
+   _Tag                  '_Theoretical_heteronucl_T1_software.Software_label'
+
+   _Category              'Theoretical_heteronucl_T1_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _Adit_item_view_name
+;
+Software label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_software.Method_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_software.Method_ID'
+
+   _Category              'Theoretical_heteronucl_T1_software'
+
+   _Description
+;
+Pointer to '_Method.ID'
+;
+
+   _Adit_item_view_name
+;
+Method ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_software.Method_label
+
+   _Tag                  '_Theoretical_heteronucl_T1_software.Method_label'
+
+   _Category              'Theoretical_heteronucl_T1_software'
+
+   _Description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _Adit_item_view_name
+;
+Method label
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_software.Sf_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_software.Sf_ID'
+
+   _Category              'Theoretical_heteronucl_T1_software'
+
+   _Description
+;
+Pointer to '_Theoretical_heteronucl_T1_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_software.Entry_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_software.Entry_ID'
+
+   _Category              'Theoretical_heteronucl_T1_software'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_software.Heteronucl_T1_list_ID
+
+   _Tag                  '_Theoretical_heteronucl_T1_software.Heteronucl_T1_list_ID'
+
+   _Category              'Theoretical_heteronucl_T1_software'
+
+   _Description
+;
+Pointer to '_Theoretical_heteronucl_T1_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Theoretical heteronucl T1 list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.ID
+
+   _Tag                  '_Theoretical_T1.ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Unique identifier for the observed T1 relaxation value.
+;
+
+   _Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Assembly_atom_ID
+
+   _Tag                  '_Theoretical_T1.Assembly_atom_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Assembly atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Entity_assembly_ID
+
+   _Tag                  '_Theoretical_T1.Entity_assembly_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Entity_ID
+
+   _Tag                  '_Theoretical_T1.Entity_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Entity.ID'
+;
+
+   _Adit_item_view_name
+;
+Entity ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Comp_index_ID
+
+   _Tag                  '_Theoretical_T1.Comp_index_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp index ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Seq_ID
+
+   _Tag                  '_Theoretical_T1.Seq_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
+;
+
+   _Adit_item_view_name
+;
+Seq ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Comp_ID
+
+   _Tag                  '_Theoretical_T1.Comp_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _Adit_item_view_name
+;
+Comp ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Atom_ID
+
+   _Tag                  '_Theoretical_T1.Atom_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _Adit_item_view_name
+;
+Atom ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Atom_type
+
+   _Tag                  '_Theoretical_T1.Atom_type'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+The value for this tag is a standard IUPAC abbreviation for an element (i.e., H, C, P, etc).
+;
+
+   _Adit_item_view_name
+;
+Atom type
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Atom_isotope_number
+
+   _Tag                  '_Theoretical_T1.Atom_isotope_number'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Atom isotope number
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Val
+
+   _Tag                  '_Theoretical_T1.Val'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+The T1 relaxation value.
+;
+
+   _Adit_item_view_name
+;
+Val
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Val_err
+
+   _Tag                  '_Theoretical_T1.Val_err'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+The estimated error in the reported T1 relaxation value.
+;
+
+   _Adit_item_view_name
+;
+Val err
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Resonance_ID
+
+   _Tag                  '_Theoretical_T1.Resonance_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _Adit_item_view_name
+;
+Resonance ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Auth_entity_assembly_ID
+
+   _Tag                  '_Theoretical_T1.Auth_entity_assembly_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+?
+;
+
+   _Adit_item_view_name
+;
+Auth entity assembly ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Auth_seq_ID
+
+   _Tag                  '_Theoretical_T1.Auth_seq_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+An alternative identifier for Seq_id that may be provided by an author in order to match that used in the publication that describes the experimental data.  Note that the value is not required to be a number and does not need to correspond to the value for Seq_ID or Comp_index_ID.
+;
+
+   _Adit_item_view_name
+;
+Auth seq ID
+;
+
+   loop_
+     _Example
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Auth_comp_ID
+
+   _Tag                  '_Theoretical_T1.Auth_comp_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+An alternative identifier for Comp_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth comp ID
+;
+
+   loop_
+     _Example
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Auth_atom_ID
+
+   _Tag                  '_Theoretical_T1.Auth_atom_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+An alternative identifier for Atom_id that may be provided by an author in order to match that used in the publication that describes the experimental data.
+;
+
+   _Adit_item_view_name
+;
+Auth atom ID
+;
+
+   loop_
+     _Example
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Sf_ID
+
+   _Tag                  '_Theoretical_T1.Sf_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Theoretical_heteronucl_T1_list.Sf_ID'
+;
+
+   _Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Entry_ID
+
+   _Tag                  '_Theoretical_T1.Entry_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T1.Heteronucl_T1_list_ID
+
+   _Tag                  '_Theoretical_T1.Heteronucl_T1_list_ID'
+
+   _Category              'Theoretical_T1'
+
+   _Description
+;
+Pointer to '_Theoretical_heteronucl_T1_list.ID'
+;
+
+   _Adit_item_view_name
+;
+Theoretical heteronucl T1 list ID
 ;
 
    loop_

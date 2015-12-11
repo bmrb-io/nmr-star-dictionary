@@ -45,6 +45,10 @@ save_<entry_interview>
   _Entry_interview.PKa_value_data_set                        yes/no
   _Entry_interview.D_H_fractionation_factors                 yes/no
   _Entry_interview.Theoretical_chem_shifts                   yes/no
+  _Entry_interview.Theoretical_coupling_constants            yes/no
+  _Entry_interview.Theoretical_heteronucl_NOEs               yes/no
+  _Entry_interview.Theoretical_T1_relaxation                 yes/no
+  _Entry_interview.Theoretical_T2_relaxation                 yes/no
   _Entry_interview.Spectral_density_values                   yes/no
   _Entry_interview.Timedomain_data                           yes/no
   _Entry_interview.Molecular_interactions                    yes/no
@@ -4451,6 +4455,77 @@ save_<heteronucl_T1_relaxation>
      _T1.Sf_ID                            
      _T1.Entry_ID                         
      _T1.Heteronucl_T1_list_ID            
+
+    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
+
+  stop_
+
+save_
+
+save_<theoretical_heteronucl_T1_relaxation>
+  _Theoretical_heteronucl_T1_list.Sf_category     theoretical_heteronucl_T1_relaxation
+  _Theoretical_heteronucl_T1_list.Sf_framecode     <theoretical_heteronucl_T1_relaxation>
+  _Theoretical_heteronucl_T1_list.Entry_ID                             1
+  _Theoretical_heteronucl_T1_list.Sf_ID                                2
+  _Theoretical_heteronucl_T1_list.ID                                   2
+  _Theoretical_heteronucl_T1_list.Data_file_name                       "Long string value"
+  _Theoretical_heteronucl_T1_list.Sample_condition_list_ID             2
+  _Theoretical_heteronucl_T1_list.Sample_condition_list_label          "Long string value"
+  _Theoretical_heteronucl_T1_list.Spectrometer_frequency_1H            110.234
+  _Theoretical_heteronucl_T1_list.T1_coherence_type                    "String value"
+  _Theoretical_heteronucl_T1_list.T1_val_units                         "Short string value"
+  _Theoretical_heteronucl_T1_list.Details                              "Possible multiline text"
+  _Theoretical_heteronucl_T1_list.Text_data_format                     "String value"
+  _Theoretical_heteronucl_T1_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Theoretical_heteronucl_T1_experiment.Experiment_ID                  
+     _Theoretical_heteronucl_T1_experiment.Experiment_name                
+     _Theoretical_heteronucl_T1_experiment.Sample_ID                      
+     _Theoretical_heteronucl_T1_experiment.Sample_label                   
+     _Theoretical_heteronucl_T1_experiment.Sample_state                   
+     _Theoretical_heteronucl_T1_experiment.Sf_ID                          
+     _Theoretical_heteronucl_T1_experiment.Entry_ID                       
+     _Theoretical_heteronucl_T1_experiment.Heteronucl_T1_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_heteronucl_T1_software.Software_ID                    
+     _Theoretical_heteronucl_T1_software.Software_label                 
+     _Theoretical_heteronucl_T1_software.Method_ID                      
+     _Theoretical_heteronucl_T1_software.Method_label                   
+     _Theoretical_heteronucl_T1_software.Sf_ID                          
+     _Theoretical_heteronucl_T1_software.Entry_ID                       
+     _Theoretical_heteronucl_T1_software.Heteronucl_T1_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_T1.ID                               
+     _Theoretical_T1.Assembly_atom_ID                 
+     _Theoretical_T1.Entity_assembly_ID               
+     _Theoretical_T1.Entity_ID                        
+     _Theoretical_T1.Comp_index_ID                    
+     _Theoretical_T1.Seq_ID                           
+     _Theoretical_T1.Comp_ID                          
+     _Theoretical_T1.Atom_ID                          
+     _Theoretical_T1.Atom_type                        
+     _Theoretical_T1.Atom_isotope_number              
+     _Theoretical_T1.Val                              
+     _Theoretical_T1.Val_err                          
+     _Theoretical_T1.Resonance_ID                     
+     _Theoretical_T1.Auth_entity_assembly_ID          
+     _Theoretical_T1.Auth_seq_ID                      
+     _Theoretical_T1.Auth_comp_ID                     
+     _Theoretical_T1.Auth_atom_ID                     
+     _Theoretical_T1.Sf_ID                            
+     _Theoretical_T1.Entry_ID                         
+     _Theoretical_T1.Heteronucl_T1_list_ID            
 
     2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
 
