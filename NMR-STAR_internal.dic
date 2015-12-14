@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2015-12-11
+#  version date -  2015-12-12
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.88
+    _dictionary.version         3.1.1.91
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.1.1.88         ?
+     3.1.1.91         ?
 ;
      ?
 ;
@@ -2552,32 +2552,6 @@ no
 
 save_
 
-save_Entry_interview
-   _category.description
-;
-Items in the entry_interview category capture information from a depositor about the data that is in the entry.
-;
-   _category.id                   'Entry_interview'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Entry_interview.Entry_ID'
-     '_Entry_interview.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'entry_interview'
-
-   stop_
-
-save_
-
 save__Entry_interview.Theoretical_coupling_constants
 
    _item_description.description
@@ -2597,6 +2571,8 @@ Flag indicating that theoretical coupling constant values are being deposited.
      _item_enumeration.value
      _item_enumeration.detail
 
+   yes    ?
+   no    ?
 
    stop_
 
@@ -2630,6 +2606,8 @@ Flag indicating that theoretical heteronuclear NOE values are being deposited.
      _item_enumeration.value
      _item_enumeration.detail
 
+   yes    ?
+   no    ?
 
    stop_
 
@@ -2663,6 +2641,8 @@ Flag indicating that theoretical T1 (R1) values are being deposited.
      _item_enumeration.value
      _item_enumeration.detail
 
+   yes    ?
+   no    ?
 
    stop_
 
@@ -2685,6 +2665,103 @@ Flag indicating that theoretical T2 (R2) values are being deposited.
 ;
 
    _item.name                                  '_Entry_interview.Theoretical_T2_relaxation'
+   _item.category_id                           'Entry_interview'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   yes
+   _item_type.code                             'yes_no'
+   _item_default.value            'no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_auto_relaxation
+
+   _item_description.description
+;
+Flag indicating that theoretical auto relaxation data are being deposited.
+;
+
+   _item.name                                  '_Entry_interview.Theoretical_auto_relaxation'
+   _item.category_id                           'Entry_interview'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   yes
+   _item_type.code                             'yes_no'
+   _item_default.value            'no'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   yes    ?
+   no    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save_Entry_interview
+   _category.description
+;
+Items in the entry_interview category capture information from a depositor about the data that is in the entry.
+;
+   _category.id                   'Entry_interview'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Entry_interview.Entry_ID'
+     '_Entry_interview.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_interview'
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_DD_cross_correlation
+
+   _item_description.description
+;
+Flag indicating that theoretical cross correlation relaxation values are 
+being deposited.
+;
+
+   _item.name                                  '_Entry_interview.Theoretical_DD_cross_correlation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.flag          yes
@@ -4681,10 +4758,18 @@ BMRB accession number for this entry
   '_Heteronucl_T2_experiment.Entry_ID'                   'Heteronucl_T2_experiment'      yes
   '_Heteronucl_T2_software.Entry_ID'                     'Heteronucl_T2_software'        yes
   '_T2.Entry_ID'                                         'T2'                            yes
+  '_Theoretical_heteronucl_T2_list.Entry_ID'             'Theoretical_heteronucl_T2_list'                    yes
+  '_Theoretical_heteronucl_T2_experiment.Entry_ID'                                       'Theoretical_heteronucl_T2_experiment'              yes
+  '_Theoretical_heteronucl_T2_software.Entry_ID'         'Theoretical_heteronucl_T2_software'                yes
+  '_Theoretical_T2.Entry_ID'                             'Theoretical_T2'                yes
   '_Auto_relaxation_list.Entry_ID'                       'Auto_relaxation_list'          yes
   '_Auto_relaxation_experiment.Entry_ID'                 'Auto_relaxation_experiment'                        yes
   '_Auto_relaxation_software.Entry_ID'                   'Auto_relaxation_software'      yes
   '_Auto_relaxation.Entry_ID'                            'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation_list.Entry_ID'           'Theoretical_auto_relaxation_list'                  yes
+  '_Theoretical_auto_relaxation_experiment.Entry_ID'                                     'Theoretical_auto_relaxation_experiment'            yes
+  '_Theoretical_auto_relaxation_software.Entry_ID'                                       'Theoretical_auto_relaxation_software'              yes
+  '_Theoretical_auto_relaxation.Entry_ID'                'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax_list.Entry_ID'                   'Dipole_dipole_relax_list'      yes
   '_Dipole_dipole_relax_experiment.Entry_ID'             'Dipole_dipole_relax_experiment'                    yes
   '_Dipole_dipole_relax_software.Entry_ID'               'Dipole_dipole_relax_software'                      yes
@@ -4693,6 +4778,10 @@ BMRB accession number for this entry
   '_Cross_correlation_DD_experiment.Entry_ID'            'Cross_correlation_DD_experiment'                   yes
   '_Cross_correlation_DD_software.Entry_ID'              'Cross_correlation_DD_software'                     yes
   '_Cross_correlation_DD.Entry_ID'                       'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD_list.Entry_ID'                                      'Theoretical_cross_correlation_DD_list'             yes
+  '_Theoretical_cross_correlation_DD_experiment.Entry_ID'                                'Theoretical_cross_correlation_DD_experiment'       yes
+  '_Theoretical_cross_correlation_DD_software.Entry_ID'                                  'Theoretical_cross_correlation_DD_software'         yes
+  '_Theoretical_cross_correlation_DD.Entry_ID'           'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA_list.Entry_ID'               'Cross_correlation_D_CSA_list'                      yes
   '_Cross_correlation_D_CSA_experiment.Entry_ID'         'Cross_correlation_D_CSA_experiment'                yes
   '_Cross_correlation_D_CSA_software.Entry_ID'           'Cross_correlation_D_CSA_software'                  yes
@@ -4971,10 +5060,18 @@ BMRB accession number for this entry
   '_Heteronucl_T2_experiment.Entry_ID'                   '_Entry.ID'
   '_Heteronucl_T2_software.Entry_ID'                     '_Entry.ID'
   '_T2.Entry_ID'                                         '_Entry.ID'
+  '_Theoretical_heteronucl_T2_list.Entry_ID'             '_Entry.ID'
+  '_Theoretical_heteronucl_T2_experiment.Entry_ID'                                       '_Entry.ID'
+  '_Theoretical_heteronucl_T2_software.Entry_ID'         '_Entry.ID'
+  '_Theoretical_T2.Entry_ID'                             '_Entry.ID'
   '_Auto_relaxation_list.Entry_ID'                       '_Entry.ID'
   '_Auto_relaxation_experiment.Entry_ID'                 '_Entry.ID'
   '_Auto_relaxation_software.Entry_ID'                   '_Entry.ID'
   '_Auto_relaxation.Entry_ID'                            '_Entry.ID'
+  '_Theoretical_auto_relaxation_list.Entry_ID'           '_Entry.ID'
+  '_Theoretical_auto_relaxation_experiment.Entry_ID'                                     '_Entry.ID'
+  '_Theoretical_auto_relaxation_software.Entry_ID'                                       '_Entry.ID'
+  '_Theoretical_auto_relaxation.Entry_ID'                '_Entry.ID'
   '_Dipole_dipole_relax_list.Entry_ID'                   '_Entry.ID'
   '_Dipole_dipole_relax_experiment.Entry_ID'             '_Entry.ID'
   '_Dipole_dipole_relax_software.Entry_ID'               '_Entry.ID'
@@ -4983,6 +5080,10 @@ BMRB accession number for this entry
   '_Cross_correlation_DD_experiment.Entry_ID'            '_Entry.ID'
   '_Cross_correlation_DD_software.Entry_ID'              '_Entry.ID'
   '_Cross_correlation_DD.Entry_ID'                       '_Entry.ID'
+  '_Theoretical_cross_correlation_DD_list.Entry_ID'                                      '_Entry.ID'
+  '_Theoretical_cross_correlation_DD_experiment.Entry_ID'                                '_Entry.ID'
+  '_Theoretical_cross_correlation_DD_software.Entry_ID'                                  '_Entry.ID'
+  '_Theoretical_cross_correlation_DD.Entry_ID'           '_Entry.ID'
   '_Cross_correlation_D_CSA_list.Entry_ID'               '_Entry.ID'
   '_Cross_correlation_D_CSA_experiment.Entry_ID'         '_Entry.ID'
   '_Cross_correlation_D_CSA_software.Entry_ID'           '_Entry.ID'
@@ -5387,7 +5488,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.88'
+   _item_default.value            '3.1.1.91'
 
    loop_
      _item_enumeration.value
@@ -11412,6 +11513,7 @@ saveframe.
   '_Sample_component.Assembly_ID'                        'Sample_component'              yes
   '_Chemical_rate.Assembly_ID'                           'Chemical_rate'                 yes
   '_Auto_relaxation.Assembly_ID'                         'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Assembly_ID'             'Theoretical_auto_relaxation'                       yes
   '_Binding_result.Assembly_ID'                          'Binding_result'                yes
   '_Binding_partners.Assembly_ID'                        'Binding_partners'              yes
   '_Struct_anno_char.Assembly_ID'                        'Struct_anno_char'              yes
@@ -11447,6 +11549,7 @@ saveframe.
   '_Sample_component.Assembly_ID'                        '_Assembly.ID'
   '_Chemical_rate.Assembly_ID'                           '_Assembly.ID'
   '_Auto_relaxation.Assembly_ID'                         '_Assembly.ID'
+  '_Theoretical_auto_relaxation.Assembly_ID'             '_Assembly.ID'
   '_Binding_result.Assembly_ID'                          '_Assembly.ID'
   '_Binding_partners.Assembly_ID'                        '_Assembly.ID'
   '_Struct_anno_char.Assembly_ID'                        '_Assembly.ID'
@@ -12118,13 +12221,19 @@ Unique identifier for each component in the entity assembly.
   '_Theoretical_T1.Entity_assembly_ID'                   'Theoretical_T1'                yes
   '_T1rho.Entity_assembly_ID'                            'T1rho'                         yes
   '_T2.Entity_assembly_ID'                               'T2'                            yes
+  '_Theoretical_T2.Entity_assembly_ID'                   'Theoretical_T2'                yes
   '_Auto_relaxation.Entity_assembly_ID'                  'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Entity_assembly_ID'                                      'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Entity_assembly_ID_1'            'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Entity_assembly_ID_2'            'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                                  'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                                  'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                                  'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                                  'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                      'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                      'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                      'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                      'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_1'                                 'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_2'                                 'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_entity_assembly_ID_1'                                    'Cross_correlation_D_CSA'       yes
@@ -12236,13 +12345,19 @@ Unique identifier for each component in the entity assembly.
   '_Theoretical_T1.Entity_assembly_ID'                   '_Entity_assembly.ID'
   '_T1rho.Entity_assembly_ID'                            '_Entity_assembly.ID'
   '_T2.Entity_assembly_ID'                               '_Entity_assembly.ID'
+  '_Theoretical_T2.Entity_assembly_ID'                   '_Entity_assembly.ID'
   '_Auto_relaxation.Entity_assembly_ID'                  '_Entity_assembly.ID'
+  '_Theoretical_auto_relaxation.Entity_assembly_ID'                                      '_Entity_assembly.ID'
   '_Dipole_dipole_relax.Entity_assembly_ID_1'            '_Entity_assembly.ID'
   '_Dipole_dipole_relax.Entity_assembly_ID_2'            '_Entity_assembly.ID'
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                                  '_Entity_assembly.ID'
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                                  '_Entity_assembly.ID'
   '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                                  '_Entity_assembly.ID'
   '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                                  '_Entity_assembly.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                      '_Entity_assembly.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                      '_Entity_assembly.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                      '_Entity_assembly.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                      '_Entity_assembly.ID'
   '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_1'                                 '_Entity_assembly.ID'
   '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_2'                                 '_Entity_assembly.ID'
   '_Cross_correlation_D_CSA.CSA_entity_assembly_ID_1'                                    '_Entity_assembly.ID'
@@ -15946,13 +16061,19 @@ assembly.
   '_Theoretical_T1.Assembly_atom_ID'                     'Theoretical_T1'                yes
   '_T1rho.Assembly_atom_ID'                              'T1rho'                         yes
   '_T2.Assembly_atom_ID'                                 'T2'                            yes
+  '_Theoretical_Theoretical_T2.Assembly_atom_ID'         'Theoretical_Theoretical_T2'                        yes
   '_Auto_relaxation.Assembly_atom_ID'                    'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Assembly_atom_ID'                                        'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Assembly_atom_ID_1'              'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Assembly_atom_ID_2'              'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                                    'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                                    'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                                    'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                                    'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                        'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                        'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                        'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                        'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_1'                                   'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_2'                                   'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_assembly_atom_ID_1'                                      'Cross_correlation_D_CSA'       yes
@@ -16049,13 +16170,19 @@ assembly.
   '_Theoretical_T1.Assembly_atom_ID'                     '_Atom.Assembly_atom_ID'
   '_T1rho.Assembly_atom_ID'                              '_Atom.Assembly_atom_ID'
   '_T2.Assembly_atom_ID'                                 '_Atom.Assembly_atom_ID'
+  '_Theoretical_Theoretical_T2.Assembly_atom_ID'         '_Atom.Assembly_atom_ID'
   '_Auto_relaxation.Assembly_atom_ID'                    '_Atom.Assembly_atom_ID'
+  '_Theoretical_auto_relaxation.Assembly_atom_ID'                                        '_Atom.Assembly_atom_ID'
   '_Dipole_dipole_relax.Assembly_atom_ID_1'              '_Atom.Assembly_atom_ID'
   '_Dipole_dipole_relax.Assembly_atom_ID_2'              '_Atom.Assembly_atom_ID'
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                                    '_Atom.Assembly_atom_ID'
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                                    '_Atom.Assembly_atom_ID'
   '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                                    '_Atom.Assembly_atom_ID'
   '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                                    '_Atom.Assembly_atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                        '_Atom.Assembly_atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                        '_Atom.Assembly_atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                        '_Atom.Assembly_atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                        '_Atom.Assembly_atom_ID'
   '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_1'                                   '_Atom.Assembly_atom_ID'
   '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_2'                                   '_Atom.Assembly_atom_ID'
   '_Cross_correlation_D_CSA.CSA_assembly_atom_ID_1'                                      '_Atom.Assembly_atom_ID'
@@ -20229,13 +20356,19 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Theoretical_T1.Entity_ID'                            'Theoretical_T1'                yes
   '_T1rho.Entity_ID'                                     'T1rho'                         yes
   '_T2.Entity_ID'                                        'T2'                            yes
+  '_Theoretical_T2.Entity_ID'                            'Theoretical_T2'                yes
   '_Auto_relaxation.Entity_ID'                           'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Entity_ID'               'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Entity_ID_1'                     'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Entity_ID_2'                     'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_entity_ID_1'           'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_entity_ID_2'           'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_entity_ID_1'           'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_entity_ID_2'           'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_1'                               'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_2'                               'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_1'                               'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_2'                               'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_entity_ID_1'          'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_entity_ID_2'          'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_entity_ID_1'             'Cross_correlation_D_CSA'       yes
@@ -20371,13 +20504,19 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Theoretical_T1.Entity_ID'                            '_Entity.ID'
   '_T1rho.Entity_ID'                                     '_Entity.ID'
   '_T2.Entity_ID'                                        '_Entity.ID'
+  '_Theoretical_T2.Entity_ID'                            '_Entity.ID'
   '_Auto_relaxation.Entity_ID'                           '_Entity.ID'
+  '_Theoretical_auto_relaxation.Entity_ID'               '_Entity.ID'
   '_Dipole_dipole_relax.Entity_ID_1'                     '_Entity.ID'
   '_Dipole_dipole_relax.Entity_ID_2'                     '_Entity.ID'
   '_Cross_correlation_DD.Dipole_1_entity_ID_1'           '_Entity.ID'
   '_Cross_correlation_DD.Dipole_1_entity_ID_2'           '_Entity.ID'
   '_Cross_correlation_DD.Dipole_2_entity_ID_1'           '_Entity.ID'
   '_Cross_correlation_DD.Dipole_2_entity_ID_2'           '_Entity.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_1'                               '_Entity.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_2'                               '_Entity.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_1'                               '_Entity.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_2'                               '_Entity.ID'
   '_Cross_correlation_D_CSA.Dipole_entity_ID_1'          '_Entity.ID'
   '_Cross_correlation_D_CSA.Dipole_entity_ID_2'          '_Entity.ID'
   '_Cross_correlation_D_CSA.CSA_entity_ID_1'             '_Entity.ID'
@@ -22354,13 +22493,19 @@ Unique ID for the compound in the entity
   '_Theoretical_T1.Comp_index_ID'                        'Theoretical_T1'                yes
   '_T1rho.Comp_index_ID'                                 'T1rho'                         yes
   '_T2.Comp_index_ID'                                    'T2'                            yes
+  '_Theoretical_T2.Comp_index_ID'                        'Theoretical_T2'                yes
   '_Auto_relaxation.Comp_index_ID'                       'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Comp_index_ID'           'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Comp_index_ID_1'                 'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Comp_index_ID_2'                 'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_1'                                       'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_2'                                       'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_comp_index_ID_1'                                       'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                                  'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_1'                           'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_2'                           'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_comp_index_ID_1'                           'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                      'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_comp_index_ID_1'                                      'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_comp_index_ID_2'                                      'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_comp_index_ID_1'         'Cross_correlation_D_CSA'       yes
@@ -22484,13 +22629,19 @@ Unique ID for the compound in the entity
   '_Theoretical_T1.Comp_index_ID'                        '_Entity_comp_index.ID'
   '_T1rho.Comp_index_ID'                                 '_Entity_comp_index.ID'
   '_T2.Comp_index_ID'                                    '_Entity_comp_index.ID'
+  '_Theoretical_T2.Comp_index_ID'                        '_Entity_comp_index.ID'
   '_Auto_relaxation.Comp_index_ID'                       '_Entity_comp_index.ID'
+  '_Theoretical_auto_relaxation.Comp_index_ID'           '_Entity_comp_index.ID'
   '_Dipole_dipole_relax.Comp_index_ID_1'                 '_Entity_comp_index.ID'
   '_Dipole_dipole_relax.Comp_index_ID_2'                 '_Entity_comp_index.ID'
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_1'                                       '_Entity_comp_index.ID'
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_2'                                       '_Entity_comp_index.ID'
   '_Cross_correlation_DD.Dipole_2_comp_index_ID_1'                                       '_Entity_comp_index.ID'
   '_Cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                                  '_Entity_comp_index.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_1'                           '_Entity_comp_index.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_2'                           '_Entity_comp_index.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_comp_index_ID_1'                           '_Entity_comp_index.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                      '_Entity_comp_index.ID'
   '_Cross_correlation_D_CSA.Dipole_comp_index_ID_1'                                      '_Entity_comp_index.ID'
   '_Cross_correlation_D_CSA.Dipole_comp_index_ID_2'                                      '_Entity_comp_index.ID'
   '_Cross_correlation_D_CSA.CSA_comp_index_ID_1'         '_Entity_comp_index.ID'
@@ -22791,13 +22942,19 @@ that the sequence numbers must progress in increasing numerical order.
   '_Theoretical_T1.Seq_ID'                               'Theoretical_T1'                yes
   '_T1rho.Seq_ID'                                        'T1rho'                         yes
   '_T2.Seq_ID'                                           'T2'                            yes
+  '_Theoretical_T2.Seq_ID'                               'Theoretical_T2'                yes
   '_Auto_relaxation.Seq_ID'                              'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Seq_ID'                  'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Seq_ID_1'                        'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Seq_ID_2'                        'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_seq_ID_1'              'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_seq_ID_2'              'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_seq_ID_1'              'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_seq_ID_2'              'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_1'                                  'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_2'                                  'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_1'                                  'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_2'                                  'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_seq_ID_1'             'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_seq_ID_2'             'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_seq_ID_1'                'Cross_correlation_D_CSA'       yes
@@ -22905,13 +23062,19 @@ that the sequence numbers must progress in increasing numerical order.
   '_Theoretical_T1.Seq_ID'                               '_Entity_poly_seq.Num'
   '_T1rho.Seq_ID'                                        '_Entity_poly_seq.Num'
   '_T2.Seq_ID'                                           '_Entity_poly_seq.Num'
+  '_Theoretical_T2.Seq_ID'                               '_Entity_poly_seq.Num'
   '_Auto_relaxation.Seq_ID'                              '_Entity_poly_seq.Num'
+  '_Theoretical_auto_relaxation.Seq_ID'                  '_Entity_poly_seq.Num'
   '_Dipole_dipole_relax.Seq_ID_1'                        '_Entity_poly_seq.Num'
   '_Dipole_dipole_relax.Seq_ID_2'                        '_Entity_poly_seq.Num'
   '_Cross_correlation_DD.Dipole_1_seq_ID_1'              '_Entity_poly_seq.Num'
   '_Cross_correlation_DD.Dipole_1_seq_ID_2'              '_Entity_poly_seq.Num'
   '_Cross_correlation_DD.Dipole_2_seq_ID_1'              '_Entity_poly_seq.Num'
   '_Cross_correlation_DD.Dipole_2_seq_ID_2'              '_Entity_poly_seq.Num'
+  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_1'                                  '_Entity_poly_seq.Num'
+  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_2'                                  '_Entity_poly_seq.Num'
+  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_1'                                  '_Entity_poly_seq.Num'
+  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_2'                                  '_Entity_poly_seq.Num'
   '_Cross_correlation_D_CSA.Dipole_seq_ID_1'             '_Entity_poly_seq.Num'
   '_Cross_correlation_D_CSA.Dipole_seq_ID_2'             '_Entity_poly_seq.Num'
   '_Cross_correlation_D_CSA.CSA_seq_ID_1'                '_Entity_poly_seq.Num'
@@ -26827,13 +26990,19 @@ components in the entry.
   '_Theoretical_T1.Comp_ID'                              'Theoretical_T1'                yes
   '_T1rho.Comp_ID'                                       'T1rho'                         yes
   '_T2.Comp_ID'                                          'T2'                            yes
+  '_Theoretical_T2.Comp_ID'                              'Theoretical_T2'                yes
   '_Auto_relaxation.Comp_ID'                             'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Comp_ID'                 'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Comp_ID_1'                       'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Comp_ID_2'                       'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_comp_ID_1'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_comp_ID_2'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_comp_ID_1'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_comp_ID_2'             'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_comp_ID_1'            'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_comp_ID_2'            'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_comp_ID_1'               'Cross_correlation_D_CSA'       yes
@@ -26967,13 +27136,19 @@ components in the entry.
   '_Theoretical_T1.Comp_ID'                              '_Chem_comp.ID'
   '_T1rho.Comp_ID'                                       '_Chem_comp.ID'
   '_T2.Comp_ID'                                          '_Chem_comp.ID'
+  '_Theoretical_T2.Comp_ID'                              '_Chem_comp.ID'
   '_Auto_relaxation.Comp_ID'                             '_Chem_comp.ID'
+  '_Theoretical_auto_relaxation.Comp_ID'                 '_Chem_comp.ID'
   '_Dipole_dipole_relax.Comp_ID_1'                       '_Chem_comp.ID'
   '_Dipole_dipole_relax.Comp_ID_2'                       '_Chem_comp.ID'
   '_Cross_correlation_DD.Dipole_1_comp_ID_1'             '_Chem_comp.ID'
   '_Cross_correlation_DD.Dipole_1_comp_ID_2'             '_Chem_comp.ID'
   '_Cross_correlation_DD.Dipole_2_comp_ID_1'             '_Chem_comp.ID'
   '_Cross_correlation_DD.Dipole_2_comp_ID_2'             '_Chem_comp.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_1'                                 '_Chem_comp.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_2'                                 '_Chem_comp.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_1'                                 '_Chem_comp.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_2'                                 '_Chem_comp.ID'
   '_Cross_correlation_D_CSA.Dipole_comp_ID_1'            '_Chem_comp.ID'
   '_Cross_correlation_D_CSA.Dipole_comp_ID_2'            '_Chem_comp.ID'
   '_Cross_correlation_D_CSA.CSA_comp_ID_1'               '_Chem_comp.ID'
@@ -29955,13 +30130,19 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Theoretical_T1.Atom_ID'                              'Theoretical_T1'                yes
   '_T1rho.Atom_ID'                                       'T1rho'                         yes
   '_T2.Atom_ID'                                          'T2'                            yes
+  '_Theoretical_T2.Atom_ID'                              'Theoretical_T2'                yes
   '_Auto_relaxation.Atom_ID'                             'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Atom_ID'                 'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Atom_ID_1'                       'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Atom_ID_2'                       'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_atom_ID_1'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_atom_ID_2'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_atom_ID_1'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_atom_ID_2'             'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_atom_ID_1'            'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_atom_ID_2'            'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_atom_ID_1'               'Cross_correlation_D_CSA'       yes
@@ -30074,13 +30255,19 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Theoretical_T1.Atom_ID'                              '_Chem_comp_atom.Atom_ID'
   '_T1rho.Atom_ID'                                       '_Chem_comp_atom.Atom_ID'
   '_T2.Atom_ID'                                          '_Chem_comp_atom.Atom_ID'
+  '_Theoretical_T2.Atom_ID'                              '_Chem_comp_atom.Atom_ID'
   '_Auto_relaxation.Atom_ID'                             '_Chem_comp_atom.Atom_ID'
+  '_Theoretical_auto_relaxation.Atom_ID'                 '_Chem_comp_atom.Atom_ID'
   '_Dipole_dipole_relax.Atom_ID_1'                       '_Chem_comp_atom.Atom_ID'
   '_Dipole_dipole_relax.Atom_ID_2'                       '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_DD.Dipole_1_atom_ID_1'             '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_DD.Dipole_1_atom_ID_2'             '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_DD.Dipole_2_atom_ID_1'             '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_DD.Dipole_2_atom_ID_2'             '_Chem_comp_atom.Atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_1'                                 '_Chem_comp_atom.Atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_2'                                 '_Chem_comp_atom.Atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_1'                                 '_Chem_comp_atom.Atom_ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_2'                                 '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_D_CSA.Dipole_atom_ID_1'            '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_D_CSA.Dipole_atom_ID_2'            '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_D_CSA.CSA_atom_ID_1'               '_Chem_comp_atom.Atom_ID'
@@ -32061,9 +32248,12 @@ listed in the entry.
   '_Theoretical_heteronucl_T1_experiment.Sample_ID'                                      'Theoretical_heteronucl_T1_experiment'              yes
   '_Heteronucl_T1rho_experiment.Sample_ID'               'Heteronucl_T1rho_experiment'                       yes
   '_Heteronucl_T2_experiment.Sample_ID'                  'Heteronucl_T2_experiment'      yes
+  '_Theoretical_heteronucl_T2_experiment.Sample_ID'                                      'Theoretical_heteronucl_T2_experiment'              yes
   '_Auto_relaxation_experiment.Sample_ID'                'Auto_relaxation_experiment'                        yes
+  '_Theoretical_auto_relaxation_experiment.Sample_ID'                                    'Theoretical_auto_relaxation_experiment'            yes
   '_Dipole_dipole_relax_experiment.Sample_ID'            'Dipole_dipole_relax_experiment'                    yes
   '_Cross_correlation_DD_experiment.Sample_ID'           'Cross_correlation_DD_experiment'                   yes
+  '_Theoretical_cross_correlation_DD_experiment.Sample_ID'                               'Theoretical_cross_correlation_DD_experiment'       yes
   '_Cross_correlation_D_CSA_experiment.Sample_ID'                                        'Cross_correlation_D_CSA_experiment'                yes
   '_Order_parameter_experiment.Sample_ID'                'Order_parameter_experiment'                        yes
   '_PH_titration_experiment.Sample_ID'                   'PH_titration_experiment'       yes
@@ -32118,9 +32308,12 @@ listed in the entry.
   '_Theoretical_heteronucl_T1_experiment.Sample_ID'                                      '_Sample.ID'
   '_Heteronucl_T1rho_experiment.Sample_ID'               '_Sample.ID'
   '_Heteronucl_T2_experiment.Sample_ID'                  '_Sample.ID'
+  '_Theoretical_heteronucl_T2_experiment.Sample_ID'                                      '_Sample.ID'
   '_Auto_relaxation_experiment.Sample_ID'                '_Sample.ID'
+  '_Theoretical_auto_relaxation_experiment.Sample_ID'                                    '_Sample.ID'
   '_Dipole_dipole_relax_experiment.Sample_ID'            '_Sample.ID'
   '_Cross_correlation_DD_experiment.Sample_ID'           '_Sample.ID'
+  '_Theoretical_cross_correlation_DD_experiment.Sample_ID'                               '_Sample.ID'
   '_Cross_correlation_D_CSA_experiment.Sample_ID'                                        '_Sample.ID'
   '_Order_parameter_experiment.Sample_ID'                '_Sample.ID'
   '_PH_titration_experiment.Sample_ID'                   '_Sample.ID'
@@ -33921,9 +34114,12 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_Theoretical_heteronucl_T1_list.Sample_condition_list_ID'                             'Theoretical_heteronucl_T1_list'                    yes
   '_Heteronucl_T1rho_list.Sample_condition_list_ID'                                      'Heteronucl_T1rho_list'         yes
   '_Heteronucl_T2_list.Sample_condition_list_ID'         'Heteronucl_T2_list'            yes
+  '_Theoretical_heteronucl_T2_list.Sample_condition_list_ID'                             'Theoretical_heteronucl_T2_list'                    yes
   '_Auto_relaxation_list.Sample_condition_list_ID'                                       'Auto_relaxation_list'          yes
+  '_Theoretical_auto_relaxation_list.Sample_condition_list_ID'                           'Theoretical_auto_relaxation_list'                  yes
   '_Dipole_dipole_relax_list.Sample_condition_list_ID'                                   'Dipole_dipole_relax_list'      yes
   '_Cross_correlation_DD_list.Sample_condition_list_ID'                                  'Cross_correlation_DD_list'                         yes
+  '_Theoretical_cross_correlation_DD_list.Sample_condition_list_ID'                      'Theoretical_cross_correlation_DD_list'             yes
   '_Cross_correlation_D_CSA_list.Sample_condition_list_ID'                               'Cross_correlation_D_CSA_list'                      yes
   '_Order_parameter_list.Sample_condition_list_ID'                                       'Order_parameter_list'          yes
   '_PH_titration_list.Sample_condition_list_ID'          'PH_titration_list'             yes
@@ -33967,9 +34163,12 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_Theoretical_heteronucl_T1_list.Sample_condition_list_ID'                             '_Sample_condition_list.ID'
   '_Heteronucl_T1rho_list.Sample_condition_list_ID'                                      '_Sample_condition_list.ID'
   '_Heteronucl_T2_list.Sample_condition_list_ID'         '_Sample_condition_list.ID'
+  '_Theoretical_heteronucl_T2_list.Sample_condition_list_ID'                             '_Sample_condition_list.ID'
   '_Auto_relaxation_list.Sample_condition_list_ID'                                       '_Sample_condition_list.ID'
+  '_Theoretical_auto_relaxation_list.Sample_condition_list_ID'                           '_Sample_condition_list.ID'
   '_Dipole_dipole_relax_list.Sample_condition_list_ID'                                   '_Sample_condition_list.ID'
   '_Cross_correlation_DD_list.Sample_condition_list_ID'                                  '_Sample_condition_list.ID'
+  '_Theoretical_cross_correlation_DD_list.Sample_condition_list_ID'                      '_Sample_condition_list.ID'
   '_Cross_correlation_D_CSA_list.Sample_condition_list_ID'                               '_Sample_condition_list.ID'
   '_Order_parameter_list.Sample_condition_list_ID'                                       '_Sample_condition_list.ID'
   '_PH_titration_list.Sample_condition_list_ID'          '_Sample_condition_list.ID'
@@ -35079,9 +35278,12 @@ in the entry.
   '_Theoretical_heteronucl_T1_software.Software_ID'                                      'Theoretical_heteronucl_T1_software'                yes
   '_Heteronucl_T1rho_software.Software_ID'               'Heteronucl_T1rho_software'                         yes
   '_Heteronucl_T2_software.Software_ID'                  'Heteronucl_T2_software'        yes
+  '_Theoretical_heteronucl_T2_software.Software_ID'                                      'Theoretical_heteronucl_T2_software'                yes
   '_Auto_relaxation_software.Software_ID'                'Auto_relaxation_software'      yes
+  '_Theoretical_auto_relaxation_software.Software_ID'                                    'Theoretical_auto_relaxation_software'              yes
   '_Dipole_dipole_relax_software.Software_ID'            'Dipole_dipole_relax_software'                      yes
   '_Cross_correlation_DD_software.Software_ID'           'Cross_correlation_DD_software'                     yes
+  '_Theoretical_cross_correlation_DD_software.Software_ID'                               'Theoretical_cross_correlation_DD_software'         yes
   '_Cross_correlation_D_CSA_software.Software_ID'                                        'Cross_correlation_D_CSA_software'                  yes
   '_Order_parameter_software.Software_ID'                'Order_parameter_software'      yes
   '_PH_titration_software.Software_ID'                   'PH_titration_software'         yes
@@ -35150,9 +35352,12 @@ in the entry.
   '_Theoretical_heteronucl_T1_software.Software_ID'                                      '_Software.ID'
   '_Heteronucl_T1rho_software.Software_ID'               '_Software.ID'
   '_Heteronucl_T2_software.Software_ID'                  '_Software.ID'
+  '_Theoretical_heteronucl_T2_software.Software_ID'                                      '_Software.ID'
   '_Auto_relaxation_software.Software_ID'                '_Software.ID'
+  '_Theoretical_auto_relaxation_software.Software_ID'                                    '_Software.ID'
   '_Dipole_dipole_relax_software.Software_ID'            '_Software.ID'
   '_Cross_correlation_DD_software.Software_ID'           '_Software.ID'
+  '_Theoretical_cross_correlation_DD_software.Software_ID'                               '_Software.ID'
   '_Cross_correlation_D_CSA_software.Software_ID'                                        '_Software.ID'
   '_Order_parameter_software.Software_ID'                '_Software.ID'
   '_PH_titration_software.Software_ID'                   '_Software.ID'
@@ -35921,9 +36126,12 @@ given in the entry.
   '_Theoretical_heteronucl_T1_software.Method_ID'                                        'Theoretical_heteronucl_T1_software'                yes
   '_Heteronucl_T1rho_software.Method_ID'                 'Heteronucl_T1rho_software'                         yes
   '_Heteronucl_T2_software.Method_ID'                    'Heteronucl_T2_software'        yes
+  '_Theoretical_heteronucl_T2_software.Method_ID'                                        'Theoretical_heteronucl_T2_software'                yes
   '_Auto_relaxation_software.Method_ID'                  'Auto_relaxation_software'      yes
+  '_Theoretical_auto_relaxation_software.Method_ID'                                      'Theoretical_auto_relaxation_software'              yes
   '_Dipole_dipole_relax_software.Method_ID'              'Dipole_dipole_relax_software'                      yes
   '_Cross_correlation_DD_software.Method_ID'             'Cross_correlation_DD_software'                     yes
+  '_Theoretical_cross_correlation_DD_software.Method_ID'                                 'Theoretical_cross_correlation_DD_software'         yes
   '_Cross_correlation_D_CSA_software.Method_ID'          'Cross_correlation_D_CSA_software'                  yes
   '_Order_parameter_software.Method_ID'                  'Order_parameter_software'      yes
   '_PH_titration_software.Method_ID'                     'PH_titration_software'         yes
@@ -36000,9 +36208,12 @@ given in the entry.
   '_Theoretical_heteronucl_T1_software.Method_ID'                                        '_Method.ID'
   '_Heteronucl_T1rho_software.Method_ID'                 '_Method.ID'
   '_Heteronucl_T2_software.Method_ID'                    '_Method.ID'
+  '_Theoretical_heteronucl_T2_software.Method_ID'                                        '_Method.ID'
   '_Auto_relaxation_software.Method_ID'                  '_Method.ID'
+  '_Theoretical_auto_relaxation_software.Method_ID'                                      '_Method.ID'
   '_Dipole_dipole_relax_software.Method_ID'              '_Method.ID'
   '_Cross_correlation_DD_software.Method_ID'             '_Method.ID'
+  '_Theoretical_cross_correlation_DD_software.Method_ID'                                 '_Method.ID'
   '_Cross_correlation_D_CSA_software.Method_ID'          '_Method.ID'
   '_Order_parameter_software.Method_ID'                  '_Method.ID'
   '_PH_titration_software.Method_ID'                     '_Method.ID'
@@ -40867,9 +41078,12 @@ Unique identifier for each experiment listed.
   '_Theoretical_heteronucl_T1_experiment.Experiment_ID'                                  'Theoretical_heteronucl_T1_experiment'              yes
   '_Heteronucl_T1rho_experiment.Experiment_ID'           'Heteronucl_T1rho_experiment'                       yes
   '_Heteronucl_T2_experiment.Experiment_ID'              'Heteronucl_T2_experiment'      yes
+  '_Theoretical_heteronucl_T2_experiment.Experiment_ID'                                  'Theoretical_heteronucl_T2_experiment'              yes
   '_Auto_relaxation_experiment.Experiment_ID'            'Auto_relaxation_experiment'                        yes
+  '_Theoretical_auto_relaxation_experiment.Experiment_ID'                                'Theoretical_auto_relaxation_experiment'            yes
   '_Dipole_dipole_relax_experiment.Experiment_ID'                                        'Dipole_dipole_relax_experiment'                    yes
   '_Cross_correlation_DD_experiment.Experiment_ID'                                       'Cross_correlation_DD_experiment'                   yes
+  '_Theoretical_cross_correlation_DD_experiment.Experiment_ID'                           'Theoretical_cross_correlation_DD_experiment'       yes
   '_Cross_correlation_D_CSA_experiment.Experiment_ID'                                    'Cross_correlation_D_CSA_experiment'                yes
   '_Order_parameter_experiment.Experiment_ID'            'Order_parameter_experiment'                        yes
   '_PH_titration_experiment.Experiment_ID'               'PH_titration_experiment'       yes
@@ -40925,9 +41139,12 @@ Unique identifier for each experiment listed.
   '_Theoretical_heteronucl_T1_experiment.Experiment_ID'                                  '_Experiment.ID'
   '_Heteronucl_T1rho_experiment.Experiment_ID'           '_Experiment.ID'
   '_Heteronucl_T2_experiment.Experiment_ID'              '_Experiment.ID'
+  '_Theoretical_heteronucl_T2_experiment.Experiment_ID'                                  '_Experiment.ID'
   '_Auto_relaxation_experiment.Experiment_ID'            '_Experiment.ID'
+  '_Theoretical_auto_relaxation_experiment.Experiment_ID'                                '_Experiment.ID'
   '_Dipole_dipole_relax_experiment.Experiment_ID'                                        '_Experiment.ID'
   '_Cross_correlation_DD_experiment.Experiment_ID'                                       '_Experiment.ID'
+  '_Theoretical_cross_correlation_DD_experiment.Experiment_ID'                           '_Experiment.ID'
   '_Cross_correlation_D_CSA_experiment.Experiment_ID'                                    '_Experiment.ID'
   '_Order_parameter_experiment.Experiment_ID'            '_Experiment.ID'
   '_PH_titration_experiment.Experiment_ID'               '_Experiment.ID'
@@ -40996,9 +41213,12 @@ Names for NMR experiments commonly found in the literature.
   '_Theoretical_heteronucl_T1_experiment.Experiment_name'                                'Theoretical_heteronucl_T1_experiment'              yes
   '_Heteronucl_T1rho_experiment.Experiment_name'         'Heteronucl_T1rho_experiment'                       yes
   '_Heteronucl_T2_experiment.Experiment_name'            'Heteronucl_T2_experiment'      yes
+  '_Theoretical_heteronucl_T2_experiment.Experiment_name'                                'Theoretical_heteronucl_T2_experiment'              yes
   '_Auto_relaxation_experiment.Experiment_name'          'Auto_relaxation_experiment'                        yes
+  '_Theoretical_auto_relaxation_experiment.Experiment_name'                              'Theoretical_auto_relaxation_experiment'            yes
   '_Dipole_dipole_relax_experiment.Experiment_name'                                      'Dipole_dipole_relax_experiment'                    yes
   '_Cross_correlation_DD_experiment.Experiment_name'                                     'Cross_correlation_DD_experiment'                   yes
+  '_Theoretical_cross_correlation_DD_experiment.Experiment_name'                         'Theoretical_cross_correlation_DD_experiment'       yes
   '_Cross_correlation_D_CSA_experiment.Experiment_name'                                  'Cross_correlation_D_CSA_experiment'                yes
   '_Order_parameter_experiment.Experiment_name'          'Order_parameter_experiment'                        yes
   '_PH_titration_experiment.Experiment_name'             'PH_titration_experiment'       yes
@@ -41046,9 +41266,12 @@ Names for NMR experiments commonly found in the literature.
   '_Theoretical_heteronucl_T1_experiment.Experiment_name'                                '_Experiment.Name'
   '_Heteronucl_T1rho_experiment.Experiment_name'         '_Experiment.Name'
   '_Heteronucl_T2_experiment.Experiment_name'            '_Experiment.Name'
+  '_Theoretical_heteronucl_T2_experiment.Experiment_name'                                '_Experiment.Name'
   '_Auto_relaxation_experiment.Experiment_name'          '_Experiment.Name'
+  '_Theoretical_auto_relaxation_experiment.Experiment_name'                              '_Experiment.Name'
   '_Dipole_dipole_relax_experiment.Experiment_name'                                      '_Experiment.Name'
   '_Cross_correlation_DD_experiment.Experiment_name'                                     '_Experiment.Name'
+  '_Theoretical_cross_correlation_DD_experiment.Experiment_name'                         '_Experiment.Name'
   '_Cross_correlation_D_CSA_experiment.Experiment_name'                                  '_Experiment.Name'
   '_Order_parameter_experiment.Experiment_name'          '_Experiment.Name'
   '_PH_titration_experiment.Experiment_name'             '_Experiment.Name'
@@ -54580,13 +54803,19 @@ Unique identifier for the specified resonance.
   '_Theoretical_T1.Resonance_ID'                         'Theoretical_T1'                yes
   '_T1rho.Resonance_ID'                                  'T1rho'                         yes
   '_T2.Resonance_ID'                                     'T2'                            yes
+  '_Theoretical_T2.Resonance_ID'                         'Theoretical_T2'                yes
   '_Auto_relaxation.Resonance_ID'                        'Auto_relaxation'               yes
+  '_Theoretical_auto_relaxation.Resonance_ID'            'Theoretical_auto_relaxation'                       yes
   '_Dipole_dipole_relax.Resonance_ID_1'                  'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Resonance_ID_2'                  'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_1'                                        'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_2'                                        'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_Resonance_ID_1'                                        'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_Resonance_ID_2'                                        'Cross_correlation_DD'          yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_1'                            'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_2'                            'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_1'                            'Theoretical_cross_correlation_DD'                  yes
+  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_2'                            'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_resonance_ID_1'                                       'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.Dipole_resonance_ID_2'                                       'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_resonance_ID_1'          'Cross_correlation_D_CSA'       yes
@@ -54654,13 +54883,19 @@ Unique identifier for the specified resonance.
   '_Theoretical_T1.Resonance_ID'                         '_Resonance.ID'
   '_T1rho.Resonance_ID'                                  '_Resonance.ID'
   '_T2.Resonance_ID'                                     '_Resonance.ID'
+  '_Theoretical_T2.Resonance_ID'                         '_Resonance.ID'
   '_Auto_relaxation.Resonance_ID'                        '_Resonance.ID'
+  '_Theoretical_auto_relaxation.Resonance_ID'            '_Resonance.ID'
   '_Dipole_dipole_relax.Resonance_ID_1'                  '_Resonance.ID'
   '_Dipole_dipole_relax.Resonance_ID_2'                  '_Resonance.ID'
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_1'                                        '_Resonance.ID'
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_2'                                        '_Resonance.ID'
   '_Cross_correlation_DD.Dipole_2_Resonance_ID_1'                                        '_Resonance.ID'
   '_Cross_correlation_DD.Dipole_2_Resonance_ID_2'                                        '_Resonance.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_1'                            '_Resonance.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_2'                            '_Resonance.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_1'                            '_Resonance.ID'
+  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_2'                            '_Resonance.ID'
   '_Cross_correlation_D_CSA.Dipole_resonance_ID_1'                                       '_Resonance.ID'
   '_Cross_correlation_D_CSA.Dipole_resonance_ID_2'                                       '_Resonance.ID'
   '_Cross_correlation_D_CSA.CSA_resonance_ID_1'          '_Resonance.ID'
@@ -73864,6 +74099,8 @@ A code describing the nuclei involved in the measured T1 coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
+   Iz    'zero quantum, longitudinal'
+   Sz    'zero quantum, longitudinal'
 
    stop_
 
@@ -73897,6 +74134,10 @@ the form of the reported data as either time or rate.
      _item_enumeration.value
      _item_enumeration.detail
 
+   s    ?
+   s-1    ?
+   ms    ?
+   ms-1    ?
 
    stop_
 
@@ -74069,6 +74310,9 @@ Physical state of the sample either anisotropic or isotropic.
      _item_enumeration.value
      _item_enumeration.detail
 
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
 
    stop_
 
@@ -76893,6 +77137,1182 @@ Pointer to '_Heteronucl_T2_list.ID'
 
 save_
 
+save_Theoretical_heteronucl_T2_list
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_heteronucl_T2_list'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_heteronucl_T2_list.Entry_ID'
+     '_Theoretical_heteronucl_T2_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_heteronucl_T2_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the saveframe
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Sf_category'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Sf_framecode
+
+   _item_description.description
+;
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Sf_framecode'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+   _item_default.value            'heteronuclear_T2_list_1'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Entry_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Sf_ID
+
+   _item_description.description
+;
+An interger value that is the unique identifier for the saveframe that 
+applies across the archive.  This value is not stable and may be reassigned each 
+time the data are loaded into a database system.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Theoretical_heteronucl_T2_list.Sf_ID'                'Theoretical_heteronucl_T2_list'          yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+   ?      ?
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.ID
+
+   _item_description.description
+;
+An integer value that uniquely identifies this saveframe of theoretical 
+heteronuclear T2 data from other saveframes of this category in an entry.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Theoretical_heteronucl_T2_list.ID'                   'Theoretical_heteronucl_T2_list'          yes
+  '_Theoretical_heteronucl_T2_experiment.Heteronucl_T2_list_ID'                          'Theoretical_heteronucl_T2_experiment'              yes
+  '_Theoretical_heteronucl_T2_software.Heteronucl_T2_list_ID'                            'Theoretical_heteronucl_T2_software'                yes
+  '_Theoretical_T2.Heteronucl_T2_list_ID'                'Theoretical_T2'                yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_Theoretical_heteronucl_T2_experiment.Heteronucl_T2_list_ID'                          '_Theoretical_heteronucl_T2_list.ID'
+  '_Theoretical_heteronucl_T2_software.Heteronucl_T2_list_ID'                            '_Theoretical_heteronucl_T2_list.ID'
+  '_Theoretical_T2.Heteronucl_T2_list_ID'                '_Theoretical_heteronucl_T2_list.ID'
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Data_file_name
+
+   _item_description.description
+;
+The name of the file submitted with this depostion that contains the quantitative 
+data for this saveframe.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Data_file_name'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Sample_condition_list_ID
+
+   _item_description.description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Sample_condition_list_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Sample_condition_list_label
+
+   _item_description.description
+;
+The label for the set of experimental sample conditions used to collect 
+the data for determination of the theoretical heteronuclear T2 relaxation values.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Sample_condition_list_label'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Temp_calibration_method
+
+   _item_description.description
+;
+Method used to calibrate the temperature unit on the NMR spectrometer used 
+to collect the experimental data.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Temp_calibration_method'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'text'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   methanol    ?
+   'monoethylene glycol'    ?
+   'no calibration applied'    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Temp_control_method
+
+   _item_description.description
+;
+Method used to control the temperature of the sample to eliminate heating 
+caused by the long spin-lock pulse.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Temp_control_method'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'text'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'single scan interleaving'    ?
+   'temperature compensation block'    ?
+   'no temperature control applied'    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Spectrometer_frequency_1H
+
+   _item_description.description
+;
+The operating proton frequency in MHz of the NMR spectrometer used to collect 
+the data.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Spectrometer_frequency_1H'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+   loop_
+     _item_examples.case
+
+;
+600.1283731
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.T2_coherence_type
+
+   _item_description.description
+;
+A code describing the nuclei involved in the measured T2 coherence.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.T2_coherence_type'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   I(+,-)    'single quantum'
+   S(+,-)    'single quantum'
+
+   stop_
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.T2_val_units
+
+   _item_description.description
+;
+The units used for the reported T2 relaxation values.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.T2_val_units'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s-1    ?
+   ms-1    ?
+   s    ?
+   ms    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+s; s-1; ms
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Rex_units
+
+   _item_description.description
+;
+The units used for the reported R exchange values.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Rex_units'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s-1    ?
+   ms-1    ?
+   us-1    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Details
+
+   _item_description.description
+;
+Text describing the reported theoretical heteronuclear T2 relaxation data.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Details'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Text_data_format
+
+   _item_description.description
+;
+The data format used to represent the theoretical heteronuclear T2 relaxation 
+data as ASCII text in the text block that is the value to the '_Theoretical_heteronucl_T2_list.Text_data' 
+tag.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Text_data_format'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Text_data
+
+   _item_description.description
+;
+A set of theoretical heteronuclear T2 relaxation data formatted as ASCII text.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_list.Text_data'
+   _item.category_id                           'Theoretical_heteronucl_T2_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save_Theoretical_heteronucl_T2_experiment
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_heteronucl_T2_experiment'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_heteronucl_T2_experiment.Experiment_ID'
+     '_Theoretical_heteronucl_T2_experiment.Entry_ID'
+     '_Theoretical_heteronucl_T2_experiment.Heteronucl_T2_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_heteronucl_T2_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Experiment_ID
+
+   _item_description.description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Experiment_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Experiment_name
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Experiment_name'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Sample_ID
+
+   _item_description.description
+;
+Pointer to '_Sample.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Sample_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Sample_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Sample_label'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Sample_state
+
+   _item_description.description
+;
+Physical state of the sample either anisotropic or isotropic.
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Sample_state'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_heteronucl_T2_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Sf_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Entry_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Heteronucl_T2_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_heteronucl_T2_list.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_experiment.Heteronucl_T2_list_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_heteronucl_T2_software
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_heteronucl_T2_software'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_heteronucl_T2_software.Software_ID'
+     '_Theoretical_heteronucl_T2_software.Entry_ID'
+     '_Theoretical_heteronucl_T2_software.Heteronucl_T2_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_heteronucl_T2_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_software.Software_ID
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_software.Software_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_software.Software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_software.Software_label'
+   _item.category_id                           'Theoretical_heteronucl_T2_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_software.Method_ID
+
+   _item_description.description
+;
+Pointer to '_Method.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_software.Method_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_software.Method_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_software.Method_label'
+   _item.category_id                           'Theoretical_heteronucl_T2_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_software.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_heteronucl_T2_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_software.Sf_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_software.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_software.Entry_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_heteronucl_T2_software.Heteronucl_T2_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_heteronucl_T2_list.ID'
+;
+
+   _item.name                                  '_Theoretical_heteronucl_T2_software.Heteronucl_T2_list_ID'
+   _item.category_id                           'Theoretical_heteronucl_T2_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_T2
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_T2'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_T2.ID'
+     '_Theoretical_T2.Entry_ID'
+     '_Theoretical_T2.Heteronucl_T2_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_heteronucl_T2_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_T2.ID
+
+   _item_description.description
+;
+Unique identifier for the observed T2 relaxation value.
+;
+
+   _item.name                                  '_Theoretical_T2.ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_Theoretical_T2
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_Theoretical_T2'
+
+   loop_
+     _category_key.name
+
+      ?
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_heteronucl_T2_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_Theoretical_T2.Assembly_atom_ID
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                                  '_Theoretical_Theoretical_T2.Assembly_atom_ID'
+   _item.category_id                           'Theoretical_Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_T2
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_T2'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_T2.ID'
+     '_Theoretical_T2.Entry_ID'
+     '_Theoretical_T2.Heteronucl_T2_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_heteronucl_T2_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_T2.Entity_assembly_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Entity_assembly_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_T2.Entity_ID
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Entity_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_T2.Comp_index_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Comp_index_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_T2.Seq_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_Theoretical_T2.Seq_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_T2.Comp_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Comp_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_T2.Atom_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Atom_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__Theoretical_T2.Atom_type
+
+   _item_description.description
+;
+The value for this tag is a standard IUPAC abbreviation for an element 
+(i.e., H, C, P, etc).
+;
+
+   _item.name                                  '_Theoretical_T2.Atom_type'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_T2.Atom_isotope_number
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                                  '_Theoretical_T2.Atom_isotope_number'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_T2.T2_val
+
+   _item_description.description
+;
+The T2 relaxation value.
+;
+
+   _item.name                                  '_Theoretical_T2.T2_val'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_T2.T2_val_err
+
+   _item_description.description
+;
+The estimated error in the reported T2 relaxation value.
+;
+
+   _item.name                                  '_Theoretical_T2.T2_val_err'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_T2.Rex_val
+
+   _item_description.description
+;
+The exchange broadening contribution value.
+;
+
+   _item.name                                  '_Theoretical_T2.Rex_val'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_T2.Rex_err
+
+   _item_description.description
+;
+The estimated error in the fitted exchange broadening contribution value.
+;
+
+   _item.name                                  '_Theoretical_T2.Rex_err'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_T2.Resonance_ID
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Resonance_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_T2.Auth_entity_assembly_ID
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                                  '_Theoretical_T2.Auth_entity_assembly_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_T2.Auth_seq_ID
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                                  '_Theoretical_T2.Auth_seq_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T2.Auth_comp_ID
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_T2.Auth_comp_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T2.Auth_atom_ID
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_T2.Auth_atom_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_T2.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_heteronucl_T2_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Sf_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_T2.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Entry_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_T2.Heteronucl_T2_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_heteronucl_T2_list.ID'
+;
+
+   _item.name                                  '_Theoretical_T2.Heteronucl_T2_list_ID'
+   _item.category_id                           'Theoretical_T2'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
 save_Auto_relaxation_list
    _category.description
 ;
@@ -78144,6 +79564,1265 @@ Pointer to '_Auto_relaxation_list.ID'
 
    _item.name                                  '_Auto_relaxation.Auto_relaxation_list_ID'
    _item.category_id                           'Auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_auto_relaxation_list
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_auto_relaxation_list'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_auto_relaxation_list.Entry_ID'
+     '_Theoretical_auto_relaxation_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_auto_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the saveframe
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Sf_category'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Sf_framecode
+
+   _item_description.description
+;
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Sf_framecode'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+   _item_default.value            'auto_relaxation_list_1'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Entry_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Sf_ID
+
+   _item_description.description
+;
+An interger value that is the unique identifier for the saveframe that 
+applies across the archive.  This value is not stable and may be reassigned each 
+time the data are loaded into a database system.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Theoretical_auto_relaxation_list.Sf_ID'              'Theoretical_auto_relaxation_list'        yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+   ?      ?
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.ID
+
+   _item_description.description
+;
+An integer value that uniquely identifies this saveframe of general relaxation 
+data from other saveframes of this category in an entry.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Theoretical_auto_relaxation_list.ID'                 'Theoretical_auto_relaxation_list'        yes
+  '_Theoretical_auto_relaxation_experiment.Auto_relaxation_list_ID'                      'Theoretical_auto_relaxation_experiment'            yes
+  '_Theoretical_auto_relaxation_software.Auto_relaxation_list_ID'                        'Theoretical_auto_relaxation_software'              yes
+  '_Theoretical_auto_relaxation.Auto_relaxation_list_ID'                                 'Theoretical_auto_relaxation'                       yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_Theoretical_auto_relaxation_experiment.Auto_relaxation_list_ID'                      '_Theoretical_auto_relaxation_list.ID'
+  '_Theoretical_auto_relaxation_software.Auto_relaxation_list_ID'                        '_Theoretical_auto_relaxation_list.ID'
+  '_Theoretical_auto_relaxation.Auto_relaxation_list_ID'                                 '_Theoretical_auto_relaxation_list.ID'
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Data_file_name
+
+   _item_description.description
+;
+The name of the file submitted with this depostion that contains the quantitative 
+data for this saveframe.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Data_file_name'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Sample_condition_list_ID
+
+   _item_description.description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Sample_condition_list_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Sample_condition_list_label
+
+   _item_description.description
+;
+The label for the set of experimental sample conditions used to collect 
+the data for determination of the general relaxation values.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Sample_condition_list_label'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Temp_calibration_method
+
+   _item_description.description
+;
+Method used to calibrate the temperature unit on the NMR spectrometer used 
+to collect the experimental data.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Temp_calibration_method'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'text'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   methanol    MeOH
+   'monoethylene glycol'    MEG
+   'no calibration applied'    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Temp_control_method
+
+   _item_description.description
+;
+Method used to control the temperature of the sample to eliminate heating 
+caused by the long spin-lock pulse.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Temp_control_method'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'text'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'single scan interleaving'    ?
+   'temperature compensation block'    ?
+   'single scan interleaving and temperature compensation block'    ?
+   'no temperature control applied'    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Spectrometer_frequency_1H
+
+   _item_description.description
+;
+The operating proton frequency in MHz of the NMR spectrometer used to collect 
+the data.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Spectrometer_frequency_1H'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+   loop_
+     _item_examples.case
+
+;
+600.1283731
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Exact_field_strength
+
+   _item_description.description
+;
+The actual spectrometer frequency of the nucleus observed expressed at 
+a high level of precision.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Exact_field_strength'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+   loop_
+     _item_examples.case
+
+;
+60.777824
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Common_relaxation_type_name
+
+   _item_description.description
+;
+Common term used for the type of relaxation phenomena reported.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Common_relaxation_type_name'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   R1    ?
+   R2    ?
+   R1rho    ?
+   'ZQ relaxation'    ?
+   'longitudinal spin order'    ?
+   'single quantum antiphase'    ?
+   'DQ relaxation'    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+R1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Relaxation_coherence_type
+
+   _item_description.description
+;
+A code describing the spin(s) involved in the measured relaxation coherence.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Relaxation_coherence_type'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   Iz    'R1    longitudinal'
+   Sz    'R1    longitudinal'
+   (I+)+(I-)    'R1rho or R2      transverse'
+   (S+)+(S-)    'R1rho or R2      transverse'
+   I+    'R1rho or R2      transverse'
+   I-    'R1rho or R2      transverse'
+   S+    'R1rho or R2      transverse'
+   S-    'R1rho or R2      transverse'
+   (I+S-)+(I-S+)    'ZQ relaxation'
+   I-S+    'ZQ relaxation'
+   I+S-    'ZQ relaxation'
+   IzSz    'longitudinal spin order'
+   ((I+)+(I-))Sz    'single quantum antiphase'
+   Iz((S+)+(S-))    'single quantum antiphase'
+   I+Sz    'single quantum antiphase'
+   I-Sz    'single quantum antiphase'
+   IzS+    'single quantum antiphase'
+   IzS-    'single quantum antiphase'
+   (I+S+)+(I-S-)    'DQ relaxation'
+   I+S+    'DQ relaxation'
+   I-S-    'DQ relaxation'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+Iz
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Relaxation_val_units
+
+   _item_description.description
+;
+The units used for the reported relaxation values.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Relaxation_val_units'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s-1    ?
+   ms-1    ?
+   us-1    ?
+   ns-1    ?
+   ps-1    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+s; s-1; ms
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Rex_units
+
+   _item_description.description
+;
+The units used for the reported R exchange values.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Rex_units'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s-1    ?
+   ms-1    ?
+   us-1    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Rex_field_strength
+
+   _item_description.description
+;
+1H spectrometer field strength at which Rex values have been measured.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Rex_field_strength'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+600
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Details
+
+   _item_description.description
+;
+Text describing the reported relaxation data.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Details'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Text_data_format
+
+   _item_description.description
+;
+The data format used to represent the relaxation data as ASCII text in 
+the text block that is the value to the '_Theoretical_auto_relaxation_list.Text_data' 
+tag.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Text_data_format'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_auto_relaxation_list.Text_data
+
+   _item_description.description
+;
+A set of relaxation data formatted as ASCII text.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_list.Text_data'
+   _item.category_id                           'Theoretical_auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save_Theoretical_auto_relaxation_experiment
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_auto_relaxation_experiment'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_auto_relaxation_experiment.Experiment_ID'
+     '_Theoretical_auto_relaxation_experiment.Entry_ID'
+     '_Theoretical_auto_relaxation_experiment.Auto_relaxation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_auto_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Experiment_ID
+
+   _item_description.description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Experiment_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Experiment_name
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Experiment_name'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Sample_ID
+
+   _item_description.description
+;
+Pointer to '_Sample.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Sample_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Sample_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Sample_label'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Sample_state
+
+   _item_description.description
+;
+Physical state of the sample.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Sample_state'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
+
+   stop_
+
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_auto_relaxation_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Sf_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Entry_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Auto_relaxation_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_auto_relaxation_list.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_experiment.Auto_relaxation_list_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_auto_relaxation_software
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_auto_relaxation_software'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_auto_relaxation_software.Software_ID'
+     '_Theoretical_auto_relaxation_software.Entry_ID'
+     '_Theoretical_auto_relaxation_software.Auto_relaxation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_auto_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_software.Software_ID
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_software.Software_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_software.Software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_software.Software_label'
+   _item.category_id                           'Theoretical_auto_relaxation_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_auto_relaxation_software.Method_ID
+
+   _item_description.description
+;
+Pointer to '_Method.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_software.Method_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_software.Method_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_software.Method_label'
+   _item.category_id                           'Theoretical_auto_relaxation_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_auto_relaxation_software.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_auto_relaxation_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_software.Sf_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation_software.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_software.Entry_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation_software.Auto_relaxation_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_auto_relaxation_list.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation_software.Auto_relaxation_list_ID'
+   _item.category_id                           'Theoretical_auto_relaxation_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_auto_relaxation
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_auto_relaxation'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_auto_relaxation.ID'
+     '_Theoretical_auto_relaxation.Entry_ID'
+     '_Theoretical_auto_relaxation.Auto_relaxation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_auto_relaxation'
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation.ID
+
+   _item_description.description
+;
+Unique identifier for the observed relaxation value.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Assembly_ID
+
+   _item_description.description
+;
+Pointer to '_Assembly.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Assembly_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Assembly_atom_ID
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Assembly_atom_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Entity_assembly_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Entity_assembly_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Entity_ID
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Entity_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Comp_index_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Comp_index_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Seq_ID
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Seq_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Comp_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Comp_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Atom_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Atom_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Atom_type
+
+   _item_description.description
+;
+The value for this tag is a standard IUPAC abbreviation for an element 
+(i.e., H, C, P, etc).
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Atom_type'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Atom_isotope_number
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Atom_isotope_number'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Auto_relaxation_val
+
+   _item_description.description
+;
+The relaxation value.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Auto_relaxation_val'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Auto_relaxation_val_err
+
+   _item_description.description
+;
+The estimated error in the reported relaxation value.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Auto_relaxation_val_err'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Rex_val
+
+   _item_description.description
+;
+The exchange broadening contribution value.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Rex_val'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Rex_val_err
+
+   _item_description.description
+;
+The estimated error in the fitted exchange broadening contribution value.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Rex_val_err'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Resonance_ID
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Resonance_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Auth_entity_assembly_ID
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Auth_entity_assembly_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Auth_seq_ID
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Auth_seq_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation.Auth_comp_ID
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Auth_comp_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation.Auth_atom_ID
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Auth_atom_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_auto_relaxation_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Sf_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Entry_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_auto_relaxation.Auto_relaxation_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_auto_relaxation_list.ID'
+;
+
+   _item.name                                  '_Theoretical_auto_relaxation.Auto_relaxation_list_ID'
+   _item.category_id                           'Theoretical_auto_relaxation'
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'int'
@@ -79618,6 +82297,9 @@ Units for the cross correlation values reported.
    s-1    ?
    ms-1    ?
    us-1    ?
+   s-1    ?
+   ms-1    ?
+   us-1    ?
 
    stop_
 
@@ -79791,6 +82473,9 @@ Physical state of the sample either anisotropic or isotropic.
      _item_enumeration.value
      _item_enumeration.detail
 
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
    isotropic    ?
    anisotropic    ?
    solid    ?
@@ -81137,6 +83822,1755 @@ Pointer to '_Cross_correlation_DD_list.ID'
 
 save_
 
+save_Theoretical_cross_correlation_DD_list
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_cross_correlation_DD_list'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_cross_correlation_DD_list.Entry_ID'
+     '_Theoretical_cross_correlation_DD_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_dipole_dipole_cross_correlations'
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the saveframe
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Sf_category'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Sf_framecode
+
+   _item_description.description
+;
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Sf_framecode'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+   _item_default.value            'DD_cross_correlation_relaxation_list_1'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Entry_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Sf_ID
+
+   _item_description.description
+;
+An interger value that is the unique identifier for the saveframe that 
+applies across the archive.  This value is not stable and may be reassigned each 
+time the data are loaded into a database system.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Theoretical_cross_correlation_DD_list.Sf_ID'         'Theoretical_cross_correlation_DD_list'   yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+   ?      ?
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.ID
+
+   _item_description.description
+;
+Unique identifier for the list of cross-correlation values.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Theoretical_cross_correlation_DD_list.ID'            'Theoretical_cross_correlation_DD_list'   yes
+  '_Theoretical_cross_correlation_DD_experiment.Cross_correlation_list_ID'               'Theoretical_cross_correlation_DD_experiment'       yes
+  '_Theoretical_cross_correlation_DD_software.Cross_correlation_list_ID'                 'Theoretical_cross_correlation_DD_software'         yes
+  '_Theoretical_cross_correlation_DD.Cross_correlation_list_ID'                          'Theoretical_cross_correlation_DD'                  yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_Theoretical_cross_correlation_DD_experiment.Cross_correlation_list_ID'               '_Theoretical_cross_correlation_DD_list.ID'
+  '_Theoretical_cross_correlation_DD_software.Cross_correlation_list_ID'                 '_Theoretical_cross_correlation_DD_list.ID'
+  '_Theoretical_cross_correlation_DD.Cross_correlation_list_ID'                          '_Theoretical_cross_correlation_DD_list.ID'
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Data_file_name
+
+   _item_description.description
+;
+The name of the file submitted with this depostion that contains the quantitative 
+data for this saveframe.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Data_file_name'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Sample_condition_list_ID
+
+   _item_description.description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Sample_condition_list_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Sample_condition_list_label
+
+   _item_description.description
+;
+The label for the set of experimental sample conditions used to collect 
+the data for determination of the cross-correlation values.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Sample_condition_list_label'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Spectrometer_frequency_1H
+
+   _item_description.description
+;
+The operating proton frequency in MHz of the NMR spectrometer used to collect 
+the data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Spectrometer_frequency_1H'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+   loop_
+     _item_examples.case
+
+;
+600.1283731
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Val_units
+
+   _item_description.description
+;
+Units for the cross correlation values reported.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Val_units'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+s-1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Details
+
+   _item_description.description
+;
+Text describing the reported cross correlation data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Details'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Text_data_format
+
+   _item_description.description
+;
+The data format used to represent the cross-correlation dipole-dipole relaxation 
+data as ASCII text in the text block that is the value to the '_Theoretical_cross_correlation_DD_list.Text_data' 
+tag.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Text_data_format'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Text_data
+
+   _item_description.description
+;
+A set of cross-correlation dipole-dipole relaxation data formatted as ASCII 
+text.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_list.Text_data'
+   _item.category_id                           'Theoretical_cross_correlation_DD_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save_Theoretical_cross_correlation_DD_experiment
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_cross_correlation_DD_experiment'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_cross_correlation_DD_experiment.Experiment_ID'
+     '_Theoretical_cross_correlation_DD_experiment.Entry_ID'
+     '_Theoretical_cross_correlation_DD_experiment.Cross_correlation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_dipole_dipole_cross_correlations'
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Experiment_ID
+
+   _item_description.description
+;
+Pointer to '_Experiment.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Experiment_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Experiment_name
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Experiment_name'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Sample_ID
+
+   _item_description.description
+;
+Pointer to '_Sample.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Sample_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Sample_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'sample'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Sample_label'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Sample_state
+
+   _item_description.description
+;
+Physical state of the sample either anisotropic or isotropic.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Sample_state'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+
+   stop_
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_cross_correlation_DD_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Sf_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Entry_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_experiment.Cross_correlation_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_cross_correlation_DD_list.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_experiment.Cross_correlation_list_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_experiment'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_cross_correlation_DD_software
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_cross_correlation_DD_software'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_cross_correlation_DD_software.Software_ID'
+     '_Theoretical_cross_correlation_DD_software.Entry_ID'
+     '_Theoretical_cross_correlation_DD_software.Cross_correlation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_dipole_dipole_cross_correlations'
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD_software.Software_ID
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_software.Software_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_software.Software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_software.Software_label'
+   _item.category_id                           'Theoretical_cross_correlation_DD_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_software.Method_ID
+
+   _item_description.description
+;
+Pointer to '_Method.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_software.Method_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_software.Method_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_software.Method_label'
+   _item.category_id                           'Theoretical_cross_correlation_DD_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_software.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_cross_correlation_DD_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_software.Sf_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_software.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_software.Entry_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD_software.Cross_correlation_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_cross_correlation_DD_list.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD_software.Cross_correlation_list_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Theoretical_cross_correlation_DD
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'Theoretical_cross_correlation_DD'
+
+   loop_
+     _category_key.name
+
+     '_Theoretical_cross_correlation_DD.ID'
+     '_Theoretical_cross_correlation_DD.Entry_ID'
+     '_Theoretical_cross_correlation_DD.Cross_correlation_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_dipole_dipole_cross_correlations'
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.ID
+
+   _item_description.description
+;
+Unique identifier for the observed cross-correlation value.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_1
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_entity_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_seq_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_comp_ID_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_atom_ID_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_atom_type_1
+
+   _item_description.description
+;
+Standard symbol used to define the atom element type.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_atom_type_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_atom_isotope_number_1
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_atom_isotope_number_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_2
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_entity_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_seq_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_comp_ID_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_atom_ID_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_atom_type_2
+
+   _item_description.description
+;
+Standard symbol used to define the atom element type.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_atom_type_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_atom_isotope_number_2
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_atom_isotope_number_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_1
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_entity_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_comp_index_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_comp_index_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_seq_ID_1
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_comp_ID_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_atom_ID_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_atom_type_1
+
+   _item_description.description
+;
+Standard symbol used to define the atom element type.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_atom_type_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_atom_isotope_number_1
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_atom_isotope_number_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_2
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_entity_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_chem_comp_index_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_seq_ID_2
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_comp_ID_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_atom_ID_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_atom_type_2
+
+   _item_description.description
+;
+Standard symbol used to define the atom element type.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_atom_type_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_atom_isotope_number_2
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_atom_isotope_number_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Val
+
+   _item_description.description
+;
+The cross-correlation dipole-dipole relaxation value.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Val'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Val_err
+
+   _item_description.description
+;
+The estimated error in the reported cross-correlation dipole-dipole relaxation 
+value.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Val_err'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_1
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_2
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_1
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_2
+
+   _item_description.description
+;
+Pointer to '_Resonance.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_comp_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_comp_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_atom_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_atom_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_comp_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_comp_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_1_auth_atom_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_atom_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_comp_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_comp_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_atom_ID_1
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_atom_ID_1'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_comp_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_comp_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Dipole_2_auth_atom_ID_2
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_atom_ID_2'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_cross_correlation_DD_list.Sf_ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Sf_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Entry_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Theoretical_cross_correlation_DD.Cross_correlation_list_ID
+
+   _item_description.description
+;
+Pointer to '_Theoretical_cross_correlation_DD_list.ID'
+;
+
+   _item.name                                  '_Theoretical_cross_correlation_DD.Cross_correlation_list_ID'
+   _item.category_id                           'Theoretical_cross_correlation_DD'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
 save_Cross_correlation_D_CSA_list
    _category.description
 ;
@@ -81370,9 +85804,6 @@ Units for the cross correlation values reported.
      _item_enumeration.value
      _item_enumeration.detail
 
-   s-1    ?
-   ms-1    ?
-   us-1    ?
 
    stop_
 
@@ -81545,9 +85976,6 @@ Physical state of the sample either anisotropic or isotropic.
      _item_enumeration.value
      _item_enumeration.detail
 
-   isotropic    ?
-   anisotropic    ?
-   solid    ?
 
    stop_
 

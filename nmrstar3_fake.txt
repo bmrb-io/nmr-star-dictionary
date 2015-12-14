@@ -49,6 +49,8 @@ save_<entry_interview>
   _Entry_interview.Theoretical_heteronucl_NOEs               yes/no
   _Entry_interview.Theoretical_T1_relaxation                 yes/no
   _Entry_interview.Theoretical_T2_relaxation                 yes/no
+  _Entry_interview.Theoretical_auto_relaxation               yes/no
+  _Entry_interview.Theoretical_DD_cross_correlation          yes/no
   _Entry_interview.Spectral_density_values                   yes/no
   _Entry_interview.Timedomain_data                           yes/no
   _Entry_interview.Molecular_interactions                    yes/no
@@ -4685,6 +4687,94 @@ save_<heteronucl_T2_relaxation>
 
 save_
 
+save_<theoretical_heteronucl_T2_relaxation>
+  _Theoretical_heteronucl_T2_list.Sf_category     theoretical_heteronucl_T2_relaxation
+  _Theoretical_heteronucl_T2_list.Sf_framecode     <theoretical_heteronucl_T2_relaxation>
+  _Theoretical_heteronucl_T2_list.Entry_ID                             1
+  _Theoretical_heteronucl_T2_list.Sf_ID                                2
+  _Theoretical_heteronucl_T2_list.ID                                   2
+  _Theoretical_heteronucl_T2_list.Data_file_name                       "Long string value"
+  _Theoretical_heteronucl_T2_list.Sample_condition_list_ID             2
+  _Theoretical_heteronucl_T2_list.Sample_condition_list_label          "Long string value"
+  _Theoretical_heteronucl_T2_list.Temp_calibration_method              "Very long phrase"
+  _Theoretical_heteronucl_T2_list.Temp_control_method                  "Very long phrase"
+  _Theoretical_heteronucl_T2_list.Spectrometer_frequency_1H            110.234
+  _Theoretical_heteronucl_T2_list.T2_coherence_type                    "String value"
+  _Theoretical_heteronucl_T2_list.T2_val_units                         "Short string value"
+  _Theoretical_heteronucl_T2_list.Rex_units                            "Short string value"
+  _Theoretical_heteronucl_T2_list.Details                              "Possible multiline text"
+  _Theoretical_heteronucl_T2_list.Text_data_format                     "String value"
+  _Theoretical_heteronucl_T2_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Theoretical_heteronucl_T2_experiment.Experiment_ID                  
+     _Theoretical_heteronucl_T2_experiment.Experiment_name                
+     _Theoretical_heteronucl_T2_experiment.Sample_ID                      
+     _Theoretical_heteronucl_T2_experiment.Sample_label                   
+     _Theoretical_heteronucl_T2_experiment.Sample_state                   
+     _Theoretical_heteronucl_T2_experiment.Sf_ID                          
+     _Theoretical_heteronucl_T2_experiment.Entry_ID                       
+     _Theoretical_heteronucl_T2_experiment.Heteronucl_T2_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_heteronucl_T2_software.Software_ID                    
+     _Theoretical_heteronucl_T2_software.Software_label                 
+     _Theoretical_heteronucl_T2_software.Method_ID                      
+     _Theoretical_heteronucl_T2_software.Method_label                   
+     _Theoretical_heteronucl_T2_software.Sf_ID                          
+     _Theoretical_heteronucl_T2_software.Entry_ID                       
+     _Theoretical_heteronucl_T2_software.Heteronucl_T2_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_T2.ID          
+
+    2  
+
+  stop_
+
+  loop_
+     _Theoretical_Theoretical_T2.Assembly_atom_ID          
+
+    2  
+
+  stop_
+
+  loop_
+     _Theoretical_T2.Entity_assembly_ID               
+     _Theoretical_T2.Entity_ID                        
+     _Theoretical_T2.Comp_index_ID                    
+     _Theoretical_T2.Seq_ID                           
+     _Theoretical_T2.Comp_ID                          
+     _Theoretical_T2.Atom_ID                          
+     _Theoretical_T2.Atom_type                        
+     _Theoretical_T2.Atom_isotope_number              
+     _Theoretical_T2.T2_val                           
+     _Theoretical_T2.T2_val_err                       
+     _Theoretical_T2.Rex_val                          
+     _Theoretical_T2.Rex_err                          
+     _Theoretical_T2.Resonance_ID                     
+     _Theoretical_T2.Auth_entity_assembly_ID          
+     _Theoretical_T2.Auth_seq_ID                      
+     _Theoretical_T2.Auth_comp_ID                     
+     _Theoretical_T2.Auth_atom_ID                     
+     _Theoretical_T2.Sf_ID                            
+     _Theoretical_T2.Entry_ID                         
+     _Theoretical_T2.Heteronucl_T2_list_ID            
+
+    2  2  2  2  1    1  "Short string value"  2  110.234  110.234    110.234  110.234  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
+
+  stop_
+
+save_
+
 save_<auto_relaxation>
   _Auto_relaxation_list.Sf_category     auto_relaxation
   _Auto_relaxation_list.Sf_framecode     <auto_relaxation>
@@ -4758,6 +4848,86 @@ save_<auto_relaxation>
      _Auto_relaxation.Sf_ID                            
      _Auto_relaxation.Entry_ID                         
      _Auto_relaxation.Auto_relaxation_list_ID          
+
+    2  2  2  2  2    2  2  1  1  "Short string value"    2  110.234  110.234  110.234  110.234    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  2  
+
+  stop_
+
+save_
+
+save_<theoretical_auto_relaxation>
+  _Theoretical_auto_relaxation_list.Sf_category     theoretical_auto_relaxation
+  _Theoretical_auto_relaxation_list.Sf_framecode     <theoretical_auto_relaxation>
+  _Theoretical_auto_relaxation_list.Entry_ID                             1
+  _Theoretical_auto_relaxation_list.Sf_ID                                2
+  _Theoretical_auto_relaxation_list.ID                                   2
+  _Theoretical_auto_relaxation_list.Data_file_name                       "Long string value"
+  _Theoretical_auto_relaxation_list.Sample_condition_list_ID             2
+  _Theoretical_auto_relaxation_list.Sample_condition_list_label          "Long string value"
+  _Theoretical_auto_relaxation_list.Temp_calibration_method              "Very long phrase"
+  _Theoretical_auto_relaxation_list.Temp_control_method                  "Very long phrase"
+  _Theoretical_auto_relaxation_list.Spectrometer_frequency_1H            110.234
+  _Theoretical_auto_relaxation_list.Exact_field_strength                 110.234
+  _Theoretical_auto_relaxation_list.Common_relaxation_type_name          "Short string value"
+  _Theoretical_auto_relaxation_list.Relaxation_coherence_type            "String value"
+  _Theoretical_auto_relaxation_list.Relaxation_val_units                 "Short string value"
+  _Theoretical_auto_relaxation_list.Rex_units                            "Short string value"
+  _Theoretical_auto_relaxation_list.Rex_field_strength                   "Short string value"
+  _Theoretical_auto_relaxation_list.Details                              "Possible multiline text"
+  _Theoretical_auto_relaxation_list.Text_data_format                     "String value"
+  _Theoretical_auto_relaxation_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Theoretical_auto_relaxation_experiment.Experiment_ID                    
+     _Theoretical_auto_relaxation_experiment.Experiment_name                  
+     _Theoretical_auto_relaxation_experiment.Sample_ID                        
+     _Theoretical_auto_relaxation_experiment.Sample_label                     
+     _Theoretical_auto_relaxation_experiment.Sample_state                     
+     _Theoretical_auto_relaxation_experiment.Sf_ID                            
+     _Theoretical_auto_relaxation_experiment.Entry_ID                         
+     _Theoretical_auto_relaxation_experiment.Auto_relaxation_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_auto_relaxation_software.Software_ID                      
+     _Theoretical_auto_relaxation_software.Software_label                   
+     _Theoretical_auto_relaxation_software.Method_ID                        
+     _Theoretical_auto_relaxation_software.Method_label                     
+     _Theoretical_auto_relaxation_software.Sf_ID                            
+     _Theoretical_auto_relaxation_software.Entry_ID                         
+     _Theoretical_auto_relaxation_software.Auto_relaxation_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_auto_relaxation.ID                               
+     _Theoretical_auto_relaxation.Assembly_ID                      
+     _Theoretical_auto_relaxation.Assembly_atom_ID                 
+     _Theoretical_auto_relaxation.Entity_assembly_ID               
+     _Theoretical_auto_relaxation.Entity_ID                        
+     _Theoretical_auto_relaxation.Comp_index_ID                    
+     _Theoretical_auto_relaxation.Seq_ID                           
+     _Theoretical_auto_relaxation.Comp_ID                          
+     _Theoretical_auto_relaxation.Atom_ID                          
+     _Theoretical_auto_relaxation.Atom_type                        
+     _Theoretical_auto_relaxation.Atom_isotope_number              
+     _Theoretical_auto_relaxation.Auto_relaxation_val              
+     _Theoretical_auto_relaxation.Auto_relaxation_val_err          
+     _Theoretical_auto_relaxation.Rex_val                          
+     _Theoretical_auto_relaxation.Rex_val_err                      
+     _Theoretical_auto_relaxation.Resonance_ID                     
+     _Theoretical_auto_relaxation.Auth_entity_assembly_ID          
+     _Theoretical_auto_relaxation.Auth_seq_ID                      
+     _Theoretical_auto_relaxation.Auth_comp_ID                     
+     _Theoretical_auto_relaxation.Auth_atom_ID                     
+     _Theoretical_auto_relaxation.Sf_ID                            
+     _Theoretical_auto_relaxation.Entry_ID                         
+     _Theoretical_auto_relaxation.Auto_relaxation_list_ID          
 
     2  2  2  2  2    2  2  1  1  "Short string value"    2  110.234  110.234  110.234  110.234    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  2  
 
@@ -4954,6 +5124,118 @@ save_<dipole_dipole_cross_correlations>
      _Cross_correlation_DD.Sf_ID                                       
      _Cross_correlation_DD.Entry_ID                                    
      _Cross_correlation_DD.Cross_correlation_list_ID                   
+
+    2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    1  1  "Short string value"  2  2    2  2  2  2  1    1  "Short string value"  2  2  2    2  2  2  1  1    "Short string value"  2  110.234  110.234  2    2  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
+
+  stop_
+
+save_
+
+save_<theoretical_dipole_dipole_cross_correlations>
+  _Theoretical_cross_correlation_DD_list.Sf_category     theoretical_dipole_dipole_cross_correlations
+  _Theoretical_cross_correlation_DD_list.Sf_framecode     <theoretical_dipole_dipole_cross_correlations>
+  _Theoretical_cross_correlation_DD_list.Entry_ID                             1
+  _Theoretical_cross_correlation_DD_list.Sf_ID                                2
+  _Theoretical_cross_correlation_DD_list.ID                                   2
+  _Theoretical_cross_correlation_DD_list.Data_file_name                       "Long string value"
+  _Theoretical_cross_correlation_DD_list.Sample_condition_list_ID             2
+  _Theoretical_cross_correlation_DD_list.Sample_condition_list_label          "Long string value"
+  _Theoretical_cross_correlation_DD_list.Spectrometer_frequency_1H            110.234
+  _Theoretical_cross_correlation_DD_list.Val_units                            "Short string value"
+  _Theoretical_cross_correlation_DD_list.Details                              "Possible multiline text"
+  _Theoretical_cross_correlation_DD_list.Text_data_format                     "String value"
+  _Theoretical_cross_correlation_DD_list.Text_data                            "Possible multiline text"
+
+  loop_
+     _Theoretical_cross_correlation_DD_experiment.Experiment_ID                      
+     _Theoretical_cross_correlation_DD_experiment.Experiment_name                    
+     _Theoretical_cross_correlation_DD_experiment.Sample_ID                          
+     _Theoretical_cross_correlation_DD_experiment.Sample_label                       
+     _Theoretical_cross_correlation_DD_experiment.Sample_state                       
+     _Theoretical_cross_correlation_DD_experiment.Sf_ID                              
+     _Theoretical_cross_correlation_DD_experiment.Entry_ID                           
+     _Theoretical_cross_correlation_DD_experiment.Cross_correlation_list_ID          
+
+    2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_cross_correlation_DD_software.Software_ID                        
+     _Theoretical_cross_correlation_DD_software.Software_label                     
+     _Theoretical_cross_correlation_DD_software.Method_ID                          
+     _Theoretical_cross_correlation_DD_software.Method_label                       
+     _Theoretical_cross_correlation_DD_software.Sf_ID                              
+     _Theoretical_cross_correlation_DD_software.Entry_ID                           
+     _Theoretical_cross_correlation_DD_software.Cross_correlation_list_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+  loop_
+     _Theoretical_cross_correlation_DD.ID                                          
+     _Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_1                 
+     _Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_1               
+     _Theoretical_cross_correlation_DD.Dipole_1_entity_ID_1                        
+     _Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_1                    
+     _Theoretical_cross_correlation_DD.Dipole_1_seq_ID_1                           
+     _Theoretical_cross_correlation_DD.Dipole_1_comp_ID_1                          
+     _Theoretical_cross_correlation_DD.Dipole_1_atom_ID_1                          
+     _Theoretical_cross_correlation_DD.Dipole_1_atom_type_1                        
+     _Theoretical_cross_correlation_DD.Dipole_1_atom_isotope_number_1              
+     _Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_2                 
+     _Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_2               
+     _Theoretical_cross_correlation_DD.Dipole_1_entity_ID_2                        
+     _Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_2                    
+     _Theoretical_cross_correlation_DD.Dipole_1_seq_ID_2                           
+     _Theoretical_cross_correlation_DD.Dipole_1_comp_ID_2                          
+     _Theoretical_cross_correlation_DD.Dipole_1_atom_ID_2                          
+     _Theoretical_cross_correlation_DD.Dipole_1_atom_type_2                        
+     _Theoretical_cross_correlation_DD.Dipole_1_atom_isotope_number_2              
+     _Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_1                 
+     _Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_1               
+     _Theoretical_cross_correlation_DD.Dipole_2_entity_ID_1                        
+     _Theoretical_cross_correlation_DD.Dipole_2_comp_index_ID_1                    
+     _Theoretical_cross_correlation_DD.Dipole_2_seq_ID_1                           
+     _Theoretical_cross_correlation_DD.Dipole_2_comp_ID_1                          
+     _Theoretical_cross_correlation_DD.Dipole_2_atom_ID_1                          
+     _Theoretical_cross_correlation_DD.Dipole_2_atom_type_1                        
+     _Theoretical_cross_correlation_DD.Dipole_2_atom_isotope_number_1              
+     _Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_2                 
+     _Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_2               
+     _Theoretical_cross_correlation_DD.Dipole_2_entity_ID_2                        
+     _Theoretical_cross_correlation_DD.Dipole_2_chem_comp_index_ID_2               
+     _Theoretical_cross_correlation_DD.Dipole_2_seq_ID_2                           
+     _Theoretical_cross_correlation_DD.Dipole_2_comp_ID_2                          
+     _Theoretical_cross_correlation_DD.Dipole_2_atom_ID_2                          
+     _Theoretical_cross_correlation_DD.Dipole_2_atom_type_2                        
+     _Theoretical_cross_correlation_DD.Dipole_2_atom_isotope_number_2              
+     _Theoretical_cross_correlation_DD.Val                                         
+     _Theoretical_cross_correlation_DD.Val_err                                     
+     _Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_1                     
+     _Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_2                     
+     _Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_1                     
+     _Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_2                     
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_1          
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_1                      
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_comp_ID_1                     
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_atom_ID_1                     
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_2          
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_2                      
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_comp_ID_2                     
+     _Theoretical_cross_correlation_DD.Dipole_1_auth_atom_ID_2                     
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_1          
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_1                      
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_comp_ID_1                     
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_atom_ID_1                     
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_2          
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_2                      
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_comp_ID_2                     
+     _Theoretical_cross_correlation_DD.Dipole_2_auth_atom_ID_2                     
+     _Theoretical_cross_correlation_DD.Sf_ID                                       
+     _Theoretical_cross_correlation_DD.Entry_ID                                    
+     _Theoretical_cross_correlation_DD.Cross_correlation_list_ID                   
 
     2  2  2  2  2    2  1  1  "Short string value"  2    2  2  2  2  2    1  1  "Short string value"  2  2    2  2  2  2  1    1  "Short string value"  2  2  2    2  2  2  1  1    "Short string value"  2  110.234  110.234  2    2  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
 

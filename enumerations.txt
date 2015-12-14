@@ -2275,7 +2275,7 @@ save__Cross_correlation_DD_list.Val_units
 save_
 
 
-save__Cross_correlation_D_CSA_experiment.Sample_state
+save__Cross_correlation_DD_experiment.Sample_state
 
   loop_
      _item_enumeration_value
@@ -2290,7 +2290,39 @@ save__Cross_correlation_D_CSA_experiment.Sample_state
 save_
 
 
-save__Cross_correlation_D_CSA_list.Val_units
+save__Cross_correlation_DD_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   s-1      .
+   ms-1     .
+   us-1     .
+
+    stop_
+
+save_
+
+
+
+
+save__Theoretical_cross_correlation_D_CSA_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+
+save__Theoretical_cross_correlation_D_CSA_list.Val_units
 
     loop_
       _item_enumeration_value
@@ -4535,8 +4567,73 @@ save__Entry_interview.Tensor
 
 save_ 
 
+save__Entry_interview.Theoretical_auto_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .              
+
+   stop_
+
+save_
+
 
 save__Entry_interview.Theoretical_chem_shifts
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .              
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_coupling_constants
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .              
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_heteronucl_NOEs
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .              
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_T1_relaxation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes     .
+       no      .              
+
+   stop_
+
+save_
+
+save__Entry_interview.Theoretical_T2_relaxation
 
   loop_
      _item_enumeration_value
@@ -4844,7 +4941,34 @@ save__Heteronucl_T1_experiment.Sample_state
 
 save_
 
+save__Theoretical_heteronucl_T1_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic        .
+     anisotropic      .
+     solid            .
+
+     stop_
+
+save_
+
 save__Heteronucl_T1_list.T1_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         Iz              'zero quantum$ longitudinal'
+         Sz              'zero quantum$ longitudinal'
+                         
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.T1_coherence_type
 
     loop_
       _item_enumeration_value
@@ -4859,6 +4983,21 @@ save_
 
 
 save__Heteronucl_T1_list.T1_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s             .
+         s-1           .
+         ms            .
+         ms-1          .
+             
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.T1_val_units
 
     loop_
       _item_enumeration_value
@@ -4977,6 +5116,22 @@ save__Heteronucl_T2_experiment.Sample_state
 
 save_
 
+save__Heteronucl_T2_list.T2_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         s             .
+         ms            .
+             
+    stop_
+
+save_
+
+
 save__Heteronucl_T2_list.Rex_units
 
     loop_
@@ -5005,20 +5160,7 @@ save__Heteronucl_T2_list.T2_coherence_type
 
 save_
 
-save__Heteronucl_T2_list.T2_val_units
 
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1           .
-         ms-1          .
-         s             .
-         ms            .
-             
-    stop_
-
-save_
 
 save__Heteronucl_T2_list.Temp_calibration_method
 
@@ -5049,6 +5191,95 @@ save__Heteronucl_T2_list.Temp_control_method
 
 save_
 
+
+save__Theoretical_heteronucl_T2_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.T2_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         s             .
+         ms            .
+             
+    stop_
+
+save_
+
+
+save__Theoretical_heteronucl_T2_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.T2_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+         I(+$-)              'single quantum'
+         S(+$-)              'single quantum'
+    
+    stop_
+
+save_
+
+
+
+save__Theoretical_heteronucl_T2_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+    methanol                          .
+   "monoethylene glycol"              .
+   "no calibration applied"           .
+   stop_
+
+save_
+
+
+save__Theoretical_heteronucl_T2_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'           .
+    'temperature compensation block'     .
+    'no temperature control applied'     .
+
+   stop_
+
+save_
 
 
 save__Auto_relaxation_experiment.Sample_state
@@ -5179,6 +5410,137 @@ save__Auto_relaxation_list.Common_relaxation_type_name
    stop_
 
 save_
+
+
+save__Theoretical_auto_relaxation_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Relaxation_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   Iz               'R1    longitudinal'
+   Sz               'R1    longitudinal'
+                         
+   (I+)+(I-)        'R1rho or R2      transverse'
+   (S+)+(S-)        'R1rho or R2      transverse'
+   I+               'R1rho or R2      transverse'
+   I-               'R1rho or R2      transverse'
+   S+               'R1rho or R2      transverse'
+   S-               'R1rho or R2      transverse'
+
+   (I+S-)+(I-S+)    'ZQ relaxation'
+   I-S+             'ZQ relaxation'
+   I+S-             'ZQ relaxation'
+
+   IzSz             'longitudinal spin order'
+
+  ((I+)+(I-))Sz     'single quantum antiphase'
+  Iz((S+)+(S-))     'single quantum antiphase'
+   I+Sz             'single quantum antiphase'
+   I-Sz             'single quantum antiphase'
+   IzS+             'single quantum antiphase'
+   IzS-             'single quantum antiphase'
+   
+ (I+S+)+(I-S-)      'DQ relaxation'
+   I+S+             'DQ relaxation'
+   I-S-             'DQ relaxation'
+         
+    stop_
+
+save_
+
+
+save__Theoretical_auto_relaxation_list.Relaxation_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         us-1          .
+         ns-1          .
+         ps-1          .
+             
+    stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    methanol                    MeOH
+   'monoethylene glycol'        MEG
+   'no calibration applied'     .
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'                                             .
+    'temperature compensation block'                                       .
+    'single scan interleaving and temperature compensation block'          .
+    'no temperature control applied'                                       .
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Common_relaxation_type_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      R1                                    .
+      R2                                    .
+      R1rho                                 .
+     'ZQ relaxation'                        .
+     'longitudinal spin order'              .
+     'single quantum antiphase'             .
+     'DQ relaxation'                        .
+
+   stop_
+
+save_
+
 
 
 
