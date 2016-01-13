@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2015-12-12
+#  version date -  2016-01-13
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.91
+    _dictionary.version         3.1.1.92
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.1.1.91         ?
+     3.1.1.92         ?
 ;
      ?
 ;
@@ -2727,32 +2727,6 @@ no
 
 save_
 
-save_Entry_interview
-   _category.description
-;
-Items in the entry_interview category capture information from a depositor about the data that is in the entry.
-;
-   _category.id                   'Entry_interview'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Entry_interview.Entry_ID'
-     '_Entry_interview.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'entry_interview'
-
-   stop_
-
-save_
-
 save__Entry_interview.Theoretical_DD_cross_correlation
 
    _item_description.description
@@ -2773,6 +2747,8 @@ being deposited.
      _item_enumeration.value
      _item_enumeration.detail
 
+   yes    ?
+   no    ?
 
    stop_
 
@@ -2782,32 +2758,6 @@ being deposited.
 ;
 no
 ;
-
-   stop_
-
-save_
-
-save_Entry_interview
-   _category.description
-;
-Items in the entry_interview category capture information from a depositor about the data that is in the entry.
-;
-   _category.id                   'Entry_interview'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Entry_interview.Entry_ID'
-     '_Entry_interview.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'entry_interview'
 
    stop_
 
@@ -5488,7 +5438,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.91'
+   _item_default.value            '3.1.1.92'
 
    loop_
      _item_enumeration.value
@@ -82297,9 +82247,6 @@ Units for the cross correlation values reported.
    s-1    ?
    ms-1    ?
    us-1    ?
-   s-1    ?
-   ms-1    ?
-   us-1    ?
 
    stop_
 
@@ -82473,9 +82420,6 @@ Physical state of the sample either anisotropic or isotropic.
      _item_enumeration.value
      _item_enumeration.detail
 
-   isotropic    ?
-   anisotropic    ?
-   solid    ?
    isotropic    ?
    anisotropic    ?
    solid    ?
@@ -84055,6 +83999,9 @@ Units for the cross correlation values reported.
      _item_enumeration.value
      _item_enumeration.detail
 
+   s-1    ?
+   ms-1    ?
+   us-1    ?
 
    stop_
 
@@ -84228,6 +84175,9 @@ Physical state of the sample either anisotropic or isotropic.
      _item_enumeration.value
      _item_enumeration.detail
 
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
 
    stop_
 
@@ -85804,6 +85754,9 @@ Units for the cross correlation values reported.
      _item_enumeration.value
      _item_enumeration.detail
 
+   s-1    ?
+   ms-1    ?
+   us-1    ?
 
    stop_
 
@@ -85976,6 +85929,9 @@ Physical state of the sample either anisotropic or isotropic.
      _item_enumeration.value
      _item_enumeration.detail
 
+   isotropic    ?
+   anisotropic    ?
+   solid    ?
 
    stop_
 
