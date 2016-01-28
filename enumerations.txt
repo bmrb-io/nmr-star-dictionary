@@ -2275,7 +2275,7 @@ save__Cross_correlation_DD_list.Val_units
 save_
 
 
-save__Cross_correlation_DD_experiment.Sample_state
+save__Theoretical_cross_correlation_DD_experiment.Sample_state
 
   loop_
      _item_enumeration_value
@@ -2290,7 +2290,7 @@ save__Cross_correlation_DD_experiment.Sample_state
 save_
 
 
-save__Cross_correlation_DD_list.Val_units
+save__Theoretical_cross_correlation_DD_list.Val_units
 
     loop_
       _item_enumeration_value
@@ -2307,7 +2307,7 @@ save_
 
 
 
-save__Theoretical_cross_correlation_D_CSA_experiment.Sample_state
+save__Cross_correlation_D_CSA_experiment.Sample_state
 
   loop_
      _item_enumeration_value
@@ -2322,7 +2322,7 @@ save__Theoretical_cross_correlation_D_CSA_experiment.Sample_state
 save_
 
 
-save__Theoretical_cross_correlation_D_CSA_list.Val_units
+save__Cross_correlation_D_CSA_list.Val_units
 
     loop_
       _item_enumeration_value
@@ -4185,6 +4185,20 @@ save__Entry_interview.DD_cross_correlation
    stop_
 
 save_
+
+save__Entry_interview.Theoretical_DD_cross_correlation
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       yes      .
+       no       .
+
+   stop_
+
+save_
+
 
 save__Entry_interview.Dipole_CSA_cross_correlation
 
@@ -7360,6 +7374,7 @@ save__Spectral_dim.Under_sampling_type
 
      aliased          .
      folded           .
+    ‘not observed’    .
 
    stop_
 
