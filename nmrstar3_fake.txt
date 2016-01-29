@@ -2759,6 +2759,90 @@ save_<assigned_chemical_shifts>
 
 save_
 
+save_<chem_shifts_calc_type>
+  _Chem_shifts_calc_type.Sf_category     chem_shifts_calc_type
+  _Chem_shifts_calc_type.Sf_framecode     <chem_shifts_calc_type>
+  _Chem_shifts_calc_type.Entry_ID                                 1
+  _Chem_shifts_calc_type.Sf_ID                                    2
+  _Chem_shifts_calc_type.ID                                       2
+  _Chem_shifts_calc_type.Calculation_level                        "Long string value"
+  _Chem_shifts_calc_type.Quantum_mechanical_method                "Long string value"
+  _Chem_shifts_calc_type.Quantum_mechanical_theory_level          "Long string value"
+  _Chem_shifts_calc_type.Quantum_mechanical_basis_set             "String value"
+  _Chem_shifts_calc_type.Chem_shift_nucleus                       "Long string value"
+  _Chem_shifts_calc_type.Modeled_sample_cond_list_ID              2
+  _Chem_shifts_calc_type.Modeled_sample_cond_list_label           "Long string value"
+  _Chem_shifts_calc_type.Chem_shift_reference_ID                  2
+  _Chem_shifts_calc_type.Chem_shift_reference_label               "Long string value"
+  _Chem_shifts_calc_type.Details                                  "Possible multiline text"
+
+  loop_
+     _Chem_shifts_calc_software.Software_ID                       
+     _Chem_shifts_calc_software.Software_label                    
+     _Chem_shifts_calc_software.Method_ID                         
+     _Chem_shifts_calc_software.Method_label                      
+     _Chem_shifts_calc_software.Sf_ID                             
+     _Chem_shifts_calc_software.Entry_ID                          
+     _Chem_shifts_calc_software.Chem_shifts_calc_type_ID          
+
+    2  "Long string value"  2  "Long string value"  2    1  2  
+
+  stop_
+
+save_
+
+save_<theoretical_chem_shifts>
+  _Theoretical_chem_shift_list.Sf_category     theoretical_chem_shifts
+  _Theoretical_chem_shift_list.Sf_framecode     <theoretical_chem_shifts>
+  _Theoretical_chem_shift_list.Entry_ID                                  1
+  _Theoretical_chem_shift_list.Sf_ID                                     2
+  _Theoretical_chem_shift_list.ID                                        2
+  _Theoretical_chem_shift_list.Data_file_name                            "Long string value"
+  _Theoretical_chem_shift_list.Chem_shifts_calc_type_ID                  2
+  _Theoretical_chem_shift_list.Chem_shifts_calc_type_label               "Long string value"
+  _Theoretical_chem_shift_list.Model_atomic_coordinates_ID               2
+  _Theoretical_chem_shift_list.Model_atomic_coordinates_label            "Long string value"
+  _Theoretical_chem_shift_list.Tensor_list_ID                            2
+  _Theoretical_chem_shift_list.Tensor_list_label                         "Long string value"
+  _Theoretical_chem_shift_list.Fermi_contact_spin_density_units          "String value"
+  _Theoretical_chem_shift_list.Chem_shift_1H_err                         110.234
+  _Theoretical_chem_shift_list.Chem_shift_2H_err                         110.234
+  _Theoretical_chem_shift_list.Chem_shift_13C_err                        110.234
+  _Theoretical_chem_shift_list.Chem_shift_15N_err                        110.234
+  _Theoretical_chem_shift_list.Chem_shift_19F_err                        110.234
+  _Theoretical_chem_shift_list.Chem_shift_31P_err                        110.234
+  _Theoretical_chem_shift_list.Details                                   "Possible multiline text"
+  _Theoretical_chem_shift_list.Text_data_format                          "Long string value"
+  _Theoretical_chem_shift_list.Text_data                                 "Possible multiline text"
+
+  loop_
+     _Theoretical_chem_shift.ID                                      
+     _Theoretical_chem_shift.Assembly_atom_ID                        
+     _Theoretical_chem_shift.Entity_assembly_ID                      
+     _Theoretical_chem_shift.Entity_ID                               
+     _Theoretical_chem_shift.Comp_index_ID                           
+     _Theoretical_chem_shift.Seq_ID                                  
+     _Theoretical_chem_shift.Comp_ID                                 
+     _Theoretical_chem_shift.Atom_ID                                 
+     _Theoretical_chem_shift.Atom_type                               
+     _Theoretical_chem_shift.Atom_isotope_number                     
+     _Theoretical_chem_shift.Fermi_contact_spin_density              
+     _Theoretical_chem_shift.Val                                     
+     _Theoretical_chem_shift.Val_err                                 
+     _Theoretical_chem_shift.Auth_entity_assembly_ID                 
+     _Theoretical_chem_shift.Auth_seq_ID                             
+     _Theoretical_chem_shift.Auth_comp_ID                            
+     _Theoretical_chem_shift.Auth_atom_ID                            
+     _Theoretical_chem_shift.Sf_ID                                   
+     _Theoretical_chem_shift.Entry_ID                                
+     _Theoretical_chem_shift.Theoretical_chem_shift_list_ID          
+
+    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
+
+  stop_
+
+save_
+
 save_<coupling_constants>
   _Coupling_constant_list.Sf_category     coupling_constants
   _Coupling_constant_list.Sf_framecode     <coupling_constants>
@@ -3496,90 +3580,6 @@ save_<chem_shift_anisotropy>
      _CS_anisotropy.Chem_shift_anisotropy_ID                 
 
     2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
-
-  stop_
-
-save_
-
-save_<chem_shifts_calc_type>
-  _Chem_shifts_calc_type.Sf_category     chem_shifts_calc_type
-  _Chem_shifts_calc_type.Sf_framecode     <chem_shifts_calc_type>
-  _Chem_shifts_calc_type.Entry_ID                                 1
-  _Chem_shifts_calc_type.Sf_ID                                    2
-  _Chem_shifts_calc_type.ID                                       2
-  _Chem_shifts_calc_type.Calculation_level                        "Long string value"
-  _Chem_shifts_calc_type.Quantum_mechanical_method                "Long string value"
-  _Chem_shifts_calc_type.Quantum_mechanical_theory_level          "Long string value"
-  _Chem_shifts_calc_type.Quantum_mechanical_basis_set             "String value"
-  _Chem_shifts_calc_type.Chem_shift_nucleus                       "Long string value"
-  _Chem_shifts_calc_type.Modeled_sample_cond_list_ID              2
-  _Chem_shifts_calc_type.Modeled_sample_cond_list_label           "Long string value"
-  _Chem_shifts_calc_type.Chem_shift_reference_ID                  2
-  _Chem_shifts_calc_type.Chem_shift_reference_label               "Long string value"
-  _Chem_shifts_calc_type.Details                                  "Possible multiline text"
-
-  loop_
-     _Chem_shifts_calc_software.Software_ID                       
-     _Chem_shifts_calc_software.Software_label                    
-     _Chem_shifts_calc_software.Method_ID                         
-     _Chem_shifts_calc_software.Method_label                      
-     _Chem_shifts_calc_software.Sf_ID                             
-     _Chem_shifts_calc_software.Entry_ID                          
-     _Chem_shifts_calc_software.Chem_shifts_calc_type_ID          
-
-    2  "Long string value"  2  "Long string value"  2    1  2  
-
-  stop_
-
-save_
-
-save_<theoretical_chem_shifts>
-  _Theoretical_chem_shift_list.Sf_category     theoretical_chem_shifts
-  _Theoretical_chem_shift_list.Sf_framecode     <theoretical_chem_shifts>
-  _Theoretical_chem_shift_list.Entry_ID                                  1
-  _Theoretical_chem_shift_list.Sf_ID                                     2
-  _Theoretical_chem_shift_list.ID                                        2
-  _Theoretical_chem_shift_list.Data_file_name                            "Long string value"
-  _Theoretical_chem_shift_list.Chem_shifts_calc_type_ID                  2
-  _Theoretical_chem_shift_list.Chem_shifts_calc_type_label               "Long string value"
-  _Theoretical_chem_shift_list.Model_atomic_coordinates_ID               2
-  _Theoretical_chem_shift_list.Model_atomic_coordinates_label            "Long string value"
-  _Theoretical_chem_shift_list.Tensor_list_ID                            2
-  _Theoretical_chem_shift_list.Tensor_list_label                         "Long string value"
-  _Theoretical_chem_shift_list.Fermi_contact_spin_density_units          "String value"
-  _Theoretical_chem_shift_list.Chem_shift_1H_err                         110.234
-  _Theoretical_chem_shift_list.Chem_shift_2H_err                         110.234
-  _Theoretical_chem_shift_list.Chem_shift_13C_err                        110.234
-  _Theoretical_chem_shift_list.Chem_shift_15N_err                        110.234
-  _Theoretical_chem_shift_list.Chem_shift_19F_err                        110.234
-  _Theoretical_chem_shift_list.Chem_shift_31P_err                        110.234
-  _Theoretical_chem_shift_list.Details                                   "Possible multiline text"
-  _Theoretical_chem_shift_list.Text_data_format                          "Long string value"
-  _Theoretical_chem_shift_list.Text_data                                 "Possible multiline text"
-
-  loop_
-     _Theoretical_chem_shift.ID                                      
-     _Theoretical_chem_shift.Assembly_atom_ID                        
-     _Theoretical_chem_shift.Entity_assembly_ID                      
-     _Theoretical_chem_shift.Entity_ID                               
-     _Theoretical_chem_shift.Comp_index_ID                           
-     _Theoretical_chem_shift.Seq_ID                                  
-     _Theoretical_chem_shift.Comp_ID                                 
-     _Theoretical_chem_shift.Atom_ID                                 
-     _Theoretical_chem_shift.Atom_type                               
-     _Theoretical_chem_shift.Atom_isotope_number                     
-     _Theoretical_chem_shift.Fermi_contact_spin_density              
-     _Theoretical_chem_shift.Val                                     
-     _Theoretical_chem_shift.Val_err                                 
-     _Theoretical_chem_shift.Auth_entity_assembly_ID                 
-     _Theoretical_chem_shift.Auth_seq_ID                             
-     _Theoretical_chem_shift.Auth_comp_ID                            
-     _Theoretical_chem_shift.Auth_atom_ID                            
-     _Theoretical_chem_shift.Sf_ID                                   
-     _Theoretical_chem_shift.Entry_ID                                
-     _Theoretical_chem_shift.Theoretical_chem_shift_list_ID          
-
-    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  1  2    
 
   stop_
 

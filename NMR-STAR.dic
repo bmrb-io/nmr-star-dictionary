@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2016-01-28
+#  version date -  2016-01-29
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.95
+    _dictionary.version         3.1.1.96
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.1.1.95         ?
+     3.1.1.96         ?
 ;
      ?
 ;
@@ -1843,6 +1843,9 @@ BMRB accession number for this entry
   '_computer.entry_id'                                   'computer'                      yes
   '_chem_shift_reference.entry_id'                       'chem_shift_reference'          yes
   '_assigned_chem_shift_list.entry_id'                   'assigned_chem_shift_list'      yes
+  '_chem_shifts_calc_type.entry_id'                      'chem_shifts_calc_type'         yes
+  '_theoretical_chem_shift_list.entry_id'                'theoretical_chem_shift_list'                       yes
+  '_theoretical_chem_shift.entry_id'                     'theoretical_chem_shift'        yes
   '_coupling_constant_list.entry_id'                     'coupling_constant_list'        yes
   '_theoretical_coupling_constant_list.entry_id'         'theoretical_coupling_constant_list'                yes
   '_spectral_peak_list.entry_id'                         'spectral_peak_list'            yes
@@ -1851,9 +1854,6 @@ BMRB accession number for this entry
   '_chem_shift_isotope_effect_list.entry_id'             'chem_shift_isotope_effect_list'                    yes
   '_mol_interaction_chem_shift_diff.entry_id'            'mol_interaction_chem_shift_diff'                   yes
   '_chem_shift_anisotropy.entry_id'                      'chem_shift_anisotropy'         yes
-  '_chem_shifts_calc_type.entry_id'                      'chem_shifts_calc_type'         yes
-  '_theoretical_chem_shift_list.entry_id'                'theoretical_chem_shift_list'                       yes
-  '_theoretical_chem_shift.entry_id'                     'theoretical_chem_shift'        yes
   '_rdc_list.entry_id'                                   'rdc_list'                      yes
   '_rdc_experiment.entry_id'                             'rdc_experiment'                yes
   '_rdc_software.entry_id'                               'rdc_software'                  yes
@@ -2145,6 +2145,9 @@ BMRB accession number for this entry
   '_computer.entry_id'                                   '_entry.id'
   '_chem_shift_reference.entry_id'                       '_entry.id'
   '_assigned_chem_shift_list.entry_id'                   '_entry.id'
+  '_chem_shifts_calc_type.entry_id'                      '_entry.id'
+  '_theoretical_chem_shift_list.entry_id'                '_entry.id'
+  '_theoretical_chem_shift.entry_id'                     '_entry.id'
   '_coupling_constant_list.entry_id'                     '_entry.id'
   '_theoretical_coupling_constant_list.entry_id'         '_entry.id'
   '_spectral_peak_list.entry_id'                         '_entry.id'
@@ -2153,9 +2156,6 @@ BMRB accession number for this entry
   '_chem_shift_isotope_effect_list.entry_id'             '_entry.id'
   '_mol_interaction_chem_shift_diff.entry_id'            '_entry.id'
   '_chem_shift_anisotropy.entry_id'                      '_entry.id'
-  '_chem_shifts_calc_type.entry_id'                      '_entry.id'
-  '_theoretical_chem_shift_list.entry_id'                '_entry.id'
-  '_theoretical_chem_shift.entry_id'                     '_entry.id'
   '_rdc_list.entry_id'                                   '_entry.id'
   '_rdc_experiment.entry_id'                             '_entry.id'
   '_rdc_software.entry_id'                               '_entry.id'
@@ -2640,7 +2640,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.95'
+   _item_default.value            '3.1.1.96'
 
    loop_
      _item_enumeration.value
@@ -6814,6 +6814,7 @@ Unique identifier for each component in the entity assembly.
   '_author_annotation.entity_assembly_id'                'author_annotation'             yes
   '_subsystem_component.entity_assembly_id'              'subsystem_component'           yes
   '_atom_chem_shift.entity_assembly_id'                  'atom_chem_shift'               yes
+  '_theoretical_chem_shift.entity_assembly_id'           'theoretical_chem_shift'        yes
   '_coupling_constant.entity_assembly_id_1'              'coupling_constant'             yes
   '_coupling_constant.entity_assembly_id_2'              'coupling_constant'             yes
   '_theoretical_coupling_constant.entity_assembly_id_1'                                  'theoretical_coupling_constant'                     yes
@@ -6826,7 +6827,6 @@ Unique identifier for each component in the entity assembly.
   '_isotope_label_pattern.entity_assembly_id'            'isotope_label_pattern'         yes
   '_mol_interaction_chem_shift.entity_assembly_id'                                       'mol_interaction_chem_shift'                        yes
   '_cs_anisotropy.entity_assembly_id'                    'cs_anisotropy'                 yes
-  '_theoretical_chem_shift.entity_assembly_id'           'theoretical_chem_shift'        yes
   '_rdc.entity_assembly_id_1'                            'rdc'                           yes
   '_rdc.entity_assembly_id_2'                            'rdc'                           yes
   '_dipolar_coupling.entity_assembly_id_1'               'dipolar_coupling'              yes
@@ -6938,6 +6938,7 @@ Unique identifier for each component in the entity assembly.
   '_author_annotation.entity_assembly_id'                '_entity_assembly.id'
   '_subsystem_component.entity_assembly_id'              '_entity_assembly.id'
   '_atom_chem_shift.entity_assembly_id'                  '_entity_assembly.id'
+  '_theoretical_chem_shift.entity_assembly_id'           '_entity_assembly.id'
   '_coupling_constant.entity_assembly_id_1'              '_entity_assembly.id'
   '_coupling_constant.entity_assembly_id_2'              '_entity_assembly.id'
   '_theoretical_coupling_constant.entity_assembly_id_1'                                  '_entity_assembly.id'
@@ -6950,7 +6951,6 @@ Unique identifier for each component in the entity assembly.
   '_isotope_label_pattern.entity_assembly_id'            '_entity_assembly.id'
   '_mol_interaction_chem_shift.entity_assembly_id'                                       '_entity_assembly.id'
   '_cs_anisotropy.entity_assembly_id'                    '_entity_assembly.id'
-  '_theoretical_chem_shift.entity_assembly_id'           '_entity_assembly.id'
   '_rdc.entity_assembly_id_1'                            '_entity_assembly.id'
   '_rdc.entity_assembly_id_2'                            '_entity_assembly.id'
   '_dipolar_coupling.entity_assembly_id_1'               '_entity_assembly.id'
@@ -10471,6 +10471,7 @@ assembly.
   '_author_annotation.assembly_atom_id'                  'author_annotation'             yes
   '_sample_component_atom_isotope.assembly_atom_id'                                      'sample_component_atom_isotope'                     yes
   '_atom_chem_shift.assembly_atom_id'                    'atom_chem_shift'               yes
+  '_theoretical_chem_shift.assembly_atom_id'             'theoretical_chem_shift'        yes
   '_coupling_constant.assembly_atom_id_1'                'coupling_constant'             yes
   '_coupling_constant.assembly_atom_id_2'                'coupling_constant'             yes
   '_theoretical_coupling_constant.assembly_atom_id_1'                                    'theoretical_coupling_constant'                     yes
@@ -10482,7 +10483,6 @@ assembly.
   '_isotope_label_pattern.assembly_atom_id'              'isotope_label_pattern'         yes
   '_mol_interaction_chem_shift.assembly_atom_id'         'mol_interaction_chem_shift'                        yes
   '_cs_anisotropy.assembly_atom_id'                      'cs_anisotropy'                 yes
-  '_theoretical_chem_shift.assembly_atom_id'             'theoretical_chem_shift'        yes
   '_rdc.assembly_atom_id_1'                              'rdc'                           yes
   '_rdc.assembly_atom_id_2'                              'rdc'                           yes
   '_dipolar_coupling.assembly_atom_id_1'                 'dipolar_coupling'              yes
@@ -10580,6 +10580,7 @@ assembly.
   '_author_annotation.assembly_atom_id'                  '_atom.assembly_atom_id'
   '_sample_component_atom_isotope.assembly_atom_id'                                      '_atom.assembly_atom_id'
   '_atom_chem_shift.assembly_atom_id'                    '_atom.assembly_atom_id'
+  '_theoretical_chem_shift.assembly_atom_id'             '_atom.assembly_atom_id'
   '_coupling_constant.assembly_atom_id_1'                '_atom.assembly_atom_id'
   '_coupling_constant.assembly_atom_id_2'                '_atom.assembly_atom_id'
   '_theoretical_coupling_constant.assembly_atom_id_1'                                    '_atom.assembly_atom_id'
@@ -10591,7 +10592,6 @@ assembly.
   '_isotope_label_pattern.assembly_atom_id'              '_atom.assembly_atom_id'
   '_mol_interaction_chem_shift.assembly_atom_id'         '_atom.assembly_atom_id'
   '_cs_anisotropy.assembly_atom_id'                      '_atom.assembly_atom_id'
-  '_theoretical_chem_shift.assembly_atom_id'             '_atom.assembly_atom_id'
   '_rdc.assembly_atom_id_1'                              '_atom.assembly_atom_id'
   '_rdc.assembly_atom_id_2'                              '_atom.assembly_atom_id'
   '_dipolar_coupling.assembly_atom_id_1'                 '_atom.assembly_atom_id'
@@ -14413,6 +14413,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_sample_component_atom_isotope.entity_id'             'sample_component_atom_isotope'                     yes
   '_entity_purity.entity_id'                             'entity_purity'                 yes
   '_atom_chem_shift.entity_id'                           'atom_chem_shift'               yes
+  '_theoretical_chem_shift.entity_id'                    'theoretical_chem_shift'        yes
   '_coupling_constant.entity_id_1'                       'coupling_constant'             yes
   '_coupling_constant.entity_id_2'                       'coupling_constant'             yes
   '_theoretical_coupling_constant.entity_id_1'           'theoretical_coupling_constant'                     yes
@@ -14425,7 +14426,6 @@ An integer value that is the unique identifier for the entity within the entry.
   '_isotope_label_pattern.entity_id'                     'isotope_label_pattern'         yes
   '_mol_interaction_chem_shift.entity_id'                'mol_interaction_chem_shift'                        yes
   '_cs_anisotropy.entity_id'                             'cs_anisotropy'                 yes
-  '_theoretical_chem_shift.entity_id'                    'theoretical_chem_shift'        yes
   '_rdc.entity_id_1'                                     'rdc'                           yes
   '_rdc.entity_id_2'                                     'rdc'                           yes
   '_dipolar_coupling.entity_id_1'                        'dipolar_coupling'              yes
@@ -14561,6 +14561,7 @@ An integer value that is the unique identifier for the entity within the entry.
   '_sample_component_atom_isotope.entity_id'             '_entity.id'
   '_entity_purity.entity_id'                             '_entity.id'
   '_atom_chem_shift.entity_id'                           '_entity.id'
+  '_theoretical_chem_shift.entity_id'                    '_entity.id'
   '_coupling_constant.entity_id_1'                       '_entity.id'
   '_coupling_constant.entity_id_2'                       '_entity.id'
   '_theoretical_coupling_constant.entity_id_1'           '_entity.id'
@@ -14573,7 +14574,6 @@ An integer value that is the unique identifier for the entity within the entry.
   '_isotope_label_pattern.entity_id'                     '_entity.id'
   '_mol_interaction_chem_shift.entity_id'                '_entity.id'
   '_cs_anisotropy.entity_id'                             '_entity.id'
-  '_theoretical_chem_shift.entity_id'                    '_entity.id'
   '_rdc.entity_id_1'                                     '_entity.id'
   '_rdc.entity_id_2'                                     '_entity.id'
   '_dipolar_coupling.entity_id_1'                        '_entity.id'
@@ -16470,6 +16470,7 @@ Unique ID for the compound in the entity
   '_entity_bond.comp_index_id_2'                         'entity_bond'                   yes
   '_sample_component_atom_isotope.comp_index_id'         'sample_component_atom_isotope'                     yes
   '_atom_chem_shift.comp_index_id'                       'atom_chem_shift'               yes
+  '_theoretical_chem_shift.comp_index_id'                'theoretical_chem_shift'        yes
   '_coupling_constant.comp_index_id_1'                   'coupling_constant'             yes
   '_coupling_constant.comp_index_id_2'                   'coupling_constant'             yes
   '_theoretical_coupling_constant.theoretical_comp_index_id_1'                           'theoretical_coupling_constant'                     yes
@@ -16482,7 +16483,6 @@ Unique ID for the compound in the entity
   '_isotope_label_pattern.comp_index_id'                 'isotope_label_pattern'         yes
   '_mol_interaction_chem_shift.comp_index_id'            'mol_interaction_chem_shift'                        yes
   '_cs_anisotropy.comp_index_id'                         'cs_anisotropy'                 yes
-  '_theoretical_chem_shift.comp_index_id'                'theoretical_chem_shift'        yes
   '_rdc.comp_index_id_1'                                 'rdc'                           yes
   '_rdc.comp_index_id_2'                                 'rdc'                           yes
   '_dipolar_coupling.comp_index_id_1'                    'dipolar_coupling'              yes
@@ -16606,6 +16606,7 @@ Unique ID for the compound in the entity
   '_entity_bond.comp_index_id_2'                         '_entity_comp_index.id'
   '_sample_component_atom_isotope.comp_index_id'         '_entity_comp_index.id'
   '_atom_chem_shift.comp_index_id'                       '_entity_comp_index.id'
+  '_theoretical_chem_shift.comp_index_id'                '_entity_comp_index.id'
   '_coupling_constant.comp_index_id_1'                   '_entity_comp_index.id'
   '_coupling_constant.comp_index_id_2'                   '_entity_comp_index.id'
   '_theoretical_coupling_constant.theoretical_comp_index_id_1'                           '_entity_comp_index.id'
@@ -16618,7 +16619,6 @@ Unique ID for the compound in the entity
   '_isotope_label_pattern.comp_index_id'                 '_entity_comp_index.id'
   '_mol_interaction_chem_shift.comp_index_id'            '_entity_comp_index.id'
   '_cs_anisotropy.comp_index_id'                         '_entity_comp_index.id'
-  '_theoretical_chem_shift.comp_index_id'                '_entity_comp_index.id'
   '_rdc.comp_index_id_1'                                 '_entity_comp_index.id'
   '_rdc.comp_index_id_2'                                 '_entity_comp_index.id'
   '_dipolar_coupling.comp_index_id_1'                    '_entity_comp_index.id'
@@ -16907,6 +16907,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_entity_chimera_segment.seq_id_end'                   'entity_chimera_segment'        yes
   '_sample_component_atom_isotope.seq_id'                'sample_component_atom_isotope'                     yes
   '_atom_chem_shift.seq_id'                              'atom_chem_shift'               yes
+  '_theoretical_chem_shift.seq_id'                       'theoretical_chem_shift'        yes
   '_coupling_constant.seq_id_1'                          'coupling_constant'             yes
   '_coupling_constant.seq_id_2'                          'coupling_constant'             yes
   '_theoretical_coupling_constant.seq_id_1'              'theoretical_coupling_constant'                     yes
@@ -16915,7 +16916,6 @@ that the sequence numbers must progress in increasing numerical order.
   '_isotope_label_pattern.seq_id'                        'isotope_label_pattern'         yes
   '_mol_interaction_chem_shift.seq_id'                   'mol_interaction_chem_shift'                        yes
   '_cs_anisotropy.seq_id'                                'cs_anisotropy'                 yes
-  '_theoretical_chem_shift.seq_id'                       'theoretical_chem_shift'        yes
   '_rdc.seq_id_1'                                        'rdc'                           yes
   '_rdc.seq_id_2'                                        'rdc'                           yes
   '_dipolar_coupling.seq_id_1'                           'dipolar_coupling'              yes
@@ -17027,6 +17027,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_entity_chimera_segment.seq_id_end'                   '_entity_poly_seq.num'
   '_sample_component_atom_isotope.seq_id'                '_entity_poly_seq.num'
   '_atom_chem_shift.seq_id'                              '_entity_poly_seq.num'
+  '_theoretical_chem_shift.seq_id'                       '_entity_poly_seq.num'
   '_coupling_constant.seq_id_1'                          '_entity_poly_seq.num'
   '_coupling_constant.seq_id_2'                          '_entity_poly_seq.num'
   '_theoretical_coupling_constant.seq_id_1'              '_entity_poly_seq.num'
@@ -17035,7 +17036,6 @@ that the sequence numbers must progress in increasing numerical order.
   '_isotope_label_pattern.seq_id'                        '_entity_poly_seq.num'
   '_mol_interaction_chem_shift.seq_id'                   '_entity_poly_seq.num'
   '_cs_anisotropy.seq_id'                                '_entity_poly_seq.num'
-  '_theoretical_chem_shift.seq_id'                       '_entity_poly_seq.num'
   '_rdc.seq_id_1'                                        '_entity_poly_seq.num'
   '_rdc.seq_id_2'                                        '_entity_poly_seq.num'
   '_dipolar_coupling.seq_id_1'                           '_entity_poly_seq.num'
@@ -20729,6 +20729,7 @@ components in the entry.
   '_chem_comp_citation.comp_id'                          'chem_comp_citation'            yes
   '_sample_component_atom_isotope.comp_id'               'sample_component_atom_isotope'                     yes
   '_atom_chem_shift.comp_id'                             'atom_chem_shift'               yes
+  '_theoretical_chem_shift.comp_id'                      'theoretical_chem_shift'        yes
   '_coupling_constant.comp_id_1'                         'coupling_constant'             yes
   '_coupling_constant.comp_id_2'                         'coupling_constant'             yes
   '_theoretical_coupling_constant.theoretical_comp_id_1'                                 'theoretical_coupling_constant'                     yes
@@ -20741,7 +20742,6 @@ components in the entry.
   '_isotope_label_pattern.comp_id'                       'isotope_label_pattern'         yes
   '_mol_interaction_chem_shift.comp_id'                  'mol_interaction_chem_shift'                        yes
   '_cs_anisotropy.comp_id'                               'cs_anisotropy'                 yes
-  '_theoretical_chem_shift.comp_id'                      'theoretical_chem_shift'        yes
   '_rdc.comp_id_1'                                       'rdc'                           yes
   '_rdc.comp_id_2'                                       'rdc'                           yes
   '_dipolar_coupling.comp_id_1'                          'dipolar_coupling'              yes
@@ -20875,6 +20875,7 @@ components in the entry.
   '_chem_comp_citation.comp_id'                          '_chem_comp.id'
   '_sample_component_atom_isotope.comp_id'               '_chem_comp.id'
   '_atom_chem_shift.comp_id'                             '_chem_comp.id'
+  '_theoretical_chem_shift.comp_id'                      '_chem_comp.id'
   '_coupling_constant.comp_id_1'                         '_chem_comp.id'
   '_coupling_constant.comp_id_2'                         '_chem_comp.id'
   '_theoretical_coupling_constant.theoretical_comp_id_1'                                 '_chem_comp.id'
@@ -20887,7 +20888,6 @@ components in the entry.
   '_isotope_label_pattern.comp_id'                       '_chem_comp.id'
   '_mol_interaction_chem_shift.comp_id'                  '_chem_comp.id'
   '_cs_anisotropy.comp_id'                               '_chem_comp.id'
-  '_theoretical_chem_shift.comp_id'                      '_chem_comp.id'
   '_rdc.comp_id_1'                                       '_chem_comp.id'
   '_rdc.comp_id_2'                                       '_chem_comp.id'
   '_dipolar_coupling.comp_id_1'                          '_chem_comp.id'
@@ -23726,6 +23726,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_chem_comp_angle.atom_id_3'                           'chem_comp_angle'               yes
   '_sample_component_atom_isotope.atom_id'               'sample_component_atom_isotope'                     yes
   '_atom_chem_shift.atom_id'                             'atom_chem_shift'               yes
+  '_theoretical_chem_shift.atom_id'                      'theoretical_chem_shift'        yes
   '_coupling_constant.atom_id_1'                         'coupling_constant'             yes
   '_coupling_constant.atom_id_2'                         'coupling_constant'             yes
   '_theoretical_coupling_constant.atom_id_1'             'theoretical_coupling_constant'                     yes
@@ -23737,7 +23738,6 @@ each monomer in the CHEM_COMP_ATOM list.
   '_isotope_label_pattern.atom_id'                       'isotope_label_pattern'         yes
   '_mol_interaction_chem_shift.atom_id'                  'mol_interaction_chem_shift'                        yes
   '_cs_anisotropy.atom_id'                               'cs_anisotropy'                 yes
-  '_theoretical_chem_shift.atom_id'                      'theoretical_chem_shift'        yes
   '_rdc.atom_id_1'                                       'rdc'                           yes
   '_rdc.atom_id_2'                                       'rdc'                           yes
   '_dipolar_coupling.atom_id_1'                          'dipolar_coupling'              yes
@@ -23851,6 +23851,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_chem_comp_angle.atom_id_3'                           '_chem_comp_atom.atom_id'
   '_sample_component_atom_isotope.atom_id'               '_chem_comp_atom.atom_id'
   '_atom_chem_shift.atom_id'                             '_chem_comp_atom.atom_id'
+  '_theoretical_chem_shift.atom_id'                      '_chem_comp_atom.atom_id'
   '_coupling_constant.atom_id_1'                         '_chem_comp_atom.atom_id'
   '_coupling_constant.atom_id_2'                         '_chem_comp_atom.atom_id'
   '_theoretical_coupling_constant.atom_id_1'             '_chem_comp_atom.atom_id'
@@ -23862,7 +23863,6 @@ each monomer in the CHEM_COMP_ATOM list.
   '_isotope_label_pattern.atom_id'                       '_chem_comp_atom.atom_id'
   '_mol_interaction_chem_shift.atom_id'                  '_chem_comp_atom.atom_id'
   '_cs_anisotropy.atom_id'                               '_chem_comp_atom.atom_id'
-  '_theoretical_chem_shift.atom_id'                      '_chem_comp_atom.atom_id'
   '_rdc.atom_id_1'                                       '_chem_comp_atom.atom_id'
   '_rdc.atom_id_2'                                       '_chem_comp_atom.atom_id'
   '_dipolar_coupling.atom_id_1'                          '_chem_comp_atom.atom_id'
@@ -27498,13 +27498,13 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_sample_condition_citation.sample_condition_list_id'                                  'sample_condition_citation'                         yes
   '_experiment.sample_condition_list_id'                 'experiment'                    yes
   '_assigned_chem_shift_list.sample_condition_list_id'                                   'assigned_chem_shift_list'      yes
+  '_chem_shifts_calc_type.modeled_sample_cond_list_id'                                   'chem_shifts_calc_type'         yes
   '_coupling_constant_list.sample_condition_list_id'                                     'coupling_constant_list'        yes
   '_theoretical_coupling_constant_list.sample_condition_list_id'                         'theoretical_coupling_constant_list'                yes
   '_spectral_peak_list.sample_condition_list_id'         'spectral_peak_list'            yes
   '_chem_shift_isotope_effect_list.sample_condition_list_id'                             'chem_shift_isotope_effect_list'                    yes
   '_mol_interaction_chem_shift_diff.sample_condition_list_id'                            'mol_interaction_chem_shift_diff'                   yes
   '_chem_shift_anisotropy.sample_condition_list_id'                                      'chem_shift_anisotropy'         yes
-  '_chem_shifts_calc_type.modeled_sample_cond_list_id'                                   'chem_shifts_calc_type'         yes
   '_rdc_list.sample_condition_list_id'                   'rdc_list'                      yes
   '_dipolar_coupling_list.sample_condition_list_id'                                      'dipolar_coupling_list'         yes
   '_spectral_density_list.sample_condition_list_id'                                      'spectral_density_list'         yes
@@ -27547,13 +27547,13 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_sample_condition_citation.sample_condition_list_id'                                  '_sample_condition_list.id'
   '_experiment.sample_condition_list_id'                 '_sample_condition_list.id'
   '_assigned_chem_shift_list.sample_condition_list_id'                                   '_sample_condition_list.id'
+  '_chem_shifts_calc_type.modeled_sample_cond_list_id'                                   '_sample_condition_list.id'
   '_coupling_constant_list.sample_condition_list_id'                                     '_sample_condition_list.id'
   '_theoretical_coupling_constant_list.sample_condition_list_id'                         '_sample_condition_list.id'
   '_spectral_peak_list.sample_condition_list_id'         '_sample_condition_list.id'
   '_chem_shift_isotope_effect_list.sample_condition_list_id'                             '_sample_condition_list.id'
   '_mol_interaction_chem_shift_diff.sample_condition_list_id'                            '_sample_condition_list.id'
   '_chem_shift_anisotropy.sample_condition_list_id'                                      '_sample_condition_list.id'
-  '_chem_shifts_calc_type.modeled_sample_cond_list_id'                                   '_sample_condition_list.id'
   '_rdc_list.sample_condition_list_id'                   '_sample_condition_list.id'
   '_dipolar_coupling_list.sample_condition_list_id'                                      '_sample_condition_list.id'
   '_spectral_density_list.sample_condition_list_id'                                      '_sample_condition_list.id'
@@ -28536,13 +28536,13 @@ in the entry.
   '_emr_expt.software_id'                                'emr_expt'                      yes
   '_saxs_expt.software_id'                               'saxs_expt'                     yes
   '_chem_shift_software.software_id'                     'chem_shift_software'           yes
+  '_chem_shifts_calc_software.software_id'               'chem_shifts_calc_software'                         yes
   '_coupling_constant_software.software_id'              'coupling_constant_software'                        yes
   '_theoretical_coupling_constant_software.software_id'                                  'theoretical_coupling_constant_software'            yes
   '_spectral_peak_software.software_id'                  'spectral_peak_software'        yes
   '_isotope_effect_software.software_id'                 'isotope_effect_software'       yes
   '_mol_interaction_diff_software.software_id'           'mol_interaction_diff_software'                     yes
   '_cs_anisotropy_software.software_id'                  'cs_anisotropy_software'        yes
-  '_chem_shifts_calc_software.software_id'               'chem_shifts_calc_software'                         yes
   '_rdc_software.software_id'                            'rdc_software'                  yes
   '_dipolar_coupling_software.software_id'               'dipolar_coupling_software'                         yes
   '_spectral_density_software.software_id'               'spectral_density_software'                         yes
@@ -28610,13 +28610,13 @@ in the entry.
   '_emr_expt.software_id'                                '_software.id'
   '_saxs_expt.software_id'                               '_software.id'
   '_chem_shift_software.software_id'                     '_software.id'
+  '_chem_shifts_calc_software.software_id'               '_software.id'
   '_coupling_constant_software.software_id'              '_software.id'
   '_theoretical_coupling_constant_software.software_id'                                  '_software.id'
   '_spectral_peak_software.software_id'                  '_software.id'
   '_isotope_effect_software.software_id'                 '_software.id'
   '_mol_interaction_diff_software.software_id'           '_software.id'
   '_cs_anisotropy_software.software_id'                  '_software.id'
-  '_chem_shifts_calc_software.software_id'               '_software.id'
   '_rdc_software.software_id'                            '_software.id'
   '_dipolar_coupling_software.software_id'               '_software.id'
   '_spectral_density_software.software_id'               '_software.id'
@@ -29304,6 +29304,7 @@ given in the entry.
   '_emr_expt.method_id'                                  'emr_expt'                      yes
   '_saxs_expt.method_id'                                 'saxs_expt'                     yes
   '_chem_shift_software.method_id'                       'chem_shift_software'           yes
+  '_chem_shifts_calc_software.method_id'                 'chem_shifts_calc_software'                         yes
   '_coupling_constant_software.method_id'                'coupling_constant_software'                        yes
   '_theoretical_coupling_constant_software.method_id'                                    'theoretical_coupling_constant_software'            yes
   '_spectral_peak_software.method_id'                    'spectral_peak_software'        yes
@@ -29311,7 +29312,6 @@ given in the entry.
   '_isotope_effect_software.method_id'                   'isotope_effect_software'       yes
   '_mol_interaction_diff_software.method_id'             'mol_interaction_diff_software'                     yes
   '_cs_anisotropy_software.method_id'                    'cs_anisotropy_software'        yes
-  '_chem_shifts_calc_software.method_id'                 'chem_shifts_calc_software'                         yes
   '_rdc_software.method_id'                              'rdc_software'                  yes
   '_dipolar_coupling_software.method_id'                 'dipolar_coupling_software'                         yes
   '_spectral_density_software.method_id'                 'spectral_density_software'                         yes
@@ -29386,6 +29386,7 @@ given in the entry.
   '_emr_expt.method_id'                                  '_method.id'
   '_saxs_expt.method_id'                                 '_method.id'
   '_chem_shift_software.method_id'                       '_method.id'
+  '_chem_shifts_calc_software.method_id'                 '_method.id'
   '_coupling_constant_software.method_id'                '_method.id'
   '_theoretical_coupling_constant_software.method_id'                                    '_method.id'
   '_spectral_peak_software.method_id'                    '_method.id'
@@ -29393,7 +29394,6 @@ given in the entry.
   '_isotope_effect_software.method_id'                   '_method.id'
   '_mol_interaction_diff_software.method_id'             '_method.id'
   '_cs_anisotropy_software.method_id'                    '_method.id'
-  '_chem_shifts_calc_software.method_id'                 '_method.id'
   '_rdc_software.method_id'                              '_method.id'
   '_dipolar_coupling_software.method_id'                 '_method.id'
   '_spectral_density_software.method_id'                 '_method.id'
@@ -38220,8 +38220,8 @@ reference values from other saveframes of this category in an entry.
   '_chem_shift_reference.id'                             'chem_shift_reference'          yes
   '_chem_shift_ref.chem_shift_reference_id'              'chem_shift_ref'                yes
   '_assigned_chem_shift_list.chem_shift_reference_id'                                    'assigned_chem_shift_list'      yes
-  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_id'                               'mol_interaction_chem_shift_diff'                   yes
   '_chem_shifts_calc_type.chem_shift_reference_id'                                       'chem_shifts_calc_type'         yes
+  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_id'                               'mol_interaction_chem_shift_diff'                   yes
 
   stop_
 
@@ -38231,8 +38231,8 @@ reference values from other saveframes of this category in an entry.
 
   '_chem_shift_ref.chem_shift_reference_id'              '_chem_shift_reference.id'
   '_assigned_chem_shift_list.chem_shift_reference_id'                                    '_chem_shift_reference.id'
-  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_id'                               '_chem_shift_reference.id'
   '_chem_shifts_calc_type.chem_shift_reference_id'                                       '_chem_shift_reference.id'
+  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_id'                               '_chem_shift_reference.id'
 
   stop_
 
@@ -40445,6 +40445,1226 @@ Pointer to '_Assigned_chem_shift_list.ID'
 
    _item.name                                  '_ambiguous_atom_chem_shift.assigned_chem_shift_list_id'
    _item.category_id                           'ambiguous_atom_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_chem_shifts_calc_type
+   _category.description
+;
+Items in the chem_shifts_calc_type category provide information about type of calculation used to derive a set of theoretical chemical shift values.
+;
+   _category.id                   'chem_shifts_calc_type'
+
+   loop_
+     _category_key.name
+
+     '_chem_shifts_calc_type.entry_id'
+     '_chem_shifts_calc_type.id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shifts_calc_type'
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_type.sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the saveframe
+;
+
+   _item.name                                  '_chem_shifts_calc_type.sf_category'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__chem_shifts_calc_type.sf_framecode
+
+   _item_description.description
+;
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
+;
+
+   _item.name                                  '_chem_shifts_calc_type.sf_framecode'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__chem_shifts_calc_type.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_chem_shifts_calc_type.entry_id'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__chem_shifts_calc_type.id
+
+   _item_description.description
+;
+Unique identifier for the type of theoretical chemical shift calculation 
+that was carried out.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_chem_shifts_calc_type.id'                            'chem_shifts_calc_type'         yes
+  '_chem_shifts_calc_software.chem_shifts_calc_type_id'                                  'chem_shifts_calc_software'                         yes
+  '_theoretical_chem_shift_list.chem_shifts_calc_type_id'                                'theoretical_chem_shift_list'                       yes
+  '_tensor.calc_type_id'                                 'tensor'                        yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_chem_shifts_calc_software.chem_shifts_calc_type_id'                                  '_chem_shifts_calc_type.id'
+  '_theoretical_chem_shift_list.chem_shifts_calc_type_id'                                '_chem_shifts_calc_type.id'
+  '_tensor.calc_type_id'                                 '_chem_shifts_calc_type.id'
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__chem_shifts_calc_type.calculation_level
+
+   _item_description.description
+;
+The level of theory applied in calculating theoretical chemical shifts 
+or chemical shift tensors (not shielding tensors).
+;
+
+   _item.name                                  '_chem_shifts_calc_type.calculation_level'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   empirical    ?
+   'ab initio'    ?
+   semi-empirical    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+empirical; ab initio; semi-empirical
+;
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_type.quantum_mechanical_method
+
+   _item_description.description
+;
+The method used to calculate the chemical shifts or chemical shift tensors 
+(not shielding tensors).
+;
+
+   _item.name                                  '_chem_shifts_calc_type.quantum_mechanical_method'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   GIAO    'Gauge-Independent Atomic Orbital'
+   IGLO    ?
+   CSGT    'Continuous Set of Gauge Transformations'
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+GIAO; IGLO; CSGT
+;
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_type.quantum_mechanical_theory_level
+
+   _item_description.description
+;
+The quantum mechanical level of theory used to calculate the chemical shifts 
+or chemical shift tensors (not shielding tensors).
+;
+
+   _item.name                                  '_chem_shifts_calc_type.quantum_mechanical_theory_level'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   B3LYP    ?
+   MP2    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+B3LYP; MP2
+;
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_type.quantum_mechanical_basis_set
+
+   _item_description.description
+;
+The quantum mechanical basis set used to calculate the theoretical chemical 
+shifts or chemical shift tensors (not shielding tensors).
+;
+
+   _item.name                                  '_chem_shifts_calc_type.quantum_mechanical_basis_set'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+   loop_
+     _item_examples.case
+
+;
+6-311++G(2D,2P)
+;
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_type.chem_shift_nucleus
+
+   _item_description.description
+;
+The nucleus for which the chemical shifts were calaculated.
+;
+
+   _item.name                                  '_chem_shifts_calc_type.chem_shift_nucleus'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          yes
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   1H    ?
+   13C    ?
+   15N    ?
+   31P    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+13C
+;
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_type.modeled_sample_cond_list_id
+
+   _item_description.description
+;
+Pointer to '_Sample_condition_list.ID'
+;
+
+   _item.name                                  '_chem_shifts_calc_type.modeled_sample_cond_list_id'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__chem_shifts_calc_type.modeled_sample_cond_list_label
+
+   _item_description.description
+;
+Enter the name (label) given to a set of sample conditions enter above 
+in the 'sample conditions' section of the deposition.
+;
+
+   _item.name                                  '_chem_shifts_calc_type.modeled_sample_cond_list_label'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+   loop_
+     _item_examples.case
+
+;
+sample_conditions_1
+;
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_type.chem_shift_reference_id
+
+   _item_description.description
+;
+Pointer to '_Chem_shift_reference.ID'
+;
+
+   _item.name                                  '_chem_shifts_calc_type.chem_shift_reference_id'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__chem_shifts_calc_type.chem_shift_reference_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'chemical_shift_reference.'  This 
+is the saveframe where the chemical shift referencing standards are described.
+;
+
+   _item.name                                  '_chem_shifts_calc_type.chem_shift_reference_label'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__chem_shifts_calc_type.details
+
+   _item_description.description
+;
+A text description of the type of calculation used to generate the theoretical 
+chemical shifts.
+;
+
+   _item.name                                  '_chem_shifts_calc_type.details'
+   _item.category_id                           'chem_shifts_calc_type'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save_chem_shifts_calc_software
+   _category.description
+;
+Items in the chem_shifts_calc_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
+;
+   _category.id                   'chem_shifts_calc_software'
+
+   loop_
+     _category_key.name
+
+     '_chem_shifts_calc_software.software_id'
+     '_chem_shifts_calc_software.entry_id'
+     '_chem_shifts_calc_software.chem_shifts_calc_type_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shifts_calc_type'
+
+   stop_
+
+save_
+
+save__chem_shifts_calc_software.software_id
+
+   _item_description.description
+;
+Pointer to '_Software.ID'
+;
+
+   _item.name                                  '_chem_shifts_calc_software.software_id'
+   _item.category_id                           'chem_shifts_calc_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__chem_shifts_calc_software.software_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'software'
+;
+
+   _item.name                                  '_chem_shifts_calc_software.software_label'
+   _item.category_id                           'chem_shifts_calc_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__chem_shifts_calc_software.method_id
+
+   _item_description.description
+;
+Pointer to '_Method.ID'
+;
+
+   _item.name                                  '_chem_shifts_calc_software.method_id'
+   _item.category_id                           'chem_shifts_calc_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__chem_shifts_calc_software.method_label
+
+   _item_description.description
+;
+Pointer to a saveframe of the category 'method'
+;
+
+   _item.name                                  '_chem_shifts_calc_software.method_label'
+   _item.category_id                           'chem_shifts_calc_software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__chem_shifts_calc_software.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_chem_shifts_calc_software.entry_id'
+   _item.category_id                           'chem_shifts_calc_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__chem_shifts_calc_software.chem_shifts_calc_type_id
+
+   _item_description.description
+;
+Pointer to '_Chem_shifts_calc_type.ID'
+;
+
+   _item.name                                  '_chem_shifts_calc_software.chem_shifts_calc_type_id'
+   _item.category_id                           'chem_shifts_calc_software'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_theoretical_chem_shift_list
+   _category.description
+;
+Items in the theoretical_chem_shift_list category provide information about a list of reported theoretical chemical shift values calculated for one or more molecular entities.
+;
+   _category.id                   'theoretical_chem_shift_list'
+
+   loop_
+     _category_key.name
+
+     '_theoretical_chem_shift_list.entry_id'
+     '_theoretical_chem_shift_list.id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_chem_shifts'
+
+   stop_
+
+save_
+
+save__theoretical_chem_shift_list.sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the saveframe
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.sf_category'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__theoretical_chem_shift_list.sf_framecode
+
+   _item_description.description
+;
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.sf_framecode'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+   _item_default.value            'theoretical_chem_shift_list_1'
+
+
+save_
+
+save__theoretical_chem_shift_list.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.entry_id'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__theoretical_chem_shift_list.id
+
+   _item_description.description
+;
+An integer value that uniquely identifies this saveframe of theoretical 
+chemical shift data from other saveframes of this category in an entry.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_theoretical_chem_shift_list.id'                      'theoretical_chem_shift_list'             yes
+  '_theoretical_chem_shift.theoretical_chem_shift_list_id'                               'theoretical_chem_shift'        yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_theoretical_chem_shift.theoretical_chem_shift_list_id'                               '_theoretical_chem_shift_list.id'
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shifts_calc_type_id
+
+   _item_description.description
+;
+Pointer to '_Chem_shifts_calc_type.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shifts_calc_type_id'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shifts_calc_type_label
+
+   _item_description.description
+;
+Pointer to the saveframe where the type of calculation carried out is described.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shifts_calc_type_label'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__theoretical_chem_shift_list.model_atomic_coordinates_id
+
+   _item_description.description
+;
+Pointer to '_Representative_conformer.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.model_atomic_coordinates_id'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift_list.model_atomic_coordinates_label
+
+   _item_description.description
+;
+Pointer to the saveframe where the atomic coordinates for the model used 
+to calculate the theoretical chemical shifts are located.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.model_atomic_coordinates_label'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__theoretical_chem_shift_list.tensor_list_id
+
+   _item_description.description
+;
+Pointer to '_Tensor_list.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.tensor_list_id'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift_list.tensor_list_label
+
+   _item_description.description
+;
+Pointer to a saveframe of category 'tensors.'  This is the label assigned 
+by the depositor to the set of tensors.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.tensor_list_label'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__theoretical_chem_shift_list.fermi_contact_spin_density_units
+
+   _item_description.description
+;
+The units used for the Fermi contact spin density terms.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.fermi_contact_spin_density_units'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shift_1h_err
+
+   _item_description.description
+;
+Calculated error in the theoretical chemical shifts reported for 1H.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shift_1h_err'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shift_2h_err
+
+   _item_description.description
+;
+Calculated error in the theoretical chemical shifts reported for 2H.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shift_2h_err'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shift_13c_err
+
+   _item_description.description
+;
+Calculated error in the theoretical chemical shifts reported for 13C.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shift_13c_err'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shift_15n_err
+
+   _item_description.description
+;
+Calculated error in the theoretical chemical shifts reported for 15N.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shift_15n_err'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shift_19f_err
+
+   _item_description.description
+;
+Calculated error in the theoretical chemical shifts reported for 31P.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shift_19f_err'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift_list.chem_shift_31p_err
+
+   _item_description.description
+;
+Calculated error in the theoretical chemical shifts reported for 19F.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.chem_shift_31p_err'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift_list.details
+
+   _item_description.description
+;
+Text describing the reported theoretical chemical shifts.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.details'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save__theoretical_chem_shift_list.text_data_format
+
+   _item_description.description
+;
+The data format used to represent the theoretical chemical shift data as 
+ASCII text in the text block that is the value to the '_Theoretical_chem_shift_list.Text_data' 
+tag.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.text_data_format'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'line'
+
+
+save_
+
+save__theoretical_chem_shift_list.text_data
+
+   _item_description.description
+;
+A set of theoretical chemical shift data formatted as ASCII text.
+;
+
+   _item.name                                  '_theoretical_chem_shift_list.text_data'
+   _item.category_id                           'theoretical_chem_shift_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'text'
+
+
+save_
+
+save_theoretical_chem_shift
+   _category.description
+;
+Items in the theoretical_chem_shift category describe the theoretical chemical shift values calculated for specific atoms in a molecular assembly.
+;
+   _category.id                   'theoretical_chem_shift'
+
+   loop_
+     _category_key.name
+
+     '_theoretical_chem_shift.id'
+     '_theoretical_chem_shift.entry_id'
+     '_theoretical_chem_shift.theoretical_chem_shift_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'theoretical_chem_shifts'
+
+   stop_
+
+save_
+
+save__theoretical_chem_shift.id
+
+   _item_description.description
+;
+Unique identifier for the calculated chemical shift value.
+;
+
+   _item.name                                  '_theoretical_chem_shift.id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift.assembly_atom_id
+
+   _item_description.description
+;
+Pointer to '_Atom.Assembly_atom_ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.assembly_atom_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift.entity_assembly_id
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.entity_assembly_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift.entity_id
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.entity_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift.comp_index_id
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.comp_index_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift.seq_id
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_theoretical_chem_shift.seq_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift.comp_id
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.comp_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__theoretical_chem_shift.atom_id
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.atom_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__theoretical_chem_shift.atom_type
+
+   _item_description.description
+;
+The value for this tag is a standard IUPAC abbreviation for an element 
+(i.e., H, C, P, etc).
+;
+
+   _item.name                                  '_theoretical_chem_shift.atom_type'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__theoretical_chem_shift.atom_isotope_number
+
+   _item_description.description
+;
+The mass number for the chemical element defined by the tag '_Atom_type' 
+or any of its related tags.
+;
+
+   _item.name                                  '_theoretical_chem_shift.atom_isotope_number'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save__theoretical_chem_shift.fermi_contact_spin_density
+
+   _item_description.description
+;
+Fermi contact spin density
+;
+
+   _item.name                                  '_theoretical_chem_shift.fermi_contact_spin_density'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift.val
+
+   _item_description.description
+;
+Chem shift val
+;
+
+   _item.name                                  '_theoretical_chem_shift.val'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift.val_err
+
+   _item_description.description
+;
+Chem shift val err
+;
+
+   _item.name                                  '_theoretical_chem_shift.val_err'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'float'
+
+
+save_
+
+save__theoretical_chem_shift.auth_entity_assembly_id
+
+   _item_description.description
+;
+An alternative identifier for Entity_assembly_ID that may be provided by 
+an author in order to match that used in the publication that describes the experimental 
+data.  Note that the value is not required to be a number and does not 
+need to correspond to the value for Entity_assembly_ID.
+;
+
+   _item.name                                  '_theoretical_chem_shift.auth_entity_assembly_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__theoretical_chem_shift.auth_seq_id
+
+   _item_description.description
+;
+An alternative identifier for Seq_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data. 
+ Note that the value is not required to be a number and does not need to correspond 
+to the value for Seq_ID or Comp_index_ID.
+;
+
+   _item.name                                  '_theoretical_chem_shift.auth_seq_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+-3
+;
+
+   stop_
+
+save_
+
+save__theoretical_chem_shift.auth_comp_id
+
+   _item_description.description
+;
+An alternative identifier for Comp_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_theoretical_chem_shift.auth_comp_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+DPN
+;
+
+   stop_
+
+save_
+
+save__theoretical_chem_shift.auth_atom_id
+
+   _item_description.description
+;
+An alternative identifier for Atom_ID that may be provided by an author 
+in order to match that used in the publication that describes the experimental data.
+;
+
+   _item.name                                  '_theoretical_chem_shift.auth_atom_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+HB1
+;
+
+   stop_
+
+save_
+
+save__theoretical_chem_shift.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.entry_id'
+   _item.category_id                           'theoretical_chem_shift'
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'code'
+
+
+save_
+
+save__theoretical_chem_shift.theoretical_chem_shift_list_id
+
+   _item_description.description
+;
+Pointer to '_Theoretical_chem_shift_list.ID'
+;
+
+   _item.name                                  '_theoretical_chem_shift.theoretical_chem_shift_list_id'
+   _item.category_id                           'theoretical_chem_shift'
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'int'
@@ -50153,1226 +51373,6 @@ Pointer to '_Chem_shift_anisotropy.ID'
 
    _item.name                                  '_cs_anisotropy.chem_shift_anisotropy_id'
    _item.category_id                           'cs_anisotropy'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save_chem_shifts_calc_type
-   _category.description
-;
-Items in the chem_shifts_calc_type category provide information about type of calculation used to derive a set of theoretical chemical shift values.
-;
-   _category.id                   'chem_shifts_calc_type'
-
-   loop_
-     _category_key.name
-
-     '_chem_shifts_calc_type.entry_id'
-     '_chem_shifts_calc_type.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shifts_calc_type'
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_type.sf_category
-
-   _item_description.description
-;
-Category definition for the information content of the saveframe
-;
-
-   _item.name                                  '_chem_shifts_calc_type.sf_category'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__chem_shifts_calc_type.sf_framecode
-
-   _item_description.description
-;
-A label for the saveframe that describes in very brief terms the information 
-contained in the saveframe.
-;
-
-   _item.name                                  '_chem_shifts_calc_type.sf_framecode'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__chem_shifts_calc_type.entry_id
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                                  '_chem_shifts_calc_type.entry_id'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__chem_shifts_calc_type.id
-
-   _item_description.description
-;
-Unique identifier for the type of theoretical chemical shift calculation 
-that was carried out.
-;
-
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_chem_shifts_calc_type.id'                            'chem_shifts_calc_type'         yes
-  '_chem_shifts_calc_software.chem_shifts_calc_type_id'                                  'chem_shifts_calc_software'                         yes
-  '_theoretical_chem_shift_list.chem_shifts_calc_type_id'                                'theoretical_chem_shift_list'                       yes
-  '_tensor.calc_type_id'                                 'tensor'                        yes
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-  '_chem_shifts_calc_software.chem_shifts_calc_type_id'                                  '_chem_shifts_calc_type.id'
-  '_theoretical_chem_shift_list.chem_shifts_calc_type_id'                                '_chem_shifts_calc_type.id'
-  '_tensor.calc_type_id'                                 '_chem_shifts_calc_type.id'
-
-  stop_
-
-  _item_type.code                             'int'
-
-
-save_
-
-save__chem_shifts_calc_type.calculation_level
-
-   _item_description.description
-;
-The level of theory applied in calculating theoretical chemical shifts 
-or chemical shift tensors (not shielding tensors).
-;
-
-   _item.name                                  '_chem_shifts_calc_type.calculation_level'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          yes
-   _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   empirical    ?
-   'ab initio'    ?
-   semi-empirical    ?
-
-   stop_
-
-   loop_
-     _item_examples.case
-
-;
-empirical; ab initio; semi-empirical
-;
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_type.quantum_mechanical_method
-
-   _item_description.description
-;
-The method used to calculate the chemical shifts or chemical shift tensors 
-(not shielding tensors).
-;
-
-   _item.name                                  '_chem_shifts_calc_type.quantum_mechanical_method'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          yes
-   _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   GIAO    'Gauge-Independent Atomic Orbital'
-   IGLO    ?
-   CSGT    'Continuous Set of Gauge Transformations'
-
-   stop_
-
-   loop_
-     _item_examples.case
-
-;
-GIAO; IGLO; CSGT
-;
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_type.quantum_mechanical_theory_level
-
-   _item_description.description
-;
-The quantum mechanical level of theory used to calculate the chemical shifts 
-or chemical shift tensors (not shielding tensors).
-;
-
-   _item.name                                  '_chem_shifts_calc_type.quantum_mechanical_theory_level'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          yes
-   _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   B3LYP    ?
-   MP2    ?
-
-   stop_
-
-   loop_
-     _item_examples.case
-
-;
-B3LYP; MP2
-;
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_type.quantum_mechanical_basis_set
-
-   _item_description.description
-;
-The quantum mechanical basis set used to calculate the theoretical chemical 
-shifts or chemical shift tensors (not shielding tensors).
-;
-
-   _item.name                                  '_chem_shifts_calc_type.quantum_mechanical_basis_set'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-   loop_
-     _item_examples.case
-
-;
-6-311++G(2D,2P)
-;
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_type.chem_shift_nucleus
-
-   _item_description.description
-;
-The nucleus for which the chemical shifts were calaculated.
-;
-
-   _item.name                                  '_chem_shifts_calc_type.chem_shift_nucleus'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          yes
-   _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   1H    ?
-   13C    ?
-   15N    ?
-   31P    ?
-
-   stop_
-
-   loop_
-     _item_examples.case
-
-;
-13C
-;
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_type.modeled_sample_cond_list_id
-
-   _item_description.description
-;
-Pointer to '_Sample_condition_list.ID'
-;
-
-   _item.name                                  '_chem_shifts_calc_type.modeled_sample_cond_list_id'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__chem_shifts_calc_type.modeled_sample_cond_list_label
-
-   _item_description.description
-;
-Enter the name (label) given to a set of sample conditions enter above 
-in the 'sample conditions' section of the deposition.
-;
-
-   _item.name                                  '_chem_shifts_calc_type.modeled_sample_cond_list_label'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-   loop_
-     _item_examples.case
-
-;
-sample_conditions_1
-;
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_type.chem_shift_reference_id
-
-   _item_description.description
-;
-Pointer to '_Chem_shift_reference.ID'
-;
-
-   _item.name                                  '_chem_shifts_calc_type.chem_shift_reference_id'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__chem_shifts_calc_type.chem_shift_reference_label
-
-   _item_description.description
-;
-Pointer to a saveframe of the category 'chemical_shift_reference.'  This 
-is the saveframe where the chemical shift referencing standards are described.
-;
-
-   _item.name                                  '_chem_shifts_calc_type.chem_shift_reference_label'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__chem_shifts_calc_type.details
-
-   _item_description.description
-;
-A text description of the type of calculation used to generate the theoretical 
-chemical shifts.
-;
-
-   _item.name                                  '_chem_shifts_calc_type.details'
-   _item.category_id                           'chem_shifts_calc_type'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'text'
-
-
-save_
-
-save_chem_shifts_calc_software
-   _category.description
-;
-Items in the chem_shifts_calc_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
-;
-   _category.id                   'chem_shifts_calc_software'
-
-   loop_
-     _category_key.name
-
-     '_chem_shifts_calc_software.software_id'
-     '_chem_shifts_calc_software.entry_id'
-     '_chem_shifts_calc_software.chem_shifts_calc_type_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shifts_calc_type'
-
-   stop_
-
-save_
-
-save__chem_shifts_calc_software.software_id
-
-   _item_description.description
-;
-Pointer to '_Software.ID'
-;
-
-   _item.name                                  '_chem_shifts_calc_software.software_id'
-   _item.category_id                           'chem_shifts_calc_software'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__chem_shifts_calc_software.software_label
-
-   _item_description.description
-;
-Pointer to a saveframe of the category 'software'
-;
-
-   _item.name                                  '_chem_shifts_calc_software.software_label'
-   _item.category_id                           'chem_shifts_calc_software'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__chem_shifts_calc_software.method_id
-
-   _item_description.description
-;
-Pointer to '_Method.ID'
-;
-
-   _item.name                                  '_chem_shifts_calc_software.method_id'
-   _item.category_id                           'chem_shifts_calc_software'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__chem_shifts_calc_software.method_label
-
-   _item_description.description
-;
-Pointer to a saveframe of the category 'method'
-;
-
-   _item.name                                  '_chem_shifts_calc_software.method_label'
-   _item.category_id                           'chem_shifts_calc_software'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__chem_shifts_calc_software.entry_id
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                                  '_chem_shifts_calc_software.entry_id'
-   _item.category_id                           'chem_shifts_calc_software'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__chem_shifts_calc_software.chem_shifts_calc_type_id
-
-   _item_description.description
-;
-Pointer to '_Chem_shifts_calc_type.ID'
-;
-
-   _item.name                                  '_chem_shifts_calc_software.chem_shifts_calc_type_id'
-   _item.category_id                           'chem_shifts_calc_software'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save_theoretical_chem_shift_list
-   _category.description
-;
-Items in the theoretical_chem_shift_list category provide information about a list of reported theoretical chemical shift values calculated for one or more molecular entities.
-;
-   _category.id                   'theoretical_chem_shift_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_chem_shift_list.entry_id'
-     '_theoretical_chem_shift_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_chem_shifts'
-
-   stop_
-
-save_
-
-save__theoretical_chem_shift_list.sf_category
-
-   _item_description.description
-;
-Category definition for the information content of the saveframe
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.sf_category'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__theoretical_chem_shift_list.sf_framecode
-
-   _item_description.description
-;
-A label for the saveframe that describes in very brief terms the information 
-contained in the saveframe.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.sf_framecode'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-   _item_default.value            'theoretical_chem_shift_list_1'
-
-
-save_
-
-save__theoretical_chem_shift_list.entry_id
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.entry_id'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__theoretical_chem_shift_list.id
-
-   _item_description.description
-;
-An integer value that uniquely identifies this saveframe of theoretical 
-chemical shift data from other saveframes of this category in an entry.
-;
-
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_theoretical_chem_shift_list.id'                      'theoretical_chem_shift_list'             yes
-  '_theoretical_chem_shift.theoretical_chem_shift_list_id'                               'theoretical_chem_shift'        yes
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-  '_theoretical_chem_shift.theoretical_chem_shift_list_id'                               '_theoretical_chem_shift_list.id'
-
-  stop_
-
-  _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shifts_calc_type_id
-
-   _item_description.description
-;
-Pointer to '_Chem_shifts_calc_type.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shifts_calc_type_id'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shifts_calc_type_label
-
-   _item_description.description
-;
-Pointer to the saveframe where the type of calculation carried out is described.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shifts_calc_type_label'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__theoretical_chem_shift_list.model_atomic_coordinates_id
-
-   _item_description.description
-;
-Pointer to '_Representative_conformer.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.model_atomic_coordinates_id'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift_list.model_atomic_coordinates_label
-
-   _item_description.description
-;
-Pointer to the saveframe where the atomic coordinates for the model used 
-to calculate the theoretical chemical shifts are located.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.model_atomic_coordinates_label'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__theoretical_chem_shift_list.tensor_list_id
-
-   _item_description.description
-;
-Pointer to '_Tensor_list.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.tensor_list_id'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift_list.tensor_list_label
-
-   _item_description.description
-;
-Pointer to a saveframe of category 'tensors.'  This is the label assigned 
-by the depositor to the set of tensors.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.tensor_list_label'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__theoretical_chem_shift_list.fermi_contact_spin_density_units
-
-   _item_description.description
-;
-The units used for the Fermi contact spin density terms.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.fermi_contact_spin_density_units'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shift_1h_err
-
-   _item_description.description
-;
-Calculated error in the theoretical chemical shifts reported for 1H.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shift_1h_err'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shift_2h_err
-
-   _item_description.description
-;
-Calculated error in the theoretical chemical shifts reported for 2H.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shift_2h_err'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shift_13c_err
-
-   _item_description.description
-;
-Calculated error in the theoretical chemical shifts reported for 13C.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shift_13c_err'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shift_15n_err
-
-   _item_description.description
-;
-Calculated error in the theoretical chemical shifts reported for 15N.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shift_15n_err'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shift_19f_err
-
-   _item_description.description
-;
-Calculated error in the theoretical chemical shifts reported for 31P.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shift_19f_err'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift_list.chem_shift_31p_err
-
-   _item_description.description
-;
-Calculated error in the theoretical chemical shifts reported for 19F.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.chem_shift_31p_err'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift_list.details
-
-   _item_description.description
-;
-Text describing the reported theoretical chemical shifts.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.details'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'text'
-
-
-save_
-
-save__theoretical_chem_shift_list.text_data_format
-
-   _item_description.description
-;
-The data format used to represent the theoretical chemical shift data as 
-ASCII text in the text block that is the value to the '_Theoretical_chem_shift_list.Text_data' 
-tag.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.text_data_format'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'line'
-
-
-save_
-
-save__theoretical_chem_shift_list.text_data
-
-   _item_description.description
-;
-A set of theoretical chemical shift data formatted as ASCII text.
-;
-
-   _item.name                                  '_theoretical_chem_shift_list.text_data'
-   _item.category_id                           'theoretical_chem_shift_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'text'
-
-
-save_
-
-save_theoretical_chem_shift
-   _category.description
-;
-Items in the theoretical_chem_shift category describe the theoretical chemical shift values calculated for specific atoms in a molecular assembly.
-;
-   _category.id                   'theoretical_chem_shift'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_chem_shift.id'
-     '_theoretical_chem_shift.entry_id'
-     '_theoretical_chem_shift.theoretical_chem_shift_list_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_chem_shifts'
-
-   stop_
-
-save_
-
-save__theoretical_chem_shift.id
-
-   _item_description.description
-;
-Unique identifier for the calculated chemical shift value.
-;
-
-   _item.name                                  '_theoretical_chem_shift.id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift.assembly_atom_id
-
-   _item_description.description
-;
-Pointer to '_Atom.Assembly_atom_ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.assembly_atom_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift.entity_assembly_id
-
-   _item_description.description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.entity_assembly_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift.entity_id
-
-   _item_description.description
-;
-Pointer to '_Entity.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.entity_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift.comp_index_id
-
-   _item_description.description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.comp_index_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift.seq_id
-
-   _item_description.description
-;
-Pointer to '_Entity_poly_seq.Num'
-;
-
-   _item.name                                  '_theoretical_chem_shift.seq_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift.comp_id
-
-   _item_description.description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.comp_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__theoretical_chem_shift.atom_id
-
-   _item_description.description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.atom_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'atcode'
-
-
-save_
-
-save__theoretical_chem_shift.atom_type
-
-   _item_description.description
-;
-The value for this tag is a standard IUPAC abbreviation for an element 
-(i.e., H, C, P, etc).
-;
-
-   _item.name                                  '_theoretical_chem_shift.atom_type'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__theoretical_chem_shift.atom_isotope_number
-
-   _item_description.description
-;
-The mass number for the chemical element defined by the tag '_Atom_type' 
-or any of its related tags.
-;
-
-   _item.name                                  '_theoretical_chem_shift.atom_isotope_number'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'int'
-
-
-save_
-
-save__theoretical_chem_shift.fermi_contact_spin_density
-
-   _item_description.description
-;
-Fermi contact spin density
-;
-
-   _item.name                                  '_theoretical_chem_shift.fermi_contact_spin_density'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift.val
-
-   _item_description.description
-;
-Chem shift val
-;
-
-   _item.name                                  '_theoretical_chem_shift.val'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift.val_err
-
-   _item_description.description
-;
-Chem shift val err
-;
-
-   _item.name                                  '_theoretical_chem_shift.val_err'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'float'
-
-
-save_
-
-save__theoretical_chem_shift.auth_entity_assembly_id
-
-   _item_description.description
-;
-An alternative identifier for Entity_assembly_ID that may be provided by 
-an author in order to match that used in the publication that describes the experimental 
-data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
-;
-
-   _item.name                                  '_theoretical_chem_shift.auth_entity_assembly_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__theoretical_chem_shift.auth_seq_id
-
-   _item_description.description
-;
-An alternative identifier for Seq_ID that may be provided by an author 
-in order to match that used in the publication that describes the experimental data. 
- Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
-;
-
-   _item.name                                  '_theoretical_chem_shift.auth_seq_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-   loop_
-     _item_examples.case
-
-;
--3
-;
-
-   stop_
-
-save_
-
-save__theoretical_chem_shift.auth_comp_id
-
-   _item_description.description
-;
-An alternative identifier for Comp_ID that may be provided by an author 
-in order to match that used in the publication that describes the experimental data.
-;
-
-   _item.name                                  '_theoretical_chem_shift.auth_comp_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-   loop_
-     _item_examples.case
-
-;
-DPN
-;
-
-   stop_
-
-save_
-
-save__theoretical_chem_shift.auth_atom_id
-
-   _item_description.description
-;
-An alternative identifier for Atom_ID that may be provided by an author 
-in order to match that used in the publication that describes the experimental data.
-;
-
-   _item.name                                  '_theoretical_chem_shift.auth_atom_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-   loop_
-     _item_examples.case
-
-;
-HB1
-;
-
-   stop_
-
-save_
-
-save__theoretical_chem_shift.entry_id
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.entry_id'
-   _item.category_id                           'theoretical_chem_shift'
-   _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.flag          no
-   _item_type.code                             'code'
-
-
-save_
-
-save__theoretical_chem_shift.theoretical_chem_shift_list_id
-
-   _item_description.description
-;
-Pointer to '_Theoretical_chem_shift_list.ID'
-;
-
-   _item.name                                  '_theoretical_chem_shift.theoretical_chem_shift_list_id'
-   _item.category_id                           'theoretical_chem_shift'
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'int'
