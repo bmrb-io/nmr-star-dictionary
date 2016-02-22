@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2016-01-29
+#  version date -  2016-02-22
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.1.96
+    _dictionary.version         3.1.1.97
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.1.1.96         ?
+     3.1.1.97         ?
 ;
      ?
 ;
@@ -5438,7 +5438,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _pdbx_item_enumeration_details.flag          yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.1.96'
+   _item_default.value            '3.1.1.97'
 
    loop_
      _item_enumeration.value
@@ -43165,6 +43165,74 @@ detected in the experiment.
 
 save_
 
+save_Spectral_acq_param
+   _category.description
+;
+Items in the spectra_acq_param category define the acquisition parameters used in collecting the data in an NMR experiment.
+;
+   _category.id                   'Spectral_acq_param'
+
+   loop_
+     _category_key.name
+
+     '_Spectral_acq_param.ID'
+     '_Spectral_acq_param.Entry_ID'
+     '_Spectral_acq_param.NMR_spec_expt_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'NMR_spectrometer_expt'
+
+   stop_
+
+save_
+
+save__Spectral_acq_param.Spectral_dim
+
+   _item_description.description
+;
+The number of the spectral dimension where the parameter value is applied.
+;
+
+   _item.name                                  '_Spectral_acq_param.Spectral_dim'
+   _item.category_id                           'Spectral_acq_param'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Spectral_acq_param
+   _category.description
+;
+Items in the spectra_acq_param category define the acquisition parameters used in collecting the data in an NMR experiment.
+;
+   _category.id                   'Spectral_acq_param'
+
+   loop_
+     _category_key.name
+
+     '_Spectral_acq_param.ID'
+     '_Spectral_acq_param.Entry_ID'
+     '_Spectral_acq_param.NMR_spec_expt_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'NMR_spectrometer_expt'
+
+   stop_
+
+save_
+
 save__Spectral_acq_param.Val
 
    _item_description.description
@@ -43933,6 +44001,74 @@ Name for a NMR spectral processing parameter.
    _pdbx_item_enumeration_details.flag          no
    _item_type.code                             'line'
 
+
+save_
+
+save_Spectral_processing_param
+   _category.description
+;
+Items in the spectral_processing_param category describe the software parameters used in converting the raw spectral data into the fully processed spectrum.
+;
+   _category.id                   'Spectral_processing_param'
+
+   loop_
+     _category_key.name
+
+     '_Spectral_processing_param.ID'
+     '_Spectral_processing_param.Entry_ID'
+     '_Spectral_processing_param.NMR_spectral_processing_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'NMR_spectral_processing'
+
+   stop_
+
+save_
+
+save__Spectral_processing_param.Spectral_dim
+
+   _item_description.description
+;
+The number of the spectral dimension where the parameter value is applied.
+;
+
+   _item.name                                  '_Spectral_processing_param.Spectral_dim'
+   _item.category_id                           'Spectral_processing_param'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.flag          no
+   _item_type.code                             'int'
+
+
+save_
+
+save_Spectral_processing_param
+   _category.description
+;
+Items in the spectral_processing_param category describe the software parameters used in converting the raw spectral data into the fully processed spectrum.
+;
+   _category.id                   'Spectral_processing_param'
+
+   loop_
+     _category_key.name
+
+     '_Spectral_processing_param.ID'
+     '_Spectral_processing_param.Entry_ID'
+     '_Spectral_processing_param.NMR_spectral_processing_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'NMR_spectral_processing'
+
+   stop_
 
 save_
 
