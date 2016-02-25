@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2016-02-23
+#  version date -  2016-02-25
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -3749,8 +3749,10 @@ of the full list of saveframe categories available in constructing an NMR-STAR f
      _item_enumeration.detail
 
    assigned_chemical_shifts    ?
+   theoretical_chem_shifts    ?
    chemical_rates    ?
    coupling_constants    ?
+   theoretical_coupling_constants    ?
    spectral_peak_list    ?
    other_data_list    ?
    RDCs    ?
@@ -3770,12 +3772,16 @@ of the full list of saveframe categories available in constructing an NMR-STAR f
    conformer_family_coord_set    ?
    general_relaxation    ?
    heteronucl_T1_relaxation    ?
+   theoretical_heteronucl_T1_relaxation    ?
    heteronucl_T1rho_relaxation    ?
    heteronucl_T2_relaxation    ?
+   theoretical_heteronucl_T2_relaxation    ?
    heteronucl_NOEs    ?
+   theoretical_heteronucl_NOEs    ?
    homonucl_NOEs    ?
    dipole_dipole_relaxation    ?
-   dipole_dipole_cross_correlation_relaxation    ?
+   dipole_dipole_cross_correlations    ?
+   theoretical_dipole_dipole_cross_correlations    ?
    CSA_CSA_cross_correlation_relaxation    ?
    dipole_CSA_cross_correlation_relaxation    ?
 
@@ -3885,15 +3891,22 @@ A type of quantitative data found in the entry.
    '31P chemical shifts'    ?
    '111Cd chemical shifts'    ?
    '113Cd chemical shifts'    ?
+   'theoretical 1H chemical shifts'    ?
+   'theoretical 13C chemical shifts'    ?
+   'theoretical 15N chemical shifts'    ?
    'chemical rates'    ?
    'coupling constants'    ?
+   'theoretical coupling constants'    ?
    'chemical shift isotope effects'    ?
    'molecule interaction chemical shift values'    ?
    'T1 relaxation values'    ?
+   'theoretical T1 relaxation values'    ?
    'T1rho relaxation values'    ?
    'T2 relaxation values'    ?
+   'theoretical T2 relaxation values'    ?
    'dipole-dipole relaxation values'    ?
-   'cross correlation relaxation values'    ?
+   'dipole-dipole cross correlation relaxation values'    ?
+   'theoretical dipole-dipole cross-correlation values'    ?
    'chemical shift anisotropy values'    ?
    'chemical shift anisotropy tensor values'    ?
    'quadrupolar couplings'    ?
@@ -3903,6 +3916,7 @@ A type of quantitative data found in the entry.
    'dipolar coupling values'    ?
    'dipolar coupling tensor values'    ?
    'heteronuclear NOE values'    ?
+   'theoretical heteronuclear NOE values'    ?
    'homonuclear NOE values'    ?
    'order parameters'    ?
    'spectral density values'    ?

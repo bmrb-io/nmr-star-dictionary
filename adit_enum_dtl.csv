@@ -709,35 +709,41 @@ TBL_BEGIN,?,?,?
 252,2,anisotropic,enumeration_text
 252,3,solid,enumeration_text
 87,1,assigned_chemical_shifts,enumeration_text
-87,2,chemical_rates,enumeration_text
-87,3,coupling_constants,enumeration_text
-87,4,spectral_peak_list,enumeration_text
-87,5,other_data_list,enumeration_text
-87,6,RDCs,enumeration_text
-87,7,order_parameters,enumeration_text
-87,8,dipolar_couplings,enumeration_text
-87,9,spectral_density_values,enumeration_text
-87,10,H_exch_rates,enumeration_text
-87,11,H_exch_protection_factors,enumeration_text
-87,12,pKa_value_data_set,enumeration_text
-87,13,pH_NMR_param_list,enumeration_text
-87,14,binding_constants,enumeration_text
-87,15,D_H_fractionation_factors,enumeration_text
-87,16,molecular_axis_determinations,enumeration_text
-87,17,deduced_secd_struct_features,enumeration_text
-87,18,deduced_hydrogen_bonds,enumeration_text
-87,19,representative_conformer,enumeration_text
-87,20,conformer_family_coord_set,enumeration_text
-87,21,general_relaxation,enumeration_text
-87,22,heteronucl_T1_relaxation,enumeration_text
-87,23,heteronucl_T1rho_relaxation,enumeration_text
-87,24,heteronucl_T2_relaxation,enumeration_text
-87,25,heteronucl_NOEs,enumeration_text
-87,26,homonucl_NOEs,enumeration_text
-87,27,dipole_dipole_relaxation,enumeration_text
-87,28,dipole_dipole_cross_correlation_relaxation,enumeration_text
-87,29,CSA_CSA_cross_correlation_relaxation,enumeration_text
-87,30,dipole_CSA_cross_correlation_relaxation,enumeration_text
+87,2,theoretical_chem_shifts,enumeration_text
+87,3,chemical_rates,enumeration_text
+87,4,coupling_constants,enumeration_text
+87,5,theoretical_coupling_constants,enumeration_text
+87,6,spectral_peak_list,enumeration_text
+87,7,other_data_list,enumeration_text
+87,8,RDCs,enumeration_text
+87,9,order_parameters,enumeration_text
+87,10,dipolar_couplings,enumeration_text
+87,11,spectral_density_values,enumeration_text
+87,12,H_exch_rates,enumeration_text
+87,13,H_exch_protection_factors,enumeration_text
+87,14,pKa_value_data_set,enumeration_text
+87,15,pH_NMR_param_list,enumeration_text
+87,16,binding_constants,enumeration_text
+87,17,D_H_fractionation_factors,enumeration_text
+87,18,molecular_axis_determinations,enumeration_text
+87,19,deduced_secd_struct_features,enumeration_text
+87,20,deduced_hydrogen_bonds,enumeration_text
+87,21,representative_conformer,enumeration_text
+87,22,conformer_family_coord_set,enumeration_text
+87,23,general_relaxation,enumeration_text
+87,24,heteronucl_T1_relaxation,enumeration_text
+87,25,theoretical_heteronucl_T1_relaxation,enumeration_text
+87,26,heteronucl_T1rho_relaxation,enumeration_text
+87,27,heteronucl_T2_relaxation,enumeration_text
+87,28,theoretical_heteronucl_T2_relaxation,enumeration_text
+87,29,heteronucl_NOEs,enumeration_text
+87,30,theoretical_heteronucl_NOEs,enumeration_text
+87,31,homonucl_NOEs,enumeration_text
+87,32,dipole_dipole_relaxation,enumeration_text
+87,33,dipole_dipole_cross_correlations,enumeration_text
+87,34,theoretical_dipole_dipole_cross_correlations,enumeration_text
+87,35,CSA_CSA_cross_correlation_relaxation,enumeration_text
+87,36,dipole_CSA_cross_correlation_relaxation,enumeration_text
 88,1,1H chemical shifts,enumeration_text
 88,2,2H chemical shifts,enumeration_text
 88,3,3H chemical shifts,enumeration_text
@@ -746,52 +752,60 @@ TBL_BEGIN,?,?,?
 88,6,31P chemical shifts,enumeration_text
 88,7,111Cd chemical shifts,enumeration_text
 88,8,113Cd chemical shifts,enumeration_text
-88,9,chemical rates,enumeration_text
-88,10,coupling constants,enumeration_text
-88,11,chemical shift isotope effects,enumeration_text
-88,12,molecule interaction chemical shift values,enumeration_text
-88,13,T1 relaxation values,enumeration_text
-88,14,T1rho relaxation values,enumeration_text
-88,15,T2 relaxation values,enumeration_text
-88,16,dipole-dipole relaxation values,enumeration_text
-88,17,cross correlation relaxation values,enumeration_text
-88,18,chemical shift anisotropy values,enumeration_text
-88,19,chemical shift anisotropy tensor values,enumeration_text
-88,20,quadrupolar couplings,enumeration_text
-88,21,theoretical chemical shifts,enumeration_text
-88,22,chemical shift tensors,enumeration_text
-88,23,residual dipolar couplings,enumeration_text
-88,24,dipolar coupling values,enumeration_text
-88,25,dipolar coupling tensor values,enumeration_text
-88,26,heteronuclear NOE values,enumeration_text
-88,27,homonuclear NOE values,enumeration_text
-88,28,order parameters,enumeration_text
-88,29,spectral density values,enumeration_text
-88,30,H exchange rates,enumeration_text
-88,31,H exchange protection factors,enumeration_text
-88,32,pKa values,enumeration_text
-88,33,pH NMR parameter values,enumeration_text
-88,34,binding constants,enumeration_text
-88,35,D/H fractionation factors,enumeration_text
-88,36,bond orientation values,enumeration_text
-88,37,deduced secondary structure values,enumeration_text
-88,38,deduced hydrogen bonds,enumeration_text
-88,39,distance constraints,enumeration_text
-88,40,ambiguous distance constraints,enumeration_text
-88,41,hydrogen bond distance constraints,enumeration_text
-88,42,torsion angle constraints,enumeration_text
-88,43,chemical shift constraints,enumeration_text
-88,44,symmetry constraints,enumeration_text
-88,45,19F chemical shifts,enumeration_text
-88,46,6Li chemical shifts,enumeration_text
-88,47,10B chemical shifts,enumeration_text
-88,48,11B chemical shifts,enumeration_text
-88,49,17O chemical shifts,enumeration_text
-88,50,23Na chemical shifts,enumeration_text
-88,51,29Si chemical shifts,enumeration_text
-88,52,35Cl chemical shifts,enumeration_text
-88,53,129Xe chemical shifts,enumeration_text
-88,54,195Pt chemical shifts,enumeration_text
+88,9,theoretical 1H chemical shifts,enumeration_text
+88,10,theoretical 13C chemical shifts,enumeration_text
+88,11,theoretical 15N chemical shifts,enumeration_text
+88,12,chemical rates,enumeration_text
+88,13,coupling constants,enumeration_text
+88,14,theoretical coupling constants,enumeration_text
+88,15,chemical shift isotope effects,enumeration_text
+88,16,molecule interaction chemical shift values,enumeration_text
+88,17,T1 relaxation values,enumeration_text
+88,18,theoretical T1 relaxation values,enumeration_text
+88,19,T1rho relaxation values,enumeration_text
+88,20,T2 relaxation values,enumeration_text
+88,21,theoretical T2 relaxation values,enumeration_text
+88,22,dipole-dipole relaxation values,enumeration_text
+88,23,dipole-dipole cross correlation relaxation values,enumeration_text
+88,24,theoretical dipole-dipole cross-correlation values,enumeration_text
+88,25,chemical shift anisotropy values,enumeration_text
+88,26,chemical shift anisotropy tensor values,enumeration_text
+88,27,quadrupolar couplings,enumeration_text
+88,28,theoretical chemical shifts,enumeration_text
+88,29,chemical shift tensors,enumeration_text
+88,30,residual dipolar couplings,enumeration_text
+88,31,dipolar coupling values,enumeration_text
+88,32,dipolar coupling tensor values,enumeration_text
+88,33,heteronuclear NOE values,enumeration_text
+88,34,theoretical heteronuclear NOE values,enumeration_text
+88,35,homonuclear NOE values,enumeration_text
+88,36,order parameters,enumeration_text
+88,37,spectral density values,enumeration_text
+88,38,H exchange rates,enumeration_text
+88,39,H exchange protection factors,enumeration_text
+88,40,pKa values,enumeration_text
+88,41,pH NMR parameter values,enumeration_text
+88,42,binding constants,enumeration_text
+88,43,D/H fractionation factors,enumeration_text
+88,44,bond orientation values,enumeration_text
+88,45,deduced secondary structure values,enumeration_text
+88,46,deduced hydrogen bonds,enumeration_text
+88,47,distance constraints,enumeration_text
+88,48,ambiguous distance constraints,enumeration_text
+88,49,hydrogen bond distance constraints,enumeration_text
+88,50,torsion angle constraints,enumeration_text
+88,51,chemical shift constraints,enumeration_text
+88,52,symmetry constraints,enumeration_text
+88,53,19F chemical shifts,enumeration_text
+88,54,6Li chemical shifts,enumeration_text
+88,55,10B chemical shifts,enumeration_text
+88,56,11B chemical shifts,enumeration_text
+88,57,17O chemical shifts,enumeration_text
+88,58,23Na chemical shifts,enumeration_text
+88,59,29Si chemical shifts,enumeration_text
+88,60,35Cl chemical shifts,enumeration_text
+88,61,129Xe chemical shifts,enumeration_text
+88,62,195Pt chemical shifts,enumeration_text
 323,1,isotropic,enumeration_text
 323,2,anisotropic,enumeration_text
 323,3,solid,enumeration_text
