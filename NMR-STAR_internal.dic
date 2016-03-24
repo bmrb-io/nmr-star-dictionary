@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2016-03-21
+#  version date -  2016-03-24
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.2.2
+    _dictionary.version         3.1.2.4
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.1.2.2         ?
+     3.1.2.4         ?
 ;
      ?
 ;
@@ -5375,7 +5375,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.2.2'
+   _item_default.value            '3.1.2.4'
 
    loop_
      _item_enumeration.value
@@ -50020,7 +50020,7 @@ save_
 save_Theoretical_coupling_constant_list
    _category.description
 ;
-              category description not available
+Items in the theoretical_coupling_constant_list category provide information about a list of reported theoretical coupling constant values.
 ;
    _category.id                   'Theoretical_coupling_constant_list'
 
@@ -50294,7 +50294,7 @@ save_
 save_Theoretical_coupling_constant_experiment
    _category.description
 ;
-              category description not available
+Items in the theoretical_coupling_constant_experiment category may provide pointers to the NMR experiments modeled in calculating the theoretical coupling constants. This items may not be used.
 ;
    _category.id                   'Theoretical_coupling_constant_experiment'
 
@@ -50451,7 +50451,7 @@ save_
 save_Theoretical_coupling_constant_software
    _category.description
 ;
-              category description not available
+Items in the theoretical_coupling_constant_software category provides pointers to the software and methods used to generate the theoretical coupling constants.
 ;
    _category.id                   'Theoretical_coupling_constant_software'
 
@@ -50582,7 +50582,7 @@ save_
 save_Theoretical_coupling_constant
    _category.description
 ;
-              category description not available
+Items in the theoretical_coupling_constant category describe the theoretical coupling constant values assigned to specific atoms in a molecular assembly.
 ;
    _category.id                   'Theoretical_coupling_constant'
 
@@ -68960,7 +68960,7 @@ save_
 save_Theoretical_heteronucl_NOE_list
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_NOE_list category provide information about a list of reported theoretical heteronuclear NOE values.
 ;
    _category.id                   'Theoretical_heteronucl_NOE_list'
 
@@ -69338,7 +69338,7 @@ save_
 save_Theoretical_heteronucl_NOE_experiment
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_NOE_experiment category may provide pointers to NMR experiments and samples modeled to generate the data for a set of reported theoretical heteronuclear NOE values.
 ;
    _category.id                   'Theoretical_heteronucl_NOE_experiment'
 
@@ -69559,7 +69559,7 @@ save_
 save_Theoretical_heteronucl_NOE_software
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_NOE_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to generate the theoretical heteronuclear NOE values can be found.
 ;
    _category.id                   'Theoretical_heteronucl_NOE_software'
 
@@ -69730,7 +69730,7 @@ save_
 save_Theoretical_heteronucl_NOE
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_NOE category capture theoretical heteronuclear NOE values for pairs of nuclei.
 ;
    _category.id                   'Theoretical_heteronucl_NOE'
 
@@ -71466,7 +71466,7 @@ save_
 save_Theoretical_heteronucl_T1_list
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_T1_list category provide information about a list of reported theoretical heteronuclear T1 relaxation values.
 ;
    _category.id                   'Theoretical_heteronucl_T1_list'
 
@@ -71791,7 +71791,7 @@ save_
 save_Theoretical_heteronucl_T1_experiment
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_T1_experiment category may provide pointers to the NMR experiments and samples modeled to generate the data for a set of reported theoretical heteronuclear T1 values.
 ;
    _category.id                   'Theoretical_heteronucl_T1_experiment'
 
@@ -71948,7 +71948,7 @@ save_
 save_Theoretical_heteronucl_T1_software
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_T1_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to generate the theoretical data can be found.
 ;
    _category.id                   'Theoretical_heteronucl_T1_software'
 
@@ -72079,7 +72079,7 @@ save_
 save_Theoretical_T1
    _category.description
 ;
-              category description not available
+Items in the theoretical_T1 category capture theoretical T1 relaxation values for defined nuclei.
 ;
    _category.id                   'Theoretical_T1'
 
@@ -74587,7 +74587,7 @@ save_
 save_Theoretical_heteronucl_T2_list
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_T2_list category provide information about a list of reported theoretical heteronuclear T2 relaxation values.
 ;
    _category.id                   'Theoretical_heteronucl_T2_list'
 
@@ -74983,7 +74983,7 @@ save_
 save_Theoretical_heteronucl_T2_experiment
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_T2_experiment category may provide pointers to the NMR experiments and samples modeled to generate the data for a set of reported theoretical heteronuclear T2 values.
 ;
    _category.id                   'Theoretical_heteronucl_T2_experiment'
 
@@ -75140,7 +75140,7 @@ save_
 save_Theoretical_heteronucl_T2_software
    _category.description
 ;
-              category description not available
+Items in the theoretical_heteronucl_T2_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to generate the theoretical data can be found.
 ;
    _category.id                   'Theoretical_heteronucl_T2_software'
 
@@ -75271,7 +75271,7 @@ save_
 save_Theoretical_T2
    _category.description
 ;
-              category description not available
+Items in the theoretical_T2 category capture theoretical T2 relaxation values for defined nuclei.
 ;
    _category.id                   'Theoretical_T2'
 
@@ -76863,7 +76863,7 @@ save_
 save_Theoretical_auto_relaxation_list
    _category.description
 ;
-              category description not available
+Items in the theoretical_auto_relaxation_list category provide information about a list of reported theoretical auto relaxation values.
 ;
    _category.id                   'Theoretical_auto_relaxation_list'
 
@@ -77373,7 +77373,7 @@ save_
 save_Theoretical_auto_relaxation_experiment
    _category.description
 ;
-              category description not available
+Items in the theoretical_auto_relaxation_experiment category may provide pointers to the NMR experiments and samples modeled to generate the data for a set of reported theoretical auto relaxation data.
 ;
    _category.id                   'Theoretical_auto_relaxation_experiment'
 
@@ -77530,7 +77530,7 @@ save_
 save_Theoretical_auto_relaxation_software
    _category.description
 ;
-              category description not available
+Items in the theoretical_auto_relaxation_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to generate the theoretical data.
 ;
    _category.id                   'Theoretical_auto_relaxation_software'
 
@@ -77661,7 +77661,7 @@ save_
 save_Theoretical_auto_relaxation
    _category.description
 ;
-              category description not available
+Items in the theoretical_auto_relaxation category capture theoretical auto relaxation values for defined nuclei in a molecular assembly.
 ;
    _category.id                   'Theoretical_auto_relaxation'
 
@@ -79350,9 +79350,9 @@ Unique identifier for the list of cross-correlation values.
       _item.mandatory_code
 
   '_Cross_correlation_DD_list.ID'                        'Cross_correlation_DD_list'               yes
-  '_Cross_correlation_DD_experiment.Cross_correlation_list_ID'                           'Cross_correlation_DD_experiment'                   yes
-  '_Cross_correlation_DD_software.Cross_correlation_list_ID'                             'Cross_correlation_DD_software'                     yes
-  '_Cross_correlation_DD.Cross_correlation_list_ID'                                      'Cross_correlation_DD'          yes
+  '_Cross_correlation_DD_experiment.Cross_correlation_DD_list_ID'                        'Cross_correlation_DD_experiment'                   yes
+  '_Cross_correlation_DD_software.Cross_correlation_DD_list_ID'                          'Cross_correlation_DD_software'                     yes
+  '_Cross_correlation_DD.Cross_correlation_DD_list_ID'                                   'Cross_correlation_DD'          yes
 
   stop_
 
@@ -79360,9 +79360,9 @@ Unique identifier for the list of cross-correlation values.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Cross_correlation_DD_experiment.Cross_correlation_list_ID'                           '_Cross_correlation_DD_list.ID'
-  '_Cross_correlation_DD_software.Cross_correlation_list_ID'                             '_Cross_correlation_DD_list.ID'
-  '_Cross_correlation_DD.Cross_correlation_list_ID'                                      '_Cross_correlation_DD_list.ID'
+  '_Cross_correlation_DD_experiment.Cross_correlation_DD_list_ID'                        '_Cross_correlation_DD_list.ID'
+  '_Cross_correlation_DD_software.Cross_correlation_DD_list_ID'                          '_Cross_correlation_DD_list.ID'
+  '_Cross_correlation_DD.Cross_correlation_DD_list_ID'                                   '_Cross_correlation_DD_list.ID'
 
   stop_
 
@@ -79536,7 +79536,7 @@ Items in the cross_correlation_DD_experiment category provide pointers to the NM
 
      '_Cross_correlation_DD_experiment.Experiment_ID'
      '_Cross_correlation_DD_experiment.Entry_ID'
-     '_Cross_correlation_DD_experiment.Cross_correlation_list_ID'
+     '_Cross_correlation_DD_experiment.Cross_correlation_DD_list_ID'
 
    stop_
 
@@ -79666,14 +79666,14 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__Cross_correlation_DD_experiment.Cross_correlation_list_ID
+save__Cross_correlation_DD_experiment.Cross_correlation_DD_list_ID
 
    _item_description.description
 ;
 Pointer to '_Cross_correlation_DD_list.ID'
 ;
 
-   _item.name                                  '_Cross_correlation_DD_experiment.Cross_correlation_list_ID'
+   _item.name                                  '_Cross_correlation_DD_experiment.Cross_correlation_DD_list_ID'
    _item.category_id                           'Cross_correlation_DD_experiment'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
@@ -79693,7 +79693,7 @@ Items in the cross_correlation_DD_software category provide pointers to the soft
 
      '_Cross_correlation_DD_software.Software_ID'
      '_Cross_correlation_DD_software.Entry_ID'
-     '_Cross_correlation_DD_software.Cross_correlation_list_ID'
+     '_Cross_correlation_DD_software.Cross_correlation_DD_list_ID'
 
    stop_
 
@@ -79797,14 +79797,14 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__Cross_correlation_DD_software.Cross_correlation_list_ID
+save__Cross_correlation_DD_software.Cross_correlation_DD_list_ID
 
    _item_description.description
 ;
 Pointer to '_Cross_correlation_DD_list.ID'
 ;
 
-   _item.name                                  '_Cross_correlation_DD_software.Cross_correlation_list_ID'
+   _item.name                                  '_Cross_correlation_DD_software.Cross_correlation_DD_list_ID'
    _item.category_id                           'Cross_correlation_DD_software'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
@@ -79824,7 +79824,7 @@ Items in the cross_correlation_DD category describe the dipole-dipole cross-corr
 
      '_Cross_correlation_DD.ID'
      '_Cross_correlation_DD.Entry_ID'
-     '_Cross_correlation_DD.Cross_correlation_list_ID'
+     '_Cross_correlation_DD.Cross_correlation_DD_list_ID'
 
    stop_
 
@@ -80886,14 +80886,14 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__Cross_correlation_DD.Cross_correlation_list_ID
+save__Cross_correlation_DD.Cross_correlation_DD_list_ID
 
    _item_description.description
 ;
 Pointer to '_Cross_correlation_DD_list.ID'
 ;
 
-   _item.name                                  '_Cross_correlation_DD.Cross_correlation_list_ID'
+   _item.name                                  '_Cross_correlation_DD.Cross_correlation_DD_list_ID'
    _item.category_id                           'Cross_correlation_DD'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
@@ -80904,7 +80904,7 @@ save_
 save_Theoretical_cross_correlation_DD_list
    _category.description
 ;
-              category description not available
+Items in the theoretical_cross_correlation_DD_list category provide information about a list of reported theoretical dipole-dipole cross correlation values.
 ;
    _category.id                   'Theoretical_cross_correlation_DD_list'
 
@@ -81194,7 +81194,7 @@ save_
 save_Theoretical_cross_correlation_DD_experiment
    _category.description
 ;
-              category description not available
+Items in the theoretical_cross_correlation_DD_experiment category may provide pointers to the NMR experiments and samples modeled to collect the data for a set of reported theoretical cross-correlation dipole-dipole relaxation values.
 ;
    _category.id                   'Theoretical_cross_correlation_DD_experiment'
 
@@ -81351,7 +81351,7 @@ save_
 save_Theoretical_cross_correlation_DD_software
    _category.description
 ;
-              category description not available
+Items in the theoretical_cross_correlation_DD_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to generate the theoretical cross correlation dipole-dipole values can be found.
 ;
    _category.id                   'Theoretical_cross_correlation_DD_software'
 
@@ -81482,7 +81482,7 @@ save_
 save_Theoretical_cross_correlation_DD
    _category.description
 ;
-              category description not available
+Items in the theoretical_cross_correlation_DD category describe the theoretical cross-correlation dipole-dipole values assigned to a molecular assembly.
 ;
    _category.id                   'Theoretical_cross_correlation_DD'
 
