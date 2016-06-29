@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2016-03-24
+#  version date -  2016-06-29
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.1.2.5
+    _dictionary.version         3.1.2.6
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.1.2.5         ?
+     3.1.2.6         ?
 ;
      ?
 ;
@@ -5375,7 +5375,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.1.2.5'
+   _item_default.value            '3.1.2.6'
 
    loop_
      _item_enumeration.value
@@ -7878,7 +7878,7 @@ name when publishing.
 
    _item.name                                  '_Entry_author.Given_name'
    _item.category_id                           'Entry_author'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _item_type.code                             'line'
 
    loop_
@@ -14437,7 +14437,7 @@ The resolution of the data in a structure entry.
      _item_examples.case
 
 ;
-1.3A
+1.3
 ;
 
    stop_
@@ -45178,6 +45178,7 @@ chemical shift reference for the defined observed nuclei.
    'methyl protons'    ?
    'methylene protons'    ?
    nitrogen    ?
+   phosphorus    ?
    protons    ?
 
    stop_
@@ -46924,6 +46925,82 @@ residue ambiguities, etc.
 
    stop_
 
+
+save_
+
+save_Atom_chem_shift
+   _category.description
+;
+Items in the atom_chem_shift category describe the chemical shift values assigned to specific atoms in a molecular assembly.
+;
+   _category.id                   'Atom_chem_shift'
+
+   loop_
+     _category_key.name
+
+     '_Atom_chem_shift.ID'
+     '_Atom_chem_shift.Entry_ID'
+     '_Atom_chem_shift.Assigned_chem_shift_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'assigned_chemical_shifts'
+
+   stop_
+
+save_
+
+save__Atom_chem_shift.Ambiguity_set_ID
+
+   _item_description.description
+;
+The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
+of 4, 5, or 6 that form a known set of related chemical shift assignments.
+;
+
+   _item.name                                  '_Atom_chem_shift.Ambiguity_set_ID'
+   _item.category_id                           'Atom_chem_shift'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+   loop_
+     _item_examples.case
+
+;
+1
+;
+
+   stop_
+
+save_
+
+save_Atom_chem_shift
+   _category.description
+;
+Items in the atom_chem_shift category describe the chemical shift values assigned to specific atoms in a molecular assembly.
+;
+   _category.id                   'Atom_chem_shift'
+
+   loop_
+     _category_key.name
+
+     '_Atom_chem_shift.ID'
+     '_Atom_chem_shift.Entry_ID'
+     '_Atom_chem_shift.Assigned_chem_shift_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'assigned_chemical_shifts'
+
+   stop_
 
 save_
 
@@ -108040,7 +108117,7 @@ save__Tensor.Axial_sym_axis_polar_angle
    _item.name                                  '_Tensor.Axial_sym_axis_polar_angle'
    _item.category_id                           'Tensor'
    _item.mandatory_code                         no
-   _item_type.code                             'int'
+   _item_type.code                             'float'
 
 
 save_
