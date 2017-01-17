@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-01-03
+#  version date -  2017-01-17
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -5396,8 +5396,7 @@ The name of the file format being used to express this data set.
      _item_enumeration.value
      _item_enumeration.detail
 
-   NMR-STAR    ‘NMR-STAR
-   file    format’
+   NMR-STAR    'NMR-STAR file format'
 
    stop_
 
@@ -52873,47 +52872,12 @@ save__Spectral_dim_transfer.Type
      _item_enumeration.value
      _item_enumeration.detail
 
-   onebond:    ‘Any
-   transfer    that
-   connects    only
-   directly    bonded
-   atoms    in
-   this    experiment’
-   jcoupling:    ‘Transfer
-   via    direct
-   J    coupling
-   over    one
-   or    more
-   bonds’    ?
-   ‘Transfer    via
-   direct    J
-   coupling    over
-   multiple    bonds’
-   relayed:    ‘Transfer
-   via    multiple
-   successive    J
-   coupling    steps
-   (TOCSY    relay
-   …)’    ?
-   ‘Relayed    transfer
-   where    peaks
-   from    an
-   odd    resp.
-   even    number
-   of    transfer
-   steps    have
-   opposite    sign’
-   through-space:    ‘Any
-   transfer    that
-   does    not
-   go    through
-   the    covalent
-   bonded    skeleton
-   (NOESY    ROESY
-   ...    but
-   also    J
-   coupling    through
-   hydrogen    bonds)’
+   onebond    'Any transfer that connects only directly bonded atoms in this experiment'
+   jcoupling    'Transfer via direct J coupling over one or more bonds'
+   jmultibond    'Transfer via direct J coupling over multiple bonds'
+   relayed    'Transfer via multiple successive J coupling steps (TOCSY relay)'
+   relayed-alternate    'Relayed transfer where peaks from an odd resp. even number of transfer steps have opposite sign'
+   through-space    'Any transfer that does not go through the covalent bonded skeleton (NOESY ROESY ... but also J coupling through hydrogen bonds)'
 
    stop_
 
@@ -114646,26 +114610,10 @@ The potential type used to model the distance restraints.
    parabolic    ?
    square-well-parabolic    ?
    square-well-parabolic-linear    ?
-   upper-bound-parabolic    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
-   lower-bound-parabolic    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
-   upper-bound-parabolic-linear    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
-   lower-bound-parabolic-linear    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
+   upper-bound-parabolic    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic    'can be derived from the two-sided versions given above'
+   upper-bound-parabolic-linear    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic-linear    'can be derived from the two-sided versions given above'
 
    stop_
 
@@ -120491,26 +120439,10 @@ The potential type used to model the dihedral constraints.
    parabolic    ?
    square-well-parabolic    ?
    square-well-parabolic-linear    ?
-   upper-bound-parabolic    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
-   lower-bound-parabolic    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
-   upper-bound-parabolic-linear    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
-   lower-bound-parabolic-linear    ‘can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above’
+   upper-bound-parabolic    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic    'can be derived from the two-sided versions given above'
+   upper-bound-parabolic-linear    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic-linear    'can be derived from the two-sided versions given above'
 
    stop_
 
@@ -120534,6 +120466,8 @@ The source of the constraints (e.g. 'noe', 'hbond', 'measured'.
      _item_enumeration.value
      _item_enumeration.detail
 
+   J-couplings    ?
+   'backbone chemical shifts'    ?
 
    stop_
 
