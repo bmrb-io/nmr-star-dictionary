@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-01-17
+#  version date -  2017-01-18
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.1
+    _dictionary.version         3.2.0.2
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.1         ?
+     3.2.0.2         ?
 ;
      ?
 ;
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.1'
+   _item_default.value            '3.2.0.2'
 
    loop_
      _item_enumeration.value
@@ -2881,6 +2881,87 @@ theoretical, etc.).
 ;
 Solution
 ;
+
+   stop_
+
+save_
+
+save_entry
+   _category.description
+;
+Items in the entry category describe an entry.
+;
+   _category.id                   'entry'
+   _category.mandatory_code       yes
+
+   loop_
+     _category_key.name
+
+     '_entry.id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_information'
+
+   stop_
+
+save_
+
+save__entry.source_data_format
+
+   _item_description.description
+;
+The source format for data converted to NMR-STAR populating the entry.
+;
+
+   _item.name                                  '_entry.source_data_format'
+   _item.category_id                           'entry'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save__entry.source_data_format_version
+
+   _item_description.description
+;
+The source format version for data converted from another format and included 
+in the entry.
+;
+
+   _item.name                                  '_entry.source_data_format_version'
+   _item.category_id                           'entry'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save_entry
+   _category.description
+;
+Items in the entry category describe an entry.
+;
+   _category.id                   'entry'
+   _category.mandatory_code       yes
+
+   loop_
+     _category_key.name
+
+     '_entry.id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_information'
 
    stop_
 
