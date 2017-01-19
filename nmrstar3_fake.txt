@@ -1460,7 +1460,7 @@ save_<chem_comp>
   _Chem_comp.Number_atoms_nh                          2
   _Chem_comp.PubChem_code                             "Short string value"
   _Chem_comp.Subcomponent_list                        "Possible multiline text"
-  _Chem_comp.InCHi_code                               "Very very long phrase"
+  _Chem_comp.InCHI_code                               "Very very long phrase"
   _Chem_comp.Mon_nstd_flag                            yes/no
   _Chem_comp.Mon_nstd_class                           "Possible multiline text"
   _Chem_comp.Mon_nstd_details                         "Possible multiline text"
@@ -8944,19 +8944,19 @@ save_<MS_chromatogram>
 
 save_
 
-save_<NEF_specific_software_saveframes>
-  _Software_specific_NEF_info_list.Sf_category     NEF_specific_software_saveframes
-  _Software_specific_NEF_info_list.Sf_framecode     <NEF_specific_software_saveframes>
-  _Software_specific_NEF_info_list.Entry_ID          1
-  _Software_specific_NEF_info_list.Sf_ID             2
-  _Software_specific_NEF_info_list.ID                2
+save_<Software_specific_saveframes>
+  _Software_specific_info_list.Sf_category     Software_specific_saveframes
+  _Software_specific_info_list.Sf_framecode     <Software_specific_saveframes>
+  _Software_specific_info_list.Entry_ID          1
+  _Software_specific_info_list.Sf_ID             2
+  _Software_specific_info_list.ID                2
 
   loop_
-     _Software_specific_NEF_info.Software_NEF_saveframe_ID                   
-     _Software_specific_NEF_info.Software_NEF_saveframe                      
-     _Software_specific_NEF_info.Sf_ID                                       
-     _Software_specific_NEF_info.Entry_ID                                    
-     _Software_specific_NEF_info.Software_specific_NEF_info_list_ID          
+     _Software_specific_info.Software_saveframe_ID                   
+     _Software_specific_info.Software_saveframe                      
+     _Software_specific_info.Sf_ID                                   
+     _Software_specific_info.Entry_ID                                
+     _Software_specific_info.Software_specific_info_list_ID          
 
     2  "Possible multiline text"  2  1  2    
 

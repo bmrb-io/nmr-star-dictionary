@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-01-18
+#  version date -  2017-01-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.2
+    _dictionary.version         3.2.0.4
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.2         ?
+     3.2.0.4         ?
 ;
      ?
 ;
@@ -2115,8 +2115,8 @@ BMRB accession number for this entry
   '_ms_chromatogram_param.entry_id'                      'ms_chromatogram_param'         yes
   '_ms_chromatogram_ion.entry_id'                        'ms_chromatogram_ion'           yes
   '_ms_chrom_ion_annotation.entry_id'                    'ms_chrom_ion_annotation'       yes
-  '_software_specific_nef_info_list.entry_id'            'software_specific_nef_info_list'                   yes
-  '_software_specific_nef_info.entry_id'                 'software_specific_nef_info'                        yes
+  '_software_specific_info_list.entry_id'                'software_specific_info_list'                       yes
+  '_software_specific_info.entry_id'                     'software_specific_info'        yes
   '_software_applied_list.entry_id'                      'software_applied_list'         yes
   '_software_applied_methods.entry_id'                   'software_applied_methods'      yes
   '_software_applied_history.entry_id'                   'software_applied_history'      yes
@@ -2428,8 +2428,8 @@ BMRB accession number for this entry
   '_ms_chromatogram_param.entry_id'                      '_entry.id'
   '_ms_chromatogram_ion.entry_id'                        '_entry.id'
   '_ms_chrom_ion_annotation.entry_id'                    '_entry.id'
-  '_software_specific_nef_info_list.entry_id'            '_entry.id'
-  '_software_specific_nef_info.entry_id'                 '_entry.id'
+  '_software_specific_info_list.entry_id'                '_entry.id'
+  '_software_specific_info.entry_id'                     '_entry.id'
   '_software_applied_list.entry_id'                      '_entry.id'
   '_software_applied_methods.entry_id'                   '_entry.id'
   '_software_applied_history.entry_id'                   '_entry.id'
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.2'
+   _item_default.value            '3.2.0.4'
 
    loop_
      _item_enumeration.value
@@ -2886,31 +2886,6 @@ Solution
 
 save_
 
-save_entry
-   _category.description
-;
-Items in the entry category describe an entry.
-;
-   _category.id                   'entry'
-   _category.mandatory_code       yes
-
-   loop_
-     _category_key.name
-
-     '_entry.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'entry_information'
-
-   stop_
-
-save_
-
 save__entry.source_data_format
 
    _item_description.description
@@ -2939,31 +2914,6 @@ in the entry.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_entry
-   _category.description
-;
-Items in the entry category describe an entry.
-;
-   _category.id                   'entry'
-   _category.mandatory_code       yes
-
-   loop_
-     _category_key.name
-
-     '_entry.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'entry_information'
-
-   stop_
 
 save_
 
@@ -21677,7 +21627,7 @@ save__chem_comp.inchi_code
 
    _item_description.description
 ;
-Enter the InCHi code that uniquely describes the chemical structure of 
+Enter the InCHI code that uniquely describes the chemical structure of 
 the compound.
 ;
 
@@ -23016,16 +22966,16 @@ This data item contains the descriptor type.
    SMILES_CANONICAL    'Canonical SMILES descriptor'
    SMILES_ISOMERIC    'Isomeric SMILES descriptor'
    SMILES    'SMILES descriptor'
-   INCHI    'InChi descriptor'
-   INCHI_MAIN    'InChi descriptor- main layer'
-   INCHI_MAIN_FORMULA    'InChi descriptor- main layer - chemical formula sub-layer'
-   INCHI_MAIN_CONNECT    'InChi descriptor- main layer - atom connection sub-layer'
-   INCHI_MAIN_HATOM    'InChi descriptor- main layer - hydrogen atom sub-layer'
-   INCHI_CHARGE    'InChi descriptor- charge layer'
-   INCHI_STEREO    'InChi descriptor- stereochemical layer'
-   INCHI_ISOTOPE    'InChi descriptor- isotopic layer'
-   INCHI_FIXEDH    'InChi descriptor- fixed hydrogren layer'
-   INCHI_RECONNECT    'InChi descriptor- reconnected layer'
+   InCHI    'InCHI descriptor'
+   InCHI_MAIN    'InCHI descriptor- main layer'
+   InCHI_MAIN_FORMULA    'InCHI descriptor- main layer - chemical formula sub-layer'
+   InCHI_MAIN_CONNECT    'InCHI descriptor- main layer - atom connection sub-layer'
+   InCHI_MAIN_HATOM    'InCHI descriptor- main layer - hydrogen atom sub-layer'
+   InCHI_CHARGE    'InCHI descriptor- charge layer'
+   InCHI_STEREO    'InCHI descriptor- stereochemical layer'
+   InCHI_ISOTOPE    'InCHI descriptor- isotopic layer'
+   InCHI_FIXEDH    'InCHI descriptor- fixed hydrogren layer'
+   InCHI_RECONNECT    'InCHI descriptor- reconnected layer'
 
    stop_
 
@@ -121129,18 +121079,18 @@ Pointer to '_MS_chromatogram_list.ID'
 
 save_
 
-save_software_specific_nef_info_list
+save_software_specific_info_list
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'software_specific_nef_info_list'
+   _category.id                   'software_specific_info_list'
 
    loop_
      _category_key.name
 
-     '_software_specific_nef_info_list.entry_id'
-     '_software_specific_nef_info_list.id'
+     '_software_specific_info_list.entry_id'
+     '_software_specific_info_list.id'
 
    stop_
 
@@ -121148,28 +121098,28 @@ save_software_specific_nef_info_list
      _category_group.id
 
      'inclusive_group'
-     'nef_specific_software_saveframes'
+     'software_specific_saveframes'
 
    stop_
 
 save_
 
-save__software_specific_nef_info_list.sf_category
+save__software_specific_info_list.sf_category
 
    _item_description.description
 ;
 Category definition for the information content of the saveframe
 ;
 
-   _item.name                                  '_software_specific_nef_info_list.sf_category'
-   _item.category_id                           'software_specific_nef_info_list'
+   _item.name                                  '_software_specific_info_list.sf_category'
+   _item.category_id                           'software_specific_info_list'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__software_specific_nef_info_list.sf_framecode
+save__software_specific_info_list.sf_framecode
 
    _item_description.description
 ;
@@ -121177,35 +121127,35 @@ A label for the saveframe that describes in very brief terms the information
 contained in the saveframe.
 ;
 
-   _item.name                                  '_software_specific_nef_info_list.sf_framecode'
-   _item.category_id                           'software_specific_nef_info_list'
+   _item.name                                  '_software_specific_info_list.sf_framecode'
+   _item.category_id                           'software_specific_info_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
 
 
 save_
 
-save__software_specific_nef_info_list.entry_id
+save__software_specific_info_list.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_software_specific_nef_info_list.entry_id'
-   _item.category_id                           'software_specific_nef_info_list'
+   _item.name                                  '_software_specific_info_list.entry_id'
+   _item.category_id                           'software_specific_info_list'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__software_specific_nef_info_list.id
+save__software_specific_info_list.id
 
    _item_description.description
 ;
-Unique identifier for the list of reported imported NEF software specific 
-save frames.
+Unique identifier for the list of reported imported software specific save 
+frames.
 ;
 
   loop_
@@ -121213,8 +121163,8 @@ save frames.
       _item.category_id
       _item.mandatory_code
 
-  '_software_specific_nef_info_list.id'                  'software_specific_nef_info_list'         yes
-  '_software_specific_nef_info.software_specific_nef_info_list_id'                       'software_specific_nef_info'                        yes
+  '_software_specific_info_list.id'                      'software_specific_info_list'             yes
+  '_software_specific_info.software_specific_info_list_id'                               'software_specific_info'        yes
 
   stop_
 
@@ -121222,7 +121172,7 @@ save frames.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_software_specific_nef_info.software_specific_nef_info_list_id'                       '_software_specific_nef_info_list.id'
+  '_software_specific_info.software_specific_info_list_id'                               '_software_specific_info_list.id'
 
   stop_
 
@@ -121231,19 +121181,19 @@ save frames.
 
 save_
 
-save_software_specific_nef_info
+save_software_specific_info
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'software_specific_nef_info'
+   _category.id                   'software_specific_info'
 
    loop_
      _category_key.name
 
-     '_software_specific_nef_info.software_nef_saveframe_id'
-     '_software_specific_nef_info.entry_id'
-     '_software_specific_nef_info.software_specific_nef_info_list_id'
+     '_software_specific_info.software_saveframe_id'
+     '_software_specific_info.entry_id'
+     '_software_specific_info.software_specific_info_list_id'
 
    stop_
 
@@ -121251,66 +121201,67 @@ save_software_specific_nef_info
      _category_group.id
 
      'inclusive_group'
-     'nef_specific_software_saveframes'
+     'software_specific_saveframes'
 
    stop_
 
 save_
 
-save__software_specific_nef_info.software_nef_saveframe_id
+save__software_specific_info.software_saveframe_id
 
    _item_description.description
 ;
 Identifier for each saveframe captured in the loop structure.
 ;
 
-   _item.name                                  '_software_specific_nef_info.software_nef_saveframe_id'
-   _item.category_id                           'software_specific_nef_info'
+   _item.name                                  '_software_specific_info.software_saveframe_id'
+   _item.category_id                           'software_specific_info'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__software_specific_nef_info.software_nef_saveframe
+save__software_specific_info.software_saveframe
 
    _item_description.description
 ;
-A saveframe from a NEF file that contains software specific information.
+A saveframe from a software generated file that contains software specific 
+information.
 ;
 
-   _item.name                                  '_software_specific_nef_info.software_nef_saveframe'
-   _item.category_id                           'software_specific_nef_info'
+   _item.name                                  '_software_specific_info.software_saveframe'
+   _item.category_id                           'software_specific_info'
    _item.mandatory_code                         yes
    _item_type.code                             'text'
 
 
 save_
 
-save__software_specific_nef_info.entry_id
+save__software_specific_info.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_software_specific_nef_info.entry_id'
-   _item.category_id                           'software_specific_nef_info'
+   _item.name                                  '_software_specific_info.entry_id'
+   _item.category_id                           'software_specific_info'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__software_specific_nef_info.software_specific_nef_info_list_id
+save__software_specific_info.software_specific_info_list_id
 
    _item_description.description
 ;
-Pointer to '_Software_specific_NEF_info_list.ID'
+Pointer to '_Software_specific_info_list.ID'
 ;
 
-   _item.name                                  '_software_specific_nef_info.software_specific_nef_info_list_id'
-   _item.category_id                           'software_specific_nef_info'
+   _item.name                                  '_software_specific_info.software_specific_info_list_id'
+   _item.category_id                           'software_specific_info'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
