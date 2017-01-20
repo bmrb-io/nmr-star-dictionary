@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-01-19
+#  version date -  2017-01-20
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.4
+    _dictionary.version         3.2.0.5
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.4         ?
+     3.2.0.5         ?
 ;
      ?
 ;
@@ -4507,7 +4507,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Entry.Sf_ID'                                         'Entry'                         yes
-  '_Entry_experimental_methods.Sf_ID'                    'Entry_experimental_methods'                        yes
 
   stop_
 
@@ -4515,7 +4514,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Entry_experimental_methods.Sf_ID'                    '_Entry.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -5415,7 +5414,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.4'
+   _item_default.value            '3.2.0.5'
 
    loop_
      _item_enumeration.value
@@ -27673,15 +27672,15 @@ TSM DPH HIS CHF EMR
 
 save_
 
-save__Chem_comp.InCHI_code
+save__Chem_comp.InChI_code
 
    _item_description.description
 ;
-Enter the InCHI code that uniquely describes the chemical structure of 
+Enter the InChI code that uniquely describes the chemical structure of 
 the compound.
 ;
 
-   _item.name                                  '_Chem_comp.InCHI_code'
+   _item.name                                  '_Chem_comp.InChI_code'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
    _item_type.code                             'text'
@@ -29046,16 +29045,16 @@ This data item contains the descriptor type.
    SMILES_CANONICAL    'Canonical SMILES descriptor'
    SMILES_ISOMERIC    'Isomeric SMILES descriptor'
    SMILES    'SMILES descriptor'
-   InCHI    'InCHI descriptor'
-   InCHI_MAIN    'InCHI descriptor- main layer'
-   InCHI_MAIN_FORMULA    'InCHI descriptor- main layer - chemical formula sub-layer'
-   InCHI_MAIN_CONNECT    'InCHI descriptor- main layer - atom connection sub-layer'
-   InCHI_MAIN_HATOM    'InCHI descriptor- main layer - hydrogen atom sub-layer'
-   InCHI_CHARGE    'InCHI descriptor- charge layer'
-   InCHI_STEREO    'InCHI descriptor- stereochemical layer'
-   InCHI_ISOTOPE    'InCHI descriptor- isotopic layer'
-   InCHI_FIXEDH    'InCHI descriptor- fixed hydrogren layer'
-   InCHI_RECONNECT    'InCHI descriptor- reconnected layer'
+   InChI    'InChI descriptor'
+   InChI_MAIN    'InChI descriptor- main layer'
+   InChI_MAIN_FORMULA    'InChI descriptor- main layer - chemical formula sub-layer'
+   InChI_MAIN_CONNECT    'InChI descriptor- main layer - atom connection sub-layer'
+   InChI_MAIN_HATOM    'InChI descriptor- main layer - hydrogen atom sub-layer'
+   InChI_CHARGE    'InChI descriptor- charge layer'
+   InChI_STEREO    'InChI descriptor- stereochemical layer'
+   InChI_ISOTOPE    'InChI descriptor- isotopic layer'
+   InChI_FIXEDH    'InChI descriptor- fixed hydrogren layer'
+   InChI_RECONNECT    'InChI descriptor- reconnected layer'
 
    stop_
 
@@ -108947,8 +108946,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Structure_annotation.Sf_ID'                          'Structure_annotation'          no
-  '_Struct_classification.Sf_ID'                         'Struct_classification'         no
-  '_Struct_anno_char.Sf_ID'                              'Struct_anno_char'              no
 
   stop_
 
@@ -108956,8 +108953,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Struct_classification.Sf_ID'                         '_Structure_annotation.Sf_ID'
-  '_Struct_anno_char.Sf_ID'                              '_Structure_annotation.Sf_ID'
+   ?      ?
 
   stop_
 
@@ -131250,7 +131246,6 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Peak_constraint_link_list.Sf_ID'                     'Peak_constraint_link_list'               yes
-  '_Peak_constraint_link.Sf_ID'                          'Peak_constraint_link'          yes
 
   stop_
 
@@ -131258,7 +131253,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Peak_constraint_link.Sf_ID'                          '_Peak_constraint_link_list.Sf_ID'
+   ?      ?
 
   stop_
 
