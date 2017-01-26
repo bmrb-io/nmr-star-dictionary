@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-01-20
+#  version date -  2017-01-25
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.5
+    _dictionary.version         3.2.0.7
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.5         ?
+     3.2.0.7         ?
 ;
      ?
 ;
@@ -5414,7 +5414,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.5'
+   _item_default.value            '3.2.0.7'
 
    loop_
      _item_enumeration.value
@@ -52037,6 +52037,7 @@ Spectral peak list ID
 
   '_Spectral_peak_list.ID'                               'Spectral_peak_list'            yes
   '_Spectral_dim.Spectral_peak_list_ID'                  'Spectral_dim'                  yes
+  '_Spectral_dim_transfer.Spectral_peak_list_ID'         'Spectral_dim_transfer'         yes
   '_Spectral_peak_software.Spectral_peak_list_ID'                                        'Spectral_peak_software'        yes
   '_Peak.Spectral_peak_list_ID'                          'Peak'                          yes
   '_Peak_general_char.Spectral_peak_list_ID'             'Peak_general_char'             yes
@@ -52058,6 +52059,7 @@ Spectral peak list ID
       _item_linked.parent_name
 
   '_Spectral_dim.Spectral_peak_list_ID'                  '_Spectral_peak_list.ID'
+  '_Spectral_dim_transfer.Spectral_peak_list_ID'         '_Spectral_peak_list.ID'
   '_Spectral_peak_software.Spectral_peak_list_ID'                                        '_Spectral_peak_list.ID'
   '_Peak.Spectral_peak_list_ID'                          '_Spectral_peak_list.ID'
   '_Peak_general_char.Spectral_peak_list_ID'             '_Spectral_peak_list.ID'
@@ -52382,6 +52384,8 @@ spectrum.
       _item.mandatory_code
 
   '_Spectral_dim.ID'                                     'Spectral_dim'                  yes
+  '_Spectral_dim_transfer.Spectral_dim_ID_1'             'Spectral_dim_transfer'         yes
+  '_Spectral_dim_transfer.Spectral_dim_ID_2'             'Spectral_dim_transfer'         yes
   '_Peak_char.Spectral_dim_ID'                           'Peak_char'                     yes
   '_Assigned_peak_chem_shift.Spectral_dim_ID'            'Assigned_peak_chem_shift'      yes
   '_Spectral_transition_char.Spectral_dim_ID'            'Spectral_transition_char'      yes
@@ -52393,6 +52397,8 @@ spectrum.
       _item_linked.child_name
       _item_linked.parent_name
 
+  '_Spectral_dim_transfer.Spectral_dim_ID_1'             '_Spectral_dim.ID'
+  '_Spectral_dim_transfer.Spectral_dim_ID_2'             '_Spectral_dim.ID'
   '_Peak_char.Spectral_dim_ID'                           '_Spectral_dim.ID'
   '_Assigned_peak_chem_shift.Spectral_dim_ID'            '_Spectral_dim.ID'
   '_Spectral_transition_char.Spectral_dim_ID'            '_Spectral_dim.ID'
@@ -124637,7 +124643,7 @@ Unique identifier for a row in the RDC constraint table.
 
    _item.name                                  '_RDC_constraint.Index_ID'
    _item.category_id                           'RDC_constraint'
-   _item.mandatory_code                         no
+   _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
@@ -135343,7 +135349,7 @@ save_Software_specific_info_list
      _category_group.id
 
      'inclusive_group'
-     'Software_specific_saveframes'
+     'software_specific_saveframes'
 
    stop_
 
@@ -135477,7 +135483,7 @@ save_Software_specific_info
      _category_group.id
 
      'inclusive_group'
-     'Software_specific_saveframes'
+     'software_specific_saveframes'
 
    stop_
 
