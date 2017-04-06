@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-01-25
+#  version date -  2017-04-06
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.7
+    _dictionary.version         3.2.0.9
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.7         ?
+     3.2.0.9         ?
 ;
      ?
 ;
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.7'
+   _item_default.value            '3.2.0.9'
 
    loop_
      _item_enumeration.value
@@ -34592,6 +34592,39 @@ The type of computer file that has information related to the experiment.
 
 save_
 
+save__experiment_file.content
+
+   _item_description.description
+;
+The kind of data contained in the file.
+;
+
+   _item.name                                  '_experiment_file.content'
+   _item.category_id                           'experiment_file'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'NMR experiment directory'    ?
+   'Time-domain (raw spectral data)'    ?
+   'Pulse sequence image file'    ?
+   'Pulse sequence'    ?
+   'Pulse field gradient'    ?
+   'Peak list'    ?
+   'Spectral image'    ?
+   'Acquisition parameters'    ?
+   'Processing parameters'    ?
+   na    ?
+
+   stop_
+
+
+save_
+
 save__experiment_file.directory_path
 
    _item_description.description
@@ -44528,7 +44561,7 @@ save__spectral_dim_transfer.type
    _item.category_id                           'spectral_dim_transfer'
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'code'
+   _item_type.code                             'line'
 
    loop_
      _item_enumeration.value

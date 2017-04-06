@@ -4823,6 +4823,39 @@ save__Experiment.Sample_state
 
 save_
 
+save__Experiment_file.Content
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'NMR experiment directory'
+;
+Contains variety of files for acquiring and processing the NMR experimental
+data
+;
+      'Time-domain (raw spectral data)'         .
+
+      'Pulse sequence image file'
+;
+jpeg$ gif$ or other file type that is an image of the pulse sequence
+as shown as a figure in many publications
+;
+
+      'Pulse sequence'                          .
+      'Pulse field gradient'                    .
+      'Peak list'                               .
+      'Spectral image'                          .       
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   'Acquisition parameters'    .
+   'Processing parameters'     .
+    na                         .
+
+    stop_
+
+save_
+
+
 save__Force_constant_list.Default_software_values_used
 
   loop_
