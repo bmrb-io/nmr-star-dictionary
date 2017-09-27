@@ -1458,6 +1458,7 @@ save_<chem_comp>
   _Chem_comp.Three_letter_code                        "Short string value"
   _Chem_comp.Number_atoms_all                         2
   _Chem_comp.Number_atoms_nh                          2
+  _Chem_comp.Atom_nomenclature_source                 "Long string value"
   _Chem_comp.PubChem_code                             "Short string value"
   _Chem_comp.Subcomponent_list                        "Possible multiline text"
   _Chem_comp.InChI_code                               "Very very long phrase"
@@ -1938,8 +1939,10 @@ save_<software>
   _Software.Entry_ID          1
   _Software.Sf_ID             2
   _Software.ID                2
+  _Software.Type              "Long string value"
   _Software.Name              "Long string value"
   _Software.Version           "String value"
+  _Software.DOI               "Very long phrase"
   _Software.Details           "Possible multiline text"
 
   loop_
@@ -2450,11 +2453,12 @@ save_<NMR_spectrometer_expt>
      _Spectral_acq_param.Name                              
      _Spectral_acq_param.Spectral_dim                      
      _Spectral_acq_param.Val                               
+     _Spectral_acq_param.Val_units                         
      _Spectral_acq_param.Sf_ID                             
      _Spectral_acq_param.Entry_ID                          
      _Spectral_acq_param.NMR_spec_expt_ID                  
 
-    2  2  "Long string value"  2  "Short string value"    2  1  2  
+    2  2  "Long string value"  2  "Short string value"    "Long string value"  2  1  2  
 
   stop_
 
@@ -2516,16 +2520,21 @@ save_<NMR_spectral_processing>
   stop_
 
   loop_
+     _Spectral_processing_param.Operation_ID                        
+     _Spectral_processing_param.Operation_code                      
+     _Spectral_processing_param.Operation_ordinal                   
+     _Spectral_processing_param.Previous_operation_ID               
      _Spectral_processing_param.ID                                  
      _Spectral_processing_param.Processing_dimension_ID             
      _Spectral_processing_param.Name                                
      _Spectral_processing_param.Spectral_dim                        
      _Spectral_processing_param.Val                                 
+     _Spectral_processing_param.Val_units                           
      _Spectral_processing_param.Sf_ID                               
      _Spectral_processing_param.Entry_ID                            
      _Spectral_processing_param.NMR_spectral_processing_ID          
 
-    2  2  "Long string value"  2  "Short string value"    2  1  2  
+    2  "Long string value"  2  2  2    2  "Long string value"  2  "Short string value"  "Short string value"    2  1  2  
 
   stop_
 
@@ -3171,35 +3180,66 @@ save_<spectral_peak_list>
      _Peak.Restraint                           
      _Peak.Position_1                          
      _Peak.Position_uncertainty_1              
+     _Peak.Line_width_1                        
+     _Peak.Line_width_uncertainty_1            
      _Peak.Position_2                          
      _Peak.Position_uncertainty_2              
+     _Peak.Line_width_2                        
+     _Peak.Line_width_uncertainty_2            
      _Peak.Position_3                          
      _Peak.Position_uncertainty_3              
+     _Peak.Line_width_3                        
+     _Peak.Line_width_uncertainty_3            
      _Peak.Position_4                          
      _Peak.Position_uncertainty_4              
+     _Peak.Line_width_4                        
+     _Peak.Line_width_uncertainty_4            
      _Peak.Position_5                          
      _Peak.Position_uncertainty_5              
+     _Peak.Line_width_5                        
+     _Peak.Line_width_uncertainty_5            
      _Peak.Position_6                          
      _Peak.Position_uncertainty_6              
+     _Peak.Line_width_6                        
+     _Peak.Line_width_uncertainty_6            
      _Peak.Position_7                          
      _Peak.Position_uncertainty_7              
+     _Peak.Line_width_7                        
+     _Peak.Line_width_uncertainty_7            
      _Peak.Position_8                          
      _Peak.Position_uncertainty_8              
+     _Peak.Line_width_8                        
+     _Peak.Line_width_uncertainty_8            
      _Peak.Position_9                          
      _Peak.Position_uncertainty_9              
+     _Peak.Line_width_9                        
+     _Peak.Line_width_uncertainty_9            
      _Peak.Position_10                         
      _Peak.Position_uncertainty_10             
+     _Peak.Line_width_10                       
+     _Peak.Line_width_uncertainty_10           
      _Peak.Position_11                         
      _Peak.Position_uncertainty_11             
+     _Peak.Line_width_11                       
+     _Peak.Line_width_uncertainty_11           
      _Peak.Position_12                         
      _Peak.Position_uncertainty_12             
+     _Peak.Line_width_12                       
+     _Peak.Line_width_uncertainty_12           
      _Peak.Position_13                         
      _Peak.Position_uncertainty_13             
+     _Peak.Line_width_13                       
+     _Peak.Line_width_uncertainty_13           
      _Peak.Position_14                         
      _Peak.Position_uncertainty_14             
+     _Peak.Line_width_14                       
+     _Peak.Line_width_uncertainty_14           
      _Peak.Position_15                         
      _Peak.Position_uncertainty_15             
+     _Peak.Line_width_15                       
+     _Peak.Line_width_uncertainty_15           
      _Peak.Entity_assembly_ID_1                
+     _Peak.Entity_ID_1                         
      _Peak.Comp_index_ID_1                     
      _Peak.Seq_ID_1                            
      _Peak.Comp_ID_1                           
@@ -3207,6 +3247,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_1                    
      _Peak.Ambiguity_set_ID_1                  
      _Peak.Entity_assembly_ID_2                
+     _Peak.Entity_ID_2                         
      _Peak.Comp_index_ID_2                     
      _Peak.Seq_ID_2                            
      _Peak.Comp_ID_2                           
@@ -3214,6 +3255,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_2                    
      _Peak.Ambiguity_set_ID_2                  
      _Peak.Entity_assembly_ID_3                
+     _Peak.Entity_ID_3                         
      _Peak.Comp_index_ID_3                     
      _Peak.Seq_ID_3                            
      _Peak.Comp_ID_3                           
@@ -3221,6 +3263,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_3                    
      _Peak.Ambiguity_set_ID_3                  
      _Peak.Entity_assembly_ID_4                
+     _Peak.Entity_ID_4                         
      _Peak.Comp_index_ID_4                     
      _Peak.Seq_ID_4                            
      _Peak.Comp_ID_4                           
@@ -3228,6 +3271,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_4                    
      _Peak.Ambiguity_set_ID_4                  
      _Peak.Entity_assembly_ID_5                
+     _Peak.Entity_ID_5                         
      _Peak.Comp_index_ID_5                     
      _Peak.Seq_ID_5                            
      _Peak.Comp_ID_5                           
@@ -3235,6 +3279,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_5                    
      _Peak.Ambiguity_set_ID_5                  
      _Peak.Entity_assembly_ID_6                
+     _Peak.Entity_ID_6                         
      _Peak.Comp_index_ID_6                     
      _Peak.Seq_ID_6                            
      _Peak.Comp_ID_6                           
@@ -3242,6 +3287,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_6                    
      _Peak.Ambiguity_set_ID_6                  
      _Peak.Entity_assembly_ID_7                
+     _Peak.Entity_ID_7                         
      _Peak.Comp_index_ID_7                     
      _Peak.Seq_ID_7                            
      _Peak.Comp_ID_7                           
@@ -3249,6 +3295,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_7                    
      _Peak.Ambiguity_set_ID_7                  
      _Peak.Entity_assembly_ID_8                
+     _Peak.Entity_ID_8                         
      _Peak.Comp_index_ID_8                     
      _Peak.Seq_ID_8                            
      _Peak.Comp_ID_8                           
@@ -3256,6 +3303,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_8                    
      _Peak.Ambiguity_set_ID_8                  
      _Peak.Entity_assembly_ID_9                
+     _Peak.Entity_ID_9                         
      _Peak.Comp_index_ID_9                     
      _Peak.Seq_ID_9                            
      _Peak.Comp_ID_9                           
@@ -3263,6 +3311,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_9                    
      _Peak.Ambiguity_set_ID_9                  
      _Peak.Entity_assembly_ID_10               
+     _Peak.Entity_ID_10                        
      _Peak.Comp_index_ID_10                    
      _Peak.Seq_ID_10                           
      _Peak.Comp_ID_10                          
@@ -3270,6 +3319,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_10                   
      _Peak.Ambiguity_set_ID_10                 
      _Peak.Entity_assembly_ID_11               
+     _Peak.Entity_ID_11                        
      _Peak.Comp_index_ID_11                    
      _Peak.Seq_ID_11                           
      _Peak.Comp_ID_11                          
@@ -3277,6 +3327,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_11                   
      _Peak.Ambiguity_set_ID_11                 
      _Peak.Entity_assembly_ID_12               
+     _Peak.Entity_ID_12                        
      _Peak.Comp_index_ID_12                    
      _Peak.Seq_ID_12                           
      _Peak.Comp_ID_12                          
@@ -3284,6 +3335,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_12                   
      _Peak.Ambiguity_set_ID_12                 
      _Peak.Entity_assembly_ID_13               
+     _Peak.Entity_ID_13                        
      _Peak.Comp_index_ID_13                    
      _Peak.Seq_ID_13                           
      _Peak.Comp_ID_13                          
@@ -3291,6 +3343,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_13                   
      _Peak.Ambiguity_set_ID_13                 
      _Peak.Entity_assembly_ID_14               
+     _Peak.Entity_ID_14                        
      _Peak.Comp_index_ID_14                    
      _Peak.Seq_ID_14                           
      _Peak.Comp_ID_14                          
@@ -3298,6 +3351,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_14                   
      _Peak.Ambiguity_set_ID_14                 
      _Peak.Entity_assembly_ID_15               
+     _Peak.Entity_ID_15                        
      _Peak.Comp_index_ID_15                    
      _Peak.Seq_ID_15                           
      _Peak.Comp_ID_15                          
@@ -3305,6 +3359,7 @@ save_<spectral_peak_list>
      _Peak.Ambiguity_code_15                   
      _Peak.Ambiguity_set_ID_15                 
      _Peak.Auth_entity_assembly_ID_1           
+     _Peak.Auth_entity_ID_1                    
      _Peak.Auth_asym_ID_1                      
      _Peak.Auth_seq_ID_1                       
      _Peak.Auth_comp_ID_1                      
@@ -3312,6 +3367,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_1               
      _Peak.Auth_ambiguity_set_ID_1             
      _Peak.Auth_entity_assembly_ID_2           
+     _Peak.Auth_entity_ID_2                    
      _Peak.Auth_asym_ID_2                      
      _Peak.Auth_seq_ID_2                       
      _Peak.Auth_comp_ID_2                      
@@ -3319,6 +3375,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_2               
      _Peak.Auth_ambiguity_set_ID_2             
      _Peak.Auth_entity_assembly_ID_3           
+     _Peak.Auth_entity_ID_3                    
      _Peak.Auth_asym_ID_3                      
      _Peak.Auth_seq_ID_3                       
      _Peak.Auth_comp_ID_3                      
@@ -3326,6 +3383,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_3               
      _Peak.Auth_ambiguity_set_ID_3             
      _Peak.Auth_entity_assembly_ID_4           
+     _Peak.Auth_entity_ID_4                    
      _Peak.Auth_asym_ID_4                      
      _Peak.Auth_seq_ID_4                       
      _Peak.Auth_comp_ID_4                      
@@ -3333,6 +3391,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_4               
      _Peak.Auth_ambiguity_set_ID_4             
      _Peak.Auth_entity_assembly_ID_5           
+     _Peak.Auth_entity_ID_5                    
      _Peak.Auth_asym_ID_5                      
      _Peak.Auth_seq_ID_5                       
      _Peak.Auth_comp_ID_5                      
@@ -3340,6 +3399,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_5               
      _Peak.Auth_ambiguity_set_ID_5             
      _Peak.Auth_entity_assembly_ID_6           
+     _Peak.Auth_entity_ID_6                    
      _Peak.Auth_asym_ID_6                      
      _Peak.Auth_seq_ID_6                       
      _Peak.Auth_comp_ID_6                      
@@ -3347,6 +3407,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_6               
      _Peak.Auth_ambiguity_set_ID_6             
      _Peak.Auth_entity_assembly_ID_7           
+     _Peak.Auth_entity_ID_7                    
      _Peak.Auth_asym_ID_7                      
      _Peak.Auth_seq_ID_7                       
      _Peak.Auth_comp_ID_7                      
@@ -3354,6 +3415,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_7               
      _Peak.Auth_ambiguity_set_ID_7             
      _Peak.Auth_entity_assembly_ID_8           
+     _Peak.Auth_entity_ID_8                    
      _Peak.Auth_asym_ID_8                      
      _Peak.Auth_seq_ID_8                       
      _Peak.Auth_comp_ID_8                      
@@ -3361,6 +3423,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_8               
      _Peak.Auth_ambiguity_set_ID_8             
      _Peak.Auth_entity_assembly_ID_9           
+     _Peak.Auth_entity_ID_9                    
      _Peak.Auth_asym_ID_9                      
      _Peak.Auth_seq_ID_9                       
      _Peak.Auth_comp_ID_9                      
@@ -3368,6 +3431,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_9               
      _Peak.Auth_ambiguity_set_ID_9             
      _Peak.Auth_entity_assembly_ID_10          
+     _Peak.Auth_entity_ID_10                   
      _Peak.Auth_asym_ID_10                     
      _Peak.Auth_seq_ID_10                      
      _Peak.Auth_comp_ID_10                     
@@ -3375,6 +3439,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_10              
      _Peak.Auth_ambiguity_set_ID_10            
      _Peak.Auth_entity_assembly_ID_11          
+     _Peak.Auth_entity_ID_11                   
      _Peak.Auth_asym_ID_11                     
      _Peak.Auth_seq_ID_11                      
      _Peak.Auth_comp_ID_11                     
@@ -3382,6 +3447,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_11              
      _Peak.Auth_ambiguity_set_ID_11            
      _Peak.Auth_entity_assembly_ID_12          
+     _Peak.Auth_entity_ID_12                   
      _Peak.Auth_asym_ID_12                     
      _Peak.Auth_seq_ID_12                      
      _Peak.Auth_comp_ID_12                     
@@ -3389,6 +3455,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_12              
      _Peak.Auth_ambiguity_set_ID_12            
      _Peak.Auth_entity_assembly_ID_13          
+     _Peak.Auth_entity_ID_13                   
      _Peak.Auth_asym_ID_13                     
      _Peak.Auth_seq_ID_13                      
      _Peak.Auth_comp_ID_13                     
@@ -3396,6 +3463,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_13              
      _Peak.Auth_ambiguity_set_ID_13            
      _Peak.Auth_entity_assembly_ID_14          
+     _Peak.Auth_entity_ID_14                   
      _Peak.Auth_asym_ID_14                     
      _Peak.Auth_seq_ID_14                      
      _Peak.Auth_comp_ID_14                     
@@ -3403,6 +3471,7 @@ save_<spectral_peak_list>
      _Peak.Auth_ambiguity_code_14              
      _Peak.Auth_ambiguity_set_ID_14            
      _Peak.Auth_entity_assembly_ID_15          
+     _Peak.Auth_entity_ID_15                   
      _Peak.Auth_asym_ID_15                     
      _Peak.Auth_seq_ID_15                      
      _Peak.Auth_comp_ID_15                     
@@ -3414,7 +3483,7 @@ save_<spectral_peak_list>
      _Peak.Entry_ID                            
      _Peak.Spectral_peak_list_ID               
 
-    2  2  110.234  110.234  110.234    110.234  110.234  yes/no  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  2  2    2  1  1  2  2    2  2  2  1  1    2  2  2  2  2    1  1  2  2  2    2  2  1  1  2    2  2  2  2  1    1  2  2  2  2    2  1  1  2  2    2  2  2  1  1    2  2  2  2  2    1  1  2  2  2    2  2  1  1  2    2  2  2  2  1    1  2  2  2  2    2  1  1  2  2    2  2  2  1  1    2  2  2  2  2    1  1  2  2  2    2  2  1  1  2    2  2  2  2  1    1  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Long string value"  2    1  2  
+    2  2  110.234  110.234  110.234    110.234  110.234  yes/no  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  2  2    2  2  1  1  2    2  2  2  2  2    1  1  2  2  2    2  2  2  1  1    2  2  2  2  2    2  1  1  2  2    2  2  2  2  1    1  2  2  2  2    2  2  1  1  2    2  2  2  2  2    1  1  2  2  2    2  2  2  1  1    2  2  2  2  2    2  1  1  2  2    2  2  2  2  1    1  2  2  2  2    2  2  1  1  2    2  2  2  2  2    1  1  2  2  2    2  2  2  1  1    2  2  2  2  2    2  1  1  2  2    2  2  2  2  1    1  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Long string value"  2    1  2  
 
   stop_
 
@@ -3457,24 +3526,13 @@ save_<spectral_peak_list>
   stop_
 
   loop_
-     _Peak_contribution.ID                                   
-     _Peak_contribution.Contribution_fractional_val          
-     _Peak_contribution.Sf_ID                                
-     _Peak_contribution.Entry_ID                             
-     _Peak_contribution.Spectral_peak_list_ID                
-
-    2  110.234  2  1  2    
-
-  stop_
-
-  loop_
      _Assigned_peak_chem_shift.Peak_ID                              
      _Assigned_peak_chem_shift.Spectral_dim_ID                      
-     _Assigned_peak_chem_shift.Peak_contribution_ID                 
      _Assigned_peak_chem_shift.Set_ID                               
      _Assigned_peak_chem_shift.Magnetization_linkage_ID             
      _Assigned_peak_chem_shift.Assembly_atom_ID                     
      _Assigned_peak_chem_shift.Val                                  
+     _Assigned_peak_chem_shift.Contribution_fractional_val          
      _Assigned_peak_chem_shift.Figure_of_merit                      
      _Assigned_peak_chem_shift.Assigned_chem_shift_list_ID          
      _Assigned_peak_chem_shift.Atom_chem_shift_ID                   
@@ -3499,7 +3557,7 @@ save_<spectral_peak_list>
      _Assigned_peak_chem_shift.Entry_ID                             
      _Assigned_peak_chem_shift.Spectral_peak_list_ID                
 
-    2  2  2  2  2    2  110.234  110.234  2  2    2  2  2  1  1    2  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    2  "Possible multiline text"  2  1  2    
+    2  2  2  2  2    110.234  110.234  110.234  2  2    2  2  2  1  1    2  2  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    2  "Possible multiline text"  2  1  2    
 
   stop_
 
@@ -3566,27 +3624,27 @@ save_<spectral_peak_list>
   stop_
 
   loop_
-     _Assigned_spectral_transition.Spectral_transition_ID                  
-     _Assigned_spectral_transition.Spectral_dim_ID                         
-     _Assigned_spectral_transition.Spectral_transition_contrib_ID          
-     _Assigned_spectral_transition.Peak_ID                                 
-     _Assigned_spectral_transition.Set_ID                                  
-     _Assigned_spectral_transition.Magnetization_linkage_ID                
-     _Assigned_spectral_transition.Assembly_atom_ID                        
-     _Assigned_spectral_transition.Val                                     
-     _Assigned_spectral_transition.Assigned_chem_shift_list_ID             
-     _Assigned_spectral_transition.Atom_chem_shift_ID                      
-     _Assigned_spectral_transition.Entity_assembly_ID                      
-     _Assigned_spectral_transition.Entity_ID                               
-     _Assigned_spectral_transition.Comp_index_ID                           
-     _Assigned_spectral_transition.Comp_ID                                 
-     _Assigned_spectral_transition.Atom_ID                                 
-     _Assigned_spectral_transition.Figure_of_merit                         
-     _Assigned_spectral_transition.Resonance_ID                            
-     _Assigned_spectral_transition.Details                                 
-     _Assigned_spectral_transition.Sf_ID                                   
-     _Assigned_spectral_transition.Entry_ID                                
-     _Assigned_spectral_transition.Spectral_peak_list_ID                   
+     _Assigned_spectral_transition.Spectral_transition_ID               
+     _Assigned_spectral_transition.Spectral_dim_ID                      
+     _Assigned_spectral_transition.Contribution_fractional_val          
+     _Assigned_spectral_transition.Peak_ID                              
+     _Assigned_spectral_transition.Set_ID                               
+     _Assigned_spectral_transition.Magnetization_linkage_ID             
+     _Assigned_spectral_transition.Assembly_atom_ID                     
+     _Assigned_spectral_transition.Val                                  
+     _Assigned_spectral_transition.Assigned_chem_shift_list_ID          
+     _Assigned_spectral_transition.Atom_chem_shift_ID                   
+     _Assigned_spectral_transition.Entity_assembly_ID                   
+     _Assigned_spectral_transition.Entity_ID                            
+     _Assigned_spectral_transition.Comp_index_ID                        
+     _Assigned_spectral_transition.Comp_ID                              
+     _Assigned_spectral_transition.Atom_ID                              
+     _Assigned_spectral_transition.Figure_of_merit                      
+     _Assigned_spectral_transition.Resonance_ID                         
+     _Assigned_spectral_transition.Details                              
+     _Assigned_spectral_transition.Sf_ID                                
+     _Assigned_spectral_transition.Entry_ID                             
+     _Assigned_spectral_transition.Spectral_peak_list_ID                
 
     2  2  2  2  2    2  2  110.234  2  2    2  2  2  1  1    110.234  2  "Possible multiline text"  2  1    2  
 
@@ -3777,73 +3835,86 @@ save_<chem_shift_isotope_effect>
 
 save_
 
-save_<chem_shift_interaction_diff>
-  _Mol_interaction_chem_shift_diff.Sf_category     chem_shift_interaction_diff
-  _Mol_interaction_chem_shift_diff.Sf_framecode     <chem_shift_interaction_diff>
-  _Mol_interaction_chem_shift_diff.Entry_ID                             1
-  _Mol_interaction_chem_shift_diff.Sf_ID                                2
-  _Mol_interaction_chem_shift_diff.ID                                   2
-  _Mol_interaction_chem_shift_diff.Data_file_name                       "Long string value"
-  _Mol_interaction_chem_shift_diff.Sample_condition_list_ID             2
-  _Mol_interaction_chem_shift_diff.Sample_condition_list_label          "Long string value"
-  _Mol_interaction_chem_shift_diff.Chem_shift_ref_set_ID                2
-  _Mol_interaction_chem_shift_diff.Chem_shift_ref_set_label             "Long string value"
-  _Mol_interaction_chem_shift_diff.Details                              "Possible multiline text"
-  _Mol_interaction_chem_shift_diff.Text_data_format                     "String value"
-  _Mol_interaction_chem_shift_diff.Text_data                            "Possible multiline text"
+save_<chem_shift_perturbation>
+  _Chem_shift_perturbation_list.Sf_category     chem_shift_perturbation
+  _Chem_shift_perturbation_list.Sf_framecode     <chem_shift_perturbation>
+  _Chem_shift_perturbation_list.Entry_ID                             1
+  _Chem_shift_perturbation_list.Sf_ID                                2
+  _Chem_shift_perturbation_list.ID                                   2
+  _Chem_shift_perturbation_list.Type                                 "Long string value"
+  _Chem_shift_perturbation_list.Data_file_name                       "Long string value"
+  _Chem_shift_perturbation_list.Sample_condition_list_ID             2
+  _Chem_shift_perturbation_list.Sample_condition_list_label          "Long string value"
+  _Chem_shift_perturbation_list.Chem_shift_ref_set_ID                2
+  _Chem_shift_perturbation_list.Chem_shift_ref_set_label             "Long string value"
+  _Chem_shift_perturbation_list.Details                              "Possible multiline text"
+  _Chem_shift_perturbation_list.Text_data_format                     "String value"
+  _Chem_shift_perturbation_list.Text_data                            "Possible multiline text"
 
   loop_
-     _Mol_interaction_diff_experiment.Experiment_ID                               
-     _Mol_interaction_diff_experiment.Experiment_name                             
-     _Mol_interaction_diff_experiment.Sample_ID                                   
-     _Mol_interaction_diff_experiment.Sample_label                                
-     _Mol_interaction_diff_experiment.Sample_state                                
-     _Mol_interaction_diff_experiment.Sf_ID                                       
-     _Mol_interaction_diff_experiment.Entry_ID                                    
-     _Mol_interaction_diff_experiment.Mol_interaction_chem_shift_diff_ID          
+     _Chem_shift_perturbation_experiment.Experiment_ID                            
+     _Chem_shift_perturbation_experiment.Experiment_name                          
+     _Chem_shift_perturbation_experiment.Sample_ID                                
+     _Chem_shift_perturbation_experiment.Sample_label                             
+     _Chem_shift_perturbation_experiment.Sample_state                             
+     _Chem_shift_perturbation_experiment.Sf_ID                                    
+     _Chem_shift_perturbation_experiment.Entry_ID                                 
+     _Chem_shift_perturbation_experiment.Chem_shift_perturbation_list_ID          
 
     2  "Long string value"  2  "Long string value"  "String value"    2  1  2  
 
   stop_
 
   loop_
-     _Mol_interaction_diff_software.Software_ID                                 
-     _Mol_interaction_diff_software.Software_label                              
-     _Mol_interaction_diff_software.Method_ID                                   
-     _Mol_interaction_diff_software.Method_label                                
-     _Mol_interaction_diff_software.Sf_ID                                       
-     _Mol_interaction_diff_software.Entry_ID                                    
-     _Mol_interaction_diff_software.Mol_interaction_chem_shift_diff_ID          
+     _Chem_shift_perturbation_software.Software_ID                              
+     _Chem_shift_perturbation_software.Software_label                           
+     _Chem_shift_perturbation_software.Method_ID                                
+     _Chem_shift_perturbation_software.Method_label                             
+     _Chem_shift_perturbation_software.Sf_ID                                    
+     _Chem_shift_perturbation_software.Entry_ID                                 
+     _Chem_shift_perturbation_software.Chem_shift_perturbation_list_ID          
 
     2  "Long string value"  2  "Long string value"  2    1  2  
 
   stop_
 
   loop_
-     _Mol_interaction_chem_shift.ID                                          
-     _Mol_interaction_chem_shift.Assembly_atom_ID                            
-     _Mol_interaction_chem_shift.Entity_assembly_ID                          
-     _Mol_interaction_chem_shift.Entity_ID                                   
-     _Mol_interaction_chem_shift.Comp_index_ID                               
-     _Mol_interaction_chem_shift.Seq_ID                                      
-     _Mol_interaction_chem_shift.Comp_ID                                     
-     _Mol_interaction_chem_shift.Atom_ID                                     
-     _Mol_interaction_chem_shift.Atom_type                                   
-     _Mol_interaction_chem_shift.Atom_isotope_number                         
-     _Mol_interaction_chem_shift.Chem_shift_val                              
-     _Mol_interaction_chem_shift.Chem_shift_val_err                          
-     _Mol_interaction_chem_shift.Chem_shift_diff_val                         
-     _Mol_interaction_chem_shift.Chem_shift_diff_val_err                     
-     _Mol_interaction_chem_shift.Resonance_ID                                
-     _Mol_interaction_chem_shift.Auth_entity_assembly_ID                     
-     _Mol_interaction_chem_shift.Auth_seq_ID                                 
-     _Mol_interaction_chem_shift.Auth_comp_ID                                
-     _Mol_interaction_chem_shift.Auth_atom_ID                                
-     _Mol_interaction_chem_shift.Sf_ID                                       
-     _Mol_interaction_chem_shift.Entry_ID                                    
-     _Mol_interaction_chem_shift.Mol_interaction_chem_shift_diff_ID          
+     _Chem_shift_perturbation.ID                           
+     _Chem_shift_perturbation.Assembly_atom_ID             
+     _Chem_shift_perturbation.Entity_assembly_ID           
+     _Chem_shift_perturbation.Entity_ID                    
+     _Chem_shift_perturbation.Comp_index_ID                
+     _Chem_shift_perturbation.Seq_ID                       
+     _Chem_shift_perturbation.Comp_ID                      
+     _Chem_shift_perturbation.Atom_ID                      
+     _Chem_shift_perturbation.Atom_type                    
+     _Chem_shift_perturbation.Atom_isotope_number          
+     _Chem_shift_perturbation.Chem_shift_val               
+     _Chem_shift_perturbation.Chem_shift_val_err           
 
-    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  110.234  110.234  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  2    1  2  
+    2  2  2  2  2    2  1  1  "Short string value"  2    110.234  110.234  
+
+  stop_
+
+  loop_
+     _Chem_shift_perturbation_chem_shift.Chem_shift_val              
+     _Chem_shift_perturbation_chem_shift.Chem_shift_val_err          
+
+    110.234  110.234  
+
+  stop_
+
+  loop_
+     _Chem_shift_perturbation.Resonance_ID                             
+     _Chem_shift_perturbation.Auth_entity_assembly_ID                  
+     _Chem_shift_perturbation.Auth_seq_ID                              
+     _Chem_shift_perturbation.Auth_comp_ID                             
+     _Chem_shift_perturbation.Auth_atom_ID                             
+     _Chem_shift_perturbation.Sf_ID                                    
+     _Chem_shift_perturbation.Entry_ID                                 
+     _Chem_shift_perturbation.Chem_shift_perturbation_list_ID          
+
+    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  2  
 
   stop_
 

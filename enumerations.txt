@@ -632,6 +632,18 @@ save__Chem_comp.Ambiguous_flag
 
 save_
 
+save__Chem_comp.Atom_nomenclature_source
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ALATIS        .
+    BMRB          .
+
+   stop_
+
+save_
 
 
 save__Chem_comp_atom.Aromatic_flag
@@ -6038,9 +6050,22 @@ save__Mass_spectrometer_view.Manufacturer
 save_
 
 
-   
+save__Chem_shift_perturbation_list.Type
 
-save__Mol_interaction_diff_experiment.Sample_state  
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    ‘macromolecular binding’           .
+    ‘ligand binding’                   .
+    ‘ligand fragment binding’          .
+    ‘paramagnetic ligand binding’      .
+
+    stop_
+
+save_   
+
+save__Chem_shift_perturbation_experiment.Sample_state
 
     loop_
       _item_enumeration_value
@@ -7730,6 +7755,18 @@ save__Software.Name
 
 save_
 
+save__Software.Type
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+    ’NUS schedule generator’     .
+    ‘structure calculation’      .
+
+    stop_
+
+save_
 
 save__Software_applied_methods.Software_name
 

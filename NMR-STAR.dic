@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-04-06
+#  version date -  2017-09-26
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.9
+    _dictionary.version         3.2.0.11
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.9         ?
+     3.2.0.11         ?
 ;
      ?
 ;
@@ -1871,7 +1871,7 @@ BMRB accession number for this entry
   '_resonance_linker_list.entry_id'                      'resonance_linker_list'         yes
   '_resonance_assignment.entry_id'                       'resonance_assignment'          yes
   '_chem_shift_isotope_effect_list.entry_id'             'chem_shift_isotope_effect_list'                    yes
-  '_mol_interaction_chem_shift_diff.entry_id'            'mol_interaction_chem_shift_diff'                   yes
+  '_chem_shift_perturbation_list.entry_id'               'chem_shift_perturbation_list'                      yes
   '_chem_shift_anisotropy.entry_id'                      'chem_shift_anisotropy'         yes
   '_rdc_list.entry_id'                                   'rdc_list'                      yes
   '_rdc_experiment.entry_id'                             'rdc_experiment'                yes
@@ -2184,7 +2184,7 @@ BMRB accession number for this entry
   '_resonance_linker_list.entry_id'                      '_entry.id'
   '_resonance_assignment.entry_id'                       '_entry.id'
   '_chem_shift_isotope_effect_list.entry_id'             '_entry.id'
-  '_mol_interaction_chem_shift_diff.entry_id'            '_entry.id'
+  '_chem_shift_perturbation_list.entry_id'               '_entry.id'
   '_chem_shift_anisotropy.entry_id'                      '_entry.id'
   '_rdc_list.entry_id'                                   '_entry.id'
   '_rdc_experiment.entry_id'                             '_entry.id'
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.9'
+   _item_default.value            '3.2.0.11'
 
    loop_
      _item_enumeration.value
@@ -7239,7 +7239,7 @@ Unique identifier for each component in the entity assembly.
   '_spin_system.entity_assembly_id'                      'spin_system'                   yes
   '_isotope_effect.entity_assembly_id'                   'isotope_effect'                yes
   '_isotope_label_pattern.entity_assembly_id'            'isotope_label_pattern'         yes
-  '_mol_interaction_chem_shift.entity_assembly_id'                                       'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.entity_assembly_id'          'chem_shift_perturbation'       yes
   '_cs_anisotropy.entity_assembly_id'                    'cs_anisotropy'                 yes
   '_rdc.entity_assembly_id_1'                            'rdc'                           yes
   '_rdc.entity_assembly_id_2'                            'rdc'                           yes
@@ -7379,7 +7379,7 @@ Unique identifier for each component in the entity assembly.
   '_spin_system.entity_assembly_id'                      '_entity_assembly.id'
   '_isotope_effect.entity_assembly_id'                   '_entity_assembly.id'
   '_isotope_label_pattern.entity_assembly_id'            '_entity_assembly.id'
-  '_mol_interaction_chem_shift.entity_assembly_id'                                       '_entity_assembly.id'
+  '_chem_shift_perturbation.entity_assembly_id'          '_entity_assembly.id'
   '_cs_anisotropy.entity_assembly_id'                    '_entity_assembly.id'
   '_rdc.entity_assembly_id_1'                            '_entity_assembly.id'
   '_rdc.entity_assembly_id_2'                            '_entity_assembly.id'
@@ -11046,7 +11046,7 @@ assembly.
   '_resonance_assignment.assembly_atom_id'               'resonance_assignment'          yes
   '_isotope_effect.assembly_atom_id'                     'isotope_effect'                yes
   '_isotope_label_pattern.assembly_atom_id'              'isotope_label_pattern'         yes
-  '_mol_interaction_chem_shift.assembly_atom_id'         'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.assembly_atom_id'            'chem_shift_perturbation'       yes
   '_cs_anisotropy.assembly_atom_id'                      'cs_anisotropy'                 yes
   '_rdc.assembly_atom_id_1'                              'rdc'                           yes
   '_rdc.assembly_atom_id_2'                              'rdc'                           yes
@@ -11155,7 +11155,7 @@ assembly.
   '_resonance_assignment.assembly_atom_id'               '_atom.assembly_atom_id'
   '_isotope_effect.assembly_atom_id'                     '_atom.assembly_atom_id'
   '_isotope_label_pattern.assembly_atom_id'              '_atom.assembly_atom_id'
-  '_mol_interaction_chem_shift.assembly_atom_id'         '_atom.assembly_atom_id'
+  '_chem_shift_perturbation.assembly_atom_id'            '_atom.assembly_atom_id'
   '_cs_anisotropy.assembly_atom_id'                      '_atom.assembly_atom_id'
   '_rdc.assembly_atom_id_1'                              '_atom.assembly_atom_id'
   '_rdc.assembly_atom_id_2'                              '_atom.assembly_atom_id'
@@ -14793,13 +14793,28 @@ An integer value that is the unique identifier for the entity within the entry.
   '_coupling_constant.entity_id_2'                       'coupling_constant'             yes
   '_theoretical_coupling_constant.entity_id_1'           'theoretical_coupling_constant'                     yes
   '_theoretical_coupling_constant.entity_id_2'           'theoretical_coupling_constant'                     yes
+  '_peak.entity_id_1'                                    'peak'                          yes
+  '_peak.entity_id_2'                                    'peak'                          yes
+  '_peak.entity_id_3'                                    'peak'                          yes
+  '_peak.entity_id_4'                                    'peak'                          yes
+  '_peak.entity_id_5'                                    'peak'                          yes
+  '_peak.entity_id_6'                                    'peak'                          yes
+  '_peak.entity_id_7'                                    'peak'                          yes
+  '_peak.entity_id_8'                                    'peak'                          yes
+  '_peak.entity_id_9'                                    'peak'                          yes
+  '_peak.entity_id_10'                                   'peak'                          yes
+  '_peak.entity_id_11'                                   'peak'                          yes
+  '_peak.entity_id_12'                                   'peak'                          yes
+  '_peak.entity_id_13'                                   'peak'                          yes
+  '_peak.entity_id_14'                                   'peak'                          yes
+  '_peak.entity_id_15'                                   'peak'                          yes
   '_assigned_peak_chem_shift.entity_id'                  'assigned_peak_chem_shift'      yes
   '_assigned_spectral_transition.entity_id'              'assigned_spectral_transition'                      yes
   '_resonance_assignment.entity_id'                      'resonance_assignment'          yes
   '_spin_system.entity_id'                               'spin_system'                   yes
   '_isotope_effect.entity_id'                            'isotope_effect'                yes
   '_isotope_label_pattern.entity_id'                     'isotope_label_pattern'         yes
-  '_mol_interaction_chem_shift.entity_id'                'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.entity_id'                   'chem_shift_perturbation'       yes
   '_cs_anisotropy.entity_id'                             'cs_anisotropy'                 yes
   '_rdc.entity_id_1'                                     'rdc'                           yes
   '_rdc.entity_id_2'                                     'rdc'                           yes
@@ -14941,13 +14956,28 @@ An integer value that is the unique identifier for the entity within the entry.
   '_coupling_constant.entity_id_2'                       '_entity.id'
   '_theoretical_coupling_constant.entity_id_1'           '_entity.id'
   '_theoretical_coupling_constant.entity_id_2'           '_entity.id'
+  '_peak.entity_id_1'                                    '_entity.id'
+  '_peak.entity_id_2'                                    '_entity.id'
+  '_peak.entity_id_3'                                    '_entity.id'
+  '_peak.entity_id_4'                                    '_entity.id'
+  '_peak.entity_id_5'                                    '_entity.id'
+  '_peak.entity_id_6'                                    '_entity.id'
+  '_peak.entity_id_7'                                    '_entity.id'
+  '_peak.entity_id_8'                                    '_entity.id'
+  '_peak.entity_id_9'                                    '_entity.id'
+  '_peak.entity_id_10'                                   '_entity.id'
+  '_peak.entity_id_11'                                   '_entity.id'
+  '_peak.entity_id_12'                                   '_entity.id'
+  '_peak.entity_id_13'                                   '_entity.id'
+  '_peak.entity_id_14'                                   '_entity.id'
+  '_peak.entity_id_15'                                   '_entity.id'
   '_assigned_peak_chem_shift.entity_id'                  '_entity.id'
   '_assigned_spectral_transition.entity_id'              '_entity.id'
   '_resonance_assignment.entity_id'                      '_entity.id'
   '_spin_system.entity_id'                               '_entity.id'
   '_isotope_effect.entity_id'                            '_entity.id'
   '_isotope_label_pattern.entity_id'                     '_entity.id'
-  '_mol_interaction_chem_shift.entity_id'                '_entity.id'
+  '_chem_shift_perturbation.entity_id'                   '_entity.id'
   '_cs_anisotropy.entity_id'                             '_entity.id'
   '_rdc.entity_id_1'                                     '_entity.id'
   '_rdc.entity_id_2'                                     '_entity.id'
@@ -16800,7 +16830,7 @@ Unique ID for the compound in the entity
   '_spin_system.comp_index_id'                           'spin_system'                   yes
   '_isotope_effect.comp_index_id'                        'isotope_effect'                yes
   '_isotope_label_pattern.comp_index_id'                 'isotope_label_pattern'         yes
-  '_mol_interaction_chem_shift.comp_index_id'            'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.comp_index_id'               'chem_shift_perturbation'       yes
   '_cs_anisotropy.comp_index_id'                         'cs_anisotropy'                 yes
   '_rdc.comp_index_id_1'                                 'rdc'                           yes
   '_rdc.comp_index_id_2'                                 'rdc'                           yes
@@ -16952,7 +16982,7 @@ Unique ID for the compound in the entity
   '_spin_system.comp_index_id'                           '_entity_comp_index.id'
   '_isotope_effect.comp_index_id'                        '_entity_comp_index.id'
   '_isotope_label_pattern.comp_index_id'                 '_entity_comp_index.id'
-  '_mol_interaction_chem_shift.comp_index_id'            '_entity_comp_index.id'
+  '_chem_shift_perturbation.comp_index_id'               '_entity_comp_index.id'
   '_cs_anisotropy.comp_index_id'                         '_entity_comp_index.id'
   '_rdc.comp_index_id_1'                                 '_entity_comp_index.id'
   '_rdc.comp_index_id_2'                                 '_entity_comp_index.id'
@@ -17259,7 +17289,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_peak.seq_id_15'                                      'peak'                          yes
   '_isotope_effect.seq_id'                               'isotope_effect'                yes
   '_isotope_label_pattern.seq_id'                        'isotope_label_pattern'         yes
-  '_mol_interaction_chem_shift.seq_id'                   'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.seq_id'                      'chem_shift_perturbation'       yes
   '_cs_anisotropy.seq_id'                                'cs_anisotropy'                 yes
   '_rdc.seq_id_1'                                        'rdc'                           yes
   '_rdc.seq_id_2'                                        'rdc'                           yes
@@ -17395,7 +17425,7 @@ that the sequence numbers must progress in increasing numerical order.
   '_peak.seq_id_15'                                      '_entity_poly_seq.num'
   '_isotope_effect.seq_id'                               '_entity_poly_seq.num'
   '_isotope_label_pattern.seq_id'                        '_entity_poly_seq.num'
-  '_mol_interaction_chem_shift.seq_id'                   '_entity_poly_seq.num'
+  '_chem_shift_perturbation.seq_id'                      '_entity_poly_seq.num'
   '_cs_anisotropy.seq_id'                                '_entity_poly_seq.num'
   '_rdc.seq_id_1'                                        '_entity_poly_seq.num'
   '_rdc.seq_id_2'                                        '_entity_poly_seq.num'
@@ -20978,7 +21008,7 @@ components in the entry.
   '_spin_system.comp_id'                                 'spin_system'                   yes
   '_isotope_effect.comp_id'                              'isotope_effect'                yes
   '_isotope_label_pattern.comp_id'                       'isotope_label_pattern'         yes
-  '_mol_interaction_chem_shift.comp_id'                  'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.comp_id'                     'chem_shift_perturbation'       yes
   '_cs_anisotropy.comp_id'                               'cs_anisotropy'                 yes
   '_rdc.comp_id_1'                                       'rdc'                           yes
   '_rdc.comp_id_2'                                       'rdc'                           yes
@@ -21140,7 +21170,7 @@ components in the entry.
   '_spin_system.comp_id'                                 '_chem_comp.id'
   '_isotope_effect.comp_id'                              '_chem_comp.id'
   '_isotope_label_pattern.comp_id'                       '_chem_comp.id'
-  '_mol_interaction_chem_shift.comp_id'                  '_chem_comp.id'
+  '_chem_shift_perturbation.comp_id'                     '_chem_comp.id'
   '_cs_anisotropy.comp_id'                               '_chem_comp.id'
   '_rdc.comp_id_1'                                       '_chem_comp.id'
   '_rdc.comp_id_2'                                       '_chem_comp.id'
@@ -21559,6 +21589,39 @@ The number of non-hydrogen atoms in the component.
    _item.mandatory_code                         no
    _item_type.code                             'int'
 
+
+save_
+
+save__chem_comp.atom_nomenclature_source
+
+   _item_description.description
+;
+The code assigned by PubChem to the chemical component.
+;
+
+   _item.name                                  '_chem_comp.atom_nomenclature_source'
+   _item.category_id                           'chem_comp'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ALATIS    ?
+   BMRB    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+IUPAC
+;
+
+   stop_
 
 save_
 
@@ -23890,7 +23953,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_resonance_assignment.atom_id'                        'resonance_assignment'          yes
   '_isotope_effect.atom_id'                              'isotope_effect'                yes
   '_isotope_label_pattern.atom_id'                       'isotope_label_pattern'         yes
-  '_mol_interaction_chem_shift.atom_id'                  'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.atom_id'                     'chem_shift_perturbation'       yes
   '_cs_anisotropy.atom_id'                               'cs_anisotropy'                 yes
   '_rdc.atom_id_1'                                       'rdc'                           yes
   '_rdc.atom_id_2'                                       'rdc'                           yes
@@ -24030,7 +24093,7 @@ each monomer in the CHEM_COMP_ATOM list.
   '_resonance_assignment.atom_id'                        '_chem_comp_atom.atom_id'
   '_isotope_effect.atom_id'                              '_chem_comp_atom.atom_id'
   '_isotope_label_pattern.atom_id'                       '_chem_comp_atom.atom_id'
-  '_mol_interaction_chem_shift.atom_id'                  '_chem_comp_atom.atom_id'
+  '_chem_shift_perturbation.atom_id'                     '_chem_comp_atom.atom_id'
   '_cs_anisotropy.atom_id'                               '_chem_comp_atom.atom_id'
   '_rdc.atom_id_1'                                       '_chem_comp_atom.atom_id'
   '_rdc.atom_id_2'                                       '_chem_comp_atom.atom_id'
@@ -25804,7 +25867,7 @@ listed in the entry.
   '_isotope_effect_experiment.sample_id'                 'isotope_effect_experiment'                         yes
   '_isotope_effect.label_sample_id_1'                    'isotope_effect'                yes
   '_isotope_effect.label_sample_id_2'                    'isotope_effect'                yes
-  '_mol_interaction_diff_experiment.sample_id'           'mol_interaction_diff_experiment'                   yes
+  '_chem_shift_perturbation_experiment.sample_id'                                        'chem_shift_perturbation_experiment'                yes
   '_cs_anisotropy_experiment.sample_id'                  'cs_anisotropy_experiment'      yes
   '_rdc_experiment.sample_id'                            'rdc_experiment'                yes
   '_dipolar_coupling_experiment.sample_id'               'dipolar_coupling_experiment'                       yes
@@ -25864,7 +25927,7 @@ listed in the entry.
   '_isotope_effect_experiment.sample_id'                 '_sample.id'
   '_isotope_effect.label_sample_id_1'                    '_sample.id'
   '_isotope_effect.label_sample_id_2'                    '_sample.id'
-  '_mol_interaction_diff_experiment.sample_id'           '_sample.id'
+  '_chem_shift_perturbation_experiment.sample_id'                                        '_sample.id'
   '_cs_anisotropy_experiment.sample_id'                  '_sample.id'
   '_rdc_experiment.sample_id'                            '_sample.id'
   '_dipolar_coupling_experiment.sample_id'               '_sample.id'
@@ -27519,7 +27582,7 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_theoretical_coupling_constant_list.sample_condition_list_id'                         'theoretical_coupling_constant_list'                yes
   '_spectral_peak_list.sample_condition_list_id'         'spectral_peak_list'            yes
   '_chem_shift_isotope_effect_list.sample_condition_list_id'                             'chem_shift_isotope_effect_list'                    yes
-  '_mol_interaction_chem_shift_diff.sample_condition_list_id'                            'mol_interaction_chem_shift_diff'                   yes
+  '_chem_shift_perturbation_list.sample_condition_list_id'                               'chem_shift_perturbation_list'                      yes
   '_chem_shift_anisotropy.sample_condition_list_id'                                      'chem_shift_anisotropy'         yes
   '_rdc_list.sample_condition_list_id'                   'rdc_list'                      yes
   '_dipolar_coupling_list.sample_condition_list_id'                                      'dipolar_coupling_list'         yes
@@ -27568,7 +27631,7 @@ A value that uniquely identifies the set of sample conditions from other sample
   '_theoretical_coupling_constant_list.sample_condition_list_id'                         '_sample_condition_list.id'
   '_spectral_peak_list.sample_condition_list_id'         '_sample_condition_list.id'
   '_chem_shift_isotope_effect_list.sample_condition_list_id'                             '_sample_condition_list.id'
-  '_mol_interaction_chem_shift_diff.sample_condition_list_id'                            '_sample_condition_list.id'
+  '_chem_shift_perturbation_list.sample_condition_list_id'                               '_sample_condition_list.id'
   '_chem_shift_anisotropy.sample_condition_list_id'                                      '_sample_condition_list.id'
   '_rdc_list.sample_condition_list_id'                   '_sample_condition_list.id'
   '_dipolar_coupling_list.sample_condition_list_id'                                      '_sample_condition_list.id'
@@ -28525,7 +28588,7 @@ in the entry.
   '_theoretical_coupling_constant_software.software_id'                                  'theoretical_coupling_constant_software'            yes
   '_spectral_peak_software.software_id'                  'spectral_peak_software'        yes
   '_isotope_effect_software.software_id'                 'isotope_effect_software'       yes
-  '_mol_interaction_diff_software.software_id'           'mol_interaction_diff_software'                     yes
+  '_chem_shift_perturbation_software.software_id'                                        'chem_shift_perturbation_software'                  yes
   '_cs_anisotropy_software.software_id'                  'cs_anisotropy_software'        yes
   '_rdc_software.software_id'                            'rdc_software'                  yes
   '_dipolar_coupling_software.software_id'               'dipolar_coupling_software'                         yes
@@ -28602,7 +28665,7 @@ in the entry.
   '_theoretical_coupling_constant_software.software_id'                                  '_software.id'
   '_spectral_peak_software.software_id'                  '_software.id'
   '_isotope_effect_software.software_id'                 '_software.id'
-  '_mol_interaction_diff_software.software_id'           '_software.id'
+  '_chem_shift_perturbation_software.software_id'                                        '_software.id'
   '_cs_anisotropy_software.software_id'                  '_software.id'
   '_rdc_software.software_id'                            '_software.id'
   '_dipolar_coupling_software.software_id'               '_software.id'
@@ -28658,6 +28721,33 @@ in the entry.
   stop_
 
   _item_type.code                             'int'
+
+
+save_
+
+save__software.type
+
+   _item_description.description
+;
+A value that attempts to classify software applications.
+;
+
+   _item.name                                  '_software.type'
+   _item.category_id                           'software'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ’NUS    schedule
+   generator’    ?
+   ‘structure    calculation’
+   .    ?
+
+   stop_
 
 
 save_
@@ -28785,6 +28875,21 @@ v3.0.0.8
 ;
 
    stop_
+
+save_
+
+save__software.doi
+
+   _item_description.description
+;
+The DOI locator if available for the software application.
+;
+
+   _item.name                                  '_software.doi'
+   _item.category_id                           'software'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
 
 save_
 
@@ -29281,7 +29386,7 @@ given in the entry.
   '_spectral_peak_software.method_id'                    'spectral_peak_software'        yes
   '_peak_char.derivation_method_id'                      'peak_char'                     yes
   '_isotope_effect_software.method_id'                   'isotope_effect_software'       yes
-  '_mol_interaction_diff_software.method_id'             'mol_interaction_diff_software'                     yes
+  '_chem_shift_perturbation_software.method_id'          'chem_shift_perturbation_software'                  yes
   '_cs_anisotropy_software.method_id'                    'cs_anisotropy_software'        yes
   '_rdc_software.method_id'                              'rdc_software'                  yes
   '_dipolar_coupling_software.method_id'                 'dipolar_coupling_software'                         yes
@@ -29365,7 +29470,7 @@ given in the entry.
   '_spectral_peak_software.method_id'                    '_method.id'
   '_peak_char.derivation_method_id'                      '_method.id'
   '_isotope_effect_software.method_id'                   '_method.id'
-  '_mol_interaction_diff_software.method_id'             '_method.id'
+  '_chem_shift_perturbation_software.method_id'          '_method.id'
   '_cs_anisotropy_software.method_id'                    '_method.id'
   '_rdc_software.method_id'                              '_method.id'
   '_dipolar_coupling_software.method_id'                 '_method.id'
@@ -33567,7 +33672,7 @@ Unique identifier for each experiment listed.
   '_theoretical_coupling_constant_experiment.experiment_id'                              'theoretical_coupling_constant_experiment'          yes
   '_spectral_peak_list.experiment_id'                    'spectral_peak_list'            yes
   '_isotope_effect_experiment.experiment_id'             'isotope_effect_experiment'                         yes
-  '_mol_interaction_diff_experiment.experiment_id'                                       'mol_interaction_diff_experiment'                   yes
+  '_chem_shift_perturbation_experiment.experiment_id'                                    'chem_shift_perturbation_experiment'                yes
   '_cs_anisotropy_experiment.experiment_id'              'cs_anisotropy_experiment'      yes
   '_rdc_experiment.experiment_id'                        'rdc_experiment'                yes
   '_dipolar_coupling_experiment.experiment_id'           'dipolar_coupling_experiment'                       yes
@@ -33628,7 +33733,7 @@ Unique identifier for each experiment listed.
   '_theoretical_coupling_constant_experiment.experiment_id'                              '_experiment.id'
   '_spectral_peak_list.experiment_id'                    '_experiment.id'
   '_isotope_effect_experiment.experiment_id'             '_experiment.id'
-  '_mol_interaction_diff_experiment.experiment_id'                                       '_experiment.id'
+  '_chem_shift_perturbation_experiment.experiment_id'                                    '_experiment.id'
   '_cs_anisotropy_experiment.experiment_id'              '_experiment.id'
   '_rdc_experiment.experiment_id'                        '_experiment.id'
   '_dipolar_coupling_experiment.experiment_id'           '_experiment.id'
@@ -33702,7 +33807,7 @@ Names for NMR experiments commonly found in the literature.
   '_theoretical_coupling_constant_experiment.experiment_name'                            'theoretical_coupling_constant_experiment'          yes
   '_spectral_peak_list.experiment_name'                  'spectral_peak_list'            yes
   '_isotope_effect_experiment.experiment_name'           'isotope_effect_experiment'                         yes
-  '_mol_interaction_diff_experiment.experiment_name'                                     'mol_interaction_diff_experiment'                   yes
+  '_chem_shift_perturbation_experiment.experiment_name'                                  'chem_shift_perturbation_experiment'                yes
   '_cs_anisotropy_experiment.experiment_name'            'cs_anisotropy_experiment'      yes
   '_rdc_experiment.experiment_name'                      'rdc_experiment'                yes
   '_dipolar_coupling_experiment.experiment_name'         'dipolar_coupling_experiment'                       yes
@@ -33755,7 +33860,7 @@ Names for NMR experiments commonly found in the literature.
   '_theoretical_coupling_constant_experiment.experiment_name'                            '_experiment.name'
   '_spectral_peak_list.experiment_name'                  '_experiment.name'
   '_isotope_effect_experiment.experiment_name'           '_experiment.name'
-  '_mol_interaction_diff_experiment.experiment_name'                                     '_experiment.name'
+  '_chem_shift_perturbation_experiment.experiment_name'                                  '_experiment.name'
   '_cs_anisotropy_experiment.experiment_name'            '_experiment.name'
   '_rdc_experiment.experiment_name'                      '_experiment.name'
   '_dipolar_coupling_experiment.experiment_name'         '_experiment.name'
@@ -35600,6 +35705,21 @@ Value for the NMR spectral acquisition parameter.
 
 save_
 
+save__spectral_acq_param.val_units
+
+   _item_description.description
+;
+The unit description that applies to the reported parameter value.
+;
+
+   _item.name                                  '_spectral_acq_param.val_units'
+   _item.category_id                           'spectral_acq_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
 save__spectral_acq_param.entry_id
 
    _item_description.description
@@ -36170,6 +36290,69 @@ Items in the spectral_processing_param category describe the software parameters
 
 save_
 
+save__spectral_processing_param.operation_id
+
+   _item_description.description
+;
+An integer value that is a unique identifier for the operation within the 
+save frame.
+;
+
+   _item.name                                  '_spectral_processing_param.operation_id'
+   _item.category_id                           'spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__spectral_processing_param.operation_code
+
+   _item_description.description
+;
+A code that describes the spectral processing operation.
+;
+
+   _item.name                                  '_spectral_processing_param.operation_code'
+   _item.category_id                           'spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save__spectral_processing_param.operation_ordinal
+
+   _item_description.description
+;
+An integer value that defines the order in which the operations  are carried 
+out.
+;
+
+   _item.name                                  '_spectral_processing_param.operation_ordinal'
+   _item.category_id                           'spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__spectral_processing_param.previous_operation_id
+
+   _item_description.description
+;
+The operation_ID for the operation carried out immediately prior to the 
+current operation.
+;
+
+   _item.name                                  '_spectral_processing_param.previous_operation_id'
+   _item.category_id                           'spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__spectral_processing_param.id
 
    _item_description.description
@@ -36242,6 +36425,21 @@ Value for the NMR spectral processing parameter.
    _item.category_id                           'spectral_processing_param'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
+
+
+save_
+
+save__spectral_processing_param.val_units
+
+   _item_description.description
+;
+The units for the paramerter value.
+;
+
+   _item.name                                  '_spectral_processing_param.val_units'
+   _item.category_id                           'spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
 
 
 save_
@@ -37907,7 +38105,7 @@ reference values from other saveframes of this category in an entry.
   '_chem_shift_ref.chem_shift_reference_id'              'chem_shift_ref'                yes
   '_assigned_chem_shift_list.chem_shift_reference_id'                                    'assigned_chem_shift_list'      yes
   '_chem_shifts_calc_type.chem_shift_reference_id'                                       'chem_shifts_calc_type'         yes
-  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_id'                               'mol_interaction_chem_shift_diff'                   yes
+  '_chem_shift_perturbation_list.chem_shift_ref_set_id'                                  'chem_shift_perturbation_list'                      yes
 
   stop_
 
@@ -37918,7 +38116,7 @@ reference values from other saveframes of this category in an entry.
   '_chem_shift_ref.chem_shift_reference_id'              '_chem_shift_reference.id'
   '_assigned_chem_shift_list.chem_shift_reference_id'                                    '_chem_shift_reference.id'
   '_chem_shifts_calc_type.chem_shift_reference_id'                                       '_chem_shift_reference.id'
-  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_id'                               '_chem_shift_reference.id'
+  '_chem_shift_perturbation_list.chem_shift_ref_set_id'                                  '_chem_shift_reference.id'
 
   stop_
 
@@ -43732,7 +43930,6 @@ Spectral peak list ID
   '_peak.spectral_peak_list_id'                          'peak'                          yes
   '_peak_general_char.spectral_peak_list_id'             'peak_general_char'             yes
   '_peak_char.spectral_peak_list_id'                     'peak_char'                     yes
-  '_peak_contribution.spectral_peak_list_id'             'peak_contribution'             yes
   '_assigned_peak_chem_shift.spectral_peak_list_id'                                      'assigned_peak_chem_shift'      yes
   '_spectral_transition.spectral_peak_list_id'           'spectral_transition'           yes
   '_spectral_transition_general_char.spectral_peak_list_id'                              'spectral_transition_general_char'                  yes
@@ -43754,7 +43951,6 @@ Spectral peak list ID
   '_peak.spectral_peak_list_id'                          '_spectral_peak_list.id'
   '_peak_general_char.spectral_peak_list_id'             '_spectral_peak_list.id'
   '_peak_char.spectral_peak_list_id'                     '_spectral_peak_list.id'
-  '_peak_contribution.spectral_peak_list_id'             '_spectral_peak_list.id'
   '_assigned_peak_chem_shift.spectral_peak_list_id'                                      '_spectral_peak_list.id'
   '_spectral_transition.spectral_peak_list_id'           '_spectral_peak_list.id'
   '_spectral_transition_general_char.spectral_peak_list_id'                              '_spectral_peak_list.id'
@@ -44910,7 +45106,7 @@ save__peak.position_1
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_1'
@@ -44925,10 +45121,40 @@ save__peak.position_uncertainty_1
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_1'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_1
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_1'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_1
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_1'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -44940,7 +45166,7 @@ save__peak.position_2
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_2'
@@ -44955,10 +45181,40 @@ save__peak.position_uncertainty_2
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_2'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_2
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_2'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_2
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_2'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -44970,7 +45226,7 @@ save__peak.position_3
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_3'
@@ -44985,10 +45241,40 @@ save__peak.position_uncertainty_3
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_3'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_3
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_3'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_3
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_3'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45000,7 +45286,7 @@ save__peak.position_4
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_4'
@@ -45015,10 +45301,40 @@ save__peak.position_uncertainty_4
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_4'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_4
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_4'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_4
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_4'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45030,7 +45346,7 @@ save__peak.position_5
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_5'
@@ -45045,10 +45361,40 @@ save__peak.position_uncertainty_5
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_5'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_5
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_5'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_5
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_5'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45060,7 +45406,7 @@ save__peak.position_6
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_6'
@@ -45075,10 +45421,40 @@ save__peak.position_uncertainty_6
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_6'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_6
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_6'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_6
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_6'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45090,7 +45466,7 @@ save__peak.position_7
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_7'
@@ -45105,10 +45481,40 @@ save__peak.position_uncertainty_7
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_7'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_7
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_7'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_7
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_7'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45120,7 +45526,7 @@ save__peak.position_8
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_8'
@@ -45135,10 +45541,40 @@ save__peak.position_uncertainty_8
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_8'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_8
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_8'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_8
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_8'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45150,7 +45586,7 @@ save__peak.position_9
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_9'
@@ -45165,10 +45601,40 @@ save__peak.position_uncertainty_9
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_9'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_9
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_9'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_9
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_9'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45180,7 +45646,7 @@ save__peak.position_10
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_10'
@@ -45195,10 +45661,40 @@ save__peak.position_uncertainty_10
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_10'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_10
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_10'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_10
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_10'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45210,7 +45706,7 @@ save__peak.position_11
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_11'
@@ -45225,10 +45721,40 @@ save__peak.position_uncertainty_11
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_11'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_11
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_11'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_11
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_11'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45240,7 +45766,7 @@ save__peak.position_12
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_12'
@@ -45255,10 +45781,40 @@ save__peak.position_uncertainty_12
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_12'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_12
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_12'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_12
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_12'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45270,7 +45826,7 @@ save__peak.position_13
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_13'
@@ -45285,10 +45841,40 @@ save__peak.position_uncertainty_13
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_13'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_13
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_13'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_13
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_13'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45300,7 +45886,7 @@ save__peak.position_14
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_14'
@@ -45315,10 +45901,40 @@ save__peak.position_uncertainty_14
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_14'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_14
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_14'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_14
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_14'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45330,7 +45946,7 @@ save__peak.position_15
 
    _item_description.description
 ;
-Chem shift val
+Peak chemical shift value for this dimension in the spectrum
 ;
 
    _item.name                                  '_peak.position_15'
@@ -45345,10 +45961,40 @@ save__peak.position_uncertainty_15
 
    _item_description.description
 ;
-Chem shift val err
+Peak chemical shift value error
 ;
 
    _item.name                                  '_peak.position_uncertainty_15'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_15
+
+   _item_description.description
+;
+Peak line width value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak.line_width_15'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak.line_width_uncertainty_15
+
+   _item_description.description
+;
+Peak line width value error
+;
+
+   _item.name                                  '_peak.line_width_uncertainty_15'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -45364,6 +46010,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_1'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_1'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -45480,6 +46141,21 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
+save__peak.entity_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_2'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__peak.comp_index_id_2
 
    _item_description.description
@@ -45582,6 +46258,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_3'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_3
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_3'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -45698,6 +46389,21 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
+save__peak.entity_id_4
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_4'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__peak.comp_index_id_4
 
    _item_description.description
@@ -45800,6 +46506,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_5'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_5
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_5'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -45916,6 +46637,21 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
+save__peak.entity_id_6
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_6'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__peak.comp_index_id_6
 
    _item_description.description
@@ -46018,6 +46754,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_7'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_7
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_7'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -46134,6 +46885,21 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
+save__peak.entity_id_8
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_8'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__peak.comp_index_id_8
 
    _item_description.description
@@ -46236,6 +47002,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_9'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_9
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_9'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -46352,6 +47133,21 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
+save__peak.entity_id_10
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_10'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__peak.comp_index_id_10
 
    _item_description.description
@@ -46454,6 +47250,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_11'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_11
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_11'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -46570,6 +47381,21 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
+save__peak.entity_id_12
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_12'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__peak.comp_index_id_12
 
    _item_description.description
@@ -46672,6 +47498,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_13'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_13
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_13'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -46788,6 +47629,21 @@ Pointer to '_Entity_assembly.ID'
 
 save_
 
+save__peak.entity_id_14
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_14'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__peak.comp_index_id_14
 
    _item_description.description
@@ -46890,6 +47746,21 @@ Pointer to '_Entity_assembly.ID'
 ;
 
    _item.name                                  '_peak.entity_assembly_id_15'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak.entity_id_15
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak.entity_id_15'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -47002,6 +47873,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_1'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_1
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_1'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -47128,6 +48014,21 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__peak.auth_entity_id_2
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_2'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__peak.auth_asym_id_2
 
    _item_description.description
@@ -47240,6 +48141,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_3'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_3
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_3'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -47366,6 +48282,21 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__peak.auth_entity_id_4
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_4'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__peak.auth_asym_id_4
 
    _item_description.description
@@ -47478,6 +48409,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_5'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_5
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_5'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -47604,6 +48550,21 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__peak.auth_entity_id_6
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_6'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__peak.auth_asym_id_6
 
    _item_description.description
@@ -47716,6 +48677,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_7'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_7
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_7'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -47842,6 +48818,21 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__peak.auth_entity_id_8
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_8'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__peak.auth_asym_id_8
 
    _item_description.description
@@ -47954,6 +48945,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_9'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_9
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_9'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -48080,6 +49086,21 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__peak.auth_entity_id_10
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_10'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__peak.auth_asym_id_10
 
    _item_description.description
@@ -48192,6 +49213,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_11'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_11
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_11'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -48318,6 +49354,21 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__peak.auth_entity_id_12
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_12'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__peak.auth_asym_id_12
 
    _item_description.description
@@ -48430,6 +49481,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_13'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_13
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_13'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -48556,6 +49622,21 @@ need to correspond to the value for Entity_assembly_ID.
 
 save_
 
+save__peak.auth_entity_id_14
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_14'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__peak.auth_asym_id_14
 
    _item_description.description
@@ -48668,6 +49749,21 @@ need to correspond to the value for Entity_assembly_ID.
 ;
 
    _item.name                                  '_peak.auth_entity_assembly_id_15'
+   _item.category_id                           'peak'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak.auth_entity_id_15
+
+   _item_description.description
+;
+An alternative identifier for Entity_ID
+;
+
+   _item.name                                  '_peak.auth_entity_id_15'
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'code'
@@ -49289,108 +50385,6 @@ Pointer to '_Spectral_peak_list.ID'
 
 save_
 
-save_peak_contribution
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'peak_contribution'
-
-   loop_
-     _category_key.name
-
-     '_peak_contribution.id'
-     '_peak_contribution.entry_id'
-     '_peak_contribution.spectral_peak_list_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
-
-save_
-
-save__peak_contribution.id
-
-   _item_description.description
-;
-Integer value that identifies one or more factional peak values linked 
-to a peak ID.
-;
-
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_peak_contribution.id'                                'peak_contribution'             yes
-  '_assigned_peak_chem_shift.peak_contribution_id'                                       'assigned_peak_chem_shift'      yes
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-  '_assigned_peak_chem_shift.peak_contribution_id'                                       '_peak_contribution.id'
-
-  stop_
-
-  _item_type.code                             'int'
-
-
-save_
-
-save__peak_contribution.contribution_fractional_val
-
-   _item_description.description
-;
-The fraction of a peak assigned to this peak ID.
-;
-
-   _item.name                                  '_peak_contribution.contribution_fractional_val'
-   _item.category_id                           'peak_contribution'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak_contribution.entry_id
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                                  '_peak_contribution.entry_id'
-   _item.category_id                           'peak_contribution'
-   _item.mandatory_code                         yes
-   _item_type.code                             'code'
-
-
-save_
-
-save__peak_contribution.spectral_peak_list_id
-
-   _item_description.description
-;
-Pointer to '_Spectral_peak_list.ID'
-;
-
-   _item.name                                  '_peak_contribution.spectral_peak_list_id'
-   _item.category_id                           'peak_contribution'
-   _item.mandatory_code                         yes
-   _item_type.code                             'int'
-
-
-save_
-
 save_assigned_peak_chem_shift
    _category.description
 ;
@@ -49443,21 +50437,6 @@ Pointer to '_Spectral_dim.ID'
    _item.name                                  '_assigned_peak_chem_shift.spectral_dim_id'
    _item.category_id                           'assigned_peak_chem_shift'
    _item.mandatory_code                         yes
-   _item_type.code                             'int'
-
-
-save_
-
-save__assigned_peak_chem_shift.peak_contribution_id
-
-   _item_description.description
-;
-Pointer to '_Peak_contribution.ID'
-;
-
-   _item.name                                  '_assigned_peak_chem_shift.peak_contribution_id'
-   _item.category_id                           'assigned_peak_chem_shift'
-   _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
@@ -49518,6 +50497,21 @@ The quantitative chemical shift value assigned to the peak.
 ;
 
    _item.name                                  '_assigned_peak_chem_shift.val'
+   _item.category_id                           'assigned_peak_chem_shift'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__assigned_peak_chem_shift.contribution_fractional_val
+
+   _item_description.description
+;
+The fraction of a peak assigned to this peak ID.
+;
+
+   _item.name                                  '_assigned_peak_chem_shift.contribution_fractional_val'
    _item.category_id                           'assigned_peak_chem_shift'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -50482,7 +51476,7 @@ to a peak ID.
       _item.mandatory_code
 
   '_spectral_transition_contrib.id'                      'spectral_transition_contrib'             yes
-  '_assigned_spectral_transition.spectral_transition_contrib_id'                         'assigned_spectral_transition'                      yes
+  '_assigned_spectral_transition.contribution_fractional_val'                            'assigned_spectral_transition'                      yes
 
   stop_
 
@@ -50490,7 +51484,7 @@ to a peak ID.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_assigned_spectral_transition.spectral_transition_contrib_id'                         '_spectral_transition_contrib.id'
+  '_assigned_spectral_transition.contribution_fractional_val'                            '_spectral_transition_contrib.id'
 
   stop_
 
@@ -50601,14 +51595,14 @@ Pointer to '_Spectral_dim.ID'
 
 save_
 
-save__assigned_spectral_transition.spectral_transition_contrib_id
+save__assigned_spectral_transition.contribution_fractional_val
 
    _item_description.description
 ;
 Pointer to '_Spectral_transition_contrib.ID'
 ;
 
-   _item.name                                  '_assigned_spectral_transition.spectral_transition_contrib_id'
+   _item.name                                  '_assigned_spectral_transition.contribution_fractional_val'
    _item.category_id                           'assigned_spectral_transition'
    _item.mandatory_code                         no
    _item_type.code                             'int'
@@ -51049,7 +52043,7 @@ Unique identifier for the specified resonance.
   '_resonance_covalent_link.resonance_id_2'              'resonance_covalent_link'       yes
   '_isotope_effect.resonance_id_1'                       'isotope_effect'                yes
   '_isotope_effect.resonance_id_2'                       'isotope_effect'                yes
-  '_mol_interaction_chem_shift.resonance_id'             'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation.resonance_id'                'chem_shift_perturbation'       yes
   '_cs_anisotropy.resonance_id'                          'cs_anisotropy'                 yes
   '_rdc.resonance_id_1'                                  'rdc'                           yes
   '_rdc.resonance_id_2'                                  'rdc'                           yes
@@ -51129,7 +52123,7 @@ Unique identifier for the specified resonance.
   '_resonance_covalent_link.resonance_id_2'              '_resonance.id'
   '_isotope_effect.resonance_id_1'                       '_resonance.id'
   '_isotope_effect.resonance_id_2'                       '_resonance.id'
-  '_mol_interaction_chem_shift.resonance_id'             '_resonance.id'
+  '_chem_shift_perturbation.resonance_id'                '_resonance.id'
   '_cs_anisotropy.resonance_id'                          '_resonance.id'
   '_rdc.resonance_id_1'                                  '_resonance.id'
   '_rdc.resonance_id_2'                                  '_resonance.id'
@@ -53172,18 +54166,18 @@ Pointer to '_Chem_shift_isotope_effect_list.ID'
 
 save_
 
-save_mol_interaction_chem_shift_diff
+save_chem_shift_perturbation_list
    _category.description
 ;
-Items in the mol_interaction_chem_shift_diff category provide information about a list of reported chemical shift values resulting from the interactions between molecules in a molecular assembly.
+              category description not available
 ;
-   _category.id                   'mol_interaction_chem_shift_diff'
+   _category.id                   'chem_shift_perturbation_list'
 
    loop_
      _category_key.name
 
-     '_mol_interaction_chem_shift_diff.entry_id'
-     '_mol_interaction_chem_shift_diff.id'
+     '_chem_shift_perturbation_list.entry_id'
+     '_chem_shift_perturbation_list.id'
 
    stop_
 
@@ -53191,28 +54185,28 @@ Items in the mol_interaction_chem_shift_diff category provide information about 
      _category_group.id
 
      'inclusive_group'
-     'chem_shift_interaction_diff'
+     'chem_shift_perturbation'
 
    stop_
 
 save_
 
-save__mol_interaction_chem_shift_diff.sf_category
+save__chem_shift_perturbation_list.sf_category
 
    _item_description.description
 ;
 Category definition for the information content of the saveframe
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.sf_category'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.sf_category'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.sf_framecode
+save__chem_shift_perturbation_list.sf_framecode
 
    _item_description.description
 ;
@@ -53220,8 +54214,8 @@ A label for the saveframe that describes in very brief terms the information
 contained in the saveframe.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.sf_framecode'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.sf_framecode'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
    _item_default.value            'mol_interaction_chem_shift_list_1'
@@ -53229,22 +54223,22 @@ contained in the saveframe.
 
 save_
 
-save__mol_interaction_chem_shift_diff.entry_id
+save__chem_shift_perturbation_list.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.entry_id'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.entry_id'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.id
+save__chem_shift_perturbation_list.id
 
    _item_description.description
 ;
@@ -53257,10 +54251,10 @@ information from other saveframes of this category in an entry.
       _item.category_id
       _item.mandatory_code
 
-  '_mol_interaction_chem_shift_diff.id'                  'mol_interaction_chem_shift_diff'         yes
-  '_mol_interaction_diff_experiment.mol_interaction_chem_shift_diff_id'                  'mol_interaction_diff_experiment'                   yes
-  '_mol_interaction_diff_software.mol_interaction_chem_shift_diff_id'                    'mol_interaction_diff_software'                     yes
-  '_mol_interaction_chem_shift.mol_interaction_chem_shift_diff_id'                       'mol_interaction_chem_shift'                        yes
+  '_chem_shift_perturbation_list.id'                     'chem_shift_perturbation_list'            yes
+  '_chem_shift_perturbation_experiment.chem_shift_perturbation_list_id'                  'chem_shift_perturbation_experiment'                yes
+  '_chem_shift_perturbation_software.chem_shift_perturbation_list_id'                    'chem_shift_perturbation_software'                  yes
+  '_chem_shift_perturbation.chem_shift_perturbation_list_id'                             'chem_shift_perturbation'       yes
 
   stop_
 
@@ -53268,9 +54262,9 @@ information from other saveframes of this category in an entry.
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_mol_interaction_diff_experiment.mol_interaction_chem_shift_diff_id'                  '_mol_interaction_chem_shift_diff.id'
-  '_mol_interaction_diff_software.mol_interaction_chem_shift_diff_id'                    '_mol_interaction_chem_shift_diff.id'
-  '_mol_interaction_chem_shift.mol_interaction_chem_shift_diff_id'                       '_mol_interaction_chem_shift_diff.id'
+  '_chem_shift_perturbation_experiment.chem_shift_perturbation_list_id'                  '_chem_shift_perturbation_list.id'
+  '_chem_shift_perturbation_software.chem_shift_perturbation_list_id'                    '_chem_shift_perturbation_list.id'
+  '_chem_shift_perturbation.chem_shift_perturbation_list_id'                             '_chem_shift_perturbation_list.id'
 
   stop_
 
@@ -53279,52 +54273,82 @@ information from other saveframes of this category in an entry.
 
 save_
 
-save__mol_interaction_chem_shift_diff.sample_condition_list_id
+save__chem_shift_perturbation_list.type
+
+   _item_description.description
+;
+The type of chemical shift perturbation reported.
+;
+
+   _item.name                                  '_chem_shift_perturbation_list.type'
+   _item.category_id                           'chem_shift_perturbation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ‘macromolecular    binding’
+   .    ?
+   binding’    ?
+   ‘ligand    fragment
+   binding’    ?
+   ‘paramagnetic    ligand
+   binding’    ?
+
+   stop_
+
+
+save_
+
+save__chem_shift_perturbation_list.sample_condition_list_id
 
    _item_description.description
 ;
 Pointer to '_Sample_condition_list.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.sample_condition_list_id'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.sample_condition_list_id'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.sample_condition_list_label
+save__chem_shift_perturbation_list.sample_condition_list_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'sample_conditions'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.sample_condition_list_label'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.sample_condition_list_label'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.chem_shift_ref_set_id
+save__chem_shift_perturbation_list.chem_shift_ref_set_id
 
    _item_description.description
 ;
 Pointer to '_Chem_shift_reference.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_id'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.chem_shift_ref_set_id'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.chem_shift_ref_set_label
+save__chem_shift_perturbation_list.chem_shift_ref_set_label
 
    _item_description.description
 ;
@@ -53332,15 +54356,15 @@ Pointer to a saveframe of the category 'chemical_shift_reference.'  This
 is the saveframe where the chemical shift referencing standards are described.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.chem_shift_ref_set_label'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.chem_shift_ref_set_label'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.details
+save__chem_shift_perturbation_list.details
 
    _item_description.description
 ;
@@ -53348,15 +54372,15 @@ Text providing additional information regarding the set of molecular interaction
 data and their derivation.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.details'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.details'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         no
    _item_type.code                             'text'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.text_data_format
+save__chem_shift_perturbation_list.text_data_format
 
    _item_description.description
 ;
@@ -53365,15 +54389,15 @@ interaction observations as ASCII text in the text block that is the value to th
 '_Mol_interaction_chem_shift_diff.Text_data' tag.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.text_data_format'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.text_data_format'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
 
 save_
 
-save__mol_interaction_chem_shift_diff.text_data
+save__chem_shift_perturbation_list.text_data
 
    _item_description.description
 ;
@@ -53381,27 +54405,27 @@ A set of chemical shift data defining molecular interactions formatted
 as ASCII text.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift_diff.text_data'
-   _item.category_id                           'mol_interaction_chem_shift_diff'
+   _item.name                                  '_chem_shift_perturbation_list.text_data'
+   _item.category_id                           'chem_shift_perturbation_list'
    _item.mandatory_code                         no
    _item_type.code                             'text'
 
 
 save_
 
-save_mol_interaction_diff_experiment
+save_chem_shift_perturbation_experiment
    _category.description
 ;
-Items in the mol_interaction_diff_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of reported chemical shifts that represent the effect of two or molecules interaction with each other.
+              category description not available
 ;
-   _category.id                   'mol_interaction_diff_experiment'
+   _category.id                   'chem_shift_perturbation_experiment'
 
    loop_
      _category_key.name
 
-     '_mol_interaction_diff_experiment.experiment_id'
-     '_mol_interaction_diff_experiment.entry_id'
-     '_mol_interaction_diff_experiment.mol_interaction_chem_shift_diff_id'
+     '_chem_shift_perturbation_experiment.experiment_id'
+     '_chem_shift_perturbation_experiment.entry_id'
+     '_chem_shift_perturbation_experiment.chem_shift_perturbation_list_id'
 
    stop_
 
@@ -53409,81 +54433,81 @@ Items in the mol_interaction_diff_experiment category provide pointers to the NM
      _category_group.id
 
      'inclusive_group'
-     'chem_shift_interaction_diff'
+     'chem_shift_perturbation'
 
    stop_
 
 save_
 
-save__mol_interaction_diff_experiment.experiment_id
+save__chem_shift_perturbation_experiment.experiment_id
 
    _item_description.description
 ;
 Pointer to '_Experiment.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_experiment.experiment_id'
-   _item.category_id                           'mol_interaction_diff_experiment'
+   _item.name                                  '_chem_shift_perturbation_experiment.experiment_id'
+   _item.category_id                           'chem_shift_perturbation_experiment'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_diff_experiment.experiment_name
+save__chem_shift_perturbation_experiment.experiment_name
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'NMR_spectrometer_expt'
 ;
 
-   _item.name                                  '_mol_interaction_diff_experiment.experiment_name'
-   _item.category_id                           'mol_interaction_diff_experiment'
+   _item.name                                  '_chem_shift_perturbation_experiment.experiment_name'
+   _item.category_id                           'chem_shift_perturbation_experiment'
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
 
 save_
 
-save__mol_interaction_diff_experiment.sample_id
+save__chem_shift_perturbation_experiment.sample_id
 
    _item_description.description
 ;
 Pointer to '_Sample.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_experiment.sample_id'
-   _item.category_id                           'mol_interaction_diff_experiment'
+   _item.name                                  '_chem_shift_perturbation_experiment.sample_id'
+   _item.category_id                           'chem_shift_perturbation_experiment'
    _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_diff_experiment.sample_label
+save__chem_shift_perturbation_experiment.sample_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'sample'
 ;
 
-   _item.name                                  '_mol_interaction_diff_experiment.sample_label'
-   _item.category_id                           'mol_interaction_diff_experiment'
+   _item.name                                  '_chem_shift_perturbation_experiment.sample_label'
+   _item.category_id                           'chem_shift_perturbation_experiment'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
 
 save_
 
-save__mol_interaction_diff_experiment.sample_state
+save__chem_shift_perturbation_experiment.sample_state
 
    _item_description.description
 ;
 Physical state of the sample either anisotropic or isotropic.
 ;
 
-   _item.name                                  '_mol_interaction_diff_experiment.sample_state'
-   _item.category_id                           'mol_interaction_diff_experiment'
+   _item.name                                  '_chem_shift_perturbation_experiment.sample_state'
+   _item.category_id                           'chem_shift_perturbation_experiment'
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
@@ -53501,49 +54525,49 @@ Physical state of the sample either anisotropic or isotropic.
 
 save_
 
-save__mol_interaction_diff_experiment.entry_id
+save__chem_shift_perturbation_experiment.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_experiment.entry_id'
-   _item.category_id                           'mol_interaction_diff_experiment'
+   _item.name                                  '_chem_shift_perturbation_experiment.entry_id'
+   _item.category_id                           'chem_shift_perturbation_experiment'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_diff_experiment.mol_interaction_chem_shift_diff_id
+save__chem_shift_perturbation_experiment.chem_shift_perturbation_list_id
 
    _item_description.description
 ;
-Pointer to '_Mol_interaction_chem_shift_diff.ID'
+Pointer to '_Chem_shift_perturbation_list.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_experiment.mol_interaction_chem_shift_diff_id'
-   _item.category_id                           'mol_interaction_diff_experiment'
+   _item.name                                  '_chem_shift_perturbation_experiment.chem_shift_perturbation_list_id'
+   _item.category_id                           'chem_shift_perturbation_experiment'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save_mol_interaction_diff_software
+save_chem_shift_perturbation_software
    _category.description
 ;
-Items in the mol_interaction_diff_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
+              category description not available
 ;
-   _category.id                   'mol_interaction_diff_software'
+   _category.id                   'chem_shift_perturbation_software'
 
    loop_
      _category_key.name
 
-     '_mol_interaction_diff_software.software_id'
-     '_mol_interaction_diff_software.entry_id'
-     '_mol_interaction_diff_software.mol_interaction_chem_shift_diff_id'
+     '_chem_shift_perturbation_software.software_id'
+     '_chem_shift_perturbation_software.entry_id'
+     '_chem_shift_perturbation_software.chem_shift_perturbation_list_id'
 
    stop_
 
@@ -53551,115 +54575,115 @@ Items in the mol_interaction_diff_software category provide pointers to the soft
      _category_group.id
 
      'inclusive_group'
-     'chem_shift_interaction_diff'
+     'chem_shift_perturbation'
 
    stop_
 
 save_
 
-save__mol_interaction_diff_software.software_id
+save__chem_shift_perturbation_software.software_id
 
    _item_description.description
 ;
 Pointer to '_Software.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_software.software_id'
-   _item.category_id                           'mol_interaction_diff_software'
+   _item.name                                  '_chem_shift_perturbation_software.software_id'
+   _item.category_id                           'chem_shift_perturbation_software'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_diff_software.software_label
+save__chem_shift_perturbation_software.software_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'software'
 ;
 
-   _item.name                                  '_mol_interaction_diff_software.software_label'
-   _item.category_id                           'mol_interaction_diff_software'
+   _item.name                                  '_chem_shift_perturbation_software.software_label'
+   _item.category_id                           'chem_shift_perturbation_software'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
 
 save_
 
-save__mol_interaction_diff_software.method_id
+save__chem_shift_perturbation_software.method_id
 
    _item_description.description
 ;
 Pointer to '_Method.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_software.method_id'
-   _item.category_id                           'mol_interaction_diff_software'
+   _item.name                                  '_chem_shift_perturbation_software.method_id'
+   _item.category_id                           'chem_shift_perturbation_software'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_diff_software.method_label
+save__chem_shift_perturbation_software.method_label
 
    _item_description.description
 ;
 Pointer to a saveframe of the category 'method'
 ;
 
-   _item.name                                  '_mol_interaction_diff_software.method_label'
-   _item.category_id                           'mol_interaction_diff_software'
+   _item.name                                  '_chem_shift_perturbation_software.method_label'
+   _item.category_id                           'chem_shift_perturbation_software'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
 
 save_
 
-save__mol_interaction_diff_software.entry_id
+save__chem_shift_perturbation_software.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_software.entry_id'
-   _item.category_id                           'mol_interaction_diff_software'
+   _item.name                                  '_chem_shift_perturbation_software.entry_id'
+   _item.category_id                           'chem_shift_perturbation_software'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_diff_software.mol_interaction_chem_shift_diff_id
+save__chem_shift_perturbation_software.chem_shift_perturbation_list_id
 
    _item_description.description
 ;
-Pointer to '_Mol_interaction_chem_shift_diff.ID'
+Pointer to '_Chem_shift_perturbation_list.ID'
 ;
 
-   _item.name                                  '_mol_interaction_diff_software.mol_interaction_chem_shift_diff_id'
-   _item.category_id                           'mol_interaction_diff_software'
+   _item.name                                  '_chem_shift_perturbation_software.chem_shift_perturbation_list_id'
+   _item.category_id                           'chem_shift_perturbation_software'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save_mol_interaction_chem_shift
+save_chem_shift_perturbation
    _category.description
 ;
-Items in the mol_interaction_chem_shift category describe the chemical shift values assigned to specific atoms in a molecular assembly that result from the interactions between molecules in the molecular assembly.
+              category description not available
 ;
-   _category.id                   'mol_interaction_chem_shift'
+   _category.id                   'chem_shift_perturbation'
 
    loop_
      _category_key.name
 
-     '_mol_interaction_chem_shift.id'
-     '_mol_interaction_chem_shift.entry_id'
-     '_mol_interaction_chem_shift.mol_interaction_chem_shift_diff_id'
+     '_chem_shift_perturbation.id'
+     '_chem_shift_perturbation.entry_id'
+     '_chem_shift_perturbation.chem_shift_perturbation_list_id'
 
    stop_
 
@@ -53667,13 +54691,13 @@ Items in the mol_interaction_chem_shift category describe the chemical shift val
      _category_group.id
 
      'inclusive_group'
-     'chem_shift_interaction_diff'
+     'chem_shift_perturbation'
 
    stop_
 
 save_
 
-save__mol_interaction_chem_shift.id
+save__chem_shift_perturbation.id
 
    _item_description.description
 ;
@@ -53681,120 +54705,120 @@ Unique identifier for the observed chemical shift difference for a nuclei
 caused by the interaction between two members of the molecular assembly.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.assembly_atom_id
+save__chem_shift_perturbation.assembly_atom_id
 
    _item_description.description
 ;
 Pointer to '_Atom.Assembly_atom_ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.assembly_atom_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.assembly_atom_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.entity_assembly_id
+save__chem_shift_perturbation.entity_assembly_id
 
    _item_description.description
 ;
 Pointer to '_Entity_assembly.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.entity_assembly_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.entity_assembly_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.entity_id
+save__chem_shift_perturbation.entity_id
 
    _item_description.description
 ;
 Pointer to '_Entity.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.entity_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.entity_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.comp_index_id
+save__chem_shift_perturbation.comp_index_id
 
    _item_description.description
 ;
 Pointer to '_Entity_comp_index.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.comp_index_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.comp_index_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.seq_id
+save__chem_shift_perturbation.seq_id
 
    _item_description.description
 ;
 Pointer to '_Entity_poly_seq.Num'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.seq_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.seq_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.comp_id
+save__chem_shift_perturbation.comp_id
 
    _item_description.description
 ;
 Pointer to '_Chem_comp.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.comp_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.comp_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_chem_shift.atom_id
+save__chem_shift_perturbation.atom_id
 
    _item_description.description
 ;
 Pointer to '_Chem_comp_atom.Atom_ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.atom_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.atom_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'atcode'
 
 
 save_
 
-save__mol_interaction_chem_shift.atom_type
+save__chem_shift_perturbation.atom_type
 
    _item_description.description
 ;
@@ -53802,15 +54826,15 @@ The value for this tag is a standard IUPAC abbreviation for an element
 (i.e., H, C, P, etc).
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.atom_type'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.atom_type'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_chem_shift.atom_isotope_number
+save__chem_shift_perturbation.atom_isotope_number
 
    _item_description.description
 ;
@@ -53818,15 +54842,15 @@ The mass number for the chemical element defined by the tag '_Atom_type'
 or any of its related tags.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.atom_isotope_number'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.atom_isotope_number'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.chem_shift_val
+save__chem_shift_perturbation.chem_shift_val
 
    _item_description.description
 ;
@@ -53834,30 +54858,54 @@ Chemical shift value for the atom when in the presence of the molecules
 that are interacting with it.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.chem_shift_val'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.chem_shift_val'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'float'
 
 
 save_
 
-save__mol_interaction_chem_shift.chem_shift_val_err
+save__chem_shift_perturbation.chem_shift_val_err
 
    _item_description.description
 ;
 Estimated error in the chemical shift value.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.chem_shift_val_err'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.chem_shift_val_err'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'float'
 
 
 save_
 
-save__mol_interaction_chem_shift.chem_shift_diff_val
+save_chem_shift_perturbation_chem_shift
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'chem_shift_perturbation_chem_shift'
+
+   loop_
+     _category_key.name
+
+      ?
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shift_perturbation'
+
+   stop_
+
+save_
+
+save__chem_shift_perturbation_chem_shift.chem_shift_val
 
    _item_description.description
 ;
@@ -53866,45 +54914,71 @@ state of the molecule and in the state where it is interacting with one or more
 other molecules.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.chem_shift_diff_val'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation_chem_shift.chem_shift_val'
+   _item.category_id                           'chem_shift_perturbation_chem_shift'
    _item.mandatory_code                         no
    _item_type.code                             'float'
 
 
 save_
 
-save__mol_interaction_chem_shift.chem_shift_diff_val_err
+save__chem_shift_perturbation_chem_shift.chem_shift_val_err
 
    _item_description.description
 ;
 Estimated error for the delta chemical shift value reported.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.chem_shift_diff_val_err'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation_chem_shift.chem_shift_val_err'
+   _item.category_id                           'chem_shift_perturbation_chem_shift'
    _item.mandatory_code                         no
    _item_type.code                             'float'
 
 
 save_
 
-save__mol_interaction_chem_shift.resonance_id
+save_chem_shift_perturbation
+   _category.description
+;
+              category description not available
+;
+   _category.id                   'chem_shift_perturbation'
+
+   loop_
+     _category_key.name
+
+     '_chem_shift_perturbation.id'
+     '_chem_shift_perturbation.entry_id'
+     '_chem_shift_perturbation.chem_shift_perturbation_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shift_perturbation'
+
+   stop_
+
+save_
+
+save__chem_shift_perturbation.resonance_id
 
    _item_description.description
 ;
 Pointer to '_Resonance.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.resonance_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.resonance_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
 save_
 
-save__mol_interaction_chem_shift.auth_entity_assembly_id
+save__chem_shift_perturbation.auth_entity_assembly_id
 
    _item_description.description
 ;
@@ -53914,15 +54988,15 @@ data.  Note that the value is not required to be a number and does not
 need to correspond to the value for Entity_assembly_ID.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.auth_entity_assembly_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.auth_entity_assembly_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_chem_shift.auth_seq_id
+save__chem_shift_perturbation.auth_seq_id
 
    _item_description.description
 ;
@@ -53932,8 +55006,8 @@ in order to match that used in the publication that describes the experimental d
 to the value for Seq_ID or Comp_index_ID.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.auth_seq_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.auth_seq_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
@@ -53948,7 +55022,7 @@ to the value for Seq_ID or Comp_index_ID.
 
 save_
 
-save__mol_interaction_chem_shift.auth_comp_id
+save__chem_shift_perturbation.auth_comp_id
 
    _item_description.description
 ;
@@ -53956,8 +55030,8 @@ An alternative identifier for Comp_ID that may be provided by an author
 in order to match that used in the publication that describes the experimental data.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.auth_comp_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.auth_comp_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
@@ -53972,7 +55046,7 @@ DPN
 
 save_
 
-save__mol_interaction_chem_shift.auth_atom_id
+save__chem_shift_perturbation.auth_atom_id
 
    _item_description.description
 ;
@@ -53980,8 +55054,8 @@ An alternative identifier for Atom_ID that may be provided by an author
 in order to match that used in the publication that describes the experimental data.
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.auth_atom_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.auth_atom_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
@@ -53996,30 +55070,30 @@ HB1
 
 save_
 
-save__mol_interaction_chem_shift.entry_id
+save__chem_shift_perturbation.entry_id
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.entry_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.entry_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__mol_interaction_chem_shift.mol_interaction_chem_shift_diff_id
+save__chem_shift_perturbation.chem_shift_perturbation_list_id
 
    _item_description.description
 ;
-Pointer to '_Mol_interaction_chem_shift_diff.ID'
+Pointer to '_Chem_shift_perturbation_list.ID'
 ;
 
-   _item.name                                  '_mol_interaction_chem_shift.mol_interaction_chem_shift_diff_id'
-   _item.category_id                           'mol_interaction_chem_shift'
+   _item.name                                  '_chem_shift_perturbation.chem_shift_perturbation_list_id'
+   _item.category_id                           'chem_shift_perturbation'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
