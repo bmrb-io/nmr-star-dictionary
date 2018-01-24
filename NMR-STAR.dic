@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2017-09-26
+#  version date -  2018-01-24
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.11
+    _dictionary.version         3.2.0.13
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.11         ?
+     3.2.0.13         ?
 ;
      ?
 ;
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.11'
+   _item_default.value            '3.2.0.13'
 
    loop_
      _item_enumeration.value
@@ -4760,6 +4760,36 @@ describing an auxilary file related to the entry.
 
 save_
 
+save__auxiliary_files.name
+
+   _item_description.description
+;
+Name of the file.
+;
+
+   _item.name                                  '_auxiliary_files.name'
+   _item.category_id                           'auxiliary_files'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save__auxiliary_files.format
+
+   _item_description.description
+;
+The file format for the defined auxiliary file.
+;
+
+   _item.name                                  '_auxiliary_files.format'
+   _item.category_id                           'auxiliary_files'
+   _item.mandatory_code                         yes
+   _item_type.code                             'line'
+
+
+save_
+
 save__auxiliary_files.uri
 
    _item_description.description
@@ -4790,14 +4820,14 @@ A digital object identifier for the defined auxiliary file for the entry.
 
 save_
 
-save__auxiliary_files.bmrb_path_name
+save__auxiliary_files.path
 
    _item_description.description
 ;
 The path and file name for the auxiliary file locate at BMRB.
 ;
 
-   _item.name                                  '_auxiliary_files.bmrb_path_name'
+   _item.name                                  '_auxiliary_files.path'
    _item.category_id                           'auxiliary_files'
    _item.mandatory_code                         yes
    _item_type.code                             'line'
@@ -4805,29 +4835,14 @@ The path and file name for the auxiliary file locate at BMRB.
 
 save_
 
-save__auxiliary_files.format
-
-   _item_description.description
-;
-The file format for the defined auxiliary file.
-;
-
-   _item.name                                  '_auxiliary_files.format'
-   _item.category_id                           'auxiliary_files'
-   _item.mandatory_code                         yes
-   _item_type.code                             'line'
-
-
-save_
-
-save__auxiliary_files.detail
+save__auxiliary_files.details
 
    _item_description.description
 ;
 Text providing additional information about the auxiliary file.
 ;
 
-   _item.name                                  '_auxiliary_files.detail'
+   _item.name                                  '_auxiliary_files.details'
    _item.category_id                           'auxiliary_files'
    _item.mandatory_code                         no
    _item_type.code                             'text'
@@ -40018,21 +40033,6 @@ Pointer to '_Resonance.ID'
    _item.category_id                           'atom_chem_shift'
    _item.mandatory_code                         no
    _item_type.code                             'int'
-
-
-save_
-
-save__atom_chem_shift.nef_atom_name
-
-   _item_description.description
-;
-The atom name extracted from a NEF file when constructing a NMR-STAR file.
-;
-
-   _item.name                                  '_atom_chem_shift.nef_atom_name'
-   _item.category_id                           'atom_chem_shift'
-   _item.mandatory_code                         no
-   _item_type.code                             'code'
 
 
 save_
