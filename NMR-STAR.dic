@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2018-02-04
+#  version date -  2018-02-05
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.13
+    _dictionary.version         3.2.0.14
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.13         ?
+     3.2.0.14         ?
 ;
      ?
 ;
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.13'
+   _item_default.value            '3.2.0.14'
 
    loop_
      _item_enumeration.value
@@ -7233,11 +7233,11 @@ Unique identifier for each component in the entity assembly.
   '_coupling_constant.entity_assembly_id_2'              'coupling_constant'             yes
   '_theoretical_coupling_constant.entity_assembly_id_1'                                  'theoretical_coupling_constant'                     yes
   '_theoretical_coupling_constant.entity_assembly_id_2'                                  'theoretical_coupling_constant'                     yes
-  '_peak.entity_assembly_id_1'                           'peak'                          yes
-  '_peak.entity_assembly_id_2'                           'peak'                          yes
-  '_peak.entity_assembly_id_3'                           'peak'                          yes
-  '_peak.entity_assembly_id_4'                           'peak'                          yes
   '_assigned_peak_chem_shift.entity_assembly_id'         'assigned_peak_chem_shift'      yes
+  '_peak_row_format.entity_assembly_id_1'                'peak_row_format'               yes
+  '_peak_row_format.entity_assembly_id_2'                'peak_row_format'               yes
+  '_peak_row_format.entity_assembly_id_3'                'peak_row_format'               yes
+  '_peak_row_format.entity_assembly_id_4'                'peak_row_format'               yes
   '_assigned_spectral_transition.entity_assembly_id'                                     'assigned_spectral_transition'                      yes
   '_resonance_assignment.entity_assembly_id'             'resonance_assignment'          yes
   '_spin_system.entity_assembly_id'                      'spin_system'                   yes
@@ -7362,11 +7362,11 @@ Unique identifier for each component in the entity assembly.
   '_coupling_constant.entity_assembly_id_2'              '_entity_assembly.id'
   '_theoretical_coupling_constant.entity_assembly_id_1'                                  '_entity_assembly.id'
   '_theoretical_coupling_constant.entity_assembly_id_2'                                  '_entity_assembly.id'
-  '_peak.entity_assembly_id_1'                           '_entity_assembly.id'
-  '_peak.entity_assembly_id_2'                           '_entity_assembly.id'
-  '_peak.entity_assembly_id_3'                           '_entity_assembly.id'
-  '_peak.entity_assembly_id_4'                           '_entity_assembly.id'
   '_assigned_peak_chem_shift.entity_assembly_id'         '_entity_assembly.id'
+  '_peak_row_format.entity_assembly_id_1'                '_entity_assembly.id'
+  '_peak_row_format.entity_assembly_id_2'                '_entity_assembly.id'
+  '_peak_row_format.entity_assembly_id_3'                '_entity_assembly.id'
+  '_peak_row_format.entity_assembly_id_4'                '_entity_assembly.id'
   '_assigned_spectral_transition.entity_assembly_id'                                     '_entity_assembly.id'
   '_resonance_assignment.entity_assembly_id'             '_entity_assembly.id'
   '_spin_system.entity_assembly_id'                      '_entity_assembly.id'
@@ -14786,11 +14786,11 @@ An integer value that is the unique identifier for the entity within the entry.
   '_coupling_constant.entity_id_2'                       'coupling_constant'             yes
   '_theoretical_coupling_constant.entity_id_1'           'theoretical_coupling_constant'                     yes
   '_theoretical_coupling_constant.entity_id_2'           'theoretical_coupling_constant'                     yes
-  '_peak.entity_id_1'                                    'peak'                          yes
-  '_peak.entity_id_2'                                    'peak'                          yes
-  '_peak.entity_id_3'                                    'peak'                          yes
-  '_peak.entity_id_4'                                    'peak'                          yes
   '_assigned_peak_chem_shift.entity_id'                  'assigned_peak_chem_shift'      yes
+  '_peak_row_format.entity_id_1'                         'peak_row_format'               yes
+  '_peak_row_format.entity_id_2'                         'peak_row_format'               yes
+  '_peak_row_format.entity_id_3'                         'peak_row_format'               yes
+  '_peak_row_format.entity_id_4'                         'peak_row_format'               yes
   '_assigned_spectral_transition.entity_id'              'assigned_spectral_transition'                      yes
   '_resonance_assignment.entity_id'                      'resonance_assignment'          yes
   '_spin_system.entity_id'                               'spin_system'                   yes
@@ -14938,11 +14938,11 @@ An integer value that is the unique identifier for the entity within the entry.
   '_coupling_constant.entity_id_2'                       '_entity.id'
   '_theoretical_coupling_constant.entity_id_1'           '_entity.id'
   '_theoretical_coupling_constant.entity_id_2'           '_entity.id'
-  '_peak.entity_id_1'                                    '_entity.id'
-  '_peak.entity_id_2'                                    '_entity.id'
-  '_peak.entity_id_3'                                    '_entity.id'
-  '_peak.entity_id_4'                                    '_entity.id'
   '_assigned_peak_chem_shift.entity_id'                  '_entity.id'
+  '_peak_row_format.entity_id_1'                         '_entity.id'
+  '_peak_row_format.entity_id_2'                         '_entity.id'
+  '_peak_row_format.entity_id_3'                         '_entity.id'
+  '_peak_row_format.entity_id_4'                         '_entity.id'
   '_assigned_spectral_transition.entity_id'              '_entity.id'
   '_resonance_assignment.entity_id'                      '_entity.id'
   '_spin_system.entity_id'                               '_entity.id'
@@ -16780,11 +16780,11 @@ Unique ID for the compound in the entity
   '_coupling_constant.comp_index_id_2'                   'coupling_constant'             yes
   '_theoretical_coupling_constant.comp_index_id_1'                                       'theoretical_coupling_constant'                     yes
   '_theoretical_coupling_constant.comp_index_id_2'                                       'theoretical_coupling_constant'                     yes
-  '_peak.comp_index_id_1'                                'peak'                          yes
-  '_peak.comp_index_id_2'                                'peak'                          yes
-  '_peak.comp_index_id_3'                                'peak'                          yes
-  '_peak.comp_index_id_4'                                'peak'                          yes
   '_assigned_peak_chem_shift.comp_index_id'              'assigned_peak_chem_shift'      yes
+  '_peak_row_format.comp_index_id_1'                     'peak_row_format'               yes
+  '_peak_row_format.comp_index_id_2'                     'peak_row_format'               yes
+  '_peak_row_format.comp_index_id_3'                     'peak_row_format'               yes
+  '_peak_row_format.comp_index_id_4'                     'peak_row_format'               yes
   '_assigned_spectral_transition.comp_index_id'          'assigned_spectral_transition'                      yes
   '_resonance_assignment.comp_index_id'                  'resonance_assignment'          yes
   '_spin_system.comp_index_id'                           'spin_system'                   yes
@@ -16921,11 +16921,11 @@ Unique ID for the compound in the entity
   '_coupling_constant.comp_index_id_2'                   '_entity_comp_index.id'
   '_theoretical_coupling_constant.comp_index_id_1'                                       '_entity_comp_index.id'
   '_theoretical_coupling_constant.comp_index_id_2'                                       '_entity_comp_index.id'
-  '_peak.comp_index_id_1'                                '_entity_comp_index.id'
-  '_peak.comp_index_id_2'                                '_entity_comp_index.id'
-  '_peak.comp_index_id_3'                                '_entity_comp_index.id'
-  '_peak.comp_index_id_4'                                '_entity_comp_index.id'
   '_assigned_peak_chem_shift.comp_index_id'              '_entity_comp_index.id'
+  '_peak_row_format.comp_index_id_1'                     '_entity_comp_index.id'
+  '_peak_row_format.comp_index_id_2'                     '_entity_comp_index.id'
+  '_peak_row_format.comp_index_id_3'                     '_entity_comp_index.id'
+  '_peak_row_format.comp_index_id_4'                     '_entity_comp_index.id'
   '_assigned_spectral_transition.comp_index_id'          '_entity_comp_index.id'
   '_resonance_assignment.comp_index_id'                  '_entity_comp_index.id'
   '_spin_system.comp_index_id'                           '_entity_comp_index.id'
@@ -17221,10 +17221,10 @@ that the sequence numbers must progress in increasing numerical order.
   '_coupling_constant.seq_id_2'                          'coupling_constant'             yes
   '_theoretical_coupling_constant.seq_id_1'              'theoretical_coupling_constant'                     yes
   '_theoretical_coupling_constant.seq_id_2'              'theoretical_coupling_constant'                     yes
-  '_peak.seq_id_1'                                       'peak'                          yes
-  '_peak.seq_id_2'                                       'peak'                          yes
-  '_peak.seq_id_3'                                       'peak'                          yes
-  '_peak.seq_id_4'                                       'peak'                          yes
+  '_peak_row_format.seq_id_1'                            'peak_row_format'               yes
+  '_peak_row_format.seq_id_2'                            'peak_row_format'               yes
+  '_peak_row_format.seq_id_3'                            'peak_row_format'               yes
+  '_peak_row_format.seq_id_4'                            'peak_row_format'               yes
   '_isotope_effect.seq_id'                               'isotope_effect'                yes
   '_isotope_label_pattern.seq_id'                        'isotope_label_pattern'         yes
   '_chem_shift_perturbation.seq_id'                      'chem_shift_perturbation'       yes
@@ -17346,10 +17346,10 @@ that the sequence numbers must progress in increasing numerical order.
   '_coupling_constant.seq_id_2'                          '_entity_poly_seq.num'
   '_theoretical_coupling_constant.seq_id_1'              '_entity_poly_seq.num'
   '_theoretical_coupling_constant.seq_id_2'              '_entity_poly_seq.num'
-  '_peak.seq_id_1'                                       '_entity_poly_seq.num'
-  '_peak.seq_id_2'                                       '_entity_poly_seq.num'
-  '_peak.seq_id_3'                                       '_entity_poly_seq.num'
-  '_peak.seq_id_4'                                       '_entity_poly_seq.num'
+  '_peak_row_format.seq_id_1'                            '_entity_poly_seq.num'
+  '_peak_row_format.seq_id_2'                            '_entity_poly_seq.num'
+  '_peak_row_format.seq_id_3'                            '_entity_poly_seq.num'
+  '_peak_row_format.seq_id_4'                            '_entity_poly_seq.num'
   '_isotope_effect.seq_id'                               '_entity_poly_seq.num'
   '_isotope_label_pattern.seq_id'                        '_entity_poly_seq.num'
   '_chem_shift_perturbation.seq_id'                      '_entity_poly_seq.num'
@@ -20914,11 +20914,11 @@ components in the entry.
   '_coupling_constant.comp_id_2'                         'coupling_constant'             yes
   '_theoretical_coupling_constant.comp_id_1'             'theoretical_coupling_constant'                     yes
   '_theoretical_coupling_constant.comp_id_2'             'theoretical_coupling_constant'                     yes
-  '_peak.comp_id_1'                                      'peak'                          yes
-  '_peak.comp_id_2'                                      'peak'                          yes
-  '_peak.comp_id_3'                                      'peak'                          yes
-  '_peak.comp_id_4'                                      'peak'                          yes
   '_assigned_peak_chem_shift.comp_id'                    'assigned_peak_chem_shift'      yes
+  '_peak_row_format.comp_id_1'                           'peak_row_format'               yes
+  '_peak_row_format.comp_id_2'                           'peak_row_format'               yes
+  '_peak_row_format.comp_id_3'                           'peak_row_format'               yes
+  '_peak_row_format.comp_id_4'                           'peak_row_format'               yes
   '_assigned_spectral_transition.comp_id'                'assigned_spectral_transition'                      yes
   '_resonance_assignment.comp_id'                        'resonance_assignment'          yes
   '_spin_system.comp_id'                                 'spin_system'                   yes
@@ -21065,11 +21065,11 @@ components in the entry.
   '_coupling_constant.comp_id_2'                         '_chem_comp.id'
   '_theoretical_coupling_constant.comp_id_1'             '_chem_comp.id'
   '_theoretical_coupling_constant.comp_id_2'             '_chem_comp.id'
-  '_peak.comp_id_1'                                      '_chem_comp.id'
-  '_peak.comp_id_2'                                      '_chem_comp.id'
-  '_peak.comp_id_3'                                      '_chem_comp.id'
-  '_peak.comp_id_4'                                      '_chem_comp.id'
   '_assigned_peak_chem_shift.comp_id'                    '_chem_comp.id'
+  '_peak_row_format.comp_id_1'                           '_chem_comp.id'
+  '_peak_row_format.comp_id_2'                           '_chem_comp.id'
+  '_peak_row_format.comp_id_3'                           '_chem_comp.id'
+  '_peak_row_format.comp_id_4'                           '_chem_comp.id'
   '_assigned_spectral_transition.comp_id'                '_chem_comp.id'
   '_resonance_assignment.comp_id'                        '_chem_comp.id'
   '_spin_system.comp_id'                                 '_chem_comp.id'
@@ -23838,11 +23838,11 @@ each monomer in the CHEM_COMP_ATOM list.
   '_coupling_constant.atom_id_2'                         'coupling_constant'             yes
   '_theoretical_coupling_constant.atom_id_1'             'theoretical_coupling_constant'                     yes
   '_theoretical_coupling_constant.atom_id_2'             'theoretical_coupling_constant'                     yes
-  '_peak.atom_id_1'                                      'peak'                          yes
-  '_peak.atom_id_2'                                      'peak'                          yes
-  '_peak.atom_id_3'                                      'peak'                          yes
-  '_peak.atom_id_4'                                      'peak'                          yes
   '_assigned_peak_chem_shift.atom_id'                    'assigned_peak_chem_shift'      yes
+  '_peak_row_format.atom_id_1'                           'peak_row_format'               yes
+  '_peak_row_format.atom_id_2'                           'peak_row_format'               yes
+  '_peak_row_format.atom_id_3'                           'peak_row_format'               yes
+  '_peak_row_format.atom_id_4'                           'peak_row_format'               yes
   '_assigned_spectral_transition.atom_id'                'assigned_spectral_transition'                      yes
   '_resonance_assignment.atom_id'                        'resonance_assignment'          yes
   '_isotope_effect.atom_id'                              'isotope_effect'                yes
@@ -23967,11 +23967,11 @@ each monomer in the CHEM_COMP_ATOM list.
   '_coupling_constant.atom_id_2'                         '_chem_comp_atom.atom_id'
   '_theoretical_coupling_constant.atom_id_1'             '_chem_comp_atom.atom_id'
   '_theoretical_coupling_constant.atom_id_2'             '_chem_comp_atom.atom_id'
-  '_peak.atom_id_1'                                      '_chem_comp_atom.atom_id'
-  '_peak.atom_id_2'                                      '_chem_comp_atom.atom_id'
-  '_peak.atom_id_3'                                      '_chem_comp_atom.atom_id'
-  '_peak.atom_id_4'                                      '_chem_comp_atom.atom_id'
   '_assigned_peak_chem_shift.atom_id'                    '_chem_comp_atom.atom_id'
+  '_peak_row_format.atom_id_1'                           '_chem_comp_atom.atom_id'
+  '_peak_row_format.atom_id_2'                           '_chem_comp_atom.atom_id'
+  '_peak_row_format.atom_id_3'                           '_chem_comp_atom.atom_id'
+  '_peak_row_format.atom_id_4'                           '_chem_comp_atom.atom_id'
   '_assigned_spectral_transition.atom_id'                '_chem_comp_atom.atom_id'
   '_resonance_assignment.atom_id'                        '_chem_comp_atom.atom_id'
   '_isotope_effect.atom_id'                              '_chem_comp_atom.atom_id'
@@ -43799,6 +43799,7 @@ Spectral peak list ID
   '_peak_general_char.spectral_peak_list_id'             'peak_general_char'             yes
   '_peak_char.spectral_peak_list_id'                     'peak_char'                     yes
   '_assigned_peak_chem_shift.spectral_peak_list_id'                                      'assigned_peak_chem_shift'      yes
+  '_peak_row_format.spectral_peak_list_id'               'peak_row_format'               yes
   '_spectral_transition.spectral_peak_list_id'           'spectral_transition'           yes
   '_spectral_transition_general_char.spectral_peak_list_id'                              'spectral_transition_general_char'                  yes
   '_spectral_transition_char.spectral_peak_list_id'                                      'spectral_transition_char'      yes
@@ -43820,6 +43821,7 @@ Spectral peak list ID
   '_peak_general_char.spectral_peak_list_id'             '_spectral_peak_list.id'
   '_peak_char.spectral_peak_list_id'                     '_spectral_peak_list.id'
   '_assigned_peak_chem_shift.spectral_peak_list_id'                                      '_spectral_peak_list.id'
+  '_peak_row_format.spectral_peak_list_id'               '_spectral_peak_list.id'
   '_spectral_transition.spectral_peak_list_id'           '_spectral_peak_list.id'
   '_spectral_transition_general_char.spectral_peak_list_id'                              '_spectral_peak_list.id'
   '_spectral_transition_char.spectral_peak_list_id'                                      '_spectral_peak_list.id'
@@ -44846,6 +44848,7 @@ Unique identifier for the spectral peak.
   '_peak_general_char.peak_id'                           'peak_general_char'             yes
   '_peak_char.peak_id'                                   'peak_char'                     yes
   '_assigned_peak_chem_shift.peak_id'                    'assigned_peak_chem_shift'      yes
+  '_peak_row_format.id'                                  'peak_row_format'               yes
   '_spectral_transition.peak_id'                         'spectral_transition'           yes
   '_spectral_transition_general_char.peak_id'            'spectral_transition_general_char'                  yes
   '_spectral_transition_char.peak_id'                    'spectral_transition_char'      yes
@@ -44863,6 +44866,7 @@ Unique identifier for the spectral peak.
   '_peak_general_char.peak_id'                           '_peak.id'
   '_peak_char.peak_id'                                   '_peak.id'
   '_assigned_peak_chem_shift.peak_id'                    '_peak.id'
+  '_peak_row_format.id'                                  '_peak.id'
   '_spectral_transition.peak_id'                         '_peak.id'
   '_spectral_transition_general_char.peak_id'            '_peak.id'
   '_spectral_transition_char.peak_id'                    '_peak.id'
@@ -44874,66 +44878,6 @@ Unique identifier for the spectral peak.
   stop_
 
   _item_type.code                             'int'
-
-
-save_
-
-save__peak.volume
-
-   _item_description.description
-;
-?
-;
-
-   _item.name                                  '_peak.volume'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.volume_uncertainty
-
-   _item_description.description
-;
-?
-;
-
-   _item.name                                  '_peak.volume_uncertainty'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.height
-
-   _item_description.description
-;
-?
-;
-
-   _item.name                                  '_peak.height'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.height_uncertainty
-
-   _item_description.description
-;
-?
-;
-
-   _item.name                                  '_peak.height_uncertainty'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
 
 
 save_
@@ -44966,622 +44910,6 @@ dimensional structure of the molecular system.
    _item.category_id                           'peak'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-
-
-save_
-
-save__peak.position_1
-
-   _item_description.description
-;
-Peak chemical shift value for this dimension in the spectrum
-;
-
-   _item.name                                  '_peak.position_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.position_uncertainty_1
-
-   _item_description.description
-;
-Peak chemical shift value error
-;
-
-   _item.name                                  '_peak.position_uncertainty_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.position_2
-
-   _item_description.description
-;
-Peak chemical shift value for this dimension in the spectrum
-;
-
-   _item.name                                  '_peak.position_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.position_uncertainty_2
-
-   _item_description.description
-;
-Peak chemical shift value error
-;
-
-   _item.name                                  '_peak.position_uncertainty_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.position_3
-
-   _item_description.description
-;
-Peak chemical shift value for this dimension in the spectrum
-;
-
-   _item.name                                  '_peak.position_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.position_uncertainty_3
-
-   _item_description.description
-;
-Peak chemical shift value error
-;
-
-   _item.name                                  '_peak.position_uncertainty_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.position_4
-
-   _item_description.description
-;
-Peak chemical shift value for this dimension in the spectrum
-;
-
-   _item.name                                  '_peak.position_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.position_uncertainty_4
-
-   _item_description.description
-;
-Peak chemical shift value error
-;
-
-   _item.name                                  '_peak.position_uncertainty_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__peak.entity_assembly_id_1
-
-   _item_description.description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _item.name                                  '_peak.entity_assembly_id_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.entity_id_1
-
-   _item_description.description
-;
-Pointer to '_Entity.ID'
-;
-
-   _item.name                                  '_peak.entity_id_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_index_id_1
-
-   _item_description.description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _item.name                                  '_peak.comp_index_id_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.seq_id_1
-
-   _item_description.description
-;
-Pointer to '_Entity_poly_seq.Num'
-;
-
-   _item.name                                  '_peak.seq_id_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_id_1
-
-   _item_description.description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _item.name                                  '_peak.comp_id_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'code'
-
-
-save_
-
-save__peak.atom_id_1
-
-   _item_description.description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _item.name                                  '_peak.atom_id_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'atcode'
-
-
-save_
-
-save__peak.ambiguity_code_1
-
-   _item_description.description
-;
-Ambiguity codes are used to define chemical shifts that have not been assigned 
-to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
-may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
-;
-
-   _item.name                                  '_peak.ambiguity_code_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.ambiguity_set_id_1
-
-   _item_description.description
-;
-The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
-of 4, 5, or 6 that form a known set of related chemical shift assignments.
-;
-
-   _item.name                                  '_peak.ambiguity_set_id_1'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.entity_assembly_id_2
-
-   _item_description.description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _item.name                                  '_peak.entity_assembly_id_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.entity_id_2
-
-   _item_description.description
-;
-Pointer to '_Entity.ID'
-;
-
-   _item.name                                  '_peak.entity_id_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_index_id_2
-
-   _item_description.description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _item.name                                  '_peak.comp_index_id_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.seq_id_2
-
-   _item_description.description
-;
-Pointer to '_Entity_poly_seq.Num'
-;
-
-   _item.name                                  '_peak.seq_id_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_id_2
-
-   _item_description.description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _item.name                                  '_peak.comp_id_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'code'
-
-
-save_
-
-save__peak.atom_id_2
-
-   _item_description.description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _item.name                                  '_peak.atom_id_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'atcode'
-
-
-save_
-
-save__peak.ambiguity_code_2
-
-   _item_description.description
-;
-Ambiguity codes are used to define chemical shifts that have not been assigned 
-to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
-may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
-;
-
-   _item.name                                  '_peak.ambiguity_code_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.ambiguity_set_id_2
-
-   _item_description.description
-;
-The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
-of 4, 5, or 6 that form a known set of related chemical shift assignments.
-;
-
-   _item.name                                  '_peak.ambiguity_set_id_2'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.entity_assembly_id_3
-
-   _item_description.description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _item.name                                  '_peak.entity_assembly_id_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.entity_id_3
-
-   _item_description.description
-;
-Pointer to '_Entity.ID'
-;
-
-   _item.name                                  '_peak.entity_id_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_index_id_3
-
-   _item_description.description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _item.name                                  '_peak.comp_index_id_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.seq_id_3
-
-   _item_description.description
-;
-Pointer to '_Entity_poly_seq.Num'
-;
-
-   _item.name                                  '_peak.seq_id_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_id_3
-
-   _item_description.description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _item.name                                  '_peak.comp_id_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'code'
-
-
-save_
-
-save__peak.atom_id_3
-
-   _item_description.description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _item.name                                  '_peak.atom_id_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'atcode'
-
-
-save_
-
-save__peak.ambiguity_code_3
-
-   _item_description.description
-;
-Ambiguity codes are used to define chemical shifts that have not been assigned 
-to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
-may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
-;
-
-   _item.name                                  '_peak.ambiguity_code_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.ambiguity_set_id_3
-
-   _item_description.description
-;
-The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
-of 4, 5, or 6 that form a known set of related chemical shift assignments.
-;
-
-   _item.name                                  '_peak.ambiguity_set_id_3'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.entity_assembly_id_4
-
-   _item_description.description
-;
-Pointer to '_Entity_assembly.ID'
-;
-
-   _item.name                                  '_peak.entity_assembly_id_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.entity_id_4
-
-   _item_description.description
-;
-Pointer to '_Entity.ID'
-;
-
-   _item.name                                  '_peak.entity_id_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_index_id_4
-
-   _item_description.description
-;
-Pointer to '_Entity_comp_index.ID'
-;
-
-   _item.name                                  '_peak.comp_index_id_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.seq_id_4
-
-   _item_description.description
-;
-Pointer to '_Entity_poly_seq.Num'
-;
-
-   _item.name                                  '_peak.seq_id_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.comp_id_4
-
-   _item_description.description
-;
-Pointer to '_Chem_comp.ID'
-;
-
-   _item.name                                  '_peak.comp_id_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'code'
-
-
-save_
-
-save__peak.atom_id_4
-
-   _item_description.description
-;
-Pointer to '_Chem_comp_atom.Atom_ID'
-;
-
-   _item.name                                  '_peak.atom_id_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'atcode'
-
-
-save_
-
-save__peak.ambiguity_code_4
-
-   _item_description.description
-;
-Ambiguity codes are used to define chemical shifts that have not been assigned 
-to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
-may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
-;
-
-   _item.name                                  '_peak.ambiguity_code_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
-save__peak.ambiguity_set_id_4
-
-   _item_description.description
-;
-The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
-of 4, 5, or 6 that form a known set of related chemical shift assignments.
-;
-
-   _item.name                                  '_peak.ambiguity_set_id_4'
-   _item.category_id                           'peak'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
 
 
 save_
@@ -46568,6 +45896,815 @@ Pointer to '_Spectral_peak_list.ID'
 
    _item.name                                  '_assigned_peak_chem_shift.spectral_peak_list_id'
    _item.category_id                           'assigned_peak_chem_shift'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save_peak_row_format
+   _category.description
+;
+Items in the peak_row_format category describe the characteristics and assignments for the spectral peaks in a single row format.
+;
+   _category.id                   'peak_row_format'
+
+   loop_
+     _category_key.name
+
+     '_peak_row_format.id'
+     '_peak_row_format.entry_id'
+     '_peak_row_format.spectral_peak_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'spectral_peak_list'
+
+   stop_
+
+save_
+
+save__peak_row_format.index_id
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                                  '_peak_row_format.index_id'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.id
+
+   _item_description.description
+;
+Pointer to '_Peak.ID'
+;
+
+   _item.name                                  '_peak_row_format.id'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.volume
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                                  '_peak_row_format.volume'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.volume_uncertainty
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                                  '_peak_row_format.volume_uncertainty'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.height
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                                  '_peak_row_format.height'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.height_uncertainty
+
+   _item_description.description
+;
+?
+;
+
+   _item.name                                  '_peak_row_format.height_uncertainty'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.figure_of_merit
+
+   _item_description.description
+;
+A quantitative or qualitative value that provides a measure of certainty 
+that the peak listed represents a real piece of data.
+;
+
+   _item.name                                  '_peak_row_format.figure_of_merit'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.restraint
+
+   _item_description.description
+;
+Yes or no is this peak related to a constraint used to determine the three 
+dimensional structure of the molecular system.
+;
+
+   _item.name                                  '_peak_row_format.restraint'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'yes_no'
+
+
+save_
+
+save__peak_row_format.position_1
+
+   _item_description.description
+;
+Peak chemical shift value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak_row_format.position_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.position_uncertainty_1
+
+   _item_description.description
+;
+Peak chemical shift value error
+;
+
+   _item.name                                  '_peak_row_format.position_uncertainty_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.position_2
+
+   _item_description.description
+;
+Peak chemical shift value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak_row_format.position_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.position_uncertainty_2
+
+   _item_description.description
+;
+Peak chemical shift value error
+;
+
+   _item.name                                  '_peak_row_format.position_uncertainty_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.position_3
+
+   _item_description.description
+;
+Peak chemical shift value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak_row_format.position_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.position_uncertainty_3
+
+   _item_description.description
+;
+Peak chemical shift value error
+;
+
+   _item.name                                  '_peak_row_format.position_uncertainty_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.position_4
+
+   _item_description.description
+;
+Peak chemical shift value for this dimension in the spectrum
+;
+
+   _item.name                                  '_peak_row_format.position_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.position_uncertainty_4
+
+   _item_description.description
+;
+Peak chemical shift value error
+;
+
+   _item.name                                  '_peak_row_format.position_uncertainty_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__peak_row_format.entity_assembly_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_assembly_id_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.entity_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_id_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_index_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_index_id_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.seq_id_1
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_peak_row_format.seq_id_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_id_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_id_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak_row_format.atom_id_1
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_peak_row_format.atom_id_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__peak_row_format.ambiguity_code_1
+
+   _item_description.description
+;
+Ambiguity codes are used to define chemical shifts that have not been assigned 
+to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
+may exist at several different levels, stereospecific ambiguity, intra and inter 
+residue ambiguities, etc.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_code_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.ambiguity_set_id_1
+
+   _item_description.description
+;
+The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
+of 4, 5, or 6 that form a known set of related chemical shift assignments.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_set_id_1'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.entity_assembly_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_assembly_id_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.entity_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_id_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_index_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_index_id_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.seq_id_2
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_peak_row_format.seq_id_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_id_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_id_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak_row_format.atom_id_2
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_peak_row_format.atom_id_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__peak_row_format.ambiguity_code_2
+
+   _item_description.description
+;
+Ambiguity codes are used to define chemical shifts that have not been assigned 
+to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
+may exist at several different levels, stereospecific ambiguity, intra and inter 
+residue ambiguities, etc.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_code_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.ambiguity_set_id_2
+
+   _item_description.description
+;
+The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
+of 4, 5, or 6 that form a known set of related chemical shift assignments.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_set_id_2'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.entity_assembly_id_3
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_assembly_id_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.entity_id_3
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_id_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_index_id_3
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_index_id_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.seq_id_3
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_peak_row_format.seq_id_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_id_3
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_id_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak_row_format.atom_id_3
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_peak_row_format.atom_id_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__peak_row_format.ambiguity_code_3
+
+   _item_description.description
+;
+Ambiguity codes are used to define chemical shifts that have not been assigned 
+to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
+may exist at several different levels, stereospecific ambiguity, intra and inter 
+residue ambiguities, etc.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_code_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.ambiguity_set_id_3
+
+   _item_description.description
+;
+The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
+of 4, 5, or 6 that form a known set of related chemical shift assignments.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_set_id_3'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.entity_assembly_id_4
+
+   _item_description.description
+;
+Pointer to '_Entity_assembly.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_assembly_id_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.entity_id_4
+
+   _item_description.description
+;
+Pointer to '_Entity.ID'
+;
+
+   _item.name                                  '_peak_row_format.entity_id_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_index_id_4
+
+   _item_description.description
+;
+Pointer to '_Entity_comp_index.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_index_id_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.seq_id_4
+
+   _item_description.description
+;
+Pointer to '_Entity_poly_seq.Num'
+;
+
+   _item.name                                  '_peak_row_format.seq_id_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.comp_id_4
+
+   _item_description.description
+;
+Pointer to '_Chem_comp.ID'
+;
+
+   _item.name                                  '_peak_row_format.comp_id_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak_row_format.atom_id_4
+
+   _item_description.description
+;
+Pointer to '_Chem_comp_atom.Atom_ID'
+;
+
+   _item.name                                  '_peak_row_format.atom_id_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save__peak_row_format.ambiguity_code_4
+
+   _item_description.description
+;
+Ambiguity codes are used to define chemical shifts that have not been assigned 
+to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
+may exist at several different levels, stereospecific ambiguity, intra and inter 
+residue ambiguities, etc.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_code_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.ambiguity_set_id_4
+
+   _item_description.description
+;
+The ambiguity_set_ID defines those chemical shifts with ambiguity codes 
+of 4, 5, or 6 that form a known set of related chemical shift assignments.
+;
+
+   _item.name                                  '_peak_row_format.ambiguity_set_id_4'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__peak_row_format.details
+
+   _item_description.description
+;
+Text providing additional information regarding the spectral peak.
+;
+
+   _item.name                                  '_peak_row_format.details'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save__peak_row_format.entry_id
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_peak_row_format.entry_id'
+   _item.category_id                           'peak_row_format'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save__peak_row_format.spectral_peak_list_id
+
+   _item_description.description
+;
+Pointer to '_Spectral_peak_list.ID'
+;
+
+   _item.name                                  '_peak_row_format.spectral_peak_list_id'
+   _item.category_id                           'peak_row_format'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
@@ -50595,32 +50732,6 @@ Estimated error in the chemical shift value.
 
 save_
 
-save_chem_shift_perturbation
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'chem_shift_perturbation'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_perturbation.id'
-     '_chem_shift_perturbation.entry_id'
-     '_chem_shift_perturbation.chem_shift_perturbation_list_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_perturbation'
-
-   stop_
-
-save_
-
 save__chem_shift_perturbation.difference_chem_shift_val
 
    _item_description.description
@@ -50650,32 +50761,6 @@ Estimated error for the delta chemical shift value reported.
    _item.mandatory_code                         no
    _item_type.code                             'float'
 
-
-save_
-
-save_chem_shift_perturbation
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'chem_shift_perturbation'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_perturbation.id'
-     '_chem_shift_perturbation.entry_id'
-     '_chem_shift_perturbation.chem_shift_perturbation_list_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_perturbation'
-
-   stop_
 
 save_
 
