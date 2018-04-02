@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2018-02-27
+#  version date -  2018-04-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.0.15
+    _dictionary.version         3.2.1.0
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.0.15         ?
+     3.2.1.0         ?
 ;
      ?
 ;
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.0.15'
+   _item_default.value            '3.2.1.0'
 
    loop_
      _item_enumeration.value
@@ -7648,6 +7648,7 @@ state of the component of the assembly.
    _item.name                                  '_entity_assembly.physical_state'
    _item.category_id                           'entity_assembly'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
    _item_default.value            'native'
 
@@ -18952,6 +18953,7 @@ taxonomists.
    _item.name                                  '_entity_natural_src.superkingdom'
    _item.category_id                           'entity_natural_src'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
 
    loop_
@@ -18989,6 +18991,7 @@ Kingdom classifications for an organism as defined by NCBI taxonomists.
    _item.name                                  '_entity_natural_src.kingdom'
    _item.category_id                           'entity_natural_src'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
 
    loop_
@@ -43803,7 +43806,6 @@ Spectral peak list ID
   '_spectral_transition.spectral_peak_list_id'           'spectral_transition'           yes
   '_spectral_transition_general_char.spectral_peak_list_id'                              'spectral_transition_general_char'                  yes
   '_spectral_transition_char.spectral_peak_list_id'                                      'spectral_transition_char'      yes
-  '_spectral_transition_contrib.spectral_peak_list_id'                                   'spectral_transition_contrib'                       yes
   '_assigned_spectral_transition.spectral_peak_list_id'                                  'assigned_spectral_transition'                      yes
   '_gen_dist_constraint.spectral_peak_list_id'           'gen_dist_constraint'           yes
   '_dist_constraint_value.spectral_peak_list_id'         'dist_constraint_value'         yes
@@ -43825,7 +43827,6 @@ Spectral peak list ID
   '_spectral_transition.spectral_peak_list_id'           '_spectral_peak_list.id'
   '_spectral_transition_general_char.spectral_peak_list_id'                              '_spectral_peak_list.id'
   '_spectral_transition_char.spectral_peak_list_id'                                      '_spectral_peak_list.id'
-  '_spectral_transition_contrib.spectral_peak_list_id'                                   '_spectral_peak_list.id'
   '_assigned_spectral_transition.spectral_peak_list_id'                                  '_spectral_peak_list.id'
   '_gen_dist_constraint.spectral_peak_list_id'           '_spectral_peak_list.id'
   '_dist_constraint_value.spectral_peak_list_id'         '_spectral_peak_list.id'
@@ -47284,106 +47285,6 @@ Pointer to '_Spectral_peak_list.ID'
    _item.name                                  '_spectral_transition_char.spectral_peak_list_id'
    _item.category_id                           'spectral_transition_char'
    _item.mandatory_code                         yes
-   _item_type.code                             'int'
-
-
-save_
-
-save_spectral_transition_contrib
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'spectral_transition_contrib'
-
-   loop_
-     _category_key.name
-
-     '_spectral_transition_contrib.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
-
-save_
-
-save__spectral_transition_contrib.id
-
-   _item_description.description
-;
-Integer value that identifies one or more factional peak values linked 
-to a peak ID.
-;
-
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_spectral_transition_contrib.id'                      'spectral_transition_contrib'             yes
-  '_assigned_spectral_transition.contribution_fractional_val'                            'assigned_spectral_transition'                      yes
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-  '_assigned_spectral_transition.contribution_fractional_val'                            '_spectral_transition_contrib.id'
-
-  stop_
-
-  _item_type.code                             'int'
-
-
-save_
-
-save__spectral_transition_contrib.contribution_fractional_val
-
-   _item_description.description
-;
-The fraction of a peak assigned to this peak ID.
-;
-
-   _item.name                                  '_spectral_transition_contrib.contribution_fractional_val'
-   _item.category_id                           'spectral_transition_contrib'
-   _item.mandatory_code                         no
-   _item_type.code                             'float'
-
-
-save_
-
-save__spectral_transition_contrib.entry_id
-
-   _item_description.description
-;
-Pointer to '_Entry.ID'
-;
-
-   _item.name                                  '_spectral_transition_contrib.entry_id'
-   _item.category_id                           'spectral_transition_contrib'
-   _item.mandatory_code                         no
-   _item_type.code                             'code'
-
-
-save_
-
-save__spectral_transition_contrib.spectral_peak_list_id
-
-   _item_description.description
-;
-Pointer to '_Spectral_peak_list.ID'
-;
-
-   _item.name                                  '_spectral_transition_contrib.spectral_peak_list_id'
-   _item.category_id                           'spectral_transition_contrib'
-   _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
