@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2018-04-02
+#  version date -  2018-04-05
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.1.0
+    _dictionary.version         3.2.1.2
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.1.0         ?
+     3.2.1.2         ?
 ;
      ?
 ;
@@ -1259,17 +1259,7 @@ Flag indicating that atomic coordinates are being deposited.
    _item.name                                  '_Entry_interview.PDB_deposition'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1297,17 +1287,7 @@ left of the screen.
    _item.name                                  '_Entry_interview.BMRB_deposition'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1368,18 +1348,8 @@ on chemical shift data taken from an existing BMRB entry.
    _item.name                                  '_Entry_interview.Use_previous_BMRB_entry'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1428,18 +1398,8 @@ not (no).
    _item.name                                  '_Entry_interview.Previous_BMRB_entry_owner'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1462,18 +1422,8 @@ Flag indicating if the deposition originates from a structural genomics project.
    _item.name                                  '_Entry_interview.Structural_genomics'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1497,18 +1447,8 @@ in the molecular system studied.
    _item.name                                  '_Entry_interview.Ligands'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1532,18 +1472,8 @@ in the molecular system studied.
    _item.name                                  '_Entry_interview.Non_standard_residues'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1566,18 +1496,8 @@ Flag indicating that structural constraints are being deposited.
    _item.name                                  '_Entry_interview.Constraints'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1600,18 +1520,8 @@ Flag indicating that assigned chemical shifts are being deposited.
    _item.name                                  '_Entry_interview.Assigned_chem_shifts'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1634,18 +1544,8 @@ Flag indicating that scalar coupling constants are being deposited.
    _item.name                                  '_Entry_interview.Coupling_constants'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1668,18 +1568,8 @@ Flag indicating that auto relaxation data are being deposited.
    _item.name                                  '_Entry_interview.Auto_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1702,18 +1592,8 @@ Flag indicating that tensor data are being deposited.
    _item.name                                  '_Entry_interview.Tensor'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1736,18 +1616,8 @@ Flag indicating that interatomic distance data are being deposited.
    _item.name                                  '_Entry_interview.Interatomic_distance'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1770,18 +1640,8 @@ Flag indicating that chemical shift anisotropy values are being deposited.
    _item.name                                  '_Entry_interview.Chem_shift_anisotropy'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1804,18 +1664,8 @@ Flag indicating that heteronuclear NOEs are being deposited.
    _item.name                                  '_Entry_interview.Heteronucl_NOEs'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1838,18 +1688,8 @@ Flag indicating that heteronuclear T1 relaxation values are being deposited.
    _item.name                                  '_Entry_interview.Heteronucl_T1_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1872,18 +1712,8 @@ Flag indicating that heteronuclear T2 relaxation values are being deposited.
    _item.name                                  '_Entry_interview.Heteronucl_T2_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1906,18 +1736,8 @@ Flag indicating that heteronuclear T1rho relaxation values are being deposited.
    _item.name                                  '_Entry_interview.Heteronucl_T1rho_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1940,18 +1760,8 @@ Flag indicating that order parameter values are being deposited.
    _item.name                                  '_Entry_interview.Order_parameters'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -1974,18 +1784,8 @@ Flag indicating that a molecular dynamics trajectory file is being deposited.
    _item.name                                  '_Entry_interview.Dynamics_trajectory'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2008,18 +1808,8 @@ Flag indicating that a movie file is being deposited.
    _item.name                                  '_Entry_interview.Movie'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2042,18 +1832,8 @@ Flag indicating that residual dipolar coupling values are being deposited.
    _item.name                                  '_Entry_interview.Residual_dipolar_couplings'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2076,18 +1856,8 @@ Flag indicating that hydrogen exchange values are being deposited.
    _item.name                                  '_Entry_interview.H_exchange_rate'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2111,18 +1881,8 @@ deposited.
    _item.name                                  '_Entry_interview.H_exchange_protection_factors'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2145,18 +1905,8 @@ Flag indicating that chemical rate constant values are being deposited.
    _item.name                                  '_Entry_interview.Chem_rate_constants'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2179,18 +1929,8 @@ Flag indicating that spectral peak lists are being deposited.
    _item.name                                  '_Entry_interview.Spectral_peak_lists'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2213,18 +1953,8 @@ Flag indicating that dipole-dipole coupling values are being deposited.
    _item.name                                  '_Entry_interview.Dipole_dipole_couplings'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2247,18 +1977,8 @@ Flag indicating that quadrupolar coupling values are being deposited.
    _item.name                                  '_Entry_interview.Quadrupolar_couplings'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2281,18 +2001,8 @@ Flag indicating that homonuclear NOE values are being deposited.
    _item.name                                  '_Entry_interview.Homonucl_NOEs'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2315,18 +2025,8 @@ Flag indicating that dipole-dipole relaxation values are being deposited.
    _item.name                                  '_Entry_interview.Dipole_dipole_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2349,18 +2049,8 @@ Flag indicating that cross correlation relaxation values are being deposited.
    _item.name                                  '_Entry_interview.DD_cross_correlation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2384,18 +2074,8 @@ relaxation data are being deposited.
    _item.name                                  '_Entry_interview.Dipole_CSA_cross_correlation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2418,18 +2098,8 @@ Flag indicating that binding constant values are being deposited.
    _item.name                                  '_Entry_interview.Binding_constants'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2452,18 +2122,8 @@ Flag indicating that pKa values are being deposited.
    _item.name                                  '_Entry_interview.PKa_value_data_set'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2487,18 +2147,8 @@ being deposited.
    _item.name                                  '_Entry_interview.D_H_fractionation_factors'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2521,18 +2171,8 @@ Flag indicating that theoretical chamical shift values are being deposited.
    _item.name                                  '_Entry_interview.Theoretical_chem_shifts'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2555,18 +2195,8 @@ Flag indicating that theoretical coupling constant values are being deposited.
    _item.name                                  '_Entry_interview.Theoretical_coupling_constants'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2589,18 +2219,8 @@ Flag indicating that theoretical heteronuclear NOE values are being deposited.
    _item.name                                  '_Entry_interview.Theoretical_heteronucl_NOEs'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2623,18 +2243,8 @@ Flag indicating that theoretical T1 (R1) values are being deposited.
    _item.name                                  '_Entry_interview.Theoretical_T1_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2657,18 +2267,8 @@ Flag indicating that theoretical T2 (R2) values are being deposited.
    _item.name                                  '_Entry_interview.Theoretical_T2_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2691,18 +2291,8 @@ Flag indicating that theoretical auto relaxation data are being deposited.
    _item.name                                  '_Entry_interview.Theoretical_auto_relaxation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2726,18 +2316,8 @@ being deposited.
    _item.name                                  '_Entry_interview.Theoretical_DD_cross_correlation'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2760,18 +2340,8 @@ Flag indicating that spectral density values are being deposited.
    _item.name                                  '_Entry_interview.Spectral_density_values'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2794,18 +2364,8 @@ Flag indicating that time domain spectral data are being deposited.
    _item.name                                  '_Entry_interview.Timedomain_data'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2828,18 +2388,8 @@ Flag indicating that molecular interaction data are being deposited.
    _item.name                                  '_Entry_interview.Molecular_interactions'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2862,18 +2412,8 @@ Flag indicating that secondary structure orientation data are being deposited.
    _item.name                                  '_Entry_interview.Secondary_structure_orientations'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2897,18 +2437,8 @@ deposited.
    _item.name                                  '_Entry_interview.Metabolite_coordinates'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2931,18 +2461,8 @@ Flag indicating that mass spectral data are being deposited.
    _item.name                                  '_Entry_interview.Mass_spec_data'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -2966,18 +2486,8 @@ in the deposition interface are being deposited.
    _item.name                                  '_Entry_interview.Other_kind_of_data'
    _item.category_id                           'Entry_interview'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -3280,17 +2790,7 @@ file by the depositor.
    _item.name                                  '_Deposited_data_files.Precheck_flag'
    _item.category_id                           'Deposited_data_files'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -3314,17 +2814,7 @@ coordinate file indicated by the depositor.
    _item.name                                  '_Deposited_data_files.Validate_flag'
    _item.category_id                           'Deposited_data_files'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -3593,17 +3083,7 @@ file cannot be changed without reapplying the validation procedures.
    _item.name                                  '_Upload_data.Data_file_immutable_flag'
    _item.category_id                           'Upload_data'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
-   _item_type.code                             'code'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   no    ?
-   yes    ?
-
-   stop_
+   _item_type.code                             'yes_no'
 
    loop_
      _item_examples.case
@@ -5414,7 +4894,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.1.0'
+   _item_default.value            '3.2.1.2'
 
    loop_
      _item_enumeration.value
@@ -6288,7 +5768,19 @@ Code for status of file.
    _item.name                                  '_Entry.Status_code'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   REL    ?
+   HOLD    ?
+   REV    ?
+   BIB    ?
+
+   stop_
 
    loop_
      _item_examples.case
@@ -6311,17 +5803,7 @@ This code indicates whether the deposition form for an entry has been received.
    _item.name                                  '_Entry.Recvd_deposit_form'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -6367,17 +5849,7 @@ This code indicates whether the coordinates for an entry have been received.
    _item.name                                  '_Entry.Recvd_coordinates'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -6424,17 +5896,7 @@ received.
    _item.name                                  '_Entry.Recvd_nmr_constraints'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -6481,17 +5943,7 @@ been received.
    _item.name                                  '_Entry.Recvd_chemical_shifts'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -6537,17 +5989,7 @@ This code indicates whether the manuscript for an entry has been received.
    _item.name                                  '_Entry.Recvd_manuscript'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -6594,17 +6036,7 @@ received.
    _item.name                                  '_Entry.Recvd_author_approval'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -6698,7 +6130,20 @@ The release status authorized by the depositor.
    _item.name                                  '_Entry.Author_release_status_code'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   REL    'Release'
+   HOLD    'On hold until yyyy-mm-dd'
+   HPUB    'On hold until publication'
+   OBS    'Entry has been obsoleted and replaced by another entry'
+   WDRN    'Entry has been withdrawn by depositor'
+
+   stop_
 
    loop_
      _item_examples.case
@@ -11984,17 +11429,7 @@ coordination bonds.
    _item.name                                  '_Assembly.Non_standard_bonds'
    _item.category_id                           'Assembly'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -12019,17 +11454,7 @@ saveframes used to described the molecules in the system.
    _item.name                                  '_Assembly.Ambiguous_conformational_states'
    _item.category_id                           'Assembly'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -12054,17 +11479,7 @@ described the molecules in the system.
    _item.name                                  '_Assembly.Ambiguous_chem_comp_sites'
    _item.category_id                           'Assembly'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -12088,17 +11503,7 @@ are in chemical exchange (I.e. a ligand that exists in both the free and bound s
    _item.name                                  '_Assembly.Molecules_in_chemical_exchange'
    _item.category_id                           'Assembly'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -12121,17 +11526,7 @@ A Yes or No flag used to describe whether the system is paramagnetic.
    _item.name                                  '_Assembly.Paramagnetic'
    _item.category_id                           'Assembly'
    _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -12857,17 +12252,7 @@ the assembly is reported.
    _item.name                                  '_Entity_assembly.Experimental_data_reported'
    _item.category_id                           'Entity_assembly'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -12931,18 +12316,8 @@ isomer of another component of the system.
    _item.name                                  '_Entity_assembly.Conformational_isomer'
    _item.category_id                           'Entity_assembly'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -12966,18 +12341,8 @@ with another component of the system.
    _item.name                                  '_Entity_assembly.Chemical_exchange_state'
    _item.category_id                           'Entity_assembly'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -14337,17 +13702,7 @@ PDB chain id.
    _item.name                                  '_Struct_asym.PDBX_blank_PDB_chainid_flag'
    _item.category_id                           'Struct_asym'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -14370,17 +13725,7 @@ This data item indicates whether the structural elements are modified.
    _item.name                                  '_Struct_asym.PDBX_modified'
    _item.category_id                           'Struct_asym'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -14516,18 +13861,8 @@ Flag indicating if the database accession number was supplied by the author .
    _item.name                                  '_Assembly_db_link.Author_supplied'
    _item.category_id                           'Assembly_db_link'
    _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'yes'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -15686,17 +15021,7 @@ Flag indicating if the sequence is heterogeneous at the position.
    _item.name                                  '_PDBX_poly_seq_scheme.Hetero'
    _item.category_id                           'PDBX_poly_seq_scheme'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'ucode'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   no    ?
-   yes    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -16264,17 +15589,7 @@ Flag indicating if the atom is paramagnetic.
    _item.name                                  '_Atom_type.Paramagnetic'
    _item.category_id                           'Atom_type'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -20109,17 +19424,7 @@ author (yes) or from another source (no).
    _item.name                                  '_Subsystem_db_link.Author_supplied'
    _item.category_id                           'Subsystem_db_link'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -21119,18 +20424,8 @@ for the entity that have not been clearly defined.
    _item.name                                  '_Entity.Ambiguous_conformational_states'
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -21154,18 +20449,8 @@ states for specific chemical components of the entity.
    _item.name                                  '_Entity.Ambiguous_chem_comp_sites'
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -21189,18 +20474,8 @@ chemical components in the entity.
    _item.name                                  '_Entity.Nstd_monomer'
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -21224,18 +20499,8 @@ atoms in the entity.
    _item.name                                  '_Entity.Nstd_chirality'
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    'polymer contains at least one monomer with different chirality'
-   no    'polymer contains no monomers with different chirality'
-
-   stop_
 
    loop_
      _item_examples.case
@@ -21259,18 +20524,8 @@ monomers in the biopolymer.
    _item.name                                  '_Entity.Nstd_linkage'
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -21372,18 +20627,8 @@ A boolean flag that indicates the paramagnetic state of the entity.
    _item.name                                  '_Entity.Paramagnetic'
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -21687,18 +20932,8 @@ author (yes) or obtained through another method (no).
    _item.name                                  '_Entity_db_link.Author_supplied'
    _item.category_id                           'Entity_db_link'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'yes'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -22268,7 +21503,18 @@ A code defining the type of the common name provided.
    _item.name                                  '_Entity_common_name.Type'
    _item.category_id                           'Entity_common_name'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   common    'An often used full name for the entity'
+   abbreviation    'Common abbreviation used in the literature for the entity'
+   synonym    'A synonym used for the entity'
+
+   stop_
 
    loop_
      _item_examples.case
@@ -24709,17 +23955,7 @@ The molecular entity or biopolymer is common to more than one natural source.
    _item.name                                  '_Entity_natural_src.Common'
    _item.category_id                           'Entity_natural_src'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -26264,7 +25500,16 @@ Genus of the host organism
    _item.name                                  '_Entity_experimental_src.Host_org_genus'
    _item.category_id                           'Entity_experimental_src'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   Escherichia    ?
+
+   stop_
 
    loop_
      _item_examples.case
@@ -26288,7 +25533,16 @@ whenever possible.
    _item.name                                  '_Entity_experimental_src.Host_org_species'
    _item.category_id                           'Entity_experimental_src'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   coli    ?
+
+   stop_
 
    loop_
      _item_examples.case
@@ -27404,17 +26658,7 @@ tools may not be able to process this component definition.
    _item.name                                  '_Chem_comp.Ambiguous_flag'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -27459,7 +26703,20 @@ This data item holds the current release status for the component.
    _item.name                                  '_Chem_comp.Release_status'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   REL    Released
+   HOLD    'On hold until yyyy-mm-dd'
+   HPUB    'On hold until publication'
+   OBS    'Entry has been obsoleted and replaced by another entry'
+   DEL    'Entry has been deleted'
+
+   stop_
 
 
 save_
@@ -27670,17 +26927,7 @@ of Y indicates that the compound is a standard molecule.
    _item.name                                  '_Chem_comp.Mon_nstd_flag'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -27927,17 +27174,7 @@ A boolean flag that defines the paramagnetic status of the chemical component.
    _item.name                                  '_Chem_comp.Paramagnetic'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -27960,17 +27197,7 @@ A boolean flag that defines the aromatic status of the chemical component.
    _item.name                                  '_Chem_comp.Aromatic'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -28338,17 +27565,7 @@ This data item identifies if model coordinates are missing in this definition.
    _item.name                                  '_Chem_comp.Model_coordinates_missing_flag'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'ucode'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -28378,17 +27595,7 @@ Identifies if ideal coordinates are missing in this definition.
    _item.name                                  '_Chem_comp.Ideal_coordinates_missing_flag'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'ucode'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -30526,17 +29733,7 @@ A flag indicating an aromatic atom.
    _item.name                                  '_Chem_comp_atom.Aromatic_flag'
    _item.category_id                           'Chem_comp_atom'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -30559,17 +29756,7 @@ A flag indicating a leaving atom.
    _item.name                                  '_Chem_comp_atom.Leaving_atom_flag'
    _item.category_id                           'Chem_comp_atom'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -30614,17 +29801,7 @@ A code indicating the potential for the atom to be in an ionized state.
    _item.name                                  '_Chem_comp_atom.Ionizable'
    _item.category_id                           'Chem_comp_atom'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -31135,17 +30312,7 @@ A flag indicating an aromatic bond.
    _item.name                                  '_Chem_comp_bond.Aromatic_flag'
    _item.category_id                           'Chem_comp_bond'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    'Yes - an aromatic bond'
-   no    'No  - not an aromatic bond'
-
-   stop_
 
    loop_
      _item_examples.case
@@ -31623,17 +30790,7 @@ deposition (yes) or by another source (no).
    _item.name                                  '_Chem_comp_db_link.Author_supplied'
    _item.category_id                           'Chem_comp_db_link'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -31649,7 +30806,20 @@ the chemical compound.
    _item.name                                  '_Chem_comp_db_link.Database_code'
    _item.category_id                           'Chem_comp_db_link'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   CDDC    ?
+   PDB    "PDB ligand library"
+   'PubChem SID'    "NCBI PubChem substance ID"
+   'PubChem CID'    "NCBI PubChem chemical ID"
+   KEGG    "Kyoto Encyclopedia of Genes and Genomes"
+
+   stop_
 
    loop_
      _item_examples.case
@@ -35161,10 +34331,8 @@ A value that attempts to classify software applications.
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?NUS    schedule
-   generator?    ?
-   ?structure    calculation?
-   .    ?
+   'NUS schedule generator'    ?
+   'structure calculation'    ?
 
    stop_
 
@@ -37460,7 +36628,19 @@ by the proton frequency of the instrument expressed in MHz.
    _item.name                                  '_Mass_spectrometer_view.Type'
    _item.category_id                           'Mass_spectrometer_view'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   Q-TOF    ?
+   'ion TRAP'    ?
+   FTMS    ?
+   Quadrupole    ?
+
+   stop_
 
 
 save_
@@ -40182,7 +39362,21 @@ The diameter of the probe bore.
    _item.name                                  '_NMR_spectrometer_probe.Diameter'
    _item.category_id                           'NMR_spectrometer_probe'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'float'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   '1.7 mm'    ?
+   '3 mm'    ?
+   '5 mm'    ?
+   '8 mm'    ?
+   '10 mm'    ?
+   '20 mm'    ?
+
+   stop_
 
 
 save_
@@ -40242,17 +39436,7 @@ A code indicating the presence of a spacer in the probe.
    _item.name                                  '_NMR_spectrometer_probe.Spacer_present'
    _item.category_id                           'NMR_spectrometer_probe'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   no    ?
-   yes    ?
-
-   stop_
 
 
 save_
@@ -40956,18 +40140,8 @@ have been deposited for this experiment.
    _item.name                                  '_Experiment.Raw_data_flag'
    _item.category_id                           'Experiment'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   no    ?
-   yes    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -42752,7 +41926,24 @@ detected in the experiment.
    _item.name                                  '_Spectral_acq_param.Name'
    _item.category_id                           'Spectral_acq_param'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'spectrometer carrier frequency'    ?
+   'spectrometer offset frequency'    ?
+   'acquisition time'    ?
+   'mixing time'    ?
+   'spectral width'    ?
+   'spectral folding'    ?
+   'data point number'    ?
+   'data point type'    ?
+   'data point spacing'    ?
+
+   stop_
 
 
 save_
@@ -43582,7 +42773,24 @@ Name for a NMR spectral processing parameter.
    _item.name                                  '_Spectral_processing_param.Name'
    _item.category_id                           'Spectral_processing_param'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'Exponential factor'    ?
+   'Gaussian factor'    ?
+   'Zero filling'    ?
+   'Lnear prediction'    ?
+   'Processed real points'    ?
+   'Submatrix block size'    ?
+   'Full spectrum width points'    ?
+   'Spectrum offset'    ?
+   'Data type'    ?
+
+   stop_
 
 
 save_
@@ -45223,7 +44431,23 @@ The operating system used on the computer.
    _item.name                                  '_Computer.Operating_system'
    _item.category_id                           'Computer'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   IRIX    ?
+   UNIX    ?
+   Linux    ?
+   DOS    ?
+   NT    ?
+   'Windows VISTA'    ?
+   'Windows 2000'    ?
+   'Windows XP'    ?
+
+   stop_
 
    loop_
      _item_examples.case
@@ -45633,18 +44857,8 @@ If you are depositing chemical shifts for a nuclei other than 1H, 13C,
    _item.name                                  '_Chem_shift_reference.Other_shifts_flag'
    _item.category_id                           'Chem_shift_reference'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
-   _item_type.code                             'line'
+   _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   no    ?
-   yes    ?
-
-   stop_
 
 
 save_
@@ -45704,7 +44918,21 @@ The value for this tag is a standard IUPAC abbreviation for an element
    _item.name                                  '_Chem_shift_ref.Atom_type'
    _item.category_id                           'Chem_shift_ref'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   H    ?
+   C    ?
+   N    ?
+   F    ?
+   P    ?
+   Cd    ?
+
+   stop_
 
    loop_
      _item_examples.case
@@ -52761,17 +51989,7 @@ save__Spectral_dim.Absolute_peak_positions
    _item.name                                  '_Spectral_dim.Absolute_peak_positions'
    _item.category_id                           'Spectral_dim'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -52786,17 +52004,7 @@ save__Spectral_dim.Acquisition
    _item.name                                  '_Spectral_dim.Acquisition'
    _item.category_id                           'Spectral_dim'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -52976,17 +52184,7 @@ save__Spectral_dim_transfer.Indirect
    _item.name                                  '_Spectral_dim_transfer.Indirect'
    _item.category_id                           'Spectral_dim_transfer'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -60029,13 +59227,14 @@ save__Assigned_spectral_transition.Contribution_fractional_val
 
    _item_description.description
 ;
-Pointer to '_Spectral_transition_contrib.ID'
+The fractional value of the peak or transition that is assigned to the 
+specified atom.
 ;
 
    _item.name                                  '_Assigned_spectral_transition.Contribution_fractional_val'
    _item.category_id                           'Assigned_spectral_transition'
    _item.mandatory_code                         no
-   _item_type.code                             'int'
+   _item_type.code                             'float'
 
 
 save_
@@ -62979,13 +62178,10 @@ The type of chemical shift perturbation reported.
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?macromolecular    binding?
-   .    ?
-   binding?    ?
-   ?ligand    fragment
-   binding?    ?
-   ?paramagnetic    ligand
-   binding?    ?
+   'macromolecular binding'    ?
+   'ligand binding'    ?
+   'ligand fragment binding'    ?
+   'paramagnetic ligand binding'    ?
 
    stop_
 
@@ -65051,7 +64247,7 @@ calculating the RDC constraints.
    _item.name                                  '_RDC_list.Bond_length_usage_flag'
    _item.category_id                           'RDC_list'
    _item.mandatory_code                         no
-   _item_type.code                             'code'
+   _item_type.code                             'yes_no'
 
    loop_
      _item_examples.case
@@ -91289,7 +90485,29 @@ The model used to fit the experimental data.
    _item.name                                  '_Order_param.Model_fit'
    _item.category_id                           'Order_param'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ?    ?
+   Rex    ?
+   S2    ?
+   'S2, te'    ?
+   'S2, Rex'    ?
+   'S2, te, Rex'    ?
+   'S2f, S2, ts'    ?
+   'S2f, S2s, ts'    ?
+   'S2f, tf, S2, ts'    ?
+   'S2f, tf, S2s, ts'    ?
+   'S2f, S2, ts, Rex'    ?
+   'S2f, S2s, ts, Rex'    ?
+   'S2f, tf, S2, ts, Rex'    ?
+   'S2f, tf, S2s, ts, Rex'    ?
+
+   stop_
 
 
 save_
@@ -98317,18 +97535,8 @@ using the same method.
    _item.name                                  '_Conformer_stat_list.Conformer_ensemble_only'
    _item.category_id                           'Conformer_stat_list'
    _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -98348,18 +97556,8 @@ other conformers in the file.
    _item.name                                  '_Conformer_stat_list.Both_ensemble_and_rep_conformer'
    _item.category_id                           'Conformer_stat_list'
    _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -98375,18 +97573,8 @@ structure.
    _item.name                                  '_Conformer_stat_list.Representative_conformer_only'
    _item.category_id                           'Conformer_stat_list'
    _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -98738,18 +97926,8 @@ without providing this information.
    _item.name                                  '_Conformer_stat_list_ens.Stats_not_available'
    _item.category_id                           'Conformer_stat_list_ens'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -99785,18 +98963,8 @@ will be able to complete and submit your deposition.
    _item.name                                  '_Conformer_stat_list_rep.Stats_not_available'
    _item.category_id                           'Conformer_stat_list_rep'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -104636,18 +103804,8 @@ without providing this information.
    _item.name                                  '_Constraint_stat_list.Stats_not_available'
    _item.category_id                           'Constraint_stat_list'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -104696,17 +103854,7 @@ in calculating the NOE restraint statistics.
    _item.name                                  '_Constraint_stat_list.NOE_pseudoatom_corrections'
    _item.category_id                           'Constraint_stat_list'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
+   _item_type.code                             'yes_no'
 
    loop_
      _item_examples.case
@@ -104791,17 +103939,7 @@ in calculating the ROE restraint statistics.
    _item.name                                  '_Constraint_stat_list.ROE_pseudoatom_corrections'
    _item.category_id                           'Constraint_stat_list'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'line'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
+   _item_type.code                             'yes_no'
 
    loop_
      _item_examples.case
@@ -106341,18 +105479,8 @@ to enter the statistical data.
    _item.name                                  '_Constraint_stat_list_ens.Constraint_stats_not_available'
    _item.category_id                           'Constraint_stat_list_ens'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -106737,7 +105865,17 @@ Method used to calculate the dihedral angle constraint violation statistics.
    _item.name                                  '_Constraint_stat_list_ens.Dihedral_const_stat_calc_meth'
    _item.category_id                           'Constraint_stat_list_ens'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'calculated over all dihedral constraints'    ?
+   'calculated for dihedral violations only'    ?
+
+   stop_
 
 
 save_
@@ -107019,18 +106157,8 @@ constraints and the coordinates for the deposited representative conformer.
    _item.name                                  '_Constraint_stat_list_rep.Constraint_stats_not_available'
    _item.category_id                           'Constraint_stat_list_rep'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
    _item_default.value            'no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
@@ -107825,7 +106953,23 @@ as input.
    _item.name                                  '_Constraint_file.Software_name'
    _item.category_id                           'Constraint_file'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   AMBER    ?
+   ARIA    ?
+   CNS    ?
+   CYANA    ?
+   DISCOVER    ?
+   TALOS    ?
+   X-PLOR    ?
+   NMR-STAR    ?
+
+   stop_
 
 
 save_
@@ -108241,17 +107385,7 @@ package were used.
    _item.name                                  '_Force_constant_list.Default_software_values_used'
    _item.category_id                           'Force_constant_list'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
    loop_
      _item_examples.case
@@ -124856,7 +123990,23 @@ The potential type used to model the residual dipolar coupling restraints.
    _item.name                                  '_RDC_constraint_list.Potential_type'
    _item.category_id                           'RDC_constraint_list'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   log-harmonic    ?
+   parabolic    ?
+   square-well-parabolic    ?
+   square-well-parabolic-linear    ?
+   upper-bound-parabolic    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic    'can be derived from the two-sided versions given above'
+   upper-bound-parabolic-linear    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic-linear    'can be derived from the two-sided versions given above'
+
+   stop_
 
 
 save_
@@ -124871,7 +124021,16 @@ The source of the restraints (e.g. 'noe', 'hbond', 'measured'.
    _item.name                                  '_RDC_constraint_list.Constraint_type'
    _item.category_id                           'RDC_constraint_list'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   RDC    ?
+
+   stop_
 
 
 save_
@@ -126108,17 +125267,7 @@ This value shows whether the restraint value depends on a variable distance.
    _item.name                                  '_RDC_constraint.RDC_distant_dependent'
    _item.category_id                           'RDC_constraint'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'yes_no'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   yes    ?
-   no    ?
-
-   stop_
 
 
 save_
