@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2018-04-05
+#  version date -  2018-04-13
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.1.2
+    _dictionary.version         3.2.1.5
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.1.2         ?
+     3.2.1.5         ?
 ;
      ?
 ;
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.1.2'
+   _item_default.value            '3.2.1.5'
 
    loop_
      _item_enumeration.value
@@ -28355,6 +28355,7 @@ A value that attempts to classify software applications.
 
    'NUS schedule generator'    ?
    'structure calculation'    ?
+   'test lex'    ?
 
    stop_
 
@@ -49806,10 +49807,13 @@ The type of chemical shift perturbation reported.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'macromolecular binding'    ?
-   'ligand binding'    ?
-   'ligand fragment binding'    ?
-   'paramagnetic ligand binding'    ?
+   ?macromolecular    binding?
+   .    ?
+   binding?    ?
+   ?ligand    fragment
+   binding?    ?
+   ?paramagnetic    ligand
+   binding?    ?
 
    stop_
 
@@ -106939,10 +106943,26 @@ The potential type used to model the residual dipolar coupling restraints.
    parabolic    ?
    square-well-parabolic    ?
    square-well-parabolic-linear    ?
-   upper-bound-parabolic    'can be derived from the two-sided versions given above'
-   lower-bound-parabolic    'can be derived from the two-sided versions given above'
-   upper-bound-parabolic-linear    'can be derived from the two-sided versions given above'
-   lower-bound-parabolic-linear    'can be derived from the two-sided versions given above'
+   upper-bound-parabolic    ???can
+   be    derived
+   from    the
+   two-sided    versions
+   given    above???
+   lower-bound-parabolic    ???can
+   be    derived
+   from    the
+   two-sided    versions
+   given    above???
+   upper-bound-parabolic-linear    ???can
+   be    derived
+   from    the
+   two-sided    versions
+   given    above???
+   lower-bound-parabolic-linear    ???can
+   be    derived
+   from    the
+   two-sided    versions
+   given    above???
 
    stop_
 

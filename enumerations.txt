@@ -9,100 +9,9 @@
      
 data_NMR-STAR_tag_enumerations
 
-    _Revision_date      2017-01-11
+    _Revision_date      2018-04-13
 
 
-save__Assembly.Ambiguous_chem_comp_sites
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
-
-save_
-
-save__Assembly.Ambiguous_conformational_states
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
-
-save_
-
-save__Assembly.Metal_ions                                   
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
-
-save_
-
-save__Assembly.Molecules_in_chemical_exchange
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
-
-save_
-
-
-save__Assembly.Non_standard_bonds
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
-
-save_
-
-save__Assembly.Organic_ligands
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
-
-save_
-
-save__Assembly.Paramagnetic
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
-
-save_
 
 save__Assembly.Thiol_state
 
@@ -164,19 +73,6 @@ save__Assembly_db_link.Database_code
 
   stop_
 
-
-save_
-
-save__Assembly_db_link.Author_supplied
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes   .
-    no    .
-
-   stop_
 
 save_
 
@@ -350,19 +246,6 @@ save__Atom_site.Ordered_flag
 
       '1'    'Flag indicating that the atom is in an ordered region of the structure.'
       '0'    'Flag indicating that the atom is in a poorly ordered region of the structure.'
-
-     stop_
-
-save_
-
-save__Atom_type.Paramagnetic
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-     yes    .
-     no     .
 
      stop_
 
@@ -565,32 +448,6 @@ save__CA_CB_constraint_expt.Sample_state
 
 save_
 
-save__Chem_comp.Aromatic
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
-      
-save__Chem_comp.Paramagnetic
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
-
 save__Chem_comp.Provenance
 
    loop_
@@ -605,33 +462,6 @@ save__Chem_comp.Provenance
 
 save_
                                        
-save__Chem_comp.Mon_nstd_flag
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
-
-
-save__Chem_comp.Ambiguous_flag
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
-
 save__Chem_comp.Atom_nomenclature_source
 
    loop_
@@ -642,59 +472,6 @@ save__Chem_comp.Atom_nomenclature_source
     BMRB          .
 
    stop_
-
-save_
-
-
-save__Chem_comp_atom.Aromatic_flag
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
-
-save__Chem_comp_atom.Leaving_atom_flag
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
-
-save__Chem_comp_atom.Ionizable
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
-
-save_
-
-save__Chem_comp_db_link.Author_supplied
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes           .
-     no            .
-
-    stop_
 
 save_
 
@@ -883,20 +660,6 @@ save__Chem_comp.Vendor
 
 save_
 
-save__Chem_comp_bond.Aromatic_flag
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-   yes      'Yes - an aromatic bond'
-   no       'No  - not an aromatic bond'
-
-   stop_
-
-save_
-
-
 save__Chem_comp_bond.Stereo_config
 
    loop_
@@ -1020,33 +783,6 @@ save__Chem_comp.Image_file_format
       ps                .
       tiff              .
      'not applicable'   .
-
-   stop_
-
-save_
-
-
-save__Chem_comp.Ideal_coordinates_missing_flag
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes     .
-    no      .
-
-   stop_
-
-save_                                                       
-
-save__Chem_comp.Model_coordinates_missing_flag
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes     .
-    no      .
 
    stop_
 
@@ -1371,22 +1107,6 @@ save__Chem_shift_reference.Nitrogen_shifts_flag
 
 save_
 
-
-save__Chem_shift_reference.Other_shifts_flag
-
-   loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-    no     .
-    yes    .
-
-   stop_
-
-save_
-
-
-
 save__Chem_shift_reference.Phosphorus_shifts_flag
 
    loop_
@@ -1514,8 +1234,6 @@ save__Chem_struct_descriptor.Descriptor
    'beta lactam'                       .
     methyl                             .
     methylene                          .
-
-
 
      stop_
 
@@ -1795,46 +1513,6 @@ save__Conformer_family_coord_set_expt.Sample_state
 
 save_
 
-save__Conformer_stat_list.Representative_conformer_only
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-    yes     .
-    no      .
-
-   stop_
-
-save_
-
-save__Conformer_stat_list.Conformer_ensemble_only
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-    yes     .
-    no      .
-
-   stop_
-
-save_
-
-
-save__Conformer_stat_list.Both_ensemble_and_rep_conformer
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-    yes     .
-    no      .            
-
-   stop_
-
-save_
-
 save__Conformer_stat_list.Conformer_selection_criteria
 
     loop_
@@ -1863,32 +1541,6 @@ save__Conformer_stat_list.Rep_conformer_selection_criteria
    'lowest energy'                     .
    'fewest violations'                 .
    'minimized average structure'       . 
-
-    stop_
-
-save_
-
-save__Conformer_stat_list_ens.Stats_not_available
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   yes    .
-   no     .
-
-    stop_
-
-save_
-
-save__Conformer_stat_list_rep.Stats_not_available
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   yes    .
-   no     .
 
     stop_
 
@@ -1961,7 +1613,7 @@ save__Constraint_file.Constraint_subsubtype
 
 save_
 
-save__Constraint_file.Software_label
+save__Constraint_file.Software_name
 
   loop_
      _item_enumeration_value
@@ -1979,20 +1631,6 @@ save__Constraint_file.Software_label
    stop_
 
 save_
-
-save__Constraint_stat_list_ens.Constraint_stats_not_available
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-    yes            .
-    no             .
-
-   stop_
-
-save_
-
 
 save__Constraint_stat_list.Dist_constr_violat_stat_calc_method
 
@@ -2015,19 +1653,6 @@ save__Constraint_stat_list.NOE_interproton_dist_evaluation
 
     'Tryptophan ring proton NOE intensities'          .
     'Glycine alpha proton NOE intensities'            .
-
-    stop_
-
-save_
-
-save__Constraint_stat_list.NOE_pseudoatom_corrections
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    yes          .
-    no           .
 
     stop_
 
@@ -2075,19 +1700,6 @@ save__Constraint_stat_list.ROE_interproton_dist_evaluation
 
 save_
 
-save__Constraint_stat_list.ROE_pseudoatom_corrections
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    yes         .
-    no           .
-
-    stop_
-
-save_
-
 save__Constraint_stat_list.ROE_dist_averaging_method
 
     loop_
@@ -2129,34 +1741,6 @@ save__Constraint_stat_list_ens.Dihedral_const_stat_calc_meth
     stop_
 
 save_
-
-save__Constraint_stat_list_rep.Constraint_stats_not_available
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-    yes            .
-    no             .
-
-   stop_
-
-save_
-
-
-save__Constraint_stat_list.Stats_not_available
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-    yes         .
-    no          .
-
-   stop_
-
-save_
-
 
 
 save__Contact_person.Family_title
@@ -2616,37 +2200,6 @@ save__Deposited_data_files.Constraint_file_syntax
 save_
 
 
-save__Deposited_data_files.Precheck_flag
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-
-     yes         .
-     no          .
-
-
-    stop_
-
-save_
-
-save__Deposited_data_files.Validate_flag
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-
-     yes         .
-     no          .
-
-
-    stop_
-
-save_
-
-
 save__D_H_fract_factor_experiment.Sample_state
 
     loop_
@@ -2775,74 +2328,6 @@ save__EMR_expt.Sample_volume_units
      ml        .
  
    stop_
-
-save_
-
-
-save__Entity_assembly.Experimental_data_reported
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes    .
-    no     .
-
-    stop_
-
-save_
-
-save__Entity_assembly.Conformational_isomer
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes    .
-    no     .
-
-    stop_
-
-save_
-
-save__Entity_assembly.Chemical_exchange_state
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes    .
-    no     .
-
-    stop_
-
-save_
-
-
-save__Entity.Nstd_chirality
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes    'polymer contains at least one monomer with different chirality'
-    no     'polymer contains no monomers with different chirality'
-
-    stop_
-
-save_                                   
-
-
-save__Entity.Nstd_monomer
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes    .
-    no     .
-
-    stop_
 
 save_
 
@@ -3167,84 +2652,6 @@ save__Entity_experimental_src.Vector_type
 
 save_
 
-save__Entity.Ambiguous_conformational_states
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-save__Entity.Ambiguous_chem_comp_sites
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_                        
-                                        
-save_
-
-save__Entity.Nstd_linkage
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-save__Entity.Paramagnetic
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-save__Entity_db_link.Author_supplied
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-save__Entity_natural_src.Common
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
 
 save__Entity_natural_src.Kingdom
 
@@ -3341,7 +2748,6 @@ save__Entity_natural_src.Organ
    'egg white'              .
    na                       .
 
-
     stop_
 
 save_
@@ -3383,7 +2789,6 @@ save__Entity_natural_src.Organelle
    microtubule              .
    'cell membrane'          .
  
-
      stop_
 
 save_
@@ -3856,91 +3261,6 @@ save__Entry.Original_NMR_STAR_version
 
 save_
 
-save__Entry.Recvd_deposit_form
-                    
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes          .
-    no           .
-
-  stop_
-
-save_
-
-
-save__Entry.Recvd_coordinates
-                    
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes          .
-    no           .
-
-  stop_
-
-save_
-
-save__Entry.Recvd_nmr_constraints
-                    
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes          .
-    no           .
-
-  stop_
-
-save_
-
-save__Entry.Recvd_chemical_shifts
-                    
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes          .
-    no           .
-
-  stop_
-
-save_
-
-
-save__Entry.Recvd_manuscript
-                    
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes          .
-    no           .
-
-  stop_
-
-save_
-
-
-
-save__Entry.Recvd_author_approval
-                    
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes          .
-    no           .
-
-  stop_
-
-save_
-
-
-
-
 save__Entry.Release_request
                     
   loop_
@@ -4046,169 +3366,6 @@ save__Entry_author.Family_title
 
 save_
 
-save__Entry_interview.Assigned_chem_shifts
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_ 
-
-save__Entry_interview.Auto_relaxation                                       
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_ 
-
-
-save__Entry_interview.Binding_constants                                       
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_ 
-
-save__Entry_interview.Chem_shift_anisotropy                                       
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_ 
-save__Entry_interview.Dynamics_trajectory                                       
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_ 
-
-
-save__Entry_interview.Previous_BMRB_entry_owner
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_
-
-save__Entry_interview.Chem_rate_constants
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_
-
-
-save__Entry_interview.Constraints
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.PDB_deposition
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.BMRB_deposition
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Movie
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Use_previous_BMRB_entry
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
 save__Entry_interview.View_mode
 
   loop_
@@ -4217,536 +3374,6 @@ save__Entry_interview.View_mode
      
        PDB/BMRB        .
       'BMRB Only'      .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Coupling_constants
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-
-   stop_
-
-save_
-
-#save__Entry_interview.CSA_CSA_cross_correlation
-#
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
-#     
-#       yes      .
-#       no       .
-#
-#   stop_
-#
-#save_
-
-
-save__Entry_interview.DD_cross_correlation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-
-   stop_
-
-save_
-
-save__Entry_interview.Theoretical_DD_cross_correlation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Dipole_CSA_cross_correlation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-
-   stop_
-
-save_
-
-save__Entry_interview.Dipole_dipole_couplings
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes    .
-       no     .
-
-   stop_
-
-save_
-
-save__Entry_interview.Dipole_dipole_relaxation
-
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes    .
-       no     .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.D_H_fractionation_factors
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes    .
-       no     .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.H_exchange_protection_factors
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.H_exchange_rate
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Heteronucl_NOEs
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Heteronucl_T1_relaxation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Heteronucl_T1rho_relaxation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Heteronucl_T2_relaxation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-save__Entry_interview.Homonucl_NOEs
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-save__Entry_interview.Interatomic_distance
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-save__Entry_interview.Ligands
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes     .
-      no     .
-
-   stop_
-      
-save_
-
-save__Entry_interview.Mass_spec_data
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes     .
-      no     .
-
-   stop_
-      
-save_
-
-
-save__Entry_interview.Metabolite_coordinates
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes     .
-      no     .
-
-   stop_
-      
-save_
-
-
-save__Entry_interview.Molecular_interactions
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes     .
-      no     .
-
-   stop_
-      
-save_
-
-
-save__Entry_interview.Non_standard_residues
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     yes     .
-      no     .
-
-   stop_
-      
-save_
-
-save__Entry_interview.Order_parameters
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes    .
-       no     .
-
-   stop_
-
-save_
-
-save__Entry_interview.Other_kind_of_data
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes    .
-       no     .
-
-   stop_
-
-save_
-
-#save__Entry_interview.PH_parameter_list
-
-#  loop_
-#    _item_enumeration_value
-#   _item_enumeration_description
-     
-#      yes     .
-#     no      .
-#
-#   stop_
-#
-#save_
-
-
-save__Entry_interview.PKa_value_data_set
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Quadrupolar_couplings
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes    .
-       no     .
-
-   stop_
-
-save_
-
-
-
-save__Entry_interview.Residual_dipolar_couplings
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-save__Entry_interview.Secondary_structure_orientations
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-save__Entry_interview.Spectral_density_values
-                                   
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Spectral_peak_lists
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Structural_genomics
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_
-
-save__Entry_interview.Tensor                                      
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes      .
-       no       .
-                                             
-   stop_
-
-save_ 
-
-save__Entry_interview.Theoretical_auto_relaxation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .              
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Theoretical_chem_shifts
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .              
-
-   stop_
-
-save_
-
-save__Entry_interview.Theoretical_coupling_constants
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .              
-
-   stop_
-
-save_
-
-save__Entry_interview.Theoretical_heteronucl_NOEs
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .              
-
-   stop_
-
-save_
-
-save__Entry_interview.Theoretical_T1_relaxation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .              
-
-   stop_
-
-save_
-
-save__Entry_interview.Theoretical_T2_relaxation
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes     .
-       no      .              
-
-   stop_
-
-save_
-
-
-save__Entry_interview.Timedomain_data
-
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       yes       .
-       no        .
 
    stop_
 
@@ -4867,19 +3494,6 @@ as shown as a figure in many publications
 
 save_
 
-
-save__Force_constant_list.Default_software_values_used
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes     .
-    no      .
-
-  stop_
-
-save_
 
 save__Force_constant.Term
 
@@ -5729,9 +4343,6 @@ save__Theoretical_auto_relaxation_list.Common_relaxation_type_name
 
 save_
 
-
-
-
 save__Homonucl_NOE_list.Homonuclear_NOE_val_type
 
     loop_
@@ -6283,20 +4894,6 @@ save__Experiment.Name
 
 save_ 
 
-save__Experiment.Raw_data_flag
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    no            .
-    yes           .
-
-  stop_
-
-save_ 
-
-
 save__Chemical_rate_experiment.Sample_state
 
   loop_
@@ -6588,20 +5185,6 @@ save__NMR_spectrometer_probe.Manufacturer
 
 save_ 
 
-save__NMR_spectrometer_probe.Spacer_present
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    no   .
-    yes  .
-
-  stop_
-
-save_ 
-
-
 #save__Model_free.Model_fit
 
 #  loop_
@@ -6719,8 +5302,6 @@ save__Order_param.Model_fit
 
 save_ 
 
-
-
 save__Order_parameter_experiment.Sample_state
 
   loop_
@@ -6750,7 +5331,6 @@ save__Order_parameter_list.Tau_e_val_units
   stop_
 
 save_ 
-
 
 save__Order_parameter_list.Rex_val_units
 
@@ -6798,8 +5378,6 @@ save__Order_parameter_list.Tau_s_val_units
 
 save_ 
 
-
-
 save__Other_constraint_expt.Sample_state
 
     loop_
@@ -6813,9 +5391,6 @@ save__Other_constraint_expt.Sample_state
     stop_
 
 save_
-
-
-
 
 save__Other_data_experiment.Sample_state
 
@@ -6854,19 +5429,6 @@ save__Peak_char.Coupling_pattern
     td     'triplet of doublets'
     LR     'long-range coupling'
     1JCH   'one J carbon-proton couplings'
-
-  stop_
-
-save_ 
-
-save__PDBX_poly_seq_scheme.Hetero
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    no     .
-    yes    .
 
   stop_
 
@@ -6997,19 +5559,6 @@ save__RDC_experiment.Sample_state
 
 save_ 
 
-save__RDC_list.Bond_length_usage_flag
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-     yes      .
-     no       .
-
-     stop_
-
-save_
-
 save__Related_entries.Database_name
 
      loop_
@@ -7090,20 +5639,6 @@ save__RDC_constraint_list.Constraint_type
     stop_
 
 save_
-
-save__RDC_constraint.RDC_distant_dependent
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-      yes           .
-      no            .
-
-    stop_
-
-save_
-
 
 save__Release.Type
 
@@ -7211,8 +5746,6 @@ save__Sample.Solvent_system
 
 save_
 
-
-
 save__Sample.Type
 
   loop_
@@ -7255,7 +5788,6 @@ Solid-state micro crystal powder
     stop_
 
 save_
-
 
 save__Sample_component.Concentration_val_units
 
@@ -7763,6 +6295,7 @@ save__Software.Type
 
     'NUS schedule generator'     .
     'structure calculation'      .
+    'test lex'                   .
 
     stop_
 
@@ -8088,45 +6621,6 @@ save__Spectral_density_experiment.Sample_state
 
 save_
 
-save__Spectral_dim.Absolute_peak_positions
-                                        
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-       yes         .
-       no          .
-
-     stop_
-
-save_
-
-save__Spectral_dim.Acquisition
-                                        
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-       yes         .
-       no          .
-
-     stop_
-
-save_
-
-save__Spectral_dim_transfer.Indirect
-                                        
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-       yes         .
-       no          .
-
-     stop_
-
-save_
-
 save__Spectral_dim_transfer.Type
                                         
      loop_
@@ -8143,8 +6637,6 @@ save__Spectral_dim_transfer.Type
      stop_
 
 save_
-
-
 
 save__Spectral_peak_list.Experiment_class
                                         
@@ -8169,7 +6661,6 @@ save__Spectral_peak_list.Experiment_type
      stop_
 
 save_
-
 
 save__Spectral_processing_param.Name
 
@@ -8207,33 +6698,6 @@ save__Spectral_transition_general_char.Measurement_method
 
 save_
 
-
-save__Struct_asym.PDBX_blank_PDB_chainid_flag
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes         .
-    no          .                         
-
-  stop_
-
-save_
-
-save__Struct_asym.PDBX_modified
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes         .
-    no          .
-
-  stop_
-
-save_
-
 save__Study.Type
 
   loop_
@@ -8254,23 +6718,6 @@ save__Study.Type
     'Stoichiometry problems'                   .
     'Dynamics analysis'                        .
     'pH titration'                             .
-
-
-
-
-  stop_
-
-save_
-
-
-save__Subsystem_db_link.Author_supplied
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    yes     .
-    no      .
 
   stop_
 
@@ -8529,19 +6976,6 @@ save__Torsion_angle_constraints_expt.Sample_state
      isotropic         .
      anisotropic       .
      solid             .
-
-  stop_
-
-save_
-
-save__Upload_data.Data_file_immutable_flag
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     no         .
-     yes        .
 
   stop_
 

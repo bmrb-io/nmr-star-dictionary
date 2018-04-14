@@ -95,6 +95,31 @@ TBL_BEGIN,?,?,?
 40,7,Initial release,enumeration_text
 252,1,anisotropic,enumeration_text
 252,2,isotropic,enumeration_text
+64,1,amide,enumeration_text
+64,2,covalent,enumeration_text
+64,3,directed,enumeration_text
+64,4,disulfide,enumeration_text
+64,5,ester,enumeration_text
+64,6,ether,enumeration_text
+64,7,hydrogen,enumeration_text
+64,8,metal coordination,enumeration_text
+64,9,peptide,enumeration_text
+64,10,thioether,enumeration_text
+64,11,oxime,enumeration_text
+64,12,thioester,enumeration_text
+64,13,phosphoester,enumeration_text
+64,14,phosphodiester,enumeration_text
+64,15,diselenide,enumeration_text
+64,16,na,enumeration_text
+65,1,sing,"single bond"
+65,2,doub,"double bond"
+65,3,trip,"triple bond"
+65,4,quad,"quadruple bond"
+65,5,arom,"aromatic bond"
+65,6,poly,"polymeric bond"
+65,7,delo,"delocalized double bond"
+65,8,pi,"pi bond"
+65,9,directed,"N ->O"
 277,1,sing,"single bond"
 277,2,doub,"double bond"
 277,3,trip,"triple bond"
@@ -848,31 +873,6 @@ TBL_BEGIN,?,?,?
 49,5,intrinsically disordered,enumeration_text
 49,6,partially disordered,enumeration_text
 49,7,na,enumeration_text
-64,1,amide,enumeration_text
-64,2,covalent,enumeration_text
-64,3,directed,enumeration_text
-64,4,disulfide,enumeration_text
-64,5,ester,enumeration_text
-64,6,ether,enumeration_text
-64,7,hydrogen,enumeration_text
-64,8,metal coordination,enumeration_text
-64,9,peptide,enumeration_text
-64,10,thioether,enumeration_text
-64,11,oxime,enumeration_text
-64,12,thioester,enumeration_text
-64,13,phosphoester,enumeration_text
-64,14,phosphodiester,enumeration_text
-64,15,diselenide,enumeration_text
-64,16,na,enumeration_text
-65,1,sing,"single bond"
-65,2,doub,"double bond"
-65,3,trip,"triple bond"
-65,4,quad,"quadruple bond"
-65,5,arom,"aromatic bond"
-65,6,poly,"polymeric bond"
-65,7,delo,"delocalized double bond"
-65,8,pi,"pi bond"
-65,9,directed,"N ->O"
 62,1,common,"An often used full name for the entity"
 62,2,abbreviation,"Common abbreviation used in the literature for the entity"
 62,3,synonym,"A synonym used for the entity"
@@ -1729,10 +1729,13 @@ TBL_BEGIN,?,?,?
 117,21,Sensar Larson Davis,enumeration_text
 117,22,Shimadzu Scientific Instruments Inc.,enumeration_text
 117,23,Thermo Scientific,enumeration_text
-179,1,macromolecular binding,enumeration_text
-179,2,ligand binding,enumeration_text
-179,3,ligand fragment binding,enumeration_text
-179,4,paramagnetic ligand binding,enumeration_text
+179,1,?macromolecular,binding?
+179,2,.,enumeration_text
+179,3,binding?,enumeration_text
+179,4,?ligand,fragment
+179,5,binding?,enumeration_text
+179,6,?paramagnetic,ligand
+179,7,binding?,enumeration_text
 180,1,isotropic,enumeration_text
 180,2,anisotropic,enumeration_text
 180,3,solid,enumeration_text
@@ -2042,10 +2045,26 @@ TBL_BEGIN,?,?,?
 292,2,parabolic,enumeration_text
 292,3,square-well-parabolic,enumeration_text
 292,4,square-well-parabolic-linear,enumeration_text
-292,5,upper-bound-parabolic,"can be derived from the two-sided versions given above"
-292,6,lower-bound-parabolic,"can be derived from the two-sided versions given above"
-292,7,upper-bound-parabolic-linear,"can be derived from the two-sided versions given above"
-292,8,lower-bound-parabolic-linear,"can be derived from the two-sided versions given above"
+292,5,upper-bound-parabolic,???can
+292,6,be,derived
+292,7,from,the
+292,8,two-sided,versions
+292,9,given,above???
+292,10,lower-bound-parabolic,???can
+292,11,be,derived
+292,12,from,the
+292,13,two-sided,versions
+292,14,given,above???
+292,15,upper-bound-parabolic-linear,???can
+292,16,be,derived
+292,17,from,the
+292,18,two-sided,versions
+292,19,given,above???
+292,20,lower-bound-parabolic-linear,???can
+292,21,be,derived
+292,22,from,the
+292,23,two-sided,versions
+292,24,given,above???
 293,1,RDC,enumeration_text
 37,1,original,"First release of the data to the public."
 37,2,na,"not available"
@@ -2403,6 +2422,7 @@ TBL_BEGIN,?,?,?
 111,80,xwinnmr,enumeration_text
 110,1,NUS schedule generator,enumeration_text
 110,2,structure calculation,enumeration_text
+110,3,test lex,enumeration_text
 302,1,AMBER,enumeration_text
 302,2,AngleSearch,enumeration_text
 302,3,ANSIG,enumeration_text
