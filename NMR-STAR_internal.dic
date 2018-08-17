@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2018-04-13
+#  version date -  2018-08-17
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.1.5
+    _dictionary.version         3.2.1.9
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.1.5         ?
+     3.2.1.9         ?
 ;
      ?
 ;
@@ -1316,6 +1316,7 @@ submitted to BMRB.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
+   _item_default.value            'BMRB Only'
 
    loop_
      _item_enumeration.value
@@ -2913,6 +2914,14 @@ Brief description of the kinds of data contained in the file.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
+   loop_
+     _item_examples.case
+
+;
+T1 relaxation
+;
+
+   stop_
 
 save_
 
@@ -3028,14 +3037,6 @@ The type of data contained in the file that is to be uploaded.
 
    stop_
 
-   loop_
-     _item_examples.case
-
-;
-T1_relaxation
-;
-
-   stop_
 
 save_
 
@@ -4894,7 +4895,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.1.5'
+   _item_default.value            '3.2.1.9'
 
    loop_
      _item_enumeration.value
@@ -6548,6 +6549,7 @@ The name of the experimental method used.
    _item.name                                  '_Entry_experimental_methods.Method'
    _item.category_id                           'Entry_experimental_methods'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
 
    loop_
@@ -6579,6 +6581,7 @@ The name of the submethod used, if appropriate.
    _item.name                                  '_Entry_experimental_methods.Subtype'
    _item.category_id                           'Entry_experimental_methods'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
 
    loop_
@@ -26501,6 +26504,7 @@ record.
    _item.name                                  '_Chem_comp.Provenance'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
 
    loop_
@@ -27655,6 +27659,7 @@ Name of the company where the compound was purchased.
    _item.name                                  '_Chem_comp.Vendor'
    _item.category_id                           'Chem_comp'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
 
    loop_
@@ -27788,6 +27793,7 @@ The type of name given to the compound (abbreviation, etc.).
    _item.name                                  '_Chem_comp_common_name.Type'
    _item.category_id                           'Chem_comp_common_name'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
 
    loop_
@@ -34042,6 +34048,7 @@ in the entry.
    Molmol    ?
    MORASS    ?
    NDEE    ?
+   NMRbox    ?
    NMRCOMPASS    ?
    NMRDraw    ?
    NMRPipe    ?
@@ -34400,6 +34407,7 @@ The name of the software defined by the author or provider of the software.
    Molmol    ?
    MORASS    ?
    NDEE    ?
+   NMRbox    ?
    NMRDraw    ?
    NMRPipe    ?
    NMRView    ?
@@ -34579,6 +34587,7 @@ Commercial or academic supplier of the software product.
    '(MOLPROBITY) - Richardson'    ?
    '(MORASS) - Luxon'    ?
    '(NDEE) - Roesch and Herrmann'    ?
+   '(NMRbox) - UConn Health Center'    ?
    '(NMRDraw) - Delaglio, Grzesiek, Vuister, Zhu, Pfeifer and Bax'    ?
    '(NMRPipe) - Delaglio, Grzesiek, Vuister, Zhu, Pfeifer and Bax'    ?
    '(NMRView) - Johnson, One Moon Scientific'    ?
@@ -39472,7 +39481,7 @@ save__NMR_probe.Type
 
    _item_description.description
 ;
-The type of probe.
+The type of NMR probe installed in the NMR spectrometer used to collect data.
 ;
 
    _item.name                                  '_NMR_probe.Type'
@@ -112763,7 +112772,7 @@ save__Tensor_list.Data_file_name
 
    _item_description.description
 ;
-Name of the file containing tensor data.
+Name of the auxiliary file containing tensor data.
 ;
 
    _item.name                                  '_Tensor_list.Data_file_name'
@@ -112778,12 +112787,13 @@ save__Tensor_list.Tensor_type
 
    _item_description.description
 ;
-?
+The type of tensor data reported.
 ;
 
    _item.name                                  '_Tensor_list.Tensor_type'
    _item.category_id                           'Tensor_list'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
 
    loop_
@@ -112804,12 +112814,13 @@ save__Tensor_list.Tensor_shape
 
    _item_description.description
 ;
-?
+The shape of the tensor.
 ;
 
    _item.name                                  '_Tensor_list.Tensor_shape'
    _item.category_id                           'Tensor_list'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
 
    loop_
@@ -112831,12 +112842,13 @@ save__Tensor_list.Matrix_val_units
 
    _item_description.description
 ;
-?
+The units for the matrix values.
 ;
 
    _item.name                                  '_Tensor_list.Matrix_val_units'
    _item.category_id                           'Tensor_list'
    _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
 
    loop_
@@ -112854,7 +112866,7 @@ save__Tensor_list.Isotropic_val_type
 
    _item_description.description
 ;
-?
+The type of isotropic value reported.
 ;
 
    _item.name                                  '_Tensor_list.Isotropic_val_type'
@@ -112869,7 +112881,7 @@ save__Tensor_list.Angle_units
 
    _item_description.description
 ;
-?
+The units for the reported angle.
 ;
 
    _item.name                                  '_Tensor_list.Angle_units'
@@ -112884,7 +112896,7 @@ save__Tensor_list.Isotropic_val_formula
 
    _item_description.description
 ;
-?
+The formula for the isotropic value.
 ;
 
    _item.name                                  '_Tensor_list.Isotropic_val_formula'
@@ -112899,7 +112911,7 @@ save__Tensor_list.Anisotropic_val_formula
 
    _item_description.description
 ;
-?
+The formula for the anisotropic value.
 ;
 
    _item.name                                  '_Tensor_list.Anisotropic_val_formula'
@@ -112914,7 +112926,7 @@ save__Tensor_list.Rhombic_val_formula
 
    _item_description.description
 ;
-?
+The formula for the rhombic value.
 ;
 
    _item.name                                  '_Tensor_list.Rhombic_val_formula'
@@ -112929,7 +112941,7 @@ save__Tensor_list.Euler_angle_type
 
    _item_description.description
 ;
-?
+The type of Euler angle reported.
 ;
 
    _item.name                                  '_Tensor_list.Euler_angle_type'
@@ -112986,7 +112998,7 @@ save__Tensor.ID
 
    _item_description.description
 ;
-Unique identifier for the chemical shift tensor.
+Unique identifier for the tensor.
 ;
 
    _item.name                                  '_Tensor.ID'
@@ -113800,6 +113812,14 @@ save__Interatomic_distance_list.Sf_framecode
    _item_type.code                             'framecode'
    _item_default.value            'Interatomic_distance_data_1'
 
+   loop_
+     _item_examples.case
+
+;
+Interatomic distance list 1
+;
+
+   stop_
 
 save_
 
@@ -131483,6 +131503,7 @@ spectral peak list save frames.
    _item.name                                  '_Peak_constraint_link.Spectral_peak_list_Sf_category'
    _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
 
    loop_
@@ -131552,6 +131573,7 @@ The category for the constraint save frame where the linked constraint is found.
    _item.name                                  '_Peak_constraint_link.Constraint_Sf_category'
    _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
 
    loop_
@@ -133559,6 +133581,14 @@ Pointer to a saveframe of the category 'software'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
 
+   loop_
+     _item_examples.case
+
+;
+Software label
+;
+
+   stop_
 
 save_
 
@@ -135976,6 +136006,7 @@ The name of a software application.
    Molmol    ?
    MORASS    ?
    NDEE    ?
+   NMRbox    ?
    NMRDraw    ?
    NMRPipe    ?
    NMRView    ?
@@ -136369,6 +136400,7 @@ The name of a software application.
    _item.name                                  '_History.Software_name'
    _item.category_id                           'History'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
 
    loop_
