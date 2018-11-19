@@ -756,6 +756,33 @@ yes
 
 save_
 
+save__Entry_interview.Image_file
+
+   _Tag                  '_Entry_interview.Image_file'
+
+   _Category              'Entry_interview'
+
+   _Description
+;
+Check this box if you are depositing an image file of a molecular structure or other image relevant to your deposition.
+;
+
+   _Adit_item_view_name
+;
+Image file (molecule structure)
+;
+
+   loop_
+     _Example
+
+;
+no
+;
+
+   stop_
+
+save_
+
 save__Entry_interview.Residual_dipolar_couplings
 
    _Tag                  '_Entry_interview.Residual_dipolar_couplings'
@@ -1871,7 +1898,7 @@ save__Upload_data.Data_file_content_type
 
    _Description
 ;
-?
+Select the kinds of data included in the uploaded file.
 ;
 
    _Adit_item_view_name
@@ -2092,7 +2119,7 @@ Character string that is unique to the saveframe within the data block defined b
 
    _Adit_item_view_name
 ;
-Sf framecode
+Study list label
 ;
 
    loop_
@@ -34762,7 +34789,7 @@ Enter a descriptive label that uniquely identifies this set of sample conditions
 
    _Adit_item_view_name
 ;
-Sample conditions label
+Sample conditions list label
 ;
 
    loop_
@@ -34844,6 +34871,33 @@ A value that uniquely identifies the set of sample conditions from other sample
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Sample_condition_list.Name
+
+   _Tag                  '_Sample_condition_list.Name'
+
+   _Category              'Sample_condition_list'
+
+   _Description
+;
+Enter a descriptive name that uniquely identifies this set of sample conditions (conditions_1).
+;
+
+   _Adit_item_view_name
+;
+Sample conditions list name
 ;
 
    loop_
@@ -35869,7 +35923,7 @@ The name of the software package.
 
    _Adit_item_view_name
 ;
-Software name
+Software label
 ;
 
    loop_
@@ -48208,7 +48262,7 @@ A label that uniquely identifies the computer from other computers listed in the
 
    _Adit_item_view_name
 ;
-Compter label
+Computer label
 ;
 
    loop_
@@ -116977,7 +117031,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-binding constants list name
+binding constants list label
 ;
 
    loop_
@@ -152806,7 +152860,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Sf framecode
+Floating chirality assignment list label
 ;
 
    loop_

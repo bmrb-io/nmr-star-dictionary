@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2018-08-17
+#  version date -  2018-11-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.1.9
+    _dictionary.version         3.2.1.11
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.1.9         ?
+     3.2.1.11         ?
 ;
      ?
 ;
@@ -1823,6 +1823,30 @@ yes
 
 save_
 
+save__Entry_interview.Image_file
+
+   _item_description.description
+;
+Flag indicating that an image file is being deposited.
+;
+
+   _item.name                                  '_Entry_interview.Image_file'
+   _item.category_id                           'Entry_interview'
+   _item.mandatory_code                         no
+   _item_type.code                             'yes_no'
+   _item_default.value            'no'
+
+   loop_
+     _item_examples.case
+
+;
+no
+;
+
+   stop_
+
+save_
+
 save__Entry_interview.Residual_dipolar_couplings
 
    _item_description.description
@@ -2911,8 +2935,17 @@ Brief description of the kinds of data contained in the file.
 
    _item.name                                  '_Upload_data.Data_file_content_type'
    _item.category_id                           'Upload_data'
-   _item.mandatory_code                         no
+   _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   .    ?
+
+   stop_
 
    loop_
      _item_examples.case
@@ -4895,7 +4928,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.1.9'
+   _item_default.value            '3.2.1.11'
 
    loop_
      _item_enumeration.value
@@ -32967,7 +33000,8 @@ save__Sample_condition_list.Sf_framecode
 
    _item_description.description
 ;
-A descriptive label that uniquely identifies this set of sample conditions.
+A descriptive label that uniquely identifies this set of sample conditions 
+within an entry.
 ;
 
    _item.name                                  '_Sample_condition_list.Sf_framecode'
@@ -33141,6 +33175,22 @@ A value that uniquely identifies the set of sample conditions from other sample
   stop_
 
   _item_type.code                             'int'
+
+
+save_
+
+save__Sample_condition_list.Name
+
+   _item_description.description
+;
+A descriptive name that uniquely identifies this set of sample conditions 
+within the entry.
+;
+
+   _item.name                                  '_Sample_condition_list.Name'
+   _item.category_id                           'Sample_condition_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
 
 
 save_
@@ -34010,6 +34060,7 @@ in the entry.
    AMBER    ?
    AngleSearch    ?
    ANSIG    ?
+   Analysis    ?
    AQUA    ?
    ARIA    ?
    AURELIA    ?
@@ -34020,6 +34071,8 @@ in the entry.
    AZARA    ?
    BIRDER    ?
    CAPP    ?
+   CARA    ?
+   CppNMR    ?
    CING    ?
    CNS    ?
    CNSSOLVE    ?
@@ -34031,16 +34084,18 @@ in the entry.
    DELTA    ?
    DGII    ?
    DIAMOD    ?
-   DIANA    ?
    DISCOVER    ?
    DSPACE    ?
    DYANA    ?
+   DYNAMO    ?
    EMBOSS    ?
    FANTOM    ?
    Felix    ?
    GARANT    ?
+   Gaussian    ?
    GIFA    ?
    GROMOS    ?
+   HADDOCK    ?
    HYPER    ?
    InsightII    ?
    MARDIGRAS    ?
@@ -34052,14 +34107,12 @@ in the entry.
    NMRCOMPASS    ?
    NMRDraw    ?
    NMRPipe    ?
-   NMR-STAR    ?
    NMRView    ?
    NOAH    ?
    NOEID    ?
    NUCFIT    ?
    NUTS    ?
    OPAL    ?
-   PDB    ?
    PECAN    ?
    PINE    ?
    PIPP    ?
@@ -34388,9 +34441,11 @@ The name of the software defined by the author or provider of the software.
    CS-Rosetta    ?
    CURVES    ?
    CYANA    ?
+   DELTA    ?
    DGII    ?
    DIAMOD    ?
    DISCOVER    ?
+   DSPACE    ?
    DYANA    ?
    DYNAMO    ?
    EMBOSS    ?
@@ -34399,6 +34454,7 @@ The name of the software defined by the author or provider of the software.
    GARANT    ?
    Gaussian    ?
    GIFA    ?
+   GROMOS    ?
    HADDOCK    ?
    HYPER    ?
    InsightII    ?
@@ -34408,6 +34464,7 @@ The name of the software defined by the author or provider of the software.
    MORASS    ?
    NDEE    ?
    NMRbox    ?
+   NMRCOMPASS    ?
    NMRDraw    ?
    NMRPipe    ?
    NMRView    ?
@@ -34436,9 +34493,12 @@ The name of the software defined by the author or provider of the software.
    SPSCAN    ?
    SYBYL    ?
    TALOS    ?
+   TINKER    ?
    TOPSPIN    ?
+   TRIPOS    ?
    UXNMR    ?
    VNMR    ?
+   VNMRj    ?
    WhatIF    ?
    Wattos    ?
    XEASY    ?
