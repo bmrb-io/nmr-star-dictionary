@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.1.13
+    _dictionary.version         3.2.1.15
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.1.13         ?
+     3.2.1.15         ?
 ;
      ?
 ;
@@ -2693,7 +2693,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.1.13'
+   _item_default.value            '3.2.1.15'
 
    loop_
      _item_enumeration.value
@@ -4955,32 +4955,6 @@ citation
 
 save_
 
-save_citation
-   _category.description
-;
-Items in the citation category capture information common to all citations.
-;
-   _category.id                   'citation'
-   _category.mandatory_code       yes
-
-   loop_
-     _category_key.name
-
-     '_citation.entry_id'
-     '_citation.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'citations'
-
-   stop_
-
-save_
-
 save__citation.name
 
    _item_description.description
@@ -4999,32 +4973,6 @@ A name assigned to the save frame.
 ;
 citation 1
 ;
-
-   stop_
-
-save_
-
-save_citation
-   _category.description
-;
-Items in the citation category capture information common to all citations.
-;
-   _category.id                   'citation'
-   _category.mandatory_code       yes
-
-   loop_
-     _category_key.name
-
-     '_citation.entry_id'
-     '_citation.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'citations'
 
    stop_
 
@@ -25679,32 +25627,6 @@ listed in the entry.
 
 save_
 
-save_sample
-   _category.description
-;
-Items in the sample category describe the characteristics of the samples used to collect experimental data.
-;
-   _category.id                   'sample'
-   _category.mandatory_code       yes
-
-   loop_
-     _category_key.name
-
-     '_sample.entry_id'
-     '_sample.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'sample'
-
-   stop_
-
-save_
-
 save__sample.name
 
    _item_description.description
@@ -25723,32 +25645,6 @@ A name assigned to the save frame.
 ;
 13C 15N sample
 ;
-
-   stop_
-
-save_
-
-save_sample
-   _category.description
-;
-Items in the sample category describe the characteristics of the samples used to collect experimental data.
-;
-   _category.id                   'sample'
-   _category.mandatory_code       yes
-
-   loop_
-     _category_key.name
-
-     '_sample.entry_id'
-     '_sample.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'sample'
 
    stop_
 
@@ -29346,31 +29242,6 @@ given in the entry.
 
 save_
 
-save_method
-   _category.description
-;
-Items in the method category provide meta data about the reported method.
-;
-   _category.id                   'method'
-
-   loop_
-     _category_key.name
-
-     '_method.entry_id'
-     '_method.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'method'
-
-   stop_
-
-save_
-
 save__method.name
 
    _item_description.description
@@ -29383,31 +29254,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_method
-   _category.description
-;
-Items in the method category provide meta data about the reported method.
-;
-   _category.id                   'method'
-
-   loop_
-     _category_key.name
-
-     '_method.entry_id'
-     '_method.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'method'
-
-   stop_
 
 save_
 
@@ -29890,31 +29736,6 @@ listed in the entry.
 
 save_
 
-save_mass_spec
-   _category.description
-;
-Items in the mass_spec category provide meta information about the mass spectrometer described.
-;
-   _category.id                   'mass_spec'
-
-   loop_
-     _category_key.name
-
-     '_mass_spec.entry_id'
-     '_mass_spec.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'mass_spectrometer'
-
-   stop_
-
-save_
-
 save__mass_spec.name
 
    _item_description.description
@@ -29933,31 +29754,6 @@ A name assigned to the save frame.
 ;
 Mass spectrometer 1
 ;
-
-   stop_
-
-save_
-
-save_mass_spec
-   _category.description
-;
-Items in the mass_spec category provide meta information about the mass spectrometer described.
-;
-   _category.id                   'mass_spec'
-
-   loop_
-     _category_key.name
-
-     '_mass_spec.entry_id'
-     '_mass_spec.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'mass_spectrometer'
 
    stop_
 
@@ -30615,30 +30411,6 @@ listed in the entry.
 
 save_
 
-save_mass_spectrometer_list
-   _category.description
-;
-Items in the mass_spectrometer_list category provide meta information regarding the reported list of mass spectrometers.
-;
-   _category.id                   'mass_spectrometer_list'
-
-   loop_
-     _category_key.name
-
-     '_mass_spectrometer_list.entry_id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'mass_spectrometer_list'
-
-   stop_
-
-save_
-
 save__mass_spectrometer_list.name
 
    _item_description.description
@@ -31056,31 +30828,6 @@ mass reference compounds listed in the entry.
 
 save_
 
-save_mass_spec_ref_compd_set
-   _category.description
-;
-Items in the mass_spec_ref_compd_set category provide meta data regarding a set of reference compounds used in carrying out mass spectrometry experiments.
-;
-   _category.id                   'mass_spec_ref_compd_set'
-
-   loop_
-     _category_key.name
-
-     '_mass_spec_ref_compd_set.entry_id'
-     '_mass_spec_ref_compd_set.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'mass_spec_ref_compd'
-
-   stop_
-
-save_
-
 save__mass_spec_ref_compd_set.name
 
    _item_description.description
@@ -31093,31 +30840,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_mass_spec_ref_compd_set
-   _category.description
-;
-Items in the mass_spec_ref_compd_set category provide meta data regarding a set of reference compounds used in carrying out mass spectrometry experiments.
-;
-   _category.id                   'mass_spec_ref_compd_set'
-
-   loop_
-     _category_key.name
-
-     '_mass_spec_ref_compd_set.entry_id'
-     '_mass_spec_ref_compd_set.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'mass_spec_ref_compd'
-
-   stop_
 
 save_
 
@@ -31355,31 +31077,6 @@ listed in the entry.
 
 save_
 
-save_chromatographic_system
-   _category.description
-;
-Items in the chromatographic_system category record the information describing a chromatographic system used in separating chemical compounds.
-;
-   _category.id                   'chromatographic_system'
-
-   loop_
-     _category_key.name
-
-     '_chromatographic_system.entry_id'
-     '_chromatographic_system.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chromatographic_system'
-
-   stop_
-
-save_
-
 save__chromatographic_system.name
 
    _item_description.description
@@ -31392,31 +31089,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chromatographic_system
-   _category.description
-;
-Items in the chromatographic_system category record the information describing a chromatographic system used in separating chemical compounds.
-;
-   _category.id                   'chromatographic_system'
-
-   loop_
-     _category_key.name
-
-     '_chromatographic_system.entry_id'
-     '_chromatographic_system.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chromatographic_system'
-
-   stop_
 
 save_
 
@@ -31688,31 +31360,6 @@ listed in the entry.
 
 save_
 
-save_chromatographic_column
-   _category.description
-;
-Items in the chromatographic_column category record the characteristics of a column used in a chromatographic system for separating chemical compounds.
-;
-   _category.id                   'chromatographic_column'
-
-   loop_
-     _category_key.name
-
-     '_chromatographic_column.entry_id'
-     '_chromatographic_column.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chromatographic_column'
-
-   stop_
-
-save_
-
 save__chromatographic_column.name
 
    _item_description.description
@@ -31725,31 +31372,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chromatographic_column
-   _category.description
-;
-Items in the chromatographic_column category record the characteristics of a column used in a chromatographic system for separating chemical compounds.
-;
-   _category.id                   'chromatographic_column'
-
-   loop_
-     _category_key.name
-
-     '_chromatographic_column.entry_id'
-     '_chromatographic_column.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chromatographic_column'
-
-   stop_
 
 save_
 
@@ -31947,31 +31569,6 @@ Fluorescence instruments listed in the entry.
 
 save_
 
-save_fluorescence_instrument
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'fluorescence_instrument'
-
-   loop_
-     _category_key.name
-
-     '_fluorescence_instrument.entry_id'
-     '_fluorescence_instrument.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'fluorescence_instrument'
-
-   stop_
-
-save_
-
 save__fluorescence_instrument.name
 
    _item_description.description
@@ -31984,31 +31581,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_fluorescence_instrument
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'fluorescence_instrument'
-
-   loop_
-     _category_key.name
-
-     '_fluorescence_instrument.entry_id'
-     '_fluorescence_instrument.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'fluorescence_instrument'
-
-   stop_
 
 save_
 
@@ -32191,31 +31763,6 @@ listed in the entry.
 
 save_
 
-save_emr_instrument
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'emr_instrument'
-
-   loop_
-     _category_key.name
-
-     '_emr_instrument.entry_id'
-     '_emr_instrument.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'emr_instrument'
-
-   stop_
-
-save_
-
 save__emr_instrument.name
 
    _item_description.description
@@ -32228,31 +31775,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_emr_instrument
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'emr_instrument'
-
-   loop_
-     _category_key.name
-
-     '_emr_instrument.entry_id'
-     '_emr_instrument.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'emr_instrument'
-
-   stop_
 
 save_
 
@@ -32706,31 +32228,6 @@ listed in the entry.
 
 save_
 
-save_nmr_spectrometer
-   _category.description
-;
-Items in the NMR_spectrometer category describe an NMR spectrometer used to collect experimental data.
-;
-   _category.id                   'nmr_spectrometer'
-
-   loop_
-     _category_key.name
-
-     '_nmr_spectrometer.entry_id'
-     '_nmr_spectrometer.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'nmr_spectrometer'
-
-   stop_
-
-save_
-
 save__nmr_spectrometer.name
 
    _item_description.description
@@ -32743,31 +32240,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_nmr_spectrometer
-   _category.description
-;
-Items in the NMR_spectrometer category describe an NMR spectrometer used to collect experimental data.
-;
-   _category.id                   'nmr_spectrometer'
-
-   loop_
-     _category_key.name
-
-     '_nmr_spectrometer.entry_id'
-     '_nmr_spectrometer.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'nmr_spectrometer'
-
-   stop_
 
 save_
 
@@ -33132,31 +32604,6 @@ listed in the entry.
 
   _item_type.code                             'int'
 
-
-save_
-
-save_nmr_spectrometer_list
-   _category.description
-;
-Items in the NMR_spectrometer_list category define a set of NMR spectrometers and their descriptions.
-;
-   _category.id                   'nmr_spectrometer_list'
-
-   loop_
-     _category_key.name
-
-     '_nmr_spectrometer_list.entry_id'
-     '_nmr_spectrometer_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'nmr_spectrometer_list'
-
-   stop_
 
 save_
 
@@ -33600,31 +33047,6 @@ in the entry.
 
 save_
 
-save_nmr_spectrometer_probe
-   _category.description
-;
-Items in the NMR_spectrometer_probe category describe an NMR spectrometer probe.
-;
-   _category.id                   'nmr_spectrometer_probe'
-
-   loop_
-     _category_key.name
-
-     '_nmr_spectrometer_probe.entry_id'
-     '_nmr_spectrometer_probe.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'nmr_spectrometer_probe'
-
-   stop_
-
-save_
-
 save__nmr_spectrometer_probe.name
 
    _item_description.description
@@ -33637,31 +33059,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_nmr_spectrometer_probe
-   _category.description
-;
-Items in the NMR_spectrometer_probe category describe an NMR spectrometer probe.
-;
-   _category.id                   'nmr_spectrometer_probe'
-
-   loop_
-     _category_key.name
-
-     '_nmr_spectrometer_probe.entry_id'
-     '_nmr_spectrometer_probe.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'nmr_spectrometer_probe'
-
-   stop_
 
 save_
 
@@ -38333,31 +37730,6 @@ in the entry.
 
 save_
 
-save_computer
-   _category.description
-;
-Items in the computer category describe a computer.
-;
-   _category.id                   'computer'
-
-   loop_
-     _category_key.name
-
-     '_computer.entry_id'
-     '_computer.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'computer'
-
-   stop_
-
-save_
-
 save__computer.name
 
    _item_description.description
@@ -38370,31 +37742,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_computer
-   _category.description
-;
-Items in the computer category describe a computer.
-;
-   _category.id                   'computer'
-
-   loop_
-     _category_key.name
-
-     '_computer.entry_id'
-     '_computer.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'computer'
-
-   stop_
 
 save_
 
@@ -38733,31 +38080,6 @@ reference values from other saveframes of this category in an entry.
 
 save_
 
-save_chem_shift_reference
-   _category.description
-;
-Items in the chem_shift_reference category define a set of chemical shift referencing parameters.
-;
-   _category.id                   'chem_shift_reference'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_reference.entry_id'
-     '_chem_shift_reference.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_reference'
-
-   stop_
-
-save_
-
 save__chem_shift_reference.name
 
    _item_description.description
@@ -38770,31 +38092,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chem_shift_reference
-   _category.description
-;
-Items in the chem_shift_reference category define a set of chemical shift referencing parameters.
-;
-   _category.id                   'chem_shift_reference'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_reference.entry_id'
-     '_chem_shift_reference.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_reference'
-
-   stop_
 
 save_
 
@@ -39633,31 +38930,6 @@ shifts from other saveframes of this category in an entry.
 
 save_
 
-save_assigned_chem_shift_list
-   _category.description
-;
-Items in the assigned_chem_shift_list category provide information about a list of reported assigned chemical shift values.
-;
-   _category.id                   'assigned_chem_shift_list'
-
-   loop_
-     _category_key.name
-
-     '_assigned_chem_shift_list.entry_id'
-     '_assigned_chem_shift_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'assigned_chemical_shifts'
-
-   stop_
-
-save_
-
 save__assigned_chem_shift_list.name
 
    _item_description.description
@@ -39670,31 +38942,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_assigned_chem_shift_list
-   _category.description
-;
-Items in the assigned_chem_shift_list category provide information about a list of reported assigned chemical shift values.
-;
-   _category.id                   'assigned_chem_shift_list'
-
-   loop_
-     _category_key.name
-
-     '_assigned_chem_shift_list.entry_id'
-     '_assigned_chem_shift_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'assigned_chemical_shifts'
-
-   stop_
 
 save_
 
@@ -41132,31 +40379,6 @@ that was carried out.
 
 save_
 
-save_chem_shifts_calc_type
-   _category.description
-;
-Items in the chem_shifts_calc_type category provide information about type of calculation used to derive a set of theoretical chemical shift values.
-;
-   _category.id                   'chem_shifts_calc_type'
-
-   loop_
-     _category_key.name
-
-     '_chem_shifts_calc_type.entry_id'
-     '_chem_shifts_calc_type.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shifts_calc_type'
-
-   stop_
-
-save_
-
 save__chem_shifts_calc_type.name
 
    _item_description.description
@@ -41169,31 +40391,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chem_shifts_calc_type
-   _category.description
-;
-Items in the chem_shifts_calc_type category provide information about type of calculation used to derive a set of theoretical chemical shift values.
-;
-   _category.id                   'chem_shifts_calc_type'
-
-   loop_
-     _category_key.name
-
-     '_chem_shifts_calc_type.entry_id'
-     '_chem_shifts_calc_type.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shifts_calc_type'
-
-   stop_
 
 save_
 
@@ -41665,31 +40862,6 @@ chemical shift data from other saveframes of this category in an entry.
 
 save_
 
-save_theoretical_chem_shift_list
-   _category.description
-;
-Items in the theoretical_chem_shift_list category provide information about a list of reported theoretical chemical shift values calculated for one or more molecular entities.
-;
-   _category.id                   'theoretical_chem_shift_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_chem_shift_list.entry_id'
-     '_theoretical_chem_shift_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_chem_shifts'
-
-   stop_
-
-save_
-
 save__theoretical_chem_shift_list.name
 
    _item_description.description
@@ -41702,31 +40874,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_theoretical_chem_shift_list
-   _category.description
-;
-Items in the theoretical_chem_shift_list category provide information about a list of reported theoretical chemical shift values calculated for one or more molecular entities.
-;
-   _category.id                   'theoretical_chem_shift_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_chem_shift_list.entry_id'
-     '_theoretical_chem_shift_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_chem_shifts'
-
-   stop_
 
 save_
 
@@ -42441,31 +41588,6 @@ constant values from other saveframes of this category in an entry.
 
 save_
 
-save_coupling_constant_list
-   _category.description
-;
-Items in the coupling_constant_list category provide information about a list of reported scalar coupling constant values.
-;
-   _category.id                   'coupling_constant_list'
-
-   loop_
-     _category_key.name
-
-     '_coupling_constant_list.entry_id'
-     '_coupling_constant_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'coupling_constants'
-
-   stop_
-
-save_
-
 save__coupling_constant_list.name
 
    _item_description.description
@@ -42478,31 +41600,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_coupling_constant_list
-   _category.description
-;
-Items in the coupling_constant_list category provide information about a list of reported scalar coupling constant values.
-;
-   _category.id                   'coupling_constant_list'
-
-   loop_
-     _category_key.name
-
-     '_coupling_constant_list.entry_id'
-     '_coupling_constant_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'coupling_constants'
-
-   stop_
 
 save_
 
@@ -43709,31 +42806,6 @@ constant values from other saveframes of this category in an entry.
 
 save_
 
-save_theoretical_coupling_constant_list
-   _category.description
-;
-Items in the theoretical_coupling_constant_list category provide information about a list of reported theoretical coupling constant values.
-;
-   _category.id                   'theoretical_coupling_constant_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_coupling_constant_list.entry_id'
-     '_theoretical_coupling_constant_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_coupling_constants'
-
-   stop_
-
-save_
-
 save__theoretical_coupling_constant_list.name
 
    _item_description.description
@@ -43746,31 +42818,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_theoretical_coupling_constant_list
-   _category.description
-;
-Items in the theoretical_coupling_constant_list category provide information about a list of reported theoretical coupling constant values.
-;
-   _category.id                   'theoretical_coupling_constant_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_coupling_constant_list.entry_id'
-     '_theoretical_coupling_constant_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_coupling_constants'
-
-   stop_
 
 save_
 
@@ -44964,31 +44011,6 @@ Spectral peak list ID
 
 save_
 
-save_spectral_peak_list
-   _category.description
-;
-Items in the spectral_peak_list category provide information about a list of reported spectral peak characteristic values.
-;
-   _category.id                   'spectral_peak_list'
-
-   loop_
-     _category_key.name
-
-     '_spectral_peak_list.entry_id'
-     '_spectral_peak_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
-
-save_
-
 save__spectral_peak_list.name
 
    _item_description.description
@@ -45001,31 +44023,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_spectral_peak_list
-   _category.description
-;
-Items in the spectral_peak_list category provide information about a list of reported spectral peak characteristic values.
-;
-   _category.id                   'spectral_peak_list'
-
-   loop_
-     _category_key.name
-
-     '_spectral_peak_list.entry_id'
-     '_spectral_peak_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_peak_list'
-
-   stop_
 
 save_
 
@@ -49015,31 +48012,6 @@ information from other saveframes of this category in an entry.
 
 save_
 
-save_resonance_linker_list
-   _category.description
-;
-Items in the resonance_linker_list provide meta information regarding the CCPN system of resonance information used in defining the source of NMR spectral information used to derive peak assignments and various other data.
-;
-   _category.id                   'resonance_linker_list'
-
-   loop_
-     _category_key.name
-
-     '_resonance_linker_list.entry_id'
-     '_resonance_linker_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'resonance_linker'
-
-   stop_
-
-save_
-
 save__resonance_linker_list.name
 
    _item_description.description
@@ -49052,31 +48024,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_resonance_linker_list
-   _category.description
-;
-Items in the resonance_linker_list provide meta information regarding the CCPN system of resonance information used in defining the source of NMR spectral information used to derive peak assignments and various other data.
-;
-   _category.id                   'resonance_linker_list'
-
-   loop_
-     _category_key.name
-
-     '_resonance_linker_list.entry_id'
-     '_resonance_linker_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'resonance_linker'
-
-   stop_
 
 save_
 
@@ -50093,31 +49040,6 @@ isotope effect values from other saveframes of this category in an entry.
 
 save_
 
-save_chem_shift_isotope_effect_list
-   _category.description
-;
-Items in the chem_shift_isotope_effect_list category provide information about a list of reported chemical shift values that measure the effects of isotopic substitutions in a molecular entity.
-;
-   _category.id                   'chem_shift_isotope_effect_list'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_isotope_effect_list.entry_id'
-     '_chem_shift_isotope_effect_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_isotope_effect'
-
-   stop_
-
-save_
-
 save__chem_shift_isotope_effect_list.name
 
    _item_description.description
@@ -50130,31 +49052,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chem_shift_isotope_effect_list
-   _category.description
-;
-Items in the chem_shift_isotope_effect_list category provide information about a list of reported chemical shift values that measure the effects of isotopic substitutions in a molecular entity.
-;
-   _category.id                   'chem_shift_isotope_effect_list'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_isotope_effect_list.entry_id'
-     '_chem_shift_isotope_effect_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_isotope_effect'
-
-   stop_
 
 save_
 
@@ -51441,31 +50338,6 @@ information from other saveframes of this category in an entry.
 
 save_
 
-save_chem_shift_perturbation_list
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'chem_shift_perturbation_list'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_perturbation_list.entry_id'
-     '_chem_shift_perturbation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_perturbation'
-
-   stop_
-
-save_
-
 save__chem_shift_perturbation_list.name
 
    _item_description.description
@@ -51478,31 +50350,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chem_shift_perturbation_list
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'chem_shift_perturbation_list'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_perturbation_list.entry_id'
-     '_chem_shift_perturbation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_perturbation'
-
-   stop_
 
 save_
 
@@ -52390,31 +51237,6 @@ anisotropy data from other saveframes of this category in an entry.
 
 save_
 
-save_chem_shift_anisotropy
-   _category.description
-;
-Items in the chem_shift_anisotropy category provide information about a list of reported  chemical shift anisotropy values.
-;
-   _category.id                   'chem_shift_anisotropy'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_anisotropy.entry_id'
-     '_chem_shift_anisotropy.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_anisotropy'
-
-   stop_
-
-save_
-
 save__chem_shift_anisotropy.name
 
    _item_description.description
@@ -52427,31 +51249,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chem_shift_anisotropy
-   _category.description
-;
-Items in the chem_shift_anisotropy category provide information about a list of reported  chemical shift anisotropy values.
-;
-   _category.id                   'chem_shift_anisotropy'
-
-   loop_
-     _category_key.name
-
-     '_chem_shift_anisotropy.entry_id'
-     '_chem_shift_anisotropy.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_anisotropy'
-
-   stop_
 
 save_
 
@@ -53394,31 +52191,6 @@ Unique identifier for the list of observed residual dipolar couplings.
 
 save_
 
-save_rdc_list
-   _category.description
-;
-Items in the RDC_list category provide information about a list of reported residual dipolar coupling values.
-;
-   _category.id                   'rdc_list'
-
-   loop_
-     _category_key.name
-
-     '_rdc_list.entry_id'
-     '_rdc_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'rdcs'
-
-   stop_
-
-save_
-
 save__rdc_list.name
 
    _item_description.description
@@ -53431,31 +52203,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_rdc_list
-   _category.description
-;
-Items in the RDC_list category provide information about a list of reported residual dipolar coupling values.
-;
-   _category.id                   'rdc_list'
-
-   loop_
-     _category_key.name
-
-     '_rdc_list.entry_id'
-     '_rdc_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'rdcs'
-
-   stop_
 
 save_
 
@@ -54741,31 +53488,6 @@ Unique identifier for the list of observed residual dipolar couplings.
 
 save_
 
-save_dipolar_coupling_list
-   _category.description
-;
-Items in the dipolar_coupling_list category provide information about a list of reported dipolar coupling values.
-;
-   _category.id                   'dipolar_coupling_list'
-
-   loop_
-     _category_key.name
-
-     '_dipolar_coupling_list.entry_id'
-     '_dipolar_coupling_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipolar_couplings'
-
-   stop_
-
-save_
-
 save__dipolar_coupling_list.name
 
    _item_description.description
@@ -54778,31 +53500,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_dipolar_coupling_list
-   _category.description
-;
-Items in the dipolar_coupling_list category provide information about a list of reported dipolar coupling values.
-;
-   _category.id                   'dipolar_coupling_list'
-
-   loop_
-     _category_key.name
-
-     '_dipolar_coupling_list.entry_id'
-     '_dipolar_coupling_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipolar_couplings'
-
-   stop_
 
 save_
 
@@ -56015,31 +54712,6 @@ data from other saveframes of this category in an entry.
 
 save_
 
-save_spectral_density_list
-   _category.description
-;
-Items in the spectral_density_list category provide information about a list of reported spectral density values.
-;
-   _category.id                   'spectral_density_list'
-
-   loop_
-     _category_key.name
-
-     '_spectral_density_list.entry_id'
-     '_spectral_density_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_density_values'
-
-   stop_
-
-save_
-
 save__spectral_density_list.name
 
    _item_description.description
@@ -56052,31 +54724,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_spectral_density_list
-   _category.description
-;
-Items in the spectral_density_list category provide information about a list of reported spectral density values.
-;
-   _category.id                   'spectral_density_list'
-
-   loop_
-     _category_key.name
-
-     '_spectral_density_list.entry_id'
-     '_spectral_density_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'spectral_density_values'
-
-   stop_
 
 save_
 
@@ -57770,31 +56417,6 @@ A unique identifier for the list of Kinetic rate data.
 
 save_
 
-save_chemical_rate_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'chemical_rate_list'
-
-   loop_
-     _category_key.name
-
-     '_chemical_rate_list.entry_id'
-     '_chemical_rate_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chemical_rates'
-
-   stop_
-
-save_
-
 save__chemical_rate_list.name
 
    _item_description.description
@@ -57807,31 +56429,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_chemical_rate_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'chemical_rate_list'
-
-   loop_
-     _category_key.name
-
-     '_chemical_rate_list.entry_id'
-     '_chemical_rate_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chemical_rates'
-
-   stop_
 
 save_
 
@@ -58705,31 +57302,6 @@ A unique identifier for the list of hydrogen exchange rate data.
 
 save_
 
-save_h_exch_rate_list
-   _category.description
-;
-Items in the H_exch_rate_list category provide information about a list of reported hydrogen exchange rate values.
-;
-   _category.id                   'h_exch_rate_list'
-
-   loop_
-     _category_key.name
-
-     '_h_exch_rate_list.entry_id'
-     '_h_exch_rate_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'h_exch_rates'
-
-   stop_
-
-save_
-
 save__h_exch_rate_list.name
 
    _item_description.description
@@ -58742,31 +57314,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_h_exch_rate_list
-   _category.description
-;
-Items in the H_exch_rate_list category provide information about a list of reported hydrogen exchange rate values.
-;
-   _category.id                   'h_exch_rate_list'
-
-   loop_
-     _category_key.name
-
-     '_h_exch_rate_list.entry_id'
-     '_h_exch_rate_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'h_exch_rates'
-
-   stop_
 
 save_
 
@@ -59626,31 +58173,6 @@ protection factor data from other saveframes of this category in an entry.
 
 save_
 
-save_h_exch_protection_factor_list
-   _category.description
-;
-Items in the H_exch_protection_factor_list category provide information about a list of reported hydrogen exchange protection factor values.
-;
-   _category.id                   'h_exch_protection_factor_list'
-
-   loop_
-     _category_key.name
-
-     '_h_exch_protection_factor_list.entry_id'
-     '_h_exch_protection_factor_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'h_exch_protection_factors'
-
-   stop_
-
-save_
-
 save__h_exch_protection_factor_list.name
 
    _item_description.description
@@ -59663,31 +58185,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_h_exch_protection_factor_list
-   _category.description
-;
-Items in the H_exch_protection_factor_list category provide information about a list of reported hydrogen exchange protection factor values.
-;
-   _category.id                   'h_exch_protection_factor_list'
-
-   loop_
-     _category_key.name
-
-     '_h_exch_protection_factor_list.entry_id'
-     '_h_exch_protection_factor_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'h_exch_protection_factors'
-
-   stop_
 
 save_
 
@@ -60526,31 +59023,6 @@ NOE data from other saveframes of this category in an entry.
 
 save_
 
-save_homonucl_noe_list
-   _category.description
-;
-Items in the homonucl_NOE_list category provide information about a list of reported homonuclear NOE values.
-;
-   _category.id                   'homonucl_noe_list'
-
-   loop_
-     _category_key.name
-
-     '_homonucl_noe_list.entry_id'
-     '_homonucl_noe_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'homonucl_noes'
-
-   stop_
-
-save_
-
 save__homonucl_noe_list.name
 
    _item_description.description
@@ -60563,31 +59035,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_homonucl_noe_list
-   _category.description
-;
-Items in the homonucl_NOE_list category provide information about a list of reported homonuclear NOE values.
-;
-   _category.id                   'homonucl_noe_list'
-
-   loop_
-     _category_key.name
-
-     '_homonucl_noe_list.entry_id'
-     '_homonucl_noe_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'homonucl_noes'
-
-   stop_
 
 save_
 
@@ -61738,31 +60185,6 @@ NOE data from other saveframes of this category in an entry.
 
 save_
 
-save_heteronucl_noe_list
-   _category.description
-;
-Items in the heteronucl_NOE_list category provide information about a list of reported heteronuclear NOE values.
-;
-   _category.id                   'heteronucl_noe_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_noe_list.entry_id'
-     '_heteronucl_noe_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_noes'
-
-   stop_
-
-save_
-
 save__heteronucl_noe_list.name
 
    _item_description.description
@@ -61775,31 +60197,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_heteronucl_noe_list
-   _category.description
-;
-Items in the heteronucl_NOE_list category provide information about a list of reported heteronuclear NOE values.
-;
-   _category.id                   'heteronucl_noe_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_noe_list.entry_id'
-     '_heteronucl_noe_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_noes'
-
-   stop_
 
 save_
 
@@ -63202,31 +61599,6 @@ heteronuclear NOE data from other saveframes of this category in an entry.
 
 save_
 
-save_theoretical_heteronucl_noe_list
-   _category.description
-;
-Items in the theoretical_heteronucl_NOE_list category provide information about a list of reported theoretical heteronuclear NOE values.
-;
-   _category.id                   'theoretical_heteronucl_noe_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_heteronucl_noe_list.entry_id'
-     '_theoretical_heteronucl_noe_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_heteronucl_noes'
-
-   stop_
-
-save_
-
 save__theoretical_heteronucl_noe_list.name
 
    _item_description.description
@@ -63239,31 +61611,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_theoretical_heteronucl_noe_list
-   _category.description
-;
-Items in the theoretical_heteronucl_NOE_list category provide information about a list of reported theoretical heteronuclear NOE values.
-;
-   _category.id                   'theoretical_heteronucl_noe_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_heteronucl_noe_list.entry_id'
-     '_theoretical_heteronucl_noe_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_heteronucl_noes'
-
-   stop_
 
 save_
 
@@ -64652,31 +62999,6 @@ T1 data from other saveframes of this category in an entry.
 
 save_
 
-save_heteronucl_t1_list
-   _category.description
-;
-Items in the heteronucl_T1_list category provide information about a list of reported heteronuclear T1 relaxation values.
-;
-   _category.id                   'heteronucl_t1_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_t1_list.entry_id'
-     '_heteronucl_t1_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_t1_relaxation'
-
-   stop_
-
-save_
-
 save__heteronucl_t1_list.name
 
    _item_description.description
@@ -64689,31 +63011,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_heteronucl_t1_list
-   _category.description
-;
-Items in the heteronucl_T1_list category provide information about a list of reported heteronuclear T1 relaxation values.
-;
-   _category.id                   'heteronucl_t1_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_t1_list.entry_id'
-     '_heteronucl_t1_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_t1_relaxation'
-
-   stop_
 
 save_
 
@@ -65598,31 +63895,6 @@ heteronuclear T1 data from other saveframes of this category in an entry.
 
 save_
 
-save_theoretical_heteronucl_t1_list
-   _category.description
-;
-Items in the theoretical_heteronucl_T1_list category provide information about a list of reported theoretical heteronuclear T1 relaxation values.
-;
-   _category.id                   'theoretical_heteronucl_t1_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_heteronucl_t1_list.entry_id'
-     '_theoretical_heteronucl_t1_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_heteronucl_t1_relaxation'
-
-   stop_
-
-save_
-
 save__theoretical_heteronucl_t1_list.name
 
    _item_description.description
@@ -65635,31 +63907,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_theoretical_heteronucl_t1_list
-   _category.description
-;
-Items in the theoretical_heteronucl_T1_list category provide information about a list of reported theoretical heteronuclear T1 relaxation values.
-;
-   _category.id                   'theoretical_heteronucl_t1_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_heteronucl_t1_list.entry_id'
-     '_theoretical_heteronucl_t1_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_heteronucl_t1_relaxation'
-
-   stop_
 
 save_
 
@@ -66544,31 +64791,6 @@ T1rho data from other saveframes of this category in an entry.
 
 save_
 
-save_heteronucl_t1rho_list
-   _category.description
-;
-Items in the heteronucl_T1rho_list category provide information about a list of reported heteronuclear T1rho values.
-;
-   _category.id                   'heteronucl_t1rho_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_t1rho_list.entry_id'
-     '_heteronucl_t1rho_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_t1rho_relaxation'
-
-   stop_
-
-save_
-
 save__heteronucl_t1rho_list.name
 
    _item_description.description
@@ -66581,31 +64803,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_heteronucl_t1rho_list
-   _category.description
-;
-Items in the heteronucl_T1rho_list category provide information about a list of reported heteronuclear T1rho values.
-;
-   _category.id                   'heteronucl_t1rho_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_t1rho_list.entry_id'
-     '_heteronucl_t1rho_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_t1rho_relaxation'
-
-   stop_
 
 save_
 
@@ -67591,31 +65788,6 @@ T2 data from other saveframes of this category in an entry.
 
 save_
 
-save_heteronucl_t2_list
-   _category.description
-;
-Items in the heteronucl_T2_list category provide information about a list of reported heteronuclear T2 relaxation values.
-;
-   _category.id                   'heteronucl_t2_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_t2_list.entry_id'
-     '_heteronucl_t2_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_t2_relaxation'
-
-   stop_
-
-save_
-
 save__heteronucl_t2_list.name
 
    _item_description.description
@@ -67628,31 +65800,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_heteronucl_t2_list
-   _category.description
-;
-Items in the heteronucl_T2_list category provide information about a list of reported heteronuclear T2 relaxation values.
-;
-   _category.id                   'heteronucl_t2_list'
-
-   loop_
-     _category_key.name
-
-     '_heteronucl_t2_list.entry_id'
-     '_heteronucl_t2_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'heteronucl_t2_relaxation'
-
-   stop_
 
 save_
 
@@ -68638,31 +66785,6 @@ heteronuclear T2 data from other saveframes of this category in an entry.
 
 save_
 
-save_theoretical_heteronucl_t2_list
-   _category.description
-;
-Items in the theoretical_heteronucl_T2_list category provide information about a list of reported theoretical heteronuclear T2 relaxation values.
-;
-   _category.id                   'theoretical_heteronucl_t2_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_heteronucl_t2_list.entry_id'
-     '_theoretical_heteronucl_t2_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_heteronucl_t2_relaxation'
-
-   stop_
-
-save_
-
 save__theoretical_heteronucl_t2_list.name
 
    _item_description.description
@@ -68675,31 +66797,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_theoretical_heteronucl_t2_list
-   _category.description
-;
-Items in the theoretical_heteronucl_T2_list category provide information about a list of reported theoretical heteronuclear T2 relaxation values.
-;
-   _category.id                   'theoretical_heteronucl_t2_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_heteronucl_t2_list.entry_id'
-     '_theoretical_heteronucl_t2_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_heteronucl_t2_relaxation'
-
-   stop_
 
 save_
 
@@ -69685,31 +67782,6 @@ data from other saveframes of this category in an entry.
 
 save_
 
-save_auto_relaxation_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'auto_relaxation_list'
-
-   loop_
-     _category_key.name
-
-     '_auto_relaxation_list.entry_id'
-     '_auto_relaxation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'auto_relaxation'
-
-   stop_
-
-save_
-
 save__auto_relaxation_list.name
 
    _item_description.description
@@ -69722,31 +67794,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_auto_relaxation_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'auto_relaxation_list'
-
-   loop_
-     _category_key.name
-
-     '_auto_relaxation_list.entry_id'
-     '_auto_relaxation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'auto_relaxation'
-
-   stop_
 
 save_
 
@@ -70860,31 +68907,6 @@ data from other saveframes of this category in an entry.
 
 save_
 
-save_theoretical_auto_relaxation_list
-   _category.description
-;
-Items in the theoretical_auto_relaxation_list category provide information about a list of reported theoretical auto relaxation values.
-;
-   _category.id                   'theoretical_auto_relaxation_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_auto_relaxation_list.entry_id'
-     '_theoretical_auto_relaxation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_auto_relaxation'
-
-   stop_
-
-save_
-
 save__theoretical_auto_relaxation_list.name
 
    _item_description.description
@@ -70897,31 +68919,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_theoretical_auto_relaxation_list
-   _category.description
-;
-Items in the theoretical_auto_relaxation_list category provide information about a list of reported theoretical auto relaxation values.
-;
-   _category.id                   'theoretical_auto_relaxation_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_auto_relaxation_list.entry_id'
-     '_theoretical_auto_relaxation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_auto_relaxation'
-
-   stop_
 
 save_
 
@@ -72035,31 +70032,6 @@ Unique identifier for the list of Dipole-dipole relaxation values.
 
 save_
 
-save_dipole_dipole_relax_list
-   _category.description
-;
-Items in the dipole_dipole_relax_list category provide information about a list of reported dipole-dipole relaxation values.
-;
-   _category.id                   'dipole_dipole_relax_list'
-
-   loop_
-     _category_key.name
-
-     '_dipole_dipole_relax_list.entry_id'
-     '_dipole_dipole_relax_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipole_dipole_relaxation'
-
-   stop_
-
-save_
-
 save__dipole_dipole_relax_list.name
 
    _item_description.description
@@ -72072,31 +70044,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_dipole_dipole_relax_list
-   _category.description
-;
-Items in the dipole_dipole_relax_list category provide information about a list of reported dipole-dipole relaxation values.
-;
-   _category.id                   'dipole_dipole_relax_list'
-
-   loop_
-     _category_key.name
-
-     '_dipole_dipole_relax_list.entry_id'
-     '_dipole_dipole_relax_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipole_dipole_relaxation'
-
-   stop_
 
 save_
 
@@ -73179,31 +71126,6 @@ Unique identifier for the list of cross-correlation values.
 
 save_
 
-save_cross_correlation_dd_list
-   _category.description
-;
-Items in the cross_correlation_DD_list category provide information about a list of reported dipole-dipole cross correlation values.
-;
-   _category.id                   'cross_correlation_dd_list'
-
-   loop_
-     _category_key.name
-
-     '_cross_correlation_dd_list.entry_id'
-     '_cross_correlation_dd_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipole_dipole_cross_correlations'
-
-   stop_
-
-save_
-
 save__cross_correlation_dd_list.name
 
    _item_description.description
@@ -73216,31 +71138,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_cross_correlation_dd_list
-   _category.description
-;
-Items in the cross_correlation_DD_list category provide information about a list of reported dipole-dipole cross correlation values.
-;
-   _category.id                   'cross_correlation_dd_list'
-
-   loop_
-     _category_key.name
-
-     '_cross_correlation_dd_list.entry_id'
-     '_cross_correlation_dd_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipole_dipole_cross_correlations'
-
-   stop_
 
 save_
 
@@ -74819,31 +72716,6 @@ Unique identifier for the list of cross-correlation values.
 
 save_
 
-save_theoretical_cross_correlation_dd_list
-   _category.description
-;
-Items in the theoretical_cross_correlation_DD_list category provide information about a list of reported theoretical dipole-dipole cross correlation values.
-;
-   _category.id                   'theoretical_cross_correlation_dd_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_cross_correlation_dd_list.entry_id'
-     '_theoretical_cross_correlation_dd_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_dipole_dipole_cross_correlations'
-
-   stop_
-
-save_
-
 save__theoretical_cross_correlation_dd_list.name
 
    _item_description.description
@@ -74856,31 +72728,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_theoretical_cross_correlation_dd_list
-   _category.description
-;
-Items in the theoretical_cross_correlation_DD_list category provide information about a list of reported theoretical dipole-dipole cross correlation values.
-;
-   _category.id                   'theoretical_cross_correlation_dd_list'
-
-   loop_
-     _category_key.name
-
-     '_theoretical_cross_correlation_dd_list.entry_id'
-     '_theoretical_cross_correlation_dd_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'theoretical_dipole_dipole_cross_correlations'
-
-   stop_
 
 save_
 
@@ -76459,31 +74306,6 @@ Unique identifier for the list of cross-correlation values.
 
 save_
 
-save_cross_correlation_d_csa_list
-   _category.description
-;
-Items in the cross_correlation_D_CSA_list category provide information about a list of reported dipole-chemical shift anisotropy cross correlation values.
-;
-   _category.id                   'cross_correlation_d_csa_list'
-
-   loop_
-     _category_key.name
-
-     '_cross_correlation_d_csa_list.entry_id'
-     '_cross_correlation_d_csa_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipole_csa_cross_correlations'
-
-   stop_
-
-save_
-
 save__cross_correlation_d_csa_list.name
 
    _item_description.description
@@ -76496,31 +74318,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_cross_correlation_d_csa_list
-   _category.description
-;
-Items in the cross_correlation_D_CSA_list category provide information about a list of reported dipole-chemical shift anisotropy cross correlation values.
-;
-   _category.id                   'cross_correlation_d_csa_list'
-
-   loop_
-     _category_key.name
-
-     '_cross_correlation_d_csa_list.entry_id'
-     '_cross_correlation_d_csa_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'dipole_csa_cross_correlations'
-
-   stop_
 
 save_
 
@@ -78098,31 +75895,6 @@ Unique identifier for the list of reported order parameter values.
 
 save_
 
-save_order_parameter_list
-   _category.description
-;
-Items in the order_parameter_list category provide information about a list of reported order parameter values.
-;
-   _category.id                   'order_parameter_list'
-
-   loop_
-     _category_key.name
-
-     '_order_parameter_list.entry_id'
-     '_order_parameter_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'order_parameters'
-
-   stop_
-
-save_
-
 save__order_parameter_list.name
 
    _item_description.description
@@ -78135,31 +75907,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_order_parameter_list
-   _category.description
-;
-Items in the order_parameter_list category provide information about a list of reported order parameter values.
-;
-   _category.id                   'order_parameter_list'
-
-   loop_
-     _category_key.name
-
-     '_order_parameter_list.entry_id'
-     '_order_parameter_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'order_parameters'
-
-   stop_
 
 save_
 
@@ -79415,31 +77162,6 @@ Unique identifier for the list of pKa values.
 
 save_
 
-save_ph_titration_list
-   _category.description
-;
-Items in the pH_titration_list category provide information about a list of reported pH titration experimental values.
-;
-   _category.id                   'ph_titration_list'
-
-   loop_
-     _category_key.name
-
-     '_ph_titration_list.entry_id'
-     '_ph_titration_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ph_titration'
-
-   stop_
-
-save_
-
 save__ph_titration_list.name
 
    _item_description.description
@@ -79452,31 +77174,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_ph_titration_list
-   _category.description
-;
-Items in the pH_titration_list category provide information about a list of reported pH titration experimental values.
-;
-   _category.id                   'ph_titration_list'
-
-   loop_
-     _category_key.name
-
-     '_ph_titration_list.entry_id'
-     '_ph_titration_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ph_titration'
-
-   stop_
 
 save_
 
@@ -80647,31 +78344,6 @@ Unique identifier for the list of data values used to calculate a pKa value.
 
 save_
 
-save_ph_param_list
-   _category.description
-;
-Items in the pH_param_list category provided meta data regarding the pH parameter values measured and used to calculate pK values and related parameters.
-;
-   _category.id                   'ph_param_list'
-
-   loop_
-     _category_key.name
-
-     '_ph_param_list.entry_id'
-     '_ph_param_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ph_param_list'
-
-   stop_
-
-save_
-
 save__ph_param_list.name
 
    _item_description.description
@@ -80684,31 +78356,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_ph_param_list
-   _category.description
-;
-Items in the pH_param_list category provided meta data regarding the pH parameter values measured and used to calculate pK values and related parameters.
-;
-   _category.id                   'ph_param_list'
-
-   loop_
-     _category_key.name
-
-     '_ph_param_list.entry_id'
-     '_ph_param_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ph_param_list'
-
-   stop_
 
 save_
 
@@ -81078,31 +78725,6 @@ factors.
 
 save_
 
-save_d_h_fractionation_factor_list
-   _category.description
-;
-Items in the D_H_fractionation_factor_list category provide information about a list of reported deuterium/hydrogen fractionation factor values.
-;
-   _category.id                   'd_h_fractionation_factor_list'
-
-   loop_
-     _category_key.name
-
-     '_d_h_fractionation_factor_list.entry_id'
-     '_d_h_fractionation_factor_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'd_h_fractionation_factors'
-
-   stop_
-
-save_
-
 save__d_h_fractionation_factor_list.name
 
    _item_description.description
@@ -81115,31 +78737,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_d_h_fractionation_factor_list
-   _category.description
-;
-Items in the D_H_fractionation_factor_list category provide information about a list of reported deuterium/hydrogen fractionation factor values.
-;
-   _category.id                   'd_h_fractionation_factor_list'
-
-   loop_
-     _category_key.name
-
-     '_d_h_fractionation_factor_list.entry_id'
-     '_d_h_fractionation_factor_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'd_h_fractionation_factors'
-
-   stop_
 
 save_
 
@@ -81918,31 +79515,6 @@ save__binding_value_list.id
 
 save_
 
-save_binding_value_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'binding_value_list'
-
-   loop_
-     _category_key.name
-
-     '_binding_value_list.entry_id'
-     '_binding_value_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'binding_data'
-
-   stop_
-
-save_
-
 save__binding_value_list.name
 
    _item_description.description
@@ -81955,31 +79527,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_binding_value_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'binding_value_list'
-
-   loop_
-     _category_key.name
-
-     '_binding_value_list.entry_id'
-     '_binding_value_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'binding_data'
-
-   stop_
 
 save_
 
@@ -82998,31 +80545,6 @@ Unique identifier for the list of data values used to calculate a pKa value.
 
 save_
 
-save_binding_param_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'binding_param_list'
-
-   loop_
-     _category_key.name
-
-     '_binding_param_list.entry_id'
-     '_binding_param_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'binding_param_list'
-
-   stop_
-
-save_
-
 save__binding_param_list.name
 
    _item_description.description
@@ -83035,31 +80557,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_binding_param_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'binding_param_list'
-
-   loop_
-     _category_key.name
-
-     '_binding_param_list.entry_id'
-     '_binding_param_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'binding_param_list'
-
-   stop_
 
 save_
 
@@ -83455,31 +80952,6 @@ Unique identifier for the list of reported secondary structure features.
 
 save_
 
-save_deduced_secd_struct_list
-   _category.description
-;
-Items in the deduced_secd_struct_list category provide information about a list of reported secondary structure elements deduced from experimental data and not from a calculated structure.
-;
-   _category.id                   'deduced_secd_struct_list'
-
-   loop_
-     _category_key.name
-
-     '_deduced_secd_struct_list.entry_id'
-     '_deduced_secd_struct_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'deduced_secd_struct_features'
-
-   stop_
-
-save_
-
 save__deduced_secd_struct_list.name
 
    _item_description.description
@@ -83492,31 +80964,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_deduced_secd_struct_list
-   _category.description
-;
-Items in the deduced_secd_struct_list category provide information about a list of reported secondary structure elements deduced from experimental data and not from a calculated structure.
-;
-   _category.id                   'deduced_secd_struct_list'
-
-   loop_
-     _category_key.name
-
-     '_deduced_secd_struct_list.entry_id'
-     '_deduced_secd_struct_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'deduced_secd_struct_features'
-
-   stop_
 
 save_
 
@@ -84623,31 +82070,6 @@ experimental data.
 
 save_
 
-save_deduced_h_bond_list
-   _category.description
-;
-Items in the deduced_H_bond_list category provide information about a list of reported hydrogen bonds deduced from experimental data and not from a calculated structure.
-;
-   _category.id                   'deduced_h_bond_list'
-
-   loop_
-     _category_key.name
-
-     '_deduced_h_bond_list.entry_id'
-     '_deduced_h_bond_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'deduced_hydrogen_bonds'
-
-   stop_
-
-save_
-
 save__deduced_h_bond_list.name
 
    _item_description.description
@@ -84660,31 +82082,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_deduced_h_bond_list
-   _category.description
-;
-Items in the deduced_H_bond_list category provide information about a list of reported hydrogen bonds deduced from experimental data and not from a calculated structure.
-;
-   _category.id                   'deduced_h_bond_list'
-
-   loop_
-     _category_key.name
-
-     '_deduced_h_bond_list.entry_id'
-     '_deduced_h_bond_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'deduced_hydrogen_bonds'
-
-   stop_
 
 save_
 
@@ -85853,31 +83250,6 @@ from other saveframes of this category in an entry.
 
 save_
 
-save_conformer_stat_list
-   _category.description
-;
-Items in the conformer_stat_list category provide information about a list of reported statistics derived from a set of conformers calculated for a molecular assembly.
-;
-   _category.id                   'conformer_stat_list'
-
-   loop_
-     _category_key.name
-
-     '_conformer_stat_list.entry_id'
-     '_conformer_stat_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_statistics'
-
-   stop_
-
-save_
-
 save__conformer_stat_list.name
 
    _item_description.description
@@ -85890,31 +83262,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_conformer_stat_list
-   _category.description
-;
-Items in the conformer_stat_list category provide information about a list of reported statistics derived from a set of conformers calculated for a molecular assembly.
-;
-   _category.id                   'conformer_stat_list'
-
-   loop_
-     _category_key.name
-
-     '_conformer_stat_list.entry_id'
-     '_conformer_stat_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_statistics'
-
-   stop_
 
 save_
 
@@ -88099,31 +85446,6 @@ atomic coordinate set from other saveframes of this category in an entry.
 
 save_
 
-save_conformer_family_coord_set
-   _category.description
-;
-Items in the conformer_family_coord_set category provide meta data regarding the atomic coordinates for a family of conformers reported in an entry.
-;
-   _category.id                   'conformer_family_coord_set'
-
-   loop_
-     _category_key.name
-
-     '_conformer_family_coord_set.entry_id'
-     '_conformer_family_coord_set.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
-
-save_
-
 save__conformer_family_coord_set.name
 
    _item_description.description
@@ -88136,31 +85458,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_conformer_family_coord_set
-   _category.description
-;
-Items in the conformer_family_coord_set category provide meta data regarding the atomic coordinates for a family of conformers reported in an entry.
-;
-   _category.id                   'conformer_family_coord_set'
-
-   loop_
-     _category_key.name
-
-     '_conformer_family_coord_set.entry_id'
-     '_conformer_family_coord_set.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
 
 save_
 
@@ -90552,31 +87849,6 @@ Unique identifier for the reported representative conformer.
 
 save_
 
-save_representative_conformer
-   _category.description
-;
-Items in the representative_conformer category provide meta data regarding the representative conformer atomic coordinates.
-;
-   _category.id                   'representative_conformer'
-
-   loop_
-     _category_key.name
-
-     '_representative_conformer.entry_id'
-     '_representative_conformer.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'representative_conformer'
-
-   stop_
-
-save_
-
 save__representative_conformer.name
 
    _item_description.description
@@ -90589,31 +87861,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_representative_conformer
-   _category.description
-;
-Items in the representative_conformer category provide meta data regarding the representative conformer atomic coordinates.
-;
-   _category.id                   'representative_conformer'
-
-   loop_
-     _category_key.name
-
-     '_representative_conformer.entry_id'
-     '_representative_conformer.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'representative_conformer'
-
-   stop_
 
 save_
 
@@ -91815,31 +89062,6 @@ Unique identifier for the reported list of contraint statistics.
 
 save_
 
-save_constraint_stat_list
-   _category.description
-;
-Items in the constraint_stat_list category provide information about a list of reported constraint statistics derived from the constraints used to calculate the structure of a molecular assembly.
-;
-   _category.id                   'constraint_stat_list'
-
-   loop_
-     _category_key.name
-
-     '_constraint_stat_list.entry_id'
-     '_constraint_stat_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'constraint_statistics'
-
-   stop_
-
-save_
-
 save__constraint_stat_list.name
 
    _item_description.description
@@ -91852,31 +89074,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_constraint_stat_list
-   _category.description
-;
-Items in the constraint_stat_list category provide information about a list of reported constraint statistics derived from the constraints used to calculate the structure of a molecular assembly.
-;
-   _category.id                   'constraint_stat_list'
-
-   loop_
-     _category_key.name
-
-     '_constraint_stat_list.entry_id'
-     '_constraint_stat_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'constraint_statistics'
-
-   stop_
 
 save_
 
@@ -95406,31 +92603,6 @@ structures.
 
 save_
 
-save_force_constant_list
-   _category.description
-;
-Items in the force_constant_list category provide information about a list of reported force constants used in calculating the structure of a molecular assembly.
-;
-   _category.id                   'force_constant_list'
-
-   loop_
-     _category_key.name
-
-     '_force_constant_list.entry_id'
-     '_force_constant_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'force_constants'
-
-   stop_
-
-save_
-
 save__force_constant_list.name
 
    _item_description.description
@@ -95443,31 +92615,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_force_constant_list
-   _category.description
-;
-Items in the force_constant_list category provide information about a list of reported force constants used in calculating the structure of a molecular assembly.
-;
-   _category.id                   'force_constant_list'
-
-   loop_
-     _category_key.name
-
-     '_force_constant_list.entry_id'
-     '_force_constant_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'force_constants'
-
-   stop_
 
 save_
 
@@ -95883,31 +93030,6 @@ Unique identifier for the list of reported angular order parameters.
 
 save_
 
-save_angular_order_parameter_list
-   _category.description
-;
-Items in the angular_order_parameter_list category provide information about a list of reported angular order parameter values.
-;
-   _category.id                   'angular_order_parameter_list'
-
-   loop_
-     _category_key.name
-
-     '_angular_order_parameter_list.entry_id'
-     '_angular_order_parameter_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'angular_order_parameters'
-
-   stop_
-
-save_
-
 save__angular_order_parameter_list.name
 
    _item_description.description
@@ -95920,31 +93042,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_angular_order_parameter_list
-   _category.description
-;
-Items in the angular_order_parameter_list category provide information about a list of reported angular order parameter values.
-;
-   _category.id                   'angular_order_parameter_list'
-
-   loop_
-     _category_key.name
-
-     '_angular_order_parameter_list.entry_id'
-     '_angular_order_parameter_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'angular_order_parameters'
-
-   stop_
 
 save_
 
@@ -96406,31 +93503,6 @@ Unique identifier for the list of reported tertiary structure elements.
 ;
 10
 ;
-
-   stop_
-
-save_
-
-save_tertiary_struct_element_list
-   _category.description
-;
-Items in the tertiary_struct_element_list category provide information about a list of reported annotations for tertiary structural elements found in the structure of a molecular assembly.
-;
-   _category.id                   'tertiary_struct_element_list'
-
-   loop_
-     _category_key.name
-
-     '_tertiary_struct_element_list.entry_id'
-     '_tertiary_struct_element_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'tertiary_struct_elements'
 
    stop_
 
@@ -97102,31 +94174,6 @@ Unique identifier for the list of reported structure annotation information.
 
 save_
 
-save_structure_annotation
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'structure_annotation'
-
-   loop_
-     _category_key.name
-
-     '_structure_annotation.entry_id'
-     '_structure_annotation.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'structure_annotation'
-
-   stop_
-
-save_
-
 save__structure_annotation.name
 
    _item_description.description
@@ -97139,31 +94186,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_structure_annotation
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'structure_annotation'
-
-   loop_
-     _category_key.name
-
-     '_structure_annotation.entry_id'
-     '_structure_annotation.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'structure_annotation'
-
-   stop_
 
 save_
 
@@ -97952,31 +94974,6 @@ element data from other saveframes of this category in an entry.
 
 save_
 
-save_secondary_struct_list
-   _category.description
-;
-Items in the secondary_struct_list category provide information about a list of reported annotations for secondary structural elements found in the structure of a molecular assembly.
-;
-   _category.id                   'secondary_struct_list'
-
-   loop_
-     _category_key.name
-
-     '_secondary_struct_list.entry_id'
-     '_secondary_struct_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'secondary_structs'
-
-   stop_
-
-save_
-
 save__secondary_struct_list.name
 
    _item_description.description
@@ -97989,31 +94986,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_secondary_struct_list
-   _category.description
-;
-Items in the secondary_struct_list category provide information about a list of reported annotations for secondary structural elements found in the structure of a molecular assembly.
-;
-   _category.id                   'secondary_struct_list'
-
-   loop_
-     _category_key.name
-
-     '_secondary_struct_list.entry_id'
-     '_secondary_struct_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'secondary_structs'
-
-   stop_
 
 save_
 
@@ -98584,31 +95556,6 @@ Unique identifier for the list of bond annotations.
 
 save_
 
-save_bond_annotation_list
-   _category.description
-;
-Items in the bond_annotation_list category provide information about a list of reported bond annotations for the structure of a molecular assembly.
-;
-   _category.id                   'bond_annotation_list'
-
-   loop_
-     _category_key.name
-
-     '_bond_annotation_list.entry_id'
-     '_bond_annotation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'bond_annotation'
-
-   stop_
-
-save_
-
 save__bond_annotation_list.name
 
    _item_description.description
@@ -98621,31 +95568,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_bond_annotation_list
-   _category.description
-;
-Items in the bond_annotation_list category provide information about a list of reported bond annotations for the structure of a molecular assembly.
-;
-   _category.id                   'bond_annotation_list'
-
-   loop_
-     _category_key.name
-
-     '_bond_annotation_list.entry_id'
-     '_bond_annotation_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'bond_annotation'
-
-   stop_
 
 save_
 
@@ -99551,31 +96473,6 @@ Unique identifier for the list of reported structure interactions.
 
 save_
 
-save_structure_interaction_list
-   _category.description
-;
-Items in the structure_interaction_list category provide information about a list of reported structure interaction annotations derived from the analysis of tertiary and/or quaternary structure of a molecular assembly.
-;
-   _category.id                   'structure_interaction_list'
-
-   loop_
-     _category_key.name
-
-     '_structure_interaction_list.entry_id'
-     '_structure_interaction_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'structure_interactions'
-
-   stop_
-
-save_
-
 save__structure_interaction_list.name
 
    _item_description.description
@@ -99588,31 +96485,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_structure_interaction_list
-   _category.description
-;
-Items in the structure_interaction_list category provide information about a list of reported structure interaction annotations derived from the analysis of tertiary and/or quaternary structure of a molecular assembly.
-;
-   _category.id                   'structure_interaction_list'
-
-   loop_
-     _category_key.name
-
-     '_structure_interaction_list.entry_id'
-     '_structure_interaction_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'structure_interactions'
-
-   stop_
 
 save_
 
@@ -100406,31 +97278,6 @@ Unique identifier for the reported list of structure features.
 
 save_
 
-save_other_struct_feature_list
-   _category.description
-;
-Items in the other_struct_feature_list category provide information about a list of reported structure features for a molecular assembly.
-;
-   _category.id                   'other_struct_feature_list'
-
-   loop_
-     _category_key.name
-
-     '_other_struct_feature_list.entry_id'
-     '_other_struct_feature_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'other_struct_features'
-
-   stop_
-
-save_
-
 save__other_struct_feature_list.name
 
    _item_description.description
@@ -100443,31 +97290,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_other_struct_feature_list
-   _category.description
-;
-Items in the other_struct_feature_list category provide information about a list of reported structure features for a molecular assembly.
-;
-   _category.id                   'other_struct_feature_list'
-
-   loop_
-     _category_key.name
-
-     '_other_struct_feature_list.entry_id'
-     '_other_struct_feature_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'other_struct_features'
-
-   stop_
 
 save_
 
@@ -100793,31 +97615,6 @@ Unique identifier for the list of chemical shift tensors.
 
 save_
 
-save_tensor_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'tensor_list'
-
-   loop_
-     _category_key.name
-
-     '_tensor_list.entry_id'
-     '_tensor_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'tensor'
-
-   stop_
-
-save_
-
 save__tensor_list.name
 
    _item_description.description
@@ -100830,31 +97627,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_tensor_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'tensor_list'
-
-   loop_
-     _category_key.name
-
-     '_tensor_list.entry_id'
-     '_tensor_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'tensor'
-
-   stop_
 
 save_
 
@@ -101928,31 +98700,6 @@ save__interatomic_distance_list.id
 
 save_
 
-save_interatomic_distance_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'interatomic_distance_list'
-
-   loop_
-     _category_key.name
-
-     '_interatomic_distance_list.entry_id'
-     '_interatomic_distance_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'interatomic_distance'
-
-   stop_
-
-save_
-
 save__interatomic_distance_list.name
 
    _item_description.description
@@ -101965,31 +98712,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_interatomic_distance_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'interatomic_distance_list'
-
-   loop_
-     _category_key.name
-
-     '_interatomic_distance_list.entry_id'
-     '_interatomic_distance_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'interatomic_distance'
-
-   stop_
 
 save_
 
@@ -102692,31 +99414,6 @@ Unique identifier for the list of reported distance constraints.
 
 save_
 
-save_gen_dist_constraint_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'gen_dist_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_gen_dist_constraint_list.entry_id'
-     '_gen_dist_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'general_distance_constraints'
-
-   stop_
-
-save_
-
 save__gen_dist_constraint_list.name
 
    _item_description.description
@@ -102729,31 +99426,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_gen_dist_constraint_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'gen_dist_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_gen_dist_constraint_list.entry_id'
-     '_gen_dist_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'general_distance_constraints'
-
-   stop_
 
 save_
 
@@ -105317,31 +101989,6 @@ Unique identifier for the list of reported distance constraints.
 
 save_
 
-save_distance_constraint_list
-   _category.description
-;
-Items in the distance_constraint_list category provide information about a list of reported distance constraint values.
-;
-   _category.id                   'distance_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_distance_constraint_list.entry_id'
-     '_distance_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'distance_constraints'
-
-   stop_
-
-save_
-
 save__distance_constraint_list.name
 
    _item_description.description
@@ -105354,31 +102001,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_distance_constraint_list
-   _category.description
-;
-Items in the distance_constraint_list category provide information about a list of reported distance constraint values.
-;
-   _category.id                   'distance_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_distance_constraint_list.entry_id'
-     '_distance_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'distance_constraints'
-
-   stop_
 
 save_
 
@@ -107392,31 +104014,6 @@ Unique identifier for the reported list of floating chirality stereoassignments.
 
 save_
 
-save_floating_chirality_assign
-   _category.description
-;
-Items in the floating_chirality_assign category provide meta data regarding the floating chirality assignments used in calculating a three-dimensional structure.
-;
-   _category.id                   'floating_chirality_assign'
-
-   loop_
-     _category_key.name
-
-     '_floating_chirality_assign.entry_id'
-     '_floating_chirality_assign.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'floating_chiral_stereo_assign'
-
-   stop_
-
-save_
-
 save__floating_chirality_assign.name
 
    _item_description.description
@@ -107429,31 +104026,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_floating_chirality_assign
-   _category.description
-;
-Items in the floating_chirality_assign category provide meta data regarding the floating chirality assignments used in calculating a three-dimensional structure.
-;
-   _category.id                   'floating_chirality_assign'
-
-   loop_
-     _category_key.name
-
-     '_floating_chirality_assign.entry_id'
-     '_floating_chirality_assign.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'floating_chiral_stereo_assign'
-
-   stop_
 
 save_
 
@@ -108318,31 +104890,6 @@ Unique identifier for the list of torsion angle constraints.
 
 save_
 
-save_torsion_angle_constraint_list
-   _category.description
-;
-Items in the torsion_angle_constraint_list category provide information about a list of reported torsion angle constraint values.
-;
-   _category.id                   'torsion_angle_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_torsion_angle_constraint_list.entry_id'
-     '_torsion_angle_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'torsion_angle_constraints'
-
-   stop_
-
-save_
-
 save__torsion_angle_constraint_list.name
 
    _item_description.description
@@ -108355,31 +104902,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_torsion_angle_constraint_list
-   _category.description
-;
-Items in the torsion_angle_constraint_list category provide information about a list of reported torsion angle constraint values.
-;
-   _category.id                   'torsion_angle_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_torsion_angle_constraint_list.entry_id'
-     '_torsion_angle_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'torsion_angle_constraints'
-
-   stop_
 
 save_
 
@@ -111649,31 +108171,6 @@ Unique identifier for the list of reported residual dipolar coupling constraints
 
 save_
 
-save_rdc_constraint_list
-   _category.description
-;
-Items in the RDC_constraint_list category provide information about a list of reported residual dipolar coupling constraint values.
-;
-   _category.id                   'rdc_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_rdc_constraint_list.entry_id'
-     '_rdc_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'rdc_constraints'
-
-   stop_
-
-save_
-
 save__rdc_constraint_list.name
 
    _item_description.description
@@ -111686,31 +108183,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_rdc_constraint_list
-   _category.description
-;
-Items in the RDC_constraint_list category provide information about a list of reported residual dipolar coupling constraint values.
-;
-   _category.id                   'rdc_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_rdc_constraint_list.entry_id'
-     '_rdc_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'rdc_constraints'
-
-   stop_
 
 save_
 
@@ -114341,31 +110813,6 @@ Unique identifier for the list of reported three bond scalar coupling constraint
 
 save_
 
-save_j_three_bond_constraint_list
-   _category.description
-;
-Items in the J_three_bond_constraint_list category provide information about a list of reported scalar three bond coupling constant constraint values.
-;
-   _category.id                   'j_three_bond_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_j_three_bond_constraint_list.entry_id'
-     '_j_three_bond_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'j_three_bond_constraints'
-
-   stop_
-
-save_
-
 save__j_three_bond_constraint_list.name
 
    _item_description.description
@@ -114378,31 +110825,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_j_three_bond_constraint_list
-   _category.description
-;
-Items in the J_three_bond_constraint_list category provide information about a list of reported scalar three bond coupling constant constraint values.
-;
-   _category.id                   'j_three_bond_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_j_three_bond_constraint_list.entry_id'
-     '_j_three_bond_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'j_three_bond_constraints'
-
-   stop_
 
 save_
 
@@ -116042,31 +112464,6 @@ Unique identifier for the list of reported CA/CB chemical shift constraints..
 
 save_
 
-save_ca_cb_constraint_list
-   _category.description
-;
-Items in the CA_CB_constraint_list category provide information about a list of reported 13CA-13CB chemical shift constraint values.
-;
-   _category.id                   'ca_cb_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_ca_cb_constraint_list.entry_id'
-     '_ca_cb_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ca_cb_chem_shift_constraints'
-
-   stop_
-
-save_
-
 save__ca_cb_constraint_list.name
 
    _item_description.description
@@ -116079,31 +112476,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_ca_cb_constraint_list
-   _category.description
-;
-Items in the CA_CB_constraint_list category provide information about a list of reported 13CA-13CB chemical shift constraint values.
-;
-   _category.id                   'ca_cb_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_ca_cb_constraint_list.entry_id'
-     '_ca_cb_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ca_cb_chem_shift_constraints'
-
-   stop_
 
 save_
 
@@ -118008,31 +114380,6 @@ Unique identifier for the reported list of proton chemical shift constraints.
 
 save_
 
-save_h_chem_shift_constraint_list
-   _category.description
-;
-Items in the H_chem_shift_constraint_list category provide information about a list of reported 1H chemical shift constraint values.
-;
-   _category.id                   'h_chem_shift_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_h_chem_shift_constraint_list.entry_id'
-     '_h_chem_shift_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'h_chem_shift_constraints'
-
-   stop_
-
-save_
-
 save__h_chem_shift_constraint_list.name
 
    _item_description.description
@@ -118045,31 +114392,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_h_chem_shift_constraint_list
-   _category.description
-;
-Items in the H_chem_shift_constraint_list category provide information about a list of reported 1H chemical shift constraint values.
-;
-   _category.id                   'h_chem_shift_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_h_chem_shift_constraint_list.entry_id'
-     '_h_chem_shift_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'h_chem_shift_constraints'
-
-   stop_
 
 save_
 
@@ -118961,31 +115283,6 @@ Unique identifier for the reported list of linked spectral peaks and constraints
 
 save_
 
-save_peak_constraint_link_list
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'peak_constraint_link_list'
-
-   loop_
-     _category_key.name
-
-     '_peak_constraint_link_list.entry_id'
-     '_peak_constraint_link_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'peak_constraint_links'
-
-   stop_
-
-save_
-
 save__peak_constraint_link_list.name
 
    _item_description.description
@@ -119323,31 +115620,6 @@ A unique identifier for the list of SAXS data.
 
 save_
 
-save_saxs_constraint_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'saxs_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_saxs_constraint_list.entry_id'
-     '_saxs_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'saxs_constraints'
-
-   stop_
-
-save_
-
 save__saxs_constraint_list.name
 
    _item_description.description
@@ -119360,31 +115632,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_saxs_constraint_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'saxs_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_saxs_constraint_list.entry_id'
-     '_saxs_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'saxs_constraints'
-
-   stop_
 
 save_
 
@@ -119932,31 +116179,6 @@ Unique identifier for the list of constraints classified as 'other.'
 
 save_
 
-save_other_constraint_list
-   _category.description
-;
-Items in the other_constraint_list category provide information about a list of reported constraint values that do not fit in any of the specifically defined constraint categories.
-;
-   _category.id                   'other_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_other_constraint_list.entry_id'
-     '_other_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'other_constraints'
-
-   stop_
-
-save_
-
 save__other_constraint_list.name
 
    _item_description.description
@@ -119969,31 +116191,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_other_constraint_list
-   _category.description
-;
-Items in the other_constraint_list category provide information about a list of reported constraint values that do not fit in any of the specifically defined constraint categories.
-;
-   _category.id                   'other_constraint_list'
-
-   loop_
-     _category_key.name
-
-     '_other_constraint_list.entry_id'
-     '_other_constraint_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'other_constraints'
-
-   stop_
 
 save_
 
@@ -120710,31 +116907,6 @@ Unique identifier for the list of reported mass spectral MZ values.
 
 save_
 
-save_mz_ratio_data_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'mz_ratio_data_list'
-
-   loop_
-     _category_key.name
-
-     '_mz_ratio_data_list.entry_id'
-     '_mz_ratio_data_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ms_mz_data'
-
-   stop_
-
-save_
-
 save__mz_ratio_data_list.name
 
    _item_description.description
@@ -120747,31 +116919,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_mz_ratio_data_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'mz_ratio_data_list'
-
-   loop_
-     _category_key.name
-
-     '_mz_ratio_data_list.entry_id'
-     '_mz_ratio_data_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ms_mz_data'
-
-   stop_
 
 save_
 
@@ -122054,31 +118201,6 @@ a MS chromatogram.
 
 save_
 
-save_ms_chromatogram_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'ms_chromatogram_list'
-
-   loop_
-     _category_key.name
-
-     '_ms_chromatogram_list.entry_id'
-     '_ms_chromatogram_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ms_chromatogram'
-
-   stop_
-
-save_
-
 save__ms_chromatogram_list.name
 
    _item_description.description
@@ -122091,31 +118213,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_ms_chromatogram_list
-   _category.description
-;
-NOT AVAILABLE
-;
-   _category.id                   'ms_chromatogram_list'
-
-   loop_
-     _category_key.name
-
-     '_ms_chromatogram_list.entry_id'
-     '_ms_chromatogram_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'ms_chromatogram'
-
-   stop_
 
 save_
 
@@ -122978,31 +119075,6 @@ frames.
 
 save_
 
-save_software_specific_info_list
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'software_specific_info_list'
-
-   loop_
-     _category_key.name
-
-     '_software_specific_info_list.entry_id'
-     '_software_specific_info_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'software_specific_saveframes'
-
-   stop_
-
-save_
-
 save__software_specific_info_list.name
 
    _item_description.description
@@ -123207,31 +119279,6 @@ derive data.
 
 save_
 
-save_software_applied_list
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'software_applied_list'
-
-   loop_
-     _category_key.name
-
-     '_software_applied_list.entry_id'
-     '_software_applied_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'applied_software'
-
-   stop_
-
-save_
-
 save__software_applied_list.name
 
    _item_description.description
@@ -123244,31 +119291,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_software_applied_list
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'software_applied_list'
-
-   loop_
-     _category_key.name
-
-     '_software_applied_list.entry_id'
-     '_software_applied_list.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'applied_software'
-
-   stop_
 
 save_
 
@@ -123654,31 +119676,6 @@ used to derive data.
 
 save_
 
-save_software_applied_history
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'software_applied_history'
-
-   loop_
-     _category_key.name
-
-     '_software_applied_history.entry_id'
-     '_software_applied_history.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'applied_software_history'
-
-   stop_
-
-save_
-
 save__software_applied_history.name
 
    _item_description.description
@@ -123691,31 +119688,6 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
-
-save_
-
-save_software_applied_history
-   _category.description
-;
-              category description not available
-;
-   _category.id                   'software_applied_history'
-
-   loop_
-     _category_key.name
-
-     '_software_applied_history.entry_id'
-     '_software_applied_history.id'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'applied_software_history'
-
-   stop_
 
 save_
 
