@@ -19,6 +19,8 @@ save_<entry_interview>
   _Entry_interview.Constraints                               
   _Entry_interview.Assigned_chem_shifts                      
   _Entry_interview.Coupling_constants                        
+  _Entry_interview.Chem_shift_isotope_effect                 
+  _Entry_interview.Chem_shift_perturbation                   
   _Entry_interview.Auto_relaxation                           
   _Entry_interview.Tensor                                    
   _Entry_interview.Interatomic_distance                      
@@ -54,7 +56,6 @@ save_<entry_interview>
   _Entry_interview.Theoretical_DD_cross_correlation          
   _Entry_interview.Spectral_density_values                   
   _Entry_interview.Timedomain_data                           
-  _Entry_interview.Molecular_interactions                    
   _Entry_interview.Secondary_structure_orientations          
   _Entry_interview.Metabolite_coordinates                    
   _Entry_interview.Mass_spec_data                            
@@ -421,6 +422,7 @@ save_<citations>
   _Citation.Sf_framecode     <citations>
   _Citation.Entry_ID                            1
   _Citation.Sf_ID                               2
+  _Citation.Name                                "Long string value"
   _Citation.ID                                  2
   _Citation.Class                               "String value"
   _Citation.CAS_abstract_code                   "String value"
@@ -1768,6 +1770,7 @@ save_<sample>
   _Sample.Entry_ID                                1
   _Sample.Sf_ID                                   2
   _Sample.ID                                      2
+  _Sample.Name                                    "Long string value"
   _Sample.Type                                    "Long string value"
   _Sample.Sub_type                                "Long string value"
   _Sample.Details                                 "Possible multiline text"
@@ -1989,6 +1992,7 @@ save_<method>
   _Method.Entry_ID                 1
   _Method.Sf_ID                    2
   _Method.ID                       2
+  _Method.Name                     "Long string value"
   _Method.Derivation_type          "Long string value"
   _Method.Details                  "Possible multiline text"
   _Method.Computer_ID              2
@@ -2038,6 +2042,7 @@ save_<Mass_spectrometer>
   _Mass_spec.Entry_ID               1
   _Mass_spec.Sf_ID                  2
   _Mass_spec.ID                     2
+  _Mass_spec.Name                   "Long string value"
   _Mass_spec.Type                   "Long string value"
   _Mass_spec.Manufacturer           "Long string value"
   _Mass_spec.Model                  "Long string value"
@@ -2100,6 +2105,7 @@ save_<Mass_spectrometer_list>
   _Mass_spectrometer_list.Entry_ID          1
   _Mass_spectrometer_list.Sf_ID             2
   _Mass_spectrometer_list.ID                2
+  _Mass_spectrometer_list.Name              "Long string value"
 
   loop_
      _Mass_spectrometer_view.ID                                 
@@ -2130,6 +2136,7 @@ save_<Mass_spec_ref_compd>
   _Mass_spec_ref_compd_set.Entry_ID          1
   _Mass_spec_ref_compd_set.Sf_ID             2
   _Mass_spec_ref_compd_set.ID                2
+  _Mass_spec_ref_compd_set.Name              "Long string value"
   _Mass_spec_ref_compd_set.Details           "Possible multiline text"
 
   loop_
@@ -2153,6 +2160,7 @@ save_<chromatographic_system>
   _Chromatographic_system.Entry_ID                               1
   _Chromatographic_system.Sf_ID                                  2
   _Chromatographic_system.ID                                     2
+  _Chromatographic_system.Name                                   "Long string value"
   _Chromatographic_system.Type                                   "Long string value"
   _Chromatographic_system.Pump_manufacturer                      "Long string value"
   _Chromatographic_system.Pump_model                             "Long string value"
@@ -2173,6 +2181,7 @@ save_<chromatographic_column>
   _Chromatographic_column.Entry_ID                            1
   _Chromatographic_column.Sf_ID                               2
   _Chromatographic_column.ID                                  2
+  _Chromatographic_column.Name                                "Long string value"
   _Chromatographic_column.Vendor                              "Long string value"
   _Chromatographic_column.Type                                "Long string value"
   _Chromatographic_column.Packing_material                    "Long string value"
@@ -2188,6 +2197,7 @@ save_<fluorescence_instrument>
   _Fluorescence_instrument.Entry_ID               1
   _Fluorescence_instrument.Sf_ID                  2
   _Fluorescence_instrument.ID                     2
+  _Fluorescence_instrument.Name                   "Long string value"
   _Fluorescence_instrument.Details                "Possible multiline text"
   _Fluorescence_instrument.Type                   "Long string value"
   _Fluorescence_instrument.Manufacturer           "Long string value"
@@ -2202,6 +2212,7 @@ save_<EMR_instrument>
   _EMR_instrument.Entry_ID               1
   _EMR_instrument.Sf_ID                  2
   _EMR_instrument.ID                     2
+  _EMR_instrument.Name                   "Long string value"
   _EMR_instrument.Details                "Possible multiline text"
   _EMR_instrument.Type                   "Long string value"
   _EMR_instrument.Manufacturer           "Long string value"
@@ -2235,6 +2246,7 @@ save_<NMR_spectrometer>
   _NMR_spectrometer.Entry_ID                1
   _NMR_spectrometer.Sf_ID                   2
   _NMR_spectrometer.ID                      2
+  _NMR_spectrometer.Name                    "Long string value"
   _NMR_spectrometer.Details                 "Possible multiline text"
   _NMR_spectrometer.Manufacturer            "Long string value"
   _NMR_spectrometer.Model                   "Long string value"
@@ -2260,6 +2272,7 @@ save_<NMR_spectrometer_list>
   _NMR_spectrometer_list.Entry_ID          1
   _NMR_spectrometer_list.Sf_ID             2
   _NMR_spectrometer_list.ID                2
+  _NMR_spectrometer_list.Name              "Long string value"
 
   loop_
      _NMR_spectrometer_view.ID                                
@@ -2287,6 +2300,7 @@ save_<NMR_spectrometer_probe>
   _NMR_spectrometer_probe.Entry_ID                   1
   _NMR_spectrometer_probe.Sf_ID                      2
   _NMR_spectrometer_probe.ID                         2
+  _NMR_spectrometer_probe.Name                       "Long string value"
   _NMR_spectrometer_probe.Details                    "Possible multiline text"
   _NMR_spectrometer_probe.Manufacturer               "Long string value"
   _NMR_spectrometer_probe.Model                      "Long string value"
@@ -2647,6 +2661,7 @@ save_<computer>
   _Computer.Entry_ID                          1
   _Computer.Sf_ID                             2
   _Computer.ID                                2
+  _Computer.Name                              "Long string value"
   _Computer.Details                           "Possible multiline text"
   _Computer.Manufacturer                      "Long string value"
   _Computer.Model                             "Long string value"
@@ -2673,6 +2688,7 @@ save_<chem_shift_reference>
   _Chem_shift_reference.Entry_ID                        1
   _Chem_shift_reference.Sf_ID                           2
   _Chem_shift_reference.ID                              2
+  _Chem_shift_reference.Name                            "Long string value"
   _Chem_shift_reference.Proton_shifts_flag              "String value"
   _Chem_shift_reference.Carbon_shifts_flag              "String value"
   _Chem_shift_reference.Nitrogen_shifts_flag            "String value"
@@ -2719,6 +2735,7 @@ save_<assigned_chemical_shifts>
   _Assigned_chem_shift_list.Entry_ID                             1
   _Assigned_chem_shift_list.Sf_ID                                2
   _Assigned_chem_shift_list.ID                                   2
+  _Assigned_chem_shift_list.Name                                 "Long string value"
   _Assigned_chem_shift_list.Data_file_name                       "Long string value"
   _Assigned_chem_shift_list.Sample_condition_list_ID             2
   _Assigned_chem_shift_list.Sample_condition_list_label          "Long string value"
@@ -2838,6 +2855,7 @@ save_<chem_shifts_calc_type>
   _Chem_shifts_calc_type.Entry_ID                                 1
   _Chem_shifts_calc_type.Sf_ID                                    2
   _Chem_shifts_calc_type.ID                                       2
+  _Chem_shifts_calc_type.Name                                     "Long string value"
   _Chem_shifts_calc_type.Calculation_level                        "Long string value"
   _Chem_shifts_calc_type.Quantum_mechanical_method                "Long string value"
   _Chem_shifts_calc_type.Quantum_mechanical_theory_level          "Long string value"
@@ -2870,6 +2888,7 @@ save_<theoretical_chem_shifts>
   _Theoretical_chem_shift_list.Entry_ID                                  1
   _Theoretical_chem_shift_list.Sf_ID                                     2
   _Theoretical_chem_shift_list.ID                                        2
+  _Theoretical_chem_shift_list.Name                                      "Long string value"
   _Theoretical_chem_shift_list.Data_file_name                            "Long string value"
   _Theoretical_chem_shift_list.Chem_shifts_calc_type_ID                  2
   _Theoretical_chem_shift_list.Chem_shifts_calc_type_label               "Long string value"
@@ -2923,6 +2942,7 @@ save_<coupling_constants>
   _Coupling_constant_list.Entry_ID                             1
   _Coupling_constant_list.Sf_ID                                2
   _Coupling_constant_list.ID                                   2
+  _Coupling_constant_list.Name                                 "Long string value"
   _Coupling_constant_list.Data_file_name                       "Long string value"
   _Coupling_constant_list.Sample_condition_list_ID             2
   _Coupling_constant_list.Sample_condition_list_label          "Long string value"
@@ -3014,6 +3034,7 @@ save_<theoretical_coupling_constants>
   _Theoretical_coupling_constant_list.Entry_ID                             1
   _Theoretical_coupling_constant_list.Sf_ID                                2
   _Theoretical_coupling_constant_list.ID                                   2
+  _Theoretical_coupling_constant_list.Name                                 "Long string value"
   _Theoretical_coupling_constant_list.Data_file_name                       "Long string value"
   _Theoretical_coupling_constant_list.Sample_condition_list_ID             2
   _Theoretical_coupling_constant_list.Sample_condition_list_label          "Long string value"
@@ -3103,6 +3124,7 @@ save_<spectral_peak_list>
   _Spectral_peak_list.Entry_ID                                1
   _Spectral_peak_list.Sf_ID                                   2
   _Spectral_peak_list.ID                                      2
+  _Spectral_peak_list.Name                                    "Long string value"
   _Spectral_peak_list.Data_file_name                          "Long string value"
   _Spectral_peak_list.Sample_ID                               2
   _Spectral_peak_list.Sample_label                            "Long string value"
@@ -3663,6 +3685,7 @@ save_<resonance_linker>
   _Resonance_linker_list.Entry_ID          1
   _Resonance_linker_list.Sf_ID             2
   _Resonance_linker_list.ID                2
+  _Resonance_linker_list.Name              "Long string value"
   _Resonance_linker_list.Details           "Possible multiline text"
 
   loop_
@@ -3744,6 +3767,7 @@ save_<chem_shift_isotope_effect>
   _Chem_shift_isotope_effect_list.Entry_ID                             1
   _Chem_shift_isotope_effect_list.Sf_ID                                2
   _Chem_shift_isotope_effect_list.ID                                   2
+  _Chem_shift_isotope_effect_list.Name                                 "Long string value"
   _Chem_shift_isotope_effect_list.Data_file_name                       "Long string value"
   _Chem_shift_isotope_effect_list.Sample_condition_list_ID             2
   _Chem_shift_isotope_effect_list.Sample_condition_list_label          "Long string value"
@@ -3846,6 +3870,7 @@ save_<chem_shift_perturbation>
   _Chem_shift_perturbation_list.Entry_ID                             1
   _Chem_shift_perturbation_list.Sf_ID                                2
   _Chem_shift_perturbation_list.ID                                   2
+  _Chem_shift_perturbation_list.Name                                 "Long string value"
   _Chem_shift_perturbation_list.Type                                 "Long string value"
   _Chem_shift_perturbation_list.Data_file_name                       "Long string value"
   _Chem_shift_perturbation_list.Sample_condition_list_ID             2
@@ -3919,6 +3944,7 @@ save_<chem_shift_anisotropy>
   _Chem_shift_anisotropy.Entry_ID                             1
   _Chem_shift_anisotropy.Sf_ID                                2
   _Chem_shift_anisotropy.ID                                   2
+  _Chem_shift_anisotropy.Name                                 "Long string value"
   _Chem_shift_anisotropy.Data_file_name                       "Long string value"
   _Chem_shift_anisotropy.Sample_condition_list_ID             2
   _Chem_shift_anisotropy.Sample_condition_list_label          "Long string value"
@@ -3996,6 +4022,7 @@ save_<RDCs>
   _RDC_list.Entry_ID                                 1
   _RDC_list.Sf_ID                                    2
   _RDC_list.ID                                       2
+  _RDC_list.Name                                     "Long string value"
   _RDC_list.Data_file_name                           "Long string value"
   _RDC_list.Sample_condition_list_ID                 2
   _RDC_list.Sample_condition_list_label              "Long string value"
@@ -4093,6 +4120,7 @@ save_<dipolar_couplings>
   _Dipolar_coupling_list.Entry_ID                             1
   _Dipolar_coupling_list.Sf_ID                                2
   _Dipolar_coupling_list.ID                                   2
+  _Dipolar_coupling_list.Name                                 "Long string value"
   _Dipolar_coupling_list.Data_file_name                       "Long string value"
   _Dipolar_coupling_list.Sample_condition_list_ID             2
   _Dipolar_coupling_list.Sample_condition_list_label          "Long string value"
@@ -4186,6 +4214,7 @@ save_<spectral_density_values>
   _Spectral_density_list.Entry_ID                             1
   _Spectral_density_list.Sf_ID                                2
   _Spectral_density_list.ID                                   2
+  _Spectral_density_list.Name                                 "Long string value"
   _Spectral_density_list.Data_file_name                       "Long string value"
   _Spectral_density_list.Sample_condition_list_ID             2
   _Spectral_density_list.Sample_condition_list_label          "Long string value"
@@ -4330,6 +4359,7 @@ save_<chemical_rates>
   _Chemical_rate_list.Entry_ID                             1
   _Chemical_rate_list.Sf_ID                                2
   _Chemical_rate_list.ID                                   2
+  _Chemical_rate_list.Name                                 "Long string value"
   _Chemical_rate_list.Data_file_name                       "Long string value"
   _Chemical_rate_list.Sample_condition_list_ID             2
   _Chemical_rate_list.Sample_condition_list_label          "Long string value"
@@ -4403,6 +4433,7 @@ save_<H_exch_rates>
   _H_exch_rate_list.Entry_ID                             1
   _H_exch_rate_list.Sf_ID                                2
   _H_exch_rate_list.ID                                   2
+  _H_exch_rate_list.Name                                 "Long string value"
   _H_exch_rate_list.Data_file_name                       "Long string value"
   _H_exch_rate_list.Sample_condition_list_ID             2
   _H_exch_rate_list.Sample_condition_list_label          "Long string value"
@@ -4474,6 +4505,7 @@ save_<H_exch_protection_factors>
   _H_exch_protection_factor_list.Entry_ID                             1
   _H_exch_protection_factor_list.Sf_ID                                2
   _H_exch_protection_factor_list.ID                                   2
+  _H_exch_protection_factor_list.Name                                 "Long string value"
   _H_exch_protection_factor_list.Data_file_name                       "Long string value"
   _H_exch_protection_factor_list.Sample_condition_list_ID             2
   _H_exch_protection_factor_list.Sample_condition_list_label          "Long string value"
@@ -4545,6 +4577,7 @@ save_<homonucl_NOEs>
   _Homonucl_NOE_list.Entry_ID                             1
   _Homonucl_NOE_list.Sf_ID                                2
   _Homonucl_NOE_list.ID                                   2
+  _Homonucl_NOE_list.Name                                 "Long string value"
   _Homonucl_NOE_list.Data_file_name                       "Long string value"
   _Homonucl_NOE_list.Sample_condition_list_ID             2
   _Homonucl_NOE_list.Sample_condition_list_label          "Long string value"
@@ -4632,6 +4665,7 @@ save_<heteronucl_NOEs>
   _Heteronucl_NOE_list.Entry_ID                             1
   _Heteronucl_NOE_list.Sf_ID                                2
   _Heteronucl_NOE_list.ID                                   2
+  _Heteronucl_NOE_list.Name                                 "Long string value"
   _Heteronucl_NOE_list.Data_file_name                       "Long string value"
   _Heteronucl_NOE_list.Sample_condition_list_ID             2
   _Heteronucl_NOE_list.Sample_condition_list_label          "Long string value"
@@ -4718,6 +4752,7 @@ save_<theoretical_heteronucl_NOEs>
   _Theoretical_heteronucl_NOE_list.Entry_ID                             1
   _Theoretical_heteronucl_NOE_list.Sf_ID                                2
   _Theoretical_heteronucl_NOE_list.ID                                   2
+  _Theoretical_heteronucl_NOE_list.Name                                 "Long string value"
   _Theoretical_heteronucl_NOE_list.Data_file_name                       "Long string value"
   _Theoretical_heteronucl_NOE_list.Sample_condition_list_ID             2
   _Theoretical_heteronucl_NOE_list.Sample_condition_list_label          "Long string value"
@@ -4804,6 +4839,7 @@ save_<heteronucl_T1_relaxation>
   _Heteronucl_T1_list.Entry_ID                             1
   _Heteronucl_T1_list.Sf_ID                                2
   _Heteronucl_T1_list.ID                                   2
+  _Heteronucl_T1_list.Name                                 "Long string value"
   _Heteronucl_T1_list.Data_file_name                       "Long string value"
   _Heteronucl_T1_list.Sample_condition_list_ID             2
   _Heteronucl_T1_list.Sample_condition_list_label          "Long string value"
@@ -4875,6 +4911,7 @@ save_<theoretical_heteronucl_T1_relaxation>
   _Theoretical_heteronucl_T1_list.Entry_ID                             1
   _Theoretical_heteronucl_T1_list.Sf_ID                                2
   _Theoretical_heteronucl_T1_list.ID                                   2
+  _Theoretical_heteronucl_T1_list.Name                                 "Long string value"
   _Theoretical_heteronucl_T1_list.Data_file_name                       "Long string value"
   _Theoretical_heteronucl_T1_list.Sample_condition_list_ID             2
   _Theoretical_heteronucl_T1_list.Sample_condition_list_label          "Long string value"
@@ -4946,6 +4983,7 @@ save_<heteronucl_T1rho_relaxation>
   _Heteronucl_T1rho_list.Entry_ID                             1
   _Heteronucl_T1rho_list.Sf_ID                                2
   _Heteronucl_T1rho_list.ID                                   2
+  _Heteronucl_T1rho_list.Name                                 "Long string value"
   _Heteronucl_T1rho_list.Data_file_name                       "Long string value"
   _Heteronucl_T1rho_list.Sample_condition_list_ID             2
   _Heteronucl_T1rho_list.Sample_condition_list_label          "Long string value"
@@ -5022,6 +5060,7 @@ save_<heteronucl_T2_relaxation>
   _Heteronucl_T2_list.Entry_ID                             1
   _Heteronucl_T2_list.Sf_ID                                2
   _Heteronucl_T2_list.ID                                   2
+  _Heteronucl_T2_list.Name                                 "Long string value"
   _Heteronucl_T2_list.Data_file_name                       "Long string value"
   _Heteronucl_T2_list.Sample_condition_list_ID             2
   _Heteronucl_T2_list.Sample_condition_list_label          "Long string value"
@@ -5098,6 +5137,7 @@ save_<theoretical_heteronucl_T2_relaxation>
   _Theoretical_heteronucl_T2_list.Entry_ID                             1
   _Theoretical_heteronucl_T2_list.Sf_ID                                2
   _Theoretical_heteronucl_T2_list.ID                                   2
+  _Theoretical_heteronucl_T2_list.Name                                 "Long string value"
   _Theoretical_heteronucl_T2_list.Data_file_name                       "Long string value"
   _Theoretical_heteronucl_T2_list.Sample_condition_list_ID             2
   _Theoretical_heteronucl_T2_list.Sample_condition_list_label          "Long string value"
@@ -5174,6 +5214,7 @@ save_<auto_relaxation>
   _Auto_relaxation_list.Entry_ID                             1
   _Auto_relaxation_list.Sf_ID                                2
   _Auto_relaxation_list.ID                                   2
+  _Auto_relaxation_list.Name                                 "Long string value"
   _Auto_relaxation_list.Data_file_name                       "Long string value"
   _Auto_relaxation_list.Sample_condition_list_ID             2
   _Auto_relaxation_list.Sample_condition_list_label          "Long string value"
@@ -5254,6 +5295,7 @@ save_<theoretical_auto_relaxation>
   _Theoretical_auto_relaxation_list.Entry_ID                             1
   _Theoretical_auto_relaxation_list.Sf_ID                                2
   _Theoretical_auto_relaxation_list.ID                                   2
+  _Theoretical_auto_relaxation_list.Name                                 "Long string value"
   _Theoretical_auto_relaxation_list.Data_file_name                       "Long string value"
   _Theoretical_auto_relaxation_list.Sample_condition_list_ID             2
   _Theoretical_auto_relaxation_list.Sample_condition_list_label          "Long string value"
@@ -5334,6 +5376,7 @@ save_<dipole_dipole_relaxation>
   _Dipole_dipole_relax_list.Entry_ID                             1
   _Dipole_dipole_relax_list.Sf_ID                                2
   _Dipole_dipole_relax_list.ID                                   2
+  _Dipole_dipole_relax_list.Name                                 "Long string value"
   _Dipole_dipole_relax_list.Data_file_name                       "Long string value"
   _Dipole_dipole_relax_list.Sample_condition_list_ID             2
   _Dipole_dipole_relax_list.Sample_condition_list_label          "Long string value"
@@ -5418,6 +5461,7 @@ save_<dipole_dipole_cross_correlations>
   _Cross_correlation_DD_list.Entry_ID                             1
   _Cross_correlation_DD_list.Sf_ID                                2
   _Cross_correlation_DD_list.ID                                   2
+  _Cross_correlation_DD_list.Name                                 "Long string value"
   _Cross_correlation_DD_list.Data_file_name                       "Long string value"
   _Cross_correlation_DD_list.Sample_condition_list_ID             2
   _Cross_correlation_DD_list.Sample_condition_list_label          "Long string value"
@@ -5530,6 +5574,7 @@ save_<theoretical_dipole_dipole_cross_correlations>
   _Theoretical_cross_correlation_DD_list.Entry_ID                             1
   _Theoretical_cross_correlation_DD_list.Sf_ID                                2
   _Theoretical_cross_correlation_DD_list.ID                                   2
+  _Theoretical_cross_correlation_DD_list.Name                                 "Long string value"
   _Theoretical_cross_correlation_DD_list.Data_file_name                       "Long string value"
   _Theoretical_cross_correlation_DD_list.Sample_condition_list_ID             2
   _Theoretical_cross_correlation_DD_list.Sample_condition_list_label          "Long string value"
@@ -5642,6 +5687,7 @@ save_<dipole_CSA_cross_correlations>
   _Cross_correlation_D_CSA_list.Entry_ID                             1
   _Cross_correlation_D_CSA_list.Sf_ID                                2
   _Cross_correlation_D_CSA_list.ID                                   2
+  _Cross_correlation_D_CSA_list.Name                                 "Long string value"
   _Cross_correlation_D_CSA_list.Data_file_name                       "Long string value"
   _Cross_correlation_D_CSA_list.Sample_condition_list_ID             2
   _Cross_correlation_D_CSA_list.Sample_condition_list_label          "Long string value"
@@ -5754,6 +5800,7 @@ save_<order_parameters>
   _Order_parameter_list.Entry_ID                             1
   _Order_parameter_list.Sf_ID                                2
   _Order_parameter_list.ID                                   2
+  _Order_parameter_list.Name                                 "Long string value"
   _Order_parameter_list.Data_file_name                       "Long string value"
   _Order_parameter_list.Sample_condition_list_ID             2
   _Order_parameter_list.Sample_condition_list_label          "Long string value"
@@ -5845,6 +5892,7 @@ save_<pH_titration>
   _PH_titration_list.Entry_ID                             1
   _PH_titration_list.Sf_ID                                2
   _PH_titration_list.ID                                   2
+  _PH_titration_list.Name                                 "Long string value"
   _PH_titration_list.Data_file_name                       "Long string value"
   _PH_titration_list.Sample_condition_list_ID             2
   _PH_titration_list.Sample_condition_list_label          "Long string value"
@@ -5934,6 +5982,7 @@ save_<pH_param_list>
   _PH_param_list.Entry_ID                         1
   _PH_param_list.Sf_ID                            2
   _PH_param_list.ID                               2
+  _PH_param_list.Name                             "Long string value"
   _PH_param_list.PH_titration_list_ID             2
   _PH_param_list.PH_titration_list_label          "Long string value"
   _PH_param_list.Observed_NMR_param               "String value"
@@ -5965,6 +6014,7 @@ save_<D_H_fractionation_factors>
   _D_H_fractionation_factor_list.Entry_ID                             1
   _D_H_fractionation_factor_list.Sf_ID                                2
   _D_H_fractionation_factor_list.ID                                   2
+  _D_H_fractionation_factor_list.Name                                 "Long string value"
   _D_H_fractionation_factor_list.Data_file_name                       "Long string value"
   _D_H_fractionation_factor_list.Sample_condition_list_ID             2
   _D_H_fractionation_factor_list.Sample_condition_list_label          "Long string value"
@@ -6032,6 +6082,7 @@ save_<binding_data>
   _Binding_value_list.Entry_ID                             1
   _Binding_value_list.Sf_ID                                2
   _Binding_value_list.ID                                   2
+  _Binding_value_list.Name                                 "Long string value"
   _Binding_value_list.Data_file_name                       "Long string value"
   _Binding_value_list.Sample_condition_list_ID             2
   _Binding_value_list.Sample_condition_list_label          "Long string value"
@@ -6120,6 +6171,7 @@ save_<binding_param_list>
   _Binding_param_list.Entry_ID                          1
   _Binding_param_list.Sf_ID                             2
   _Binding_param_list.ID                                2
+  _Binding_param_list.Name                              "Long string value"
   _Binding_param_list.Binding_value_list_ID             2
   _Binding_param_list.Binding_value_list_label          "Long string value"
   _Binding_param_list.Concentration_val_units           "Short string value"
@@ -6154,6 +6206,7 @@ save_<deduced_secd_struct_features>
   _Deduced_secd_struct_list.Entry_ID                              1
   _Deduced_secd_struct_list.Sf_ID                                 2
   _Deduced_secd_struct_list.ID                                    2
+  _Deduced_secd_struct_list.Name                                  "Long string value"
   _Deduced_secd_struct_list.Data_file_name                        "Long string value"
   _Deduced_secd_struct_list.Details                               "Possible multiline text"
   _Deduced_secd_struct_list.Sample_condition_list_ID              2
@@ -6247,6 +6300,7 @@ save_<deduced_hydrogen_bonds>
   _Deduced_H_bond_list.Entry_ID                             1
   _Deduced_H_bond_list.Sf_ID                                2
   _Deduced_H_bond_list.ID                                   2
+  _Deduced_H_bond_list.Name                                 "Long string value"
   _Deduced_H_bond_list.Data_file_name                       "Long string value"
   _Deduced_H_bond_list.Details                              "Possible multiline text"
   _Deduced_H_bond_list.Sample_condition_list_ID             2
@@ -6336,6 +6390,7 @@ save_<conformer_statistics>
   _Conformer_stat_list.Entry_ID                                  1
   _Conformer_stat_list.Sf_ID                                     2
   _Conformer_stat_list.ID                                        2
+  _Conformer_stat_list.Name                                      "Long string value"
   _Conformer_stat_list.Conformer_ensemble_only                   
   _Conformer_stat_list.Both_ensemble_and_rep_conformer           
   _Conformer_stat_list.Representative_conformer_only             
@@ -6477,6 +6532,7 @@ save_<conformer_family_coord_set>
   _Conformer_family_coord_set.Entry_ID                             1
   _Conformer_family_coord_set.Sf_ID                                2
   _Conformer_family_coord_set.ID                                   2
+  _Conformer_family_coord_set.Name                                 "Long string value"
   _Conformer_family_coord_set.File_name                            "Long string value"
   _Conformer_family_coord_set.Constraints_PDB_file_ID              1
   _Conformer_family_coord_set.PDB_accession_code                   "Short string value"
@@ -6661,6 +6717,7 @@ save_<representative_conformer>
   _Representative_conformer.Entry_ID                                  1
   _Representative_conformer.Sf_ID                                     2
   _Representative_conformer.ID                                        2
+  _Representative_conformer.Name                                      "Long string value"
   _Representative_conformer.Details                                   "Possible multiline text"
   _Representative_conformer.Type                                      "Long string value"
   _Representative_conformer.Rep_conformer_derivation                  "Long string value"
@@ -6761,6 +6818,7 @@ save_<constraint_statistics>
   _Constraint_stat_list.Entry_ID                                     1
   _Constraint_stat_list.Sf_ID                                        2
   _Constraint_stat_list.ID                                           2
+  _Constraint_stat_list.Name                                         "Long string value"
   _Constraint_stat_list.Data_file_name                               "Long string value"
   _Constraint_stat_list.Details                                      "Possible multiline text"
   _Constraint_stat_list.Text_data_format                             "String value"
@@ -6977,6 +7035,7 @@ save_<force_constants>
   _Force_constant_list.Entry_ID                              1
   _Force_constant_list.Sf_ID                                 2
   _Force_constant_list.ID                                    2
+  _Force_constant_list.Name                                  "Long string value"
   _Force_constant_list.Data_file_name                        "Long string value"
   _Force_constant_list.Default_software_values_used          
   _Force_constant_list.Details                               "Possible multiline text"
@@ -7015,6 +7074,7 @@ save_<angular_order_parameters>
   _Angular_order_parameter_list.Entry_ID                  1
   _Angular_order_parameter_list.Sf_ID                     2
   _Angular_order_parameter_list.ID                        2
+  _Angular_order_parameter_list.Name                      "Long string value"
   _Angular_order_parameter_list.Data_file_name            "Long string value"
   _Angular_order_parameter_list.Text_data_format          "String value"
   _Angular_order_parameter_list.Text_data                 "Possible multiline text"
@@ -7051,6 +7111,7 @@ save_<tertiary_struct_elements>
   _Tertiary_struct_element_list.Entry_ID          1
   _Tertiary_struct_element_list.Sf_ID             2
   _Tertiary_struct_element_list.ID                2
+  _Tertiary_struct_element_list.Name              "Long string value"
 
   loop_
      _Tertiary_struct_element_sel.Method_ID                                
@@ -7098,6 +7159,7 @@ save_<structure_annotation>
   _Structure_annotation.Entry_ID                               1
   _Structure_annotation.Sf_ID                                  2
   _Structure_annotation.ID                                     2
+  _Structure_annotation.Name                                   "Long string value"
   _Structure_annotation.PDB_ID                                 "Short string value"
   _Structure_annotation.DB_queried_date                        2002-04-15
   _Structure_annotation.DB_source                              "Long string value"
@@ -7167,6 +7229,7 @@ save_<secondary_structs>
   _Secondary_struct_list.Entry_ID                                1
   _Secondary_struct_list.Sf_ID                                   2
   _Secondary_struct_list.ID                                      2
+  _Secondary_struct_list.Name                                    "Long string value"
   _Secondary_struct_list.Representative_conformer_ID             2
   _Secondary_struct_list.Representative_conformer_label          "Long string value"
 
@@ -7212,6 +7275,7 @@ save_<bond_annotation>
   _Bond_annotation_list.Entry_ID          1
   _Bond_annotation_list.Sf_ID             2
   _Bond_annotation_list.ID                2
+  _Bond_annotation_list.Name              "Long string value"
   _Bond_annotation_list.Details           "Possible multiline text"
 
   loop_
@@ -7274,6 +7338,7 @@ save_<structure_interactions>
   _Structure_interaction_list.Entry_ID          1
   _Structure_interaction_list.Sf_ID             2
   _Structure_interaction_list.ID                2
+  _Structure_interaction_list.Name              "Long string value"
   _Structure_interaction_list.Details           "Possible multiline text"
 
   loop_
@@ -7333,6 +7398,7 @@ save_<other_struct_features>
   _Other_struct_feature_list.Entry_ID                           1
   _Other_struct_feature_list.Sf_ID                              2
   _Other_struct_feature_list.ID                                 2
+  _Other_struct_feature_list.Name                               "Long string value"
   _Other_struct_feature_list.Struct_feature_name                "Long string value"
   _Other_struct_feature_list.Struct_feature_definition          "Long string value"
   _Other_struct_feature_list.Details                            "Possible multiline text"
@@ -7361,6 +7427,7 @@ save_<tensor>
   _Tensor_list.Entry_ID                         1
   _Tensor_list.Sf_ID                            2
   _Tensor_list.ID                               2
+  _Tensor_list.Name                             "Long string value"
   _Tensor_list.Data_file_name                   "Long string value"
   _Tensor_list.Tensor_type                      "Long string value"
   _Tensor_list.Tensor_shape                     "Long string value"
@@ -7435,6 +7502,7 @@ save_<interatomic_distance>
   _Interatomic_distance_list.Entry_ID                  1
   _Interatomic_distance_list.Sf_ID                     2
   _Interatomic_distance_list.ID                        2
+  _Interatomic_distance_list.Name                      "Long string value"
   _Interatomic_distance_list.Data_file_name            "Long string value"
   _Interatomic_distance_list.Details                   "Possible multiline text"
   _Interatomic_distance_list.Text_data_format          "Long string value"
@@ -7486,6 +7554,7 @@ save_<general_distance_constraints>
   _Gen_dist_constraint_list.Entry_ID                    1
   _Gen_dist_constraint_list.Sf_ID                       2
   _Gen_dist_constraint_list.ID                          2
+  _Gen_dist_constraint_list.Name                        "Long string value"
   _Gen_dist_constraint_list.Data_file_name              "Long string value"
   _Gen_dist_constraint_list.Constraint_type             "Long string value"
   _Gen_dist_constraint_list.Constraint_file_ID          2
@@ -7678,6 +7747,7 @@ save_<distance_constraints>
   _Distance_constraint_list.Entry_ID                    1
   _Distance_constraint_list.Sf_ID                       2
   _Distance_constraint_list.ID                          2
+  _Distance_constraint_list.Name                        "Long string value"
   _Distance_constraint_list.Data_file_name              "Long string value"
   _Distance_constraint_list.Constraint_type             "Long string value"
   _Distance_constraint_list.Constraint_file_ID          2
@@ -7853,6 +7923,7 @@ save_<floating_chiral_stereo_assign>
   _Floating_chirality_assign.Entry_ID                       1
   _Floating_chirality_assign.Sf_ID                          2
   _Floating_chirality_assign.ID                             2
+  _Floating_chirality_assign.Name                           "Long string value"
   _Floating_chirality_assign.Data_file_name                 "Long string value"
   _Floating_chirality_assign.Details                        "Possible multiline text"
   _Floating_chirality_assign.Stereo_count                   2
@@ -7918,6 +7989,7 @@ save_<torsion_angle_constraints>
   _Torsion_angle_constraint_list.Entry_ID                    1
   _Torsion_angle_constraint_list.Sf_ID                       2
   _Torsion_angle_constraint_list.ID                          2
+  _Torsion_angle_constraint_list.Name                        "Long string value"
   _Torsion_angle_constraint_list.Data_file_name              "Long string value"
   _Torsion_angle_constraint_list.Constraint_file_ID          2
   _Torsion_angle_constraint_list.Potential_type              "Long string value"
@@ -8150,6 +8222,7 @@ save_<RDC_constraints>
   _RDC_constraint_list.Entry_ID                                 1
   _RDC_constraint_list.Sf_ID                                    2
   _RDC_constraint_list.ID                                       2
+  _RDC_constraint_list.Name                                     "Long string value"
   _RDC_constraint_list.Data_file_name                           "Long string value"
   _RDC_constraint_list.Constraint_file_ID                       2
   _RDC_constraint_list.Block_ID                                 2
@@ -8345,6 +8418,7 @@ save_<J_three_bond_constraints>
   _J_three_bond_constraint_list.Entry_ID                    1
   _J_three_bond_constraint_list.Sf_ID                       2
   _J_three_bond_constraint_list.ID                          2
+  _J_three_bond_constraint_list.Name                        "Long string value"
   _J_three_bond_constraint_list.Data_file_name              "Long string value"
   _J_three_bond_constraint_list.Data_file_format            "Long string value"
   _J_three_bond_constraint_list.Constraint_file_ID          2
@@ -8461,6 +8535,7 @@ save_<CA_CB_chem_shift_constraints>
   _CA_CB_constraint_list.Entry_ID                    1
   _CA_CB_constraint_list.Sf_ID                       2
   _CA_CB_constraint_list.ID                          2
+  _CA_CB_constraint_list.Name                        "Long string value"
   _CA_CB_constraint_list.Data_file_name              "Long string value"
   _CA_CB_constraint_list.Data_file_format            "Long string value"
   _CA_CB_constraint_list.Constraint_file_ID          2
@@ -8592,6 +8667,7 @@ save_<H_chem_shift_constraints>
   _H_chem_shift_constraint_list.Entry_ID                    1
   _H_chem_shift_constraint_list.Sf_ID                       2
   _H_chem_shift_constraint_list.ID                          2
+  _H_chem_shift_constraint_list.Name                        "Long string value"
   _H_chem_shift_constraint_list.Units                       "String value"
   _H_chem_shift_constraint_list.Data_file_name              "Long string value"
   _H_chem_shift_constraint_list.Data_file_format            "Long string value"
@@ -8666,6 +8742,7 @@ save_<peak_constraint_links>
   _Peak_constraint_link_list.Entry_ID          1
   _Peak_constraint_link_list.Sf_ID             2
   _Peak_constraint_link_list.ID                2
+  _Peak_constraint_link_list.Name              "Long string value"
 
   loop_
      _Peak_constraint_link.ID                                       
@@ -8693,6 +8770,7 @@ save_<SAXS_constraints>
   _SAXS_constraint_list.Entry_ID                             1
   _SAXS_constraint_list.Sf_ID                                2
   _SAXS_constraint_list.ID                                   2
+  _SAXS_constraint_list.Name                                 "Long string value"
   _SAXS_constraint_list.Data_file_name                       "Long string value"
   _SAXS_constraint_list.Sample_condition_list_ID             2
   _SAXS_constraint_list.Sample_condition_list_label          "Long string value"
@@ -8748,6 +8826,7 @@ save_<other_constraints>
   _Other_constraint_list.Entry_ID                    1
   _Other_constraint_list.Sf_ID                       2
   _Other_constraint_list.ID                          2
+  _Other_constraint_list.Name                        "Long string value"
   _Other_constraint_list.Details                     "Possible multiline text"
   _Other_constraint_list.Entity_assembly_ID          2
   _Other_constraint_list.Entity_ID                   2
@@ -8810,6 +8889,7 @@ save_<MS_MZ_data>
   _MZ_ratio_data_list.Entry_ID                               1
   _MZ_ratio_data_list.Sf_ID                                  2
   _MZ_ratio_data_list.ID                                     2
+  _MZ_ratio_data_list.Name                                   "Long string value"
   _MZ_ratio_data_list.Sample_condition_list_ID               2
   _MZ_ratio_data_list.Sample_condition_list_label            "Long string value"
   _MZ_ratio_data_list.Mass_spec_ref_compd_set_ID             2
@@ -8931,6 +9011,7 @@ save_<MS_chromatogram>
   _MS_chromatogram_list.Entry_ID                             1
   _MS_chromatogram_list.Sf_ID                                2
   _MS_chromatogram_list.ID                                   2
+  _MS_chromatogram_list.Name                                 "Long string value"
   _MS_chromatogram_list.Sample_condition_list_ID             2
   _MS_chromatogram_list.Sample_condition_list_label          "Long string value"
   _MS_chromatogram_list.Details                              "Possible multiline text"
@@ -9015,6 +9096,7 @@ save_<software_specific_saveframes>
   _Software_specific_info_list.Entry_ID          1
   _Software_specific_info_list.Sf_ID             2
   _Software_specific_info_list.ID                2
+  _Software_specific_info_list.Name              "Long string value"
 
   loop_
      _Software_specific_info.Software_saveframe_ID                   
@@ -9035,6 +9117,7 @@ save_<applied_software>
   _Software_applied_list.Entry_ID          1
   _Software_applied_list.Sf_ID             2
   _Software_applied_list.ID                2
+  _Software_applied_list.Name              "Long string value"
   _Software_applied_list.Details           "Possible multiline text"
 
   loop_
@@ -9062,6 +9145,7 @@ save_<applied_software_history>
   _Software_applied_history.Entry_ID          1
   _Software_applied_history.Sf_ID             2
   _Software_applied_history.ID                2
+  _Software_applied_history.Name              "Long string value"
   _Software_applied_history.Details           "Possible multiline text"
 
   loop_

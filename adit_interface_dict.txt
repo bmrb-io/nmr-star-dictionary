@@ -143,7 +143,7 @@ save__Entry_interview.PDB_deposition
 
    _Description
 ;
-Check this box, if you are depositing atomic coordinates to be archived at the Protein Data Bank.  With this box checked, after clicking on the 'Save Changes' button, you will be asked to enter additional information regarding the data submitted. Files containing the data sets should be uploaded by filling out the form found by clicking on the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing atomic coordinates to be archived at the Protein Data Bank.
 ;
 
    _Adit_item_view_name
@@ -170,7 +170,7 @@ save__Entry_interview.BMRB_deposition
 
    _Description
 ;
-Check this box, if you are depositing NMR experimental data to be archived at the BioMagResBank.  With this box checked, after clicking on the 'Save Changes' button, you will be asked to enter additional information regarding the data submitted. Files containing the data sets should be uploaded by filling out the form found by clicking on the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing NMR experimental data to be archived at the BioMagResBank.
 ;
 
    _Adit_item_view_name
@@ -305,7 +305,7 @@ save__Entry_interview.Structural_genomics
 
    _Description
 ;
-Check the box provided, if the deposition is originating from one of the structural genomics projects funded around the world. By checking this box, a number of additional data will be required in the deposition.
+Check the box provided, if the deposition is originating from one of the structural genomics projects funded around the world.
 ;
 
    _Adit_item_view_name
@@ -386,7 +386,7 @@ save__Entry_interview.Constraints
 
    _Description
 ;
-Check this box, if you are depositing constraints used to calculate a three-dimensional structure for the molecular assembly.  With this box checked, after clicking on the 'Save Changes' button, you will be asked to enter additional information regarding the data submitted. Files containing the data sets should be uploaded by filling out the form found by clicking on the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing constraints used to calculate a three-dimensional structure for the molecular assembly.
 ;
 
    _Adit_item_view_name
@@ -413,7 +413,7 @@ save__Entry_interview.Assigned_chem_shifts
 
    _Description
 ;
-Check this box, if you are depositing one or more sets of assigned chemical shifts for the reported molecular assembly.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing one or more sets of assigned chemical shifts for the reported molecular assembly.
 ;
 
    _Adit_item_view_name
@@ -440,12 +440,66 @@ save__Entry_interview.Coupling_constants
 
    _Description
 ;
-Check this box, if you are submitting one or more sets of scalar coupling (homonuclear or heteronuclear) values.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more sets of scalar coupling (homonuclear or heteronuclear) values.
 ;
 
    _Adit_item_view_name
 ;
 Scalar coupling constants
+;
+
+   loop_
+     _Example
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Chem_shift_isotope_effect
+
+   _Tag                  '_Entry_interview.Chem_shift_isotope_effect'
+
+   _Category              'Entry_interview'
+
+   _Description
+;
+Check this box, if you are submitting one or more sets of chemical shift isotope effect values.
+;
+
+   _Adit_item_view_name
+;
+Chemical shift isotope effect
+;
+
+   loop_
+     _Example
+
+;
+no
+;
+
+   stop_
+
+save_
+
+save__Entry_interview.Chem_shift_perturbation
+
+   _Tag                  '_Entry_interview.Chem_shift_perturbation'
+
+   _Category              'Entry_interview'
+
+   _Description
+;
+Check this box, if you are submitting one or more sets of chemical shift perturbation values.
+;
+
+   _Adit_item_view_name
+;
+Chemical shift perturbation data
 ;
 
    loop_
@@ -467,7 +521,7 @@ save__Entry_interview.Auto_relaxation
 
    _Description
 ;
-Check this box, if you are submitting one or more sets of auto relaxation values.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more sets of auto relaxation values.
 ;
 
    _Adit_item_view_name
@@ -494,7 +548,7 @@ save__Entry_interview.Tensor
 
    _Description
 ;
-Check this box, if you are submitting one or more sets of tensor data.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more sets of tensor data.
 ;
 
    _Adit_item_view_name
@@ -521,7 +575,7 @@ save__Entry_interview.Interatomic_distance
 
    _Description
 ;
-Check this box, if you are submitting one or more sets of interatomic distance data.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more sets of interatomic distance data.
 ;
 
    _Adit_item_view_name
@@ -548,7 +602,7 @@ save__Entry_interview.Chem_shift_anisotropy
 
    _Description
 ;
-Check this box, if you are submitting one or more sets of chemical shift anisotropy values.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more sets of chemical shift anisotropy values.
 ;
 
    _Adit_item_view_name
@@ -575,7 +629,7 @@ save__Entry_interview.Heteronucl_NOEs
 
    _Description
 ;
-If you are depositing one or more sets of heteronuclear NOE data, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are depositing one or more sets of heteronuclear NOE data, check this box.
 ;
 
    _Adit_item_view_name
@@ -602,7 +656,7 @@ save__Entry_interview.Heteronucl_T1_relaxation
 
    _Description
 ;
-If you are depositing T1 (R1) relaxation values, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are depositing T1 (R1) relaxation values, check this box.
 ;
 
    _Adit_item_view_name
@@ -629,7 +683,7 @@ save__Entry_interview.Heteronucl_T2_relaxation
 
    _Description
 ;
-Check this box, if you are depositing one or more sets of T2 (R2) relaxation data. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing one or more sets of T2 (R2) relaxation data.
 ;
 
    _Adit_item_view_name
@@ -656,7 +710,7 @@ save__Entry_interview.Heteronucl_T1rho_relaxation
 
    _Description
 ;
-Check this box, if you are depositing files containing T1rho (R1rho) relaxation data. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing files containing T1rho (R1rho) relaxation data.
 ;
 
    _Adit_item_view_name
@@ -683,7 +737,7 @@ save__Entry_interview.Order_parameters
 
    _Description
 ;
-If you are depositing order parameter values, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are depositing order parameter values, check this box.
 ;
 
    _Adit_item_view_name
@@ -791,7 +845,7 @@ save__Entry_interview.Residual_dipolar_couplings
 
    _Description
 ;
-Check this box, if you are depositing residual dipolar coupling values that are not constraints for a structure calculation.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing residual dipolar coupling values that are not constraints for a structure calculation.
 ;
 
    _Adit_item_view_name
@@ -818,7 +872,7 @@ save__Entry_interview.H_exchange_rate
 
    _Description
 ;
-If you are submitting hydrogen exchange rate values, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are submitting hydrogen exchange rate values, check this box.
 ;
 
    _Adit_item_view_name
@@ -845,7 +899,7 @@ save__Entry_interview.H_exchange_protection_factors
 
    _Description
 ;
-If you are depositing hydrogen exchange protection factor data, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are depositing hydrogen exchange protection factor data, check this box.
 ;
 
    _Adit_item_view_name
@@ -872,7 +926,7 @@ save__Entry_interview.Chem_rate_constants
 
    _Description
 ;
-Check this box, if you are depositing chemical rate constant values.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing chemical rate constant values.
 ;
 
    _Adit_item_view_name
@@ -899,7 +953,7 @@ save__Entry_interview.Spectral_peak_lists
 
    _Description
 ;
-Check this box, if you are depositing files containing peak information extracted from NMR spectra.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing files containing peak information extracted from NMR spectra.
 ;
 
    _Adit_item_view_name
@@ -926,7 +980,7 @@ save__Entry_interview.Dipole_dipole_couplings
 
    _Description
 ;
-Check this box, if you are depositing dipole-dipole coupling values.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing dipole-dipole coupling values.
 ;
 
    _Adit_item_view_name
@@ -953,7 +1007,7 @@ save__Entry_interview.Quadrupolar_couplings
 
    _Description
 ;
-Check this box, if you are submitting one or more sets of quadrupolar coupling values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more sets of quadrupolar coupling values.
 ;
 
    _Adit_item_view_name
@@ -980,7 +1034,7 @@ save__Entry_interview.Homonucl_NOEs
 
    _Description
 ;
-Check this box, if you are depositing one or more sets of homonuclear NOE data. Do not check this box, if the homonuclear NOE data are restraints used to calculate a structure. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing one or more sets of homonuclear NOE data. Do not check this box, if the homonuclear NOE data are restraints used to calculate a structure.
 ;
 
    _Adit_item_view_name
@@ -1007,7 +1061,7 @@ save__Entry_interview.Dipole_dipole_relaxation
 
    _Description
 ;
-If you are depositing dipole-dipole relaxation data, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are depositing dipole-dipole relaxation data, check this box.
 ;
 
    _Adit_item_view_name
@@ -1034,7 +1088,7 @@ save__Entry_interview.DD_cross_correlation
 
    _Description
 ;
-Check this box, if you are submitting dipole-dipole cross correlation relaxation data. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting dipole-dipole cross correlation relaxation data.
 ;
 
    _Adit_item_view_name
@@ -1061,7 +1115,7 @@ save__Entry_interview.Dipole_CSA_cross_correlation
 
    _Description
 ;
-Check this box, if you are submitting dipole-Chemical shift anisotropy cross correlation relaxation data. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting dipole-Chemical shift anisotropy cross correlation relaxation data.
 ;
 
    _Adit_item_view_name
@@ -1088,7 +1142,7 @@ save__Entry_interview.Binding_constants
 
    _Description
 ;
-Check this box, if you are submitting binding constant data. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting binding constant data.
 ;
 
    _Adit_item_view_name
@@ -1115,7 +1169,7 @@ save__Entry_interview.PKa_value_data_set
 
    _Description
 ;
-Check this box, if you are depositing pKa or pHmid values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing pKa or pHmid values.
 ;
 
    _Adit_item_view_name
@@ -1142,7 +1196,7 @@ save__Entry_interview.D_H_fractionation_factors
 
    _Description
 ;
-If you are submitting deuterium/hydrogen fractionation factor data, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are submitting deuterium/hydrogen fractionation factor data, check this box.
 ;
 
    _Adit_item_view_name
@@ -1169,7 +1223,7 @@ save__Entry_interview.Theoretical_chem_shifts
 
    _Description
 ;
-Check this box, if you are depositing theoretical chemical shift values (calculated values not ones determined by experiment using a biopolymer sample). If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing theoretical chemical shift values (calculated values not ones determined by experiment using a biopolymer sample).
 ;
 
    _Adit_item_view_name
@@ -1196,7 +1250,7 @@ save__Entry_interview.Theoretical_coupling_constants
 
    _Description
 ;
-Check this box, if you are depositing theoretical coupling constant values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing theoretical coupling constant values.
 ;
 
    _Adit_item_view_name
@@ -1223,7 +1277,7 @@ save__Entry_interview.Theoretical_heteronucl_NOEs
 
    _Description
 ;
-Check this box, if you are depositing theoretical heteronuclear NOE values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing theoretical heteronuclear NOE values.
 ;
 
    _Adit_item_view_name
@@ -1250,7 +1304,7 @@ save__Entry_interview.Theoretical_T1_relaxation
 
    _Description
 ;
-Check this box, if you are depositing theoretical T1(R1) values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing theoretical T1(R1) values.
 ;
 
    _Adit_item_view_name
@@ -1277,7 +1331,7 @@ save__Entry_interview.Theoretical_T2_relaxation
 
    _Description
 ;
-Check this box, if you are depositing theoretical T2(R2) values. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing theoretical T2(R2) values.
 ;
 
    _Adit_item_view_name
@@ -1304,7 +1358,7 @@ save__Entry_interview.Theoretical_auto_relaxation
 
    _Description
 ;
-Check this box, if you are submitting one or more sets of theoretical auto relaxation values.  If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more sets of theoretical auto relaxation values.
 ;
 
    _Adit_item_view_name
@@ -1331,7 +1385,7 @@ save__Entry_interview.Theoretical_DD_cross_correlation
 
    _Description
 ;
-Check this box, if you are submitting theoretical dipole-dipole cross correlation relaxation data. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting theoretical dipole-dipole cross correlation relaxation data.
 ;
 
    _Adit_item_view_name
@@ -1358,7 +1412,7 @@ save__Entry_interview.Spectral_density_values
 
    _Description
 ;
-Check this box, if you are submitting one or more spectral density factor data sets. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are submitting one or more spectral density factor data sets.
 ;
 
    _Adit_item_view_name
@@ -1385,39 +1439,12 @@ save__Entry_interview.Timedomain_data
 
    _Description
 ;
-If you are submitting time-domain data files (raw spectral data), check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+If you are submitting time-domain data files (raw spectral data), check this box.
 ;
 
    _Adit_item_view_name
 ;
 Time-domain data (raw spectral data)
-;
-
-   loop_
-     _Example
-
-;
-no
-;
-
-   stop_
-
-save_
-
-save__Entry_interview.Molecular_interactions
-
-   _Tag                  '_Entry_interview.Molecular_interactions'
-
-   _Category              'Entry_interview'
-
-   _Description
-;
-If you are depositing data that quantitatively describes the interaction (binding) between two molecules in the molecular system that was studied, check this box. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
-;
-
-   _Adit_item_view_name
-;
-Molecular orientations
 ;
 
    loop_
@@ -1439,7 +1466,7 @@ save__Entry_interview.Secondary_structure_orientations
 
    _Description
 ;
-Check this box, if you want to describe secondary structure features derived from experimental data. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you want to describe secondary structure features derived from experimental data.
 ;
 
    _Adit_item_view_name
@@ -1520,7 +1547,7 @@ save__Entry_interview.Other_kind_of_data
 
    _Description
 ;
-Check this box, if you are depositing data that is not described by any of the above selections. If you have just started a deposition, after clicking on the 'Save Changes' button, you will be asked to upload the appropriate data files and later enter additional information regarding the data submitted. At anytime during a deposition session, data containing files can be uploaded by filling out the form found by clicking on 'Entry information' and then the 'Deposit data files' link in the frame on the left of the screen.
+Check this box, if you are depositing data that is not described by any of the above selections.
 ;
 
    _Adit_item_view_name
@@ -6007,7 +6034,7 @@ The initials for the author's middle names.  A name can be used here if the auth
 
    _Adit_item_view_name
 ;
-Initials for the author's middle names
+Initials for the author's middle name(s)
 ;
 
    loop_
@@ -7797,6 +7824,33 @@ Sf ID
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__Citation.Name
+
+   _Tag                  '_Citation.Name'
+
+   _Category              'Citation'
+
+   _Description
+;
+A name that uniquely identifies the citation from all other citations in the entry.
+;
+
+   _Adit_item_view_name
+;
+Citation name
+;
+
+   loop_
+     _Example
+
+;
+citation 1
 ;
 
    stop_
@@ -20675,7 +20729,7 @@ Author sequence numbering (sequence code, residue code)
      _Example
 
 ;
-3,K<BR>3a,S<BR>5,A
+<BR>3,K<BR>3a,S<BR>5,A
 ;
 
    stop_
@@ -20702,7 +20756,7 @@ Author sequence details
      _Example
 
 ;
-Residues 1-8 represent a non-native affinity tag<BR>This is the cytoplasmic globular domain of a membrane protein
+Residues 1-8 represent a non-native affinity tag. This is the cytoplasmic globular domain of a membrane protein
 ;
 
    stop_
@@ -26446,7 +26500,7 @@ The kind of biological vector used to insert a gene into a host organism for the
 
    _Adit_item_view_name
 ;
-Type of vector used (if applicable)
+Type of vector used
 ;
 
    loop_
@@ -27035,12 +27089,12 @@ save__Chem_comp.PDB_code
 
    _Description
 ;
-Please enter the PDB three-letter chemical component ID for the ligand or other chemical component. The code can be obtained from the <a href='http://ligand-depot.rutgers.edu/' TARGET='_blank'> PDB ligand depot.</a> If a PDB code is found and entered for the component, little additional information is required for a BMRB deposition.
+Please enter the PDB three-letter chemical component ID for the ligand or other chemical component. The code can be obtained from the PDB Ligand Expo. If a PDB code is found and entered for the component, little additional information is required for a BMRB deposition.
 ;
 
    _Adit_item_view_name
 ;
-PDB chemical component ID: Please check the PDB <a href='http://ligand-expo.rcsb.org/' TARGET='_blank'>Ligand Depot</a> for a chemical component ID and enter the three-letter ID.
+PDB chemical component ID: Please check the PDB <a href='http://ligand-expo.rcsb.org/' TARGET='_blank'>Ligand Expo</a> for a chemical component ID and enter the three-letter ID.
 ;
 
    loop_
@@ -32778,6 +32832,33 @@ ID
 
 save_
 
+save__Sample.Name
+
+   _Tag                  '_Sample.Name'
+
+   _Category              'Sample'
+
+   _Description
+;
+Provide a name for the sample that uniquely identifies this sample from the other samples listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+Sample name
+;
+
+   loop_
+     _Example
+
+;
+13C 15N sample
+;
+
+   stop_
+
+save_
+
 save__Sample.Type
 
    _Tag                  '_Sample.Type'
@@ -36693,6 +36774,33 @@ Method ID
 
 save_
 
+save__Method.Name
+
+   _Tag                  '_Method.Name'
+
+   _Category              'Method'
+
+   _Description
+;
+Descriptive name used to uniquely identify this method.
+;
+
+   _Adit_item_view_name
+;
+Method name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Method.Derivation_type
 
    _Tag                  '_Method.Derivation_type'
@@ -37422,6 +37530,33 @@ Mass spectrometer ID
 
 save_
 
+save__Mass_spec.Name
+
+   _Tag                  '_Mass_spec.Name'
+
+   _Category              'Mass_spec'
+
+   _Description
+;
+A name that uniquely identifies the Mass spectrometer from other spectrometers listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+Mass spectrometer name
+;
+
+   loop_
+     _Example
+
+;
+Mass spectrometer 1
+;
+
+   stop_
+
+save_
+
 save__Mass_spec.Type
 
    _Tag                  '_Mass_spec.Type'
@@ -37565,7 +37700,7 @@ save__Mass_spec_config.ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37592,7 +37727,7 @@ save__Mass_spec_config.Ordinal
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37619,7 +37754,7 @@ save__Mass_spec_config.Component_type
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37646,7 +37781,7 @@ save__Mass_spec_config.Component_name
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37673,7 +37808,7 @@ save__Mass_spec_config.Sf_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37700,7 +37835,7 @@ save__Mass_spec_config.Entry_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37727,7 +37862,7 @@ save__Mass_spec_config.Mass_spec_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37754,7 +37889,7 @@ save__Mass_spec_component_param.Mass_spec_config_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37781,7 +37916,7 @@ save__Mass_spec_component_param.ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37808,7 +37943,7 @@ save__Mass_spec_component_param.Name
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37835,7 +37970,7 @@ save__Mass_spec_component_param.Value
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37862,7 +37997,7 @@ save__Mass_spec_component_param.Sf_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37889,7 +38024,7 @@ save__Mass_spec_component_param.Entry_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37916,7 +38051,7 @@ save__Mass_spec_component_param.Mass_spec_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37943,7 +38078,7 @@ save__Mass_spec_software.Software_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37970,7 +38105,7 @@ save__Mass_spec_software.Software_label
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -37997,7 +38132,7 @@ save__Mass_spec_software.Sf_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -38024,7 +38159,7 @@ save__Mass_spec_software.Entry_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -38051,7 +38186,7 @@ save__Mass_spec_software.Mass_spec_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -38334,6 +38469,33 @@ Mass spectrometer ID
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__Mass_spectrometer_list.Name
+
+   _Tag                  '_Mass_spectrometer_list.Name'
+
+   _Category              'Mass_spectrometer_list'
+
+   _Description
+;
+A name that uniquely identifies the Mass spectrometer from other spectrometers listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+Mass spectrometer list name
+;
+
+   loop_
+     _Example
+
+;
+Mass spectrometer list
 ;
 
    stop_
@@ -38880,6 +39042,33 @@ ID
 
 save_
 
+save__Mass_spec_ref_compd_set.Name
+
+   _Tag                  '_Mass_spec_ref_compd_set.Name'
+
+   _Category              'Mass_spec_ref_compd_set'
+
+   _Description
+;
+A name that uniquely identifies the list of mass spectrometer reference compounds from other similar lists in the entry.
+;
+
+   _Adit_item_view_name
+;
+Mass spectrometer reference compound set name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Mass_spec_ref_compd_set.Details
 
    _Tag                  '_Mass_spec_ref_compd_set.Details'
@@ -39104,12 +39293,12 @@ save__Chromatographic_system.Sf_framecode
 
    _Description
 ;
-A label that uniquely identifies the Mass spectrometer from other spectrometers listed in the entry.
+A label that uniquely identifies the chromatographic system from other similar systems listed in the entry.
 ;
 
    _Adit_item_view_name
 ;
-Mass spectrometer label
+Chromatographic system label
 ;
 
    loop_
@@ -39185,12 +39374,39 @@ save__Chromatographic_system.ID
 
    _Description
 ;
-A value that uniquely identifies the Mass spectrometer from other spectrometers listed in the entry.
+A value that uniquely identifies the chromatographic system from similar systems listed in the entry.
 ;
 
    _Adit_item_view_name
 ;
 Mass spectrometer ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chromatographic_system.Name
+
+   _Tag                  '_Chromatographic_system.Name'
+
+   _Category              'Chromatographic_system'
+
+   _Description
+;
+A name that uniquely identifies the chromatographic system from other similar systems listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+Chromatographic system name
 ;
 
    loop_
@@ -39239,7 +39455,7 @@ save__Chromatographic_system.Pump_manufacturer
 
    _Description
 ;
-Name of the company or other entity that built the Mass spectrometer.
+Name of the company or other entity that built the chromatographic system.
 ;
 
    _Adit_item_view_name
@@ -39266,7 +39482,7 @@ save__Chromatographic_system.Pump_model
 
    _Description
 ;
-The name or acronym used to describe the model of the spectrometer.
+The name or acronym used to describe the model of the chromatographic system.
 ;
 
    _Adit_item_view_name
@@ -39293,7 +39509,7 @@ save__Chromatographic_system.Pump_serial_number
 
    _Description
 ;
-Unique code assigned to a specific spectrometer by the manufacturer.
+Unique code assigned to a specific chromatographic system by the manufacturer.
 ;
 
    _Adit_item_view_name
@@ -39536,12 +39752,12 @@ save__Chromatographic_column.Sf_framecode
 
    _Description
 ;
-A label that uniquely identifies the Mass spectrometer from other spectrometers listed in the entry.
+A label that uniquely identifies the chromatographic column from similar chromatographic columns listed in the entry.
 ;
 
    _Adit_item_view_name
 ;
-Mass spectrometer label
+Chromatographic column label
 ;
 
    loop_
@@ -39617,12 +39833,39 @@ save__Chromatographic_column.ID
 
    _Description
 ;
-A value that uniquely identifies the Mass spectrometer from other spectrometers listed in the entry.
+A value that uniquely identifies the chromatographic column from other chromatographic columns listed in the entry.
 ;
 
    _Adit_item_view_name
 ;
-Mass spectrometer ID
+Chromatographic column ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chromatographic_column.Name
+
+   _Tag                  '_Chromatographic_column.Name'
+
+   _Category              'Chromatographic_column'
+
+   _Description
+;
+A name that uniquely identifies the chromatographic column from similar chromatographic columns listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+Chromatographic column name
 ;
 
    loop_
@@ -39933,6 +40176,33 @@ ID
 
 save_
 
+save__Fluorescence_instrument.Name
+
+   _Tag                  '_Fluorescence_instrument.Name'
+
+   _Category              'Fluorescence_instrument'
+
+   _Description
+;
+A name that uniquely identifies the florescence instrument from similar instruments listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+Florescence instrument name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Fluorescence_instrument.Details
 
    _Tag                  '_Fluorescence_instrument.Details'
@@ -40190,6 +40460,33 @@ save__EMR_instrument.ID
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__EMR_instrument.Name
+
+   _Tag                  '_EMR_instrument.Name'
+
+   _Category              'EMR_instrument'
+
+   _Description
+;
+A name that uniquely identifies the EMR instrument from similar instruments listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+EMR instrument name
 ;
 
    loop_
@@ -40905,6 +41202,33 @@ NMR spectrometer ID
 
 save_
 
+save__NMR_spectrometer.Name
+
+   _Tag                  '_NMR_spectrometer.Name'
+
+   _Category              'NMR_spectrometer'
+
+   _Description
+;
+A name that uniquely identifies the NMR spectromater for other spectrometers listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+NMR specrometer name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__NMR_spectrometer.Details
 
    _Tag                  '_NMR_spectrometer.Details'
@@ -41210,12 +41534,12 @@ save__NMR_spectrometer_list.Sf_framecode
 
    _Description
 ;
-A label that uniquely identifies the NMR spectrometer from other spectrometers listed in the entry.
+A label that uniquely identifies the NMR spectrometer list from other spectrometer lists in the entry.
 ;
 
    _Adit_item_view_name
 ;
-NMR spectrometer label
+NMR spectrometer list label
 ;
 
    loop_
@@ -41264,7 +41588,7 @@ save__NMR_spectrometer_list.Sf_ID
 
    _Description
 ;
-An integer value that is the unique identifier for the saveframe that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
+An integer value that is the unique identifier for the save frame that applies across the archive.  This value is not stable and may be reassigned each time the data are loaded into a database system.
 ;
 
    _Adit_item_view_name
@@ -41291,12 +41615,39 @@ save__NMR_spectrometer_list.ID
 
    _Description
 ;
-A value that uniquely identifies the NMR spectrometer from other spectrometers listed in the entry.
+A value that uniquely identifies the NMR spectrometer list from other NMR spectrometer lists in the entry.
 ;
 
    _Adit_item_view_name
 ;
-NMR spectrometer ID
+NMR spectrometer list ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__NMR_spectrometer_list.Name
+
+   _Tag                  '_NMR_spectrometer_list.Name'
+
+   _Category              'NMR_spectrometer_list'
+
+   _Description
+;
+A value that uniquely identifies the NMR spectrometer list from other NMR spectrometer lists in the entry
+;
+
+   _Adit_item_view_name
+;
+NMR spectrometer list name
 ;
 
    loop_
@@ -41756,6 +42107,33 @@ A value that uniquely identifies the NMR probe from other probes listed in the e
    _Adit_item_view_name
 ;
 NMR spectrometer probe ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__NMR_spectrometer_probe.Name
+
+   _Tag                  '_NMR_spectrometer_probe.Name'
+
+   _Category              'NMR_spectrometer_probe'
+
+   _Description
+;
+A name that uniquely identifies the probe from other probes listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+NMR spectrometer probe name
 ;
 
    loop_
@@ -48357,6 +48735,33 @@ ID
 
 save_
 
+save__Computer.Name
+
+   _Tag                  '_Computer.Name'
+
+   _Category              'Computer'
+
+   _Description
+;
+A name that uniquely identifies the computer from other computers listed in the entry.
+;
+
+   _Adit_item_view_name
+;
+Computer name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Computer.Details
 
    _Tag                  '_Computer.Details'
@@ -48789,6 +49194,33 @@ Chem shift ref ID
 
 save_
 
+save__Chem_shift_reference.Name
+
+   _Tag                  '_Chem_shift_reference.Name'
+
+   _Category              'Chem_shift_reference'
+
+   _Description
+;
+A descriptive name that uniquely identifies this list of chemical shift referencing parameters used in reporting assigned chemical shifts and other chemical shift data.
+;
+
+   _Adit_item_view_name
+;
+Chemical shift reference set name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Chem_shift_reference.Proton_shifts_flag
 
    _Tag                  '_Chem_shift_reference.Proton_shifts_flag'
@@ -48797,7 +49229,7 @@ save__Chem_shift_reference.Proton_shifts_flag
 
    _Description
 ;
-Please indicate if you are depositing 1H chemical shifts by selecting one of the three options. If you have used the IUPAC recommend method for referencing 1H chemical shifts (DSS was used as the standard), then select the 'yes with IUPAC referencing' option. After clicking on the 'Save Changes' button, the fields for the 1H chemical shift referencing will be automatically filled in with the appropriate values.
+Please indicate if you are depositing 1H chemical shifts by selecting one of the three options. If you have used the IUPAC recommend method for referencing 1H chemical shifts (DSS was used as the standard), then select the 'yes with IUPAC referencing' option.
 ;
 
    _Adit_item_view_name
@@ -48824,12 +49256,12 @@ save__Chem_shift_reference.Carbon_shifts_flag
 
    _Description
 ;
-Please indicate if you are depositing 13C chemical shifts. If you have used the IUPAC recommend method for referencing 13C chemical shifts (DSS was used as the standard and the correct 1H/13C ratio), then select the 'yes with IUPAC referencing' option. After clicking on the 'Save Changes' button, the fields for the 13C chemical shift referencing will be automatically filled in with the appropriate values.
+Please indicate if you are depositing 13C chemical shifts. If you have used the IUPAC recommend method for referencing 13C chemical shifts (DSS was used as the standard and the correct 1H/13C ratio), then select the 'yes with IUPAC referencing' option.
 ;
 
    _Adit_item_view_name
 ;
-13C chemcial shifts deposited
+13C chemical shifts deposited
 ;
 
    loop_
@@ -48851,7 +49283,7 @@ save__Chem_shift_reference.Nitrogen_shifts_flag
 
    _Description
 ;
-Please indicate if you are depositing 15N chemical shifts. If you have used the IUPAC recommend method for referencing 15N chemical shifts (DSS was used as the standard and the correct 1H/15N ratio), then select the 'yes with IUPAC referencing' option. After clicking on the 'Save Changes' button, the fields for the 15N chemical shift referencing will be automatically filled in with the appropriate values.
+Please indicate if you are depositing 15N chemical shifts. If you have used the IUPAC recommend method for referencing 15N chemical shifts (DSS was used as the standard and the correct 1H/15N ratio), then select the 'yes with IUPAC referencing' option.
 ;
 
    _Adit_item_view_name
@@ -48878,7 +49310,7 @@ save__Chem_shift_reference.Phosphorus_shifts_flag
 
    _Description
 ;
-Please indicate if you are depositing 31P chemical shifts. If you have used the IUPAC recommend method for referencing 31P chemical shifts (DSS was used as the standard and the correct 1H/31P ratio), then select the 'yes with IUPAC referencing' option. After clicking on the 'Save Changes' button, the fields for the 31P chemical shift referencing will be automatically filled in with the appropriate values.
+Please indicate if you are depositing 31P chemical shifts. If you have used the IUPAC recommend method for referencing 31P chemical shifts (DSS was used as the standard and the correct 1H/31P ratio), then select the 'yes with IUPAC referencing' option.
 ;
 
    _Adit_item_view_name
@@ -49748,6 +50180,33 @@ An integer value that uniquely identifies this saveframe of assigned chemical sh
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Assigned_chem_shift_list.Name
+
+   _Tag                  '_Assigned_chem_shift_list.Name'
+
+   _Category              'Assigned_chem_shift_list'
+
+   _Description
+;
+A descriptive namel that uniquely identifies this list of reported assigned chemical shifts.
+;
+
+   _Adit_item_view_name
+;
+Assigned chemical shift list name
 ;
 
    loop_
@@ -52056,6 +52515,33 @@ ID
 
 save_
 
+save__Chem_shifts_calc_type.Name
+
+   _Tag                  '_Chem_shifts_calc_type.Name'
+
+   _Category              'Chem_shifts_calc_type'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the chem shift calculation type.
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Chem_shifts_calc_type.Calculation_level
 
    _Tag                  '_Chem_shifts_calc_type.Calculation_level'
@@ -52637,6 +53123,33 @@ An integer value that uniquely identifies this saveframe of theoretical chemical
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_chem_shift_list.Name
+
+   _Tag                  '_Theoretical_chem_shift_list.Name'
+
+   _Category              'Theoretical_chem_shift_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Theoretical chemical shift list name
 ;
 
    loop_
@@ -53798,6 +54311,33 @@ An integer value that uniquely identifies this saveframe of scalar coupling cons
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Coupling_constant_list.Name
+
+   _Tag                  '_Coupling_constant_list.Name'
+
+   _Category              'Coupling_constant_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Coupling constant list name
 ;
 
    loop_
@@ -55574,12 +56114,12 @@ save__Theoretical_coupling_constant_list.Sf_framecode
 
    _Description
 ;
-A descriptive label that uniquely identifies this list of reported coupling constants..
+A descriptive label that uniquely identifies this list of reported theoretical coupling constants..
 ;
 
    _Adit_item_view_name
 ;
-Coupling constant list label
+Theoretical coupling constant list label
 ;
 
    loop_
@@ -55661,6 +56201,33 @@ An integer value that uniquely identifies this saveframe of scalar coupling cons
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_coupling_constant_list.Name
+
+   _Tag                  '_Theoretical_coupling_constant_list.Name'
+
+   _Category              'Theoretical_coupling_constant_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Theoretical coupling constant list name
 ;
 
    loop_
@@ -57470,6 +58037,33 @@ An integer value that uniquely identifies this saveframe of spectral peak values
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Spectral_peak_list.Name
+
+   _Tag                  '_Spectral_peak_list.Name'
+
+   _Category              'Spectral_peak_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Spectral peak list name
 ;
 
    loop_
@@ -60137,7 +60731,7 @@ save__Assigned_peak_chem_shift.Ambiguity_code
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60164,7 +60758,7 @@ save__Assigned_peak_chem_shift.Ambiguity_set_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60191,7 +60785,7 @@ save__Assigned_peak_chem_shift.Auth_atom_peak_num
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60218,7 +60812,7 @@ save__Assigned_peak_chem_shift.Auth_entity_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60245,7 +60839,7 @@ save__Assigned_peak_chem_shift.Auth_seq_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60272,7 +60866,7 @@ save__Assigned_peak_chem_shift.Auth_comp_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60299,7 +60893,7 @@ save__Assigned_peak_chem_shift.Auth_atom_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60326,7 +60920,7 @@ save__Assigned_peak_chem_shift.Auth_ambiguity_code
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60353,7 +60947,7 @@ save__Assigned_peak_chem_shift.Auth_ambiguity_set_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -60380,7 +60974,7 @@ save__Assigned_peak_chem_shift.Auth_amb_atom_grp_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -62383,7 +62977,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 1
 ;
 
    loop_
@@ -62410,7 +63004,7 @@ save__Peak_row_format.Entity_ID_1
 
    _Adit_item_view_name
 ;
-?
+Entity ID 1
 ;
 
    loop_
@@ -62437,7 +63031,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 1
 ;
 
    loop_
@@ -62464,7 +63058,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 1
 ;
 
    loop_
@@ -62491,7 +63085,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 1
 ;
 
    loop_
@@ -62518,7 +63112,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 1
 ;
 
    loop_
@@ -62545,7 +63139,7 @@ save__Peak_row_format.Ambiguity_code_1
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 1
 ;
 
    loop_
@@ -62572,7 +63166,7 @@ save__Peak_row_format.Ambiguity_set_ID_1
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 1
 ;
 
    loop_
@@ -62599,7 +63193,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 2
 ;
 
    loop_
@@ -62626,7 +63220,7 @@ save__Peak_row_format.Entity_ID_2
 
    _Adit_item_view_name
 ;
-?
+Entity ID 2
 ;
 
    loop_
@@ -62653,7 +63247,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 2
 ;
 
    loop_
@@ -62680,7 +63274,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 2
 ;
 
    loop_
@@ -62707,7 +63301,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 2
 ;
 
    loop_
@@ -62734,7 +63328,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 2
 ;
 
    loop_
@@ -62761,7 +63355,7 @@ save__Peak_row_format.Ambiguity_code_2
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 2
 ;
 
    loop_
@@ -62788,7 +63382,7 @@ save__Peak_row_format.Ambiguity_set_ID_2
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 2
 ;
 
    loop_
@@ -62815,7 +63409,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 3
 ;
 
    loop_
@@ -62842,7 +63436,7 @@ save__Peak_row_format.Entity_ID_3
 
    _Adit_item_view_name
 ;
-?
+Entity ID 3
 ;
 
    loop_
@@ -62869,7 +63463,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 3
 ;
 
    loop_
@@ -62896,7 +63490,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 3
 ;
 
    loop_
@@ -62923,7 +63517,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 3
 ;
 
    loop_
@@ -62950,7 +63544,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 3
 ;
 
    loop_
@@ -62977,7 +63571,7 @@ save__Peak_row_format.Ambiguity_code_3
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 3
 ;
 
    loop_
@@ -63004,7 +63598,7 @@ save__Peak_row_format.Ambiguity_set_ID_3
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 3
 ;
 
    loop_
@@ -63031,7 +63625,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 4
 ;
 
    loop_
@@ -63058,7 +63652,7 @@ save__Peak_row_format.Entity_ID_4
 
    _Adit_item_view_name
 ;
-?
+Entity ID 4
 ;
 
    loop_
@@ -63085,7 +63679,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 4
 ;
 
    loop_
@@ -63112,7 +63706,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 4
 ;
 
    loop_
@@ -63139,7 +63733,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 4
 ;
 
    loop_
@@ -63166,7 +63760,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 4
 ;
 
    loop_
@@ -63193,7 +63787,7 @@ save__Peak_row_format.Ambiguity_code_4
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 4
 ;
 
    loop_
@@ -63220,7 +63814,7 @@ save__Peak_row_format.Ambiguity_set_ID_4
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 4
 ;
 
    loop_
@@ -63247,7 +63841,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 5
 ;
 
    loop_
@@ -63274,7 +63868,7 @@ save__Peak_row_format.Entity_ID_5
 
    _Adit_item_view_name
 ;
-?
+Entity ID 5
 ;
 
    loop_
@@ -63301,7 +63895,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 5
 ;
 
    loop_
@@ -63328,7 +63922,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 5
 ;
 
    loop_
@@ -63355,7 +63949,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 5
 ;
 
    loop_
@@ -63382,7 +63976,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 5
 ;
 
    loop_
@@ -63409,7 +64003,7 @@ save__Peak_row_format.Ambiguity_code_5
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 5
 ;
 
    loop_
@@ -63436,7 +64030,7 @@ save__Peak_row_format.Ambiguity_set_ID_5
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 5
 ;
 
    loop_
@@ -63463,7 +64057,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 6
 ;
 
    loop_
@@ -63490,7 +64084,7 @@ save__Peak_row_format.Entity_ID_6
 
    _Adit_item_view_name
 ;
-?
+Entity ID 6
 ;
 
    loop_
@@ -63517,7 +64111,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 6
 ;
 
    loop_
@@ -63544,7 +64138,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 6
 ;
 
    loop_
@@ -63571,7 +64165,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 6
 ;
 
    loop_
@@ -63598,7 +64192,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 6
 ;
 
    loop_
@@ -63625,7 +64219,7 @@ save__Peak_row_format.Ambiguity_code_6
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 6
 ;
 
    loop_
@@ -63652,7 +64246,7 @@ save__Peak_row_format.Ambiguity_set_ID_6
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 6
 ;
 
    loop_
@@ -63679,7 +64273,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 7
 ;
 
    loop_
@@ -63706,7 +64300,7 @@ save__Peak_row_format.Entity_ID_7
 
    _Adit_item_view_name
 ;
-?
+Entity ID 7
 ;
 
    loop_
@@ -63733,7 +64327,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 7
 ;
 
    loop_
@@ -63760,7 +64354,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 7
 ;
 
    loop_
@@ -63787,7 +64381,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 7
 ;
 
    loop_
@@ -63814,7 +64408,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 7
 ;
 
    loop_
@@ -63841,7 +64435,7 @@ save__Peak_row_format.Ambiguity_code_7
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 7
 ;
 
    loop_
@@ -63868,7 +64462,7 @@ save__Peak_row_format.Ambiguity_set_ID_7
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 7
 ;
 
    loop_
@@ -63895,7 +64489,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 8
 ;
 
    loop_
@@ -63922,7 +64516,7 @@ save__Peak_row_format.Entity_ID_8
 
    _Adit_item_view_name
 ;
-?
+Entity ID 8
 ;
 
    loop_
@@ -63949,7 +64543,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 8
 ;
 
    loop_
@@ -63976,7 +64570,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 8
 ;
 
    loop_
@@ -64003,7 +64597,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 8
 ;
 
    loop_
@@ -64030,7 +64624,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 8
 ;
 
    loop_
@@ -64057,7 +64651,7 @@ save__Peak_row_format.Ambiguity_code_8
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 8
 ;
 
    loop_
@@ -64084,7 +64678,7 @@ save__Peak_row_format.Ambiguity_set_ID_8
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 8
 ;
 
    loop_
@@ -64111,7 +64705,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 9
 ;
 
    loop_
@@ -64138,7 +64732,7 @@ save__Peak_row_format.Entity_ID_9
 
    _Adit_item_view_name
 ;
-?
+Entity ID 9
 ;
 
    loop_
@@ -64165,7 +64759,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 9
 ;
 
    loop_
@@ -64192,7 +64786,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 9
 ;
 
    loop_
@@ -64219,7 +64813,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 9
 ;
 
    loop_
@@ -64246,7 +64840,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 9
 ;
 
    loop_
@@ -64273,7 +64867,7 @@ save__Peak_row_format.Ambiguity_code_9
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 9
 ;
 
    loop_
@@ -64300,7 +64894,7 @@ save__Peak_row_format.Ambiguity_set_ID_9
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 9
 ;
 
    loop_
@@ -64327,7 +64921,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 10
 ;
 
    loop_
@@ -64354,7 +64948,7 @@ save__Peak_row_format.Entity_ID_10
 
    _Adit_item_view_name
 ;
-?
+Entity ID 10
 ;
 
    loop_
@@ -64381,7 +64975,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 10
 ;
 
    loop_
@@ -64408,7 +65002,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 10
 ;
 
    loop_
@@ -64435,7 +65029,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 10
 ;
 
    loop_
@@ -64462,7 +65056,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 10
 ;
 
    loop_
@@ -64489,7 +65083,7 @@ save__Peak_row_format.Ambiguity_code_10
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 10
 ;
 
    loop_
@@ -64516,7 +65110,7 @@ save__Peak_row_format.Ambiguity_set_ID_10
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 10
 ;
 
    loop_
@@ -64543,7 +65137,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 11
 ;
 
    loop_
@@ -64570,7 +65164,7 @@ save__Peak_row_format.Entity_ID_11
 
    _Adit_item_view_name
 ;
-?
+Entity ID 11
 ;
 
    loop_
@@ -64597,7 +65191,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 11
 ;
 
    loop_
@@ -64624,7 +65218,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 11
 ;
 
    loop_
@@ -64651,7 +65245,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 11
 ;
 
    loop_
@@ -64678,7 +65272,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 11
 ;
 
    loop_
@@ -64705,7 +65299,7 @@ save__Peak_row_format.Ambiguity_code_11
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 11
 ;
 
    loop_
@@ -64732,7 +65326,7 @@ save__Peak_row_format.Ambiguity_set_ID_11
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 11
 ;
 
    loop_
@@ -64759,7 +65353,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 12
 ;
 
    loop_
@@ -64786,7 +65380,7 @@ save__Peak_row_format.Entity_ID_12
 
    _Adit_item_view_name
 ;
-?
+Entity ID 12
 ;
 
    loop_
@@ -64813,7 +65407,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 12
 ;
 
    loop_
@@ -64840,7 +65434,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 12
 ;
 
    loop_
@@ -64867,7 +65461,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 12
 ;
 
    loop_
@@ -64894,7 +65488,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 12
 ;
 
    loop_
@@ -64921,7 +65515,7 @@ save__Peak_row_format.Ambiguity_code_12
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 12
 ;
 
    loop_
@@ -64948,7 +65542,7 @@ save__Peak_row_format.Ambiguity_set_ID_12
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 12
 ;
 
    loop_
@@ -64975,7 +65569,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 13
 ;
 
    loop_
@@ -65002,7 +65596,7 @@ save__Peak_row_format.Entity_ID_13
 
    _Adit_item_view_name
 ;
-?
+Entity ID 13
 ;
 
    loop_
@@ -65029,7 +65623,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 13
 ;
 
    loop_
@@ -65056,7 +65650,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 13
 ;
 
    loop_
@@ -65083,7 +65677,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 13
 ;
 
    loop_
@@ -65110,7 +65704,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 13
 ;
 
    loop_
@@ -65137,7 +65731,7 @@ save__Peak_row_format.Ambiguity_code_13
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 13
 ;
 
    loop_
@@ -65164,7 +65758,7 @@ save__Peak_row_format.Ambiguity_set_ID_13
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 13
 ;
 
    loop_
@@ -65191,7 +65785,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 14
 ;
 
    loop_
@@ -65218,7 +65812,7 @@ save__Peak_row_format.Entity_ID_14
 
    _Adit_item_view_name
 ;
-?
+Entity ID 14
 ;
 
    loop_
@@ -65245,7 +65839,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 14
 ;
 
    loop_
@@ -65272,7 +65866,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 14
 ;
 
    loop_
@@ -65299,7 +65893,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 14
 ;
 
    loop_
@@ -65326,7 +65920,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 14
 ;
 
    loop_
@@ -65353,7 +65947,7 @@ save__Peak_row_format.Ambiguity_code_14
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 14
 ;
 
    loop_
@@ -65380,7 +65974,7 @@ save__Peak_row_format.Ambiguity_set_ID_14
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 14
 ;
 
    loop_
@@ -65407,7 +66001,7 @@ Pointer to '_Entity_assembly.ID'
 
    _Adit_item_view_name
 ;
-?
+Entity assembly ID 15
 ;
 
    loop_
@@ -65434,7 +66028,7 @@ save__Peak_row_format.Entity_ID_15
 
    _Adit_item_view_name
 ;
-?
+Entity ID 15
 ;
 
    loop_
@@ -65461,7 +66055,7 @@ Pointer to '_Entity_comp_index.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp index ID 15
 ;
 
    loop_
@@ -65488,7 +66082,7 @@ Pointer to '_PDBX_poly_seq_scheme.Seq_ID'
 
    _Adit_item_view_name
 ;
-?
+Seq ID 15
 ;
 
    loop_
@@ -65515,7 +66109,7 @@ Pointer to '_Chem_comp.ID'
 
    _Adit_item_view_name
 ;
-?
+Comp ID 15
 ;
 
    loop_
@@ -65542,7 +66136,7 @@ Pointer to '_Chem_comp_atom.Atom_ID'
 
    _Adit_item_view_name
 ;
-?
+Atom ID 15
 ;
 
    loop_
@@ -65569,7 +66163,7 @@ save__Peak_row_format.Ambiguity_code_15
 
    _Adit_item_view_name
 ;
-?
+Ambiguity code 15
 ;
 
    loop_
@@ -65596,7 +66190,7 @@ save__Peak_row_format.Ambiguity_set_ID_15
 
    _Adit_item_view_name
 ;
-?
+Ambiguity set ID 15
 ;
 
    loop_
@@ -65618,12 +66212,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_1
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 1
 ;
 
    loop_
@@ -65650,7 +66244,7 @@ save__Peak_row_format.Auth_entity_ID_1
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 1
 ;
 
    loop_
@@ -65699,12 +66293,12 @@ save__Peak_row_format.Auth_seq_ID_1
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 1
 ;
 
    loop_
@@ -65726,12 +66320,12 @@ save__Peak_row_format.Auth_comp_ID_1
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 1
 ;
 
    loop_
@@ -65753,12 +66347,12 @@ save__Peak_row_format.Auth_atom_ID_1
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 1
 ;
 
    loop_
@@ -65785,7 +66379,7 @@ save__Peak_row_format.Auth_ambiguity_code_1
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 1
 ;
 
    loop_
@@ -65812,7 +66406,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_1
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 1
 ;
 
    loop_
@@ -65834,12 +66428,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_2
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 2
 ;
 
    loop_
@@ -65866,7 +66460,7 @@ save__Peak_row_format.Auth_entity_ID_2
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 2
 ;
 
    loop_
@@ -65915,12 +66509,12 @@ save__Peak_row_format.Auth_seq_ID_2
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 2
 ;
 
    loop_
@@ -65942,12 +66536,12 @@ save__Peak_row_format.Auth_comp_ID_2
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 2
 ;
 
    loop_
@@ -65969,12 +66563,12 @@ save__Peak_row_format.Auth_atom_ID_2
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 2
 ;
 
    loop_
@@ -66001,7 +66595,7 @@ save__Peak_row_format.Auth_ambiguity_code_2
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 2
 ;
 
    loop_
@@ -66028,7 +66622,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_2
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 2
 ;
 
    loop_
@@ -66050,12 +66644,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_3
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 3
 ;
 
    loop_
@@ -66082,7 +66676,7 @@ save__Peak_row_format.Auth_entity_ID_3
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 3
 ;
 
    loop_
@@ -66131,12 +66725,12 @@ save__Peak_row_format.Auth_seq_ID_3
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 3
 ;
 
    loop_
@@ -66158,12 +66752,12 @@ save__Peak_row_format.Auth_comp_ID_3
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 3
 ;
 
    loop_
@@ -66185,12 +66779,12 @@ save__Peak_row_format.Auth_atom_ID_3
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 3
 ;
 
    loop_
@@ -66217,7 +66811,7 @@ save__Peak_row_format.Auth_ambiguity_code_3
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 3
 ;
 
    loop_
@@ -66244,7 +66838,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_3
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 3
 ;
 
    loop_
@@ -66266,12 +66860,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_4
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 4
 ;
 
    loop_
@@ -66298,7 +66892,7 @@ save__Peak_row_format.Auth_entity_ID_4
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 4
 ;
 
    loop_
@@ -66347,12 +66941,12 @@ save__Peak_row_format.Auth_seq_ID_4
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 4
 ;
 
    loop_
@@ -66374,12 +66968,12 @@ save__Peak_row_format.Auth_comp_ID_4
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 4
 ;
 
    loop_
@@ -66401,12 +66995,12 @@ save__Peak_row_format.Auth_atom_ID_4
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 4
 ;
 
    loop_
@@ -66433,7 +67027,7 @@ save__Peak_row_format.Auth_ambiguity_code_4
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 4
 ;
 
    loop_
@@ -66460,7 +67054,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_4
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 4
 ;
 
    loop_
@@ -66482,12 +67076,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_5
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 5
 ;
 
    loop_
@@ -66514,7 +67108,7 @@ save__Peak_row_format.Auth_entity_ID_5
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 5
 ;
 
    loop_
@@ -66563,12 +67157,12 @@ save__Peak_row_format.Auth_seq_ID_5
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 5
 ;
 
    loop_
@@ -66590,12 +67184,12 @@ save__Peak_row_format.Auth_comp_ID_5
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 5
 ;
 
    loop_
@@ -66617,12 +67211,12 @@ save__Peak_row_format.Auth_atom_ID_5
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 5
 ;
 
    loop_
@@ -66649,7 +67243,7 @@ save__Peak_row_format.Auth_ambiguity_code_5
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 5
 ;
 
    loop_
@@ -66676,7 +67270,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_5
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 5
 ;
 
    loop_
@@ -66698,12 +67292,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_6
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 6
 ;
 
    loop_
@@ -66730,7 +67324,7 @@ save__Peak_row_format.Auth_entity_ID_6
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 6
 ;
 
    loop_
@@ -66779,12 +67373,12 @@ save__Peak_row_format.Auth_seq_ID_6
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 6
 ;
 
    loop_
@@ -66806,12 +67400,12 @@ save__Peak_row_format.Auth_comp_ID_6
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 6
 ;
 
    loop_
@@ -66833,12 +67427,12 @@ save__Peak_row_format.Auth_atom_ID_6
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 6
 ;
 
    loop_
@@ -66865,7 +67459,7 @@ save__Peak_row_format.Auth_ambiguity_code_6
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 6
 ;
 
    loop_
@@ -66892,7 +67486,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_6
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 6
 ;
 
    loop_
@@ -66914,12 +67508,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_7
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 7
 ;
 
    loop_
@@ -66946,7 +67540,7 @@ save__Peak_row_format.Auth_entity_ID_7
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 7
 ;
 
    loop_
@@ -66995,12 +67589,12 @@ save__Peak_row_format.Auth_seq_ID_7
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 7
 ;
 
    loop_
@@ -67022,12 +67616,12 @@ save__Peak_row_format.Auth_comp_ID_7
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 7
 ;
 
    loop_
@@ -67049,12 +67643,12 @@ save__Peak_row_format.Auth_atom_ID_7
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 7
 ;
 
    loop_
@@ -67081,7 +67675,7 @@ save__Peak_row_format.Auth_ambiguity_code_7
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 7
 ;
 
    loop_
@@ -67108,7 +67702,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_7
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 7
 ;
 
    loop_
@@ -67130,12 +67724,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_8
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 8
 ;
 
    loop_
@@ -67162,7 +67756,7 @@ save__Peak_row_format.Auth_entity_ID_8
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 8
 ;
 
    loop_
@@ -67211,12 +67805,12 @@ save__Peak_row_format.Auth_seq_ID_8
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 8
 ;
 
    loop_
@@ -67238,12 +67832,12 @@ save__Peak_row_format.Auth_comp_ID_8
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 8
 ;
 
    loop_
@@ -67265,12 +67859,12 @@ save__Peak_row_format.Auth_atom_ID_8
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 8
 ;
 
    loop_
@@ -67297,7 +67891,7 @@ save__Peak_row_format.Auth_ambiguity_code_8
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 8
 ;
 
    loop_
@@ -67324,7 +67918,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_8
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 8
 ;
 
    loop_
@@ -67346,12 +67940,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_9
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 9
 ;
 
    loop_
@@ -67378,7 +67972,7 @@ save__Peak_row_format.Auth_entity_ID_9
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 9
 ;
 
    loop_
@@ -67427,12 +68021,12 @@ save__Peak_row_format.Auth_seq_ID_9
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 9
 ;
 
    loop_
@@ -67454,12 +68048,12 @@ save__Peak_row_format.Auth_comp_ID_9
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 9
 ;
 
    loop_
@@ -67481,12 +68075,12 @@ save__Peak_row_format.Auth_atom_ID_9
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 9
 ;
 
    loop_
@@ -67513,7 +68107,7 @@ save__Peak_row_format.Auth_ambiguity_code_9
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 9
 ;
 
    loop_
@@ -67540,7 +68134,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_9
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 9
 ;
 
    loop_
@@ -67562,12 +68156,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_10
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 10
 ;
 
    loop_
@@ -67594,7 +68188,7 @@ save__Peak_row_format.Auth_entity_ID_10
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 10
 ;
 
    loop_
@@ -67643,12 +68237,12 @@ save__Peak_row_format.Auth_seq_ID_10
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 10
 ;
 
    loop_
@@ -67670,12 +68264,12 @@ save__Peak_row_format.Auth_comp_ID_10
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 10
 ;
 
    loop_
@@ -67697,12 +68291,12 @@ save__Peak_row_format.Auth_atom_ID_10
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 10
 ;
 
    loop_
@@ -67729,7 +68323,7 @@ save__Peak_row_format.Auth_ambiguity_code_10
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 10
 ;
 
    loop_
@@ -67756,7 +68350,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_10
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 10
 ;
 
    loop_
@@ -67778,12 +68372,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_11
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 11
 ;
 
    loop_
@@ -67810,7 +68404,7 @@ save__Peak_row_format.Auth_entity_ID_11
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 11
 ;
 
    loop_
@@ -67859,12 +68453,12 @@ save__Peak_row_format.Auth_seq_ID_11
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 11
 ;
 
    loop_
@@ -67886,12 +68480,12 @@ save__Peak_row_format.Auth_comp_ID_11
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 11
 ;
 
    loop_
@@ -67913,12 +68507,12 @@ save__Peak_row_format.Auth_atom_ID_11
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 11
 ;
 
    loop_
@@ -67945,7 +68539,7 @@ save__Peak_row_format.Auth_ambiguity_code_11
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 11
 ;
 
    loop_
@@ -67972,7 +68566,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_11
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 11
 ;
 
    loop_
@@ -67994,12 +68588,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_12
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 12
 ;
 
    loop_
@@ -68026,7 +68620,7 @@ save__Peak_row_format.Auth_entity_ID_12
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 12
 ;
 
    loop_
@@ -68075,12 +68669,12 @@ save__Peak_row_format.Auth_seq_ID_12
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 12
 ;
 
    loop_
@@ -68102,12 +68696,12 @@ save__Peak_row_format.Auth_comp_ID_12
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 12
 ;
 
    loop_
@@ -68129,12 +68723,12 @@ save__Peak_row_format.Auth_atom_ID_12
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 12
 ;
 
    loop_
@@ -68161,7 +68755,7 @@ save__Peak_row_format.Auth_ambiguity_code_12
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 12
 ;
 
    loop_
@@ -68188,7 +68782,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_12
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 12
 ;
 
    loop_
@@ -68210,12 +68804,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_13
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 13
 ;
 
    loop_
@@ -68242,7 +68836,7 @@ save__Peak_row_format.Auth_entity_ID_13
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 13
 ;
 
    loop_
@@ -68291,12 +68885,12 @@ save__Peak_row_format.Auth_seq_ID_13
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 13
 ;
 
    loop_
@@ -68318,12 +68912,12 @@ save__Peak_row_format.Auth_comp_ID_13
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 13
 ;
 
    loop_
@@ -68345,12 +68939,12 @@ save__Peak_row_format.Auth_atom_ID_13
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 13
 ;
 
    loop_
@@ -68377,7 +68971,7 @@ save__Peak_row_format.Auth_ambiguity_code_13
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 13
 ;
 
    loop_
@@ -68404,7 +68998,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_13
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 13
 ;
 
    loop_
@@ -68426,12 +69020,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_14
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 14
 ;
 
    loop_
@@ -68458,7 +69052,7 @@ save__Peak_row_format.Auth_entity_ID_14
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 14
 ;
 
    loop_
@@ -68507,12 +69101,12 @@ save__Peak_row_format.Auth_seq_ID_14
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 14
 ;
 
    loop_
@@ -68534,12 +69128,12 @@ save__Peak_row_format.Auth_comp_ID_14
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 14
 ;
 
    loop_
@@ -68561,12 +69155,12 @@ save__Peak_row_format.Auth_atom_ID_14
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 14
 ;
 
    loop_
@@ -68593,7 +69187,7 @@ save__Peak_row_format.Auth_ambiguity_code_14
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 14
 ;
 
    loop_
@@ -68620,7 +69214,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_14
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 14
 ;
 
    loop_
@@ -68642,12 +69236,12 @@ save__Peak_row_format.Auth_entity_assembly_ID_15
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth entity assembly ID 15
 ;
 
    loop_
@@ -68674,7 +69268,7 @@ save__Peak_row_format.Auth_entity_ID_15
 
    _Adit_item_view_name
 ;
-?
+Auth entity ID 15
 ;
 
    loop_
@@ -68723,12 +69317,12 @@ save__Peak_row_format.Auth_seq_ID_15
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth seq ID 15
 ;
 
    loop_
@@ -68750,12 +69344,12 @@ save__Peak_row_format.Auth_comp_ID_15
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth comp ID 15
 ;
 
    loop_
@@ -68777,12 +69371,12 @@ save__Peak_row_format.Auth_atom_ID_15
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
 ;
-?
+Auth atom ID 15
 ;
 
    loop_
@@ -68809,7 +69403,7 @@ save__Peak_row_format.Auth_ambiguity_code_15
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity code 15
 ;
 
    loop_
@@ -68836,7 +69430,7 @@ save__Peak_row_format.Auth_ambiguity_set_ID_15
 
    _Adit_item_view_name
 ;
-?
+Auth ambiguity set ID 15
 ;
 
    loop_
@@ -70551,6 +71145,33 @@ ID
 
 save_
 
+save__Resonance_linker_list.Name
+
+   _Tag                  '_Resonance_linker_list.Name'
+
+   _Category              'Resonance_linker_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Resonance linker list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Resonance_linker_list.Details
 
    _Tag                  '_Resonance_linker_list.Details'
@@ -71807,6 +72428,33 @@ An integer value that uniquely identifies this saveframe of chemical shift isoto
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_shift_isotope_effect_list.Name
+
+   _Tag                  '_Chem_shift_isotope_effect_list.Name'
+
+   _Category              'Chem_shift_isotope_effect_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Chemical shift isotope effects list name
 ;
 
    loop_
@@ -73818,6 +74466,33 @@ ID
 
 save_
 
+save__Chem_shift_perturbation_list.Name
+
+   _Tag                  '_Chem_shift_perturbation_list.Name'
+
+   _Category              'Chem_shift_perturbation_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for chemical shift differences caused by molecular interactions
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Chem_shift_perturbation_list.Type
 
    _Tag                  '_Chem_shift_perturbation_list.Type'
@@ -75182,6 +75857,33 @@ An integer value that uniquely identifies this saveframe of chemical shift aniso
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_shift_anisotropy.Name
+
+   _Tag                  '_Chem_shift_anisotropy.Name'
+
+   _Category              'Chem_shift_anisotropy'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Chemical shift anisotropy list name
 ;
 
    loop_
@@ -76667,6 +77369,33 @@ Unique identifier for the list of observed residual dipolar couplings.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__RDC_list.Name
+
+   _Tag                  '_RDC_list.Name'
+
+   _Category              'RDC_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Residual dipolar couplings list name
 ;
 
    loop_
@@ -78610,7 +79339,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Residual dipolar couplings list label
+Dipolar coupling list label
 ;
 
    loop_
@@ -78692,6 +79421,33 @@ Unique identifier for the list of observed residual dipolar couplings.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Dipolar_coupling_list.Name
+
+   _Tag                  '_Dipolar_coupling_list.Name'
+
+   _Category              'Dipolar_coupling_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Dipolar coupling list name
 ;
 
    loop_
@@ -80609,6 +81365,33 @@ An integer value that uniquely identifies this saveframe of spectral density dat
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Spectral_density_list.Name
+
+   _Tag                  '_Spectral_density_list.Name'
+
+   _Category              'Spectral_density_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Spectral density value list name
 ;
 
    loop_
@@ -83227,7 +84010,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-H exchange rate list label
+Chemical rate list label
 ;
 
    loop_
@@ -83309,6 +84092,33 @@ A unique identifier for the list of kinetic rate data.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chemical_rate_list.Name
+
+   _Tag                  '_Chemical_rate_list.Name'
+
+   _Category              'Chemical_rate_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Chemical rate list name
 ;
 
    loop_
@@ -84699,6 +85509,33 @@ ID
 
 save_
 
+save__H_exch_rate_list.Name
+
+   _Tag                  '_H_exch_rate_list.Name'
+
+   _Category              'H_exch_rate_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+H exchange rate list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__H_exch_rate_list.Data_file_name
 
    _Tag                  '_H_exch_rate_list.Data_file_name'
@@ -86022,6 +86859,33 @@ Sf ID
 
 save_
 
+save__H_exch_protection_factor_list.Name
+
+   _Tag                  '_H_exch_protection_factor_list.Name'
+
+   _Category              'H_exch_protection_factor_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+H exchange protection factor list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__H_exch_protection_factor_list.Data_file_name
 
    _Tag                  '_H_exch_protection_factor_list.Data_file_name'
@@ -87332,6 +88196,33 @@ An integer value that uniquely identifies this saveframe of homonuclear NOE data
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Homonucl_NOE_list.Name
+
+   _Tag                  '_Homonucl_NOE_list.Name'
+
+   _Category              'Homonucl_NOE_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Homonuclear NOE list name
 ;
 
    loop_
@@ -89100,6 +89991,33 @@ ID
 
 save_
 
+save__Heteronucl_NOE_list.Name
+
+   _Tag                  '_Heteronucl_NOE_list.Name'
+
+   _Category              'Heteronucl_NOE_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Heteronuclear NOE list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Heteronucl_NOE_list.Data_file_name
 
    _Tag                  '_Heteronucl_NOE_list.Data_file_name'
@@ -90733,7 +91651,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Heteronuclear NOE list label
+Theoretical heteronuclear NOE list label
 ;
 
    loop_
@@ -90822,6 +91740,33 @@ ID
 
 ;
 1
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_NOE_list.Name
+
+   _Tag                  '_Theoretical_heteronucl_NOE_list.Name'
+
+   _Category              'Theoretical_heteronucl_NOE_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Theoretical heteronuclear NOE list name
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -92556,6 +93501,33 @@ ID
 
 save_
 
+save__Heteronucl_T1_list.Name
+
+   _Tag                  '_Heteronucl_T1_list.Name'
+
+   _Category              'Heteronucl_T1_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Heteronuclear T1 list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Heteronucl_T1_list.Data_file_name
 
    _Tag                  '_Heteronucl_T1_list.Data_file_name'
@@ -93784,7 +94756,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Heteronuclear T1 list label
+Theoretical heteronuclear T1 list label
 ;
 
    loop_
@@ -93866,6 +94838,33 @@ An integer value that uniquely identifies this saveframe of theoretical heteronu
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.Name
+
+   _Tag                  '_Theoretical_heteronucl_T1_list.Name'
+
+   _Category              'Theoretical_heteronucl_T1_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Theoretical heteronuclear T1 list name
 ;
 
    loop_
@@ -95189,6 +96188,33 @@ An integer value that uniquely identifies this saveframe of heteronuclear T1rho 
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Heteronucl_T1rho_list.Name
+
+   _Tag                  '_Heteronucl_T1rho_list.Name'
+
+   _Category              'Heteronucl_T1rho_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Heteronuclear T1rho list name
 ;
 
    loop_
@@ -96660,6 +97686,33 @@ ID
 
 save_
 
+save__Heteronucl_T2_list.Name
+
+   _Tag                  '_Heteronucl_T2_list.Name'
+
+   _Category              'Heteronucl_T2_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Heteronuclear T2 list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Heteronucl_T2_list.Data_file_name
 
    _Tag                  '_Heteronucl_T2_list.Data_file_name'
@@ -98023,7 +99076,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Heteronuclear T2 list label
+Theoretical heteronuclear T2 list label
 ;
 
    loop_
@@ -98105,6 +99158,33 @@ An integer value that uniquely identifies this saveframe of theoretical heteronu
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Name
+
+   _Tag                  '_Theoretical_heteronucl_T2_list.Name'
+
+   _Category              'Theoretical_heteronucl_T2_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Theoretical heteronuclear T2 list name
 ;
 
    loop_
@@ -99563,6 +100643,33 @@ An integer value that uniquely identifies this saveframe of relaxation data from
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Name
+
+   _Tag                  '_Auto_relaxation_list.Name'
+
+   _Category              'Auto_relaxation_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Auto relaxation data set name
 ;
 
    loop_
@@ -101047,7 +102154,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Auto relaxation data set label
+Theoretical auto relaxation data set label
 ;
 
    loop_
@@ -101129,6 +102236,33 @@ An integer value that uniquely identifies this saveframe of relaxation data from
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Name
+
+   _Tag                  '_Theoretical_auto_relaxation_list.Name'
+
+   _Category              'Theoretical_auto_relaxation_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Theoretical auto relaxation data set name
 ;
 
    loop_
@@ -102695,6 +103829,33 @@ Unique identifier for the list of Dipole-dipole relaxation values.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Dipole_dipole_relax_list.Name
+
+   _Tag                  '_Dipole_dipole_relax_list.Name'
+
+   _Category              'Dipole_dipole_relax_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Dipole-Dipole relaxation list name
 ;
 
    loop_
@@ -104369,6 +105530,33 @@ Unique identifier for the list of cross-correlation values.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Cross_correlation_DD_list.Name
+
+   _Tag                  '_Cross_correlation_DD_list.Name'
+
+   _Category              'Cross_correlation_DD_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Cross correlation relaxation list name
 ;
 
    loop_
@@ -106717,7 +107905,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Cross correlation relaxation list label
+Theoretical cross correlation relaxation list label
 ;
 
    loop_
@@ -106799,6 +107987,33 @@ Unique identifier for the list of theoretical cross-correlation values.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Name
+
+   _Tag                  '_Theoretical_cross_correlation_DD_list.Name'
+
+   _Category              'Theoretical_cross_correlation_DD_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Theoretical cross correlation relaxation list name
 ;
 
    loop_
@@ -109242,6 +110457,33 @@ ID
 
 save_
 
+save__Cross_correlation_D_CSA_list.Name
+
+   _Tag                  '_Cross_correlation_D_CSA_list.Name'
+
+   _Category              'Cross_correlation_D_CSA_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Cross correlation relaxation list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Cross_correlation_D_CSA_list.Data_file_name
 
    _Tag                  '_Cross_correlation_D_CSA_list.Data_file_name'
@@ -111672,6 +112914,33 @@ ID
 
 save_
 
+save__Order_parameter_list.Name
+
+   _Tag                  '_Order_parameter_list.Name'
+
+   _Category              'Order_parameter_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Order parameter list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Order_parameter_list.Data_file_name
 
    _Tag                  '_Order_parameter_list.Data_file_name'
@@ -113535,6 +114804,33 @@ ID
 
 save_
 
+save__PH_titration_list.Name
+
+   _Tag                  '_PH_titration_list.Name'
+
+   _Category              'PH_titration_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+pH Titration pKa or pHmid  list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__PH_titration_list.Data_file_name
 
    _Tag                  '_PH_titration_list.Data_file_name'
@@ -115344,6 +116640,33 @@ ID
 
 save_
 
+save__PH_param_list.Name
+
+   _Tag                  '_PH_param_list.Name'
+
+   _Category              'PH_param_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+pH Titration experimental value list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__PH_param_list.PH_titration_list_ID
 
    _Tag                  '_PH_param_list.PH_titration_list_ID'
@@ -115898,6 +117221,33 @@ Unique identifier for the list of reported deuterium/hydrogen fractionation fact
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__D_H_fractionation_factor_list.Name
+
+   _Tag                  '_D_H_fractionation_factor_list.Name'
+
+   _Category              'D_H_fractionation_factor_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+D/H fractionation factor list name
 ;
 
    loop_
@@ -117113,6 +118463,33 @@ save__Binding_value_list.ID
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_value_list.Name
+
+   _Tag                  '_Binding_value_list.Name'
+
+   _Category              'Binding_value_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+binding constants list name
 ;
 
    loop_
@@ -118651,7 +120028,7 @@ A label for the saveframe that describes in very brief terms the information con
 
    _Adit_item_view_name
 ;
-Binding parameter list name
+Binding parameter list label
 ;
 
    loop_
@@ -118733,6 +120110,33 @@ Unique identifier for the list of binding titration values.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Binding_param_list.Name
+
+   _Tag                  '_Binding_param_list.Name'
+
+   _Category              'Binding_param_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Binding parameter list name
 ;
 
    loop_
@@ -119381,6 +120785,33 @@ Unique identifier for the list of reported secondary structure features.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Deduced_secd_struct_list.Name
+
+   _Tag                  '_Deduced_secd_struct_list.Name'
+
+   _Category              'Deduced_secd_struct_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Secondary structure features list name
 ;
 
    loop_
@@ -121136,6 +122567,33 @@ Unique identifier for the list of reported hydrogen bonds deduced from experimen
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Deduced_H_bond_list.Name
+
+   _Tag                  '_Deduced_H_bond_list.Name'
+
+   _Category              'Deduced_H_bond_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for list of deduced hydrogen bonds
 ;
 
    loop_
@@ -122945,6 +124403,33 @@ An integer value that uniquely identifies this saveframe of conformer statistics
    _Adit_item_view_name
 ;
 Conformer statistics ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Conformer_stat_list.Name
+
+   _Tag                  '_Conformer_stat_list.Name'
+
+   _Category              'Conformer_stat_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for list of statistical values for the family of conformers
 ;
 
    loop_
@@ -126158,6 +127643,33 @@ An integer value that uniquely identifies this saveframe of conformer family ato
    _Adit_item_view_name
 ;
 Conf family coord set ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Conformer_family_coord_set.Name
+
+   _Tag                  '_Conformer_family_coord_set.Name'
+
+   _Category              'Conformer_family_coord_set'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the conformer family coordinate set
 ;
 
    loop_
@@ -129411,6 +130923,33 @@ ID
 
 save_
 
+save__Representative_conformer.Name
+
+   _Tag                  '_Representative_conformer.Name'
+
+   _Category              'Representative_conformer'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the representative conformer
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Representative_conformer.Details
 
    _Tag                  '_Representative_conformer.Details'
@@ -131180,6 +132719,33 @@ Unique identifier for the reported list of contraint statistics.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Constraint_stat_list.Name
+
+   _Tag                  '_Constraint_stat_list.Name'
+
+   _Category              'Constraint_stat_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for list of statistical values derived from constraints
 ;
 
    loop_
@@ -136269,6 +137835,33 @@ ID
 
 save_
 
+save__Force_constant_list.Name
+
+   _Tag                  '_Force_constant_list.Name'
+
+   _Category              'Force_constant_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the set of force constants provided in the deposition
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Force_constant_list.Data_file_name
 
    _Tag                  '_Force_constant_list.Data_file_name'
@@ -136850,6 +138443,33 @@ Unique identifier for the list of reported angular order parameters.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Angular_order_parameter_list.Name
+
+   _Tag                  '_Angular_order_parameter_list.Name'
+
+   _Category              'Angular_order_parameter_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the set of angular order parameters derived from the atomic coordinates
 ;
 
    loop_
@@ -137559,6 +139179,33 @@ Tertiary struct elements list ID
 
 ;
 10
+;
+
+   stop_
+
+save_
+
+save__Tertiary_struct_element_list.Name
+
+   _Tag                  '_Tertiary_struct_element_list.Name'
+
+   _Category              'Tertiary_struct_element_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the set of tertiary structure elements deduced from the atomic coordinates
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -138307,7 +139954,7 @@ save__Structure_annotation.Sf_framecode
 
    _Adit_item_view_name
 ;
-Sf framecode
+Label for the structure annotations
 ;
 
    loop_
@@ -138389,6 +140036,33 @@ save__Structure_annotation.ID
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Structure_annotation.Name
+
+   _Tag                  '_Structure_annotation.Name'
+
+   _Category              'Structure_annotation'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the structure annotations
 ;
 
    loop_
@@ -139671,6 +141345,33 @@ Secondary struct list ID
 
 save_
 
+save__Secondary_struct_list.Name
+
+   _Tag                  '_Secondary_struct_list.Name'
+
+   _Category              'Secondary_struct_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for the set of secondary structural elements deduced from the atomic coordinates
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Secondary_struct_list.Representative_conformer_ID
 
    _Tag                  '_Secondary_struct_list.Representative_conformer_ID'
@@ -140441,6 +142142,33 @@ Unique identifier for the list of bond annotations.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Bond_annotation_list.Name
+
+   _Tag                  '_Bond_annotation_list.Name'
+
+   _Category              'Bond_annotation_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for this set of bond annotations
 ;
 
    loop_
@@ -141696,6 +143424,33 @@ ID
 
 save_
 
+save__Structure_interaction_list.Name
+
+   _Tag                  '_Structure_interaction_list.Name'
+
+   _Category              'Structure_interaction_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for this set of structure interaction annotations
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Structure_interaction_list.Details
 
    _Tag                  '_Structure_interaction_list.Details'
@@ -142857,6 +144612,33 @@ ID
 
 save_
 
+save__Other_struct_feature_list.Name
+
+   _Tag                  '_Other_struct_feature_list.Name'
+
+   _Category              'Other_struct_feature_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for this set of annotations for other deduced structural features
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Other_struct_feature_list.Struct_feature_name
 
    _Tag                  '_Other_struct_feature_list.Struct_feature_name'
@@ -143343,6 +145125,33 @@ ID
 
 save_
 
+save__Tensor_list.Name
+
+   _Tag                  '_Tensor_list.Name'
+
+   _Category              'Tensor_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Tensor data set name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Tensor_list.Data_file_name
 
    _Tag                  '_Tensor_list.Data_file_name'
@@ -143675,7 +145484,7 @@ save__Tensor.Interatomic_distance_list_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -143702,7 +145511,7 @@ save__Tensor.Interatomic_dist_set_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -145071,6 +146880,33 @@ ID
 
 save_
 
+save__Interatomic_distance_list.Name
+
+   _Tag                  '_Interatomic_distance_list.Name'
+
+   _Category              'Interatomic_distance_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Interatomic distance data set name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Interatomic_distance_list.Data_file_name
 
    _Tag                  '_Interatomic_distance_list.Data_file_name'
@@ -146165,6 +148001,33 @@ Unique identifier for the list of reported distance constraints.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint_list.Name
+
+   _Tag                  '_Gen_dist_constraint_list.Name'
+
+   _Category              'Gen_dist_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Distance constraint list name
 ;
 
    loop_
@@ -149958,6 +151821,33 @@ ID
 
 save_
 
+save__Distance_constraint_list.Name
+
+   _Tag                  '_Distance_constraint_list.Name'
+
+   _Category              'Distance_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Distance constraint list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Distance_constraint_list.Data_file_name
 
    _Tag                  '_Distance_constraint_list.Data_file_name'
@@ -152955,6 +154845,33 @@ ID
 
 save_
 
+save__Floating_chirality_assign.Name
+
+   _Tag                  '_Floating_chirality_assign.Name'
+
+   _Category              'Floating_chirality_assign'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Floating chirality assignment list name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Floating_chirality_assign.Data_file_name
 
    _Tag                  '_Floating_chirality_assign.Data_file_name'
@@ -154278,6 +156195,33 @@ ID
 
 save_
 
+save__Torsion_angle_constraint_list.Name
+
+   _Tag                  '_Torsion_angle_constraint_list.Name'
+
+   _Category              'Torsion_angle_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Torsion angle constraints name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Torsion_angle_constraint_list.Data_file_name
 
    _Tag                  '_Torsion_angle_constraint_list.Data_file_name'
@@ -155123,7 +157067,7 @@ save__Torsion_angle_constraint.Index_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -155177,7 +157121,7 @@ save__Torsion_angle_constraint.Combination_ID
 
    _Description
 ;
-
+?
 ;
 
    _Adit_item_view_name
@@ -159125,6 +161069,33 @@ Unique identifier for the list of reported residual dipolar coupling constraints
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__RDC_constraint_list.Name
+
+   _Tag                  '_RDC_constraint_list.Name'
+
+   _Category              'RDC_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Residual dipolar constraints name
 ;
 
    loop_
@@ -163161,6 +165132,33 @@ ID
 
 save_
 
+save__J_three_bond_constraint_list.Name
+
+   _Tag                  '_J_three_bond_constraint_list.Name'
+
+   _Category              'J_three_bond_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Scalar coupling three bond constraints name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__J_three_bond_constraint_list.Data_file_name
 
    _Tag                  '_J_three_bond_constraint_list.Data_file_name'
@@ -165686,6 +167684,33 @@ Unique identifier for the list of reported CA/CB chemical shift constraints..
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__CA_CB_constraint_list.Name
+
+   _Tag                  '_CA_CB_constraint_list.Name'
+
+   _Category              'CA_CB_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+CA/CB chemical shift constraints name
 ;
 
    loop_
@@ -168642,6 +170667,33 @@ ID
 
 save_
 
+save__H_chem_shift_constraint_list.Name
+
+   _Tag                  '_H_chem_shift_constraint_list.Name'
+
+   _Category              'H_chem_shift_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+H chemical shift constraints name
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__H_chem_shift_constraint_list.Units
 
    _Tag                  '_H_chem_shift_constraint_list.Units'
@@ -169951,7 +172003,7 @@ save__Peak_constraint_link_list.Sf_framecode
 
    _Adit_item_view_name
 ;
-Sf framecode
+Label for peak constraint linkage list
 ;
 
    loop_
@@ -170040,6 +172092,33 @@ ID
 
 ;
 
+;
+
+   stop_
+
+save_
+
+save__Peak_constraint_link_list.Name
+
+   _Tag                  '_Peak_constraint_link_list.Name'
+
+   _Category              'Peak_constraint_link_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for peak constraint linkage list
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -170492,6 +172571,33 @@ A unique identifier for the list of SAXS data in the entry.
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__SAXS_constraint_list.Name
+
+   _Tag                  '_SAXS_constraint_list.Name'
+
+   _Category              'SAXS_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+SAXS data list name
 ;
 
    loop_
@@ -171383,6 +173489,33 @@ Unique identifier for the list of constraints classified as 'other.'
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Other_constraint_list.Name
+
+   _Tag                  '_Other_constraint_list.Name'
+
+   _Category              'Other_constraint_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Name for list of other deposited constraints
 ;
 
    loop_
@@ -172435,7 +174568,7 @@ save__MZ_ratio_data_list.Sf_framecode
 
    _Adit_item_view_name
 ;
-Sf framecode
+MZ ratio data list label
 ;
 
    loop_
@@ -172517,6 +174650,33 @@ save__MZ_ratio_data_list.ID
    _Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__MZ_ratio_data_list.Name
+
+   _Tag                  '_MZ_ratio_data_list.Name'
+
+   _Category              'MZ_ratio_data_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+MZ ratio data list name
 ;
 
    loop_
@@ -173225,7 +175385,7 @@ ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -173252,7 +175412,7 @@ Name
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -173279,7 +175439,7 @@ Value
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -173306,7 +175466,7 @@ Units
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -173333,7 +175493,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -173360,7 +175520,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -173387,7 +175547,7 @@ MZ ratio data list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174440,7 +176600,7 @@ Sf category
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174460,14 +176620,14 @@ save__MS_chromatogram_list.Sf_framecode
 
    _Adit_item_view_name
 ;
-Sf framecode
+MS chromatogram list label
 ;
 
    loop_
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174494,7 +176654,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174521,7 +176681,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174548,7 +176708,34 @@ ID
      _Example
 
 ;
+?
+;
 
+   stop_
+
+save_
+
+save__MS_chromatogram_list.Name
+
+   _Tag                  '_MS_chromatogram_list.Name'
+
+   _Category              'MS_chromatogram_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+MS chromatogram list name
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -174575,7 +176762,7 @@ Sample condition list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174602,7 +176789,7 @@ Sample condition list label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174629,7 +176816,7 @@ Details
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174656,7 +176843,7 @@ Text data format
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174683,7 +176870,7 @@ Text data
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174710,7 +176897,7 @@ Experiment ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174737,7 +176924,7 @@ Experiment name
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174764,7 +176951,7 @@ Sample ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174791,7 +176978,7 @@ Sample label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174818,7 +177005,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174845,7 +177032,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174872,7 +177059,7 @@ MS chromatogram list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174899,7 +177086,7 @@ Software ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174926,7 +177113,7 @@ Software label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174953,7 +177140,7 @@ Method ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -174980,7 +177167,7 @@ Method label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175007,7 +177194,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175034,7 +177221,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175061,7 +177248,7 @@ MS chromatogram list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175088,7 +177275,7 @@ ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175115,7 +177302,7 @@ Name
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175142,7 +177329,7 @@ Value
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175169,7 +177356,7 @@ Units
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175196,7 +177383,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175223,7 +177410,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175250,7 +177437,7 @@ MS chromatogram list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175277,7 +177464,7 @@ ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175304,7 +177491,7 @@ MZ ratio
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175331,7 +177518,7 @@ MZ ratio err
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175358,7 +177545,7 @@ MZ Intensity
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175385,7 +177572,7 @@ MZ relative intensity
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175412,7 +177599,7 @@ S N ratio
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175439,7 +177626,7 @@ Full width half maximum
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175466,7 +177653,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175493,7 +177680,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175520,7 +177707,7 @@ MS chromatogram list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175547,7 +177734,7 @@ ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175574,7 +177761,7 @@ MS chromatogram ion ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175601,7 +177788,7 @@ Entity ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175628,7 +177815,7 @@ Comp index ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175655,7 +177842,7 @@ Comp ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175682,7 +177869,7 @@ Chemical composition
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175709,7 +177896,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175736,7 +177923,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175763,7 +177950,7 @@ MS chromatogram list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175790,7 +177977,7 @@ Sf category
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175810,14 +177997,14 @@ save__Software_specific_info_list.Sf_framecode
 
    _Adit_item_view_name
 ;
-Sf framecode
+Software specific information list label
 ;
 
    loop_
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175844,7 +178031,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175871,7 +178058,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175898,7 +178085,34 @@ ID
      _Example
 
 ;
+?
+;
 
+   stop_
+
+save_
+
+save__Software_specific_info_list.Name
+
+   _Tag                  '_Software_specific_info_list.Name'
+
+   _Category              'Software_specific_info_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Software specific information list name
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -175925,7 +178139,7 @@ Software saveframe ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175952,7 +178166,7 @@ Software saveframe
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -175979,7 +178193,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176006,7 +178220,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176033,7 +178247,7 @@ Software specific info list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176060,7 +178274,7 @@ Sf category
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176080,14 +178294,14 @@ save__Software_applied_list.Sf_framecode
 
    _Adit_item_view_name
 ;
-Sf framecode
+Software applied list label
 ;
 
    loop_
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176114,7 +178328,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176141,7 +178355,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176168,7 +178382,34 @@ ID
      _Example
 
 ;
+?
+;
 
+   stop_
+
+save_
+
+save__Software_applied_list.Name
+
+   _Tag                  '_Software_applied_list.Name'
+
+   _Category              'Software_applied_list'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Software applied list name
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -176195,7 +178436,7 @@ Details
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176222,7 +178463,7 @@ Software ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176249,7 +178490,7 @@ Software label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176276,7 +178517,7 @@ Methods ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176303,7 +178544,7 @@ Methods label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176330,7 +178571,7 @@ Software name
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176357,7 +178598,7 @@ Script name
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176384,7 +178625,7 @@ Script
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176411,7 +178652,7 @@ Software specific info
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176438,7 +178679,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176465,7 +178706,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176492,7 +178733,7 @@ Software applied list ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176519,7 +178760,7 @@ Sf category
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176539,14 +178780,14 @@ save__Software_applied_history.Sf_framecode
 
    _Adit_item_view_name
 ;
-Sf framecode
+Software applied history label
 ;
 
    loop_
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176573,7 +178814,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176600,7 +178841,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176627,7 +178868,34 @@ ID
      _Example
 
 ;
+?
+;
 
+   stop_
+
+save_
+
+save__Software_applied_history.Name
+
+   _Tag                  '_Software_applied_history.Name'
+
+   _Category              'Software_applied_history'
+
+   _Description
+;
+A name for the data set that describes in very brief terms the information contained in the data set.
+;
+
+   _Adit_item_view_name
+;
+Software applied history name
+;
+
+   loop_
+     _Example
+
+;
+?
 ;
 
    stop_
@@ -176654,7 +178922,7 @@ Details
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176681,7 +178949,7 @@ Run number
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176708,7 +178976,7 @@ Software ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176735,7 +179003,7 @@ Software label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176762,7 +179030,7 @@ Method ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176789,7 +179057,7 @@ Method label
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176816,7 +179084,7 @@ Software name
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176843,7 +179111,7 @@ Software version
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176870,7 +179138,7 @@ Script name
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176897,7 +179165,7 @@ Script
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176924,7 +179192,7 @@ Sf ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176951,7 +179219,7 @@ Entry ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
@@ -176978,7 +179246,7 @@ Software applied history ID
      _Example
 
 ;
-
+?
 ;
 
    stop_
