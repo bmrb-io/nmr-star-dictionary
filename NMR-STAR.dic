@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-01-17
+#  version date -  2019-01-18
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -4955,29 +4955,6 @@ citation
 
 save_
 
-save__citation.name
-
-   _item_description.description
-;
-A name assigned to the save frame.
-;
-
-   _item.name                                  '_citation.name'
-   _item.category_id                           'citation'
-   _item.mandatory_code                         no
-   _item_type.code                             'line'
-
-   loop_
-     _item_examples.case
-
-;
-citation 1
-;
-
-   stop_
-
-save_
-
 save__citation.id
 
    _item_description.description
@@ -5060,6 +5037,29 @@ provided in the entry.
 
   _item_type.code                             'int'
 
+
+save_
+
+save__citation.name
+
+   _item_description.description
+;
+A name assigned to the save frame.
+;
+
+   _item.name                                  '_citation.name'
+   _item.category_id                           'citation'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+   loop_
+     _item_examples.case
+
+;
+citation 1
+;
+
+   stop_
 
 save_
 
@@ -9706,8 +9706,8 @@ save__assembly_interaction.mol_interaction_type
 
    _item_description.description
 ;
-covalent- noncovalent/coordination- confromational/configurational exchange- 
-chemical exchange
+The kind of interaction two components of the molecular assembly are undergoing 
+in the sample.
 ;
 
    _item.name                                  '_assembly_interaction.mol_interaction_type'

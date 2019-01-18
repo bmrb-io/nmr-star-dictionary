@@ -3491,7 +3491,7 @@ save__Entry.Dep_release_code_coordinates
 
    _Description
 ;
-Select the status or terms to be applied for the release of the atomic coordinate data to the public. Depositors are encourage to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
+Select the status or terms to be applied for the release of the atomic coordinate data to the public. Depositors are encouraged to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
 ;
 
    _Adit_item_view_name
@@ -3653,7 +3653,7 @@ save__Entry.Details
 
    _Description
 ;
-participating in methods development experiments.
+An optional text description of the entry used to provide additional information above that given as values to other items in the entry.
 ;
 
    _Adit_item_view_name
@@ -5354,7 +5354,7 @@ save__Contact_person.ORCID
 
    _Description
 ;
-Unique researcher identifier (Open Researcher and Contributor ID)
+Unique researcher identifier (Open Researcher and Contributor ID).
 ;
 
    _Adit_item_view_name
@@ -5381,7 +5381,7 @@ save__Contact_person.Name_salutation
 
    _Description
 ;
-The salutation of the author of the deposition to whom correspondence should be addressed
+The salutation of the author of the deposition to whom correspondence should be addressed.
 ;
 
    _Adit_item_view_name
@@ -5408,7 +5408,7 @@ save__Contact_person.Given_name
 
    _Description
 ;
-The name given the contact person at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
+The name given to the contact person at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
 ;
 
    _Adit_item_view_name
@@ -5948,7 +5948,7 @@ save__Entry_author.Given_name
 
    _Description
 ;
-The name given the author at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
+The name given to the author at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
 ;
 
    _Adit_item_view_name
@@ -7830,33 +7830,6 @@ Sf ID
 
 save_
 
-save__Citation.Name
-
-   _Tag                  '_Citation.Name'
-
-   _Category              'Citation'
-
-   _Description
-;
-A name that uniquely identifies the citation from all other citations in the entry.
-;
-
-   _Adit_item_view_name
-;
-Citation name
-;
-
-   loop_
-     _Example
-
-;
-citation 1
-;
-
-   stop_
-
-save_
-
 save__Citation.ID
 
    _Tag                  '_Citation.ID'
@@ -7878,6 +7851,33 @@ ID
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__Citation.Name
+
+   _Tag                  '_Citation.Name'
+
+   _Category              'Citation'
+
+   _Description
+;
+A name that uniquely identifies the citation from all other citations in the entry.
+;
+
+   _Adit_item_view_name
+;
+Citation name
+;
+
+   loop_
+     _Example
+
+;
+citation 1
 ;
 
    stop_
@@ -8081,7 +8081,7 @@ save__Citation.Status
 
    _Description
 ;
-Status for the current publication (in preparation submitted in press published)
+Status for the current publication (in preparation submitted in press published).
 ;
 
    _Adit_item_view_name
@@ -8108,7 +8108,7 @@ save__Citation.Type
 
    _Description
 ;
-Descriptive word that defines the kind of publication reported (journal; book; thesis; etc.)
+Descriptive word that defines the kind of publication reported (journal; book; thesis; etc.).
 ;
 
    _Adit_item_view_name
@@ -8810,7 +8810,7 @@ save__Citation.Page_first
 
    _Description
 ;
-First page of the published article
+First page of the published article.
 ;
 
    _Adit_item_view_name
@@ -8837,7 +8837,7 @@ save__Citation.Page_last
 
    _Description
 ;
-Last page of the published article
+Last page of the published article.
 ;
 
    _Adit_item_view_name
@@ -8945,7 +8945,7 @@ save__Citation_author.Given_name
 
    _Description
 ;
-The name given the author at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
+The name given to the author at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
 ;
 
    _Adit_item_view_name
@@ -10241,7 +10241,7 @@ save__Entity_assembly.Entity_assembly_name
 
    _Description
 ;
-Name for the molecular component in the molecular assembly
+Name for the molecular component in the molecular assembly.
 ;
 
    _Adit_item_view_name
@@ -12212,7 +12212,7 @@ save__Assembly_db_link.Database_code
 
    _Description
 ;
-Abbreviation for the database
+Enter the common abbreviation used for the database.
 ;
 
    _Adit_item_view_name
@@ -12806,7 +12806,7 @@ save__Assembly_interaction.Entity_assembly_ID_1
 
    _Description
 ;
-Identifier for the first component of the assembly that is involved interaction.  Pointer to '_Entity_assembly.ID'
+Identifier for the first component of the assembly that is involved in the interaction.  Pointer to '_Entity_assembly.ID'.
 ;
 
    _Adit_item_view_name
@@ -12833,7 +12833,7 @@ save__Assembly_interaction.Entity_assembly_ID_2
 
    _Description
 ;
-Identifier for the second component of the assembly involved in the interaction.  Pointer to '_Entity_assembly.ID'
+Identifier for the second component of the assembly that is involved in the interaction.  Pointer to '_Entity_assembly.ID'.
 ;
 
    _Adit_item_view_name
@@ -12860,7 +12860,7 @@ save__Assembly_interaction.Mol_interaction_type
 
    _Description
 ;
-covalent- noncovalent/coordination- confromational/configurational exchange- chemical exchange
+Select the type of interaction that the two components of the assembly are undergoing or enter a very brief description for the interaction.
 ;
 
    _Adit_item_view_name
@@ -20668,7 +20668,7 @@ Provide the complete sequence of a protein or nucleic acid as it existed in the 
 
    _Adit_item_view_name
 ;
-Enter the complete polymer sequence (one-letter code) Include all cloning artifacts, his tags, and disordered residues. The sequence must represent the complete polymer as found in the NMR tube.
+Enter the complete polymer sequence (one-letter code). Include all cloning artifacts, his tags, and disordered residues. The sequence must represent the complete polymer as found in the NMR tube.
 ;
 
    loop_
@@ -21122,7 +21122,7 @@ save__Entity.Fragment
 
    _Description
 ;
-Give the name of the fragment if the protein or necleic acid is a part of a larger molecule with a well established biological function.
+Give the name of the fragment if the protein or nucleic acid is a part of a larger molecule with a well established biological function.
 ;
 
    _Adit_item_view_name
@@ -21176,7 +21176,7 @@ save__Entity.EC_number
 
    _Description
 ;
-Enzyme Commission number
+Enter an Enzyme Commission number.
 ;
 
    _Adit_item_view_name
@@ -28034,7 +28034,7 @@ save__Chem_comp.Image_file_name
 
    _Description
 ;
-Please enter the name of the Image file for this ligand or chemical component that was upload from the 'Deposit data files' section of the deposition. If an image file was not uploaded for this ligand, enter 'na'.
+Please enter the name of the image file for this ligand or chemical component that was upload from the 'Deposit data files' section of the deposition. If an image file was not uploaded for this ligand, enter 'na'.
 ;
 
    _Adit_item_view_name
@@ -33920,7 +33920,7 @@ save__Sample_component.Concentration_val_units
 
    _Description
 ;
-Enter the units appropriate for the concentration value enter earlier for the sample component.
+Enter the units appropriate for the concentration value entered earlier for the sample component.
 ;
 
    _Adit_item_view_name
@@ -35648,7 +35648,7 @@ save__Entity_purity.Val
 
    _Description
 ;
-Purity value
+Purity value.
 ;
 
    _Adit_item_view_name
@@ -49904,7 +49904,7 @@ save__Chem_shift_ref.Correction_val
 
    _Description
 ;
-An uniform correction value that was applied because of an extenuating circumstance such as data collection at an unusual temperature.
+A uniform correction value that was applied because of an extenuating circumstance such as data collection at an unusual temperature.
 ;
 
    _Adit_item_view_name
@@ -50530,7 +50530,7 @@ Method used to derive the estimated error in the reported chemical shifts.
 
    _Adit_item_view_name
 ;
-Described the method used to derive the estimated error in the reported chemical shifts.
+Describe the method used to derive the estimated error in the reported chemical shifts.
 ;
 
    loop_
