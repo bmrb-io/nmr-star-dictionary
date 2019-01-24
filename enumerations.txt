@@ -9,42 +9,9 @@
      
 data_NMR-STAR_tag_enumerations
 
-    _Revision_date      2018-04-13
+    _Revision_date      2018-11-17
 
 
-
-save__Assembly.Thiol_state
-
-  loop_                       
-     _item_enumeration_value
-     _item_enumeration_description
-
-     'all disulfide bound'       .
-     'all other bound'           .
-     'all free'                  .
-     'not present'               
-;
-Thiols are not present in the system.
-;
-     'not available'    
-;
-The oxidation state of the thiols could not be extracted from the literature
-or was not provided by the authors of the entry.
-;
-     unknown     
-;
-The author reported that the oxidation state of the thiols is
-unknown.
-;
-     'not reported'                      .
-     'free and disulfide bound'          .
-     'free and other bound'              .
-     'free disulfide and other bound'    .
-     'disulfide and other bound'         .
-
-    stop_
-
-save_
 
 save__Assembly_db_link.Database_code
 
@@ -73,9 +40,7 @@ save__Assembly_db_link.Database_code
 
   stop_
 
-
 save_
-
 
 save__Assembly_db_link.Entry_experimental_method
 
@@ -139,7 +104,6 @@ not available or equivalent
 
 save_
 
-
 save__Assembly_systematic_name.Naming_system
 
    loop_
@@ -158,7 +122,6 @@ save__Assembly_systematic_name.Naming_system
    stop_
 
 save_
-
 
 save__Assembly_type.Type
 
@@ -197,6 +160,38 @@ save__Assembly_type.Type
 
 save_
 
+save__Assembly.Thiol_state
+
+  loop_                       
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'all disulfide bound'       .
+     'all other bound'           .
+     'all free'                  .
+     'not present'               
+;
+Thiols are not present in the system.
+;
+     'not available'    
+;
+The oxidation state of the thiols could not be extracted from the literature
+or was not provided by the authors of the entry.
+;
+     unknown     
+;
+The author reported that the oxidation state of the thiols is
+unknown.
+;
+     'not reported'                      .
+     'free and disulfide bound'          .
+     'free and other bound'              .
+     'free disulfide and other bound'    .
+     'disulfide and other bound'         .
+
+    stop_
+
+save_
 
 save__Atom_chem_shift.Ambiguity_code
 
@@ -269,6 +264,133 @@ save__Audit.Update_record
 
 save_
 
+save__Auto_relaxation_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__Auto_relaxation_list.Common_relaxation_type_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      R1                                    .
+      R2                                    .
+      R1rho                                 .
+     'ZQ relaxation'                        .
+     'longitudinal spin order'              .
+     'single quantum antiphase'             .
+     'DQ relaxation'                        .
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Relaxation_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   Iz               'R1    longitudinal'
+   Sz               'R1    longitudinal'
+                         
+   (I+)+(I-)        'R1rho or R2      transverse'
+   (S+)+(S-)        'R1rho or R2      transverse'
+   I+               'R1rho or R2      transverse'
+   I-               'R1rho or R2      transverse'
+   S+               'R1rho or R2      transverse'
+   S-               'R1rho or R2      transverse'
+
+   (I+S-)+(I-S+)    'ZQ relaxation'
+   I-S+             'ZQ relaxation'
+   I+S-             'ZQ relaxation'
+
+   IzSz             'longitudinal spin order'
+
+  ((I+)+(I-))Sz     'single quantum antiphase'
+  Iz((S+)+(S-))     'single quantum antiphase'
+   I+Sz             'single quantum antiphase'
+   I-Sz             'single quantum antiphase'
+   IzS+             'single quantum antiphase'
+   IzS-             'single quantum antiphase'
+   
+ (I+S+)+(I-S-)      'DQ relaxation'
+   I+S+             'DQ relaxation'
+   I-S-             'DQ relaxation'
+         
+    stop_
+
+save_
+
+save__Auto_relaxation_list.Relaxation_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         us-1          .
+         ns-1          .
+         ps-1          .
+             
+    stop_
+
+save_
+
+save__Auto_relaxation_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__Auto_relaxation_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    methanol                    MeOH
+   'monoethylene glycol'        MEG
+   'no calibration applied'     .
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'                                             .
+    'temperature compensation block'                                       .
+    'single scan interleaving and temperature compensation block'          .
+    'no temperature control applied'                                       .
+
+   stop_
+
+save_
 
 save__Binding_experiment.Sample_state
 
@@ -282,77 +404,6 @@ save__Binding_experiment.Sample_state
   stop_
 
 save_ 
-
-
-save__Entity_bond.Type
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
- 
-        amide                  .
-        covalent               .
-        directed               .   # N -> O
-        disulfide              .
-        ester                  .
-        ether                  .
-        hydrogen               .
-        'metal coordination'   .
-        peptide                .
-        thioether              .
-# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
-   oxime                       .
-   thioester                   .
-   phosphoester                .
-   phosphodiester              .
-   diselenide                  .
-   na                          .
-
-    stop_
-
-save_
-
-save__Entity_bond.Value_order
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-  sing           'single bond' 
-  doub           'double bond'
-  trip           'triple bond'
-  quad           'quadruple bond'
-  arom           'aromatic bond'
-  poly           'polymeric bond'
-  delo           'delocalized double bond'
-  pi             'pi bond'
-  directed       'N ->O'
-
-     stop_
-
-save_
-
-
-save__Bond_annotation.Value_order
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-  sing           'single bond' 
-  doub           'double bond'
-  trip           'triple bond'
-  quad           'quadruple bond'
-  arom           'aromatic bond'
-  poly           'polymeric bond'
-  delo           'delocalized double bond'
-  pi             'pi bond'
-  directed       'N ->O'
-
-     stop_
-
-save_
-
 
 save__Bond_annotation.Type
 
@@ -382,8 +433,7 @@ save__Bond_annotation.Type
 
 save_
 
-
-save__Bond.Value_order
+save__Bond_annotation.Value_order
 
      loop_
        _item_enumeration_value
@@ -402,7 +452,6 @@ save__Bond.Value_order
      stop_
 
 save_
-
 
 save__Bond.Type
 
@@ -432,7 +481,25 @@ save__Bond.Type
 
 save_
 
+save__Bond.Value_order
 
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
+
+     stop_
+
+save_
 
 save__CA_CB_constraint_expt.Sample_state
 
@@ -445,33 +512,6 @@ save__CA_CB_constraint_expt.Sample_state
      solid            .
 
     stop_
-
-save_
-
-save__Chem_comp.Provenance
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     BMRB           .
-     PDB            .
-     PubChem        .
-
-    stop_
-
-save_
-                                       
-save__Chem_comp.Atom_nomenclature_source
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    ALATIS        .
-    BMRB          .
-
-   stop_
 
 save_
 
@@ -492,7 +532,6 @@ save__Chem_comp_atom.Chirality
    stop_
 
 save_
-
 
 save__Chem_comp_atom.Stereo_config
 
@@ -527,139 +566,6 @@ save__Chem_comp_atom.Substruct_code
 
 save_
 
-save__Chem_comp_descriptor.Program
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-  ACD       'Advanced Chemistry Development' 
-  OECHEM    'OpenEye OECHEM library'
-  CACTVS    'CACTVS program library'
-  DAYLIGHT  'Daylight program library'
-  OTHER     'Other program or library'
-  na        'not available'
-
-   stop_
-
-save_
-
-
-
-save__Chem_comp_descriptor.Type
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-  SMILES_CANONICAL           'Canonical SMILES descriptor'
-  SMILES_ISOMERIC            'Isomeric SMILES descriptor'
-  SMILES                     'SMILES descriptor'
-  InChI                      'InChI descriptor'
-  InChI_MAIN                 'InChI descriptor- main layer'
-  InChI_MAIN_FORMULA         'InChI descriptor- main layer - chemical formula sub-layer'
-  InChI_MAIN_CONNECT         'InChI descriptor- main layer - atom connection sub-layer'
-  InChI_MAIN_HATOM           'InChI descriptor- main layer - hydrogen atom sub-layer'
-  InChI_CHARGE               'InChI descriptor- charge layer'
-  InChI_STEREO               'InChI descriptor- stereochemical layer'
-  InChI_ISOTOPE              'InChI descriptor- isotopic layer'
-  InChI_FIXEDH               'InChI descriptor- fixed hydrogren layer'
-  InChI_RECONNECT            'InChI descriptor- reconnected layer'
-
-   stop_
-
-save_
-
-save__Chem_comp_identifier.Program
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-  OECHEM    'OpenEye OECHEM program'
-  DAYLIGHT  'Daylight program library'
-  ACD       'Advanced Chemistry Development Naming Program'
-  AUTONOM   'Belstein AutoNom Naming Program'
-  OTHER     'Other program or library'
-
-   stop_
-
-save_
-
-save__Chem_comp_identifier.Type
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-  'COMMON NAME'           'Common chemical name'
-  'SYSTEMATIC NAME'       'Systematic chemical name'
-  'CAS REGISTRY NUMBER'   'Chemical Abstracts Registry Number'
-  'PUBCHEM Identifier'    'PubChem accession number'
-  'PUBCHEM CID'           'PubChem compound identifier'
-  'PUBCHEM SID'           'PubChem substance identifier'
-  'MDL Identifier'        'Molecular Design Limited Identifier'
-
-   stop_
-
-save_
-
-
-save__Chem_comp.Type
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-      'D-PEPTIDE LINKING'                         .      
-      'L-PEPTIDE LINKING'                         .
-      'D-PEPTIDE NH3 AMINO TERMINUS'              .
-      'L-PEPTIDE NH3 AMINO TERMINUS'              .
-      'D-PEPTIDE COOH CARBOXY TERMINUS'           .
-      'L-PEPTIDE COOH CARBOXY TERMINUS'           .
-      'DNA LINKING'                               .
-      'RNA LINKING'                               .
-      'L-RNA LINKING'                             .
-      'L-DNA LINKING'                             .
-      'DNA OH 5 PRIME TERMINUS'                   .
-      'RNA OH 5 PRIME TERMINUS'                   .
-      'DNA OH 3 PRIME TERMINUS'                   .
-      'RNA OH 3 PRIME TERMINUS'                   .
-      'D-SACCHARIDE 1$4 AND 1$4 LINKING'          .
-      'L-SACCHARIDE 1$4 AND 1$4 LINKING'          .
-      'D-SACCHARIDE 1$4 AND 1$6 LINKING'          .
-      'L-SACCHARIDE 1$4 AND 1$6 LINKING'          .
-      'L-SACCHARIDE'                              .
-      'D-SACCHARIDE'                              .
-      'SACCHARIDE'                                .
-      'NON-POLYMER'                               .
-      'PEPTIDE LINKING'                           .
-      'PEPTIDE-LIKE'                              .
-      'L-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
-      'D-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
-      'L-BETA-PEPTIDE$ C-GAMMA LINKING'           .
-      'D-BETA-PEPTIDE$ C-GAMMA LINKING'           .
-      'OTHER'                                     .
-
-   stop_
-
-save_
-
-
-save__Chem_comp.Vendor
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-   Sigma                    .
-   Aldrich                  .
-   Sigma/Aldrich            .
-
-   stop_
-
-save_
-
 save__Chem_comp_bond.Stereo_config
 
    loop_
@@ -673,7 +579,6 @@ save__Chem_comp_bond.Stereo_config
    stop_
 
 save_
-
 
 save__Chem_comp_bond.Type
 
@@ -695,7 +600,6 @@ save__Chem_comp_bond.Type
     stop_
 
 save_
-
 
 save__Chem_comp_bond.Value_order
 
@@ -747,14 +651,121 @@ save__Chem_comp_db_link.Database_code
 
 save_
 
+save__Chem_comp_descriptor.Program
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  ACD       'Advanced Chemistry Development' 
+  OECHEM    'OpenEye OECHEM library'
+  CACTVS    'CACTVS program library'
+  DAYLIGHT  'Daylight program library'
+  OTHER     'Other program or library'
+  na        'not available'
+
+   stop_
+
+save_
+
+save__Chem_comp_descriptor.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  SMILES_CANONICAL           'Canonical SMILES descriptor'
+  SMILES_ISOMERIC            'Isomeric SMILES descriptor'
+  SMILES                     'SMILES descriptor'
+  InChI                      'InChI descriptor'
+  InChI_MAIN                 'InChI descriptor- main layer'
+  InChI_MAIN_FORMULA         'InChI descriptor- main layer - chemical formula sub-layer'
+  InChI_MAIN_CONNECT         'InChI descriptor- main layer - atom connection sub-layer'
+  InChI_MAIN_HATOM           'InChI descriptor- main layer - hydrogen atom sub-layer'
+  InChI_CHARGE               'InChI descriptor- charge layer'
+  InChI_STEREO               'InChI descriptor- stereochemical layer'
+  InChI_ISOTOPE              'InChI descriptor- isotopic layer'
+  InChI_FIXEDH               'InChI descriptor- fixed hydrogren layer'
+  InChI_RECONNECT            'InChI descriptor- reconnected layer'
+
+   stop_
+
+save_
+
+save__Chem_comp_identifier.Program
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  OECHEM    'OpenEye OECHEM program'
+  DAYLIGHT  'Daylight program library'
+  ACD       'Advanced Chemistry Development Naming Program'
+  AUTONOM   'Belstein AutoNom Naming Program'
+  OTHER     'Other program or library'
+
+   stop_
+
+save_
+
+save__Chem_comp_identifier.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+  'common name'           'Common chemical name'
+  'systematic name'       'Systematic chemical name'
+  'CAS Registry number'   'Chemical Abstracts Registry Number'
+  'PUBCHEM Identifier'    'PubChem accession number'
+  'PUBCHEM CID'           'PubChem compound identifier'
+  'PUBCHEM SID'           'PubChem substance identifier'
+  'MDL Identifier'        'Molecular Design Limited Identifier'
+
+   stop_
+
+save_
+
+save__Chem_comp_systematic_name.Naming_system
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    IUPAC                                        .
+   'CAS name'                                    .
+   'CAS registry number'                         .
+    BMRB                                         .
+   'One letter code'                             .
+   'Three letter code'                           .
+    Beilstein                                    .
+   'Lignin abbreviation'                         .
+
+   stop_
+
+save_
+
+save__Chem_comp.Atom_nomenclature_source
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    ALATIS        .
+    BMRB          .
+
+   stop_
+
+save_
+
 save__Chem_comp.Formal_charge
 
    loop_
      _item_enumeration_value
      _item_enumeration_description
 
-   5+    .
-   4+    .
+      5+    .
+      4+    .
       3+    .
       2+    .
       1+    .
@@ -804,8 +815,20 @@ save__Chem_comp.Processing_site
 
 save_
 
+save__Chem_comp.Provenance
 
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
 
+     BMRB           .
+     PDB            .
+     PubChem        .
+
+    stop_
+
+save_
+                                       
 save__Chem_comp.Release_status
 
    loop_
@@ -822,21 +845,55 @@ save__Chem_comp.Release_status
 
 save_
 
-
-save__Chem_comp_systematic_name.Naming_system
+save__Chem_comp.Type
 
    loop_
      _item_enumeration_value
      _item_enumeration_description
 
-    IUPAC                                        .
-   'CAS name'                                    .
-   'CAS registry number'                         .
-    BMRB                                         .
-   'One letter code'                             .
-   'Three letter code'                           .
-    Beilstein                                    .
-   'Lignin abbreviation'                         .
+      'D-PEPTIDE LINKING'                         .      
+      'L-PEPTIDE LINKING'                         .
+      'D-PEPTIDE NH3 AMINO TERMINUS'              .
+      'L-PEPTIDE NH3 AMINO TERMINUS'              .
+      'D-PEPTIDE COOH CARBOXY TERMINUS'           .
+      'L-PEPTIDE COOH CARBOXY TERMINUS'           .
+      'DNA LINKING'                               .
+      'RNA LINKING'                               .
+      'L-RNA LINKING'                             .
+      'L-DNA LINKING'                             .
+      'DNA OH 5 PRIME TERMINUS'                   .
+      'RNA OH 5 PRIME TERMINUS'                   .
+      'DNA OH 3 PRIME TERMINUS'                   .
+      'RNA OH 3 PRIME TERMINUS'                   .
+      'D-SACCHARIDE 1$4 AND 1$4 LINKING'          .
+      'L-SACCHARIDE 1$4 AND 1$4 LINKING'          .
+      'D-SACCHARIDE 1$4 AND 1$6 LINKING'          .
+      'L-SACCHARIDE 1$4 AND 1$6 LINKING'          .
+      'L-SACCHARIDE'                              .
+      'D-SACCHARIDE'                              .
+      'SACCHARIDE'                                .
+      'NON-POLYMER'                               .
+      'PEPTIDE LINKING'                           .
+      'PEPTIDE-LIKE'                              .
+      'L-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
+      'D-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
+      'L-BETA-PEPTIDE$ C-GAMMA LINKING'           .
+      'D-BETA-PEPTIDE$ C-GAMMA LINKING'           .
+      'OTHER'                                     .
+
+   stop_
+
+save_
+
+save__Chem_comp.Vendor
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   Sigma                    .
+   Aldrich                  .
+   Sigma/Aldrich            .
 
    stop_
 
@@ -855,7 +912,6 @@ save__Chem_shift_anisotropy.Val_units
 
 save_
 
-
 save__Chem_shift_experiment.Sample_state
 
   loop_
@@ -869,6 +925,34 @@ save__Chem_shift_experiment.Sample_state
 
 save_
 
+save__Chem_shift_perturbation_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+save__Chem_shift_perturbation_list.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'macromolecular binding'            .
+    'ligand binding'                    .
+    'ligand fragment binding'           .
+    'paramagnetic ligand binding'       .
+
+    stop_
+
+save_   
 
 save__Chem_shift_ref.Atom_group
 
@@ -920,7 +1004,6 @@ save__Chem_shift_ref.Atom_type
 
 save_
 
-
 save__Chem_shift_ref.Chem_shift_units
 
      loop_
@@ -928,15 +1011,14 @@ save__Chem_shift_ref.Chem_shift_units
        _item_enumeration_description
  
       ppm                 'parts per million'
-      Hz                  Hertz
+      Hz                   Hertz
 # PDBj-BMRB: Added MHz and na by extraction from current BMRB database.
-   MHz                    'megahertz'
-   na                     'not available'
+      MHz                 'megahertz'
+      na                  'not available'
 
      stop_
 
 save_
-
 
 save__Chem_shift_ref.External_ref_axis
 
@@ -952,7 +1034,6 @@ save__Chem_shift_ref.External_ref_axis
    stop_
 
 save_
-
 
 save__Chem_shift_ref.External_ref_loc
 
@@ -972,7 +1053,6 @@ save__Chem_shift_ref.External_ref_loc
 
 save_
 
-
 save__Chem_shift_ref.External_ref_sample_geometry
 
    loop_
@@ -986,7 +1066,6 @@ save__Chem_shift_ref.External_ref_sample_geometry
    stop_
 
 save_
-
 
 save__Chem_shift_ref.Mol_common_name
 
@@ -1064,7 +1143,6 @@ save__Chem_shift_ref.Ref_method
 
 save_
 
-
 save__Chem_shift_ref.Ref_type
 
    loop_
@@ -1091,7 +1169,6 @@ save__Chem_shift_reference.Carbon_shifts_flag
    stop_
 
 save_
-
 
 save__Chem_shift_reference.Nitrogen_shifts_flag
 
@@ -1120,7 +1197,6 @@ save__Chem_shift_reference.Phosphorus_shifts_flag
    stop_
 
 save_
-
 
 save__Chem_shift_reference.Proton_shifts_flag
 
@@ -1164,7 +1240,6 @@ save__Chem_shifts_calc_type.Chem_shift_nucleus
      stop_
 
 save_
-
 
 save__Chem_shifts_calc_type.Quantum_mechanical_method
 
@@ -1253,7 +1328,55 @@ save__Chem_struct_descriptor.Type
 
 save_
 
+save__Chemical_rate_experiment.Sample_state
 
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    anisotropic            .
+    isotropic              .
+
+  stop_
+
+save_ 
+
+save__Citation_author.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      V                Fifth
+      
+    stop_
+
+save_
+
+save__Citation_editor.Family_title
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+      V                Fifth
+      
+
+    stop_
+
+save_
 
 save__Citation.Class
 
@@ -1273,7 +1396,6 @@ Citation used as a reference in the entry
      stop_
 
 save_
-
 
 save__Citation.Journal_abbrev
 
@@ -1325,7 +1447,6 @@ save__Citation.Journal_abbrev
 
 save_
 
-
 save__Citation.Status
 
      loop_
@@ -1362,7 +1483,6 @@ the status can not be determined but should not be allowed for current entries.
     stop_
 
 save_
-
 
 save__Citation.Type
 
@@ -1404,46 +1524,6 @@ Used only when none of the others apply.
 
 save_
 
-
-save__Citation_author.Family_title
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      Sr.              Senior
-      Jr.              Junior
-      I                First
-      II               Second
-      III              Third
-      IV               Fourth
-      V                Fifth
-      
-    stop_
-
-save_
-
-
-save__Citation_editor.Family_title
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      Sr.              Senior
-      Jr.              Junior
-      I                First
-      II               Second
-      III              Third
-      IV               Fourth
-      V                Fifth
-      
-
-    stop_
-
-save_
-
-
 save__Computer.Operating_system
 
   loop_
@@ -1479,6 +1559,19 @@ Windows New Technology operating system
 
 save_
 
+save__Conformer_family_coord_set_expt.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+   isotropic               .
+   anisotropic             .
+   solid                   .
+
+   stop_
+
+save_
 
 save__Conformer_family_refinement.Refine_method
 
@@ -1495,21 +1588,6 @@ save__Conformer_family_refinement.Refine_method
   na                           .
 
      stop_
-
-save_
-
-
-save__Conformer_family_coord_set_expt.Sample_state
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-   isotropic               .
-   anisotropic             .
-   solid                   .
-
-   stop_
 
 save_
 
@@ -1543,6 +1621,19 @@ save__Conformer_stat_list.Rep_conformer_selection_criteria
    'minimized average structure'       . 
 
     stop_
+
+save_
+
+save__Constraint_file.Constraint_subsubtype
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+ 
+    ambi            .
+    simple          .
+
+   stop_
 
 save_
 
@@ -1599,20 +1690,6 @@ save__Constraint_file.Constraint_type
 
 save_
 
-
-save__Constraint_file.Constraint_subsubtype
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
- 
-    ambi            .
-    simple          .
-
-   stop_
-
-save_
-
 save__Constraint_file.Software_name
 
   loop_
@@ -1632,6 +1709,19 @@ save__Constraint_file.Software_name
 
 save_
 
+save__Constraint_stat_list_ens.Dihedral_const_stat_calc_meth
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'calculated over all dihedral constraints'           .
+    'calculated for dihedral violations only'            .
+
+    stop_
+
+save_
+
 save__Constraint_stat_list.Dist_constr_violat_stat_calc_method
 
     loop_
@@ -1640,19 +1730,6 @@ save__Constraint_stat_list.Dist_constr_violat_stat_calc_method
 
     'calculated over all distance constraints'           .
     'calculated for distance violations only'            .
-
-    stop_
-
-save_
-
-save__Constraint_stat_list.NOE_interproton_dist_evaluation
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    'Tryptophan ring proton NOE intensities'          .
-    'Glycine alpha proton NOE intensities'            .
 
     stop_
 
@@ -1687,7 +1764,7 @@ R= r1_center-r2_center$ X-PLOR formula 18.4.
 
 save_
 
-save__Constraint_stat_list.ROE_interproton_dist_evaluation
+save__Constraint_stat_list.NOE_interproton_dist_evaluation
 
     loop_
       _item_enumeration_value
@@ -1729,19 +1806,18 @@ R= r1_center-r2_center$ X-PLOR formula 18.4.
 
 save_
 
-save__Constraint_stat_list_ens.Dihedral_const_stat_calc_meth
+save__Constraint_stat_list.ROE_interproton_dist_evaluation
 
     loop_
       _item_enumeration_value
       _item_enumeration_description
 
-    'calculated over all dihedral constraints'           .
-    'calculated for dihedral violations only'            .
+    'Tryptophan ring proton NOE intensities'          .
+    'Glycine alpha proton NOE intensities'            .
 
     stop_
 
 save_
-
 
 save__Contact_person.Family_title
 
@@ -1806,8 +1882,6 @@ save__Contact_person.Role
 
 save_
 
-
-
 save__Coupling_constant_experiment.Sample_state
 
   loop_
@@ -1839,104 +1913,11 @@ save__Coupling_constant_list.Spectrometer_frequency_1H
     920       .
     950       .
    1000       .
+   1100       .
 
   stop_
 
 save_ 
-
-
-
-save__Cross_correlation_DD_experiment.Sample_state
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    isotropic                    .
-    anisotropic                  .
-    solid                        .
-
-  stop_
-
-save_
-
-
-save__Cross_correlation_DD_list.Val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   s-1      .
-   ms-1     .
-   us-1     .
-
-    stop_
-
-save_
-
-
-save__Theoretical_cross_correlation_DD_experiment.Sample_state
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    isotropic                    .
-    anisotropic                  .
-    solid                        .
-
-  stop_
-
-save_
-
-
-save__Theoretical_cross_correlation_DD_list.Val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   s-1      .
-   ms-1     .
-   us-1     .
-
-    stop_
-
-save_
-
-
-
-
-save__Cross_correlation_D_CSA_experiment.Sample_state
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    isotropic                    .
-    anisotropic                  .
-    solid                        .
-
-  stop_
-
-save_
-
-
-save__Cross_correlation_D_CSA_list.Val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   s-1      .
-   ms-1     .
-   us-1     .
-
-    stop_
-
-save_
-
 
 #save__Cross_correlation_CSA_CSA_expt.Sample_state
 #
@@ -1952,7 +1933,6 @@ save_
 #
 #save_
 
-
 #save__Cross_correlation_CSA_CSA_list.Val_units
 #
 #    loop_
@@ -1967,6 +1947,61 @@ save_
 #
 #save_
 
+save__Cross_correlation_D_CSA_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+save__Cross_correlation_D_CSA_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   s-1      .
+   ms-1     .
+   us-1     .
+
+    stop_
+
+save_
+
+save__Cross_correlation_DD_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+save__Cross_correlation_DD_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   s-1      .
+   ms-1     .
+   us-1     .
+
+    stop_
+
+save_
 
 save__CS_anisotropy_experiment.Sample_state
 
@@ -1982,7 +2017,19 @@ save__CS_anisotropy_experiment.Sample_state
 
 save_
 
+save__D_H_fract_factor_experiment.Sample_state
 
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic              .
+     anisotropic            .
+     solid                  .
+
+    stop_
+
+save_
 
 save__Data_set.Type
 
@@ -1992,6 +2039,7 @@ save__Data_set.Type
 
    assigned_chemical_shifts             .
    theoretical_chem_shifts              .
+   chem_shift_perturbation              . 
    chemical_rates                       .
    coupling_constants                   .
    theoretical_coupling_constants       .
@@ -2031,7 +2079,6 @@ save__Data_set.Type
 
 save_
 
-
 save__Datum.Type
 
   loop_
@@ -2053,7 +2100,7 @@ save__Datum.Type
      'coupling constants'                           .
      'theoretical coupling constants'               .
      'chemical shift isotope effects'               .
-     'molecule interaction chemical shift values'   .
+     'chemical shift perturbation values'   .
      'T1 relaxation values'                         .
      'theoretical T1 relaxation values'             .
      'T1rho relaxation values'                      .
@@ -2139,7 +2186,6 @@ similar structures.
 
 save_
 
-
 save__Deduced_H_bond_experiment.Sample_state
 
     loop_
@@ -2154,7 +2200,6 @@ save__Deduced_H_bond_experiment.Sample_state
 
 save_
 
-
 save__Deduced_secd_struct_experiment.Sample_state
 
     loop_
@@ -2168,7 +2213,6 @@ save__Deduced_secd_struct_experiment.Sample_state
     stop_
 
 save_
-
 
 save__Deposited_data_files.Atomic_coordinate_file_syntax
 
@@ -2199,22 +2243,6 @@ save__Deposited_data_files.Constraint_file_syntax
 
 save_
 
-
-save__D_H_fract_factor_experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     isotropic              .
-     anisotropic            .
-     solid                  .
-
-    stop_
-
-save_
-
-
 save__Dipolar_coupling_experiment.Sample_state
 
     loop_
@@ -2228,8 +2256,6 @@ save__Dipolar_coupling_experiment.Sample_state
     stop_
 
 save_
-
-
 
 save__Dipole_dipole_relax_experiment.Sample_state
 
@@ -2245,7 +2271,6 @@ save__Dipole_dipole_relax_experiment.Sample_state
 
 save_
 
-
 save__Dipole_dipole_relax_list.Val_units
 
     loop_
@@ -2260,6 +2285,28 @@ save__Dipole_dipole_relax_list.Val_units
 
 save_
 
+save__Dist_constr_software_setting.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'averaging method'                 .
+      'number monomers'                  .
+      'pseudoatom corrections'           .
+      'potential function'               .
+      'temperature'                      .
+      'exponent'                         .
+      'switch distance'                  .
+      'asymptote slope'                  .
+      'B_high'                           .
+      'ceiling'                          .
+      'negative offset'                  .
+      'scaling constant'                 .
+
+    stop_
+
+save_
 
 save__Distance_constraint_expt.Sample_state
 
@@ -2296,29 +2343,6 @@ save__Distance_constraint_list.Constraint_type
 
 save_
 
-save__Dist_constr_software_setting.Type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      'averaging method'                 .
-      'number monomers'                  .
-      'pseudoatom corrections'           .
-      'potential function'               .
-      'temperature'                      .
-      'exponent'                         .
-      'switch distance'                  .
-      'asymptote slope'                  .
-      'B_high'                           .
-      'ceiling'                          .
-      'negative offset'                  .
-      'scaling constant'                 .
-
-    stop_
-
-save_
-
 save__EMR_expt.Sample_volume_units
 
    loop_
@@ -2330,132 +2354,6 @@ save__EMR_expt.Sample_volume_units
    stop_
 
 save_
-
-save__Entity.Polymer_common_type
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    protein               .
-    DNA                   .
-    RNA                   .
-   'DNA/RNA hybrid'       .
-    polysaccharide        .             
-
-   stop_
-
-save_
-
-save__Entity.Polymer_type
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     cyclic-pseudo-peptide                      .
-    'polypeptide(L)'             
-;
-A polypeptide with a majority of amino acids
-in the L configuration
-;
-    'polydeoxyribonucleotide'                    DNA
-    'polyribonucleotide'                         RNA
-    'polydeoxyribonucleotide/polyribonucleotide hybrid'      
-;
-A nucleic acid containing a combination of DNA and
-RNA monomers
-;
-
-    'polypeptide(D)'             
-;
-A polypeptide with a majority of amino acids
-in the D configuration
-;
-
-    'polysaccharide(D)'   
-;
-A carbohydrate with the majority of the monomers
-having a D configuration
-;
-    'polysaccharide(L)'   
-;
-A carbohydrate with the majority of the monomers
-having an L configuration
-;
-
-     other                                   .
-
-   stop_
-
-save_
-
-
-save__Entity.Thiol_state
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     'all disulfide bound'       .
-     'all other bound'           .
-     'all free'                  .
-     'not present'               
-;
-Thiols are not present in the system.
-;
-     'not available'    
-;
-The oxidation state of the thiols could not be extracted from the literature
-or was not provided by the authors of the entry.
-;
-     unknown     
-;
-The author reported that the oxidation state of the thiols is
-unknown.
-;
-     'not reported'                      .
-     'free and disulfide bound'          .
-     'free and other bound'              .
-     'free disulfide and other bound'    .
-     'disulfide and other bound'         .
-
-    stop_
-
-save_
-
-
-save__Entity.Type
-
-   loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    polymer             'A biological polymer (protein$ peptide$ nucleic acid$ etc.)'
-    non-polymer         'Ligand$ metal ion$ or other non-polymeric molecule'
-    water               
-;
-Water is defined as a special case. Multiple water molecules may be components
-of the molecular assembly$ but are not assigned unique entity_assembly_ID values.
-;
-    aggregate           
-;
-Used where a large number of molecules are reported as part of a molecular
-assembly$ but are not listed individually as components of the assembly and are not
-assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to
-represent the aggregate number of molecules of a specific compound.
-;
-    solvent
-;
-Applies to compounds other than water that are part of molecular assembly$ but
-are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is
-used to represent all molecules of a specific compound.
-;
-
-   stop_
-
-save_
-
 
 save__Entity_assembly.Physical_state
 
@@ -2475,6 +2373,53 @@ save__Entity_assembly.Physical_state
 
 save_
 
+save__Entity_bond.Type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+ 
+        amide                  .
+        covalent               .
+        directed               .   # N -> O
+        disulfide              .
+        ester                  .
+        ether                  .
+        hydrogen               .
+        'metal coordination'   .
+        peptide                .
+        thioether              .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   oxime                       .
+   thioester                   .
+   phosphoester                .
+   phosphodiester              .
+   diselenide                  .
+   na                          .
+
+    stop_
+
+save_
+
+save__Entity_bond.Value_order
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+  sing           'single bond' 
+  doub           'double bond'
+  trip           'triple bond'
+  quad           'quadruple bond'
+  arom           'aromatic bond'
+  poly           'polymeric bond'
+  delo           'delocalized double bond'
+  pi             'pi bond'
+  directed       'N ->O'
+
+     stop_
+
+save_
 
 save__Entity_common_name.Type
 
@@ -2489,7 +2434,6 @@ save__Entity_common_name.Type
   stop_
 
 save_
-
 
 save__Entity_db_link.Database_code
 
@@ -2518,7 +2462,6 @@ save__Entity_db_link.Database_code
 
 save_
                
-
 save__Entity_db_link.Entry_experimental_method
 
   loop_
@@ -2533,6 +2476,17 @@ save__Entity_db_link.Entry_experimental_method
 
 save_
 
+save__Entity_experimental_src.Host_org_genus
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   Escherichia      .
+
+  stop_
+
+save_
 
 save__Entity_experimental_src.Host_org_scientific_name
 
@@ -2549,6 +2503,18 @@ save__Entity_experimental_src.Host_org_scientific_name
      'Spodoptera frugiperda'                  .
      'wheat germ - cell free'                 .
      'E. coli - cell free'                    .
+
+  stop_
+
+save_
+
+save__Entity_experimental_src.Host_org_species
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    coli        .
 
   stop_
 
@@ -2612,31 +2578,6 @@ not available
 
 save_
 
-save__Entity_experimental_src.Host_org_genus
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-   Escherichia      .
-
-  stop_
-
-save_
-
-
-save__Entity_experimental_src.Host_org_species
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    coli        .
-
-  stop_
-
-save_
-
 save__Entity_experimental_src.Vector_type
 
   loop_
@@ -2651,7 +2592,6 @@ save__Entity_experimental_src.Vector_type
   stop_
 
 save_
-
 
 save__Entity_natural_src.Kingdom
 
@@ -2676,25 +2616,6 @@ protozoa and single-celled eukaryotic algae
       "Not applicable"    .
 
   stop_
-
-save_
-
-
-save__Entity_natural_src.Type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       organism                     .
-       virus                        .
-       plasmid                      .
-       cosmid                       .
-      'multiple natural sources'    .
-      'no natural source'           .
-      'not applicable'              .
-
-   stop_
 
 save_
 
@@ -2949,6 +2870,23 @@ save__Entity_natural_src.Tissue
 
 save_
 
+save__Entity_natural_src.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       organism                     .
+       virus                        .
+       plasmid                      .
+       cosmid                       .
+      'multiple natural sources'    .
+      'no natural source'           .
+      'not applicable'              .
+
+   stop_
+
+save_
 
 save__Entity_systematic_name.Naming_system
 
@@ -2972,147 +2910,144 @@ save__Entity_systematic_name.Naming_system
 
 save_
 
-save__Entry.Author_release_status_code
+save__Entity.Polymer_common_type
 
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
 
-     REL    'Release' 
-     HOLD   'On hold until yyyy-mm-dd'
-     HPUB   'On hold until publication'
-     OBS    'Entry has been obsoleted and replaced by another entry'
-     WDRN   'Entry has been withdrawn by depositor'
-
-    stop_
-
-save_
-
-save__Entry.CASP_target
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     CASP            .
-     CASD-NMR        .
-     FoldIt          .
-    'GPCR Dock'      .
+    protein               .
+    DNA                   .
+    RNA                   .
+   'DNA/RNA hybrid'       .
+    polysaccharide        .             
 
    stop_
 
 save_
 
-save__Entry.Dep_release_code_coordinates
+save__Entity.Polymer_type
 
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
 
-   'RELEASE NOW'            'Release immediately'
-   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
-   'HOLD FOR 1 YEAR'        'Hold for 1 year'
-     
+     cyclic-pseudo-peptide                      .
+    'polypeptide(L)'             
+;
+A polypeptide with a majority of amino acids
+in the L configuration
+;
+    'polydeoxyribonucleotide'                    DNA
+    'polyribonucleotide'                         RNA
+    'polydeoxyribonucleotide/polyribonucleotide hybrid'      
+;
+A nucleic acid containing a combination of DNA and
+RNA monomers
+;
+
+    'polypeptide(D)'             
+;
+A polypeptide with a majority of amino acids
+in the D configuration
+;
+
+    'polysaccharide(D)'   
+;
+A carbohydrate with the majority of the monomers
+having a D configuration
+;
+    'polysaccharide(L)'   
+;
+A carbohydrate with the majority of the monomers
+having an L configuration
+;
+
+     other                                   .
+
    stop_
 
 save_
 
+save__Entity.Thiol_state
 
-save__Entry.Dep_release_code_sequence
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
 
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   'RELEASE NOW'         'Release sequence information in status reports immediately'
-   'HOLD FOR RELEASE'    
+     'all disulfide bound'       .
+     'all other bound'           .
+     'all free'                  .
+     'not present'               
 ;
-Conceal sequence information in status reports until coordinate data are
-released
+Thiols are not present in the system.
+;
+     'not available'    
+;
+The oxidation state of the thiols could not be extracted from the literature
+or was not provided by the authors of the entry.
+;
+     unknown     
+;
+The author reported that the oxidation state of the thiols is
+unknown.
+;
+     'not reported'                      .
+     'free and disulfide bound'          .
+     'free and other bound'              .
+     'free disulfide and other bound'    .
+     'disulfide and other bound'         .
+
+    stop_
+
+save_
+
+save__Entity.Type
+
+   loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    polymer             'A biological polymer (protein$ peptide$ nucleic acid$ etc.)'
+    non-polymer         'Ligand$ metal ion$ or other non-polymeric molecule'
+    water               
+;
+Water is defined as a special case. Multiple water molecules may be components
+of the molecular assembly$ but are not assigned unique entity_assembly_ID values.
+;
+    aggregate           
+;
+Used where a large number of molecules are reported as part of a molecular
+assembly$ but are not listed individually as components of the assembly and are not
+assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to
+represent the aggregate number of molecules of a specific compound.
+;
+    solvent
+;
+Applies to compounds other than water that are part of molecular assembly$ but
+are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is
+used to represent all molecules of a specific compound.
 ;
 
-    stop_
+   stop_
 
 save_
 
-
-save__Entry.Dep_release_code_nmr_constraints
+save__Entry_author.Family_title
 
     loop_
       _item_enumeration_value
       _item_enumeration_description
 
-   'RELEASE NOW'            'Release immediately'
-   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
-   'HOLD FOR 1 YEAR'        'Hold for 1 year'
-
-    stop_
-
-save_
-save__Entry.Dep_release_code_chemical_shifts
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   'RELEASE NOW'            'Release immediately'
-   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
-   'HOLD FOR 1 YEAR'        'Hold for 1 year'
-
-    stop_
-
-save_
-
-
-save__Entry.Dep_release_code_nmr_exptl
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   'RELEASE NOW'            'Release immediately'
-   'HOLD FOR PUBLICATION'   'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'       'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'       'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'      'Hold for 6 months'
-   'HOLD FOR 1 YEAR'        'Hold for 1 year'
-
-    stop_
-
-save_
-
-save__Entry.Experimental_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-       NMR                    .
-# PDBj-BMRB: Added 'theoretical'.
-       Theoretical            .
-    stop_
-
-save_
-
-save__Entry.Experimental_method_subtype
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     SOLUTION              'Experiments using solution samples'
-     SOLID-STATE           'Experiments using samples in the solid-state'
-     THEORETICAL           'Data derived from theoretical calculations'
-    
+      Sr.              Senior
+      Jr.              Junior
+      I                First
+      II               Second
+      III              Third
+      IV               Fourth
+# PDBj-BMRB: Added V.
+      V                 Fifth
+      
     stop_
 
 save_
@@ -3150,6 +3085,230 @@ save__Entry_experimental_methods.Subtype
 
 save_ 
 
+save__Entry_interview.View_mode
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+     
+       PDB/BMRB        .
+      'BMRB Only'      .
+
+   stop_
+
+save_
+
+save__Entry_src.Organization_full_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    "Accelerated Technologies Center for Gene to 3D Structure"                   .
+    "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
+    "Architecture and Function of Biological Macromolecules Structure Genomics"  ASG           
+    "Atoms-to-Animals: The Immune Function Network"                              .
+    "Bacterial targets at IGS-CNRS$ France"                                      .
+    "Berkeley Structural Genomics Center"                                        BSGC
+    "Center for Eukaryotic Structural Genomics"                                  CESG
+    "Center for High-Throughput Structural Biology"                              .
+    "Center for Membrane Proteins of Infectious Diseases"                        .
+    "Center for Structural Genomics of Infectious Diseases"                      .
+    "Center for Structures of Membrane Proteins"                                 .
+    "Center for the X-ray Structure Determination of Human Transporters"         .
+    "Chaperone-Enabled Studies of Epigenetic Regulation Enzymes"                 .
+    "Enzyme Discovery for Natural Product Biosynthesis"                          .
+    "GPCR Network"                                                               .
+    "Integrated Center for Structure and Function Innovation"                    .
+    "Israel Structural Proteomics Center"                                        .
+    "Joint Center for Structural Genomics"                                       JCSG
+    "Marseilles Structural Genomics Program @ AFMB"                              .
+    "Medical Structural Genomics of Pathogenic Protozoa"                         .
+    "Membrane Protein Structural Biology Consortium"                             .
+    "Membrane Protein Structures by Solution NMR"                                .
+    "Midwest Center for Structural Genomics"                                     MCSG
+    "Mitochondrial Protein Partnership"                                          .
+    "Montreal-Kingston Bacterial Structural Genomics Initiative"                 .
+    "Mycobacterium Tuberculosis Structural Proteomics Project"                   .
+    "New York Consortium on Membrane Protein Structure"                          .
+    "New York SGX Research Center for Structural Genomics"                       .
+    "New York Structural Genomics Research Consortium"                           NYSGRC
+    "New York Structural GenomiX Research Consortium"                            .
+    "Northeast Structural Genomics Consortium"                                   .
+    "North West Structural Genomics Centre"                                      NWSGC   
+    "Nucleocytoplasmic Transport: a Target for Cellular Control"                 .
+    "Ontario Centre for Structural Proteomics"                                   .
+    "Oxford Protein Production Facility"                                         .
+    "Paris-Sud Yeast Structural Genomics"                                        .
+    "Partnership for Stem Cell Biology"                                          .
+    "Partnership for T-Cell Biology"                                             .
+    "Program for the Characterization of Secreted Effector Proteins"             .
+    "Protein Structure Factory"                                                  .
+    "RIKEN Structural Genomics/Proteomics Initiative"                            .
+    "Scottish Structural Proteomics Facility"                                    .
+    "Seattle Structural Genomics Center for Infectious Disease"                  .
+    "Southeast Collaboratory for Structural Genomics"                            .
+    "Structural Genomics Consortium"                                             .
+    "Structural Genomics Consortium for Research on Gene Expression"             .
+    "Structural Genomics of Pathogenic Protozoa Consortium"                      .
+    "Structural Proteomics in Europe"                                            .
+    "Structural Proteomics in Europe 2"                                          .
+    "Structure 2 Function Project"                                               .
+    "Structure$ Dynamics and Activation Mechanisms of Chemokine Receptors"       .
+    "Structure-Function Studies of Tight Junction Membrane Proteins"             .
+    "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"  .
+    "TB Structural Genomics Consortium"                                          .
+    "Transcontinental EM Initiative for Membrane Protein Structure"              .
+    "Transmembrane Protein Center"                                               .
+    "Yeast Structural Genomics"                                                  YSG 
+
+  stop_
+
+save_
+
+save__Entry.Author_release_status_code
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     REL    'Release' 
+     HOLD   'On hold until yyyy-mm-dd'
+     HPUB   'On hold until publication'
+     OBS    'Entry has been obsoleted and replaced by another entry'
+     WDRN   'Entry has been withdrawn by depositor'
+
+    stop_
+
+save_
+
+save__Entry.CASP_target
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     CASP            .
+     CASD-NMR        .
+     FoldIt          .
+    'GPCR Dock'      .
+
+   stop_
+
+save_
+
+save__Entry.Dep_release_code_chemical_shifts
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'Release now'            'Release immediately'
+   'Hold for publication'   'Hold until primary citation is published'
+   'Hold for 4 weeks'       'Hold for 4 weeks'
+   'Hold for 8 weeks'       'Hold for 8 weeks'
+   'Hold for 6 months'      'Hold for 6 months'
+   'Hold for 1 year'        'Hold for 1 year'
+
+    stop_
+
+save_
+
+save__Entry.Dep_release_code_coordinates
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'Release now'            'Release immediately'
+   'Hold for publication'   'Hold until primary citation is published'
+   'Hold for 4 weeks'       'Hold for 4 weeks'
+   'Hold for 8 weeks'       'Hold for 8 weeks'
+   'Hold for 6 months'      'Hold for 6 months'
+   'Hold for 1 year'        'Hold for 1 year'
+     
+   stop_
+
+save_
+
+save__Entry.Dep_release_code_nmr_constraints
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'Release now'            'Release immediately'
+   'Hold for publication'   'Hold until primary citation is published'
+   'Hold for 4 weeks'       'Hold for 4 weeks'
+   'Hold for 8 weeks'       'Hold for 8 weeks'
+   'Hold for 6 months'      'Hold for 6 months'
+   'Hold for 1 year'        'Hold for 1 year'
+
+    stop_
+
+save_
+
+save__Entry.Dep_release_code_nmr_exptl
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'Release now'            'Release immediately'
+   'Hold for publication'   'Hold until primary citation is published'
+   'Hold for 4 weeks'       'Hold for 4 weeks'
+   'Hold for 8 weeks'       'Hold for 8 weeks'
+   'Hold for 6 months'      'Hold for 6 months'
+   'Hold for 1 year'        'Hold for 1 year'
+
+    stop_
+
+save_
+
+save__Entry.Dep_release_code_sequence
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   'Release now'         'Release sequence information in status reports immediately'
+   'Hold for release'    
+;
+Conceal sequence information in status reports until coordinate data are
+released
+;
+
+    stop_
+
+save_
+
+save__Entry.Experimental_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+       NMR                    .
+# PDBj-BMRB: Added 'theoretical'.
+       Theoretical            .
+    stop_
+
+save_
+
+save__Entry.Experimental_method_subtype
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     solution              'Experiments using solution samples'
+     solid-state           'Experiments using samples in the solid-state'
+     theoretical           'Data derived from theoretical calculations'
+    
+    stop_
+
+save_
+
 save__Entry.Format_name
 
     loop_
@@ -3161,7 +3320,6 @@ save__Entry.Format_name
     stop_
 
 save_ 
-
 
 save__Entry.NMR_STAR_version
 
@@ -3256,7 +3414,6 @@ save__Entry.Original_NMR_STAR_version
    3.0.8.116    .
    3.0.8.53     .
 
-
     stop_
 
 save_
@@ -3266,7 +3423,6 @@ save__Entry.Release_request
   loop_
      _item_enumeration_value
      _item_enumeration_description
-
 
      'Immediately'                 
 ;
@@ -3345,123 +3501,6 @@ The entry is no longer released by BMRB to the public.
 
 save_
 
-
-save__Entry_author.Family_title
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      Sr.              Senior
-      Jr.              Junior
-      I                First
-      II               Second
-      III              Third
-      IV               Fourth
-# PDBj-BMRB: Added V.
-      V                 Fifth
-      
-
-    stop_
-
-save_
-
-save__Entry_interview.View_mode
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-     
-       PDB/BMRB        .
-      'BMRB Only'      .
-
-   stop_
-
-save_
-
-save__Entry_src.Organization_full_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    "Accelerated Technologies Center for Gene to 3D Structure"                   .
-    "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
-    "Architecture and Function of Biological Macromolecules Structure Genomics"  ASG           
-    "Atoms-to-Animals: The Immune Function Network"                              .
-    "Bacterial targets at IGS-CNRS$ France"                                      .
-    "Berkeley Structural Genomics Center"                                        BSGC
-    "Center for Eukaryotic Structural Genomics"                                  CESG
-    "Center for High-Throughput Structural Biology"                              .
-    "Center for Membrane Proteins of Infectious Diseases"                        .
-    "Center for Structural Genomics of Infectious Diseases"                      .
-    "Center for Structures of Membrane Proteins"                                 .
-    "Center for the X-ray Structure Determination of Human Transporters"         .
-    "Chaperone-Enabled Studies of Epigenetic Regulation Enzymes"                 .
-    "Enzyme Discovery for Natural Product Biosynthesis"                          .
-    "GPCR Network"                                                               .
-    "Integrated Center for Structure and Function Innovation"                    .
-    "Israel Structural Proteomics Center"                                        .
-    "Joint Center for Structural Genomics"                                       JCSG
-    "Marseilles Structural Genomics Program @ AFMB"                              .
-    "Medical Structural Genomics of Pathogenic Protozoa"                         .
-    "Membrane Protein Structural Biology Consortium"                             .
-    "Membrane Protein Structures by Solution NMR"                                .
-    "Midwest Center for Structural Genomics"                                     MCSG
-    "Mitochondrial Protein Partnership"                                          .
-    "Montreal-Kingston Bacterial Structural Genomics Initiative"                 .
-    "Mycobacterium Tuberculosis Structural Proteomics Project"                   .
-    "New York Consortium on Membrane Protein Structure"                          .
-    "New York SGX Research Center for Structural Genomics"                       .
-    "New York Structural Genomics Research Consortium"                           NYSGRC
-    "New York Structural GenomiX Research Consortium"                            .
-    "Northeast Structural Genomics Consortium"                                   .
-    "North West Structural Genomics Centre"                                      NWSGC   
-    "Nucleocytoplasmic Transport: a Target for Cellular Control"                 .
-    "Ontario Centre for Structural Proteomics"                                   .
-    "Oxford Protein Production Facility"                                         .
-    "Paris-Sud Yeast Structural Genomics"                                        .
-    "Partnership for Stem Cell Biology"                                          .
-    "Partnership for T-Cell Biology"                                             .
-    "Program for the Characterization of Secreted Effector Proteins"             .
-    "Protein Structure Factory"                                                  .
-    "RIKEN Structural Genomics/Proteomics Initiative"                            .
-    "Scottish Structural Proteomics Facility"                                    .
-    "Seattle Structural Genomics Center for Infectious Disease"                  .
-    "Southeast Collaboratory for Structural Genomics"                            .
-    "Structural Genomics Consortium"                                             .
-    "Structural Genomics Consortium for Research on Gene Expression"             .
-    "Structural Genomics of Pathogenic Protozoa Consortium"                      .
-    "Structural Proteomics in Europe"                                            .
-    "Structural Proteomics in Europe 2"                                          .
-    "Structure 2 Function Project"                                               .
-    "Structure$ Dynamics and Activation Mechanisms of Chemokine Receptors"       .
-    "Structure-Function Studies of Tight Junction Membrane Proteins"             .
-    "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"  .
-    "TB Structural Genomics Consortium"                                          .
-    "Transcontinental EM Initiative for Membrane Protein Structure"              .
-    "Transmembrane Protein Center"                                               .
-    "Yeast Structural Genomics"                                                  YSG 
-
-  stop_
-
-save_
-
-
-
-save__Experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    isotropic                    .
-    anisotropic                  .
-
-    stop_
-
-save_
-
 save__Experiment_file.Content
 
     loop_
@@ -3494,6 +3533,59 @@ as shown as a figure in many publications
 
 save_
 
+save__Experiment.Name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      '2D 1H-15N HSQC'              .
+      '2D 1H-15N HSQC NH2 only'     .
+      '2D 1H-13C HSQC'              .
+      '2D 1H-13C HSQC aliphatic'    .
+      '2D 1H-13C HSQC aromatic'     .   
+      '2D 1H-1H TOCSY'              .
+      '2D DQF-COSY'                 .
+      '2D 1H-1H COSY'               .
+      '2D 1H-1H NOESY'              .
+      '3D CBCA(CO)NH'               .
+      '3D C(CO)NH'                  .
+      '3D HNCO'                     .
+      '3D HNCA'                     .
+      '3D HNCACB'                   .
+      '3D HBHA(CO)NH'               .
+      '3D HN(CO)CA'                 .
+      '3D H(CCO)NH'                 .
+      '3D HCCH-TOCSY'               .
+      '3D HNHA'                     .
+      '3D 1H-15N NOESY'             .
+      '3D 1H-15N TOCSY'             .
+      '3D 1H-13C NOESY'             .
+      '3D 1H-13C NOESY aliphatic'   .
+      '3D 1H-13C NOESY aromatic'    .
+      '3D HNHB'                     .
+      '3D HCCH-COSY'                .
+      '3D HCACO'                    .
+      '3D HN(COCA)CB'               .
+      '15N-(1H) NOE'                .
+      '13C-(1H) NOE'                .
+
+  stop_
+
+save_ 
+
+save__Experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+
+    stop_
+
+save_
 
 save__Force_constant.Term
 
@@ -3535,8 +3627,21 @@ kcal/mol*A4        "van der Waals"
 kcal/mol*Hz2       "dipolar coupling; scalar couplings; T1/T2; CSA"    
 kcal/mol*ppm2      "Chemical shifts; pseudocontact shifts"          
 
-
      stop_
+
+save_
+
+save__Gen_dist_constraint_expt.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic         .
+    anisotropic       .
+    solid             .
+
+    stop_
 
 save_
 
@@ -3617,29 +3722,22 @@ E = 2k(l2-l)(r - (l2+l)/2) for r < l2
 
 ;
 
-
-
-   upper-bound-parabolic              'can be derived from the two-sided versions given above'
-   lower-bound-parabolic              'can be derived from the two-sided versions given above'
-   upper-bound-parabolic-linear       'can be derived from the two-sided versions given above'
-   lower-bound-parabolic-linear       'can be derived from the two-sided versions given above'
-
-    stop_
-
-save_
-
-
-
-save__Gen_dist_constraint_expt.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-
-    isotropic         .
-    anisotropic       .
-    solid             .
+   upper-bound-parabolic              
+;
+can be derived from the two-sided versions given above
+;
+   lower-bound-parabolic              
+;
+can be derived from the two-sided versions given above
+;
+   upper-bound-parabolic-linear       
+;
+can be derived from the two-sided versions given above
+;
+   lower-bound-parabolic-linear       
+;
+can be derived from the two-sided versions given above
+;
 
     stop_
 
@@ -3668,7 +3766,6 @@ save__Gen_dist_constraint_software_param.Type
 
 save_
 
-
 save__Gen_dist_constraint.Member_logic_code
 
   loop_
@@ -3681,7 +3778,6 @@ save__Gen_dist_constraint.Member_logic_code
   stop_
 
 save_
-
 
 save__H_chem_shift_constraint_expt.Sample_state
 
@@ -3697,6 +3793,50 @@ save__H_chem_shift_constraint_expt.Sample_state
 
 save_
 
+save__H_exch_protection_fact_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+save__H_exch_rate_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    isotropic        .
+    anisotropic      .
+    solid            .
+
+    stop_
+
+save_
+
+save__H_exch_rate_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    s           'half-time'
+    s-1         'rate'
+    min         'half-time'
+    min-1       'rate'
+    hr          'half-time'
+    hr-1        'rate'
+
+    stop_
+
+save_
 
 save__Heteronucl_NOE_experiment.Sample_state
 
@@ -3728,22 +3868,7 @@ save__Heteronucl_NOE_list.Heteronuclear_NOE_val_type
 
 save_
 
-
 save__Heteronucl_T1_experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     isotropic        .
-     anisotropic      .
-     solid            .
-
-     stop_
-
-save_
-
-save__Theoretical_heteronucl_T1_experiment.Sample_state
 
     loop_
       _item_enumeration_value
@@ -3770,20 +3895,6 @@ save__Heteronucl_T1_list.T1_coherence_type
 
 save_
 
-save__Theoretical_heteronucl_T1_list.T1_coherence_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         Iz              'zero quantum$ longitudinal'
-         Sz              'zero quantum$ longitudinal'
-                         
-    stop_
-
-save_
-
-
 save__Heteronucl_T1_list.T1_val_units
 
     loop_
@@ -3798,22 +3909,6 @@ save__Heteronucl_T1_list.T1_val_units
     stop_
 
 save_
-
-save__Theoretical_heteronucl_T1_list.T1_val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s             .
-         s-1           .
-         ms            .
-         ms-1          .
-             
-    stop_
-
-save_
-
 
 save__Heteronucl_T1rho_experiment.Sample_state
 
@@ -3843,8 +3938,6 @@ save__Heteronucl_T1rho_list.Rex_units
 
 save_
 
-
-
 save__Heteronucl_T1rho_list.T1rho_coherence_type
 
     loop_
@@ -3873,7 +3966,6 @@ save__Heteronucl_T1rho_list.T1rho_val_units
 
 save_
 
-
 save__Heteronucl_T1rho_list.Temp_calibration_method
 
     loop_
@@ -3887,7 +3979,6 @@ save__Heteronucl_T1rho_list.Temp_calibration_method
    stop_
 
 save_
-
 
 save__Heteronucl_T1rho_list.Temp_control_method
 
@@ -3903,7 +3994,6 @@ save__Heteronucl_T1rho_list.Temp_control_method
 
 save_
 
-
 save__Heteronucl_T2_experiment.Sample_state
 
     loop_
@@ -3917,22 +4007,6 @@ save__Heteronucl_T2_experiment.Sample_state
     stop_
 
 save_
-
-save__Heteronucl_T2_list.T2_val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1           .
-         ms-1          .
-         s             .
-         ms            .
-             
-    stop_
-
-save_
-
 
 save__Heteronucl_T2_list.Rex_units
 
@@ -3962,7 +4036,20 @@ save__Heteronucl_T2_list.T2_coherence_type
 
 save_
 
+save__Heteronucl_T2_list.T2_val_units
 
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         s             .
+         ms            .
+             
+    stop_
+
+save_
 
 save__Heteronucl_T2_list.Temp_calibration_method
 
@@ -3978,7 +4065,6 @@ save__Heteronucl_T2_list.Temp_calibration_method
 
 save_
 
-
 save__Heteronucl_T2_list.Temp_control_method
 
     loop_
@@ -3992,422 +4078,6 @@ save__Heteronucl_T2_list.Temp_control_method
    stop_
 
 save_
-
-
-save__Theoretical_heteronucl_T2_experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     isotropic            .
-     anisotropic          .
-     solid                .
-            
-    stop_
-
-save_
-
-save__Theoretical_heteronucl_T2_list.T2_val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1           .
-         ms-1          .
-         s             .
-         ms            .
-             
-    stop_
-
-save_
-
-
-save__Theoretical_heteronucl_T2_list.Rex_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1        .
-         ms-1       .
-         us-1       .
-             
-    stop_
-
-save_
-
-save__Theoretical_heteronucl_T2_list.T2_coherence_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-
-         I(+$-)              'single quantum'
-         S(+$-)              'single quantum'
-    
-    stop_
-
-save_
-
-
-
-save__Theoretical_heteronucl_T2_list.Temp_calibration_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-
-    methanol                          .
-   "monoethylene glycol"              .
-   "no calibration applied"           .
-   stop_
-
-save_
-
-
-save__Theoretical_heteronucl_T2_list.Temp_control_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    'single scan interleaving'           .
-    'temperature compensation block'     .
-    'no temperature control applied'     .
-
-   stop_
-
-save_
-
-
-save__Auto_relaxation_experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     isotropic            .
-     anisotropic          .
-     solid                .
-            
-    stop_
-
-save_
-
-save__Auto_relaxation_list.Rex_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1        .
-         ms-1       .
-         us-1       .
-             
-    stop_
-
-save_
-
-save__Auto_relaxation_list.Relaxation_coherence_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   Iz               'R1    longitudinal'
-   Sz               'R1    longitudinal'
-                         
-   (I+)+(I-)        'R1rho or R2      transverse'
-   (S+)+(S-)        'R1rho or R2      transverse'
-   I+               'R1rho or R2      transverse'
-   I-               'R1rho or R2      transverse'
-   S+               'R1rho or R2      transverse'
-   S-               'R1rho or R2      transverse'
-
-   (I+S-)+(I-S+)    'ZQ relaxation'
-   I-S+             'ZQ relaxation'
-   I+S-             'ZQ relaxation'
-
-   IzSz             'longitudinal spin order'
-
-  ((I+)+(I-))Sz     'single quantum antiphase'
-  Iz((S+)+(S-))     'single quantum antiphase'
-   I+Sz             'single quantum antiphase'
-   I-Sz             'single quantum antiphase'
-   IzS+             'single quantum antiphase'
-   IzS-             'single quantum antiphase'
-   
- (I+S+)+(I-S-)      'DQ relaxation'
-   I+S+             'DQ relaxation'
-   I-S-             'DQ relaxation'
-         
-    stop_
-
-save_
-
-
-save__Auto_relaxation_list.Relaxation_val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1           .
-         ms-1          .
-         us-1          .
-         ns-1          .
-         ps-1          .
-             
-    stop_
-
-save_
-
-save__Auto_relaxation_list.Temp_calibration_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    methanol                    MeOH
-   'monoethylene glycol'        MEG
-   'no calibration applied'     .
-
-   stop_
-
-save_
-
-save__Auto_relaxation_list.Temp_control_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    'single scan interleaving'                                             .
-    'temperature compensation block'                                       .
-    'single scan interleaving and temperature compensation block'          .
-    'no temperature control applied'                                       .
-
-   stop_
-
-save_
-
-save__Auto_relaxation_list.Common_relaxation_type_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      R1                                    .
-      R2                                    .
-      R1rho                                 .
-     'ZQ relaxation'                        .
-     'longitudinal spin order'              .
-     'single quantum antiphase'             .
-     'DQ relaxation'                        .
-
-   stop_
-
-save_
-
-
-save__Theoretical_auto_relaxation_experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     isotropic            .
-     anisotropic          .
-     solid                .
-            
-    stop_
-
-save_
-
-save__Theoretical_auto_relaxation_list.Rex_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1        .
-         ms-1       .
-         us-1       .
-             
-    stop_
-
-save_
-
-save__Theoretical_auto_relaxation_list.Relaxation_coherence_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   Iz               'R1    longitudinal'
-   Sz               'R1    longitudinal'
-                         
-   (I+)+(I-)        'R1rho or R2      transverse'
-   (S+)+(S-)        'R1rho or R2      transverse'
-   I+               'R1rho or R2      transverse'
-   I-               'R1rho or R2      transverse'
-   S+               'R1rho or R2      transverse'
-   S-               'R1rho or R2      transverse'
-
-   (I+S-)+(I-S+)    'ZQ relaxation'
-   I-S+             'ZQ relaxation'
-   I+S-             'ZQ relaxation'
-
-   IzSz             'longitudinal spin order'
-
-  ((I+)+(I-))Sz     'single quantum antiphase'
-  Iz((S+)+(S-))     'single quantum antiphase'
-   I+Sz             'single quantum antiphase'
-   I-Sz             'single quantum antiphase'
-   IzS+             'single quantum antiphase'
-   IzS-             'single quantum antiphase'
-   
- (I+S+)+(I-S-)      'DQ relaxation'
-   I+S+             'DQ relaxation'
-   I-S-             'DQ relaxation'
-         
-    stop_
-
-save_
-
-
-save__Theoretical_auto_relaxation_list.Relaxation_val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-         s-1           .
-         ms-1          .
-         us-1          .
-         ns-1          .
-         ps-1          .
-             
-    stop_
-
-save_
-
-save__Theoretical_auto_relaxation_list.Temp_calibration_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    methanol                    MeOH
-   'monoethylene glycol'        MEG
-   'no calibration applied'     .
-
-   stop_
-
-save_
-
-save__Theoretical_auto_relaxation_list.Temp_control_method
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    'single scan interleaving'                                             .
-    'temperature compensation block'                                       .
-    'single scan interleaving and temperature compensation block'          .
-    'no temperature control applied'                                       .
-
-   stop_
-
-save_
-
-save__Theoretical_auto_relaxation_list.Common_relaxation_type_name
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      R1                                    .
-      R2                                    .
-      R1rho                                 .
-     'ZQ relaxation'                        .
-     'longitudinal spin order'              .
-     'single quantum antiphase'             .
-     'DQ relaxation'                        .
-
-   stop_
-
-save_
-
-save__Homonucl_NOE_list.Homonuclear_NOE_val_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    'peak volume'             .
-    'peak height'             .
-    'contour count'           .
-     na                       .
-    
-    stop_
-
-save_
-
-
-
-save__H_exch_protection_fact_experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    isotropic        .
-    anisotropic      .
-    solid            .
-
-    stop_
-
-save_
-
-
-
-save__H_exch_rate_experiment.Sample_state
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    isotropic        .
-    anisotropic      .
-    solid            .
-
-    stop_
-
-save_
-
-
-save__H_exch_rate_list.Val_units
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    s           'half-time'
-    s-1         'rate'
-    min         'half-time'
-    min-1       'rate'
-    hr          'half-time'
-    hr-1        'rate'
-
-    stop_
-
-save_
-
 
 save__History.Software_name
 
@@ -4500,6 +4170,20 @@ save__History.Software_name
 
 save_
 
+save__Homonucl_NOE_list.Homonuclear_NOE_val_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'peak volume'             .
+    'peak height'             .
+    'contour count'           .
+     na                       .
+    
+    stop_
+
+save_
 
 save__Isotope_effect_experiment.Sample_state
 
@@ -4515,7 +4199,6 @@ save__Isotope_effect_experiment.Sample_state
 
 save_
 
-
 save__J_three_bond_constraint_expt.Sample_state
 
     loop_
@@ -4530,6 +4213,35 @@ save__J_three_bond_constraint_expt.Sample_state
 
 save_
 
+save__Local_structure_quality.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'not observed'                            ?
+    'not well defined'                        ?
+    'low restraint density'                   ?
+    'well defined'                            ?
+    'high restraint density'                  ?
+
+  stop_
+
+save_
+
+save__Mass_spec_config.Component_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     source                 .
+     analyzer               .
+     detector               .
+
+    stop_
+
+save_
 
 save__Mass_spec.Manufacturer
 
@@ -4580,22 +4292,6 @@ save__Mass_spec.Type
 
 save_
 
-save__Mass_spec_config.Component_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-     source                 .
-     analyzer               .
-     detector               .
-
-    stop_
-
-save_
-
-
-
 save__Mass_spectrometer_view.Fragmentation_method
 
     loop_
@@ -4605,22 +4301,6 @@ save__Mass_spectrometer_view.Fragmentation_method
       CID          .
       ETD          'electron-transfer dissociation'
       IRMPD        .
-
-    stop_
-
-save_
-
-
-save__Mass_spectrometer_view.Type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      Q-TOF          .
-     'ion TRAP'      .
-      FTMS           .
-      Quadrupole     .
 
     stop_
 
@@ -4660,33 +4340,126 @@ save__Mass_spectrometer_view.Manufacturer
 
 save_
 
-
-save__Chem_shift_perturbation_list.Type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-    ?macromolecular binding?           .
-    ?ligand binding?                     .
-    ?ligand fragment binding?           .
-    ?paramagnetic ligand binding?       .
-
-    stop_
-
-save_   
-
-save__Chem_shift_perturbation_experiment.Sample_state
+save__Mass_spectrometer_view.Type
 
     loop_
       _item_enumeration_value
       _item_enumeration_description
 
-    isotropic        .
-    anisotropic      .
-    solid            .
+      Q-TOF          .
+     'ion TRAP'      .
+      FTMS           .
+      Quadrupole     .
 
     stop_
+
+save_
+
+save__Matched_entries.Database_name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+      PDB      .
+
+  stop_
+
+save_
+
+#save__Model_free.Model_fit
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+# No internal model-free motions:
+
+ #        ''                                                .
+ #        'Rex'                                             .
+ 
+# Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
+# such as Rex:
+
+  #       'S2'                                               .
+  #       'S2$ te'                                           .
+  #       'S2$ Rex'                                          .
+  #       'S2$ te$ Rex'                                      .
+ 
+# Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
+
+  #       'S2f$ S2$ ts'                                      .
+  #       'S2f$ S2s$ ts'                                     .
+  #       'S2f$ tf$ S2$ ts'                                  .
+  #       'S2f$ tf$ S2s$ ts'                                 .
+  #       'S2f$ S2$ ts$ Rex'                                 .
+  #       'S2f$ S2s$ ts$ Rex'                                .
+  #       'S2f$ tf$ S2$ ts$ Rex'                             .
+  #       'S2f$ tf$ S2s$ ts$ Rex'                            .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_experiment.Sample_state
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    isotropic         .
+#    anisotropic       .
+#    solid             .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_list.Tau_e_val_units
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    s    .
+#    ms   .
+#    us   .
+#    ns   .
+#    ps   .
+
+#  stop_
+
+#save_ 
+
+#save__Model_free_list.Tau_s_val_units
+
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
+
+#    s    .
+#    ms   .
+#    us   .
+#    ns   .
+#    ps   .
+
+#  stop_
+
+#save_ 
+
+save__Model_type.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     'experimental ensemble member'                    ?
+     'representative lowest energy'                    ?
+     'representative closest to the mean'              ?
+     'representative average minimized'                ?
+     'representative lowest overall target function'   ?
+
+  stop_
 
 save_
 
@@ -4702,7 +4475,6 @@ save__MS_chromatogram_list.Text_data_format
      stop_
 
 save_
-
 
 save__MS_expt_param.Name
 
@@ -4740,8 +4512,6 @@ save__MS_expt.Spectrum_type
 
 save_
 
-
-
 save__NMR_experiment_file.Type
 
     loop_
@@ -4773,7 +4543,6 @@ as shown as a figure in many publications
     stop_
 
 save_
-
 
 save__NMR_expt_systematic_name.Naming_system
 
@@ -4823,136 +4592,18 @@ save__NMR_spec_expt.NMR_tube_type
 
 save_
 
-save__NMR_spec_expt.Type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-      'NOE'         .
-      'COSY'        .
-
-    stop_
-
-save_
-
-save__NMR_spectrometer_probe.Diameter
+save__NMR_spec_expt.Sample_volume_units
 
   loop_
      _item_enumeration_value
      _item_enumeration_description
 
-   '1.7 mm'          .
-   '3 mm'            .
-   '5 mm'            .
-   '8 mm'            .
-   '10 mm'           .
-   '20 mm'           .
+    uL   .
+    mL   .
 
   stop_
 
 save_
-
-save__Experiment.Name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-      '2D 1H-15N HSQC'              .
-      '2D 1H-15N HSQC NH2 only'     .
-      '2D 1H-13C HSQC'              .
-      '2D 1H-13C HSQC aliphatic'    .
-      '2D 1H-13C HSQC aromatic'     .   
-      '2D 1H-1H TOCSY'              .
-      '2D DQF-COSY'                 .
-      '2D 1H-1H COSY'               .
-      '2D 1H-1H NOESY'              .
-      '3D CBCA(CO)NH'               .
-      '3D C(CO)NH'                  .
-      '3D HNCO'                     .
-      '3D HNCA'                     .
-      '3D HNCACB'                   .
-      '3D HBHA(CO)NH'               .
-      '3D HN(CO)CA'                 .
-      '3D H(CCO)NH'                 .
-      '3D HCCH-TOCSY'               .
-      '3D HNHA'                     .
-      '3D 1H-15N NOESY'             .
-      '3D 1H-15N TOCSY'             .
-      '3D 1H-13C NOESY'             .
-      '3D 1H-13C NOESY aliphatic'   .
-      '3D 1H-13C NOESY aromatic'    .
-      '3D HNHB'                     .
-      '3D HCCH-COSY'                .
-      '3D HCACO'                    .
-      '3D HN(COCA)CB'               .
-      '15N-(1H) NOE'                .
-      '13C-(1H) NOE'                .
-
-  stop_
-
-save_ 
-
-save__Chemical_rate_experiment.Sample_state
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    anisotropic            .
-    isotropic              .
-
-  stop_
-
-save_ 
-
-save__Local_structure_quality.Type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    'not observed'                            ?
-    'not well defined'                        ?
-    'low restraint density'                   ?
-    'well defined'                            ?
-    'high restraint density'                  ?
-
-  stop_
-
-save_
-
-save__Matched_entries.Database_name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-      PDB      .
-
-  stop_
-
-save_
-
-
-
-save__Model_type.Type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-     'experimental ensemble member'                    ?
-     'representative lowest energy'                    ?
-     'representative closest to the mean'              ?
-     'representative average minimized'                ?
-     'representative lowest overall target function'   ?
-
-  stop_
-
-save_
-                         
 
 #save__NMR_spec_expt.Temp_calibration_method
 
@@ -4984,19 +4635,146 @@ save_
 
 #save_
 
-save__NMR_spec_expt.Sample_volume_units
+save__NMR_spec_expt.Type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      'NOE'         .
+      'COSY'        .
+
+    stop_
+
+save_
+
+save__NMR_spectrometer_probe.Diameter
 
   loop_
      _item_enumeration_value
      _item_enumeration_description
 
-    uL   .
-    mL   .
+   '1.7 mm'          .
+   '3 mm'            .
+   '5 mm'            .
+   '8 mm'            .
+   '10 mm'           .
+   '20 mm'           .
 
   stop_
 
 save_
 
+save__NMR_spectrometer_probe.Manufacturer
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    Agilent  .
+    Bruker   .
+    DOTY     .
+    GE       .
+    JEOL     .
+    Varian   .
+    na       .
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_view.Field_strength
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    400       .
+    500       .
+    600       .
+    700       .
+    800       .
+    900       .
+     90       .
+    120       .
+    140       .
+    200       .
+    250       .
+    270       .
+    300       .
+    350       .
+    360       .
+    450       .
+    470       .
+    550       .
+    590       .
+    720       .
+    750       .
+    850       .
+    920       .
+    950       .
+   1000       .
+   1100       .
+   na    'not available'
+
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_view.Manufacturer
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    Bruker   .
+    GE       .
+    JEOL     .
+    Varian   .
+# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
+   Agilent       .
+   Cambridge     .
+   Oxford        .
+   FBML          .
+   Nicolet       .
+   Home-built    .
+   na            .
+   
+  stop_
+
+save_ 
+
+save__NMR_spectrometer_view.Model
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   AM        "from Bruker"
+   AMX       "from Bruker"
+   ARX       'from Bruker'
+   Avance    "from Bruker"
+   DMX       "from Bruker"
+   DPX       "from Bruker"
+   DRX       "from Bruker"
+   MSL       "from Bruker"
+   ECA       "from JEOL"
+   ECP       "from JEOL"
+  'Uniform NMR System'   "From Varian"
+   INOVA     "from Varian"
+   Unity     "from Varian"
+   UnityPlus "from Varian"
+   VXRS      "from Varian"
+   Gemini    "from General Electric"
+   GSX       "from General Electric"
+   GX        "from General Electric"
+   OMEGA     "from General Electric"
+  'OMEGA PSG' "from General Electric"
+
+  stop_
+
+save_ 
+                        
 save__NMR_spectrometer.Field_strength
 
   loop_
@@ -5014,6 +4792,7 @@ save__NMR_spectrometer.Field_strength
     920       .
     950       .
    1000       .
+   1100       .
    1200       .
 
   stop_
@@ -5075,199 +4854,6 @@ save__NMR_spectrometer.Model
 
 save_ 
 
-save__NMR_spectrometer_view.Field_strength
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    400       .
-    500       .
-    600       .
-    700       .
-    800       .
-    900       .
-     90       .
-    120       .
-    140       .
-    200       .
-    250       .
-    270       .
-    300       .
-    350       .
-    360       .
-    450       .
-    470       .
-    550       .
-    590       .
-    720       .
-    750       .
-    850       .
-    920       .
-    950       .
-   1000       .
-   na    'not available'
-
-
-  stop_
-
-save_ 
-
-save__NMR_spectrometer_view.Manufacturer
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    Bruker   .
-    GE       .
-    JEOL     .
-    Varian   .
-# PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
-   Agilent       .
-   Cambridge     .
-   Oxford        .
-   FBML          .
-   Nicolet       .
-   Home-built    .
-   na            .
-   
-  stop_
-
-save_ 
-
-save__NMR_spectrometer_view.Model
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-   AM        "from Bruker"
-   AMX       "from Bruker"
-   ARX       'from Bruker'
-   Avance    "from Bruker"
-   DMX       "from Bruker"
-   DPX       "from Bruker"
-   DRX       "from Bruker"
-   MSL       "from Bruker"
-   ECA       "from JEOL"
-   ECP       "from JEOL"
-  'Uniform NMR System'   "From Varian"
-   INOVA     "from Varian"
-   Unity     "from Varian"
-   UnityPlus "from Varian"
-   VXRS      "from Varian"
-   Gemini    "from General Electric"
-   GSX       "from General Electric"
-   GX        "from General Electric"
-   OMEGA     "from General Electric"
-  'OMEGA PSG' "from General Electric"
-
-  stop_
-
-save_ 
-
-save__NMR_spectrometer_probe.Manufacturer
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    Agilent  .
-    Bruker   .
-    DOTY     .
-    GE       .
-    JEOL     .
-    Varian   .
-    na       .
-
-  stop_
-
-save_ 
-
-#save__Model_free.Model_fit
-
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
-
-# No internal model-free motions:
-
- #        ''                                                .
- #        'Rex'                                             .
- 
-# Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
-# such as Rex:
-
-  #       'S2'                                               .
-  #       'S2$ te'                                           .
-  #       'S2$ Rex'                                          .
-  #       'S2$ te$ Rex'                                      .
- 
-# Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
-
-  #       'S2f$ S2$ ts'                                      .
-  #       'S2f$ S2s$ ts'                                     .
-  #       'S2f$ tf$ S2$ ts'                                  .
-  #       'S2f$ tf$ S2s$ ts'                                 .
-  #       'S2f$ S2$ ts$ Rex'                                 .
-  #       'S2f$ S2s$ ts$ Rex'                                .
-  #       'S2f$ tf$ S2$ ts$ Rex'                             .
-  #       'S2f$ tf$ S2s$ ts$ Rex'                            .
-
-#  stop_
-
-#save_ 
-
-
-
-#save__Model_free_experiment.Sample_state
-
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
-
-#    isotropic         .
-#    anisotropic       .
-#    solid             .
-
-#  stop_
-
-#save_ 
-
-#save__Model_free_list.Tau_e_val_units
-
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
-
-#    s    .
-#    ms   .
-#    us   .
-#    ns   .
-#    ps   .
-
-#  stop_
-
-#save_ 
-
-#save__Model_free_list.Tau_s_val_units
-
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
-
-#    s    .
-#    ms   .
-#    us   .
-#    ns   .
-#    ps   .
-
-#  stop_
-
-#save_ 
-
-
 save__Order_param.Model_fit
 
   loop_
@@ -5316,6 +4902,20 @@ save__Order_parameter_experiment.Sample_state
 
 save_ 
 
+save__Order_parameter_list.Rex_val_units
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    s-1    .
+    ms-1   .
+    us-1   .
+
+  stop_
+
+save_ 
+
 save__Order_parameter_list.Tau_e_val_units
 
   loop_
@@ -5327,20 +4927,6 @@ save__Order_parameter_list.Tau_e_val_units
     us   .
     ns   .
     ps   .
-
-  stop_
-
-save_ 
-
-save__Order_parameter_list.Rex_val_units
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    s-1    .
-    ms-1   .
-    us-1   .
 
   stop_
 
@@ -5449,7 +5035,6 @@ save__Peak_constraint_link.Constraint_Sf_category
 
 save_ 
 
-
 save__Peak_constraint_link.Spectral_peak_list_Sf_category
 
   loop_
@@ -5461,7 +5046,6 @@ save__Peak_constraint_link.Spectral_peak_list_Sf_category
   stop_
 
 save_ 
-
 
 save__Peak_general_char.Measurement_method
 
@@ -5480,7 +5064,21 @@ save__Peak_general_char.Measurement_method
 
 save_ 
 
+save__PH_param_list.Observed_NMR_param
 
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+
+    'chemical shift'       .
+    'coupling constant'    .
+    'peak height'          .
+    'peak volume'          .
+
+  stop_
+
+save_ 
 
 save__PH_titration_experiment.Sample_state
 
@@ -5512,24 +5110,6 @@ save__PH_titration_list.Expt_observed_param
 
 save_ 
 
-save__PH_param_list.Observed_NMR_param
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-
-    'chemical shift'       .
-    'coupling constant'    .
-    'peak height'          .
-    'peak volume'          .
-
-  stop_
-
-save_ 
-
-
-
 save__RDC_constraint_expt.Sample_state
 
   loop_
@@ -5544,6 +5124,71 @@ save__RDC_constraint_expt.Sample_state
 
 save_ 
 
+save__RDC_constraint_list.Constraint_type
+
+     loop_
+       _item_enumeration_value
+       _item_enumeration_description
+
+      RDC           .
+
+    stop_
+
+save_
+
+save__RDC_constraint_list.Potential_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   log-harmonic
+;
+Parameters: target_value, target_value_error
+;
+   parabolic
+;
+Parameters: target_value, target_value_error
+Formula: E = k(r-target_value)**2
+;
+   square-well-parabolic
+;
+Parameters: upper_limit, lower_limit (optionally: target_value, target_value_error)
+Formula:
+E = k(r-upper_limit)**\2 for r > upper_limit
+E = k(r-lower_limit)**2 for r < lower_limit
+;
+   square-well-parabolic-linear
+;
+Parameters: upper_limit, lower_limit, upper_linear_limit, lower_linear_limit, (optional: target_value, target_value_error)
+Formula:
+If upper_limit = u, upper_linear_limit = u2, lower_limit = l, lower_linear_limit = l2:
+E = 2k(u2-u)(r - (u2+u)/2) for r > u2
+E = k(r-u)**2 for u < r < u2
+E = k(r-l)**2 for l > r > l2
+E = 2k(l2-l)(r - (l2+l)/2) for r < l2
+;
+
+   upper-bound-parabolic              
+;
+can be derived from the two-sided versions given above
+;
+   lower-bound-parabolic              
+;
+can be derived from the two-sided versions given above
+;
+   upper-bound-parabolic-linear       
+;
+can be derived from the two-sided versions given above
+;
+   lower-bound-parabolic-linear       
+;
+can be derived from the two-sided versions given above
+;
+
+    stop_
+
+save_
 
 save__RDC_experiment.Sample_state
 
@@ -5584,57 +5229,14 @@ save__Related_entries.Database_name
 
 save_ 
 
-
-save__RDC_constraint_list.Potential_type
-
-    loop_
-      _item_enumeration_value
-      _item_enumeration_description
-
-   log-harmonic
-;
-Parameters: target_value, target_value_error
-;
-   parabolic
-;
-Parameters: target_value, target_value_error
-Formula: E = k(r-target_value)**2
-;
-   square-well-parabolic
-;
-Parameters: upper_limit, lower_limit (optionally: target_value, target_value_error)
-Formula:
-E = k(r-upper_limit)**\2 for r > upper_limit
-E = k(r-lower_limit)**2 for r < lower_limit
-;
-   square-well-parabolic-linear
-;
-Parameters: upper_limit, lower_limit, upper_linear_limit, lower_linear_limit, (optional: target_value, target_value_error)
-Formula:
-If upper_limit = u, upper_linear_limit = u2, lower_limit = l, lower_linear_limit = l2:
-E = 2k(u2-u)(r - (u2+u)/2) for r > u2
-E = k(r-u)**2 for u < r < u2
-E = k(r-l)**2 for l > r > l2
-E = 2k(l2-l)(r - (l2+l)/2) for r < l2
-;
-
-   upper-bound-parabolic              ???can be derived from the two-sided versions given above???
-   lower-bound-parabolic              ???can be derived from the two-sided versions given above???
-   upper-bound-parabolic-linear       ???can be derived from the two-sided versions given above???
-   lower-bound-parabolic-linear       ???can be derived from the two-sided versions given above???
-
-
-    stop_
-
-save_
-
-save__RDC_constraint_list.Constraint_type
+save__Release.Format_type
 
      loop_
        _item_enumeration_value
        _item_enumeration_description
 
-      RDC           .
+     NMR-STAR            .
+     XML                 .
 
     stop_
 
@@ -5663,20 +5265,6 @@ that represent non-trivial changes in the entry.
 
 save_
 
-
-save__Release.Format_type
-
-     loop_
-       _item_enumeration_value
-       _item_enumeration_description
-
-     NMR-STAR            .
-     XML                 .
-
-    stop_
-
-save_
-
 save__Rep_conf_refinement.Refine_method
 
      loop_
@@ -5694,7 +5282,6 @@ save__Rep_conf_refinement.Refine_method
      stop_               
 
 save_
-
 
 save__Representative_conformer.Type
 
@@ -5719,73 +5306,6 @@ requirements that necessitate the use of non-standard atoms or other
 conditions.
 ;
      stop_
-
-save_
-
-
-save__Sample.Solvent_system
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-   "90% H2O/10% D2O"          .
-   "93% H2O/7% D2O"           .
-   "95% H2O/5% D2O"           .
-   "50% H2O/50% D2O"          .
-   "100% D2O"                 .
-   acetone                    .
-   chloroform                 .
-   DMSO                       .
-   ethanol/water              .
-   methanol                   .
-   "trifluoroacetic acid"     .
-   "trifluoroethanol/water"   .
-   
-  stop_
-
-save_
-
-save__Sample.Type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    solution                          .
-    solid                             .
-    bicelle                           .
-    emulsion                          .
-    fiber                            'solid-state fiber sample'
-    'filamentous virus'               .
-    'gel solution'                   'gel samples used for solution NMR'
-    'gel solid'                      'gel samples used for solid-state NMR'
-    liposome                          .
-    membrane                          .
-    micelle                           .
-   'lyophilized powder'               
-;
-Solid-state lyophilized powder sample
-;
-   'oriented membrane film'           
-;
-Solid-state glass plate with a membrane film
-;
-   'fibrous protein'
-;
-Solid-state fibrous protein
-;
-   'polycrystalline powder'           
-;
-Solid-state micro crystal powder
-;
-   'reverse micelle'                  .
-   'single crystal'                   .
-    microcrystalline                  .
-   'liquid crystal'                   .
-    in-cell                           .
-
-    stop_
 
 save_
 
@@ -5874,7 +5394,6 @@ save__Sample_component.Isotopic_labeling
   stop_
 
 save_
-
 
 save__Sample_component.Mol_common_name
 
@@ -6012,7 +5531,6 @@ NMR spectrometer control unit.
 
 save_
 
-
 save__Sample_condition_variable.Val_units
 
   loop_
@@ -6086,7 +5604,71 @@ Used for variables that do not have units like dielectric constant.
 
 save_
 
+save__Sample.Solvent_system
 
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+   "90% H2O/10% D2O"          .
+   "93% H2O/7% D2O"           .
+   "95% H2O/5% D2O"           .
+   "50% H2O/50% D2O"          .
+   "100% D2O"                 .
+   acetone                    .
+   chloroform                 .
+   DMSO                       .
+   ethanol/water              .
+   methanol                   .
+   "trifluoroacetic acid"     .
+   "trifluoroethanol/water"   .
+   
+  stop_
+
+save_
+
+save__Sample.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    solution                          .
+    solid                             .
+    bicelle                           .
+    emulsion                          .
+    fiber                            'solid-state fiber sample'
+    'filamentous virus'               .
+    'gel solution'                   'gel samples used for solution NMR'
+    'gel solid'                      'gel samples used for solid-state NMR'
+    liposome                          .
+    membrane                          .
+    micelle                           .
+   'lyophilized powder'               
+;
+Solid-state lyophilized powder sample
+;
+   'oriented membrane film'           
+;
+Solid-state glass plate with a membrane film
+;
+   'fibrous protein'
+;
+Solid-state fibrous protein
+;
+   'polycrystalline powder'           
+;
+Solid-state micro crystal powder
+;
+   'reverse micelle'                  .
+   'single crystal'                   .
+    microcrystalline                  .
+   'liquid crystal'                   .
+    in-cell                           .
+
+    stop_
+
+save_
 
 save__SAXS_expt.Sample_volume_units
 
@@ -6097,346 +5679,6 @@ save__SAXS_expt.Sample_volume_units
      ml        .
  
    stop_
-
-save_
-
-
-save__Software.Sf_framecode
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    AMBER            .
-    AngleSearch      .
-    ANSIG            .
-    AQUA             .
-    ARIA             .
-    AURELIA          .
-    Auremol          .
-    AutoAssign       .
-    AutoStructure    .
-    AVS              .
-    AZARA            .
-    BIRDER           .
-    CAPP             .
-    CING             .
-    CNS              .
-    CNSSOLVE         .
-    CORMA            .
-    CSI              .
-    CS-Rosetta       .
-    CURVES           .
-    CYANA            .
-    DELTA            .
-    DGII             .
-    DIAMOD           .
-    DIANA            .
-    DISCOVER         .
-    DSPACE           .
-    DYANA            .
-    EMBOSS           .
-    FANTOM           .
-    Felix            .
-    GARANT           .
-    GIFA             .
-    GROMOS           .
-    HYPER            .
-    InsightII        .
-    MARDIGRAS        .
-    ModelFree        .
-    Molmol           .
-    MORASS           .
-    NDEE             .
-    NMRCOMPASS       .
-    NMRDraw          .
-    NMRPipe          .
-    NMR-STAR         .
-    NMRView          .
-    NOAH             .
-    NOEID            .
-    NUCFIT           .
-    NUTS             .
-    OPAL             .
-    PDB              .
-    PECAN            .
-    PINE             .
-    PIPP             .
-    PISTACHIO        .
-    Procheck         .                  
-    ProcheckNMR      .
-    P-ROI            .
-    PRONTO           .
-    PROSA            .
-    PSVS             .
-    QUEEN            .
-    Relax            .
-    RESCUE           .
-    SANE             .
-    SPARKY           .
-    SPARTA           .
-    SPARTA+          .
-    SPSCAN           .
-    SYBYL            .
-    TALOS            .
-    TINKER           .
-    TOPSPIN          .
-    TRIPOS           .
-    UXNMR            .
-    VNMR             .
-    VNMRJ            .
-    WhatIF           .
-    Wattos           .
-    XEASY            .
-    X-PLOR           .
-   'X-PLOR NIH'      .
-    xwinnmr          .
-
-  stop_   
-
-save_
-
-save__Software.Name
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    AMBER            .
-    AngleSearch      .
-    ANSIG            .
-    Analysis         .
-    AQUA             .
-    ARIA             .
-    AURELIA          .
-    AUREMOL          .
-    AutoAssign       .
-    AutoStructure    .
-    AVS              .
-    AZARA            .
-    BIRDER           .
-    CARA             .
-    CAPP             .
-    CING             .
-    CcpNMR           .
-    CNS              .             
-    CNSSOLVE         .
-    CORMA            .
-    CSI              .
-    CS-Rosetta       .
-    CURVES           .
-    CYANA            .
-    DGII             .
-    DIAMOD           .
-    DISCOVER         .
-    DYANA            .
-    DYNAMO           .
-    EMBOSS           .
-    FANTOM           .
-    Felix            .
-    GARANT           .
-    Gaussian         .
-    GIFA             .
-    HADDOCK          .
-    HYPER            .
-    InsightII        .
-    MARDIGRAS        .
-    ModelFree        .
-    Molmol           .
-    MORASS           .
-    NDEE             .
-    NMRDraw          .
-    NMRPipe          .
-    NMRView          .
-    NOAH             .
-    NOEID            .
-    NUCFIT           .
-    NUTS             .
-    OPAL             .
-    PECAN            .
-    PINE             .
-    PIPP             .
-    PISTACHIO        .
-    Procheck         .
-    ProcheckNMR      .                       
-    P-ROI            .
-    PRONTO           .
-    PROSA            .
-    PSVS             .
-    QUEEN            .
-    Relax            .
-    RESCUE           .
-    SANE             .
-    SPARKY           .
-    SPARTA           .
-    SPARTA+          .
-    SPSCAN           .
-    SYBYL            .
-    TALOS            .
-    TOPSPIN          .
-    UXNMR            .
-    VNMR             .
-    WhatIF           .
-    Wattos           .
-    XEASY            .
-    X-PLOR           .
-   'X-PLOR NIH'      .
-    xwinnmr          .
-
-  stop_
-
-save_
-
-save__Software.Type
-
-    loop_
-       _item_enumeration_value                         
-       _item_enumeration_description
-
-    'NUS schedule generator'     .
-    'structure calculation'      .
-    'test lex'                   .
-
-    stop_
-
-save_
-
-save__Software_applied_methods.Software_name
-
-    loop_
-       _item_enumeration_value                         
-       _item_enumeration_description
-
-    AMBER            .
-    AngleSearch      .
-    ANSIG            .
-    Analysis         .
-    AQUA             .
-    ARIA             .
-    AURELIA          .
-    AUREMOL          .
-    AutoAssign       .
-    AutoStructure    .
-    AVS              .
-    AZARA            .
-    BIRDER           .
-    CARA             .
-    CAPP             .
-    CING             .
-    CcpNMR           .
-    CNS              .             
-    CNSSOLVE         .
-    CORMA            .
-    CSI              .
-    CS-Rosetta       .
-    CURVES           .
-    CYANA            .
-    DGII             .
-    DIAMOD           .
-    DISCOVER         .
-    DYANA            .
-    DYNAMO           .
-    EMBOSS           .
-    FANTOM           .
-    Felix            .
-    GARANT           .
-    Gaussian         .
-    GIFA             .
-    HADDOCK          .
-    HYPER            .
-    InsightII        .
-    MARDIGRAS        .
-    ModelFree        .
-    Molmol           .
-    MORASS           .
-    NDEE             .
-    NMRDraw          .
-    NMRPipe          .
-    NMRView          .
-    NOAH             .
-    NOEID            .
-    NUCFIT           .
-    NUTS             .
-    OPAL             .
-    PECAN            .
-    PINE             .
-    PIPP             .
-    PISTACHIO        .
-    Procheck         .
-    ProcheckNMR      .                       
-    P-ROI            .
-    PRONTO           .
-    PROSA            .
-    PSVS             .
-    QUEEN            .
-    Relax            .
-    RESCUE           .
-    SANE             .
-    SPARKY           .
-    SPARTA           .
-    SPARTA+          .
-    SPSCAN           .
-    SYBYL            .
-    TALOS            .
-    TOPSPIN          .
-    UXNMR            .
-    VNMR             .
-    WhatIF           .
-    Wattos           .
-    XEASY            .
-    X-PLOR           .
-   'X-PLOR NIH'      .
-    xwinnmr          .
-
-    stop_
-
-save_
-
-save__Spectral_dim.Under_sampling_type
-
-    loop_
-       _item_enumeration_value                         
-       _item_enumeration_description
-
-     aliased          .
-     folded           .
-    
-    'not observed'    .
-
-
-   stop_
-
-save_
-
-
-save__Spectral_dim.Sweep_width_units
-
-    loop_
-       _item_enumeration_value                         
-       _item_enumeration_description
-
-      Hz           Hertz
-      ppm         'parts per million'
-
-   stop_
-
-save_
-
-save__Spin_system_link.Type
-
-    loop_
-       _item_enumeration_value                         
-       _item_enumeration_description
-
-   identity          .
-   sequential        .
-   basepair          .
-   covalent          .
-   hbond             .
-   saltbridge        .
-   dative            .
-
-    stop_
 
 save_
 
@@ -6562,7 +5804,6 @@ save__SG_project.Initial_of_center
 
 save_
 
-
 save__SG_project.Project_name
                                         
      loop_
@@ -6584,6 +5825,310 @@ save__SG_project.Project_name
    Other                     .
 
      stop_
+
+save_
+
+save__Software_applied_methods.Software_name
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+    AMBER            .
+    AngleSearch      .
+    ANSIG            .
+    Analysis         .
+    AQUA             .
+    ARIA             .
+    AURELIA          .
+    AUREMOL          .
+    AutoAssign       .
+    AutoStructure    .
+    AVS              .
+    AZARA            .
+    BIRDER           .
+    CARA             .
+    CAPP             .
+    CING             .
+    CcpNMR           .
+    CNS              .             
+    CNSSOLVE         .
+    CORMA            .
+    CSI              .
+    CS-Rosetta       .
+    CURVES           .
+    CYANA            .
+    DGII             .
+    DIAMOD           .
+    DISCOVER         .
+    DYANA            .
+    DYNAMO           .
+    EMBOSS           .
+    FANTOM           .
+    Felix            .
+    GARANT           .
+    Gaussian         .
+    GIFA             .
+    HADDOCK          .
+    HYPER            .
+    InsightII        .
+    MARDIGRAS        .
+    ModelFree        .
+    Molmol           .
+    MORASS           .
+    NDEE             .
+    NMRbox           .
+    NMRDraw          .
+    NMRPipe          .
+    NMRView          .
+    NOAH             .
+    NOEID            .
+    NUCFIT           .
+    NUTS             .
+    OPAL             .
+    PECAN            .
+    PINE             .
+    PIPP             .
+    PISTACHIO        .
+    Procheck         .
+    ProcheckNMR      .                       
+    P-ROI            .
+    PRONTO           .
+    PROSA            .
+    PSVS             .
+    QUEEN            .
+    Relax            .
+    RESCUE           .
+    SANE             .
+    SPARKY           .
+    SPARTA           .
+    SPARTA+          .
+    SPSCAN           .
+    SYBYL            .
+    TALOS            .
+    TOPSPIN          .
+    UXNMR            .
+    VNMR             .
+    WhatIF           .
+    Wattos           .
+    XEASY            .
+    X-PLOR           .
+   'X-PLOR NIH'      .
+    xwinnmr          .
+
+    stop_
+
+save_
+
+save__Software.Name
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    AMBER            .
+    AngleSearch      .
+    ANSIG            .
+    Analysis         .
+    AQUA             .
+    ARIA             .
+    AURELIA          .
+    AUREMOL          .
+    AutoAssign       .
+    AutoStructure    .
+    AVS              .
+    AZARA            .
+    BIRDER           .
+    CARA             .
+    CAPP             .
+    CING             .
+    CcpNMR           .
+    CNS              .             
+    CNSSOLVE         .
+    CORMA            .
+    CSI              .
+    CS-Rosetta       .
+    CURVES           .
+    CYANA            .
+    DELTA            .
+    DGII             .
+    DIAMOD           .
+    DISCOVER         .
+    DSPACE           .
+    DYANA            .
+    DYNAMO           .
+    EMBOSS           .
+    FANTOM           .
+    Felix            .
+    GARANT           .
+    Gaussian         .
+    GIFA             .
+    GROMOS           .
+    HADDOCK          .
+    HYPER            .
+    InsightII        .
+    MARDIGRAS        .
+    ModelFree        .
+    Molmol           .
+    MORASS           .
+    NDEE             .
+    NMRbox           .
+    NMRCOMPASS       .
+    NMRDraw          .
+    NMRPipe          .
+    NMRView          .
+    NOAH             .
+    NOEID            .
+    NUCFIT           .
+    NUTS             .
+    OPAL             .
+    PECAN            .
+    PINE             .
+    PIPP             .
+    PISTACHIO        .
+    Procheck         .
+    ProcheckNMR      .                       
+    P-ROI            .
+    PRONTO           .
+    PROSA            .
+    PSVS             .
+    QUEEN            .
+    Relax            .
+    RESCUE           .
+    SANE             .
+    SPARKY           .
+    SPARTA           .
+    SPARTA+          .
+    SPSCAN           .
+    SYBYL            .
+    TALOS            .
+    TINKER           .
+    TOPSPIN          .
+    TRIPOS           .
+    UXNMR            .
+    VNMR             .
+    VNMRj            .
+    WhatIF           .
+    Wattos           .
+    XEASY            .
+    X-PLOR           .
+   'X-PLOR NIH'      .
+    xwinnmr          .
+
+  stop_
+
+save_
+
+save__Software.Sf_framecode
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    AMBER            .
+    AngleSearch      .
+    ANSIG            .
+    Analysis         .
+    AQUA             .
+    ARIA             .
+    AURELIA          .
+    Auremol          .
+    AutoAssign       .
+    AutoStructure    .
+    AVS              .
+    AZARA            .
+    BIRDER           .
+    CAPP             .
+    CARA             .
+    CppNMR           .
+    CING             .
+    CNS              .
+    CNSSOLVE         .
+    CORMA            .
+    CSI              .
+    CS-Rosetta       .
+    CURVES           .
+    CYANA            .
+    DELTA            .
+    DGII             .
+    DIAMOD           .
+    DISCOVER         .
+    DSPACE           .
+    DYANA            .
+    DYNAMO           .
+    EMBOSS           .
+    FANTOM           .
+    Felix            .
+    GARANT           .
+    Gaussian         .
+    GIFA             .
+    GROMOS           .
+    HADDOCK          .
+    HYPER            .
+    InsightII        .
+    MARDIGRAS        .
+    ModelFree        .
+    Molmol           .
+    MORASS           .
+    NDEE             .
+    NMRbox           .
+    NMRCOMPASS       .
+    NMRDraw          .
+    NMRPipe          .
+    NMRView          .
+    NOAH             .
+    NOEID            .
+    NUCFIT           .
+    NUTS             .
+    OPAL             .
+    PECAN            .
+    PINE             .
+    PIPP             .
+    PISTACHIO        .
+    Procheck         .                  
+    ProcheckNMR      .
+    P-ROI            .
+    PRONTO           .
+    PROSA            .
+    PSVS             .
+    QUEEN            .
+    Relax            .
+    RESCUE           .
+    SANE             .
+    SPARKY           .
+    SPARTA           .
+    SPARTA+          .
+    SPSCAN           .
+    SYBYL            .
+    TALOS            .
+    TINKER           .
+    TOPSPIN          .
+    TRIPOS           .
+    UXNMR            .
+    VNMR             .
+    VNMRJ            .
+    WhatIF           .
+    Wattos           .
+    XEASY            .
+    X-PLOR           .
+   'X-PLOR NIH'      .
+    xwinnmr          .
+
+  stop_   
+
+save_
+
+save__Software.Type
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+    'NUS schedule generator'     .
+    'structure calculation'      .
+    'test lex'                   .
+
+    stop_
 
 save_
 
@@ -6635,6 +6180,34 @@ save__Spectral_dim_transfer.Type
     through-space       'Any transfer that does not go through the covalent bonded skeleton (NOESY, ROESY, ... but also J coupling through hydrogen bonds)'
 
      stop_
+
+save_
+
+save__Spectral_dim.Sweep_width_units
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+      Hz           Hertz
+      ppm         'parts per million'
+
+   stop_
+
+save_
+
+save__Spectral_dim.Under_sampling_type
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+     aliased          .
+     folded           .
+    
+    'not observed'    .
+
+   stop_
 
 save_
 
@@ -6698,6 +6271,24 @@ save__Spectral_transition_general_char.Measurement_method
 
 save_
 
+save__Spin_system_link.Type
+
+    loop_
+       _item_enumeration_value                         
+       _item_enumeration_description
+
+   identity          .
+   sequential        .
+   basepair          .
+   covalent          .
+   hbond             .
+   saltbridge        .
+   dative            .
+
+    stop_
+
+save_
+
 save__Study.Type
 
   loop_
@@ -6718,24 +6309,6 @@ save__Study.Type
     'Stoichiometry problems'                   .
     'Dynamics analysis'                        .
     'pH titration'                             .
-
-  stop_
-
-save_
-
-save__Systematic_chem_shift_offset.Type
-
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
-
-    'TROSY offset'            .
-    '2H isotope effect'       .
-    '13C isotope effect'      .
-    '15N isotope effect'      .
-    'SAIL isotope labeling'   .
-    'spectrometer error'      .
-     na                       .
 
   stop_
 
@@ -6764,6 +6337,24 @@ save__Systematic_chem_shift_offset.Atom_type
 
 save_
 
+save__Systematic_chem_shift_offset.Type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    'TROSY offset'            .
+    '2H isotope effect'       .
+    '13C isotope effect'      .
+    '15N isotope effect'      .
+    'SAIL isotope labeling'   .
+    'spectrometer error'      .
+     na                       .
+
+  stop_
+
+save_
+
 save__Task.Task
 
   loop_
@@ -6784,16 +6375,13 @@ save__Task.Task
 
 save_
 
-save__Tensor_list.Tensor_type
+save__Tensor_list.Matrix_val_units
 
   loop_
      _item_enumeration_value
      _item_enumeration_description
 
-    diffusion            .
-    CS                   .
-    shielding            .
-    alignment            .
+    s-1            .
 
   stop_
 
@@ -6815,15 +6403,146 @@ save__Tensor_list.Tensor_shape
 
 save_
 
-save__Tensor_list.Matrix_val_units
+save__Tensor_list.Tensor_type
 
   loop_
      _item_enumeration_value
      _item_enumeration_description
 
-    s-1            .
+    diffusion            .
+    CS                   .
+    shielding            .
+    alignment            .
 
   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Common_relaxation_type_name
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+      R1                                    .
+      R2                                    .
+      R1rho                                 .
+     'ZQ relaxation'                        .
+     'longitudinal spin order'              .
+     'single quantum antiphase'             .
+     'DQ relaxation'                        .
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Relaxation_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   Iz               'R1    longitudinal'
+   Sz               'R1    longitudinal'
+                         
+   (I+)+(I-)        'R1rho or R2      transverse'
+   (S+)+(S-)        'R1rho or R2      transverse'
+   I+               'R1rho or R2      transverse'
+   I-               'R1rho or R2      transverse'
+   S+               'R1rho or R2      transverse'
+   S-               'R1rho or R2      transverse'
+
+   (I+S-)+(I-S+)    'ZQ relaxation'
+   I-S+             'ZQ relaxation'
+   I+S-             'ZQ relaxation'
+
+   IzSz             'longitudinal spin order'
+
+  ((I+)+(I-))Sz     'single quantum antiphase'
+  Iz((S+)+(S-))     'single quantum antiphase'
+   I+Sz             'single quantum antiphase'
+   I-Sz             'single quantum antiphase'
+   IzS+             'single quantum antiphase'
+   IzS-             'single quantum antiphase'
+   
+ (I+S+)+(I-S-)      'DQ relaxation'
+   I+S+             'DQ relaxation'
+   I-S-             'DQ relaxation'
+         
+    stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Relaxation_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1           .
+         ms-1          .
+         us-1          .
+         ns-1          .
+         ps-1          .
+             
+    stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    methanol                    MeOH
+   'monoethylene glycol'        MEG
+   'no calibration applied'     .
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'                                             .
+    'temperature compensation block'                                       .
+    'single scan interleaving and temperature compensation block'          .
+    'no temperature control applied'                                       .
+
+   stop_
 
 save_
 
@@ -6840,7 +6559,6 @@ save__Theoretical_coupling_constant_experiment.Sample_state
   stop_
 
 save_
-
 
 save__Theoretical_coupling_constant_list.Spectrometer_frequency_1H
 
@@ -6859,10 +6577,39 @@ save__Theoretical_coupling_constant_list.Spectrometer_frequency_1H
     920       .
     950       .
    1000       .
+   1100       .
 
   stop_
 
 save_ 
+
+save__Theoretical_cross_correlation_DD_experiment.Sample_state
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    isotropic                    .
+    anisotropic                  .
+    solid                        .
+
+  stop_
+
+save_
+
+save__Theoretical_cross_correlation_DD_list.Val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+   s-1      .
+   ms-1     .
+   us-1     .
+
+    stop_
+
+save_
 
 save__Theoretical_heteronucl_NOE_experiment.Sample_state
 
@@ -6894,20 +6641,145 @@ save__Theoretical_heteronucl_NOE_list.Heteronuclear_NOE_val_type
 
 save_
 
+save__Theoretical_heteronucl_T1_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic        .
+     anisotropic      .
+     solid            .
+
+     stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.T1_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         Iz              'zero quantum$ longitudinal'
+         Sz              'zero quantum$ longitudinal'
+                         
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T1_list.T1_val_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s             .
+         s-1           .
+         ms            .
+         ms-1          .
+             
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_experiment.Sample_state
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+     isotropic            .
+     anisotropic          .
+     solid                .
+            
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Rex_units
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+         s-1        .
+         ms-1       .
+         us-1       .
+             
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.T2_coherence_type
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
 
 
-#save__Torsion_angle_constraint.Member_logic_code
+         I(+$-)              'single quantum'
+         S(+$-)              'single quantum'
+    
+    stop_
 
-#  loop_
-#     _item_enumeration_value
-#     _item_enumeration_description
+save_
 
-#     OR          .
-#     AND         .
+save__Theoretical_heteronucl_T2_list.T2_val_units
 
-#  stop_
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
 
-#save_
+         s-1           .
+         ms-1          .
+         s             .
+         ms            .
+             
+    stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Temp_calibration_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+
+    methanol                          .
+   "monoethylene glycol"              .
+   "no calibration applied"           .
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Temp_control_method
+
+    loop_
+      _item_enumeration_value
+      _item_enumeration_description
+
+    'single scan interleaving'           .
+    'temperature compensation block'     .
+    'no temperature control applied'     .
+
+   stop_
+
+save_
+
+save__Torsion_angle_constraint_list.Constraint_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+     J-couplings                     .
+    'backbone chemical shifts'       .
+
+  stop_
+
+save_
 
 save__Torsion_angle_constraint_list.Potential_type
 
@@ -6947,25 +6819,22 @@ E = 2k(l2-l)(r - (l2+l)/2) for r < l2
    upper-bound-parabolic-linear       'can be derived from the two-sided versions given above'
    lower-bound-parabolic-linear       'can be derived from the two-sided versions given above'
 
-
     stop_
 
 save_
 
-save__Torsion_angle_constraint_list.Constraint_type
+#save__Torsion_angle_constraint.Member_logic_code
 
-  loop_
-     _item_enumeration_value
-     _item_enumeration_description
+#  loop_
+#     _item_enumeration_value
+#     _item_enumeration_description
 
-     J-couplings                     .
-    'backbone chemical shifts'       .
+#     OR          .
+#     AND         .
 
-  stop_
+#  stop_
 
-save_
-
-
+#save_
 
 save__Torsion_angle_constraints_expt.Sample_state
 
@@ -6981,13 +6850,25 @@ save__Torsion_angle_constraints_expt.Sample_state
 
 save_
 
+save__Upload_data.Data_file_content_type
+
+  loop_
+     _item_enumeration_value
+     _item_enumeration_description
+
+    .       .
+
+  stop_
+
+save_
+
 save__Upload_data.Data_file_Sf_category
 
   loop_
      _item_enumeration_value
      _item_enumeration_description
 
-    deposited_data_files                            .
+    deposited_data_files                        .
     entry_interview                             .
     study_list                                  .
     entry_information                           .
@@ -7004,9 +6885,6 @@ save__Upload_data.Data_file_Sf_category
     molecule_purity                             .
     software                                    .
     method                                      .
-    Mass_spectrometer                           .
-    Mass_spectrometer_list                      .
-    Mass_spec_ref_compd                         .
     chromatographic_system                      .
     chromatographic_column                      .
     NMR_spectrometer                            .
@@ -7023,7 +6901,7 @@ save__Upload_data.Data_file_Sf_category
     spectral_peak_list                          .
     resonance_linker                            .
     chem_shift_isotope_effect                   .
-    chem_shift_interaction_diff                 .
+    chem_shift_perturbation                     .
     chem_shift_anisotropy                       .
     theoretical_chem_shifts                     .
     chem_shifts_calc_type                       .
@@ -7078,12 +6956,10 @@ save__Upload_data.Data_file_Sf_category
     CA_CB_chem_shift_constraints                .
     H_chem_shift_constraints                    .
     other_constraints                           .
-    org_constr_file_comment                     .
 
    stop_
 
 save_
-
 
 save__Upload_data.Data_file_syntax
 
@@ -7147,6 +7023,7 @@ save__Vendor.Name
     '(MOLPROBITY) - Richardson'                                                                             .
     '(MORASS) - Luxon'                                                                                      .
     '(NDEE) - Roesch and Herrmann'                                                                          .
+    '(NMRbox) - UConn Health Center'                                                                        .
     '(NMRDraw) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'                                         .
     '(NMRPipe) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'                                         .
     '(NMRView) - Johnson$ One Moon Scientific'                                                              .

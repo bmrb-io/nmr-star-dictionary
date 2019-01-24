@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-01-18
+#  version date -  2019-01-24
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.1.15
+    _dictionary.version         3.2.1.17
 
      loop_
        _dictionary_history.version
@@ -61,7 +61,7 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
      Added tags for FID sampling
 ;
 
-     3.2.1.15         ?
+     3.2.1.17         ?
 ;
      ?
 ;
@@ -3016,9 +3016,6 @@ The type of data contained in the file that is to be uploaded.
    molecule_purity    ?
    software    ?
    method    ?
-   Mass_spectrometer    ?
-   Mass_spectrometer_list    ?
-   Mass_spec_ref_compd    ?
    chromatographic_system    ?
    chromatographic_column    ?
    NMR_spectrometer    ?
@@ -3035,7 +3032,7 @@ The type of data contained in the file that is to be uploaded.
    spectral_peak_list    ?
    resonance_linker    ?
    chem_shift_isotope_effect    ?
-   chem_shift_interaction_diff    ?
+   chem_shift_perturbation    ?
    chem_shift_anisotropy    ?
    theoretical_chem_shifts    ?
    chem_shifts_calc_type    ?
@@ -3090,7 +3087,6 @@ The type of data contained in the file that is to be uploaded.
    CA_CB_chem_shift_constraints    ?
    H_chem_shift_constraints    ?
    other_constraints    ?
-   org_constr_file_comment    ?
 
    stop_
 
@@ -4952,7 +4948,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.1.15'
+   _item_default.value            '3.2.1.17'
 
    loop_
      _item_enumeration.value
@@ -5128,9 +5124,9 @@ theoretical, etc.).
      _item_enumeration.value
      _item_enumeration.detail
 
-   SOLUTION    'Experiments using solution samples'
-   SOLID-STATE    'Experiments using samples in the solid-state'
-   THEORETICAL    'Data derived from theoretical calculations'
+   solution    'Experiments using solution samples'
+   solid-state    'Experiments using samples in the solid-state'
+   theoretical    'Data derived from theoretical calculations'
 
    stop_
 
@@ -5316,12 +5312,12 @@ the data for a limited period of time up to one year.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'RELEASE NOW'    'Release immediately'
-   'HOLD FOR PUBLICATION'    'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'    'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'    'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'    'Hold for 6 months'
-   'HOLD FOR 1 YEAR'    'Hold for 1 year'
+   'Release now'    'Release immediately'
+   'Hold for publication'    'Hold until primary citation is published'
+   'Hold for 4 weeks'    'Hold for 4 weeks'
+   'Hold for 8 weeks'    'Hold for 8 weeks'
+   'Hold for 6 months'    'Hold for 6 months'
+   'Hold for 1 year'    'Hold for 1 year'
 
    stop_
 
@@ -5356,12 +5352,12 @@ data for a limited period of time up to one year.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'RELEASE NOW'    'Release immediately'
-   'HOLD FOR PUBLICATION'    'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'    'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'    'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'    'Hold for 6 months'
-   'HOLD FOR 1 YEAR'    'Hold for 1 year'
+   'Release now'    'Release immediately'
+   'Hold for publication'    'Hold until primary citation is published'
+   'Hold for 4 weeks'    'Hold for 4 weeks'
+   'Hold for 8 weeks'    'Hold for 8 weeks'
+   'Hold for 6 months'    'Hold for 6 months'
+   'Hold for 1 year'    'Hold for 1 year'
 
    stop_
 
@@ -5396,12 +5392,12 @@ the data for a limited period of time up to one year.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'RELEASE NOW'    'Release immediately'
-   'HOLD FOR PUBLICATION'    'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'    'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'    'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'    'Hold for 6 months'
-   'HOLD FOR 1 YEAR'    'Hold for 1 year'
+   'Release now'    'Release immediately'
+   'Hold for publication'    'Hold until primary citation is published'
+   'Hold for 4 weeks'    'Hold for 4 weeks'
+   'Hold for 8 weeks'    'Hold for 8 weeks'
+   'Hold for 6 months'    'Hold for 6 months'
+   'Hold for 1 year'    'Hold for 1 year'
 
    stop_
 
@@ -5436,12 +5432,12 @@ the data for a limited period of time up to one year.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'RELEASE NOW'    'Release immediately'
-   'HOLD FOR PUBLICATION'    'Hold until primary citation is published'
-   'HOLD FOR 4 WEEKS'    'Hold for 4 weeks'
-   'HOLD FOR 8 WEEKS'    'Hold for 8 weeks'
-   'HOLD FOR 6 MONTHS'    'Hold for 6 months'
-   'HOLD FOR 1 YEAR'    'Hold for 1 year'
+   'Release now'    'Release immediately'
+   'Hold for publication'    'Hold until primary citation is published'
+   'Hold for 4 weeks'    'Hold for 4 weeks'
+   'Hold for 8 weeks'    'Hold for 8 weeks'
+   'Hold for 6 months'    'Hold for 6 months'
+   'Hold for 1 year'    'Hold for 1 year'
 
    stop_
 
@@ -5478,8 +5474,8 @@ effort.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'RELEASE NOW'    'Release sequence information in status reports immediately'
-   'HOLD FOR RELEASE'    ?
+   'Release now'    'Release sequence information in status reports immediately'
+   'Hold for release'    ?
 
    stop_
 
@@ -8389,6 +8385,7 @@ of the full list of saveframe categories available in constructing an NMR-STAR f
 
    assigned_chemical_shifts    ?
    theoretical_chem_shifts    ?
+   chem_shift_perturbation    ?
    chemical_rates    ?
    coupling_constants    ?
    theoretical_coupling_constants    ?
@@ -8549,7 +8546,7 @@ A type of quantitative data found in the entry.
    'coupling constants'    ?
    'theoretical coupling constants'    ?
    'chemical shift isotope effects'    ?
-   'molecule interaction chemical shift values'    ?
+   'chemical shift perturbation values'    ?
    'T1 relaxation values'    ?
    'theoretical T1 relaxation values'    ?
    'T1rho relaxation values'    ?
@@ -28486,9 +28483,9 @@ This data item contains the identifier type.
      _item_enumeration.value
      _item_enumeration.detail
 
-   'COMMON NAME'    'Common chemical name'
-   'SYSTEMATIC NAME'    'Systematic chemical name'
-   'CAS REGISTRY NUMBER'    'Chemical Abstracts Registry Number'
+   'common name'    'Common chemical name'
+   'systematic name'    'Systematic chemical name'
+   'CAS Registry number'    'Chemical Abstracts Registry Number'
    'PUBCHEM Identifier'    'PubChem accession number'
    'PUBCHEM CID'    'PubChem compound identifier'
    'PUBCHEM SID'    'PubChem substance identifier'
@@ -38860,6 +38857,7 @@ by the proton frequency of the instrument expressed in MHz.
    920    ?
    950    ?
    1000    ?
+   1100    ?
    1200    ?
 
    stop_
@@ -39351,6 +39349,7 @@ by the proton frequency of the instrument expressed in MHz.
    920    ?
    950    ?
    1000    ?
+   1100    ?
    na    'not available'
 
    stop_
@@ -40852,6 +40851,14 @@ Pointer to a saveframe of category 'NMR_spectrometer'.
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
+   loop_
+     _item_examples.case
+
+;
+600MHz Varian
+;
+
+   stop_
 
 save_
 
@@ -49330,6 +49337,7 @@ the data.
    920    ?
    950    ?
    1000    ?
+   1100    ?
 
    stop_
 
@@ -50640,6 +50648,7 @@ the data.
    920    ?
    950    ?
    1000    ?
+   1100    ?
 
    stop_
 
@@ -62676,13 +62685,10 @@ The type of chemical shift perturbation reported.
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?macromolecular    binding?
-   .    ?
-   binding?    ?
-   ?ligand    fragment
-   binding?    ?
-   ?paramagnetic    ligand
-   binding?    ?
+   'macromolecular binding'    ?
+   'ligand binding'    ?
+   'ligand fragment binding'    ?
+   'paramagnetic ligand binding'    ?
 
    stop_
 
@@ -115897,10 +115903,10 @@ The potential type used to model the distance restraints.
    parabolic    ?
    square-well-parabolic    ?
    square-well-parabolic-linear    ?
-   upper-bound-parabolic    'can be derived from the two-sided versions given above'
-   lower-bound-parabolic    'can be derived from the two-sided versions given above'
-   upper-bound-parabolic-linear    'can be derived from the two-sided versions given above'
-   lower-bound-parabolic-linear    'can be derived from the two-sided versions given above'
+   upper-bound-parabolic    ?
+   lower-bound-parabolic    ?
+   upper-bound-parabolic-linear    ?
+   lower-bound-parabolic-linear    ?
 
    stop_
 
@@ -125233,26 +125239,10 @@ The potential type used to model the residual dipolar coupling restraints.
    parabolic    ?
    square-well-parabolic    ?
    square-well-parabolic-linear    ?
-   upper-bound-parabolic    ???can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above???
-   lower-bound-parabolic    ???can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above???
-   upper-bound-parabolic-linear    ???can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above???
-   lower-bound-parabolic-linear    ???can
-   be    derived
-   from    the
-   two-sided    versions
-   given    above???
+   upper-bound-parabolic    ?
+   lower-bound-parabolic    ?
+   upper-bound-parabolic-linear    ?
+   lower-bound-parabolic-linear    ?
 
    stop_
 
