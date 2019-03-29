@@ -3145,7 +3145,7 @@ save__Entry.NMR_STAR_dict_location
 
    _Adit_item_view_name
 ;
-
+NMR STAR dict location
 ;
 
    loop_
@@ -3545,7 +3545,7 @@ save__Entry.Dep_release_code_nmr_constraints
 
    _Description
 ;
-Select the status or terms to be applied for the release of the NMR constraint data to the public. Depositors are encourage to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
+Select the status or terms to be applied for the release of the NMR constraint data to the public. Depositors are encouraged to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
 ;
 
    _Adit_item_view_name
@@ -3572,7 +3572,7 @@ save__Entry.Dep_release_code_chemical_shifts
 
    _Description
 ;
-Select the status or terms to be applied for the release of the NMR chemical shift data to the public. Depositors are encourage to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
+Select the status or terms to be applied for the release of the NMR chemical shift data to the public. Depositors are encouraged to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
 ;
 
    _Adit_item_view_name
@@ -3599,7 +3599,7 @@ save__Entry.Dep_release_code_nmr_exptl
 
    _Description
 ;
-Select the status or terms to be applied for the release of the NMR experimental data to the public. Depositors are encourage to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
+Select the status or terms to be applied for the release of the NMR experimental data to the public. Depositors are encouraged to make their data available to the public as quickly as possible.  However, requests may be made to hold the data for a limited period of time up to one year.
 ;
 
    _Adit_item_view_name
@@ -3680,7 +3680,7 @@ save__Entry.Details
 
    _Description
 ;
-An optional text description of the entry used to provide additional information above that given as values to other items in the entry.
+An optional text description of the entry used to provide additional information about the contents of the entry beyond that provide in other sections of the entry.
 ;
 
    _Adit_item_view_name
@@ -36410,6 +36410,33 @@ Pointer to '_Software.ID'
    _Adit_item_view_name
 ;
 Software ID
+;
+
+   loop_
+     _Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Task.Software_module
+
+   _Tag                  '_Task.Software_module'
+
+   _Category              'Task'
+
+   _Description
+;
+The name for a module of the software tool used to carry out the task.
+;
+
+   _Adit_item_view_name
+;
+
 ;
 
    loop_
