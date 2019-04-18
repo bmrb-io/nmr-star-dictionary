@@ -27,76 +27,102 @@
 
 
      loop_
-       _item_type_list.code
-       _item_type_list.primitive_code
-       _item_type_list.construct
-       _item_type_list.detail
+       _Item_type.Code
+       _Item_type.Primitive_code
+       _Item_type.Construct
+       _Item_type.Detail
+       _Item_type.Dictionary_ID
 
                code      char
                '[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*'
-;              code item types/single words ...
 ;
+              code item types/single words ...
+;
+NMR-STAR
                ucode      uchar
                '[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*'
-;              code item types/single words  (case insensitive) ...
 ;
+              code item types/single words  (case insensitive) ...
+;
+NMR-STAR
                line      char
                '[][ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
-;              char item types / multi-word items ...
 ;
+              char item types / multi-word items ...
+;
+NMR-STAR
                uline      uchar
                '[][ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
-;              char item types / multi-word items (case insensitive)...
 ;
+              char item types / multi-word items (case insensitive)...
+;
+NMR-STAR
                text      char
                '[][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
-;              text item types / multi-line text ...
 ;
+              text item types / multi-line text ...
+;
+NMR-STAR
                int       numb
                '-?[0-9]+'
-;              int item types are the subset of numbers that are the negative 
+;
+              int item types are the subset of numbers that are the negative 
                or positive integers.
 ;
+NMR-STAR
                float     numb
                '-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?'
-;              int item types are the subset of numbers that are the floating
+;
+              int item types are the subset of numbers that are the floating
                numbers.
 ;
+NMR-STAR
                name      uchar
                '_[_A-Za-z0-9]+\.[][_A-Za-z0-9%-]+'
-;              name item types take the form...
 ;
+              name item types take the form...
+;
+NMR-STAR
                idname    uchar
                '[_A-Za-z0-9]+'
-;              idname item types take the form...
 ;
+              idname item types take the form...
+;
+NMR-STAR
                any       char
                '.*'
-;              A catch all for items that may take any form...
 ;
+              A catch all for items that may take any form...
+;
+NMR-STAR
                yyyy-mm-dd  char
                 '[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9]-[0-9][0-9]'
 ;
                Standard format for CIF dates.
 ;
+NMR-STAR
                uchar3    uchar
               '[+]?[A-Za-z0-9]?[A-Za-z0-9][A-Za-z0-9]'
 ;
                data item for 3 character codes
 ;
+NMR-STAR
                uchar1    uchar
               '[+]?[A-Za-z0-9]'
 ;
                data item for 1 character codes
 ;
+NMR-STAR
                yes_no   char
                '(yes)|(no)'
 ;
                data item for boolean codes that have values of 'yes' or 'no'
 ;
+NMR-STAR
                symop    char
                '([1-9]|[1-9][0-9]|1[0-8][0-9]|19[0-2])(_[1-9][1-9][1-9])?'
-;              symop item types take the form n_klm, where n refers to the
+;
+              symop item types take the form n_klm, where n refers to the
                symmetry operation that is applied to the coordinates in the
                ATOM_SITE category identified by _atom_site_label.  It must
                match a number given in _symmetry_equiv_pos_site_id.
@@ -111,58 +137,75 @@
                By adding 5 to the translations, the use of negative numbers
                is avoided.
 ;
+NMR-STAR
                atcode      char
                '[][ _(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
-;              Character data type for atom names  ...
 ;
+              Character data type for atom names  ...
+;
+NMR-STAR
                yyyy-mm-dd:hh:mm  char
     '[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9](-[0-9]?[0-9])?(:[0-9]?[0-9]:[0-9][0-9])?'
 ;
                Standard format for CIF dates with optional time stamp.
 ;
+NMR-STAR
                fax      uchar
                '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
-;              code item types/single words  (case insensitive) ...
 ;
+              code item types/single words  (case insensitive) ...
+;
+NMR-STAR
                phone      uchar
                '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
-;              code item types/single words  (case insensitive) ...
 ;
+              code item types/single words  (case insensitive) ...
+;
+NMR-STAR
                email      uchar
                '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
-;              code item types/single words  (case insensitive) ...
 ;
+              code item types/single words  (case insensitive) ...
+;
+NMR-STAR
                int-range       numb
                '-?[0-9]+(--?[0-9]+)?'
-;              int item types are the subset of numbers that are the negative 
+;
+              int item types are the subset of numbers that are the negative 
                or positive integers with optional range.
 ;
+NMR-STAR
                float-range     numb
 
 '-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?(--?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?)?'
-;              int item types are the subset of numbers that are the floating
+;
+              int item types are the subset of numbers that are the floating
                numbers.
 ;
-
+NMR-STAR
        
 #
                binary    char
-;\n--CIF-BINARY-FORMAT-SECTION--\n\
+;
+\n--CIF-BINARY-FORMAT-SECTION--\n\
 [][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*\
 \n--CIF-BINARY-FORMAT-SECTION----
 ;
-;              binary items are presented as MIME-like ascii-encoded
+;
+              binary items are presented as MIME-like ascii-encoded
                sections in an imgCIF.  In a CBF, raw octet streams
                are used to convey the same information.
 ;
+NMR-STAR
 
 # NMR-STAR additions
 
               framecode   char
               '[.;:"&<>(){}'`~!$%A-Za-z0-9*|+-][_.;:"&<>(){}'`~!$%A-Za-z0-9*|+-]*' 
-;             A value that points to a saveframe.
 ;
-
+             A value that points to a save frame.
+;
+NMR-STAR
 
     stop_
 
@@ -170,224 +213,275 @@
 ## ITEM_UNITS_LIST ##
 #####################
 
-     loop_
-       _item_units_list.code
-       _item_units_list.detail
-#
-     'metres'                 'metres'
-     'centimetres'            'centimetres (meters * 10^( -2))'
-     'millimetres'            'millimetres (meters * 10^( -3))'
-     'nanometres'             'nanometres  (meters * 10^( -9))'
-     'angstroms'              'angstroms   (meters * 10^(-10))'
-     'picometres'             'picometres  (meters * 10^(-12))'
-     'femtometres'            'femtometres (meters * 10^(-15))'
-#
-     'reciprocal_centimetres' 'reciprocal centimetres (meters * 10^( -2)^-1)'
-     'reciprocal_millimetres' 'reciprocal millimetres (meters * 10^( -3)^-1)'
-     'reciprocal_nanometres'  'reciprocal nanometres  (meters * 10^( -9)^-1)'
-     'reciprocal_angstroms'   'reciprocal angstroms   (meters * 10^(-10)^-1)'
-     'reciprocal_picometres'  'reciprocal picometres  (meters * 10^(-12)^-1)'
-#
-     'nanometres_squared'     'nanometres squared (meters * 10^( -9))^2'
-     'angstroms_squared'      'angstroms squared  (meters * 10^(-10))^2'
-     '8pi2_angstroms_squared' '8pi^2 * angstroms squared (meters * 10^(-10))^2'
-     'picometres_squared'     'picometres squared (meters * 10^(-12))^2'
-#
-     'nanometres_cubed'       'nanometres cubed (meters * 10^( -9))^3'
-     'angstroms_cubed'        'angstroms cubed  (meters * 10^(-10))^3'
-     'picometres_cubed'       'picometres cubed (meters * 10^(-12))^3'
-#
-     'kilopascals'            'kilopascals'
-     'gigapascals'            'gigapascals'
-#
-     'hours'                  'hours'
-     'minutes'                'minutes'
-     'seconds'                'seconds'
-     'microseconds'           'microseconds'
-#
-     'degrees'                'degrees (of arc)'
-#
-     'degrees_per_minute'     'degrees (of arc) per minute'
-#
-     'celsius'                'degrees (of temperature) Celsius'
-     'kelvins'                'degrees (of temperature) Kelvin'
-#
-     'electrons'              'electrons'
-#
-     'electrons_squared'      'electrons squared'
-#
-     'electrons_per_nanometres_cubed'
-; electrons per nanometres cubed (meters * 10^( -9))^3
-;
-     'electrons_per_angstroms_cubed'
-; electrons per angstroms  cubed (meters * 10^(-10))^3
-;
-     'electrons_per_picometres_cubed'
-; electrons per picometres cubed (meters * 10^(-12))^3
-;
-     'kilowatts'              'kilowatts'
-     'milliamperes'           'milliamperes'
-     'kilovolts'              'kilovolts'
-#
-     'arbitrary'
-; arbitrary system of units.
-;
-#
-     'angstroms_degrees'      'angstroms * degrees'
-#
-     'degrees_squared'        'degrees squared'
-#
-     'mg_per_ml'              'milliliter per milligram'
-#
-     'ml_per_min'             'milliliter per minute'
-#
-     'milliliters'             'liter / 1000'
-#
-     'milligrams'             'grams / 1000'
-#
-     'megadaltons'            'megadaltons'
-     'microns_squared'        'microns squared'
-     'microns'                'microns'
-#     'millimeters'            'millimeters'
-     'electrons_angstrom_squared'   'electrons square angstrom'
-     'electron_volts'         'electron volts'
-#     'mg/ml'                  'mg per milliliter'
-     'millimolar'             'millimolar'
-     'megagrams_per_cubic_metre'       'megagrams per cubic metre' 
-     'pixels_per_millimetre'      'pixels per millimetre'
-     'counts'                 'counts'
-     'counts_per_photon'      'counts per photon'
-#
-     loop_
-    _item_units_conversion.from_code
-    _item_units_conversion.to_code
-    _item_units_conversion.operator
-    _item_units_conversion.factor
-###
-     'metres'                   'centimetres'              '*'   1.0E+02
-     'metres'                   'millimetres'              '*'   1.0E+03
-     'metres'                   'nanometres'               '*'   1.0E+09
-     'metres'                   'angstroms'                '*'   1.0E+10
-     'metres'                   'picometres'               '*'   1.0E+12
-     'metres'                   'femtometres'              '*'   1.0E+15
 
-     'centimetres'              'millimetres'              '*'   1.0E+01
-     'centimetres'              'nanometres'               '*'   1.0E+07
-     'centimetres'              'angstroms'                '*'   1.0E+08
-     'centimetres'              'picometres'               '*'   1.0E+10
-     'centimetres'              'femtometres'              '*'   1.0E+13
-#
-     'millimetres'              'centimetres'              '*'   1.0E-01
-     'millimetres'              'nanometres'               '*'   1.0E+06
-     'millimetres'              'angstroms'                '*'   1.0E+07
-     'millimetres'              'picometres'               '*'   1.0E+09
-     'millimetres'              'femtometres'              '*'   1.0E+12
-#
-     'nanometres'               'centimetres'              '*'   1.0E-07
-     'nanometres'               'millimetres'              '*'   1.0E-06
-     'nanometres'               'angstroms'                '*'   1.0E+01
-     'nanometres'               'picometres'               '*'   1.0E+03
-     'nanometres'               'femtometres'              '*'   1.0E+06
-#
-     'angstroms'                'centimetres'              '*'   1.0E-08
-     'angstroms'                'millimetres'              '*'   1.0E-07
-     'angstroms'                'nanometres'               '*'   1.0E-01
-     'angstroms'                'picometres'               '*'   1.0E+02
-     'angstroms'                'femtometres'              '*'   1.0E+05
-#
-     'picometres'               'centimetres'              '*'   1.0E-10
-     'picometres'               'millimetres'              '*'   1.0E-09
-     'picometres'               'nanometres'               '*'   1.0E-03
-     'picometres'               'angstroms'                '*'   1.0E-02
-     'picometres'               'femtometres'              '*'   1.0E+03
-#
-     'femtometres'              'centimetres'              '*'   1.0E-13
-     'femtometres'              'millimetres'              '*'   1.0E-12
-     'femtometres'              'nanometres'               '*'   1.0E-06
-     'femtometres'              'angstroms'                '*'   1.0E-05
-     'femtometres'              'picometres'               '*'   1.0E-03
-###
-     'reciprocal_centimetres'   'reciprocal_millimetres'   '*'   1.0E-01
-     'reciprocal_centimetres'   'reciprocal_nanometres'    '*'   1.0E-07
-     'reciprocal_centimetres'   'reciprocal_angstroms'     '*'   1.0E-08
-     'reciprocal_centimetres'   'reciprocal_picometres'    '*'   1.0E-10
-#
-     'reciprocal_millimetres'   'reciprocal_centimetres'   '*'   1.0E+01
-     'reciprocal_millimetres'   'reciprocal_nanometres'    '*'   1.0E-06
-     'reciprocal_millimetres'   'reciprocal_angstroms'     '*'   1.0E-07
-     'reciprocal_millimetres'   'reciprocal_picometres'    '*'   1.0E-09
-#
-     'reciprocal_nanometres'    'reciprocal_centimetres'   '*'   1.0E+07
-     'reciprocal_nanometres'    'reciprocal_millimetres'   '*'   1.0E+06
-     'reciprocal_nanometres'    'reciprocal_angstroms'     '*'   1.0E-01
-     'reciprocal_nanometres'    'reciprocal_picometres'    '*'   1.0E-03
-#
-     'reciprocal_angstroms'     'reciprocal_centimetres'   '*'   1.0E+08
-     'reciprocal_angstroms'     'reciprocal_millimetres'   '*'   1.0E+07
-     'reciprocal_angstroms'     'reciprocal_nanometres'    '*'   1.0E+01
-     'reciprocal_angstroms'     'reciprocal_picometres'    '*'   1.0E-02
-#
-     'reciprocal_picometres'    'reciprocal_centimetres'   '*'   1.0E+10
-     'reciprocal_picometres'    'reciprocal_millimetres'   '*'   1.0E+09
-     'reciprocal_picometres'    'reciprocal_nanometres'    '*'   1.0E+03
-     'reciprocal_picometres'    'reciprocal_angstroms'     '*'   1.0E+01
-###
-     'nanometres_squared'       'angstroms_squared'        '*'   1.0E+02
-     'nanometres_squared'       'picometres_squared'       '*'   1.0E+06
-#
-     'angstroms_squared'        'nanometres_squared'       '*'   1.0E-02
-     'angstroms_squared'        'picometres_squared'       '*'   1.0E+04
-     'angstroms_squared'        '8pi2_angstroms_squared'   '*'   78.9568
+     loop_
+       _Item_units.ID
+       _Item_units.Code
+       _Item_units.Abbrv
+       _Item_units.Detail
+       _Item_units.Dictionary_ID
 
 #
-     'picometres_squared'       'nanometres_squared'       '*'   1.0E-06
-     'picometres_squared'       'angstroms_squared'        '*'   1.0E-04
+  1    'metres'                 m     'metres'                                              NMR-STAR
+  2    'centimetres'            cm    'centimetres (meters * 10^( -2))'                     NMR-STAR
+  3    'millimetres'            mm    'millimetres (meters * 10^( -3))'                     NMR-STAR
+  4    'nanometres'             nm    'nanometres  (meters * 10^( -9))'                     NMR-STAR
+  5    'angstroms'              ?     'angstroms   (meters * 10^(-10))'                     NMR-STAR
+  6    'picometres'             pm    'picometres  (meters * 10^(-12))'                     NMR-STAR
+  7    'femtometres'            fm    'femtometres (meters * 10^(-15))'                     NMR-STAR
+#
+  8    'reciprocal_centimetres' ?    'reciprocal centimetres (meters * 10^( -2)^-1)'        NMR-STAR
+  9    'reciprocal_millimetres' ?    'reciprocal millimetres (meters * 10^( -3)^-1)'        NMR-STAR
+ 10    'reciprocal_nanometres'  ?    'reciprocal nanometres  (meters * 10^( -9)^-1)'        NMR-STAR
+ 11    'reciprocal_angstroms'   ?    'reciprocal angstroms   (meters * 10^(-10)^-1)'        NMR-STAR
+ 12    'reciprocal_picometres'  ?    'reciprocal picometres  (meters * 10^(-12)^-1)'        NMR-STAR
+#
+ 13    'nanometres_squared'     ?    'nanometres squared (meters * 10^( -9))^2'             NMR-STAR
+ 14    'angstroms_squared'      ?    'angstroms squared  (meters * 10^(-10))^2'             NMR-STAR
+ 15    '8pi2_angstroms_squared' ?    '8pi^2 * angstroms squared (meters * 10^(-10))^2'      NMR-STAR
+ 16    'picometres_squared'     ?    'picometres squared (meters * 10^(-12))^2'             NMR-STAR
+#
+ 17    'nanometres_cubed'       ?    'nanometres cubed (meters * 10^( -9))^3'               NMR-STAR
+ 18    'angstroms_cubed'        ?    'angstroms cubed  (meters * 10^(-10))^3'               NMR-STAR
+ 19    'picometres_cubed'       ?    'picometres cubed (meters * 10^(-12))^3'               NMR-STAR
+#
+ 20    'kilopascals'            ?    'kilopascals'                                          NMR-STAR
+ 21    'gigapascals'            ?    'gigapascals'                                          NMR-STAR
+#
+ 22    'hours'                  hr    'hours'                                               NMR-STAR
+ 23    'minutes'                min   'minutes'                                             NMR-STAR
+ 24    'seconds'                s     'seconds'                                             NMR-STAR
+  ?    'milliseconds            ms    'milliseconds'                                        NMR-STAR
+ 25    'microseconds'           us    'microseconds'                                        NMR-STAR
+  ?    'nanoseconds'            ns    'nanoseconds'                                         NMR-STAR
+#
+ 26    'degrees'                ?    'degrees (of arc)'                                     NMR-STAR
+#
+ 27    'degrees_per_minute'     ?    'degrees (of arc) per minute'                          NMR-STAR
+#
+ 28    'celsius'                C    'degrees (of temperature) Celsius'                     NMR-STAR
+ 29    'kelvins'                K    'degrees (of temperature) Kelvin'                      NMR-STAR
+#
+ 30    'electrons'              ?    'electrons'                                            NMR-STAR
+#
+ 31    'electrons_squared'      ?    'electrons squared'                                    NMR-STAR
+#
+ 32    'electrons_per_nanometres_cubed'    ?    
+;
+ electrons per nanometres cubed (meters * 10^( -9))^3
+;
+NMR-STAR
+
+#
+ 33    'electrons_per_angstroms_cubed'     ?    
+;
+ electrons per angstroms  cubed (meters * 10^(-10))^3
+;
+NMR-STAR
+
+#
+ 34    'electrons_per_picometres_cubed'     ?    
+;
+ electrons per picometres cubed (meters * 10^(-12))^3
+;
+NMR-STAR
+
+#
+ 35    'kilowatts'              ?    'kilowatts'                                      NMR-STAR
+#
+ 36    'milliamperes'           ?    'milliamperes'                                   NMR-STAR
+#
+ 37    'kilovolts'              ?    'kilovolts'                                      NMR-STAR
+
+#
+ 38    'arbitrary'     ?    
+;
+ arbitrary system of units.
+;
+NMR-STAR
+
+#
+ 39    'angstroms_degrees'      ?    'angstroms * degrees'                            NMR-STAR
+#
+ 40    'degrees_squared'        ?    'degrees squared'                                NMR-STAR
+#
+ 41    'mg_per_ml'              ?    'milligram per milliliter'                       NMR-STAR
+#
+ 42    'ml_per_min'             ?    'milliliter per minute'                          NMR-STAR
+#
+ 43    'milliliters'            ?    'liter / 1000'                                   NMR-STAR
+#
+ 44    'milligrams'             ?    'grams / 1000'                                   NMR-STAR
+#
+ 45    'megadaltons'            ?    'megadaltons'                                    NMR-STAR
+#
+ 46    'microns_squared'        ?    'microns squared'                                NMR-STAR
+#
+ 47    'microns'                ?    'microns'                                        NMR-STAR
+#
+ 48    'millimeters'            ?    'meters / 1000'                                  NMR-STAR
+#
+ 49    'electrons_angstrom_squared'   ?    'electrons square angstrom'                NMR-STAR
+#
+ 50    'electron_volts'         ?    'electron volts'                                 NMR-STAR
+#
+ 51    'mg/ml'                  ?    'mg per milliliter'                              NMR-STAR
+#
+ 52    'millimolar'             mM    'molar / 1000'                                  NMR-STAR
+#
+ 53    'megagrams_per_cubic_metre'       ?    'megagrams per cubic metre'             NMR-STAR 
+#
+ 54    'pixels_per_millimetre'      ?    'pixels per millimetre'                      NMR-STAR
+#
+ 55    'counts'                 ?    'counts'                                         NMR-STAR
+#
+ 56    'counts_per_photon'      ?    'counts per photon'                              NMR-STAR
+#
+ 57    'hertz'                  Hz    '?'                                             NMR-STAR
+#
+ 58    'parts per million'      ppm   '?'                                             NMR-STAR
+#
+
+
+# Need to add others relevant to NMR spectroscopy
+# May have to think about adding everything from the ACS booklet just to cover
+# most all possibilities
+
+
+#59    pressure units
+#60    pH units
+#61    ionic strength units
+#62    field strength (Tesla)
+#63    gyromagnetic ratio
+#64    concentration units
+#65    binding constant units
+
+     stop_
+
+     loop_
+       _item_units_conversion.from_code
+       _item_units_conversion.to_code
+       _item_units_conversion.operator
+       _item_units_conversion.factor
+
 ###
-     'nanometres_cubed'         'angstroms_cubed'          '*'   1.0E+03
-     'nanometres_cubed'         'picometres_cubed'         '*'   1.0E+09
+     1    'mètres'                   ?    'centimetres'              '*'   1.0E+02        NMR-STAR
+     1    'metres'                   ?    'millimetres'              '*'   1.0E+03        NMR-STAR
+     1    'metres'                   ?    'nanometres'               '*'   1.0E+09        NMR-STAR
+     1    'metres'                   ?    'angstroms'                '*'   1.0E+10        NMR-STAR
+     1    'metres'                   ?    'picometres'               '*'   1.0E+12        NMR-STAR
+     1    'metres'                   ?    'femtometres'              '*'   1.0E+15        NMR-STAR
+
+     ?    'centimetres'              ?    'millimetres'              '*'   1.0E+01        NMR-STAR
+     ?    'centimetres'              ?    'nanometres'               '*'   1.0E+07        NMR-STAR
+     ?    'centimetres'              ?    'angstroms'                '*'   1.0E+08        NMR-STAR
+     ?    'centimetres'              ?    'picometres'               '*'   1.0E+10        NMR-STAR
+     ?    'centimetres'              ?    'femtometres'              '*'   1.0E+13        NMR-STAR
 #
-     'angstroms_cubed'          'nanometres_cubed'         '*'   1.0E-03
-     'angstroms_cubed'          'picometres_cubed'         '*'   1.0E+06
+     ?    'millimetres'              ?    'centimetres'              '*'   1.0E-01        NMR-STAR
+     ?    'millimetres'              ?    'nanometres'               '*'   1.0E+06        NMR-STAR
+     ?    'millimetres'              ?    'angstroms'                '*'   1.0E+07        NMR-STAR
+     ?    'millimetres'              ?    'picometres'               '*'   1.0E+09        NMR-STAR
+     ?    'millimetres'              ?    'femtometres'              '*'   1.0E+12        NMR-STAR
 #
-     'picometres_cubed'         'nanometres_cubed'         '*'   1.0E-09
-     'picometres_cubed'         'angstroms_cubed'          '*'   1.0E-06
+     ?    'nanometres'               ?    'centimetres'              '*'   1.0E-07        NMR-STAR
+     ?    'nanometres'               ?    'millimetres'              '*'   1.0E-06        NMR-STAR
+     ?    'nanometres'               ?    'angstroms'                '*'   1.0E+01        NMR-STAR
+     ?    'nanometres'               ?    'picometres'               '*'   1.0E+03        NMR-STAR
+     ?    'nanometres'               ?    'femtometres'              '*'   1.0E+06        NMR-STAR
+#
+     ?    'angstroms'                ?    'centimetres'              '*'   1.0E-08        NMR-STAR
+     ?    'angstroms'                ?    'millimetres'              '*'   1.0E-07        NMR-STAR
+     ?    'angstroms'                ?    'nanometres'               '*'   1.0E-01        NMR-STAR
+     ?    'angstroms'                ?    'picometres'               '*'   1.0E+02        NMR-STAR
+     ?    'angstroms'                ?    'femtometres'              '*'   1.0E+05        NMR-STAR
+#
+     ?    'picometres'               ?    'centimetres'              '*'   1.0E-10        NMR-STAR
+     ?    'picometres'               ?    'millimetres'              '*'   1.0E-09        NMR-STAR
+     ?    'picometres'               ?    'nanometres'               '*'   1.0E-03        NMR-STAR
+     ?    'picometres'               ?    'angstroms'                '*'   1.0E-02        NMR-STAR
+     ?    'picometres'               ?    'femtometres'              '*'   1.0E+03        NMR-STAR
+#
+     ?    'femtometres'              ?    'centimetres'              '*'   1.0E-13        NMR-STAR
+     ?    'femtometres'              ?    'millimetres'              '*'   1.0E-12        NMR-STAR
+     ?    'femtometres'              ?    'nanometres'               '*'   1.0E-06        NMR-STAR
+     ?    'femtometres'              ?    'angstroms'                '*'   1.0E-05        NMR-STAR
+     ?    'femtometres'              ?    'picometres'               '*'   1.0E-03        NMR-STAR
 ###
-     'kilopascals'              'gigapascals'              '*'   1.0E-06
-     'gigapascals'              'kilopascals'              '*'   1.0E+06
+     ?    'reciprocal_centimetres'   ?    'reciprocal_millimetres'   '*'   1.0E-01        NMR-STAR
+     ?    'reciprocal_centimetres'   ?    'reciprocal_nanometres'    '*'   1.0E-07        NMR-STAR
+     ?    'reciprocal_centimetres'   ?    'reciprocal_angstroms'     '*'   1.0E-08        NMR-STAR
+     ?    'reciprocal_centimetres'   ?    'reciprocal_picometres'    '*'   1.0E-10        NMR-STAR
+#
+     ?    'reciprocal_millimetres'   ?    'reciprocal_centimetres'   '*'   1.0E+01        NMR-STAR
+     ?    'reciprocal_millimetres'   ?    'reciprocal_nanometres'    '*'   1.0E-06        NMR-STAR
+     ?    'reciprocal_millimetres'   ?    'reciprocal_angstroms'     '*'   1.0E-07        NMR-STAR
+     ?    'reciprocal_millimetres'   ?    'reciprocal_picometres'    '*'   1.0E-09        NMR-STAR
+# 
+     ?    'reciprocal_nanometres'    ?    'reciprocal_centimetres'   '*'   1.0E+07        NMR-STAR
+     ?    'reciprocal_nanometres'    ?    'reciprocal_millimetres'   '*'   1.0E+06        NMR-STAR
+     ?    'reciprocal_nanometres'    ?    'reciprocal_angstroms'     '*'   1.0E-01        NMR-STAR
+     ?    'reciprocal_nanometres'    ?    'reciprocal_picometres'    '*'   1.0E-03        NMR-STAR
+#
+     ?    'reciprocal_angstroms'     ?    'reciprocal_centimetres'   '*'   1.0E+08        NMR-STAR
+     ?    'reciprocal_angstroms'     ?    'reciprocal_millimetres'   '*'   1.0E+07        NMR-STAR
+     ?    'reciprocal_angstroms'     ?    'reciprocal_nanometres'    '*'   1.0E+01        NMR-STAR
+     ?    'reciprocal_angstroms'     ?    'reciprocal_picometres'    '*'   1.0E-02        NMR-STAR
+
+     ?    'reciprocal_picometres'    ?    'reciprocal_centimetres'   '*'   1.0E+10        NMR-STAR
+     ?    'reciprocal_picometres'    ?    'reciprocal_millimetres'   '*'   1.0E+09        NMR-STAR
+     ?    'reciprocal_picometres'    ?    'reciprocal_nanometres'    '*'   1.0E+03        NMR-STAR
+     ?    'reciprocal_picometres'    ?    'reciprocal_angstroms'     '*'   1.0E+01        NMR-STAR
 ###
-     'hours'                    'minutes'                  '*'   6.0E+01
-     'hours'                    'seconds'                  '*'   3.6E+03
-     'hours'                    'microseconds'             '*'   3.6E+09
+     ?    'nanometres_squared'       ?    'angstroms_squared'        '*'   1.0E+02        NMR-STAR
+     ?    'nanometres_squared'       ?    'picometres_squared'       '*'   1.0E+06        NMR-STAR
 #
-     'minutes'                  'hours'                    '/'   6.0E+01
-     'minutes'                  'seconds'                  '*'   6.0E+01
-     'minutes'                  'microseconds'             '*'   6.0E+07
+     ?    'angstroms_squared'        ?    'nanometres_squared'       '*'   1.0E-02        NMR-STAR
+     ?    'angstroms_squared'        ?    'picometres_squared'       '*'   1.0E+04        NMR-STAR
+     ?    'angstroms_squared'        ?    '8pi2_angstroms_squared'   '*'   78.9568        NMR-STAR
+
 #
-     'seconds'                  'hours'                    '/'   3.6E+03
-     'seconds'                  'minutes'                  '/'   6.0E+01
-     'seconds'                  'microseconds'             '*'   1.0E+06
-#
-     'microseconds'             'hours'                    '/'   3.6E+09
-     'microseconds'             'minutes'                  '/'   6.0E+07
-     'microseconds'             'seconds'                  '/'   1.0E+06
+     ?    'picometres_squared'       ?    'nanometres_squared'       '*'   1.0E-06        NMR-STAR
+     ?    'picometres_squared'       ?    'angstroms_squared'        '*'   1.0E-04        NMR-STAR
 ###
-     'celsius'                  'kelvins'                  '-'     273.0
-     'kelvins'                  'celsius'                  '+'     273.0
+     ?    'nanometres_cubed'         ?    'angstroms_cubed'          '*'   1.0E+03        NMR-STAR
+     ?    'nanometres_cubed'         ?    'picometres_cubed'         '*'   1.0E+09        NMR-STAR
+#
+     ?    'angstroms_cubed'          ?    'nanometres_cubed'         '*'   1.0E-03        NMR-STAR
+     ?    'angstroms_cubed'          ?    'picometres_cubed'         '*'   1.0E+06        NMR-STAR
+#
+     ?    'picometres_cubed'         ?    'nanometres_cubed'         '*'   1.0E-09        NMR-STAR
+     ?    'picometres_cubed'         ?    'angstroms_cubed'          '*'   1.0E-06        NMR-STAR
 ###
-     'electrons_per_nanometres_cubed'
-     'electrons_per_angstroms_cubed'                       '*'   1.0E-03
-     'electrons_per_nanometres_cubed'
-     'electrons_per_picometres_cubed'                      '*'   1.0E-09
+     ?    'kilopascals'              ?    'gigapascals'              '*'   1.0E-06        NMR-STAR
+     ?    'gigapascals'              ?    'kilopascals'              '*'   1.0E+06        NMR-STAR
+###
+     ?    'hours'                    ?    'minutes'                  '*'   6.0E+01        NMR-STAR
+     ?    'hours'                    ?    'seconds'                  '*'   3.6E+03        NMR-STAR
+     ?    'hours'                    ?    'microseconds'             '*'   3.6E+09        NMR-STAR
 #
-     'electrons_per_angstroms_cubed'
-     'electrons_per_nanometres_cubed'                      '*'   1.0E+03
-     'electrons_per_angstroms_cubed'
-     'electrons_per_picometres_cubed'                      '*'   1.0E-06
+     ?    'minutes'                  ?    'hours'                    '/'   6.0E+01        NMR-STAR
+     ?    'minutes'                  ?    'seconds'                  '*'   6.0E+01        NMR-STAR
+     ?    'minutes'                  ?    'microseconds'             '*'   6.0E+07        NMR-STAR
 #
-     'electrons_per_picometres_cubed'
-     'electrons_per_nanometres_cubed'                      '*'   1.0E+09
-     'electrons_per_picometres_cubed'
-     'electrons_per_angstroms_cubed'                       '*'   1.0E+06
+     ?    'seconds'                  ?    'hours'                    '/'   3.6E+03        NMR-STAR
+     ?    'seconds'                  ?    'minutes'                  '/'   6.0E+01        NMR-STAR
+     ?    'seconds'                  ?    'microseconds'             '*'   1.0E+06        NMR-STAR
+#
+     ?    'microseconds'             ?    'hours'                    '/'   3.6E+09        NMR-STAR
+     ?    'microseconds'             ?    'minutes'                  '/'   6.0E+07        NMR-STAR
+     ?    'microseconds'             ?    'seconds'                  '/'   1.0E+06        NMR-STAR
+###
+     ?    'celsius'                  ?    'kelvins'                  '-'     273.0        NMR-STAR
+     ?    'kelvins'                  ?    'celsius'                  '+'     273.0        NMR-STAR
 ###
  
   stop_
+
+save_
+
+############################################
+#
+#   Category and Item Descriptions
+#
+############################################
