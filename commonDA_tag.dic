@@ -1,6 +1,6 @@
 data_NMR-STAR.dic
 
-#  version date -  2019-04-18
+#  version date -  2019-04-23
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_NMR-STAR.dic
 
     _dictionary.title           NMR-STAR.dic
     _dictionary.datablock_id    NMR-STAR.dic
-    _dictionary.version         3.2.1.27
+    _dictionary.version         3.2.1.28
 
      loop_
        _dictionary_history.version
@@ -276,7 +276,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.name                         '_entry.nmr_star_version'
    _item.category_id                  'entry'
    _item.mandatory_code                yes
-   _item.default_value                '3.2.1.27'
+   _item.default_value                '3.2.1.28'
    _pdbx_item_enumeration_details.flag              Y
    _pdbx_item_enumeration_details.closed_flag       Y
    _item_type.code                    'line'
@@ -1503,7 +1503,8 @@ save__spectral_peak_list.experiment_name
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'NMR_spectrometer_expt'
+The name of an experiment used to determine the data reported. The experiment 
+name should exist in the experiments listed as values to the tag '_Experiment.Name'.
 ;
 
    _item.name                         '_spectral_peak_list.experiment_name'
