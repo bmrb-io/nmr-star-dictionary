@@ -1,0 +1,522 @@
+
+####################
+## ITEM_TYPE_LIST ##
+####################
+#
+#
+#  The regular expressions defined here are not compliant
+#  with the POSIX 1003.2 standard as they include the 
+#  '\n' and '\t' special characters. These regular expressions
+#  have been tested using the version 0.12 of Richard Stallman's
+#  GNU regular expression libary in POSIX mode. 
+#
+#                                                                            
+# For some data items, a standard syntax is assumed. The syntax is           
+#   described for each data item in the dictionary, but is summarized here:  
+#                                                                            
+#   Names:     The family name(s) followed by a comma, precedes the first    
+#              name(s) or initial(s).                                        
+#                                                                            
+#   Telephone numbers:                                                       
+#              The international code is given in brackets and any extension 
+#              number is preceded by 'ext'.                                  
+#                                                                            
+#   Dates:     In the form yyyy-mm-dd.                                       
+#                                                                            
+##############################################################################
+
+
+     loop_
+       _Item_type.Code
+       _Item_type.Primitive_code
+       _Item_type.Construct
+       _Item_type.Detail
+       _Item_type.Dictionary_ID
+
+               code      char
+               '[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words ...
+;
+NEX-STAR
+               ucode      uchar
+               '[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+NEX-STAR
+               line      char
+               '[][ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              char item types / multi-word items ...
+;
+NEX-STAR
+               uline      uchar
+               '[][ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              char item types / multi-word items (case insensitive)...
+;
+NEX-STAR
+               text      char
+               '[][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              text item types / multi-line text ...
+;
+NEX-STAR
+               int       numb
+               '-?[0-9]+'
+;
+              int item types are the subset of numbers that are the negative 
+               or positive integers.
+;
+NEX-STAR
+               float     numb
+               '-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?'
+;
+              int item types are the subset of numbers that are the floating
+               numbers.
+;
+NEX-STAR
+               name      uchar
+               '_[_A-Za-z0-9]+\.[][_A-Za-z0-9%-]+'
+;
+              name item types take the form...
+;
+NEX-STAR
+               idname    uchar
+               '[_A-Za-z0-9]+'
+;
+              idname item types take the form...
+;
+NEX-STAR
+               any       char
+               '.*'
+;
+              A catch all for items that may take any form...
+;
+NEX-STAR
+               yyyy-mm-dd  char
+                '[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9]-[0-9][0-9]'
+;
+               Standard format for CIF dates.
+;
+NEX-STAR
+               uchar3    uchar
+              '[+]?[A-Za-z0-9]?[A-Za-z0-9][A-Za-z0-9]'
+;
+               data item for 3 character codes
+;
+NEX-STAR
+               uchar1    uchar
+              '[+]?[A-Za-z0-9]'
+;
+               data item for 1 character codes
+;
+NEX-STAR
+               yes_no   char
+               '(yes)|(no)'
+;
+               data item for boolean codes that have values of 'yes' or 'no'
+;
+NEX-STAR
+               symop    char
+               '([1-9]|[1-9][0-9]|1[0-8][0-9]|19[0-2])(_[1-9][1-9][1-9])?'
+;
+              symop item types take the form n_klm, where n refers to the
+               symmetry operation that is applied to the coordinates in the
+               ATOM_SITE category identified by _atom_site_label.  It must
+               match a number given in _symmetry_equiv_pos_site_id.
+
+               k, l, and m refer to the translations that are subsequently
+               applied to the symmetry transformed coordinates to generate
+               the atom used.  These translations (x,y,z) are related to
+               (k,l,m) by
+                     k = 5 + x
+                     l = 5 + y
+                     m = 5 + z
+               By adding 5 to the translations, the use of negative numbers
+               is avoided.
+;
+NEX-STAR
+               atcode      char
+               '[][ _(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              Character data type for atom names  ...
+;
+NEX-STAR
+               yyyy-mm-dd:hh:mm  char
+    '[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9](-[0-9]?[0-9])?(:[0-9]?[0-9]:[0-9][0-9])?'
+;
+               Standard format for CIF dates with optional time stamp.
+;
+NEX-STAR
+               fax      uchar
+               '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+NEX-STAR
+               phone      uchar
+               '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+NEX-STAR
+               email      uchar
+               '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+NEX-STAR
+               int-range       numb
+               '-?[0-9]+(--?[0-9]+)?'
+;
+              int item types are the subset of numbers that are the negative 
+               or positive integers with optional range.
+;
+NEX-STAR
+               float-range     numb
+
+'-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?(--?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?)?'
+;
+              int item types are the subset of numbers that are the floating
+               numbers.
+;
+NEX-STAR
+       
+#
+               binary    char
+;
+\n--CIF-BINARY-FORMAT-SECTION--\n\
+[][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*\
+\n--CIF-BINARY-FORMAT-SECTION----
+;
+;
+              binary items are presented as MIME-like ascii-encoded
+               sections in an imgCIF.  In a CBF, raw octet streams
+               are used to convey the same information.
+;
+NEX-STAR
+
+# NEX-STAR additions
+
+              framecode   char
+              '[.;:"&<>(){}'`~!$%A-Za-z0-9*|+-][_.;:"&<>(){}'`~!$%A-Za-z0-9*|+-]*' 
+;
+             A value that points to a save frame.
+;
+NEX-STAR
+
+    stop_
+
+#####################
+## ITEM_UNITS_LIST ##
+#####################
+
+
+     loop_
+       _Item_units.ID
+       _Item_units.Code
+       _Item_units.Abbrv
+       _Item_units.Detail
+       _Item_units.Dictionary_ID
+
+#
+  1    'metres'                 m     'metres'                                              NEX-STAR
+  2    'centimetres'            cm    'centimetres (meters * 10^( -2))'                     NEX-STAR
+  3    'millimetres'            mm    'millimetres (meters * 10^( -3))'                     NEX-STAR
+  4    'nanometres'             nm    'nanometres  (meters * 10^( -9))'                     NEX-STAR
+  5    'micrometres'            ?     'micrometres (meters * 10^( -6))'                     NEX-STAR
+  6    'angstroms'              ?     'angstroms   (meters * 10^(-10))'                     NEX-STAR
+  7    'picometres'             pm    'picometres  (meters * 10^(-12))'                     NEX-STAR
+  8    'femtometres'            fm    'femtometres (meters * 10^(-15))'                     NEX-STAR
+#
+  9    'reciprocal_centimetres' ?    'reciprocal centimetres (meters * 10^( -2)^-1)'        NEX-STAR
+ 10    'reciprocal_millimetres' ?    'reciprocal millimetres (meters * 10^( -3)^-1)'        NEX-STAR
+ 11    'reciprocal_micrometres' ?    'reciprocal micrometres (meters * 10^( -6)^-1)'        NEX-STAR
+ 12    'reciprocal_nanometres'  ?    'reciprocal nanometres  (meters * 10^( -9)^-1)'        NEX-STAR
+ 13    'reciprocal_angstroms'   ?    'reciprocal angstroms   (meters * 10^(-10)^-1)'        NEX-STAR
+ 14    'reciprocal_picometres'  ?    'reciprocal picometres  (meters * 10^(-12)^-1)'        NEX-STAR
+#
+ 15    'micrometres_squared'    ?    'micrometres squared (meters * 10^( -6))^2'            NEX-STAR
+ 16    'nanometres_squared'     ?    'nanometres squared (meters * 10^( -9))^2'             NEX-STAR
+ 17    'angstroms_squared'      ?    'angstroms squared  (meters * 10^(-10))^2'             NEX-STAR
+ 18    '8pi2_angstroms_squared' ?    '8pi^2 * angstroms squared (meters * 10^(-10))^2'      NEX-STAR
+ 19    'picometres_squared'     ?    'picometres squared (meters * 10^(-12))^2'             NEX-STAR
+#
+ 20    'micrometres_cubed'      ?    'micrometres cubed (meters * 10^( -6))^3'              NEX-STAR
+ 21    'nanometres_cubed'       ?    'nanometres cubed (meters * 10^( -9))^3'               NEX-STAR
+ 22    'angstroms_cubed'        ?    'angstroms cubed  (meters * 10^(-10))^3'               NEX-STAR
+ 23    'picometres_cubed'       ?    'picometres cubed (meters * 10^(-12))^3'               NEX-STAR
+#
+ 24    'kilopascals'            ?    'kilopascals'                                          NEX-STAR
+ 25    'gigapascals'            ?    'gigapascals'                                          NEX-STAR
+#
+ 26    'hours'                  hr    'hours'                                               NEX-STAR
+ 27    'minutes'                min   'minutes'                                             NEX-STAR
+ 28    'seconds'                s     'seconds'                                             NEX-STAR
+ 29    'milliseconds            ms    'milliseconds'                                        NEX-STAR
+ 30    'microseconds'           us    'microseconds'                                        NEX-STAR
+ 31    'nanoseconds'            ns    'nanoseconds'                                         NEX-STAR
+#
+ 32    'degrees'                ?    'degrees (of arc)'                                     NEX-STAR
+#
+ 33    'degrees_per_minute'     ?    'degrees (of arc) per minute'                          NEX-STAR
+#
+ 34    'celsius'                C    'degrees (of temperature) Celsius'                     NEX-STAR
+ 35    'kelvins'                K    'degrees (of temperature) Kelvin'                      NEX-STAR
+#
+ 36    'electrons'              ?    'electrons'                                            NEX-STAR
+#
+ 37    'electrons_squared'      ?    'electrons squared'                                    NEX-STAR
+#
+ 38    'electrons_per_nanometres_cubed'    ?    
+;
+ electrons per nanometres cubed (meters * 10^( -9))^3
+;
+NEX-STAR
+
+#
+ 39    'electrons_per_angstroms_cubed'     ?    
+;
+ electrons per angstroms  cubed (meters * 10^(-10))^3
+;
+NEX-STAR
+
+#
+ 40    'electrons_per_picometres_cubed'     ?    
+;
+ electrons per picometres cubed (meters * 10^(-12))^3
+;
+NEX-STAR
+
+#
+ 41    'kilowatts'              ?    'kilowatts'                                      NEX-STAR
+#
+ 42    'milliamperes'           ?    'milliamperes'                                   NEX-STAR
+#
+ 43    'kilovolts'              ?    'kilovolts'                                      NEX-STAR
+
+#
+ 44    'arbitrary'     ?    
+;
+ arbitrary system of units.
+;
+NEX-STAR
+
+#
+ 45    'angstroms_degrees'      ?    'angstroms * degrees'                            NEX-STAR
+#
+ 46    'degrees_squared'        ?    'degrees squared'                                NEX-STAR
+#
+ 47    'mg_per_ml'              ?    'milligram per milliliter'                       NEX-STAR
+#
+ 48    'ml_per_min'             ?    'milliliter per minute'                          NEX-STAR
+#
+ 49    'milliliters'            ?    'liter / 1000'                                   NEX-STAR
+#
+ 50    'milligrams'             ?    'grams / 1000'                                   NEX-STAR
+#
+ 51    'megadaltons'            ?    'megadaltons'                                    NEX-STAR
+#
+ 52    'microns_squared'        ?    'microns squared'                                NEX-STAR
+#
+ 53    'microns'                ?    'microns'                                        NEX-STAR
+#
+ 54    'millimeters'            ?    'meters / 1000'                                  NEX-STAR
+#
+ 55    'electrons_angstrom_squared'   ?    'electrons square angstrom'                NEX-STAR
+#
+ 56    'electron_volts'         ?    'electron volts'                                 NEX-STAR
+#
+ 57    'mg/ml'                  ?    'mg per milliliter'                              NEX-STAR
+#
+ 58    'millimolar'             mM    'molar / 1000'                                  NEX-STAR
+#
+ 59    'megagrams_per_cubic_metre'       ?    'megagrams per cubic metre'             NEX-STAR 
+#
+ 60    'pixels_per_millimetre'      ?    'pixels per millimetre'                      NEX-STAR
+#
+ 61    'counts'                 ?    'counts'                                         NEX-STAR
+#
+ 62    'counts_per_photon'      ?    'counts per photon'                              NEX-STAR
+#
+ 63    'hertz'                  Hz    '?'                                             NEX-STAR
+#
+ 64    'parts per million'      ppm   '?'                                             NEX-STAR
+#
+
+
+# Need to add others relevant to NMR spectroscopy
+# May have to think about adding everything from the ACS booklet just to cover
+# most all possibilitiesNEX-STAR
+
+
+#    pressure units
+65   'Pascal' 			Pa 	'Newton per square meter' 			NEX-STAR
+66   'Newton per square meter'  N/m^2	'Newton per square meter'			NEX-STAR
+67   'atmospheric pressure'     atm     'atmospheric pressure'      			NEX-STAR
+
+
+#pH units (no unit just number)
+
+#ionic strength units
+68   'Mol per liter'		mol/L  'Mol per liter'					NEX-STAR
+69   'Mol per cubic meter' 	mol/m^3 'Mol per cubic meter'				NEX-STAR
+
+#field strength (Tesla)
+70   'Tesla'			T	'Tesla'						NEX-STAR
+71   'Gauss'			G	'Gauss'						NEX-STAR
+
+#   gyromagnetic ratio
+72   'Radian per second per Tesla' 	rad/S/T	'Radian per second per Tesla' 		NEX-STAR
+73   'Coulomb per kilogram'		C/kg	'Coulomb per kilogram'
+ 
+#  concentration units
+74   'molar'			M		'1 mol/L'				NEX-STAR
+75   'millimolar'		mM		'10E-3 mol/L'				NEX-STAR
+75   'micromolar'		?		'10E-6 mol/L'				NEX-STAR
+75   'nanomolar'		nM		'10E-9 mol/L'				NEX-STAR
+75   'picomolar'		pM		'10E-12 mol/L'				NEX-STAR
+75   'femtomolar'		fM		'10E-15 mol/L'				NEX-STAR
+75   'attomolar'		aM		'10E-18 mol/L'				NEX-STAR
+
+
+
+
+
+
+#65    binding constant units
+
+     stop_
+
+     loop_
+       _item_units_conversion.from_code
+       _item_units_conversion.to_code
+       _item_units_conversion.operator
+       _item_units_conversion.factor
+
+###
+     1    'mètres'                   ?    'centimetres'              '*'   1.0E+02        NEX-STAR
+     1    'metres'                   ?    'millimetres'              '*'   1.0E+03        NEX-STAR
+     1    'metres'                   ?    'micrometres'              '*'   1.0E+06        NEX-STAR
+     1    'metres'                   ?    'nanometres'               '*'   1.0E+09        NEX-STAR
+     1    'metres'                   ?    'angstroms'                '*'   1.0E+10        NEX-STAR
+     1    'metres'                   ?    'picometres'               '*'   1.0E+12        NEX-STAR
+     1    'metres'                   ?    'femtometres'              '*'   1.0E+15        NEX-STAR
+
+     ?    'centimetres'              ?    'millimetres'              '*'   1.0E+01        NEX-STAR
+     ?    'centimetres'              ?    'micrometres'              '*'   1.0E+04        NEX-STAR
+     ?    'centimetres'              ?    'nanometres'               '*'   1.0E+07        NEX-STAR
+     ?    'centimetres'              ?    'angstroms'                '*'   1.0E+08        NEX-STAR
+     ?    'centimetres'              ?    'picometres'               '*'   1.0E+10        NEX-STAR
+     ?    'centimetres'              ?    'femtometres'              '*'   1.0E+13        NEX-STAR
+#
+     ?    'millimetres'              ?    'centimetres'              '*'   1.0E-01        NEX-STAR
+     ?    'millimetres'              ?    'micrometres'              '*'   1.0E+03        NEX-STAR
+     ?    'millimetres'              ?    'nanometres'               '*'   1.0E+06        NEX-STAR
+     ?    'millimetres'              ?    'angstroms'                '*'   1.0E+07        NEX-STAR
+     ?    'millimetres'              ?    'picometres'               '*'   1.0E+09        NEX-STAR
+     ?    'millimetres'              ?    'femtometres'              '*'   1.0E+12        NEX-STAR
+#
+     ?    'nanometres'               ?    'centimetres'              '*'   1.0E-07        NEX-STAR
+     ?    'nanometres'               ?    'millimetres'              '*'   1.0E-06        NEX-STAR
+     ?    'nanometres'               ?    'angstroms'                '*'   1.0E+01        NEX-STAR
+     ?    'nanometres'               ?    'picometres'               '*'   1.0E+03        NEX-STAR
+     ?    'nanometres'               ?    'femtometres'              '*'   1.0E+06        NEX-STAR
+#
+     ?    'angstroms'                ?    'centimetres'              '*'   1.0E-08        NEX-STAR
+     ?    'angstroms'                ?    'millimetres'              '*'   1.0E-07        NEX-STAR
+     ?    'angstroms'                ?    'nanometres'               '*'   1.0E-01        NEX-STAR
+     ?    'angstroms'                ?    'picometres'               '*'   1.0E+02        NEX-STAR
+     ?    'angstroms'                ?    'femtometres'              '*'   1.0E+05        NEX-STAR
+#
+     ?    'picometres'               ?    'centimetres'              '*'   1.0E-10        NEX-STAR
+     ?    'picometres'               ?    'millimetres'              '*'   1.0E-09        NEX-STAR
+     ?    'picometres'               ?    'nanometres'               '*'   1.0E-03        NEX-STAR
+     ?    'picometres'               ?    'angstroms'                '*'   1.0E-02        NEX-STAR
+     ?    'picometres'               ?    'femtometres'              '*'   1.0E+03        NEX-STAR
+#
+     ?    'femtometres'              ?    'centimetres'              '*'   1.0E-13        NEX-STAR
+     ?    'femtometres'              ?    'millimetres'              '*'   1.0E-12        NEX-STAR
+     ?    'femtometres'              ?    'nanometres'               '*'   1.0E-06        NEX-STAR
+     ?    'femtometres'              ?    'angstroms'                '*'   1.0E-05        NEX-STAR
+     ?    'femtometres'              ?    'picometres'               '*'   1.0E-03        NEX-STAR
+###
+     ?    'reciprocal_centimetres'   ?    'reciprocal_millimetres'   '*'   1.0E-01        NEX-STAR
+     ?    'reciprocal_centimetres'   ?    'reciprocal_nanometres'    '*'   1.0E-07        NEX-STAR
+     ?    'reciprocal_centimetres'   ?    'reciprocal_angstroms'     '*'   1.0E-08        NEX-STAR
+     ?    'reciprocal_centimetres'   ?    'reciprocal_picometres'    '*'   1.0E-10        NEX-STAR
+#
+     ?    'reciprocal_millimetres'   ?    'reciprocal_centimetres'   '*'   1.0E+01        NEX-STAR
+     ?    'reciprocal_millimetres'   ?    'reciprocal_nanometres'    '*'   1.0E-06        NEX-STAR
+     ?    'reciprocal_millimetres'   ?    'reciprocal_angstroms'     '*'   1.0E-07        NEX-STAR
+     ?    'reciprocal_millimetres'   ?    'reciprocal_picometres'    '*'   1.0E-09        NEX-STAR
+# 
+     ?    'reciprocal_nanometres'    ?    'reciprocal_centimetres'   '*'   1.0E+07        NEX-STAR
+     ?    'reciprocal_nanometres'    ?    'reciprocal_millimetres'   '*'   1.0E+06        NEX-STAR
+     ?    'reciprocal_nanometres'    ?    'reciprocal_angstroms'     '*'   1.0E-01        NEX-STAR
+     ?    'reciprocal_nanometres'    ?    'reciprocal_picometres'    '*'   1.0E-03        NEX-STAR
+#
+     ?    'reciprocal_angstroms'     ?    'reciprocal_centimetres'   '*'   1.0E+08        NEX-STAR
+     ?    'reciprocal_angstroms'     ?    'reciprocal_millimetres'   '*'   1.0E+07        NEX-STAR
+     ?    'reciprocal_angstroms'     ?    'reciprocal_nanometres'    '*'   1.0E+01        NEX-STAR
+     ?    'reciprocal_angstroms'     ?    'reciprocal_picometres'    '*'   1.0E-02        NEX-STAR
+
+     ?    'reciprocal_picometres'    ?    'reciprocal_centimetres'   '*'   1.0E+10        NEX-STAR
+     ?    'reciprocal_picometres'    ?    'reciprocal_millimetres'   '*'   1.0E+09        NEX-STAR
+     ?    'reciprocal_picometres'    ?    'reciprocal_nanometres'    '*'   1.0E+03        NEX-STAR
+     ?    'reciprocal_picometres'    ?    'reciprocal_angstroms'     '*'   1.0E+01        NEX-STAR
+###
+     ?    'nanometres_squared'       ?    'angstroms_squared'        '*'   1.0E+02        NEX-STAR
+     ?    'nanometres_squared'       ?    'picometres_squared'       '*'   1.0E+06        NEX-STAR
+#
+     ?    'angstroms_squared'        ?    'nanometres_squared'       '*'   1.0E-02        NEX-STAR
+     ?    'angstroms_squared'        ?    'picometres_squared'       '*'   1.0E+04        NEX-STAR
+     ?    'angstroms_squared'        ?    '8pi2_angstroms_squared'   '*'   78.9568        NEX-STAR
+
+#
+     ?    'picometres_squared'       ?    'nanometres_squared'       '*'   1.0E-06        NEX-STAR
+     ?    'picometres_squared'       ?    'angstroms_squared'        '*'   1.0E-04        NEX-STAR
+###
+     ?    'nanometres_cubed'         ?    'angstroms_cubed'          '*'   1.0E+03        NEX-STAR
+     ?    'nanometres_cubed'         ?    'picometres_cubed'         '*'   1.0E+09        NEX-STAR
+#
+     ?    'angstroms_cubed'          ?    'nanometres_cubed'         '*'   1.0E-03        NEX-STAR
+     ?    'angstroms_cubed'          ?    'picometres_cubed'         '*'   1.0E+06        NEX-STAR
+#
+     ?    'picometres_cubed'         ?    'nanometres_cubed'         '*'   1.0E-09        NEX-STAR
+     ?    'picometres_cubed'         ?    'angstroms_cubed'          '*'   1.0E-06        NEX-STAR
+###
+     ?    'kilopascals'              ?    'gigapascals'              '*'   1.0E-06        NEX-STAR
+     ?    'gigapascals'              ?    'kilopascals'              '*'   1.0E+06        NEX-STAR
+###
+     ?    'hours'                    ?    'minutes'                  '*'   6.0E+01        NEX-STAR
+     ?    'hours'                    ?    'seconds'                  '*'   3.6E+03        NEX-STAR
+     ?    'hours'                    ?    'microseconds'             '*'   3.6E+09        NEX-STAR
+#
+     ?    'minutes'                  ?    'hours'                    '/'   6.0E+01        NEX-STAR
+     ?    'minutes'                  ?    'seconds'                  '*'   6.0E+01        NEX-STAR
+     ?    'minutes'                  ?    'microseconds'             '*'   6.0E+07        NEX-STAR
+#
+     ?    'seconds'                  ?    'hours'                    '/'   3.6E+03        NEX-STAR
+     ?    'seconds'                  ?    'minutes'                  '/'   6.0E+01        NEX-STAR
+     ?    'seconds'                  ?    'microseconds'             '*'   1.0E+06        NEX-STAR
+#
+     ?    'microseconds'             ?    'hours'                    '/'   3.6E+09        NEX-STAR
+     ?    'microseconds'             ?    'minutes'                  '/'   6.0E+07        NEX-STAR
+     ?    'microseconds'             ?    'seconds'                  '/'   1.0E+06        NEX-STAR
+###
+     ?    'celsius'                  ?    'kelvins'                  '-'     273.0        NEX-STAR
+     ?    'kelvins'                  ?    'celsius'                  '+'     273.0        NEX-STAR
+###
+ 
+  stop_
+
+save_
+
+############################################
+#
+#   Category and Item Descriptions
+#
+############################################

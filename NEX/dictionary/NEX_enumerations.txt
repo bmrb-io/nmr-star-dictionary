@@ -1,0 +1,269 @@
+
+
+##########################################
+#                                        #
+#   This file is under construction!!    #
+# Your help and suggestions are welcome. #
+#                                        #
+##########################################
+
+     
+data_NEX_tag_enumerations
+
+    _Revision_date      2019-07-07
+
+
+save__FID_sampling.Layout_hypercomplex_component_type
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   full         ?
+   partial      ?
+
+   stop_
+
+save_
+
+save__FID_sampling.Layout_transient_type
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   uniform      ?
+   non-uniform  ?
+   partial      ?
+   complete     ?
+
+   stop_
+
+save_
+
+save__FID_sampling.Layout_FID_ID_type
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ID               'arbitrary integer numbering'
+  'byte offset'     ?
+
+   stop_
+
+save_
+
+save__FID_sampling.Matrix_format
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   sequential            ?
+   sub-matrix            ?
+
+   stop_
+
+save_
+
+save__FID_sampling_base.Parameter
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+         time_series_type                  ?
+         time_multiplier                   ?
+         time_offset                       ?
+         time_units                        ?
+         quadrature_series_type            ?
+         quadrature_multiplier             ?
+         quadrature_offset                 ?
+         quadrature_units                  ?
+         redfield_trick                    ?
+         series_type                       ?
+         name                              ?
+         units                             ?
+         details                           ?
+
+   stop_
+
+save_
+
+save__FID_sampling_base.Param_tag
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+    '_Schedule.Time_index_dim2'     ?
+    '_Schedule.Phase_index_dim2'    ?
+     na                            'not applicable'
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim2
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ip           ?
+   ap           ?
+   real         ?
+   imaginary    ?
+   echo         ?
+   antiecho     ?
+
+   stop_
+
+save_
+
+save__NMR_experiment_file.Type
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ?           ?
+
+   stop_
+
+save_
+
+save__NMR_experiment_file.Byte_order
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   'big endian'          ?
+   'little endian'       ?
+
+   stop_
+
+save_
+
+save__NMR_experiment_file.Compression_algorithm
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   ?         ?
+
+   stop_
+
+save_
+
+save__Schedule_table_data_org.Param_tag
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   '_Schedule.AuxA_index'               ?
+   '_Schedule.AuxB_index'               ?
+   '_Schedule.Time_index_dim2'          ?
+   '_Schedule.Time_index_dim3'          ?
+   '_Schedule.Time_index_dim4'          ?
+   '_Schedule.Time_index_dim5'          ?
+   '_Schedule.Time_index_dim6'          ?
+   '_Schedule.Time_index_dim7'          ?
+   '_Schedule.Time_index_dim8'          ?
+
+   '_Schedule.Time_value_dim2'          ?
+   '_Schedule.Time_value_dim3'          ?
+   '_Schedule.Time_value_dim4'          ?
+   '_Schedule.Time_value_dim5'          ?
+   '_Schedule.Time_value_dim6'          ?
+   '_Schedule.Time_value_dim7'          ?
+   '_Schedule.Time_value_dim8'          ?
+
+   '_Schedule.Quadrature_index_dim2'    ?
+   '_Schedule.Quadrature_index_dim3'    ?
+   '_Schedule.Quadrature_index_dim4'    ?
+   '_Schedule.Quadrature_index_dim5'    ?
+   '_Schedule.Quadrature_index_dim6'    ?
+   '_Schedule.Quadrature_index_dim7'    ?
+   '_Schedule.Quadrature_index_dim8'    ?
+
+   '_Schedule.Quadrature_value_dim2'    ?
+   '_Schedule.Quadrature_value_dim3'    ?
+   '_Schedule.Quadrature_value_dim4'    ?
+   '_Schedule.Quadrature_value_dim5'    ?
+   '_Schedule.Quadrature_value_dim6'    ?
+   '_Schedule.Quadrature_value_dim7'    ?
+   '_Schedule.Quadrature_value_dim8'    ?
+
+   stop_
+
+save_
+
+save__Spectral_param.Parameter
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+         size                             ?
+         spectral_width_Hz                ?
+         obs_freq_MHz_at_center           ?
+        'obs_freq_at 0ppm'                ?
+         ppm_at_center                    ?
+         zero_order_phase_corr            ?           
+         first_order_phase_corr           ?             
+         nucleus                          ?
+         label                            ?
+         details                          ?
+
+   stop_
+
+save_
+
+save__Schedule_analysis.Property
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+       'FID_count'               ? 
+       'FID_coverage'            ? 
+       'Mean_evolution_time'     ? 
+       'Max_increment'           ?  
+       'PSR'                     ? 
+       'iSNR'                    ? 
+
+   stop_
+
+save_
+
+save__Software.Type
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+    'schedule converter'         ?
+    'schedule generator'         ?
+
+   stop_
+
+save_
+
+save__Task.Task
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+    'Convert NUS schedules into NMR-STAR standardized format'       ?
+    'Generate a NUS schedule'                                       ?
+
+   stop_
+
+save_
+

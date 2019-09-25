@@ -1,0 +1,4818 @@
+data_BMOD-STAR.dic
+
+#  version date -  2019-07-09
+
+
+# Many of the following item type definitions and descriptions for units
+# have been taken from the pdbx and mmCIF dictionaries.
+
+# The BMOD-STAR dictionary has been constructed to be congruent with the pdbx
+# where the data being modeled are equivalent. In these cases, where possible
+# identical items have been used and the definitions for these items are
+# intended to be identical.
+
+
+# Some definitions: Tag is a combination of a category and an item
+#                   Item describes the specific data item in the category
+#                   Category is the grouping of items
+#                   Category group is the grouping of item categories that 
+#                      are encapsulated in a save frame
+#                   Super category group is the grouping of save frame categories 
+#                      by scientific area and entry information
+
+
+save_datablock_description
+    _Datablock.ID                BMOD-STAR
+    _Datablock.Description
+;
+    This data block contains the BMOD-STAR dictionary.
+;
+
+save_
+
+
+######################################################################
+
+save_dictionary_header
+    _Dictionary.Sf_category                dictionary_header
+    _Dictionary.ID                         BMOD-STAR
+    _Dictionary.description
+;
+     This data block contains the BMOD-STAR dictionary.
+;
+
+    _Dictionary.Title           BMOD-STAR.dic
+    _Dictionary.Version         
+
+     loop_
+       _Dictionary_history.Version
+       _Dictionary_history.Update
+       _Dictionary_history.Revision
+       _Dictionary_history.Dictionary_ID
+                    
+     1.0.0.0          2019-02-04
+;
+     Original formal dictionary release.
+;
+BMOD-STAR
+
+     stop_
+
+ 
+
+######################################################################
+
+     loop_
+       _Super_save_frame_group.ID
+       _Super_save_frame_group.Name
+       _Super_save_frame_group.Description
+       _Super_save_frame_group.Dictionary_ID
+
+    1     entry_information
+;
+The entry_information category super group captures general information describing the entry, any study that the entry is a member, and information regarding the processing of the entry and updates to the entry after its initial release to the public.
+;
+NEX-STAR
+
+    2     citations
+;
+Citations referenced in the entry and the primary citation related to this specific entry.
+;
+NEX-STAR
+
+    3     molecular_assembly
+;
+The molecular_assembly super_group contains the complete chemical description of the molecular assembly studied, additional reference information for the molecular assembly and its components, and links to information for the equivalent or similar molecular assemblies or biopolymer components in other databases.
+;
+NEX-STAR
+
+    4     experimental_details
+;
+The experimental_details category super group captures information about the samples, sample conditions, NMR spectrometers, NMR experiments and other data regarding the experiments used to collect the NMR spectral data and to derive kinetic, thermodynamic, and structure information.
+;
+NEX-STAR
+
+    5     NMR_parameters
+;
+The NMR_parameters super group contains the category groups used to model NMR spectral parameters or theoretically calculated parameters like chemical shifts and links to supporting information.
+;
+NEX-STAR
+
+    6     structure
+;
+The structure category super group captures atomic coordinates, constraints, statistical data, and other related information.
+;
+NEX-STAR
+
+     stop_
+
+######################################################################
+
+     loop_
+       _Save_frame_category.Name
+       _Save_frame_category.Description
+       _Save_frame_category.Super_save_frame_group_ID
+       _Save_frame_category.Super_save_frame_group_name
+       _Save_frame_category.Dictionary_ID
+
+'entry_information'
+;
+General information about the entry; e.g. title, authors,, history,, etc.
+;
+
+     NEX-STAR
+
+'citations'
+;
+Categories that provide bibliographic information for the citation for the entry.
+;
+
+     NEX-STAR
+
+'references'
+;
+Categories that provide bibliographic information that is referential.
+;
+
+     NEX-STAR
+
+'chem_comp'
+;
+Categories that describe chemical components of entities and molecular assemblies.
+;
+
+     NEX-STAR
+
+'entity'
+;
+Categories that describe the molecules that make up a molecular assembly.
+;
+
+     NEX-STAR
+
+'assembly'
+;
+Categories that describe a molecular assembly.
+;
+
+     NEX-STAR
+
+'sample'
+;
+Categories that describe the contents and other details about the samples used in scientific experiments.
+;
+
+     NEX-STAR
+
+'sample_conditions'
+;
+Categories that describe the experimental conditions used in conducting individual scientific experiments.
+;
+
+     NEX-STAR
+
+'software'
+;
+Categories that describe computer software.
+;
+
+     4     'experimental_details'     NEX-STAR
+
+'NMR_spectrometer'
+;
+Categories that describe an NMR spectrometer.
+;
+
+     NEX-STAR
+
+'experiment_list'
+;
+Categories that describe a list of experiments.
+;
+
+     NEX-STAR
+
+'computing_platform'
+;
+Categories that describe a computer or computing facility or platform that involves high performance or high throughput computing.
+;
+
+     NEX-STAR
+
+'molecular_modeling_file_set'
+;
+Categories that describe a set of files generated to model the structure and other characteristics of a small molecule.
+;
+
+     NEX-STAR
+
+'chem_shift_reference'
+;
+Categories that capture information about the compounds and parameters used to reference NMR chemical shifts.
+;
+
+     NEX-STAR
+
+'assigned_chemical_shifts'
+;
+Categories that capture assigned chemical shift values and links to the samples, sample conditions, NMR experiments, and other information about how the assigned chemical shifts were derived.
+;
+
+     NEX-STAR
+
+'spectral_peak_list'
+;
+Categories that capture the properties of NMR spectral peaks, spectral parameters, and links to the NMR experiments and other information regarding the data.
+;
+
+     NEX-STAR
+
+     stop_
+
+######################################################################
+
+     loop_
+       _Category_group.ID
+       _Category_group.Name
+       _Category_group.Description
+       _Category_group.Dictionary_ID
+
+     1     'entry_information'
+;
+General information about the entry; e.g. title, authors,, history,, etc.
+;
+NEX-STAR
+
+     2     'citations'
+;
+Categories that provide bibliographic information for the citation for the entry.
+;
+NEX-STAR
+
+     3     'references'
+;
+Categories that provide bibliographic information that is referential.
+;
+NEX-STAR
+
+     4     'chem_comp'
+;
+Categories that describe chemical components of entities and molecular assemblies.
+;
+NEX-STAR
+
+     5     'entity'
+;
+Categories that describe the molecules that make up a molecular assembly.
+;
+NEX-STAR
+
+     6     'assembly'
+;
+Categories that describe a molecular assembly.
+;
+NEX-STAR
+
+     7     'sample'
+;
+Categories that describe the contents and other details about the samples used in scientific experiments.
+;
+NEX-STAR
+
+     8     'sample_conditions'
+;
+Categories that describe the experimental conditions used in conducting individual scientific experiments.
+;
+NEX-STAR
+
+     9     'software'
+;
+Categories that describe computer software.
+;
+NEX-STAR
+
+     10     'NMR_spectrometer'
+;
+Categories that describe an NMR spectrometer.
+;
+NEX-STAR
+
+     11     'experiment_list'
+;
+Categories that describe a list of experiments.
+;
+NEX-STAR
+
+     12     'computing_platform'
+;
+Categories that describe a computer or computing facility or platform that involves high performance or high throughput computing.
+;
+NEX-STAR
+
+     13     'molecular_modeling_file_set'
+;
+Categories that describe a set of files generated to model the structure and other characteristics of a small molecule.
+;
+NEX-STAR
+
+     14     'chem_shift_reference'
+;
+Categories that capture information about the compounds and parameters used to reference NMR chemical shifts.
+;
+NEX-STAR
+
+     15     'assigned_chemical_shifts'
+;
+Categories that capture assigned chemical shift values and links to the samples, sample conditions, NMR experiments, and other information about how the assigned chemical shifts were derived.
+;
+NEX-STAR
+
+     16     'spectral_peak_list'
+;
+Categories that capture the properties of NMR spectral peaks, spectral parameters, and links to the NMR experiments and other information regarding the data.
+;
+NEX-STAR
+
+     stop_
+
+######################################################################
+
+
+####################
+## ITEM_TYPE_LIST ##
+####################
+#
+#
+#  The regular expressions defined here are not compliant
+#  with the POSIX 1003.2 standard as they include the 
+#  '\n' and '\t' special characters. These regular expressions
+#  have been tested using the version 0.12 of Richard Stallman's
+#  GNU regular expression libary in POSIX mode. 
+#
+#                                                                            
+# For some data items, a standard syntax is assumed. The syntax is           
+#   described for each data item in the dictionary, but is summarized here:  
+#                                                                            
+#   Names:     The family name(s) followed by a comma, precedes the first    
+#              name(s) or initial(s).                                        
+#                                                                            
+#   Telephone numbers:                                                       
+#              The international code is given in brackets and any extension 
+#              number is preceded by 'ext'.                                  
+#                                                                            
+#   Dates:     In the form yyyy-mm-dd.                                       
+#                                                                            
+##############################################################################
+
+
+     loop_
+       _Item_type.Code
+       _Item_type.Primitive_code
+       _Item_type.Construct
+       _Item_type.Detail
+       _Item_type.Dictionary_ID
+
+               code      char
+               '[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words ...
+;
+BMOD
+               ucode      uchar
+               '[_,.;:"&<>()/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+BMOD
+               line      char
+               '[][ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              char item types / multi-word items ...
+;
+BMOD
+               uline      uchar
+               '[][ \t_(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              char item types / multi-word items (case insensitive)...
+;
+BMOD
+               text      char
+               '[][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              text item types / multi-line text ...
+;
+BMOD
+               int       numb
+               '-?[0-9]+'
+;
+              int item types are the subset of numbers that are the negative 
+               or positive integers.
+;
+BMOD
+               float     numb
+               '-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?'
+;
+              int item types are the subset of numbers that are the floating
+               numbers.
+;
+BMOD
+               name      uchar
+               '_[_A-Za-z0-9]+\.[][_A-Za-z0-9%-]+'
+;
+              name item types take the form...
+;
+BMOD
+               idname    uchar
+               '[_A-Za-z0-9]+'
+;
+              idname item types take the form...
+;
+BMOD
+               any       char
+               '.*'
+;
+              A catch all for items that may take any form...
+;
+BMOD
+               yyyy-mm-dd  char
+                '[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9]-[0-9][0-9]'
+;
+               Standard format for CIF dates.
+;
+BMOD
+               uchar3    uchar
+              '[+]?[A-Za-z0-9]?[A-Za-z0-9][A-Za-z0-9]'
+;
+               data item for 3 character codes
+;
+BMOD
+               uchar1    uchar
+              '[+]?[A-Za-z0-9]'
+;
+               data item for 1 character codes
+;
+BMOD
+               yes_no   char
+               '(yes)|(no)'
+;
+               data item for boolean codes that have values of 'yes' or 'no'
+;
+BMOD
+               symop    char
+               '([1-9]|[1-9][0-9]|1[0-8][0-9]|19[0-2])(_[1-9][1-9][1-9])?'
+;
+              symop item types take the form n_klm, where n refers to the
+               symmetry operation that is applied to the coordinates in the
+               ATOM_SITE category identified by _atom_site_label.  It must
+               match a number given in _symmetry_equiv_pos_site_id.
+
+               k, l, and m refer to the translations that are subsequently
+               applied to the symmetry transformed coordinates to generate
+               the atom used.  These translations (x,y,z) are related to
+               (k,l,m) by
+                     k = 5 + x
+                     l = 5 + y
+                     m = 5 + z
+               By adding 5 to the translations, the use of negative numbers
+               is avoided.
+;
+BMOD
+               atcode      char
+               '[][ _(),.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*'
+;
+              Character data type for atom names  ...
+;
+BMOD
+               yyyy-mm-dd:hh:mm  char
+    '[0-9]?[0-9]?[0-9][0-9]-[0-9]?[0-9](-[0-9]?[0-9])?(:[0-9]?[0-9]:[0-9][0-9])?'
+;
+               Standard format for CIF dates with optional time stamp.
+;
+BMOD
+               fax      uchar
+               '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+BMOD
+               phone      uchar
+               '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+BMOD
+               email      uchar
+               '[_,.;:"&<>/\{}'`~!@#$%A-Za-z0-9*|+-]*'
+;
+              code item types/single words  (case insensitive) ...
+;
+BMOD
+               int-range       numb
+               '-?[0-9]+(--?[0-9]+)?'
+;
+              int item types are the subset of numbers that are the negative 
+               or positive integers with optional range.
+;
+BMOD
+               float-range     numb
+
+'-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?(--?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?)?'
+;
+              int item types are the subset of numbers that are the floating
+               numbers.
+;
+BMOD
+       
+#
+               binary    char
+;
+\n--CIF-BINARY-FORMAT-SECTION--\n\
+[][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*\
+\n--CIF-BINARY-FORMAT-SECTION----
+;
+;
+              binary items are presented as MIME-like ascii-encoded
+               sections in an imgCIF.  In a CBF, raw octet streams
+               are used to convey the same information.
+;
+BMOD
+
+# NMR-STAR additions
+
+              framecode   char
+              '[.;:"&<>(){}'`~!$%A-Za-z0-9*|+-][_.;:"&<>(){}'`~!$%A-Za-z0-9*|+-]*' 
+;
+             A value that points to a save frame.
+;
+BMOD
+
+    stop_
+
+#####################
+## ITEM_UNITS_LIST ##
+#####################
+
+     loop_
+       _Item_units.ID
+       _Item_units.Code
+       _Item_units.Abbrv
+       _Item_units.Detail
+       _Item_units.Dictionary_ID
+#
+  1    'metres'                 m     'metres'                                              BMOD
+  2    'centimetres'            cm    'centimetres (meters * 10^( -2))'                     BMOD
+  3    'millimetres'            mm    'millimetres (meters * 10^( -3))'                     BMOD
+  4    'nanometres'             nm    'nanometres  (meters * 10^( -9))'                     BMOD
+  5    'angstroms'              ?     'angstroms   (meters * 10^(-10))'                     BMOD
+  6    'picometres'             pm    'picometres  (meters * 10^(-12))'                     BMOD
+  7    'femtometres'            fm    'femtometres (meters * 10^(-15))'                     BMOD
+#
+  8    'reciprocal_centimetres' ?    'reciprocal centimetres (meters * 10^( -2)^-1)'        BMOD
+  9    'reciprocal_millimetres' ?    'reciprocal millimetres (meters * 10^( -3)^-1)'        BMOD
+ 10    'reciprocal_nanometres'  ?    'reciprocal nanometres  (meters * 10^( -9)^-1)'        BMOD
+ 11    'reciprocal_angstroms'   ?    'reciprocal angstroms   (meters * 10^(-10)^-1)'        BMOD
+ 12    'reciprocal_picometres'  ?    'reciprocal picometres  (meters * 10^(-12)^-1)'        BMOD
+#
+ 13    'nanometres_squared'     ?    'nanometres squared (meters * 10^( -9))^2'             BMOD
+ 14    'angstroms_squared'      ?    'angstroms squared  (meters * 10^(-10))^2'             BMOD
+ 15    '8pi2_angstroms_squared' ?    '8pi^2 * angstroms squared (meters * 10^(-10))^2'      BMOD
+ 16    'picometres_squared'     ?    'picometres squared (meters * 10^(-12))^2'             BMOD
+#
+ 17    'nanometres_cubed'       ?    'nanometres cubed (meters * 10^( -9))^3'               BMOD
+ 18    'angstroms_cubed'        ?    'angstroms cubed  (meters * 10^(-10))^3'               BMOD
+ 19    'picometres_cubed'       ?    'picometres cubed (meters * 10^(-12))^3'               BMOD
+#
+ 20    'kilopascals'            ?    'kilopascals'                                          BMOD
+ 21    'gigapascals'            ?    'gigapascals'                                          BMOD
+#
+ 22    'hours'                  hr    'hours'                                               BMOD
+ 23    'minutes'                min   'minutes'                                             BMOD
+ 24    'seconds'                s     'seconds'                                             BMOD
+  ?    'milliseconds            ms    'milliseconds'                                        BMOD
+ 25    'microseconds'           us    'microseconds'                                        BMOD
+  ?    'nanoseconds'            ns    'nanoseconds'                                         BMOD
+#
+ 26    'degrees'                ?    'degrees (of arc)'                                     BMOD
+#
+ 27    'degrees_per_minute'     ?    'degrees (of arc) per minute'                          BMOD
+#
+ 28    'celsius'                C    'degrees (of temperature) Celsius'                     BMOD
+ 29    'kelvins'                K    'degrees (of temperature) Kelvin'                      BMOD
+#
+ 30    'electrons'              ?    'electrons'                                            BMOD
+#
+ 31    'electrons_squared'      ?    'electrons squared'                                    BMOD
+#
+ 32    'electrons_per_nanometres_cubed'    ?    
+;
+ electrons per nanometres cubed (meters * 10^( -9))^3
+;
+BMOD
+
+#
+ 33    'electrons_per_angstroms_cubed'     ?    
+;
+ electrons per angstroms  cubed (meters * 10^(-10))^3
+;
+BMOD
+
+#
+ 34    'electrons_per_picometres_cubed'     ?    
+;
+ electrons per picometres cubed (meters * 10^(-12))^3
+;
+BMOD
+
+#
+ 35    'kilowatts'              ?    'kilowatts'                                      BMOD
+#
+ 36    'milliamperes'           ?    'milliamperes'                                   BMOD
+#
+ 37    'kilovolts'              ?    'kilovolts'                                      BMOD
+
+#
+ 38    'arbitrary'     ?    
+;
+ arbitrary system of units.
+;
+BMOD
+
+#
+ 39    'angstroms_degrees'      ?    'angstroms * degrees'                            BMOD
+#
+ 40    'degrees_squared'        ?    'degrees squared'                                BMOD
+#
+ 41    'mg_per_ml'              ?    'milligram per milliliter'                       BMOD
+#
+ 42    'ml_per_min'             ?    'milliliter per minute'                          BMOD
+#
+ 43    'milliliters'            ?    'liter / 1000'                                   BMOD
+#
+ 44    'milligrams'             ?    'grams / 1000'                                   BMOD
+#
+ 45    'megadaltons'            ?    'megadaltons'                                    BMOD
+#
+ 46    'microns_squared'        ?    'microns squared'                                BMOD
+#
+ 47    'microns'                ?    'microns'                                        BMOD
+#
+ 48    'millimeters'            ?    'meters / 1000'                                  BMOD
+#
+ 49    'electrons_angstrom_squared'   ?    'electrons square angstrom'                BMOD
+#
+ 50    'electron_volts'         ?    'electron volts'                                 BMOD
+#
+ 51    'mg/ml'                  ?    'mg per milliliter'                              BMOD
+#
+ 52    'millimolar'             mM    'molar / 1000'                                  BMOD
+#
+ 53    'megagrams_per_cubic_metre'       ?    'megagrams per cubic metre'             BMOD 
+#
+ 54    'pixels_per_millimetre'      ?    'pixels per millimetre'                      BMOD
+#
+ 55    'counts'                 ?    'counts'                                         BMOD
+#
+ 56    'counts_per_photon'      ?    'counts per photon'                              BMOD
+#
+ 57    'hertz'                  Hz    '?'                                             BMOD
+#
+ 58    'parts per million'      ppm   '?'                                             BMOD
+#
+
+
+# Need to add others relevant to NMR spectroscopy
+# May have to think about adding everything from the ACS booklet just to cover
+# most all possibilities
+
+
+#59    pressure units
+#60    pH units
+#61    ionic strength units
+#62    field strength (Tesla)
+#63    gyromagnetic ratio
+#64    concentration units
+#65    binding constant units
+
+
+     stop_
+
+     loop_
+        _Item_units_conversion.From_item_units_ID
+        _Item_units_conversion.From_item_units_code
+        _Item_units_conversion.To_item_units_ID
+        _Item_units_conversion.To_item_units_code
+        _Item_units_conversion.Operator
+        _Item_units_conversion.Factor
+        _Item_units_conversion.Dictionary_ID
+
+###
+     1    'mètres'                   ?    'centimetres'              '*'   1.0E+02        BMOD
+     1    'metres'                   ?    'millimetres'              '*'   1.0E+03        BMOD
+     1    'metres'                   ?    'nanometres'               '*'   1.0E+09        BMOD
+     1    'metres'                   ?    'angstroms'                '*'   1.0E+10        BMOD
+     1    'metres'                   ?    'picometres'               '*'   1.0E+12        BMOD
+     1    'metres'                   ?    'femtometres'              '*'   1.0E+15        BMOD
+
+     ?    'centimetres'              ?    'millimetres'              '*'   1.0E+01        BMOD
+     ?    'centimetres'              ?    'nanometres'               '*'   1.0E+07        BMOD
+     ?    'centimetres'              ?    'angstroms'                '*'   1.0E+08        BMOD
+     ?    'centimetres'              ?    'picometres'               '*'   1.0E+10        BMOD
+     ?    'centimetres'              ?    'femtometres'              '*'   1.0E+13        BMOD
+#
+     ?    'millimetres'              ?    'centimetres'              '*'   1.0E-01        BMOD
+     ?    'millimetres'              ?    'nanometres'               '*'   1.0E+06        BMOD
+     ?    'millimetres'              ?    'angstroms'                '*'   1.0E+07        BMOD
+     ?    'millimetres'              ?    'picometres'               '*'   1.0E+09        BMOD
+     ?    'millimetres'              ?    'femtometres'              '*'   1.0E+12        BMOD
+#
+     ?    'nanometres'               ?    'centimetres'              '*'   1.0E-07        BMOD
+     ?    'nanometres'               ?    'millimetres'              '*'   1.0E-06        BMOD
+     ?    'nanometres'               ?    'angstroms'                '*'   1.0E+01        BMOD
+     ?    'nanometres'               ?    'picometres'               '*'   1.0E+03        BMOD
+     ?    'nanometres'               ?    'femtometres'              '*'   1.0E+06        BMOD
+#
+     ?    'angstroms'                ?    'centimetres'              '*'   1.0E-08        BMOD
+     ?    'angstroms'                ?    'millimetres'              '*'   1.0E-07        BMOD
+     ?    'angstroms'                ?    'nanometres'               '*'   1.0E-01        BMOD
+     ?    'angstroms'                ?    'picometres'               '*'   1.0E+02        BMOD
+     ?    'angstroms'                ?    'femtometres'              '*'   1.0E+05        BMOD
+#
+     ?    'picometres'               ?    'centimetres'              '*'   1.0E-10        BMOD
+     ?    'picometres'               ?    'millimetres'              '*'   1.0E-09        BMOD
+     ?    'picometres'               ?    'nanometres'               '*'   1.0E-03        BMOD
+     ?    'picometres'               ?    'angstroms'                '*'   1.0E-02        BMOD
+     ?    'picometres'               ?    'femtometres'              '*'   1.0E+03        BMOD
+#
+     ?    'femtometres'              ?    'centimetres'              '*'   1.0E-13        BMOD
+     ?    'femtometres'              ?    'millimetres'              '*'   1.0E-12        BMOD
+     ?    'femtometres'              ?    'nanometres'               '*'   1.0E-06        BMOD
+     ?    'femtometres'              ?    'angstroms'                '*'   1.0E-05        BMOD
+     ?    'femtometres'              ?    'picometres'               '*'   1.0E-03        BMOD
+###
+     ?    'reciprocal_centimetres'   ?    'reciprocal_millimetres'   '*'   1.0E-01        BMOD
+     ?    'reciprocal_centimetres'   ?    'reciprocal_nanometres'    '*'   1.0E-07        BMOD
+     ?    'reciprocal_centimetres'   ?    'reciprocal_angstroms'     '*'   1.0E-08        BMOD
+     ?    'reciprocal_centimetres'   ?    'reciprocal_picometres'    '*'   1.0E-10        BMOD
+#
+     ?    'reciprocal_millimetres'   ?    'reciprocal_centimetres'   '*'   1.0E+01        BMOD
+     ?    'reciprocal_millimetres'   ?    'reciprocal_nanometres'    '*'   1.0E-06        BMOD
+     ?    'reciprocal_millimetres'   ?    'reciprocal_angstroms'     '*'   1.0E-07        BMOD
+     ?    'reciprocal_millimetres'   ?    'reciprocal_picometres'    '*'   1.0E-09        BMOD
+# 
+     ?    'reciprocal_nanometres'    ?    'reciprocal_centimetres'   '*'   1.0E+07        BMOD
+     ?    'reciprocal_nanometres'    ?    'reciprocal_millimetres'   '*'   1.0E+06        BMOD
+     ?    'reciprocal_nanometres'    ?    'reciprocal_angstroms'     '*'   1.0E-01        BMOD
+     ?    'reciprocal_nanometres'    ?    'reciprocal_picometres'    '*'   1.0E-03        BMOD
+#
+     ?    'reciprocal_angstroms'     ?    'reciprocal_centimetres'   '*'   1.0E+08        BMOD
+     ?    'reciprocal_angstroms'     ?    'reciprocal_millimetres'   '*'   1.0E+07        BMOD
+     ?    'reciprocal_angstroms'     ?    'reciprocal_nanometres'    '*'   1.0E+01        BMOD
+     ?    'reciprocal_angstroms'     ?    'reciprocal_picometres'    '*'   1.0E-02        BMOD
+
+     ?    'reciprocal_picometres'    ?    'reciprocal_centimetres'   '*'   1.0E+10        BMOD
+     ?    'reciprocal_picometres'    ?    'reciprocal_millimetres'   '*'   1.0E+09        BMOD
+     ?    'reciprocal_picometres'    ?    'reciprocal_nanometres'    '*'   1.0E+03        BMOD
+     ?    'reciprocal_picometres'    ?    'reciprocal_angstroms'     '*'   1.0E+01        BMOD
+###
+     ?    'nanometres_squared'       ?    'angstroms_squared'        '*'   1.0E+02        BMOD
+     ?    'nanometres_squared'       ?    'picometres_squared'       '*'   1.0E+06        BMOD
+#
+     ?    'angstroms_squared'        ?    'nanometres_squared'       '*'   1.0E-02        BMOD
+     ?    'angstroms_squared'        ?    'picometres_squared'       '*'   1.0E+04        BMOD
+     ?    'angstroms_squared'        ?    '8pi2_angstroms_squared'   '*'   78.9568        BMOD
+
+#
+     ?    'picometres_squared'       ?    'nanometres_squared'       '*'   1.0E-06        BMOD
+     ?    'picometres_squared'       ?    'angstroms_squared'        '*'   1.0E-04        BMOD
+###
+     ?    'nanometres_cubed'         ?    'angstroms_cubed'          '*'   1.0E+03        BMOD
+     ?    'nanometres_cubed'         ?    'picometres_cubed'         '*'   1.0E+09        BMOD
+#
+     ?    'angstroms_cubed'          ?    'nanometres_cubed'         '*'   1.0E-03        BMOD
+     ?    'angstroms_cubed'          ?    'picometres_cubed'         '*'   1.0E+06        BMOD
+#
+     ?    'picometres_cubed'         ?    'nanometres_cubed'         '*'   1.0E-09        BMOD
+     ?    'picometres_cubed'         ?    'angstroms_cubed'          '*'   1.0E-06        BMOD
+###
+     ?    'kilopascals'              ?    'gigapascals'              '*'   1.0E-06        BMOD
+     ?    'gigapascals'              ?    'kilopascals'              '*'   1.0E+06        BMOD
+###
+     ?    'hours'                    ?    'minutes'                  '*'   6.0E+01        BMOD
+     ?    'hours'                    ?    'seconds'                  '*'   3.6E+03        BMOD
+     ?    'hours'                    ?    'microseconds'             '*'   3.6E+09        BMOD
+#
+     ?    'minutes'                  ?    'hours'                    '/'   6.0E+01        BMOD
+     ?    'minutes'                  ?    'seconds'                  '*'   6.0E+01        BMOD
+     ?    'minutes'                  ?    'microseconds'             '*'   6.0E+07        BMOD
+#
+     ?    'seconds'                  ?    'hours'                    '/'   3.6E+03        BMOD
+     ?    'seconds'                  ?    'minutes'                  '/'   6.0E+01        BMOD
+     ?    'seconds'                  ?    'microseconds'             '*'   1.0E+06        BMOD
+#
+     ?    'microseconds'             ?    'hours'                    '/'   3.6E+09        BMOD
+     ?    'microseconds'             ?    'minutes'                  '/'   6.0E+07        BMOD
+     ?    'microseconds'             ?    'seconds'                  '/'   1.0E+06        BMOD
+###
+     ?    'celsius'                  ?    'kelvins'                  '-'     273.0        BMOD
+     ?    'kelvins'                  ?    'celsius'                  '+'     273.0        BMOD
+###
+ 
+  stop_
+
+save_
+
+############################################
+#
+#   Category and Item Descriptions
+#
+############################################
+
+save_FID_sampling
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               FID_sampling
+   _Category.ID                         1
+   _Category.Name                      'FID_sampling'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  no
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+    4   $_FID_sampling.ID     '_FID_sampling.ID'    1   NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Sf_category
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Sf_category'
+   _Item.ID                      1
+   _Item.Name                   '_FID_sampling.Sf_category'
+   _Item.Description
+;
+Category assigned to the information in the save frame.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.Sf_category'
+;
+FID_sampling
+;
+   ?
+ 1     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.NEX_format_version
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.NEX_format_version'
+   _Item.ID                      2
+   _Item.Name                   '_FID_sampling.NEX_format_version'
+   _Item.Description
+;
+NEX file format version used for the file.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+
+save_
+
+save__FID_sampling.File_generated_date
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.File_generated_date'
+   _Item.ID                      3
+   _Item.Name                   '_FID_sampling.File_generated_date'
+   _Item.Description
+;
+The date the sampling schedule was generated.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'yyyy-mm-dd'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.File_generated_date'
+;
+2018-09-23
+;
+   ?
+ 3     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.ID'
+   _Item.ID                      4
+   _Item.Name                   '_FID_sampling.ID'
+   _Item.Description
+;
+Unique value identifying this saveframe of category FID_sample within an entry.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+  loop_
+      _Item_linked.Child_item_ID
+      _Item_linked.Child_item_label
+      _Item_linked.Child_item_name
+      _Item_linked.Child_item_category_ID
+      _Item_linked.Child_item_category_label
+      _Item_linked.Item_ID
+      _Item_linked.Item_name
+      _Item_linked.Category_ID
+      _Item_linked.Dictionary_ID
+
+    54  $_Schedule.FID_sampling_ID  '_Schedule.FID_sampling_ID'    3  $Schedule    4  '_FID_sampling.ID'    1   NEX-STAR
+    98  $_Sample_schedule_analysis.FID_sampling_ID  '_Sample_schedule_analysis.FID_sampling_ID'    14  $Sample_schedule_analysis    4  '_FID_sampling.ID'    1   NEX-STAR
+
+  stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.ID'
+;
+2
+;
+   ?
+ 4     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Software_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Software_ID'
+   _Item.ID                      5
+   _Item.Name                   '_FID_sampling.Software_ID'
+   _Item.Description
+;
+Pointer to '_Software.ID'
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.Software_ID'
+;
+1
+;
+   ?
+ 5     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Software_name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Software_name'
+   _Item.ID                      6
+   _Item.Name                   '_FID_sampling.Software_name'
+   _Item.Description
+;
+Name of the software used to generate the sampling schedule.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+
+save_
+
+save__FID_sampling.Experiment_name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Experiment_name'
+   _Item.ID                      7
+   _Item.Name                   '_FID_sampling.Experiment_name'
+   _Item.Description
+;
+Name for the NMR spectrometer experiment.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+
+save_
+
+save__FID_sampling.NMR_spec_expt_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.NMR_spec_expt_ID'
+   _Item.ID                      8
+   _Item.Name                   '_FID_sampling.NMR_spec_expt_ID'
+   _Item.Description
+;
+Pointer to '_NMR_spec_expt.ID'
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.NMR_spec_expt_ID'
+;
+1
+;
+   ?
+ 8     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Layout_dimension_count
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Layout_dimension_count'
+   _Item.ID                      9
+   _Item.Name                   '_FID_sampling.Layout_dimension_count'
+   _Item.Description
+;
+Number of spectral dimensions
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.Layout_dimension_count'
+;
+3
+;
+   ?
+ 9     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Layout_aux_dimension_count
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Layout_aux_dimension_count'
+   _Item.ID                      10
+   _Item.Name                   '_FID_sampling.Layout_aux_dimension_count'
+   _Item.Description
+;
+Number of auxiliar dimensions. These dimensions are
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.Layout_aux_dimension_count'
+;
+1
+;
+   ?
+ 10     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Layout_hypercomplex_component_type
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Layout_hypercomplex_component_type'
+   _Item.ID                      11
+   _Item.Name                   '_FID_sampling.Layout_hypercomplex_component_type'
+   _Item.Description
+;
+The type of hypercomplex component used.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                yes
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.Layout_hypercomplex_component_type'
+;
+full
+;
+   ?
+ 11     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Layout_transient_type
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Layout_transient_type'
+   _Item.ID                      12
+   _Item.Name                   '_FID_sampling.Layout_transient_type'
+   _Item.Description
+;
+The type of transient collected.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                yes
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling.Layout_transient_type'
+;
+uniform
+;
+   ?
+ 12     1    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling.Layout_FID_ID_type
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Layout_FID_ID_type'
+   _Item.ID                      13
+   _Item.Name                   '_FID_sampling.Layout_FID_ID_type'
+   _Item.Description
+;
+The type of FID ID used.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                yes
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+
+save_
+
+save__FID_sampling.Matrix_format
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling.Matrix_format'
+   _Item.ID                      14
+   _Item.Name                   '_FID_sampling.Matrix_format'
+   _Item.Description
+;
+The type of format used for the data matrix.
+;
+
+   _Item.Category_ID                            1
+   _Item.Category_label                        $FID_sampling
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                yes
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+
+save_
+
+save_FID_sampling_base
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               FID_sampling_base
+   _Category.ID                         2
+   _Category.Name                      'FID_sampling_base'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    2   NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling_base.Spectral_dim
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling_base.Spectral_dim'
+   _Item.ID                      15
+   _Item.Name                   '_FID_sampling_base.Spectral_dim'
+   _Item.Description
+;
+Unique identifier for the spectral dimension.
+;
+
+   _Item.Category_ID                            2
+   _Item.Category_label                        $FID_sampling_base
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling_base.Spectral_dim'
+;
+2
+;
+   ?
+ 15     2    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling_base.Parameter
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling_base.Parameter'
+   _Item.ID                      16
+   _Item.Name                   '_FID_sampling_base.Parameter'
+   _Item.Description
+;
+A allowed parameter describing the spectral layout.
+;
+
+   _Item.Category_ID                            2
+   _Item.Category_label                        $FID_sampling_base
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                yes
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling_base.Parameter'
+;
+time_series_type
+;
+   ?
+ 16     2    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling_base.Parameter_value
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling_base.Parameter_value'
+   _Item.ID                      17
+   _Item.Name                   '_FID_sampling_base.Parameter_value'
+   _Item.Description
+;
+The value assigned to  the parameter defined in the '_FID_sampleing_base.Parameter' 
+token.
+;
+
+   _Item.Category_ID                            2
+   _Item.Category_label                        $FID_sampling_base
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling_base.Parameter_value'
+;
+linear
+;
+   ?
+ 17     2    NEX-STAR
+
+   stop_
+
+save_
+
+save__FID_sampling_base.Param_tag
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_FID_sampling_base.Param_tag'
+   _Item.ID                      18
+   _Item.Name                   '_FID_sampling_base.Param_tag'
+   _Item.Description
+;
+The tag where the parameter and value apply.
+;
+
+   _Item.Category_ID                            2
+   _Item.Category_label                        $FID_sampling_base
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_FID_sampling_base.Param_tag'
+;
+‘_Schedule.Time_index_dim2’
+;
+   ?
+ 18     2    NEX-STAR
+
+   stop_
+
+save_
+
+save_Schedule
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Schedule
+   _Category.ID                         3
+   _Category.Name                      'Schedule'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    3   NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.FID_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.FID_ID'
+   _Item.ID                      19
+   _Item.Name                   '_Schedule.FID_ID'
+   _Item.Description
+;
+The unique identifier for a FID in the schedule.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.FID_ID'
+;
+1
+;
+   ?
+ 19     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Proc_FID_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Proc_FID_ID'
+   _Item.ID                      20
+   _Item.Name                   '_Schedule.Proc_FID_ID'
+   _Item.Description
+;
+The unique identifier for the corresponding FID after processing of the 
+original FID.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Proc_FID_ID'
+;
+1
+;
+   ?
+ 20     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_index_dim2
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_index_dim2'
+   _Item.ID                      21
+   _Item.Name                   '_Schedule.Time_index_dim2'
+   _Item.Description
+;
+The time indel for the spectral dimension. Multiply by the FID_sampling_base 
+to derive the time_multiplier
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Time_index_dim2'
+;
+0
+;
+   ?
+ 21     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_value_dim2
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_value_dim2'
+   _Item.ID                      22
+   _Item.Name                   '_Schedule.Time_value_dim2'
+   _Item.Description
+;
+The time values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.Quadrature_index_dim2
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_index_dim2'
+   _Item.ID                      23
+   _Item.Name                   '_Schedule.Quadrature_index_dim2'
+   _Item.Description
+;
+The quadrature indel for the spectral dimension. Multiply by FID_sampling_base 
+to derive the quadrature multiplier.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Quadrature_index_dim2'
+;
+0
+;
+   ?
+ 23     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Quadrature_value_dim2
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_value_dim2'
+   _Item.ID                      24
+   _Item.Name                   '_Schedule.Quadrature_value_dim2'
+   _Item.Description
+;
+The quadrature values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.AuxA_index
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.AuxA_index'
+   _Item.ID                      25
+   _Item.Name                   '_Schedule.AuxA_index'
+   _Item.Description
+;
+The increment to be applied to the defined (A) auxiliary axis.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.AuxA_index'
+;
+0
+;
+   ?
+ 25     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.AuxB_index
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.AuxB_index'
+   _Item.ID                      26
+   _Item.Name                   '_Schedule.AuxB_index'
+   _Item.Description
+;
+The increment to be applied to the defined (A) auxiliary axis.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.AuxB_index'
+;
+0
+;
+   ?
+ 26     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_index_dim3
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_index_dim3'
+   _Item.ID                      27
+   _Item.Name                   '_Schedule.Time_index_dim3'
+   _Item.Description
+;
+The time indel for the spectral dimension. Multiply by the FID_sampling_base 
+to derive the time_multiplier
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Time_index_dim3'
+;
+0
+;
+   ?
+ 27     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_value_dim3
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_value_dim3'
+   _Item.ID                      28
+   _Item.Name                   '_Schedule.Time_value_dim3'
+   _Item.Description
+;
+The time values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.Quadrature_index_dim3
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_index_dim3'
+   _Item.ID                      29
+   _Item.Name                   '_Schedule.Quadrature_index_dim3'
+   _Item.Description
+;
+The quadrature indel for the spectral dimension. Multiply by FID_sampling_base 
+to derive the quadrature multiplier.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__Schedule.Quadrature_value_dim3
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_value_dim3'
+   _Item.ID                      30
+   _Item.Name                   '_Schedule.Quadrature_value_dim3'
+   _Item.Description
+;
+The quadrature values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Quadrature_value_dim3'
+;
+90
+;
+   ?
+ 30     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_index_dim4
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_index_dim4'
+   _Item.ID                      31
+   _Item.Name                   '_Schedule.Time_index_dim4'
+   _Item.Description
+;
+The time indel for the spectral dimension. Multiply by the FID_sampling_base 
+to derive the time_multiplier
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Time_index_dim4'
+;
+0
+;
+   ?
+ 31     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_value_dim4
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_value_dim4'
+   _Item.ID                      32
+   _Item.Name                   '_Schedule.Time_value_dim4'
+   _Item.Description
+;
+The time values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.Quadrature_index_dim4
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_index_dim4'
+   _Item.ID                      33
+   _Item.Name                   '_Schedule.Quadrature_index_dim4'
+   _Item.Description
+;
+The quadrature indel for the spectral dimension. Multiply by FID_sampling_base 
+to derive the quadrature multiplier.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__Schedule.Quadrature_value_dim4
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_value_dim4'
+   _Item.ID                      34
+   _Item.Name                   '_Schedule.Quadrature_value_dim4'
+   _Item.Description
+;
+The quadrature values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Quadrature_value_dim4'
+;
+90
+;
+   ?
+ 34     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_index_dim5
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_index_dim5'
+   _Item.ID                      35
+   _Item.Name                   '_Schedule.Time_index_dim5'
+   _Item.Description
+;
+The time indel for the spectral dimension. Multiply by the FID_sampling_base 
+to derive the time_multiplier
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Time_index_dim5'
+;
+0
+;
+   ?
+ 35     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_value_dim5
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_value_dim5'
+   _Item.ID                      36
+   _Item.Name                   '_Schedule.Time_value_dim5'
+   _Item.Description
+;
+The time values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.Quadrature_index_dim5
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_index_dim5'
+   _Item.ID                      37
+   _Item.Name                   '_Schedule.Quadrature_index_dim5'
+   _Item.Description
+;
+The quadrature indel for the spectral dimension. Multiply by FID_sampling_base 
+to derive the quadrature multiplier.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__Schedule.Quadrature_value_dim5
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_value_dim5'
+   _Item.ID                      38
+   _Item.Name                   '_Schedule.Quadrature_value_dim5'
+   _Item.Description
+;
+The quadrature values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Quadrature_value_dim5'
+;
+90
+;
+   ?
+ 38     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_index_dim6
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_index_dim6'
+   _Item.ID                      39
+   _Item.Name                   '_Schedule.Time_index_dim6'
+   _Item.Description
+;
+The time indel for the spectral dimension. Multiply by the FID_sampling_base 
+to derive the time_multiplier
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Time_index_dim6'
+;
+0
+;
+   ?
+ 39     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_value_dim6
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_value_dim6'
+   _Item.ID                      40
+   _Item.Name                   '_Schedule.Time_value_dim6'
+   _Item.Description
+;
+The time values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.Quadrature_index_dim6
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_index_dim6'
+   _Item.ID                      41
+   _Item.Name                   '_Schedule.Quadrature_index_dim6'
+   _Item.Description
+;
+The quadrature indel for the spectral dimension. Multiply by FID_sampling_base 
+to derive the quadrature multiplier.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__Schedule.Quadrature_value_dim6
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_value_dim6'
+   _Item.ID                      42
+   _Item.Name                   '_Schedule.Quadrature_value_dim6'
+   _Item.Description
+;
+The quadrature values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Quadrature_value_dim6'
+;
+90
+;
+   ?
+ 42     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_index_dim7
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_index_dim7'
+   _Item.ID                      43
+   _Item.Name                   '_Schedule.Time_index_dim7'
+   _Item.Description
+;
+The time indel for the spectral dimension. Multiply by the FID_sampling_base 
+to derive the time_multiplier
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Time_index_dim7'
+;
+0
+;
+   ?
+ 43     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_value_dim7
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_value_dim7'
+   _Item.ID                      44
+   _Item.Name                   '_Schedule.Time_value_dim7'
+   _Item.Description
+;
+The time values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.Quadrature_index_dim7
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_index_dim7'
+   _Item.ID                      45
+   _Item.Name                   '_Schedule.Quadrature_index_dim7'
+   _Item.Description
+;
+The quadrature indel for the spectral dimension. Multiply by FID_sampling_base 
+to derive the quadrature multiplier.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__Schedule.Quadrature_value_dim7
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_value_dim7'
+   _Item.ID                      46
+   _Item.Name                   '_Schedule.Quadrature_value_dim7'
+   _Item.Description
+;
+The quadrature values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Quadrature_value_dim7'
+;
+90
+;
+   ?
+ 46     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_index_dim8
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_index_dim8'
+   _Item.ID                      47
+   _Item.Name                   '_Schedule.Time_index_dim8'
+   _Item.Description
+;
+The time indel for the spectral dimension. Multiply by the FID_sampling_base 
+to derive the time_multiplier
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Time_index_dim8'
+;
+0
+;
+   ?
+ 47     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Time_value_dim8
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Time_value_dim8'
+   _Item.ID                      48
+   _Item.Name                   '_Schedule.Time_value_dim8'
+   _Item.Description
+;
+The time values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Schedule.Quadrature_index_dim8
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_index_dim8'
+   _Item.ID                      49
+   _Item.Name                   '_Schedule.Quadrature_index_dim8'
+   _Item.Description
+;
+The quadrature indel for the spectral dimension. Multiply by FID_sampling_base 
+to derive the quadrature multiplier.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__Schedule.Quadrature_value_dim8
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Quadrature_value_dim8'
+   _Item.ID                      50
+   _Item.Name                   '_Schedule.Quadrature_value_dim8'
+   _Item.Description
+;
+The quadrature values used for the defined dimension.
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Quadrature_value_dim8'
+;
+90
+;
+   ?
+ 50     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Transient_count
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Transient_count'
+   _Item.ID                      51
+   _Item.Name                   '_Schedule.Transient_count'
+   _Item.Description
+;
+Number of repeated scans (transients) in the recorded FID
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Transient_count'
+;
+16
+;
+   ?
+ 51     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.FID_weight
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.FID_weight'
+   _Item.ID                      52
+   _Item.Name                   '_Schedule.FID_weight'
+   _Item.Description
+;
+Arbitrary weighting of FID
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.FID_weight'
+;
+1
+;
+   ?
+ 52     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.Gap_schedule_dim1
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.Gap_schedule_dim1'
+   _Item.ID                      53
+   _Item.Name                   '_Schedule.Gap_schedule_dim1'
+   _Item.Description
+;
+A pointer to '_Gap_schedule.Name'
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.Gap_schedule_dim1'
+;
+gapScheduleA
+;
+   ?
+ 53     3    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule.FID_sampling_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule.FID_sampling_ID'
+   _Item.ID                      54
+   _Item.Name                   '_Schedule.FID_sampling_ID'
+   _Item.Description
+;
+Pointer to 'FID_sampling.ID'
+;
+
+   _Item.Category_ID                            3
+   _Item.Category_label                        $Schedule
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule.FID_sampling_ID'
+;
+2
+;
+   ?
+ 54     3    NEX-STAR
+
+   stop_
+
+save_
+
+save_Quadrature_value_ordered_list
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Quadrature_value_ordered_list
+   _Category.ID                         4
+   _Category.Name                      'Quadrature_value_ordered_list'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    4   NEX-STAR
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim2
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Quadrature_value_ordered_list.Dim2'
+   _Item.ID                      55
+   _Item.Name                   '_Quadrature_value_ordered_list.Dim2'
+   _Item.Description
+;
+List of values defiining the quadrature used for the spectral dimension 2.
+;
+
+   _Item.Category_ID                            4
+   _Item.Category_label                        $Quadrature_value_ordered_list
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Quadrature_value_ordered_list.Dim2'
+;
+ip
+;
+   ?
+ 55     4    NEX-STAR
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim3
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Quadrature_value_ordered_list.Dim3'
+   _Item.ID                      56
+   _Item.Name                   '_Quadrature_value_ordered_list.Dim3'
+   _Item.Description
+;
+List of values defiining the quadrature used for the spectral dimension 2.
+;
+
+   _Item.Category_ID                            4
+   _Item.Category_label                        $Quadrature_value_ordered_list
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Quadrature_value_ordered_list.Dim3'
+;
+ip
+;
+   ?
+ 56     4    NEX-STAR
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim4
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Quadrature_value_ordered_list.Dim4'
+   _Item.ID                      57
+   _Item.Name                   '_Quadrature_value_ordered_list.Dim4'
+   _Item.Description
+;
+List of values defiining the quadrature used for the spectral dimension 2.
+;
+
+   _Item.Category_ID                            4
+   _Item.Category_label                        $Quadrature_value_ordered_list
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Quadrature_value_ordered_list.Dim4'
+;
+ip
+;
+   ?
+ 57     4    NEX-STAR
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim5
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Quadrature_value_ordered_list.Dim5'
+   _Item.ID                      58
+   _Item.Name                   '_Quadrature_value_ordered_list.Dim5'
+   _Item.Description
+;
+List of values defiining the quadrature used for the spectral dimension 2.
+;
+
+   _Item.Category_ID                            4
+   _Item.Category_label                        $Quadrature_value_ordered_list
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Quadrature_value_ordered_list.Dim5'
+;
+ip
+;
+   ?
+ 58     4    NEX-STAR
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim6
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Quadrature_value_ordered_list.Dim6'
+   _Item.ID                      59
+   _Item.Name                   '_Quadrature_value_ordered_list.Dim6'
+   _Item.Description
+;
+List of values defiining the quadrature used for the spectral dimension 2.
+;
+
+   _Item.Category_ID                            4
+   _Item.Category_label                        $Quadrature_value_ordered_list
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Quadrature_value_ordered_list.Dim6'
+;
+ip
+;
+   ?
+ 59     4    NEX-STAR
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim7
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Quadrature_value_ordered_list.Dim7'
+   _Item.ID                      60
+   _Item.Name                   '_Quadrature_value_ordered_list.Dim7'
+   _Item.Description
+;
+List of values defiining the quadrature used for the spectral dimension 2.
+;
+
+   _Item.Category_ID                            4
+   _Item.Category_label                        $Quadrature_value_ordered_list
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Quadrature_value_ordered_list.Dim7'
+;
+ip
+;
+   ?
+ 60     4    NEX-STAR
+
+   stop_
+
+save_
+
+save__Quadrature_value_ordered_list.Dim8
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Quadrature_value_ordered_list.Dim8'
+   _Item.ID                      61
+   _Item.Name                   '_Quadrature_value_ordered_list.Dim8'
+   _Item.Description
+;
+List of values defiining the quadrature used for the spectral dimension 2.
+;
+
+   _Item.Category_ID                            4
+   _Item.Category_label                        $Quadrature_value_ordered_list
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Quadrature_value_ordered_list.Dim8'
+;
+ip
+;
+   ?
+ 61     4    NEX-STAR
+
+   stop_
+
+save_
+
+save_Time_value_ordered_list
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Time_value_ordered_list
+   _Category.ID                         5
+   _Category.Name                      'Time_value_ordered_list'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    5   NEX-STAR
+
+   stop_
+
+save_
+
+save__Time_value_ordered_list.Dim2
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Time_value_ordered_list.Dim2'
+   _Item.ID                      62
+   _Item.Name                   '_Time_value_ordered_list.Dim2'
+   _Item.Description
+;
+A list of time values to be applied in defined spectral dimension.
+;
+
+   _Item.Category_ID                            5
+   _Item.Category_label                        $Time_value_ordered_list
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Time_value_ordered_list.Dim3
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Time_value_ordered_list.Dim3'
+   _Item.ID                      63
+   _Item.Name                   '_Time_value_ordered_list.Dim3'
+   _Item.Description
+;
+A list of time values to be applied in defined spectral dimension.
+;
+
+   _Item.Category_ID                            5
+   _Item.Category_label                        $Time_value_ordered_list
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Time_value_ordered_list.Dim4
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Time_value_ordered_list.Dim4'
+   _Item.ID                      64
+   _Item.Name                   '_Time_value_ordered_list.Dim4'
+   _Item.Description
+;
+A list of time values to be applied in defined spectral dimension.
+;
+
+   _Item.Category_ID                            5
+   _Item.Category_label                        $Time_value_ordered_list
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Time_value_ordered_list.Dim5
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Time_value_ordered_list.Dim5'
+   _Item.ID                      65
+   _Item.Name                   '_Time_value_ordered_list.Dim5'
+   _Item.Description
+;
+A list of time values to be applied in defined spectral dimension.
+;
+
+   _Item.Category_ID                            5
+   _Item.Category_label                        $Time_value_ordered_list
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Time_value_ordered_list.Dim6
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Time_value_ordered_list.Dim6'
+   _Item.ID                      66
+   _Item.Name                   '_Time_value_ordered_list.Dim6'
+   _Item.Description
+;
+A list of time values to be applied in defined spectral dimension.
+;
+
+   _Item.Category_ID                            5
+   _Item.Category_label                        $Time_value_ordered_list
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Time_value_ordered_list.Dim7
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Time_value_ordered_list.Dim7'
+   _Item.ID                      67
+   _Item.Name                   '_Time_value_ordered_list.Dim7'
+   _Item.Description
+;
+A list of time values to be applied in defined spectral dimension.
+;
+
+   _Item.Category_ID                            5
+   _Item.Category_label                        $Time_value_ordered_list
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save__Time_value_ordered_list.Dim8
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Time_value_ordered_list.Dim8'
+   _Item.ID                      68
+   _Item.Name                   '_Time_value_ordered_list.Dim8'
+   _Item.Description
+;
+A list of time values to be applied in defined spectral dimension.
+;
+
+   _Item.Category_ID                            5
+   _Item.Category_label                        $Time_value_ordered_list
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'float'
+
+
+save_
+
+save_AuxA
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               AuxA
+   _Category.ID                         6
+   _Category.Name                      'AuxA'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    6   NEX-STAR
+
+   stop_
+
+save_
+
+save__AuxA.Ordered_list
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_AuxA.Ordered_list'
+   _Item.ID                      69
+   _Item.Name                   '_AuxA.Ordered_list'
+   _Item.Description
+;
+?
+;
+
+   _Item.Category_ID                            6
+   _Item.Category_label                        $AuxA
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_AuxA.Ordered_list'
+;
+0.4
+;
+   ?
+ 69     6    NEX-STAR
+
+   stop_
+
+save_
+
+save_AuxB
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               AuxB
+   _Category.ID                         7
+   _Category.Name                      'AuxB'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    7   NEX-STAR
+
+   stop_
+
+save_
+
+save__AuxB.Ordered_list
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_AuxB.Ordered_list'
+   _Item.ID                      70
+   _Item.Name                   '_AuxB.Ordered_list'
+   _Item.Description
+;
+?
+;
+
+   _Item.Category_ID                            7
+   _Item.Category_label                        $AuxB
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'float'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_AuxB.Ordered_list'
+;
+0.4
+;
+   ?
+ 70     7    NEX-STAR
+
+   stop_
+
+save_
+
+save_Gap_schedule
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Gap_schedule
+   _Category.ID                         8
+   _Category.Name                      'Gap_schedule'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        FID_sampling
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    8   NEX-STAR
+
+   stop_
+
+save_
+
+save__Gap_schedule.Name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Gap_schedule.Name'
+   _Item.ID                      71
+   _Item.Name                   '_Gap_schedule.Name'
+   _Item.Description
+;
+Name assigned to a gap schedule for spectral dimension 1.
+;
+
+   _Item.Category_ID                            8
+   _Item.Category_label                        $Gap_schedule
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Gap_schedule.Name'
+;
+gapScheduleA
+;
+   ?
+ 71     8    NEX-STAR
+
+   stop_
+
+save_
+
+save__Gap_schedule.Ordinal
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Gap_schedule.Ordinal'
+   _Item.ID                      72
+   _Item.Name                   '_Gap_schedule.Ordinal'
+   _Item.Description
+;
+An ordered integer value that defines the order for the gap in the schedule.
+;
+
+   _Item.Category_ID                            8
+   _Item.Category_label                        $Gap_schedule
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Gap_schedule.Ordinal'
+;
+1
+;
+   ?
+ 72     8    NEX-STAR
+
+   stop_
+
+save_
+
+save__Gap_schedule.Time_point_start
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Gap_schedule.Time_point_start'
+   _Item.ID                      73
+   _Item.Name                   '_Gap_schedule.Time_point_start'
+   _Item.Description
+;
+First data point in the FID for the specified gap.
+;
+
+   _Item.Category_ID                            8
+   _Item.Category_label                        $Gap_schedule
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Gap_schedule.Time_point_start'
+;
+255
+;
+   ?
+ 73     8    NEX-STAR
+
+   stop_
+
+save_
+
+save__Gap_schedule.Time_point_end
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Gap_schedule.Time_point_end'
+   _Item.ID                      74
+   _Item.Name                   '_Gap_schedule.Time_point_end'
+   _Item.Description
+;
+Last data point in the FID for the specified gap.
+;
+
+   _Item.Category_ID                            8
+   _Item.Category_label                        $Gap_schedule
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Gap_schedule.Time_point_end'
+;
+300
+;
+   ?
+ 74     8    NEX-STAR
+
+   stop_
+
+save_
+
+save_NMR_spec_expt
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               NMR_spec_expt
+   _Category.ID                         9
+   _Category.Name                      'NMR_spec_expt'
+   _category.Description
+;
+Items in the NMR_spec_expt category provide detailed information about an NMR spectrometer experiment.
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  no
+   _Category.Category_group_name        NMR_spectrometer_expt
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    9   NEX-STAR
+
+   stop_
+
+save_
+
+save__NMR_spec_expt.Sf_category
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_spec_expt.Sf_category'
+   _Item.ID                      75
+   _Item.Name                   '_NMR_spec_expt.Sf_category'
+   _Item.Description
+;
+Category assigned to the information in the save frame.
+;
+
+   _Item.Category_ID                            9
+   _Item.Category_label                        $NMR_spec_expt
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'code'
+
+
+save_
+
+save__NMR_spec_expt.ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_spec_expt.ID'
+   _Item.ID                      76
+   _Item.Name                   '_NMR_spec_expt.ID'
+   _Item.Description
+;
+A unique identifier for the NMR spectrometer experiment save frame.
+;
+
+   _Item.Category_ID                            9
+   _Item.Category_label                        $NMR_spec_expt
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+   _Item.Default_value                         '1'
+
+  loop_
+      _Item_linked.Child_item_ID
+      _Item_linked.Child_item_label
+      _Item_linked.Child_item_name
+      _Item_linked.Child_item_category_ID
+      _Item_linked.Child_item_category_label
+      _Item_linked.Item_ID
+      _Item_linked.Item_name
+      _Item_linked.Category_ID
+      _Item_linked.Dictionary_ID
+
+    8  $_FID_sampling.NMR_spec_expt_ID  '_FID_sampling.NMR_spec_expt_ID'    1  $FID_sampling    76  '_NMR_spec_expt.ID'    9   NEX-STAR
+
+  stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_NMR_spec_expt.ID'
+;
+1
+;
+   ?
+ 76     9    NEX-STAR
+
+   stop_
+
+save_
+
+save__NMR_spec_expt.Name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_spec_expt.Name'
+   _Item.ID                      77
+   _Item.Name                   '_NMR_spec_expt.Name'
+   _Item.Description
+;
+A commonly used name for the NMR experiment found in the literature.
+;
+
+   _Item.Category_ID                            9
+   _Item.Category_label                        $NMR_spec_expt
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_NMR_spec_expt.Name'
+;
+HNCO; 1H15N HSQC
+;
+   ?
+ 77     9    NEX-STAR
+
+   stop_
+
+save_
+
+save_NMR_experiment_file
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               NMR_experiment_file
+   _Category.ID                         10
+   _Category.Name                      'NMR_experiment_file'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        NMR_spectrometer_expt
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+    78   $_NMR_experiment_file.Name     '_NMR_experiment_file.Name'    10   NEX-STAR
+
+   stop_
+
+save_
+
+save__NMR_experiment_file.Name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Name'
+   _Item.ID                      78
+   _Item.Name                   '_NMR_experiment_file.Name'
+   _Item.Description
+;
+The name of the file containing information relevant to the NMR experiment. 
+ Multiple files can be listed.  These files might include the time-domain (raw) 
+data for the NMR experiment, the pulse sequence for the experiment, and parameters 
+for acquiring and processing the data.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_NMR_experiment_file.Name'
+;
+1H15N_HSQC
+;
+   ?
+ 78     10    NEX-STAR
+
+   stop_
+
+save_
+
+save__NMR_experiment_file.Type
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Type'
+   _Item.ID                      79
+   _Item.Name                   '_NMR_experiment_file.Type'
+   _Item.Description
+;
+The type of time-domain file being deposited.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_NMR_experiment_file.Type'
+;
+NMR experiment directory
+;
+   ?
+ 79     10    NEX-STAR
+
+   stop_
+
+save_
+
+save__NMR_experiment_file.Directory_path
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Directory_path'
+   _Item.ID                      80
+   _Item.Name                   '_NMR_experiment_file.Directory_path'
+   _Item.Description
+;
+The directory path within the BMRB archive that must be followed to locate 
+listed NMR experiment file.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'text'
+
+
+save_
+
+save__NMR_experiment_file.Byte_order
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Byte_order'
+   _Item.ID                      81
+   _Item.Name                   '_NMR_experiment_file.Byte_order'
+   _Item.Description
+;
+How the bytes (usually 4, but sometimes 3, for example on AM spectrometers) 
+are arranged.  Depends on the computer platform employed.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                yes
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+
+save_
+
+save__NMR_experiment_file.Bytes_per_data_point
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Bytes_per_data_point'
+   _Item.ID                      82
+   _Item.Name                   '_NMR_experiment_file.Bytes_per_data_point'
+   _Item.Description
+;
+Number of bytes per data point.  Most Sun, SGI, and Linux systems use 4 
+bytes ( of 8 bits each yielding a total of 32 bits) per point.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__NMR_experiment_file.File_header_size
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.File_header_size'
+   _Item.ID                      83
+   _Item.Name                   '_NMR_experiment_file.File_header_size'
+   _Item.Description
+;
+Size in bytes of the file header associated with the raw unprocessed data.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__NMR_experiment_file.Record_header_size
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Record_header_size'
+   _Item.ID                      84
+   _Item.Name                   '_NMR_experiment_file.Record_header_size'
+   _Item.Description
+;
+Size in bytes of the record header within the NMR experiment file.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__NMR_experiment_file.Record_trailer_size
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Record_trailer_size'
+   _Item.ID                      85
+   _Item.Name                   '_NMR_experiment_file.Record_trailer_size'
+   _Item.Description
+;
+Size in bytes of the record trailer within the NMR experiment file.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+
+save_
+
+save__NMR_experiment_file.Compression_algorithm
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Compression_algorithm'
+   _Item.ID                      86
+   _Item.Name                   '_NMR_experiment_file.Compression_algorithm'
+   _Item.Description
+;
+Algorithm used to compress the NMR experiment file.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+
+save_
+
+save__NMR_experiment_file.Details
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_NMR_experiment_file.Details'
+   _Item.ID                      87
+   _Item.Name                   '_NMR_experiment_file.Details'
+   _Item.Description
+;
+Additional information regarding the time-domain (raw) data file for this 
+NMR experiment.
+;
+
+   _Item.Category_ID                            10
+   _Item.Category_label                        $NMR_experiment_file
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'text'
+
+
+save_
+
+save_Schedule_table_data_org
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Schedule_table_data_org
+   _Category.ID                         11
+   _Category.Name                      'Schedule_table_data_org'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        NMR_spectrometer_expt
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    11   NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule_table_data_org.Param_ordinal
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule_table_data_org.Param_ordinal'
+   _Item.ID                      88
+   _Item.Name                   '_Schedule_table_data_org.Param_ordinal'
+   _Item.Description
+;
+A integer value that defines the place in the schedule for the specified 
+parameter.
+;
+
+   _Item.Category_ID                            11
+   _Item.Category_label                        $Schedule_table_data_org
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule_table_data_org.Param_ordinal'
+;
+1
+;
+   ?
+ 88     11    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule_table_data_org.Param_tag
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule_table_data_org.Param_tag'
+   _Item.ID                      89
+   _Item.Name                   '_Schedule_table_data_org.Param_tag'
+   _Item.Description
+;
+The parameter tag that defines the parameter that has the specified place 
+in the schedule table.
+;
+
+   _Item.Category_ID                            11
+   _Item.Category_label                        $Schedule_table_data_org
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule_table_data_org.Param_tag'
+;
+‘_Schedule.Time_index_dim2’
+;
+   ?
+ 89     11    NEX-STAR
+
+   stop_
+
+save_
+
+save_Spectral_param
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Spectral_param
+   _Category.ID                         12
+   _Category.Name                      'Spectral_param'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        NMR_spectrometer_expt
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+    90   $_Spectral_param.Dim     '_Spectral_param.Dim'    91   $_Spectral_param.Set_ID     '_Spectral_param.Set_ID'    92   $_Spectral_param.Parameter     '_Spectral_param.Parameter'    12   NEX-STAR
+
+   stop_
+
+save_
+
+save__Spectral_param.Dim
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Spectral_param.Dim'
+   _Item.ID                      90
+   _Item.Name                   '_Spectral_param.Dim'
+   _Item.Description
+;
+The spectral dimension where the parameter operates.
+;
+
+   _Item.Category_ID                            12
+   _Item.Category_label                        $Spectral_param
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Spectral_param.Dim'
+;
+1
+;
+   ?
+ 90     12    NEX-STAR
+
+   stop_
+
+save_
+
+save__Spectral_param.Set_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Spectral_param.Set_ID'
+   _Item.ID                      91
+   _Item.Name                   '_Spectral_param.Set_ID'
+   _Item.Description
+;
+A unique identifier for a set of parameters that in some way related.
+;
+
+   _Item.Category_ID                            12
+   _Item.Category_label                        $Spectral_param
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Spectral_param.Set_ID'
+;
+3
+;
+   ?
+ 91     12    NEX-STAR
+
+   stop_
+
+save_
+
+save__Spectral_param.Parameter
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Spectral_param.Parameter'
+   _Item.ID                      92
+   _Item.Name                   '_Spectral_param.Parameter'
+   _Item.Description
+;
+Name for a spectral parameter.
+;
+
+   _Item.Category_ID                            12
+   _Item.Category_label                        $Spectral_param
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Spectral_param.Parameter'
+;
+spectral_width_Hz
+;
+   ?
+ 92     12    NEX-STAR
+
+   stop_
+
+save_
+
+save__Spectral_param.Value
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Spectral_param.Value'
+   _Item.ID                      93
+   _Item.Name                   '_Spectral_param.Value'
+   _Item.Description
+;
+The value for the specified parameter. This value could be of a variety 
+of data types (e.g. integer, float, ASCII text, etc.)
+;
+
+   _Item.Category_ID                            12
+   _Item.Category_label                        $Spectral_param
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Spectral_param.Value'
+;
+5000
+;
+   ?
+ 93     12    NEX-STAR
+
+   stop_
+
+save_
+
+save_Submatrix
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Submatrix
+   _Category.ID                         13
+   _Category.Name                      'Submatrix'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        NMR_spectrometer_expt
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    13   NEX-STAR
+
+   stop_
+
+save_
+
+save__Submatrix.Dim
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Submatrix.Dim'
+   _Item.ID                      94
+   _Item.Name                   '_Submatrix.Dim'
+   _Item.Description
+;
+The spectral dimension for the submatrix data point number.
+;
+
+   _Item.Category_ID                            13
+   _Item.Category_label                        $Submatrix
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Submatrix.Dim'
+;
+1
+;
+   ?
+ 94     13    NEX-STAR
+
+   stop_
+
+save_
+
+save__Submatrix.Size
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Submatrix.Size'
+   _Item.ID                      95
+   _Item.Name                   '_Submatrix.Size'
+   _Item.Description
+;
+The number of data points for the submatrix spectral dimension.
+;
+
+   _Item.Category_ID                            13
+   _Item.Category_label                        $Submatrix
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Submatrix.Size'
+;
+64
+;
+   ?
+ 95     13    NEX-STAR
+
+   stop_
+
+save_
+
+save_Sample_schedule_analysis
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Sample_schedule_analysis
+   _Category.ID                         14
+   _Category.Name                      'Sample_schedule_analysis'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Loop_code                  no
+   _Category.Category_group_name        sample_schedule_analysis
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+    97   $_Sample_schedule_analysis.ID     '_Sample_schedule_analysis.ID'    14   NEX-STAR
+
+   stop_
+
+save_
+
+save__Sample_schedule_analysis.Sf_category
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Sample_schedule_analysis.Sf_category'
+   _Item.ID                      96
+   _Item.Name                   '_Sample_schedule_analysis.Sf_category'
+   _Item.Description
+;
+Category assigned to the information in the save frame.
+;
+
+   _Item.Category_ID                            14
+   _Item.Category_label                        $Sample_schedule_analysis
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Sample_schedule_analysis.Sf_category'
+;
+sample_schedule_analysis
+;
+   ?
+ 96     14    NEX-STAR
+
+   stop_
+
+save_
+
+save__Sample_schedule_analysis.ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Sample_schedule_analysis.ID'
+   _Item.ID                      97
+   _Item.Name                   '_Sample_schedule_analysis.ID'
+   _Item.Description
+;
+A value that uniquely identifies the sample schedule analysis save frame.
+;
+
+   _Item.Category_ID                            14
+   _Item.Category_label                        $Sample_schedule_analysis
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Sample_schedule_analysis.ID'
+;
+1
+;
+   ?
+ 97     14    NEX-STAR
+
+   stop_
+
+save_
+
+save__Sample_schedule_analysis.FID_sampling_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Sample_schedule_analysis.FID_sampling_ID'
+   _Item.ID                      98
+   _Item.Name                   '_Sample_schedule_analysis.FID_sampling_ID'
+   _Item.Description
+;
+Pointer to '_FID_sampling.ID'
+;
+
+   _Item.Category_ID                            14
+   _Item.Category_label                        $Sample_schedule_analysis
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Sample_schedule_analysis.FID_sampling_ID'
+;
+1
+;
+   ?
+ 98     14    NEX-STAR
+
+   stop_
+
+save_
+
+save__Sample_schedule_analysis.Software_name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Sample_schedule_analysis.Software_name'
+   _Item.ID                      99
+   _Item.Name                   '_Sample_schedule_analysis.Software_name'
+   _Item.Description
+;
+The name of the software defined by the author used to analyze the sample 
+schedule.
+;
+
+   _Item.Category_ID                            14
+   _Item.Category_label                        $Sample_schedule_analysis
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Sample_schedule_analysis.Software_name'
+;
+’NEX converter’
+;
+   ?
+ 99     14    NEX-STAR
+
+   stop_
+
+save_
+
+save__Sample_schedule_analysis.Software_ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Sample_schedule_analysis.Software_ID'
+   _Item.ID                      100
+   _Item.Name                   '_Sample_schedule_analysis.Software_ID'
+   _Item.Description
+;
+Pointer to '_Software.ID'
+;
+
+   _Item.Category_ID                            14
+   _Item.Category_label                        $Sample_schedule_analysis
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'int'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Sample_schedule_analysis.Software_ID'
+;
+1
+;
+   ?
+ 100     14    NEX-STAR
+
+   stop_
+
+save_
+
+save_Schedule_analysis
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Schedule_analysis
+   _Category.ID                         15
+   _Category.Name                      'Schedule_analysis'
+   _category.Description
+;
+              category description not available
+;
+   _Category.Loop_code                  yes
+   _Category.Category_group_name        sample_schedule_analysis
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+      ?    ?    ?    15   NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule_analysis.Property
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule_analysis.Property'
+   _Item.ID                      101
+   _Item.Name                   '_Schedule_analysis.Property'
+   _Item.Description
+;
+Name of the schedule property analyzed.
+;
+
+   _Item.Category_ID                            15
+   _Item.Category_label                        $Schedule_analysis
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule_analysis.Property'
+;
+'Mean_evolution_time'
+;
+   ?
+ 101     15    NEX-STAR
+
+   stop_
+
+save_
+
+save__Schedule_analysis.Value
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Schedule_analysis.Value'
+   _Item.ID                      102
+   _Item.Name                   '_Schedule_analysis.Value'
+   _Item.Description
+;
+The value derived for the specified property. This value could be of a 
+variety of data types.
+;
+
+   _Item.Category_ID                            15
+   _Item.Category_label                        $Schedule_analysis
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Schedule_analysis.Value'
+;
+4
+;
+   ?
+ 102     15    NEX-STAR
+
+   stop_
+
+save_
+
+save_Software
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Software
+   _Category.ID                         16
+   _Category.Name                      'Software'
+   _category.Description
+;
+Items in the software category describe software applications.
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  no
+   _Category.Category_group_ID          9
+   _Category.Category_group_name        software
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+    104   $_Software.ID     '_Software.ID'    16   NEX-STAR
+
+   stop_
+
+save_
+
+save__Software.Sf_category
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Software.Sf_category'
+   _Item.ID                      103
+   _Item.Name                   '_Software.Sf_category'
+   _Item.Description
+;
+Category assigned to the information in the saveframe.
+;
+
+   _Item.Category_ID                            16
+   _Item.Category_label                        $Software
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'code'
+
+
+save_
+
+save__Software.ID
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Software.ID'
+   _Item.ID                      104
+   _Item.Name                   '_Software.ID'
+   _Item.Description
+;
+A value that uniquely identifies the software from other software listed 
+in the entry.
+;
+
+   _Item.Category_ID                            16
+   _Item.Category_label                        $Software
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'int'
+
+  loop_
+      _Item_linked.Child_item_ID
+      _Item_linked.Child_item_label
+      _Item_linked.Child_item_name
+      _Item_linked.Child_item_category_ID
+      _Item_linked.Child_item_category_label
+      _Item_linked.Item_ID
+      _Item_linked.Item_name
+      _Item_linked.Category_ID
+      _Item_linked.Dictionary_ID
+
+    5  $_FID_sampling.Software_ID  '_FID_sampling.Software_ID'    1  $FID_sampling    104  '_Software.ID'    16   NEX-STAR
+    100  $_Sample_schedule_analysis.Software_ID  '_Sample_schedule_analysis.Software_ID'    14  $Sample_schedule_analysis    104  '_Software.ID'    16   NEX-STAR
+
+  stop_
+
+
+save_
+
+save__Software.Type
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Software.Type'
+   _Item.ID                      105
+   _Item.Name                   '_Software.Type'
+   _Item.Description
+;
+The type assigned to the software.
+;
+
+   _Item.Category_ID                            16
+   _Item.Category_label                        $Software
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                yes
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Software.Type'
+;
+'schedule converter'
+;
+   ?
+ 105     16    NEX-STAR
+
+   stop_
+
+save_
+
+save__Software.Name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Software.Name'
+   _Item.ID                      106
+   _Item.Name                   '_Software.Name'
+   _Item.Description
+;
+The name of the software defined by the author or provider of the software.
+;
+
+   _Item.Category_ID                            16
+   _Item.Category_label                        $Software
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+
+save_
+
+save__Software.Version
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Software.Version'
+   _Item.ID                      107
+   _Item.Name                   '_Software.Version'
+   _Item.Description
+;
+The code assigned to the version of the software.
+;
+
+   _Item.Category_ID                            16
+   _Item.Category_label                        $Software
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Software.Version'
+;
+v3.0.0.8
+;
+   ?
+ 107     16    NEX-STAR
+
+   stop_
+
+save_
+
+save__Software.DOI
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Software.DOI'
+   _Item.ID                      108
+   _Item.Name                   '_Software.DOI'
+   _Item.Description
+;
+The DOI defining the world wide web location where the software can be found.
+;
+
+   _Item.Category_ID                            16
+   _Item.Category_label                        $Software
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'line'
+
+
+save_
+
+save__Software.Details
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Software.Details'
+   _Item.ID                      109
+   _Item.Name                   '_Software.Details'
+   _Item.Description
+;
+Text description of the software.
+;
+
+   _Item.Category_ID                            16
+   _Item.Category_label                        $Software
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'text'
+
+
+save_
+
+save_Vendor
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Vendor
+   _Category.ID                         17
+   _Category.Name                      'Vendor'
+   _category.Description
+;
+Items in the vendor category define from whom a software application can be obtained.
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_ID          9
+   _Category.Category_group_name        software
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+    110   $_Vendor.Name     '_Vendor.Name'    17   NEX-STAR
+
+   stop_
+
+save_
+
+save__Vendor.Name
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Vendor.Name'
+   _Item.ID                      110
+   _Item.Name                   '_Vendor.Name'
+   _Item.Description
+;
+Commercial or academic supplier of the software product.
+;
+
+   _Item.Category_ID                            17
+   _Item.Category_label                        $Vendor
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Vendor.Name'
+;
+'Adam Schuyler - NMRbox'
+;
+   ?
+ 110     17    NEX-STAR
+
+   stop_
+
+save_
+
+save__Vendor.Address
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Vendor.Address'
+   _Item.ID                      111
+   _Item.Name                   '_Vendor.Address'
+   _Item.Description
+;
+Location for the person or company who supplies the software.
+;
+
+   _Item.Category_ID                            17
+   _Item.Category_label                        $Vendor
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'text'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Vendor.Address'
+;
+'UConn Health / UW'
+;
+   ?
+ 111     17    NEX-STAR
+
+   stop_
+
+save_
+
+save__Vendor.Electronic_address
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Vendor.Electronic_address'
+   _Item.ID                      112
+   _Item.Name                   '_Vendor.Electronic_address'
+   _Item.Description
+;
+An internet address for the vendor of the software.
+;
+
+   _Item.Category_ID                            17
+   _Item.Category_label                        $Vendor
+   _Item.Mandatory_code                         no
+   _Item.Type_code                             'text'
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Vendor.Electronic_address'
+;
+'schuyler@uchc.edu'
+;
+   ?
+ 112     17    NEX-STAR
+
+   stop_
+
+save_
+
+save_Task
+   _Category.Sf_category                category_description
+   _Category.Sf_framecode               Task
+   _Category.ID                         18
+   _Category.Name                      'Task'
+   _category.Description
+;
+Items in the task category describe the tasks the software performed.
+;
+   _Category.Mandatory_code             yes
+   _Category.Loop_code                  yes
+   _Category.Category_group_ID          9
+   _Category.Category_group_name        software
+   _Category.Dictionary_ID              NEX-STAR
+
+   loop_
+     _Category_primary_key.Item_ID
+     _Category_primary_key.Item_label
+     _Category_primary_key.Item_name
+     _Category_primary_key.Category_ID
+     _Category_primary_key.Dictionary_ID
+
+    113   $_Task.Task     '_Task.Task'    18   NEX-STAR
+
+   stop_
+
+save_
+
+save__Task.Task
+   _Item.Sf_category             item_description
+   _Item.Sf_framecode           '_Task.Task'
+   _Item.ID                      113
+   _Item.Name                   '_Task.Task'
+   _Item.Description
+;
+A word or brief phrase that describes the job that a software application 
+was used to carry out.
+;
+
+   _Item.Category_ID                            18
+   _Item.Category_label                        $Task
+   _Item.Mandatory_code                         yes
+   _Item.Type_code                             'line'
+   _Item.Enumerated_code                        yes
+   _Item.Enumeration_closed_code                no
+
+   loop_
+     _Item_enumeration.Item_name
+     _Item_enumeration.Value
+     _Item_enumeration.Detail
+     _Item_enumeration.Item_ID
+     _Item_enumeration.Category_ID
+     _Item_enumeration.Dictionary_ID
+
+    ?     ?     ?     ?     ?     ?
+
+   stop_
+
+   loop_
+     _Item_examples.Item_name
+     _Item_examples.Case
+     _Item_examples.Detail
+     _Item_examples.Item_ID
+     _Item_examples.Category_ID
+     _Item_examples.Dictionary_ID
+
+  '_Task.Task'
+;
+'Convert NUS schedules into NMR-STAR standardized format'
+;
+   ?
+ 113     18    NEX-STAR
+
+   stop_
+
+save_
+
