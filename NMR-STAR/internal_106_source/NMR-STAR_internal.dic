@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-11-06
+#  version date -  2019-11-11
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -1097,21 +1097,18 @@ NMR-STAR
 75   'femtomolar'		fM		'10E-15 mol/L'				NMR-STAR
 75   'attomolar'		aM		'10E-18 mol/L'				NMR-STAR
 
-
-
-
-
-
 #65    binding constant units
 
      stop_
 
      loop_
-       _item_units_conversion.from_code
-       _item_units_conversion.to_code
-       _item_units_conversion.operator
-       _item_units_conversion.factor
-
+       _Item_units_conversion.From_code_item_units_ID
+       _Item_units_conversion.From_code
+       _Item_units_conversion.To_code_item_units_ID
+       _Item_units_conversion.To_code
+       _Item_units_conversion.Operator
+       _Item_units_conversion.Factor
+       _Item_units_conversion.Dictionary_ID
 ###
      1    'mètres'                   ?    'centimetres'              '*'   1.0E+02        NMR-STAR
      1    'metres'                   ?    'millimetres'              '*'   1.0E+03        NMR-STAR
@@ -1121,12 +1118,12 @@ NMR-STAR
      1    'metres'                   ?    'picometres'               '*'   1.0E+12        NMR-STAR
      1    'metres'                   ?    'femtometres'              '*'   1.0E+15        NMR-STAR
 
-     ?    'centimetres'              ?    'millimetres'              '*'   1.0E+01        NMR-STAR
-     ?    'centimetres'              ?    'micrometres'              '*'   1.0E+04        NMR-STAR
-     ?    'centimetres'              ?    'nanometres'               '*'   1.0E+07        NMR-STAR
-     ?    'centimetres'              ?    'angstroms'                '*'   1.0E+08        NMR-STAR
-     ?    'centimetres'              ?    'picometres'               '*'   1.0E+10        NMR-STAR
-     ?    'centimetres'              ?    'femtometres'              '*'   1.0E+13        NMR-STAR
+     2    'centimetres'              ?    'millimetres'              '*'   1.0E+01        NMR-STAR
+     2    'centimetres'              ?    'micrometres'              '*'   1.0E+04        NMR-STAR
+     2    'centimetres'              ?    'nanometres'               '*'   1.0E+07        NMR-STAR
+     2    'centimetres'              ?    'angstroms'                '*'   1.0E+08        NMR-STAR
+     2    'centimetres'              ?    'picometres'               '*'   1.0E+10        NMR-STAR
+     2    'centimetres'              ?    'femtometres'              '*'   1.0E+13        NMR-STAR
 #
      ?    'millimetres'              ?    'centimetres'              '*'   1.0E-01        NMR-STAR
      ?    'millimetres'              ?    'micrometres'              '*'   1.0E+03        NMR-STAR
