@@ -1503,17 +1503,23 @@ save_<chem_comp>
   _Chem_comp.DB_last_query_revised_last_date          # 
 
   loop_
-     _Chem_comp_common_name.Name                          # Chemical compound common name;                                                                                                                                                                           C
-     _Chem_comp_common_name.Type                          # 
-     _Chem_comp_common_name.Sf_ID                         # 
-     _Chem_comp_common_name.Entry_ID                      # Entry ID;                                                                                                                                                                                                C
-     _Chem_comp_common_name.Comp_ID                       # 
+     _Chem_comp_common_name.Name              # Chemical compound common name;                                                                                                                                                                           C
+     _Chem_comp_common_name.Type              # 
+     _Chem_comp_common_name.Sf_ID             # 
+     _Chem_comp_common_name.Entry_ID          # Entry ID;                                                                                                                                                                                                C
+     _Chem_comp_common_name.Comp_ID           # 
+
+    @ @ @ @ @   
+
+  stop_
+
+  loop_
      _Chem_comp_bio_function.Biological_function          # 
      _Chem_comp_bio_function.Sf_ID                        # 
      _Chem_comp_bio_function.Entry_ID                     # 
      _Chem_comp_bio_function.Comp_ID                      # 
 
-    @ @ @ @ @   @ @ @ @ 
+    @ @ @ @ 
 
   stop_
 

@@ -489,7 +489,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 4870,assembly,_Assembly_db_link.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assembly_db_link,Entry_ID,Y,?,3,?,,,,,N
 4880,assembly,_Assembly_db_link.Assembly_ID,,INTEGER,int,NOT NULL,Y,Assembly_db_link,Assembly_ID,Y,?,5,?,,,,,N
 4890,assembly,_Assembly_common_name.Name,,VARCHAR(127),line,NOT NULL,Y,Assembly_common_name,Name,Y,?,0,?,,,,,N
-4900,assembly,_Assembly_common_name.Type,,VARCHAR(127),line,NOT NULL,Y,Assembly_common_name,Type,Y,?,0,?,,,,,N
+4900,assembly,_Assembly_common_name.Type,,VARCHAR(127),line,,Y,Assembly_common_name,Type,Y,?,0,?,,,,,N
 4910,assembly,_Assembly_common_name.Sf_ID,,INTEGER,int,NOT NULL,,Assembly_common_name,Sf_ID,Y,?,4,?,,,,Y,N
 4920,assembly,_Assembly_common_name.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assembly_common_name,Entry_ID,Y,?,3,?,,,,,N
 4930,assembly,_Assembly_common_name.Assembly_ID,,INTEGER,int,NOT NULL,Y,Assembly_common_name,Assembly_ID,Y,?,5,?,,,,,N
@@ -589,7 +589,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 5870,assembly,_Atom.Sf_ID,,INTEGER,int,NOT NULL,,Atom,Sf_ID,Y,?,4,?,,,,Y,N
 5880,assembly,_Atom.Entry_ID,,CHAR(12),code,NOT NULL,Y,Atom,Entry_ID,Y,?,3,?,,,,,N
 5890,assembly,_Atom.Assembly_ID,,INTEGER,int,NOT NULL,Y,Atom,Assembly_ID,Y,?,5,?,,,,,N
-5900,assembly,_Assembly_bio_function.Biological_function,,VARCHAR(255),line,NOT NULL,Y,Assembly_bio_function,Biological_function,Y,?,0,?,,,,,N
+5900,assembly,_Assembly_bio_function.Biological_function,,TEXT,text,NOT NULL,Y,Assembly_bio_function,Biological_function,Y,?,0,?,,,,,N
 5910,assembly,_Assembly_bio_function.Sf_ID,,INTEGER,int,NOT NULL,,Assembly_bio_function,Sf_ID,Y,?,4,?,,,,Y,N
 5920,assembly,_Assembly_bio_function.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assembly_bio_function,Entry_ID,Y,?,3,?,,,,,N
 5930,assembly,_Assembly_bio_function.Assembly_ID,,INTEGER,int,NOT NULL,Y,Assembly_bio_function,Assembly_ID,Y,?,5,?,,,,,N
