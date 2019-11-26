@@ -1,7 +1,7 @@
 Dictionary sequence,SFCategory,ADIT super category ID,ADIT super category,ADIT category group ID,ADIT category view name,Tag,Item enumerated,Item enumeration closed,Data Type,Nullable,Row Index Key,Source Key,Table Primary Key,Foreign Table,Foreign Column,Loopflag,Seq,Example,SfNamelFlg,Sf category flag,Sf pointer,default value,Tag category,Tag field,BMRB data type,Dictionary description,?
 ,,,,,,,Y or N,Y N mY or mN,,,,,,,,,,,?,,,?,,?,?,dictionary,?
 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
-TBL_BEGIN,,3.2.1.42,,,,,,,,,,,,,,,,,?,,,,,,,,?
+TBL_BEGIN,,3.2.1.43,,,,,,,,,,,,,,,,,?,,,,,,,,?
 ,entry_interview,1,entry_information,8,Entry interview,_Entry_interview.Sf_category,N,?,VARCHAR(127),NOT NULL,N,?,?,?,?,N,10,entry_interview,N,Y,N,?,Entry_interview,Sf_category,code,Category definition for the information content of the saveframe,?
 ,entry_interview,1,entry_information,8,Entry interview,_Entry_interview.Sf_framecode,N,?,VARCHAR(127),NOT NULL,N,?,?,?,?,N,20,entry_interview,Y,N,N,?,Entry_interview,Sf_framecode,framecode,A code that uniquely identifies the saveframe within the entry.  The code can be a human readable identifier that defines the contents of the saveframe (see the examples).,?
 ,entry_interview,1,entry_information,8,Entry interview,_Entry_interview.Entry_ID,N,?,CHAR(12),NOT NULL,N,?,Y,Entry,ID,N,30,4567,N,N,N,?,Entry_interview,Entry_ID,code,Pointer to '_Entry.ID',?
@@ -299,8 +299,8 @@ TBL_BEGIN,,3.2.1.42,,,,,,,,,,,,,,,,,?,,,,,,,,?
 ,citations,2,citations,40,Citation,_Citation.Class,Y,Y,VARCHAR(31),NOT NULL,N,?,?,?,?,N,1610,entry citation,N,N,N,entry citation,Citation,Class,line,Keyword defining the citation as the key citation for the entry or a citation used as a referenece in the entry.,?
 ,citations,2,citations,40,Citation,_Citation.CAS_abstract_code,N,?,VARCHAR(31),?,N,?,?,?,?,N,1620,?,N,N,N,?,Citation,CAS_abstract_code,code,Code from the Chemical Abstract Services assigned to this citation.,?
 ,citations,2,citations,40,Citation,_Citation.MEDLINE_UI_code,N,?,VARCHAR(31),?,N,?,?,?,?,N,1630,?,N,N,N,?,Citation,MEDLINE_UI_code,code,MEDLINE uniform identification code assigned to the publication described in the saveframe.,?
-,citations,2,citations,40,Citation,_Citation.DOI,N,?,VARCHAR(127),?,N,?,?,?,?,N,1640,10.1000/182,N,N,N,?,Citation,DOI,line,The digital object identifier assigned to the citation.,?
-,citations,2,citations,40,Citation,_Citation.PubMed_ID,N,?,CHAR(12),?,N,?,?,?,?,N,1650,12815265,N,N,N,?,Citation,PubMed_ID,code,The identification code assigned to the publication by PubMed.  If this code is available no other information regarding the publication needs to be entered in the deposition.,?
+,citations,2,citations,40,Citation,_Citation.PubMed_ID,N,?,CHAR(12),?,N,?,?,?,?,N,1640,12815265,N,N,N,?,Citation,PubMed_ID,code,The identification code assigned to the publication by PubMed.  If this code is available no other information regarding the publication needs to be entered in the deposition.,?
+,citations,2,citations,40,Citation,_Citation.DOI,N,?,VARCHAR(127),?,N,?,?,?,?,N,1650,10.1000/182,N,N,N,?,Citation,DOI,line,The digital object identifier assigned to the citation.,?
 ,citations,2,citations,40,Citation,_Citation.Full_citation,N,?,TEXT,?,N,?,?,?,?,N,1660,?,N,N,N,?,Citation,Full_citation,text,Full publication citation including authors title journal page numbers year or equivalent information for the type of publication given.,?
 ,citations,2,citations,40,Citation,_Citation.Title,N,?,TEXT,?,N,?,?,?,?,N,1670,'1H and 15N Assigned Chemical Shifts for RNase A',N,N,N,?,Citation,Title,text,Title for the publication.,?
 ,citations,2,citations,40,Citation,_Citation.Status,Y,Y,VARCHAR(31),?,N,?,?,?,?,N,1680,submitted,N,N,N,in preparation,Citation,Status,line,Status for the current publication (in preparation submitted in press published),?
