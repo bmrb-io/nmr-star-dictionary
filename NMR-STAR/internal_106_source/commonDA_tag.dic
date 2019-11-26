@@ -250,7 +250,7 @@ The name of the file format being used to express this data set.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   NMR-STAR    'NMR-STAR file format'
 
    stop_
 
@@ -286,7 +286,50 @@ Version of NMR-STAR in which the current entry is formatted.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   1.0    ?
+   2.0    ?
+   2.1    ?
+   2.1.1    ?
+   3.1    ?
+   3.0.8.59    ?
+   3.0.8.112    ?
+   3.1.1.15    ?
+   3.1.0.44    ?
+   3.1.1.1    ?
+   3.1.0.52    ?
+   3.0.9.14    ?
+   3.0.8.125    ?
+   3.1.1.16    ?
+   3.0.2.8    ?
+   3.0.8.76    ?
+   3.0.8.96    ?
+   3.0.8.78    ?
+   3.0.8.34    ?
+   3.0.8.109    ?
+   3.1.1.20    ?
+   3.0.8.120    ?
+   3.0.2.3    ?
+   3.0.9.2    ?
+   3.0    ?
+   3.1.1.24    ?
+   3.0.8.116    ?
+   3.0.8.100    ?
+   3.1.1.29    ?
+   3.1.1.19    ?
+   3.0.8.111    ?
+   3.0.2.2    ?
+   3.1.0.29    ?
+   3.1.1.14    ?
+   3.1.1.31    ?
+   3.0.8.94    ?
+   3.0.9.13    ?
+   3.1.0.41    ?
+   3.0.8.53    ?
+   3.1.1.21    ?
+   3.1.1.7    ?
+   3.1.1.40    ?
+   3.1.1.44    ?
+   3.1.1.61    ?
 
    stop_
 
@@ -552,7 +595,20 @@ BMRB entry.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   BMRB    'BioMagResBank'
+   BMRB(withdrawn)    ?
+   PDB    'Protein Databank'
+   TargetDB    'Target registration database'
+   EMDB    'Electron Microscopy Volume Data Bank'
+   BMCD    'Biological Macromolecule Crystallization Database'
+   GB    'GenBank'
+   DBJ    'DNA Data Bank of Japan'
+   EMBL    'European Molecular Biology Laboratory'
+   NCBI    ?
+   PIR    'Protein Information Resource'
+   REF    'NCBI Reference Sequence'
+   SGD    'Saccharomyces Genome Database'
+   SP    'UniProtKB/Swiss-Prot'
 
    stop_
 
@@ -1491,7 +1547,7 @@ A descriptor for the class of NMR experiment. Something like 'H_H[C].through-spa
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   'H_H[C].through-space'    ?
 
    stop_
 
@@ -1527,7 +1583,7 @@ A descriptor for the type of NMR experiment (13C-NOESY-HSQC).
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   13C-NOESY-HSQC    ?
 
    stop_
 
@@ -1785,7 +1841,9 @@ The type of spectral folding caused by undersampling in the spectral dimension.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   aliased    ?
+   folded    ?
+   'not observed'    ?
 
    stop_
 
@@ -1848,7 +1906,8 @@ The units for the sweep width value (Hz or ppm)
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   Hz    Hertz
+   ppm    'parts per million'
 
    stop_
 
@@ -2175,7 +2234,12 @@ The form of magnetization transfer (through-space$ onebond$ jcoupling).
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   onebond    'Any transfer that connects only directly bonded atoms in this experiment'
+   jcoupling    'Transfer via direct J coupling over one or more bonds'
+   jmultibond    'Transfer via direct J coupling over multiple bonds'
+   relayed    'Transfer via multiple successive J coupling steps (TOCSY relay)'
+   relayed-alternate    'Relayed transfer where peaks from an odd resp. even number of transfer steps have opposite sign'
+   through-space    'Any transfer that does not go through the covalent bonded skeleton (NOESY ROESY ... but also J coupling through hydrogen bonds)'
 
    stop_
 
@@ -6534,7 +6598,16 @@ The type of reported distance constraint.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   NOE    'Distance constraints determined from NOE experiments'
+   'NOE build-up'    'Distance constraints determined from a series of NOE experiments with different mixing times'
+   'NOE not seen'    'Distance constraints supplied when an expected NOE was not observed'
+   ROE    'Distance constraints determined from ROE experiments'
+   'ROE build-up'    'Distance constraints determine from a series of ROE experiments with different mixing times'
+   'hydrogen bond'    'Hydrogen bond distance constraints'
+   'disulfide bond'    'Disulfide bond distance constraints'
+   'paramagnetic relaxation'    'Distance constraints determined from paramagnetic relaxation studies'
+   symmetry    'Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer'
+   'general distance'    'Specific distance constraint is not known'
 
    stop_
 
@@ -6570,7 +6643,14 @@ The potential type used to model the distance restraints.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   log-harmonic    ?
+   parabolic    ?
+   square-well-parabolic    ?
+   square-well-parabolic-linear    ?
+   upper-bound-parabolic    ?
+   lower-bound-parabolic    ?
+   upper-bound-parabolic-linear    ?
+   lower-bound-parabolic-linear    ?
 
    stop_
 
@@ -7257,7 +7337,14 @@ The potential type used to model the dihedral constraints.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   log-harmonic    ?
+   parabolic    ?
+   square-well-parabolic    ?
+   square-well-parabolic-linear    ?
+   upper-bound-parabolic    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic    'can be derived from the two-sided versions given above'
+   upper-bound-parabolic-linear    'can be derived from the two-sided versions given above'
+   lower-bound-parabolic-linear    'can be derived from the two-sided versions given above'
 
    stop_
 
@@ -7293,7 +7380,8 @@ The source of the constraints (e.g. 'noe'$ 'hbond'$ 'measured'.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   J-couplings    ?
+   'backbone chemical shifts'    ?
 
    stop_
 
@@ -8223,7 +8311,14 @@ The potential type used to model the residual dipolar coupling restraints.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   log-harmonic    ?
+   parabolic    ?
+   square-well-parabolic    ?
+   square-well-parabolic-linear    ?
+   upper-bound-parabolic    ?
+   lower-bound-parabolic    ?
+   upper-bound-parabolic-linear    ?
+   lower-bound-parabolic-linear    ?
 
    stop_
 
@@ -8259,7 +8354,7 @@ The source of the restraints (e.g. 'noe'$ 'hbond'$ 'measured'.
      _item_enumeration.value
      _item_enumeration.detail
 
-    ?     ?
+   RDC    ?
 
    stop_
 
