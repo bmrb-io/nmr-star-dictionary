@@ -293,11 +293,11 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,?
 2910,citations,Y,R,2,citations,40,Citation,,_Citation.Entry_ID,Y,HB,N,,Entry ID,0,CHAR(12),code,NOT NULL,,N,Y,?,N,N,N,N,Y,,Entry,ID,,,,Citation,Entry_ID,N,1570,Y,VV,VV,?,1271,3,,Y,,3,?,Y,N,,,,?,n/a
 2920,citations,Y,R,2,citations,40,Citation,,_Citation.Sf_ID,Y,HB,N,,Sf ID,0,INTEGER,int,NOT NULL,Y,N,?,?,Y,N,N,N,,,,,,,,Citation,Sf_ID,N,1580,Y,II,II,?,?,?,,N,,4,?,Y,N,,,,?,n/a
 2930,citations,Y,R,2,citations,40,Citation,,_Citation.ID,Y,HB,N,,ID,0,INTEGER,int,NOT NULL,,N,Y,Y,N,N,N,N,Y,,,,,,,Citation,ID,N,1590,Y,VV,VV,?,7,3,,N,,5,?,Y,N,,,,?,n/a
-2940,citations,Y,R,2,citations,40,Citation,,_Citation.Name,Y,YB,N,,Name,1,VARCHAR(127),line,,,N,?,?,N,N,N,N,,,,,,,,Citation,Name,N,1600,Y,II,II,?,?,?,,N,,0,?,Y,N,,,,?,Citation name
+2940,citations,Y,R,2,citations,40,Citation,,_Citation.Name,Y,HB,N,,Name,1,VARCHAR(127),line,,,N,?,?,N,N,N,N,,,,,,,,Citation,Name,N,1600,Y,II,II,?,?,?,,N,,0,?,Y,N,,,,?,Citation name
 2950,citations,Y,R,2,citations,40,Citation,,_Citation.Class,Y,YB,Y,Y,Class,1,VARCHAR(31),line,NOT NULL,,N,?,?,N,N,N,N,,,,,,,,Citation,Class,N,1610,Y,VV,VV,entry citation,?,?,,N,,0,?,Y,N,,,,?,Entry or reference citation
 2960,citations,Y,R,2,citations,40,Citation,,_Citation.CAS_abstract_code,Y,HB,N,,CAS abstract code,0,VARCHAR(31),code,,,N,?,?,N,N,N,N,,,,,,,,Citation,CAS_abstract_code,N,1620,Y,OO,OO,?,?,?,,N,,0,?,Y,N,,,,?,n/a
 2970,citations,Y,R,2,citations,40,Citation,,_Citation.MEDLINE_UI_code,Y,HB,N,,MEDLINE UI code,0,VARCHAR(31),code,,,N,?,?,N,N,N,N,,,,,,,,Citation,MEDLINE_UI_code,N,1630,Y,OO,OO,?,10012,3,,N,,0,?,Y,N,,,,?,n/a
-2980,citations,Y,R,2,citations,40,Citation,,_Citation.PubMed_ID,Y,NB,N,,PubMed ID,1,CHAR(12),code,,,N,?,?,N,N,N,N,,,,,,,,Citation,PubMed_ID,N,1640,Y,MM,MM,?,14080,1,,N,,0,?,Y,N,,,,?,<a href='http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed' TARGET='_blank'>PubMed ID</a>
+2980,citations,Y,R,2,citations,40,Citation,,_Citation.PubMed_ID,Y,NB,N,,PubMed ID,1,CHAR(12),code,,,N,?,?,N,N,N,N,,,,,,,,Citation,PubMed_ID,N,1640,Y,MM,MM,?,14080,1,,N,,0,?,Y,N,,,,?,<a href='https://www.ncbi.nlm.nih.gov/pubmed' TARGET='_blank'>PubMed ID</a>
 2990,citations,Y,R,2,citations,40,Citation,,_Citation.DOI,Y,NB,N,,DOI,1,VARCHAR(127),line,,,N,?,?,N,N,N,N,,,,,,,,Citation,DOI,N,1650,Y,OO,OO,?,14090,1,,N,,0,?,Y,N,,,,?,Digital object identifier for the citation
 3000,citations,Y,R,2,citations,40,Citation,,_Citation.Full_citation,Y,HB,N,,Full citation,2,TEXT,text,,,N,?,?,N,N,N,N,,,,,,,,Citation,Full_citation,N,1660,Y,OO,OO,?,?,?,,N,,0,?,Y,N,,,,?,Complete citation
 3010,citations,Y,R,2,citations,40,Citation,,_Citation.Title,Y,YB,N,,Title,1,TEXT,text,,,N,?,?,N,N,N,N,,,,,,,,Citation,Title,N,1670,Y,MM,MM,?,8,3,,N,,0,?,Y,N,,,,?,Citation title
