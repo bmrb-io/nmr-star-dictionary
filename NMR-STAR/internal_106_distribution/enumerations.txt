@@ -5042,6 +5042,35 @@ save__Experiment.Sample_state
 
 save_
 
+save__Experimental_data_constraint_link.Constraint_Sf_category
+
+  loop_
+     _Item_enumeration.Value
+     _Item_enumeration.Description
+
+     RDC_constraints                         .
+     general_distance_constraints            .
+     distance_constraints                    .
+     torsion_angle_constraints               . 
+
+  stop_
+
+save_ 
+
+save__Experimental_data_constraint_link.Experimental_data_list_Sf_category
+
+  loop_
+     _Item_enumeration.Value
+     _Item_enumeration.Description
+
+    spectral_peak_list                 .
+    assigned_chemical_shifts           .
+    coupling_constants                 .
+
+  stop_
+
+save_ 
+
 save__Force_constant.Term
 
   loop_
@@ -6470,33 +6499,6 @@ save__Peak_char.Coupling_pattern
     td     'triplet of doublets'
     LR     'long-range coupling'
     1JCH   'one J carbon-proton couplings'
-
-  stop_
-
-save_ 
-
-save__Peak_constraint_link.Constraint_Sf_category
-
-  loop_
-     _Item_enumeration.Value
-     _Item_enumeration.Description
-
-     RDC_constraints                         .
-     general_distance_constraints            .
-     distance_constraints                    .
-     torsion_angle_constraints               . 
-
-  stop_
-
-save_ 
-
-save__Peak_constraint_link.Spectral_peak_list_Sf_category
-
-  loop_
-     _Item_enumeration.Value
-     _Item_enumeration.Description
-
-    spectral_peak_list                 .
 
   stop_
 
@@ -8834,10 +8836,11 @@ save__Upload_data.Data_file_syntax
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    'NMR-STAR 3.1'     .
-    'NMR-STAR 2.1'     .
+    'NMR-STAR 3.2'       .
+    'NMR-STAR 3.1'       .
+    'NMR-STAR 2.1'       .
 #     NMRIF             .
-#    'mmCIF (pdbx)'      .
+#    'mmCIF (pdbx)'     .
 #     PDB               .
 
   stop_

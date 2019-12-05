@@ -135,7 +135,7 @@ item_category,Release,Items in the release category provide the release history 
 item_category,Related_entries,Items in the related_entries category provide a list of entries that are related to the present entry. The related entries may or may not be members of a study that includes the present entry.
 item_category,Matched_entries,Items in the matched_entries category provide a list of entries from databases that are matched representing that the data in the entries came from the same experimental study and the same publication.
 item_category,Auxiliary_files,Items in the auxiliary_files category provide information on a list of files available from BMRB that contain information directly related to the entry (e.g. validation reports$ software scripts$ data in the original format$ and others).
-item_category,Audit,NOT AVAILABLE
+item_category,Audit,Items in the audit category capture information about the internal processing and handling of an entry during annotation and validation.
 item_category,Citation,Items in the citation category capture information common to all citations.
 item_category,Citation_author,Items in the citation_author category define the authors and the order of the names for a citation.
 item_category,Citation_keyword,Items in the citation_keyword category capture keywords that describe the contents of a citation.
@@ -182,8 +182,8 @@ item_category,Entity_comp_index,Items in the entity_comp_index category provide 
 item_category,Entity_poly_seq,Data items in the entity_poly_seq category specify the sequence of monomers in a polymer. Allowance is made for the possibility of microheterogeneity in a sample by allowing a given sequence number to be correlated with more than one monomer ID. The corresponding ATOM_SITE entries should reflect this heterogeneity.
 item_category,Entity_chimera_segment,Items in the entity_chimera_segment category describe the beginning and ending points of the two segments of a biopolymer that form the hybrid biopolymer. 
 item_category,Entity_comp_index_alt,Items in the entity_comp_index_alt category define an alternate residue numbering scheme for the an entity.
-item_category,Entity_atom_list,NOT AVAILABLE
-item_category,Entity_chem_comp_deleted_atom,NOT AVAILABLE
+item_category,Entity_atom_list,Items in the entity_atom_list define the names of the atoms that exist in the entity.
+item_category,Entity_chem_comp_deleted_atom,Items in the entity_chem_comp_deleted_atom define atoms commonly found in residues and ligands that are deleted and not found in the entity.
 item_category,Entity_bond,Items in the entity_bond category define chemical bonds that are unique to the entity.
 item_category,Entity_citation,Items in the entity_citation category provide pointers to citations save frames where citations that describe the entity are defined.
 item_category,Entity_natural_src_list,Items in the entity_natural_src_list category define an entity natural source save frame.
@@ -339,10 +339,10 @@ item_category,Other_data_type_list,Items in the other_data_type_list category pr
 item_category,Other_data_experiment,Items in the other_data_experiment category provide pointers to the NMR experiments and samples used to collect the data.
 item_category,Other_data_software,Items in the other_data_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,Other_data,Items in the other_data category describe the values for kinds of experimental data not described in other categories in the dictionary.
-item_category,Chemical_rate_list,NOT AVAILABLE
-item_category,Chemical_rate_experiment,NOT AVAILABLE
-item_category,Chemical_rate_software,NOT AVAILABLE
-item_category,Chemical_rate,NOT AVAILABLE
+item_category,Chemical_rate_list,Items in the chemical_rate_list category provide information about the list of chemical rate values contained in an entry. 
+item_category,Chemical_rate_experiment,Items in the chemical_rate_experiment category provide pointers to the NMR or other biophysical technique experiments used to collect the data used to determine the listed chemical rate values.
+item_category,Chemical_rate_software,Items in the chemical_rate_software category provide pointers to the information about the software used to generate the listed chemical rate values.
+item_category,Chemical_rate,Items in the chemical_rate category define the reported quantitative chemical rate values.
 item_category,H_exch_rate_list,Items in the H_exch_rate_list category provide information about a list of reported hydrogen exchange rate values.
 item_category,H_exch_rate_experiment,Items in the H_exch_rate_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of reported hydrogen exchange rates.
 item_category,H_exch_rate_software,Items in the H_exch_rate_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
