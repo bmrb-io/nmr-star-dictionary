@@ -111,6 +111,12 @@ Categories that describe an entry.
 Categories that provide bibliographic references.
 ;
 
+'references'
+'inclusive_group'
+;
+Categories that provide a list of references as a simple unparsed citations.
+;
+
 'chem_comp'
 'inclusive_group'
 ;
@@ -679,6 +685,12 @@ Categories that capture the protein CA and CB chemical shift constraints used to
 'inclusive_group'
 ;
 Categories that capture the proton chemical shift constraints used to calculate one or more conformers for a biomolecular system.
+;
+
+'experimental_data_constraint_links'
+'inclusive_group'
+;
+Categories that provide links between constraints and the experimental data used to derive the constraints.
 ;
 
 'SAXS_constraints'
@@ -12784,7 +12796,7 @@ save_
 save_Reference_list
    _category.description
 ;
-              category description not available
+NOT AVAILABLE
 ;
    _category.id                   'Reference_list'
    _category.mandatory_code       yes
@@ -12919,7 +12931,7 @@ save_
 save_Reference
    _category.description
 ;
-              category description not available
+NOT AVAILABLE
 ;
    _category.id                   'Reference'
    _category.mandatory_code       yes
@@ -30036,7 +30048,7 @@ save_
 save_Chem_comp_bio_function
    _category.description
 ;
-NOT AVAILABLE
+Items in the chem_comp_bio_function category provide a list of biological functions for the chemical component.
 ;
    _category.id                   'Chem_comp_bio_function'
 
@@ -30131,7 +30143,7 @@ save_
 save_Chem_struct_descriptor
    _category.description
 ;
-NOT AVAILABLE
+Items in the chem_struct_descriptor category define chemical structures that exist in the chemical component.
 ;
    _category.id                   'Chem_struct_descriptor'
 
@@ -31013,7 +31025,7 @@ save_
 save_PDBX_chem_comp_feature
    _category.description
 ;
-NOT AVAILABLE
+Items in the PDBX_chem_comp_feature category define various properties of the chemical component.
 ;
    _category.id                   'PDBX_chem_comp_feature'
 
@@ -38493,7 +38505,7 @@ save_
 save_Mass_spec_config
    _category.description
 ;
-NOT AVAILABLE
+Items in the mass_spec_config category define the configuration details for a mass spectrometer.
 ;
    _category.id                   'Mass_spec_config'
 
@@ -38651,7 +38663,7 @@ save_
 save_Mass_spec_component_param
    _category.description
 ;
-NOT AVAILABLE
+Items in the mass_spec_component_param category describe parameters associated with individual components of the mass spectrometer.
 ;
    _category.id                   'Mass_spec_component_param'
 
@@ -38784,7 +38796,7 @@ save_
 save_Mass_spec_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the mass_spec_software pointer a software tool associated with the mass spectrometer.
 ;
    _category.id                   'Mass_spec_software'
 
@@ -40267,7 +40279,7 @@ save_
 save_Fluorescence_instrument
    _category.description
 ;
-NOT AVAILABLE
+Items in the fluorescence_instrument category provide meta information about the fluorescence instrument described.
 ;
    _category.id                   'Fluorescence_instrument'
 
@@ -40478,7 +40490,7 @@ save_
 save_EMR_instrument
    _category.description
 ;
-NOT AVAILABLE
+Items in the EMR_instrument category provide meta information about the EMR instrument described.
 ;
    _category.id                   'EMR_instrument'
 
@@ -40689,7 +40701,7 @@ save_
 save_Xray_instrument
    _category.description
 ;
-NOT AVAILABLE
+Items in the Xray_instrument category provide meta information about the X-ray instrument described.
 ;
    _category.id                   'Xray_instrument'
 
@@ -96947,7 +96959,7 @@ save_
 save_Binding_value_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the binding_value_list category provide information about a list of reported binding constant experimental values.
 ;
    _category.id                   'Binding_value_list'
 
@@ -97196,7 +97208,7 @@ save_
 save_Binding_experiment
    _category.description
 ;
-NOT AVAILABLE
+Items in the binding_experiment category provide pointers to the experiments and samples used to collect the data for a set of reported chemical binding experiments.
 ;
    _category.id                   'Binding_experiment'
 
@@ -97353,7 +97365,7 @@ save_
 save_Binding_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the binding_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to collect the reported data can be found.
 ;
    _category.id                   'Binding_software'
 
@@ -97484,7 +97496,7 @@ save_
 save_Binding_result
    _category.description
 ;
-NOT AVAILABLE
+Items in the binding_result category describe the binding values that have been determined.
 ;
    _category.id                   'Binding_result'
 
