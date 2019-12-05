@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-12-04
+#  version date -  2019-12-05
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -135518,7 +135518,7 @@ Unique identifier for the reported list of linked spectral peaks and constraints
       _item.mandatory_code
 
   '_Experimental_data_constraint_link_list.ID'           'Experimental_data_constraint_link_list'  yes
-  '_Experimental_data_constraint_link.Experimental_data_constraint_link_ID'              'Experimental_data_constraint_link'                 yes
+  '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'         'Experimental_data_constraint_link'                 yes
 
   stop_
 
@@ -135526,7 +135526,7 @@ Unique identifier for the reported list of linked spectral peaks and constraints
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Experimental_data_constraint_link.Experimental_data_constraint_link_ID'              '_Experimental_data_constraint_link_list.ID'
+  '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'         '_Experimental_data_constraint_link_list.ID'
 
   stop_
 
@@ -135562,7 +135562,7 @@ save_Experimental_data_constraint_link
 
      '_Experimental_data_constraint_link.ID'
      '_Experimental_data_constraint_link.Entry_ID'
-     '_Experimental_data_constraint_link.Experimental_data_constraint_link_ID'
+     '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'
 
    stop_
 
@@ -135800,14 +135800,14 @@ Pointer to '_Entry.ID'
 
 save_
 
-save__Experimental_data_constraint_link.Experimental_data_constraint_link_ID
+save__Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID
 
    _item_description.description
 ;
 Pointer to '_Experimental_data_constraint_link_list.ID'
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_constraint_link_ID'
+   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'
    _item.category_id                           'Experimental_data_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
