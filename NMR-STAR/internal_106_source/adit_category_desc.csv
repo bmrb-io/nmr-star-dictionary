@@ -13,6 +13,7 @@ category_group,entry_interview,Categories that record an overview of the informa
 category_group,study_list,Categories that describe a study of a molecular system that includes data from one or more entries.
 category_group,entry_information,Categories that describe an entry.
 category_group,citations,Categories that provide bibliographic references.
+category_group,references,Categories that provide a list of references as a simple unparsed citations.
 category_group,chem_comp,Categories that describe chemical components of entities and molecular assemblies.
 category_group,entity,Categories that describe the polymer and non-polymer molecules that make up a molecular assembly.
 category_group,assembly,Categories that describe a molecular assembly.
@@ -108,6 +109,7 @@ category_group,RDC_constraints,Categories that capture the residual dipolar coup
 category_group,J_three_bond_constraints,Categories that capture the three bond scalar coupling constraints used to calculate one or more conformers for a biomolecular system.
 category_group,CA_CB_chem_shift_constraints,Categories that capture the protein CA and CB chemical shift constraints used to calculate one or more conformers for a biomolecular system.
 category_group,H_chem_shift_constraints,Categories that capture the proton chemical shift constraints used to calculate one or more conformers for a biomolecular system.
+category_group,experimental_data_constraint_links,Categories that provide links between constraints and the experimental data used to derive the constraints.
 category_group,SAXS_constraints,Categories that capture the SAXS constraints used to calculate one or more conformers for a biomolecular system.
 category_group,other_constraints,Categories that capture values for other kinds of constraints not specifically defined in other category groups used to calculate one or more conformers for a biomolecular system.
 category_group,org_constr_file_comment,Categories that capture the comments extracted from one or more original constraint files.
@@ -140,6 +142,8 @@ item_category,Citation,Items in the citation category capture information common
 item_category,Citation_author,Items in the citation_author category define the authors and the order of the names for a citation.
 item_category,Citation_keyword,Items in the citation_keyword category capture keywords that describe the contents of a citation.
 item_category,Citation_editor,Items in the citation_editor category define the editors and the order of the names for a citation.
+item_category,Reference_list,NOT AVAILABLE
+item_category,Reference,NOT AVAILABLE
 item_category,Assembly,Items in the assembly category describe the molecular assembly studied.
 item_category,Assembly_type,Items in the assembly_type category describe the kind of assembly studied. These are keywords that are specific to a description of the assembly in terms of the types and number of components that make up the assembly.
 item_category,Entity_assembly,Items in the entity_assembly category identify each molecule in the molecular assembly.
@@ -193,14 +197,14 @@ item_category,Entity_experimental_src_list,Items in the entity_experimental_src_
 item_category,Entity_experimental_src,Items in the entity_experimental_src category describe the biological system or other means used to produce a molecular entity for experimental purposes.
 item_category,Chem_comp,Items in the chem_comp category describe the chemical components that make up a molecular entity.
 item_category,Chem_comp_common_name,Items in the chem_comp_common_name category provide a list of common names for a chemical component.
-item_category,Chem_comp_bio_function,NOT AVAILABLE
-item_category,Chem_struct_descriptor,NOT AVAILABLE
+item_category,Chem_comp_bio_function,Items in the chem_comp_bio_function category provide a list of biological functions for the chemical component.
+item_category,Chem_struct_descriptor,Items in the chem_struct_descriptor category define chemical structures that exist in the chemical component.
 item_category,Chem_comp_descriptor,Data items in the chem_comp_descriptor category provide string descriptors of component chemical structure.
 item_category,Chem_comp_identifier,Data items in the chem_comp_identifier category provide identifiers for chemical components.
 item_category,Chem_comp_systematic_name,Items in the chem_comp_systematic_name category provide a list of systematic names for a chemical component and define the systematic naming systems.
 item_category,Chem_comp_SMILES,Items in the chem_comp_SMILES category define a SMILES string for a chemical component and the type of SMILES string that is provided.
 item_category,Chem_comp_keyword,Items in the chem_comp_keyword category provide a list of keywords that describe a chemical component.
-item_category,PDBX_chem_comp_feature,NOT AVAILABLE
+item_category,PDBX_chem_comp_feature,Items in the PDBX_chem_comp_feature category define various properties of the chemical component.
 item_category,Characteristic,Items in the characteristics category define specific physical characteristics for a chemical component and links to the source of the information.
 item_category,Chem_comp_atom,Items in the chem_comp_atom category define the atoms in a chemical component$ the name for each atom$ and characteristics of each atom in the chemical component.
 item_category,Atom_nomenclature,Items in the atom_nomenclature category define alternative atom nomenclature for the atoms in a chemical compound.
@@ -228,9 +232,9 @@ item_category,Method_file,Items in the method_file category provide information 
 item_category,Method_param,Items in the method_parameter category provide information regarding an external file that contains the parameters for the reported method.
 item_category,Method_citation,Items in the method_citation category provide pointers to the citations where the method is described.
 item_category,Mass_spec,Items in the mass_spec category provide meta information about the mass spectrometer described.
-item_category,Mass_spec_config,NOT AVAILABLE
-item_category,Mass_spec_component_param,NOT AVAILABLE
-item_category,Mass_spec_software,NOT AVAILABLE
+item_category,Mass_spec_config,Items in the mass_spec_config category define the configuration details for a mass spectrometer.
+item_category,Mass_spec_component_param,Items in the mass_spec_component_param category describe parameters associated with individual components of the mass spectrometer.
+item_category,Mass_spec_software,Items in the mass_spec_software pointer a software tool associated with the mass spectrometer.
 item_category,Mass_spec_citation,Items in the mass_spec_citation category provide pointers to citations where the mass spectrometer is described.
 item_category,Mass_spectrometer_list,Items in the mass_spectrometer_list category provide meta information regarding the reported list of mass spectrometers.
 item_category,Mass_spectrometer_view,Items in the mass_spectrometer_view category provide the characteristics of mass spectrometers used to collect data reported in an entry.
@@ -238,9 +242,9 @@ item_category,Mass_spec_ref_compd_set,Items in the mass_spec_ref_compd_set categ
 item_category,Mass_spec_ref_compd,Items in the mass_spec_ref_compd category records information about the compounds used as references in a mass spectrometry experiment.
 item_category,Chromatographic_system,Items in the chromatographic_system category record the information describing a chromatographic system used in separating chemical compounds.
 item_category,Chromatographic_column,Items in the chromatographic_column category record the characteristics of a column used in a chromatographic system for separating chemical compounds.
-item_category,Fluorescence_instrument,NOT AVAILABLE
-item_category,EMR_instrument,NOT AVAILABLE
-item_category,Xray_instrument,NOT AVAILABLE
+item_category,Fluorescence_instrument,Items in the fluorescence_instrument category provide meta information about the fluorescence instrument described.
+item_category,EMR_instrument,Items in the EMR_instrument category provide meta information about the EMR instrument described.
+item_category,Xray_instrument,Items in the Xray_instrument category provide meta information about the X-ray instrument described.
 item_category,NMR_spectrometer,Items in the NMR_spectrometer category describe an NMR spectrometer used to collect experimental data.
 item_category,NMR_spectrometer_citation,Items in the NMR_spectrometer_citation category provide links to the citations category where literature references describing an NMR spectrometer can be found.
 item_category,NMR_spectrometer_list,Items in the NMR_spectrometer_list category define a set of NMR spectrometers and their descriptions.
@@ -421,10 +425,10 @@ item_category,D_H_fractionation_factor_list,Items in the D_H_fractionation_facto
 item_category,D_H_fract_factor_experiment,Items in the D_H_fract_factor_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of reported D/H fractionation factors.
 item_category,D_H_fract_factor_software,Items in the D_H_fract_factor_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,D_H_fractionation_factor,Items in the D_H_fractionation_factor category describe the deuterium/hydrogen fractionation factor values for a molecular assembly.
-item_category,Binding_value_list,NOT AVAILABLE
-item_category,Binding_experiment,NOT AVAILABLE
-item_category,Binding_software,NOT AVAILABLE
-item_category,Binding_result,NOT AVAILABLE
+item_category,Binding_value_list,Items in the binding_value_list category provide information about a list of reported binding constant experimental values.
+item_category,Binding_experiment,Items in the binding_experiment category provide pointers to the experiments and samples used to collect the data for a set of reported chemical binding experiments.
+item_category,Binding_software,Items in the binding_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to collect the reported data can be found.
+item_category,Binding_result,Items in the binding_result category describe the binding values that have been determined.
 item_category,Binding_partners,NOT AVAILABLE
 item_category,Binding_param_list,NOT AVAILABLE
 item_category,Binding_param,NOT AVAILABLE
