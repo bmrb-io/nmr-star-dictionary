@@ -12,31 +12,50 @@ data_NMR-STAR.dic
 # intended to be identical.
 
 
-
-    _datablock.id                          NMR-STAR.dic
-    _datablock.description
+save_datablock_description
+    _Datablock.Sf_category                 datablock_description
+    _Datablock.Sf_framecode                datablock_description
+    _Datablock.ID                          NMR-STAR.dic
+    _Datablock.Name                        NMR-STAR.dic
+    _Datablock.Description
 ;
      This data block contains the NMR-STAR dictionary.
 ;
 
-    _dictionary.title           NMR-STAR.dic
-    _dictionary.datablock_id    NMR-STAR.dic
-    _dictionary.version         version_num
+save_
+
+save_dictionary_description
+    _Dictionary.Sf_category            dictionary_description
+    _Dictionary.Sf_framecode           dictionary_description
+    _Dictionary.ID                     NMR-STAR
+    _Dictionary.Datablock_ID           NMR-STAR.dic
+    _Dictionary.Datablock_label       $datablock_description
+    _Dictionary.DDL_name               Bio-STAR.DDL
+    _Dictionary.DDL_version            0.8
+    _Dictionary.Name                   NMR-STAR.dic
+    _Dictionary.Version                version_num
+    _Dictionary.Description
+;
+NMR-STAR dictionary in the Bio-STAR.DDL format
+;
 
      loop_
-       _dictionary_history.version
-       _dictionary_history.update
-       _dictionary_history.revision
-                    
+       _Dictionary_history.Version
+       _Dictionary_history.Update
+       _Dictionary_history.Revision
+       _Dictionary_history.Dictionary_ID
+            
       3.0.6.22          2007-01-01
 ;
      Multiple updates to tags and categories implemented.
 ;
+NMR-STAR
 
       3.0.9.0         2008-06-04
 ;
      Large number of new tags implemented.
 ;
+NMR-STAR
 
      3.1.1.54         2013-10-13
 ;
@@ -44,22 +63,25 @@ data_NMR-STAR.dic
 Spell checking on tag descriptions carried out. 
 Many corrections and suggestions provided by PDBj-BMRB implemented.
 ;
+NMR-STAR
 
      3.1.1.55         2013-10-14
 ;
      Category groups updated.
 ;
-
+NMR-STAR
 
      3.1.1.56         2014-10-14
 ;
      Changed category group, and item group for X-ray_instrument to Xray_instrument
 ;
+NMR-STAR
 
      3.1.1.98         2015-08-19
 ;
      Added tags for FID sampling
 ;
+NMR-STAR
 
      stop_
 
