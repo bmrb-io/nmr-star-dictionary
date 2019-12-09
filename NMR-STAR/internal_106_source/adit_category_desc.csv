@@ -142,8 +142,8 @@ item_category,Citation,Items in the citation category capture information common
 item_category,Citation_author,Items in the citation_author category define the authors and the order of the names for a citation.
 item_category,Citation_keyword,Items in the citation_keyword category capture keywords that describe the contents of a citation.
 item_category,Citation_editor,Items in the citation_editor category define the editors and the order of the names for a citation.
-item_category,Reference_list,NOT AVAILABLE
-item_category,Reference,NOT AVAILABLE
+item_category,Reference_list,Items in the reference_list category capture information related to all references listed in the save frame.
+item_category,Reference,Items in the reference category define information for each reference in the list.
 item_category,Assembly,Items in the assembly category describe the molecular assembly studied.
 item_category,Assembly_type,Items in the assembly_type category describe the kind of assembly studied. These are keywords that are specific to a description of the assembly in terms of the types and number of components that make up the assembly.
 item_category,Entity_assembly,Items in the entity_assembly category identify each molecule in the molecular assembly.
@@ -254,9 +254,9 @@ item_category,NMR_probe,Items in the NMR_probe category describe the type of pro
 item_category,NMR_spectrometer_probe_citation,Items in the NMR_spectrometer_probe_citation category provide pointers to the citations category.
 item_category,Experiment_list,Items in the experiment_list category provide meta data about a set of experiments used to collect the data provided in an entry.
 item_category,Experiment,Items in the experiment category define the experiments carried out and the samples$ sample conditions$ and if relevant NMR spectrometer used in the experiment.
-item_category,Experiment_file,NOT AVAILABLE
+item_category,Experiment_file,Items in the experiment_file category provide the name of a file containing information for an experiment and the contents of the file.
 item_category,NMR_spec_expt,Items in the NMR_spec_expt category provide detailed information about an NMR spectrometer experiment.
-item_category,NMR_expt_systematic_name,NOT AVAILABLE
+item_category,NMR_expt_systematic_name,Items in the NMR_expt_systematic_name category provide a name for an NMR experiment that is derived from a systematic naming system and the system used.
 item_category,NMR_experiment_file,Items in the NMR_experiment_file category define the electronic files used to carry out or produced by an NMR spectrometer experiment.
 item_category,Spectral_acq_param,Items in the spectra_acq_param category define the acquisition parameters used in collecting the data in an NMR experiment.
 item_category,Recoupling_pulse_sequence,Items in the recoupling_pulse_sequence category define the parameters of a solid-state NMR pulse sequence used to recouple the magnetization between nuclei.
@@ -265,12 +265,12 @@ item_category,NMR_experiment_citation,Items in the NMR_experiment_citation categ
 item_category,NMR_spectral_processing,Items in the NMR_spectral_processing category define the parameters used in converting the time-domain data from an NMR experiment into frequency domain data or other forms of information.
 item_category,NMR_spectral_proc_software,Items in the NMR_spectral_proc_software category provide pointers to software save frames where the software application(s) used to process the spectral data are described.
 item_category,Spectral_processing_param,Items in the spectral_processing_param category describe the software parameters used in converting the raw spectral data into the fully processed spectrum.
-item_category,MS_expt,NOT AVAILABLE
-item_category,MS_expt_param,NOT AVAILABLE
-item_category,MS_expt_software,NOT AVAILABLE
-item_category,FRET_expt,NOT AVAILABLE
-item_category,EMR_expt,NOT AVAILABLE
-item_category,SAXS_expt,NOT AVAILABLE
+item_category,MS_expt,Items in the MS_expt category provide detailed information on a mass spec experiment.
+item_category,MS_expt_param,Items in the MS_expt_param category capture details about the parameters used to carry out a mass spec experiment.
+item_category,MS_expt_software,Items in the MS_expt_software category provide details on the software used in carring out a mass spec experiment.
+item_category,FRET_expt,Items in the FRET_expt category provide detailed information on a fluorescence resonance energy transfer experiment.
+item_category,EMR_expt,Items in the EMR_expt category provide detailed information on an electron magnetic resonance experiment.
+item_category,SAXS_expt,Items in the SAXS_expt category provide detailed information on a small angle X-ray scattering experiment.
 item_category,Computer,Items in the computer category describe a computer.
 item_category,Computer_citation,Items in the computer_citation category provide pointers to the citation category.
 item_category,Computing_platform,Items in the computing_platform describe a computing platform such as cluster used for processing data.
@@ -300,20 +300,20 @@ item_category,Spectral_peak_software,Items in the spectral_peak_software categor
 item_category,Peak,Items in the peak category define the identification code for the peaks in an NMR spectrum and the figure of merit for each peak.
 item_category,Peak_general_char,Items in the peak_general_char category provide quantitative information about the peak that is not specific to individual dimensions of the spectral data.
 item_category,Peak_char,Items in the peak_char category provide quantitative information about the peak that is specific to the dimensions of the spectral data.
-item_category,Peak_contribution,NOT AVAILABLE
+item_category,Peak_contribution,Items in the peak_contribution category define the percent contribution of a signal from one resonance to the total intensity of a spectral peak.
 item_category,Assigned_peak_chem_shift,Items in the assigned_peak_chem_shift category define the atom(s) assigned to individual peaks in the spectral peak list.
 item_category,Peak_row_format,Items in the peak_row_format category describe the characteristics and assignments for the spectral peaks in a single row format.
-item_category,Spectral_transition,NOT AVAILABLE
-item_category,Spectral_transition_general_char,NOT AVAILABLE
-item_category,Spectral_transition_char,NOT AVAILABLE
-item_category,Spectral_transition_contrib,NOT AVAILABLE
-item_category,Assigned_spectral_transition,NOT AVAILABLE
+item_category,Spectral_transition,Items in the spectral_transition category assign a unique identifier to a spectral transition and define the link between the spectral transition and a spectral peak. An example of a spectral transition would be one of the transitions observed in a spectral doublet resulting from scalar coupling.
+item_category,Spectral_transition_general_char,Items in the spectral_transition_general_char category describe the characteristics that are general to the transition.
+item_category,Spectral_transition_char,Items in the spectral_transiition_char category describe characteristics of the spectral transition that are dependent on the dimension of the spectrum.
+item_category,Spectral_transition_contrib,Items in the spectral_transition_contrib category define the percent contribution of a signal to the total intensity of a spectral transition.
+item_category,Assigned_spectral_transition,Items in the assigned_spectral_transition category provide the assignment of the spectral transition to atoms in the molecular system under study.
 item_category,Resonance_linker_list,Items in the resonance_linker_list provide meta information regarding the CCPN system of resonance information used in defining the source of NMR spectral information used to derive peak assignments and various other data. 
 item_category,Resonance,Items in the resonance category provide the parent resonance ID value and links to other categories of the resonance system.
-item_category,Reonance_covalent_link,NOT AVAILABLE
-item_category,Resonance_assignment,NOT AVAILABLE
-item_category,Spin_system,NOT AVAILABLE
-item_category,Spin_system_link,NOT AVAILABLE
+item_category,Reonance_covalent_link,Items in the resonance_covalent_link category define resonances that are linked by covalent bonds.
+item_category,Resonance_assignment,Items in the resonance_assignment category are used to link resonances to specific atoms in the molecular system.
+item_category,Spin_system,Items in the spin_system category define a set of atoms that as a group are link by their nuclear spin interactions.
+item_category,Spin_system_link,Items in the spin_system category define the linkage between the assigned spin systems in the molecular entity.
 item_category,Chem_shift_isotope_effect_list,Items in the chem_shift_isotope_effect_list category provide information about a list of reported chemical shift values that measure the effects of isotopic substitutions in a molecular entity.
 item_category,Isotope_effect_experiment,Items in the isotope_effect_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of chemical shift data that report the effect of isotopic substitutions in a molecular assembly.
 item_category,Isotope_effect_software,Items in the isotope_effect_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
@@ -387,10 +387,10 @@ item_category,Theoretical_heteronucl_T2_list,Items in the theoretical_heteronucl
 item_category,Theoretical_heteronucl_T2_experiment,Items in the theoretical_heteronucl_T2_experiment category may provide pointers to the NMR experiments and samples modeled to generate the data for a set of reported theoretical heteronuclear T2 values.
 item_category,Theoretical_heteronucl_T2_software,Items in the theoretical_heteronucl_T2_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to generate the theoretical data can be found.
 item_category,Theoretical_T2,Items in the theoretical_T2 category capture theoretical T2 relaxation values for defined nuclei.
-item_category,Auto_relaxation_list,NOT AVAILABLE
-item_category,Auto_relaxation_experiment,NOT AVAILABLE
-item_category,Auto_relaxation_software,NOT AVAILABLE
-item_category,Auto_relaxation,NOT AVAILABLE
+item_category,Auto_relaxation_list,Items in the auto_relaxation_list category provide information about a list of reported relaxation parameters.
+item_category,Auto_relaxation_experiment,Items in the auto_relaxation_experiment category contain the links to the NMR experiments used to derive the reported relaxation parameters.
+item_category,Auto_relaxation_software,Items in the auto_relaxation_software category define links to the software tools used to derive the reported relaxation parameters.
+item_category,Auto_relaxation,Items in the auto_relaxation category provide the quantitative values for the reported relaxation parameters and their assignmen to atoms in the molecular system studied.
 item_category,Theoretical_auto_relaxation_list,Items in the theoretical_auto_relaxation_list category provide information about a list of reported theoretical auto relaxation values.
 item_category,Theoretical_auto_relaxation_experiment,Items in the theoretical_auto_relaxation_experiment category may provide pointers to the NMR experiments and samples modeled to generate the data for a set of reported theoretical auto relaxation data.
 item_category,Theoretical_auto_relaxation_software,Items in the theoretical_auto_relaxation_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to generate the theoretical data.
@@ -429,9 +429,9 @@ item_category,Binding_value_list,Items in the binding_value_list category provid
 item_category,Binding_experiment,Items in the binding_experiment category provide pointers to the experiments and samples used to collect the data for a set of reported chemical binding experiments.
 item_category,Binding_software,Items in the binding_software category provide pointers to the software category and methods category where descriptions of software applications and methods used to collect the reported data can be found.
 item_category,Binding_result,Items in the binding_result category describe the binding values that have been determined.
-item_category,Binding_partners,NOT AVAILABLE
-item_category,Binding_param_list,NOT AVAILABLE
-item_category,Binding_param,NOT AVAILABLE
+item_category,Binding_partners,Items in the binding_partners category define the entities in the molecular assembly that are involved in the binding interaction that has been quantitated and reported.
+item_category,Binding_param_list,Items in the binding_param_list category provide details on the list of binding parameter data contained in the save frame.
+item_category,Binding_param,Items in the binding_param category provide the experimental values from a binding experiment used to determine a binding constant.
 item_category,Deduced_secd_struct_list,Items in the deduced_secd_struct_list category provide information about a list of reported secondary structure elements deduced from experimental data and not from a calculated structure.
 item_category,Deduced_secd_struct_experiment,Items in the deduced_secd_struct_experiment category provide pointers to the NMR experiments and samples used to derive the data.
 item_category,Deduced_secd_struct_software,Items in the deduced_secd_struct_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
@@ -452,13 +452,13 @@ item_category,Energetic_penalty_function,Items in the energetic_penalty_function
 item_category,Conformer_family_coord_set_expt,Items in the conformer_family_coord_set_expt category provide pointers to the NMR experiments and samples used to collect the data for a set of molecular conformers.
 item_category,Conf_family_coord_set_constr_list,Items in the conf_family_coord_set_constr_list category provide pointers to the sets of constraints that were used to calculate the reported family of conformers.
 item_category,Struct_image,Items in the struct_image category define the name of an electronic file and its format that contains an image of the structure(s) reported.
-item_category,Local_structure_quality,NOT AVAILABLE
-item_category,Model_type,NOT AVAILABLE
+item_category,Local_structure_quality,Items in the local_structure_quality category define regions of a reported structure that are well defined by the experimental data and those that may ill-defined.
+item_category,Model_type,Items in the model_type category define the characteristic of a specific model relative to other models in a set of models in the entry.
 item_category,Atom_site,"Data items in the atom_site category record details about the atom sites in a macromolecular structure, such as the positional coordinates, atomic displacement parameters, magnetic moments and directions."
 item_category,Atom_sites_footnote,Data items in the atom_sites_footnote category record detailed comments about an atom site or a group of atom sites.
 item_category,Representative_conformer,Items in the representative_conformer category provide meta data regarding the representative conformer atomic coordinates.
 item_category,Rep_conf_refinement,Items in the rep_conf_refinement category describe the refinement methods used in calculating the atomic coordinates for the reported representative conformer.
-item_category,Rep_conf_software,NOT AVAILABLE
+item_category,Rep_conf_software,Items in the rep_conf_software category provide links to the software used to create or define the representative conformer.
 item_category,Terminal_residue,Items in the terminal_residue category define the terminal residue for each molecular entity in the representative conformer. 
 item_category,Rep_conf,Items in the rep_conf category provide the atomic coordinates for the reported representative conformer.
 item_category,Rep_coordinate_details,Items in the rep_coordinate_details provide additional information about individual atomic coordinates in the reported representative conformer.
@@ -475,10 +475,10 @@ item_category,Angular_order_param,Items in the angular_order_param category defi
 item_category,Tertiary_struct_element_list,Items in the tertiary_struct_element_list category provide information about a list of reported annotations for tertiary structural elements found in the structure of a molecular assembly.
 item_category,Tertiary_struct_element_sel,Items in the tertiary_struct_element_sel category provide pointers to the methods used to identify tertiary structural elements in the reported conformers.
 item_category,Tertiary_struct,Items in the tertiary_struct category define the types and locations of the tertiary structure elements described for the reported conformers.
-item_category,Structure_annotation,NOT AVAILABLE
-item_category,Struct_anno_software,NOT AVAILABLE
-item_category,Struct_classification,NOT AVAILABLE
-item_category,Struct_anno_char,NOT AVAILABLE
+item_category,Structure_annotation,Items in the structure_annotation category are used to annotate the characteristics of a reported structure.
+item_category,Struct_anno_software,Items in the struct_anno_software category provide links to software used to analyze a set of structure coordinates and generate annotations.
+item_category,Struct_classification,Items in the struct_classification category provide information about a structures classification according to the guidelines established by community standards.
+item_category,Struct_anno_char,Items in the struct_anno_char category define specific characteristics assigned to a reported structure at the level of residue$ fragment$ entity$ or whole moleccular system.
 item_category,Secondary_struct_list,Items in the secondary_struct_list category provide information about a list of reported annotations for secondary structural elements found in the structure of a molecular assembly.
 item_category,Secondary_struct_sel,Items in the secondary_struct_sel category provide pointers to the methods used to identify secondary structure elements in the reported conformers.
 item_category,Secondary_struct,Items in the secondary_struct category define the types and locations of the secondary structure elements in the reported conformers.
@@ -490,19 +490,19 @@ item_category,Structure_interaction,Items in the structure_interaction category 
 item_category,Observed_conformer,Items in the observed_conformer category define the individual conformer(s) where the reported interactions are observed.
 item_category,Other_struct_feature_list,Items in the other_struct_feature_list category provide information about a list of reported structure features for a molecular assembly.
 item_category,Other_struct_feature,Items in the other_struct_feature category define the type of structure feature described and its location in the three-dimensional structure reported.
-item_category,Tensor_list,NOT AVAILABLE
-item_category,Tensor,NOT AVAILABLE
-item_category,Interatomic_distance_list,NOT AVAILABLE
-item_category,Interatomic_dist,NOT AVAILABLE
-item_category,Gen_dist_constraint_list,NOT AVAILABLE
-item_category,Gen_dist_constraint_expt,NOT AVAILABLE
-item_category,Gen_dist_constraint_software,NOT AVAILABLE
-item_category,Gen_dist_constraint_software_param,NOT AVAILABLE
-item_category,Gen_dist_constraint,NOT AVAILABLE
-item_category,Gen_dist_constraint_comment_org,NOT AVAILABLE
-item_category,Gen_dist_constraint_parse_err,NOT AVAILABLE
-item_category,Gen_dist_constraint_parse_file,NOT AVAILABLE
-item_category,Gen_dist_constraint_conv_err,NOT AVAILABLE
+item_category,Tensor_list,Items in the tensor_list category are used to describe the tensors listed in the save frame.
+item_category,Tensor,Items in the tensor category define one or more tensors.
+item_category,Interatomic_distance_list,Items in the interatomic_distance_list category are used to describe the list of interatomic distance values provided in the save frame.
+item_category,Interatomic_dist,Items in the interatomic_dist category define the distances between atoms in a structure.
+item_category,Gen_dist_constraint_list,Items in the gen_dist_constraint_list category provide information about a list of distance restraints.
+item_category,Gen_dist_constraint_expt,Items in the gen_dist_constraint_expt category define links to the experiments used to generate the data for producing the distance constraints.
+item_category,Gen_dist_constraint_software,Items in the gen_dist_constraint_software category provide pointers to the software used to generate the distance constraints.
+item_category,Gen_dist_constraint_software_param,Items in the gen_dist_constraint_software_param category provide a list of parameters and their values used with the software that generated the distance constraints.
+item_category,Gen_dist_constraint,Items in the gen_dist_constraint category define the atoms associated with a specific distance constraint value.
+item_category,Gen_dist_constraint_comment_org,Items in the gen_dist_constraint_comment_org category provide original comments extracted from constraint files containing distance constraint values.
+item_category,Gen_dist_constraint_parse_err,Items in the gen_dist_constraint_parse_err category define the content and position of a segment of a distance constraint file that could not be parsed into NMR-STAR format.
+item_category,Gen_dist_constraint_parse_file,Items in the gen_dist_constraint_parse_file category define the files parsed to generate the NMR-STAR file.
+item_category,Gen_dist_constraint_conv_err,Items in the gen_dist_constraint_conv_err category describe errors that occurred in converting the constraints to normalize the data with the atomic coordinates.
 item_category,Distance_constraint_list,Items in the distance_constraint_list category provide information about a list of reported distance constraint values.
 item_category,Distance_constraint_expt,Items in the distance_constraint_expt category provide pointers to the NMR experiments and samples used to collect the data for a set of reported distance constraints.
 item_category,Distance_constraint_software,Items in the distance_constraint_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
@@ -546,14 +546,14 @@ item_category,H_chem_shift_constraint_list,Items in the H_chem_shift_constraint_
 item_category,H_chem_shift_constraint_expt,Items in the H_chem_shift_constraint_expt category provide pointers to the NMR experiments and samples used to collect the data for a set of reported 1H chemical shift constraints.
 item_category,H_chem_shift_constraint_software,Items in the H_chem_shift_constraint_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,H_chem_shift_constraint,Items in the H_chem_shift_constraint category describe the 1H chemical shift value used as a constraint in calculating the structure of a molecular assembly.
-item_category,SAXS_constraint_list,NOT AVAILABLE
-item_category,SAXS_constraint_expt,NOT AVAILABLE
-item_category,SAXS_constraint_software,NOT AVAILABLE
-item_category,SAXS_constraint,NOT AVAILABLE
+item_category,SAXS_constraint_list,Items in the SAXS_constraint_list category provide information about the list of reported SAXS constraint data.
+item_category,SAXS_constraint_expt,Items in the SAXS_constraint_expt category provide pointers to the SAXS experiments used to collect the data reported in the save frame.
+item_category,SAXS_constraint_software,Items in the SAXS_constraint_software category provide the links to the software used to process and analyze the SAXS data.
+item_category,SAXS_constraint,Items in the SAXS_constraint category define the SAXS data values.
 item_category,Other_constraint_list,Items in the other_constraint_list category provide information about a list of reported constraint values that do not fit in any of the specifically defined constraint categories.
 item_category,Other_constraint_expt,Items in the other_constraint_expt category provide pointers to the NMR experiments and samples used to collect the data for a set of reported constraints.
 item_category,Other_constraint_software,Items in the other_constraint_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
-item_category,Org_constr_file_comment,NOT AVAILABLE
+item_category,Org_constr_file_comment,Items in the org_constr_file_comment provide a place to capture comments extracted from parsed original deposited constraint files.
 item_category,MZ_ratio_data_list,NOT AVAILABLE
 item_category,MZ_ratio_experiment,NOT AVAILABLE
 item_category,MZ_ratio_software,NOT AVAILABLE
