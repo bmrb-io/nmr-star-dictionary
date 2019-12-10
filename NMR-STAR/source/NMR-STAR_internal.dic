@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-12-05
+#  version date -  2019-12-10
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.2.0
+    _dictionary.version         3.2.3.0
 
      loop_
        _dictionary_history.version
@@ -721,6 +721,12 @@ Categories that capture the MZ data from a mass spectrometry experiment.
 'inclusive_group'
 ;
 Categories that capture the data from a MS chromatogram.
+;
+
+'applied_software_history'
+'inclusive_group'
+;
+NOT AVAILABLE
 ;
 
      stop_
@@ -4472,8 +4478,8 @@ BMRB accession number for this entry
   '_H_chem_shift_constraint_expt.Entry_ID'               'H_chem_shift_constraint_expt'                      yes
   '_H_chem_shift_constraint_software.Entry_ID'           'H_chem_shift_constraint_software'                  yes
   '_H_chem_shift_constraint.Entry_ID'                    'H_chem_shift_constraint'       yes
-  '_Experimental_data_constraint_link_list.Entry_ID'                                     'Experimental_data_constraint_link_list'            yes
-  '_Experimental_data_constraint_link.Entry_ID'          'Experimental_data_constraint_link'                 yes
+  '_Peak_constraint_link_list.Entry_ID'                  'Peak_constraint_link_list'                         yes
+  '_Peak_constraint_link.Entry_ID'                       'Peak_constraint_link'          yes
   '_SAXS_constraint_list.Entry_ID'                       'SAXS_constraint_list'          yes
   '_SAXS_constraint_expt.Entry_ID'                       'SAXS_constraint_expt'          yes
   '_SAXS_constraint_software.Entry_ID'                   'SAXS_constraint_software'      yes
@@ -4787,8 +4793,8 @@ BMRB accession number for this entry
   '_H_chem_shift_constraint_expt.Entry_ID'               '_Entry.ID'
   '_H_chem_shift_constraint_software.Entry_ID'           '_Entry.ID'
   '_H_chem_shift_constraint.Entry_ID'                    '_Entry.ID'
-  '_Experimental_data_constraint_link_list.Entry_ID'                                     '_Entry.ID'
-  '_Experimental_data_constraint_link.Entry_ID'          '_Entry.ID'
+  '_Peak_constraint_link_list.Entry_ID'                  '_Entry.ID'
+  '_Peak_constraint_link.Entry_ID'                       '_Entry.ID'
   '_SAXS_constraint_list.Entry_ID'                       '_Entry.ID'
   '_SAXS_constraint_expt.Entry_ID'                       '_Entry.ID'
   '_SAXS_constraint_software.Entry_ID'                   '_Entry.ID'
@@ -12796,7 +12802,7 @@ save_
 save_Reference_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the reference_list category capture information related to all references listed in the save frame.
 ;
    _category.id                   'Reference_list'
    _category.mandatory_code       yes
@@ -12931,7 +12937,7 @@ save_
 save_Reference
    _category.description
 ;
-NOT AVAILABLE
+Items in the reference category define information for each reference in the list.
 ;
    _category.id                   'Reference'
    _category.mandatory_code       yes
@@ -43592,7 +43598,7 @@ save_
 save_Experiment_file
    _category.description
 ;
-NOT AVAILABLE
+Items in the experiment_file category provide the name of a file containing information for an experiment and the contents of the file.
 ;
    _category.id                   'Experiment_file'
 
@@ -44283,7 +44289,7 @@ save_
 save_NMR_expt_systematic_name
    _category.description
 ;
-NOT AVAILABLE
+Items in the NMR_expt_systematic_name category provide a name for an NMR experiment that is derived from a systematic naming system and the system used.
 ;
    _category.id                   'NMR_expt_systematic_name'
 
@@ -45685,7 +45691,7 @@ save_
 save_MS_expt
    _category.description
 ;
-NOT AVAILABLE
+Items in the MS_expt category provide detailed information on a mass spec experiment.
 ;
    _category.id                   'MS_expt'
 
@@ -45892,7 +45898,7 @@ save_
 save_MS_expt_param
    _category.description
 ;
-NOT AVAILABLE
+Items in the MS_expt_param category capture details about the parameters used to carry out a mass spec experiment.
 ;
    _category.id                   'MS_expt_param'
 
@@ -46057,7 +46063,7 @@ save_
 save_MS_expt_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the MS_expt_software category provide details on the software used in carring out a mass spec experiment.
 ;
    _category.id                   'MS_expt_software'
 
@@ -46203,7 +46209,7 @@ save_
 save_FRET_expt
    _category.description
 ;
-NOT AVAILABLE
+Items in the FRET_expt category provide detailed information on a fluorescence resonance energy transfer experiment.
 ;
    _category.id                   'FRET_expt'
 
@@ -46471,7 +46477,7 @@ save_
 save_EMR_expt
    _category.description
 ;
-NOT AVAILABLE
+Items in the EMR_expt category provide detailed information on an electron magnetic resonance experiment.
 ;
    _category.id                   'EMR_expt'
 
@@ -46748,7 +46754,7 @@ save_
 save_SAXS_expt
    _category.description
 ;
-NOT AVAILABLE
+Items in the SAXS_expt category provide detailed information on a small angle X-ray scattering experiment.
 ;
    _category.id                   'SAXS_expt'
 
@@ -55618,6 +55624,7 @@ Unique identifier for the spectral peak.
   '_Assigned_spectral_transition.Peak_ID'                'Assigned_spectral_transition'                      yes
   '_Gen_dist_constraint.Spectral_peak_ID'                'Gen_dist_constraint'           yes
   '_Dist_constraint_value.Spectral_peak_ID'              'Dist_constraint_value'         yes
+  '_Peak_constraint_link.Peak_ID'                        'Peak_constraint_link'          yes
 
   stop_
 
@@ -55635,6 +55642,7 @@ Unique identifier for the spectral peak.
   '_Assigned_spectral_transition.Peak_ID'                '_Peak.ID'
   '_Gen_dist_constraint.Spectral_peak_ID'                '_Peak.ID'
   '_Dist_constraint_value.Spectral_peak_ID'              '_Peak.ID'
+  '_Peak_constraint_link.Peak_ID'                        '_Peak.ID'
 
   stop_
 
@@ -56804,14 +56812,14 @@ The measured volume of the peak.
 
 save_
 
-save__Peak_row_format.Volume_err
+save__Peak_row_format.Volume_uncertainty
 
    _item_description.description
 ;
 The uncertainty in the measured volume of the peak
 ;
 
-   _item.name                                  '_Peak_row_format.Volume_err'
+   _item.name                                  '_Peak_row_format.Volume_uncertainty'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -56834,14 +56842,14 @@ The measured height of the peak.
 
 save_
 
-save__Peak_row_format.Height_err
+save__Peak_row_format.Height_uncertainty
 
    _item_description.description
 ;
 The uncertainty in the measured height of the peak.
 ;
 
-   _item.name                                  '_Peak_row_format.Height_err'
+   _item.name                                  '_Peak_row_format.Height_uncertainty'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -56896,14 +56904,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_1
+save__Peak_row_format.Position_uncertainty_1
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_1'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_1'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -56926,14 +56934,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_1
+save__Peak_row_format.Line_width_uncertainty_1
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_1'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_1'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -56956,14 +56964,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_2
+save__Peak_row_format.Position_uncertainty_2
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_2'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_2'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -56986,14 +56994,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_2
+save__Peak_row_format.Line_width_uncertainty_2
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_2'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_2'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57016,14 +57024,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_3
+save__Peak_row_format.Position_uncertainty_3
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_3'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_3'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57046,14 +57054,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_3
+save__Peak_row_format.Line_width_uncertainty_3
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_3'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_3'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57076,14 +57084,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_4
+save__Peak_row_format.Position_uncertainty_4
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_4'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_4'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57106,14 +57114,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_4
+save__Peak_row_format.Line_width_uncertainty_4
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_4'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_4'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57136,14 +57144,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_5
+save__Peak_row_format.Position_uncertainty_5
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_5'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_5'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57166,14 +57174,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_5
+save__Peak_row_format.Line_width_uncertainty_5
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_5'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_5'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57196,14 +57204,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_6
+save__Peak_row_format.Position_uncertainty_6
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_6'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_6'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57226,14 +57234,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_6
+save__Peak_row_format.Line_width_uncertainty_6
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_6'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_6'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57256,14 +57264,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_7
+save__Peak_row_format.Position_uncertainty_7
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_7'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_7'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57286,14 +57294,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_7
+save__Peak_row_format.Line_width_uncertainty_7
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_7'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_7'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57316,14 +57324,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_8
+save__Peak_row_format.Position_uncertainty_8
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_8'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_8'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57346,14 +57354,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_8
+save__Peak_row_format.Line_width_uncertainty_8
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_8'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_8'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57376,14 +57384,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_9
+save__Peak_row_format.Position_uncertainty_9
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_9'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_9'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57406,14 +57414,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_9
+save__Peak_row_format.Line_width_uncertainty_9
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_9'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_9'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57436,14 +57444,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_10
+save__Peak_row_format.Position_uncertainty_10
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_10'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_10'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57466,14 +57474,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_10
+save__Peak_row_format.Line_width_uncertainty_10
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_10'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_10'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57496,14 +57504,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_11
+save__Peak_row_format.Position_uncertainty_11
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_11'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_11'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57526,14 +57534,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_11
+save__Peak_row_format.Line_width_uncertainty_11
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_11'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_11'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57556,14 +57564,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_12
+save__Peak_row_format.Position_uncertainty_12
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_12'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_12'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57586,14 +57594,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_12
+save__Peak_row_format.Line_width_uncertainty_12
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_12'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_12'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57616,14 +57624,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_13
+save__Peak_row_format.Position_uncertainty_13
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_13'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_13'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57646,14 +57654,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_13
+save__Peak_row_format.Line_width_uncertainty_13
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_13'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_13'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57676,14 +57684,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_14
+save__Peak_row_format.Position_uncertainty_14
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_14'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_14'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57706,14 +57714,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_14
+save__Peak_row_format.Line_width_uncertainty_14
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_14'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_14'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57736,14 +57744,14 @@ Peak chemical shift value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Position_err_15
+save__Peak_row_format.Position_uncertainty_15
 
    _item_description.description
 ;
 Peak chemical shift value error
 ;
 
-   _item.name                                  '_Peak_row_format.Position_err_15'
+   _item.name                                  '_Peak_row_format.Position_uncertainty_15'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -57766,14 +57774,14 @@ Peak line width value for this dimension in the spectrum
 
 save_
 
-save__Peak_row_format.Line_width_err_15
+save__Peak_row_format.Line_width_uncertainty_15
 
    _item_description.description
 ;
 Peak line width value error
 ;
 
-   _item.name                                  '_Peak_row_format.Line_width_err_15'
+   _item.name                                  '_Peak_row_format.Line_width_uncertainty_15'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -61714,7 +61722,7 @@ save_
 save_Spectral_transition
    _category.description
 ;
-NOT AVAILABLE
+Items in the spectral_transition category assign a unique identifier to a spectral transition and define the link between the spectral transition and a spectral peak. An example of a spectral transition would be one of the transitions observed in a spectral doublet resulting from scalar coupling.
 ;
    _category.id                   'Spectral_transition'
 
@@ -61865,7 +61873,7 @@ save_
 save_Spectral_transition_general_char
    _category.description
 ;
-NOT AVAILABLE
+Items in the spectral_transition_general_char category describe the characteristics that are general to the transition.
 ;
    _category.id                   'Spectral_transition_general_char'
 
@@ -62033,7 +62041,7 @@ save_
 save_Spectral_transition_char
    _category.description
 ;
-NOT AVAILABLE
+Items in the spectral_transiition_char category describe characteristics of the spectral transition that are dependent on the dimension of the spectrum.
 ;
    _category.id                   'Spectral_transition_char'
 
@@ -62337,7 +62345,7 @@ save_
 save_Assigned_spectral_transition
    _category.description
 ;
-NOT AVAILABLE
+Items in the assigned_spectral_transition category provide the assignment of the spectral transition to atoms in the molecular system under study.
 ;
    _category.id                   'Assigned_spectral_transition'
 
@@ -63246,7 +63254,7 @@ save_
 save_Resonance_assignment
    _category.description
 ;
-NOT AVAILABLE
+Items in the resonance_assignment category are used to link resonances to specific atoms in the molecular system.
 ;
    _category.id                   'Resonance_assignment'
 
@@ -63486,7 +63494,7 @@ save_
 save_Spin_system
    _category.description
 ;
-NOT AVAILABLE
+Items in the spin_system category define a set of atoms that as a group are link by their nuclear spin interactions.
 ;
    _category.id                   'Spin_system'
 
@@ -63653,7 +63661,7 @@ save_
 save_Spin_system_link
    _category.description
 ;
-NOT AVAILABLE
+Items in the spin_system category define the linkage between the assigned spin systems in the molecular entity.
 ;
    _category.id                   'Spin_system_link'
 
@@ -84329,7 +84337,7 @@ save_
 save_Auto_relaxation_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the auto_relaxation_list category provide information about a list of reported relaxation parameters.
 ;
    _category.id                   'Auto_relaxation_list'
 
@@ -84853,7 +84861,7 @@ save_
 save_Auto_relaxation_experiment
    _category.description
 ;
-NOT AVAILABLE
+Items in the auto_relaxation_experiment category contain the links to the NMR experiments used to derive the reported relaxation parameters.
 ;
    _category.id                   'Auto_relaxation_experiment'
 
@@ -85011,7 +85019,7 @@ save_
 save_Auto_relaxation_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the auto_relaxation_software category define links to the software tools used to derive the reported relaxation parameters.
 ;
    _category.id                   'Auto_relaxation_software'
 
@@ -85142,7 +85150,7 @@ save_
 save_Auto_relaxation
    _category.description
 ;
-NOT AVAILABLE
+Items in the auto_relaxation category provide the quantitative values for the reported relaxation parameters and their assignmen to atoms in the molecular system studied.
 ;
    _category.id                   'Auto_relaxation'
 
@@ -97944,7 +97952,7 @@ save_
 save_Binding_partners
    _category.description
 ;
-NOT AVAILABLE
+Items in the binding_partners category define the entities in the molecular assembly that are involved in the binding interaction that has been quantitated and reported.
 ;
    _category.id                   'Binding_partners'
 
@@ -98106,7 +98114,7 @@ save_
 save_Binding_param_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the binding_param_list category provide details on the list of binding parameter data contained in the save frame.
 ;
    _category.id                   'Binding_param_list'
 
@@ -98378,7 +98386,7 @@ save_
 save_Binding_param
    _category.description
 ;
-NOT AVAILABLE
+Items in the binding_param category provide the experimental values from a binding experiment used to determine a binding constant.
 ;
    _category.id                   'Binding_param'
 
@@ -104512,7 +104520,7 @@ save_
 save_Local_structure_quality
    _category.description
 ;
-NOT AVAILABLE
+Items in the local_structure_quality category define regions of a reported structure that are well defined by the experimental data and those that may ill-defined.
 ;
    _category.id                   'Local_structure_quality'
 
@@ -104776,7 +104784,7 @@ save_
 save_Model_type
    _category.description
 ;
-NOT AVAILABLE
+Items in the model_type category define the characteristic of a specific model relative to other models in a set of models in the entry.
 ;
    _category.id                   'Model_type'
 
@@ -106427,7 +106435,7 @@ save_
 save_Rep_conf_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the rep_conf_software category provide links to the software used to create or define the representative conformer.
 ;
    _category.id                   'Rep_conf_software'
 
@@ -107023,14 +107031,14 @@ The standard uncertainty (estimated standard deviation) of '_Rep_conf.Atom_cartn
 
 save_
 
-save__Rep_conf.Atom_position_err
+save__Rep_conf.Atom_position_uncertainty
 
    _item_description.description
 ;
 A value for the overall uncertainty in the reported atom coordinates.
 ;
 
-   _item.name                                  '_Rep_conf.Atom_position_err'
+   _item.name                                  '_Rep_conf.Atom_position_uncertainty'
    _item.category_id                           'Rep_conf'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -112739,7 +112747,7 @@ save_
 save_Structure_annotation
    _category.description
 ;
-NOT AVAILABLE
+Items in the structure_annotation category are used to annotate the characteristics of a reported structure.
 ;
    _category.id                   'Structure_annotation'
 
@@ -112999,7 +113007,7 @@ save_
 save_Struct_anno_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the struct_anno_software category provide links to software used to analyze a set of structure coordinates and generate annotations.
 ;
    _category.id                   'Struct_anno_software'
 
@@ -113130,7 +113138,7 @@ save_
 save_Struct_classification
    _category.description
 ;
-NOT AVAILABLE
+Items in the struct_classification category provide information about a structures classification according to the guidelines established by community standards.
 ;
    _category.id                   'Struct_classification'
 
@@ -113323,7 +113331,7 @@ save_
 save_Struct_anno_char
    _category.description
 ;
-NOT AVAILABLE
+Items in the struct_anno_char category define specific characteristics assigned to a reported structure at the level of residue, fragment, entity, or whole moleccular system.
 ;
    _category.id                   'Struct_anno_char'
 
@@ -116486,7 +116494,7 @@ save_
 save_Tensor_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the tensor_list category are used to describe the tensors listed in the save frame.
 ;
    _category.id                   'Tensor_list'
 
@@ -116836,7 +116844,7 @@ save_
 save_Tensor
    _category.description
 ;
-NOT AVAILABLE
+Items in the tensor category define one or more tensors.
 ;
    _category.id                   'Tensor'
 
@@ -117689,7 +117697,7 @@ save_
 save_Interatomic_distance_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the interatomic_distance_list category are used to describe the list of interatomic distance values provided in the save frame.
 ;
    _category.id                   'Interatomic_distance_list'
 
@@ -117906,7 +117914,7 @@ save_
 save_Interatomic_dist
    _category.description
 ;
-NOT AVAILABLE
+Items in the interatomic_dist category define the distances between atoms in a structure.
 ;
    _category.id                   'Interatomic_dist'
 
@@ -118460,7 +118468,7 @@ save_
 save_Gen_dist_constraint_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_list category provide information about a list of distance restraints.
 ;
    _category.id                   'Gen_dist_constraint_list'
 
@@ -118801,7 +118809,7 @@ save_
 save_Gen_dist_constraint_expt
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_expt category define links to the experiments used to generate the data for producing the distance constraints.
 ;
    _category.id                   'Gen_dist_constraint_expt'
 
@@ -118989,7 +118997,7 @@ save_
 save_Gen_dist_constraint_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_software category provide pointers to the software used to generate the distance constraints.
 ;
    _category.id                   'Gen_dist_constraint_software'
 
@@ -119120,7 +119128,7 @@ save_
 save_Gen_dist_constraint_software_param
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_software_param category provide a list of parameters and their values used with the software that generated the distance constraints.
 ;
    _category.id                   'Gen_dist_constraint_software_param'
 
@@ -119272,7 +119280,7 @@ save_
 save_Gen_dist_constraint
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint category define the atoms associated with a specific distance constraint value.
 ;
    _category.id                   'Gen_dist_constraint'
 
@@ -119775,14 +119783,14 @@ The target value for the distance constraint value.
 
 save_
 
-save__Gen_dist_constraint.Target_val_err
+save__Gen_dist_constraint.Target_val_uncertainty
 
    _item_description.description
 ;
 The uncertainty in the target value for the distance constraint value.
 ;
 
-   _item.name                                  '_Gen_dist_constraint.Target_val_err'
+   _item.name                                  '_Gen_dist_constraint.Target_val_uncertainty'
    _item.category_id                           'Gen_dist_constraint'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -120626,7 +120634,7 @@ save_
 save_Gen_dist_constraint_comment_org
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_comment_org category provide original comments extracted from constraint files containing distance constraint values.
 ;
    _category.id                   'Gen_dist_constraint_comment_org'
 
@@ -120788,7 +120796,7 @@ save_
 save_Gen_dist_constraint_parse_err
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_parse_err category define the content and position of a segment of a distance constraint file that could not be parsed into NMR-STAR format.
 ;
    _category.id                   'Gen_dist_constraint_parse_err'
 
@@ -120950,7 +120958,7 @@ save_
 save_Gen_dist_constraint_parse_file
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_parse_file category define the files parsed to generate the NMR-STAR file.
 ;
    _category.id                   'Gen_dist_constraint_parse_file'
 
@@ -121066,7 +121074,7 @@ save_
 save_Gen_dist_constraint_conv_err
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_conv_err category describe errors that occurred in converting the constraints to normalize the data with the atomic coordinates.
 ;
    _category.id                   'Gen_dist_constraint_conv_err'
 
@@ -129246,7 +129254,7 @@ The target value applied for this residual dipolar coupling constraint.
 
 save_
 
-save__RDC_constraint.Target_value_err
+save__RDC_constraint.Target_value_uncertainty
 
    _item_description.description
 ;
@@ -129254,7 +129262,7 @@ The uncertainty in the target value applied for this residual dipolar coupling
 constraint.
 ;
 
-   _item.name                                  '_RDC_constraint.Target_value_err'
+   _item.name                                  '_RDC_constraint.Target_value_uncertainty'
    _item.category_id                           'RDC_constraint'
    _item.mandatory_code                         no
    _item_type.code                             'float'
@@ -135403,18 +135411,18 @@ Pointer to '_H_chem_shift_constraint_list.ID'
 
 save_
 
-save_Experimental_data_constraint_link_list
+save_Peak_constraint_link_list
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'Experimental_data_constraint_link_list'
+   _category.id                   'Peak_constraint_link_list'
 
    loop_
      _category_key.name
 
-     '_Experimental_data_constraint_link_list.Entry_ID'
-     '_Experimental_data_constraint_link_list.ID'
+     '_Peak_constraint_link_list.Entry_ID'
+     '_Peak_constraint_link_list.ID'
 
    stop_
 
@@ -135422,63 +135430,63 @@ save_Experimental_data_constraint_link_list
      _category_group.id
 
      'inclusive_group'
-     'experimental_data_constraint_links'
+     'peak_constraint_links'
 
    stop_
 
 save_
 
-save__Experimental_data_constraint_link_list.Sf_category
+save__Peak_constraint_link_list.Sf_category
 
    _item_description.description
 ;
-Category definition for the information content of the save frame
+Category definition for the information content of the saveframe
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link_list.Sf_category'
-   _item.category_id                           'Experimental_data_constraint_link_list'
+   _item.name                                  '_Peak_constraint_link_list.Sf_category'
+   _item.category_id                           'Peak_constraint_link_list'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__Experimental_data_constraint_link_list.Sf_framecode
+save__Peak_constraint_link_list.Sf_framecode
 
    _item_description.description
 ;
-A label for the save frame that describes in very brief terms the information 
-contained in the save frame.
+A label for the saveframe that describes in very brief terms the information 
+contained in the saveframe.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link_list.Sf_framecode'
-   _item.category_id                           'Experimental_data_constraint_link_list'
+   _item.name                                  '_Peak_constraint_link_list.Sf_framecode'
+   _item.category_id                           'Peak_constraint_link_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
 
 
 save_
 
-save__Experimental_data_constraint_link_list.Entry_ID
+save__Peak_constraint_link_list.Entry_ID
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link_list.Entry_ID'
-   _item.category_id                           'Experimental_data_constraint_link_list'
+   _item.name                                  '_Peak_constraint_link_list.Entry_ID'
+   _item.category_id                           'Peak_constraint_link_list'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__Experimental_data_constraint_link_list.Sf_ID
+save__Peak_constraint_link_list.Sf_ID
 
    _item_description.description
 ;
-An interger value that is the unique identifier for the save frame that 
+An interger value that is the unique identifier for the saveframe that 
 applies across the archive.  This value is not stable and may be reassigned each 
 time the data are loaded into a database system.
 ;
@@ -135488,7 +135496,7 @@ time the data are loaded into a database system.
       _item.category_id
       _item.mandatory_code
 
-  '_Experimental_data_constraint_link_list.Sf_ID'                           'Experimental_data_constraint_link_list'  yes
+  '_Peak_constraint_link_list.Sf_ID'                     'Peak_constraint_link_list'               yes
 
   stop_
 
@@ -135505,7 +135513,7 @@ time the data are loaded into a database system.
 
 save_
 
-save__Experimental_data_constraint_link_list.ID
+save__Peak_constraint_link_list.ID
 
    _item_description.description
 ;
@@ -135517,8 +135525,8 @@ Unique identifier for the reported list of linked spectral peaks and constraints
       _item.category_id
       _item.mandatory_code
 
-  '_Experimental_data_constraint_link_list.ID'           'Experimental_data_constraint_link_list'  yes
-  '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'         'Experimental_data_constraint_link'                 yes
+  '_Peak_constraint_link_list.ID'                        'Peak_constraint_link_list'               yes
+  '_Peak_constraint_link.Peak_constraint_link_list_ID'                                   'Peak_constraint_link'          yes
 
   stop_
 
@@ -135526,7 +135534,7 @@ Unique identifier for the reported list of linked spectral peaks and constraints
       _item_linked.child_name
       _item_linked.parent_name
 
-  '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'         '_Experimental_data_constraint_link_list.ID'
+  '_Peak_constraint_link.Peak_constraint_link_list_ID'                                   '_Peak_constraint_link_list.ID'
 
   stop_
 
@@ -135535,50 +135543,34 @@ Unique identifier for the reported list of linked spectral peaks and constraints
 
 save_
 
-save__Experimental_data_constraint_link_list.Name
+save__Peak_constraint_link_list.Name
 
    _item_description.description
 ;
 A name assigned to the save frame.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link_list.Name'
-   _item.category_id                           'Experimental_data_constraint_link_list'
+   _item.name                                  '_Peak_constraint_link_list.Name'
+   _item.category_id                           'Peak_constraint_link_list'
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
 
 save_
 
-save__Experimental_data_constraint_link_list.Details
-
-   _item_description.description
-;
-The 'details' item is used to provide additional information about the 
-data reported in the save frame.
-;
-
-   _item.name                                  '_Experimental_data_constraint_link_list.Details'
-   _item.category_id                           'Experimental_data_constraint_link_list'
-   _item.mandatory_code                         no
-   _item_type.code                             'text'
-
-
-save_
-
-save_Experimental_data_constraint_link
+save_Peak_constraint_link
    _category.description
 ;
               category description not available
 ;
-   _category.id                   'Experimental_data_constraint_link'
+   _category.id                   'Peak_constraint_link'
 
    loop_
      _category_key.name
 
-     '_Experimental_data_constraint_link.ID'
-     '_Experimental_data_constraint_link.Entry_ID'
-     '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'
+     '_Peak_constraint_link.ID'
+     '_Peak_constraint_link.Entry_ID'
+     '_Peak_constraint_link.Peak_constraint_link_list_ID'
 
    stop_
 
@@ -135586,28 +135578,28 @@ save_Experimental_data_constraint_link
      _category_group.id
 
      'inclusive_group'
-     'experimental_data_constraint_links'
+     'peak_constraint_links'
 
    stop_
 
 save_
 
-save__Experimental_data_constraint_link.ID
+save__Peak_constraint_link.ID
 
    _item_description.description
 ;
 Unique identifier for the linked spectral peak and constraint.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__Experimental_data_constraint_link.Experimental_data_list_Sf_framecode
+save__Peak_constraint_link.Spectral_Peak_list_Sf_framecode
 
    _item_description.description
 ;
@@ -135615,15 +135607,15 @@ A pointer to the Sf_framecode for the save frame where the spectral peak
 list is found.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_list_Sf_framecode'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Spectral_Peak_list_Sf_framecode'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
 
 
 save_
 
-save__Experimental_data_constraint_link.Experimental_data_list_Sf_category
+save__Peak_constraint_link.Spectral_peak_list_Sf_category
 
    _item_description.description
 ;
@@ -135631,8 +135623,8 @@ The category for the spectral peak list. This value is the same for all
 spectral peak list save frames.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_list_Sf_category'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Spectral_peak_list_Sf_category'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
@@ -135650,69 +135642,37 @@ spectral peak list save frames.
 
 save_
 
-save__Experimental_data_constraint_link.Experimental_data_list_ID
+save__Peak_constraint_link.Spectral_peak_list_ID
 
    _item_description.description
 ;
 A pointer to the unique ID for the save frame of category 'spectral_peak_list'.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_list_ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Spectral_peak_list_ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__Experimental_data_constraint_link.Experimental_data_list_label
-
-   _item_description.description
-;
-A label for the save frame for the experimental data that is being linked 
-to the derived structural constraint.
-;
-
-   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_list_label'
-   _item.category_id                           'Experimental_data_constraint_link'
-   _item.mandatory_code                         no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__Experimental_data_constraint_link.Experimental_data_item_category
-
-   _item_description.description
-;
-The item or tag category (table name) where the linked experimental data 
-item is located.
-;
-
-   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_item_category'
-   _item.category_id                           'Experimental_data_constraint_link'
-   _item.mandatory_code                         no
-   _item_type.code                             'line'
-
-
-save_
-
-save__Experimental_data_constraint_link.Expt_data_ID
+save__Peak_constraint_link.Peak_ID
 
    _item_description.description
 ;
 A pointer to the tag '_Peak.ID' in the specified spectral peak list save frame.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Expt_data_ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Peak_ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__Experimental_data_constraint_link.Constraint_Sf_framecode
+save__Peak_constraint_link.Constraint_Sf_framecode
 
    _item_description.description
 ;
@@ -135720,23 +135680,23 @@ A pointer to the Sf_framecode for the save frame where the linked constraint
 is found.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Constraint_Sf_framecode'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Constraint_Sf_framecode'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
 
 
 save_
 
-save__Experimental_data_constraint_link.Constraint_Sf_category
+save__Peak_constraint_link.Constraint_Sf_category
 
    _item_description.description
 ;
 The category for the constraint save frame where the linked constraint is found.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Constraint_Sf_category'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Constraint_Sf_category'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
@@ -135755,7 +135715,7 @@ The category for the constraint save frame where the linked constraint is found.
 
 save_
 
-save__Experimental_data_constraint_link.Constraint_list_ID
+save__Peak_constraint_link.Constraint_list_ID
 
    _item_description.description
 ;
@@ -135763,100 +135723,68 @@ A pointer to the unique ID for the save frame of the category for the linked
 constraint.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Constraint_list_ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Constraint_list_ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__Experimental_data_constraint_link.Constraint_list_label
-
-   _item_description.description
-;
-A label for the save frame where the constraint linked to the experimental 
-data is located.
-;
-
-   _item.name                                  '_Experimental_data_constraint_link.Constraint_list_label'
-   _item.category_id                           'Experimental_data_constraint_link'
-   _item.mandatory_code                         no
-   _item_type.code                             'framecode'
-
-
-save_
-
-save__Experimental_data_constraint_link.Constraint_item_category
-
-   _item_description.description
-;
-The item or tag category (table name) where the linked constraint data 
-item is located.
-;
-
-   _item.name                                  '_Experimental_data_constraint_link.Constraint_item_category'
-   _item.category_id                           'Experimental_data_constraint_link'
-   _item.mandatory_code                         no
-   _item_type.code                             'line'
-
-
-save_
-
-save__Experimental_data_constraint_link.Constraint_ID
+save__Peak_constraint_link.Constraint_ID
 
    _item_description.description
 ;
 A pointer to the tag that is the unique ID for the linked constraint.
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Constraint_ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Constraint_ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__Experimental_data_constraint_link.Sf_ID
+save__Peak_constraint_link.Sf_ID
 
    _item_description.description
 ;
-Pointer to '_Experimental_data_constraint_link_list.Sf_ID'
+Pointer to '_Peak_constraint_link_list.Sf_ID'
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Sf_ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Sf_ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
 
 save_
 
-save__Experimental_data_constraint_link.Entry_ID
+save__Peak_constraint_link.Entry_ID
 
    _item_description.description
 ;
 Pointer to '_Entry.ID'
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Entry_ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Entry_ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
 
 save_
 
-save__Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID
+save__Peak_constraint_link.Peak_constraint_link_list_ID
 
    _item_description.description
 ;
-Pointer to '_Experimental_data_constraint_link_list.ID'
+Pointer to '_Peak_constraint_link_list.ID'
 ;
 
-   _item.name                                  '_Experimental_data_constraint_link.Experimental_data_constraint_link_list_ID'
-   _item.category_id                           'Experimental_data_constraint_link'
+   _item.name                                  '_Peak_constraint_link.Peak_constraint_link_list_ID'
+   _item.category_id                           'Peak_constraint_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
@@ -135866,7 +135794,7 @@ save_
 save_SAXS_constraint_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the SAXS_constraint_list category provide information about the list of reported SAXS constraint data.
 ;
    _category.id                   'SAXS_constraint_list'
 
@@ -136111,7 +136039,7 @@ save_
 save_SAXS_constraint_expt
    _category.description
 ;
-NOT AVAILABLE
+Items in the SAXS_constraint_expt category provide pointers to the SAXS experiments used to collect the data reported in the save frame.
 ;
    _category.id                   'SAXS_constraint_expt'
 
@@ -136243,7 +136171,7 @@ save_
 save_SAXS_constraint_software
    _category.description
 ;
-NOT AVAILABLE
+Items in the SAXS_constraint_software category provide the links to the software used to process and analyze the SAXS data.
 ;
    _category.id                   'SAXS_constraint_software'
 
@@ -136374,7 +136302,7 @@ save_
 save_SAXS_constraint
    _category.description
 ;
-NOT AVAILABLE
+Items in the SAXS_constraint category define the SAXS data values.
 ;
    _category.id                   'SAXS_constraint'
 
@@ -137153,7 +137081,7 @@ save_
 save_Org_constr_file_comment
    _category.description
 ;
-NOT AVAILABLE
+Items in the org_constr_file_comment provide a place to capture comments extracted from parsed original deposited constraint files.
 ;
    _category.id                   'Org_constr_file_comment'
 
@@ -140745,7 +140673,7 @@ save_
 save_History
    _category.description
 ;
-              category description not available
+NOT AVAILABLE
 ;
    _category.id                   'History'
 
