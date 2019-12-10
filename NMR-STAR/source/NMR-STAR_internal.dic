@@ -55617,7 +55617,7 @@ Unique identifier for the spectral peak.
   '_Peak_general_char.Peak_ID'                           'Peak_general_char'             yes
   '_Peak_char.Peak_ID'                                   'Peak_char'                     yes
   '_Assigned_peak_chem_shift.Peak_ID'                    'Assigned_peak_chem_shift'      yes
-  '_Peak_row_format.Peak_ID'                             'Peak_row_format'               yes
+  '_Peak_row_format.ID'                                  'Peak_row_format'               yes
   '_Spectral_transition.Peak_ID'                         'Spectral_transition'           yes
   '_Spectral_transition_general_char.Peak_ID'            'Spectral_transition_general_char'                  yes
   '_Spectral_transition_char.Peak_ID'                    'Spectral_transition_char'      yes
@@ -55635,7 +55635,7 @@ Unique identifier for the spectral peak.
   '_Peak_general_char.Peak_ID'                           '_Peak.ID'
   '_Peak_char.Peak_ID'                                   '_Peak.ID'
   '_Assigned_peak_chem_shift.Peak_ID'                    '_Peak.ID'
-  '_Peak_row_format.Peak_ID'                             '_Peak.ID'
+  '_Peak_row_format.ID'                                  '_Peak.ID'
   '_Spectral_transition.Peak_ID'                         '_Peak.ID'
   '_Spectral_transition_general_char.Peak_ID'            '_Peak.ID'
   '_Spectral_transition_char.Peak_ID'                    '_Peak.ID'
@@ -56751,7 +56751,7 @@ Items in the peak_row_format category describe the characteristics and assignmen
    loop_
      _category_key.name
 
-     '_Peak_row_format.Peak_ID'
+     '_Peak_row_format.ID'
      '_Peak_row_format.Entry_ID'
      '_Peak_row_format.Spectral_peak_list_ID'
 
@@ -56782,14 +56782,14 @@ An integer value that is an unique identified for the row in the peak tabel.
 
 save_
 
-save__Peak_row_format.Peak_ID
+save__Peak_row_format.ID
 
    _item_description.description
 ;
 Pointer to '_Peak.ID'
 ;
 
-   _item.name                                  '_Peak_row_format.Peak_ID'
+   _item.name                                  '_Peak_row_format.ID'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         yes
    _item_type.code                             'int'

@@ -2307,7 +2307,7 @@ TBL_BEGIN,,3.2.3.0,,,,,,,,,,,,,,,,,?,,,,,,,,?
 ,spectral_peak_list,5,NMR_parameters,174,Assigned peak chem shift,_Assigned_peak_chem_shift.Entry_ID,N,?,CHAR(12),NOT NULL,N,?,Y,Spectral_peak_list,Entry_ID,Y,290,?,N,N,N,?,Assigned_peak_chem_shift,Entry_ID,code,Pointer to '_Entry.ID',?
 ,spectral_peak_list,5,NMR_parameters,174,Assigned peak chem shift,_Assigned_peak_chem_shift.Spectral_peak_list_ID,N,?,INTEGER,NOT NULL,N,?,Y,Spectral_peak_list,ID,Y,300,?,N,N,N,?,Assigned_peak_chem_shift,Spectral_peak_list_ID,int,Pointer to '_Spectral_peak_list.ID',?
 ,spectral_peak_list,5,NMR_parameters,174,Peak row format,_Peak_row_format.Index_ID,N,?,INTEGER,NOT NULL,N,?,?,?,?,Y,10,?,N,N,N,?,Peak_row_format,Index_ID,int,An integer value that is an unique identified for the row in the peak tabel.,?
-,spectral_peak_list,5,NMR_parameters,174,Peak row format,_Peak_row_format.Peak_ID,N,?,INTEGER,NOT NULL,N,?,Y,Peak,ID,Y,20,?,N,N,N,?,Peak_row_format,Peak_ID,int,Pointer to '_Peak.ID',?
+,spectral_peak_list,5,NMR_parameters,174,Peak row format,_Peak_row_format.ID,N,?,INTEGER,NOT NULL,N,?,Y,Peak,ID,Y,20,?,N,N,N,?,Peak_row_format,ID,int,Pointer to '_Peak.ID',?
 ,spectral_peak_list,5,NMR_parameters,174,Peak row format,_Peak_row_format.Volume,N,?,FLOAT,?,N,?,?,?,?,Y,30,?,N,N,N,?,Peak_row_format,Volume,float,The measured volume of the peak.,?
 ,spectral_peak_list,5,NMR_parameters,174,Peak row format,_Peak_row_format.Volume_uncertainty,N,?,FLOAT,?,N,?,?,?,?,Y,40,?,N,N,N,?,Peak_row_format,Volume_uncertainty,float,The uncertainty in the measured volume of the peak,?
 ,spectral_peak_list,5,NMR_parameters,174,Peak row format,_Peak_row_format.Height,N,?,FLOAT,?,N,?,?,?,?,Y,50,?,N,N,N,?,Peak_row_format,Height,float,The measured height of the peak.,?
