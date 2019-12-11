@@ -29,8 +29,8 @@ category_group,method,Categories that describe software or physical methods used
 category_group,Mass_spectrometer,Categories that describe a mass spectrometer.
 category_group,Mass_spectrometer_list,Categories that describe a list of mass spectrometers and their properties.
 category_group,Mass_spec_ref_compd,Categories that describe reference compounds used to calibrate mass spectral data.
-category_group,Chromatographic_system,Categories that describe a chromatographic system.
-category_group,Chromatographic_column,Categories that describe a chromatographic column.
+category_group,chromatographic_system,Categories that describe a chromatographic system.
+category_group,chromatographic_column,Categories that describe a chromatographic column.
 category_group,fluorescence_instrument,Categories that describe a fluorescence instrument.
 category_group,EMR_instrument,Categories that describe an EMR instrument.
 category_group,Xray_instrument,Categories that describe a X-ray instrument.
@@ -109,13 +109,15 @@ category_group,RDC_constraints,Categories that capture the residual dipolar coup
 category_group,J_three_bond_constraints,Categories that capture the three bond scalar coupling constraints used to calculate one or more conformers for a biomolecular system.
 category_group,CA_CB_chem_shift_constraints,Categories that capture the protein CA and CB chemical shift constraints used to calculate one or more conformers for a biomolecular system.
 category_group,H_chem_shift_constraints,Categories that capture the proton chemical shift constraints used to calculate one or more conformers for a biomolecular system.
-category_group,experimental_data_constraint_links,Categories that provide links between constraints and the experimental data used to derive the constraints.
+category_group,peak_constraint_links,Categories that provide links between constraints and the experimental data used to derive the constraints.
 category_group,SAXS_constraints,Categories that capture the SAXS constraints used to calculate one or more conformers for a biomolecular system.
 category_group,other_constraints,Categories that capture values for other kinds of constraints not specifically defined in other category groups used to calculate one or more conformers for a biomolecular system.
 category_group,org_constr_file_comment,Categories that capture the comments extracted from one or more original constraint files.
 category_group,MS_MZ_data,Categories that capture the MZ data from a mass spectrometry experiment.
 category_group,MS_chromatogram,Categories that capture the data from a MS chromatogram.
-category_group,applied_software_history,NOT AVAILABLE
+category_group,software_specific_saveframes,BEING WRITTEN
+category_group,applied_software,BEING WRITTEN
+category_group,applied_software_history,BEING WRITTEN
 item_category,Entry_interview,Items in the entry_interview category capture information from a depositor about the data that is in the entry.
 item_category,Deposited_data_files,Items in the deposited_data_files category define the name and syntax for the author deposited atomic coordinate file and flags for the validation and precheck functions.
 item_category,Upload_data,Items in the upload_data category define the names and syntax for author deposited files containing quantitative data or other information.
@@ -297,6 +299,7 @@ item_category,Theoretical_coupling_constant_software,Items in the theoretical_co
 item_category,Theoretical_coupling_constant,Items in the theoretical_coupling_constant category describe the theoretical coupling constant values assigned to specific atoms in a molecular assembly.
 item_category,Spectral_peak_list,Items in the spectral_peak_list category provide information about a list of reported spectral peak characteristic values.
 item_category,Spectral_dim,Items in the spectral_dim category describe the parameters of each dimension in the NMR experiment used to generate the spectral peak list.
+item_category,Spectral_dim_transfer,Items in the spectral_dim_transfer describe the magnetization transfer path in the NMR spectrum that is the source of the peak list in the save frame.
 item_category,Spectral_peak_software,Items in the spectral_peak_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,Peak,Items in the peak category define the identification code for the peaks in an NMR spectrum and the figure of merit for each peak.
 item_category,Peak_general_char,Items in the peak_general_char category provide quantitative information about the peak that is not specific to individual dimensions of the spectral data.
@@ -311,7 +314,7 @@ item_category,Spectral_transition_contrib,Items in the spectral_transition_contr
 item_category,Assigned_spectral_transition,Items in the assigned_spectral_transition category provide the assignment of the spectral transition to atoms in the molecular system under study.
 item_category,Resonance_linker_list,Items in the resonance_linker_list provide meta information regarding the CCPN system of resonance information used in defining the source of NMR spectral information used to derive peak assignments and various other data. 
 item_category,Resonance,Items in the resonance category provide the parent resonance ID value and links to other categories of the resonance system.
-item_category,Reonance_covalent_link,Items in the resonance_covalent_link category define resonances that are linked by covalent bonds.
+item_category,Resonance_covalent_link,Items in the resonance_covalent_link category define resonances that are linked by covalent bonds.
 item_category,Resonance_assignment,Items in the resonance_assignment category are used to link resonances to specific atoms in the molecular system.
 item_category,Spin_system,Items in the spin_system category define a set of atoms that as a group are link by their nuclear spin interactions.
 item_category,Spin_system_link,Items in the spin_system category define the linkage between the assigned spin systems in the molecular entity.
@@ -323,7 +326,7 @@ item_category,Isotope_label_pattern,Items in the isotope_label_pattern define th
 item_category,Chem_shift_perturbation_list,Items in the mol_interaction_chem_shift_diff category provide information about a list of reported chemical shift values resulting from the interactions between molecules in a molecular assembly.
 item_category,Chem_shift_perturbation_experiment,Items in the mol_interaction_diff_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of reported chemical shifts that represent the effect of two or molecules interaction with each other.
 item_category,Chem_shift_perturbation_software,Items in the mol_interaction_diff_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
-item_category,Chem_shift_perturbation_list,Items in the mol_interaction_chem_shift category describe the chemical shift values assigned to specific atoms in a molecular assembly that result from the interactions between molecules in the molecular assembly.
+item_category,Chem_shift_perturbation,Items in the mol_interaction_chem_shift category describe the chemical shift values assigned to specific atoms in a molecular assembly that result from the interactions between molecules in the molecular assembly.
 item_category,Chem_shift_anisotropy,Items in the chem_shift_anisotropy category provide information about a list of reported  chemical shift anisotropy values.
 item_category,CS_anisotropy_experiment,Items in the CS_anisotropy_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of reported chemical shift anisotropy data.
 item_category,CS_anisotropy_software,Items in the CS_anisotropy_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
@@ -354,7 +357,7 @@ item_category,H_exch_rate_software,Items in the H_exch_rate_software category pr
 item_category,H_exch_rate,Items in the H_exch_rate category describe the hydrogen exchange rate values assigned to specific atoms in a molecular assembly.
 item_category,H_exch_protection_factor_list,Items in the H_exch_protection_factor_list category provide information about a list of reported hydrogen exchange protection factor values.
 item_category,H_exch_protection_fact_experiment,Items in the H_exch_protection_fact_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of reported hydrogen exchange protection factors.
-item_category,H_exch_protect_fact_software,Items in the H_exch_protect_fact_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
+item_category,H_exch_protection_fact_software,Items in the H_exch_protect_fact_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,H_exch_protection_factor,Items in the H_exch_protection_factor category describe the hydrogen exchange protection factor values assigned to specific atoms in a molecular assembly.
 item_category,Homonucl_NOE_list,Items in the homonucl_NOE_list category provide information about a list of reported homonuclear NOE values.
 item_category,Homonucl_NOE_experiment,Items in the homonucl_NOE_experiment category provide pointers to the NMR experiments and samples used to collect the data for a set of reported homonuclear NOE values.
@@ -547,6 +550,8 @@ item_category,H_chem_shift_constraint_list,Items in the H_chem_shift_constraint_
 item_category,H_chem_shift_constraint_expt,Items in the H_chem_shift_constraint_expt category provide pointers to the NMR experiments and samples used to collect the data for a set of reported 1H chemical shift constraints.
 item_category,H_chem_shift_constraint_software,Items in the H_chem_shift_constraint_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,H_chem_shift_constraint,Items in the H_chem_shift_constraint category describe the 1H chemical shift value used as a constraint in calculating the structure of a molecular assembly.
+item_category,peak_constraint_link_list,Items in the peak_constraint_link_list category provide the links between experimental data items and the derived constraints.
+item_category,peak_constraint_link,Items in the peak_constraint_iink category provide the specific experimental data item and the derived constraint links.
 item_category,SAXS_constraint_list,Items in the SAXS_constraint_list category provide information about the list of reported SAXS constraint data.
 item_category,SAXS_constraint_expt,Items in the SAXS_constraint_expt category provide pointers to the SAXS experiments used to collect the data reported in the save frame.
 item_category,SAXS_constraint_software,Items in the SAXS_constraint_software category provide the links to the software used to process and analyze the SAXS data.
@@ -555,19 +560,24 @@ item_category,Other_constraint_list,Items in the other_constraint_list category 
 item_category,Other_constraint_expt,Items in the other_constraint_expt category provide pointers to the NMR experiments and samples used to collect the data for a set of reported constraints.
 item_category,Other_constraint_software,Items in the other_constraint_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,Org_constr_file_comment,Items in the org_constr_file_comment provide a place to capture comments extracted from parsed original deposited constraint files.
-item_category,MZ_ratio_data_list,NOT AVAILABLE
-item_category,MZ_ratio_experiment,NOT AVAILABLE
-item_category,MZ_ratio_software,NOT AVAILABLE
-item_category,MZ_ratio_spectrum_param,NOT AVAILABLE
-item_category,MZ_precursor_ion,NOT AVAILABLE
-item_category,MZ_precursor_ion_annotation,NOT AVAILABLE
-item_category,MZ_product_ion,NOT AVAILABLE
-item_category,MZ_product_ion_annotation,NOT AVAILABLE
-item_category,MS_chromatogram_list,NOT AVAILABLE
-item_category,MS_chromatogram_experiment,NOT AVAILABLE
-item_category,MS_chromatogram_software,NOT AVAILABLE
-item_category,MS_chromatogram_param,NOT AVAILABLE
-item_category,MS_chromatogram_ion,NOT AVAILABLE
-item_category,MS_chrom_ion_annotation,NOT AVAILABLE
-item_category,History,NOT AVAILABLE
+item_category,MZ_ratio_data_list,BEING WRITTEN
+item_category,MZ_ratio_experiment,BEING WRITTEN
+item_category,MZ_ratio_software,BEING WRITTEN
+item_category,MZ_ratio_spectrum_param,BEING WRITTEN
+item_category,MZ_precursor_ion,BEING WRITTEN
+item_category,MZ_precursor_ion_annotation,BEING WRITTEN
+item_category,MZ_product_ion,BEING WRITTEN
+item_category,MZ_product_ion_annotation,BEING WRITTEN
+item_category,MS_chromatogram_list,BEING WRITTEN
+item_category,MS_chromatogram_experiment,BEING WRITTEN
+item_category,MS_chromatogram_software,BEING WRITTEN
+item_category,MS_chromatogram_param,BEING WRITTEN
+item_category,MS_chromatogram_ion,BEING WRITTEN
+item_category,MS_chrom_ion_annotation,BEING WRITTEN
+item_category,Software_specific_info_list,BEING WRITTEN
+item_category,Software_specific_info,BEING WRITTEN
+item_category,Software_applied_list,BEING WRITTEN
+item_category,Software_applied_methods,BEING WRITTEN
+item_category,Software_applied_history,BEING WRITTEN
+item_category,History,BEING WRITTEN
 Table_end,?,?

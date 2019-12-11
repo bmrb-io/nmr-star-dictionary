@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-12-10
+#  version date -  2019-12-11
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -207,13 +207,13 @@ Categories that describe a list of mass spectrometers and their properties.
 Categories that describe reference compounds used to calibrate mass spectral data.
 ;
 
-'Chromatographic_system'
+'chromatographic_system'
 'inclusive_group'
 ;
 Categories that describe a chromatographic system.
 ;
 
-'Chromatographic_column'
+'chromatographic_column'
 'inclusive_group'
 ;
 Categories that describe a chromatographic column.
@@ -687,7 +687,7 @@ Categories that capture the protein CA and CB chemical shift constraints used to
 Categories that capture the proton chemical shift constraints used to calculate one or more conformers for a biomolecular system.
 ;
 
-'experimental_data_constraint_links'
+'peak_constraint_links'
 'inclusive_group'
 ;
 Categories that provide links between constraints and the experimental data used to derive the constraints.
@@ -723,10 +723,22 @@ Categories that capture the MZ data from a mass spectrometry experiment.
 Categories that capture the data from a MS chromatogram.
 ;
 
+'software_specific_saveframes'
+'inclusive_group'
+;
+BEING WRITTEN
+;
+
+'applied_software'
+'inclusive_group'
+;
+BEING WRITTEN
+;
+
 'applied_software_history'
 'inclusive_group'
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
 
      stop_
@@ -55285,7 +55297,7 @@ save_
 save_Spectral_dim_transfer
    _category.description
 ;
-              category description not available
+Items in the spectral_dim_transfer describe the magnetization transfer path in the NMR spectrum that is the source of the peak list in the save frame.
 ;
    _category.id                   'Spectral_dim_transfer'
 
@@ -55618,6 +55630,7 @@ Unique identifier for the spectral peak.
   '_Peak_char.Peak_ID'                                   'Peak_char'                     yes
   '_Assigned_peak_chem_shift.Peak_ID'                    'Assigned_peak_chem_shift'      yes
   '_Peak_row_format.ID'                                  'Peak_row_format'               yes
+  '_Peak_row_format.Peak_ID'                             'Peak_row_format'               yes
   '_Spectral_transition.Peak_ID'                         'Spectral_transition'           yes
   '_Spectral_transition_general_char.Peak_ID'            'Spectral_transition_general_char'                  yes
   '_Spectral_transition_char.Peak_ID'                    'Spectral_transition_char'      yes
@@ -55636,6 +55649,7 @@ Unique identifier for the spectral peak.
   '_Peak_char.Peak_ID'                                   '_Peak.ID'
   '_Assigned_peak_chem_shift.Peak_ID'                    '_Peak.ID'
   '_Peak_row_format.ID'                                  '_Peak.ID'
+  '_Peak_row_format.Peak_ID'                             '_Peak.ID'
   '_Spectral_transition.Peak_ID'                         '_Peak.ID'
   '_Spectral_transition_general_char.Peak_ID'            '_Peak.ID'
   '_Spectral_transition_char.Peak_ID'                    '_Peak.ID'
@@ -56752,6 +56766,7 @@ Items in the peak_row_format category describe the characteristics and assignmen
      _category_key.name
 
      '_Peak_row_format.ID'
+     '_Peak_row_format.Peak_ID'
      '_Peak_row_format.Entry_ID'
      '_Peak_row_format.Spectral_peak_list_ID'
 
@@ -56790,6 +56805,21 @@ Pointer to '_Peak.ID'
 ;
 
    _item.name                                  '_Peak_row_format.ID'
+   _item.category_id                           'Peak_row_format'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Peak_row_format.Peak_ID
+
+   _item_description.description
+;
+Pointer to '_Peak.ID'
+;
+
+   _item.name                                  '_Peak_row_format.Peak_ID'
    _item.category_id                           'Peak_row_format'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
@@ -63152,7 +63182,7 @@ save_
 save_Resonance_covalent_link
    _category.description
 ;
-              category description not available
+Items in the resonance_covalent_link category define resonances that are linked by covalent bonds.
 ;
    _category.id                   'Resonance_covalent_link'
 
@@ -65829,7 +65859,7 @@ save_
 save_Chem_shift_perturbation
    _category.description
 ;
-              category description not available
+Items in the mol_interaction_chem_shift category describe the chemical shift values assigned to specific atoms in a molecular assembly that result from the interactions between molecules in the molecular assembly.
 ;
    _category.id                   'Chem_shift_perturbation'
 
@@ -74248,7 +74278,7 @@ save_
 save_H_exch_protection_fact_software
    _category.description
 ;
-              category description not available
+Items in the H_exch_protect_fact_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 ;
    _category.id                   'H_exch_protection_fact_software'
 
@@ -137244,7 +137274,7 @@ save_
 save_MZ_ratio_data_list
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_ratio_data_list'
 
@@ -137570,7 +137600,7 @@ save_
 save_MZ_ratio_experiment
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_ratio_experiment'
 
@@ -137701,7 +137731,7 @@ save_
 save_MZ_ratio_software
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_ratio_software'
 
@@ -137840,7 +137870,7 @@ save_
 save_MZ_ratio_spectrum_param
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_ratio_spectrum_param'
 
@@ -137971,7 +138001,7 @@ save_
 save_MZ_precursor_ion
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_precursor_ion'
 
@@ -138162,7 +138192,7 @@ save_
 save_MZ_precursor_ion_annotation
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_precursor_ion_annotation'
 
@@ -138324,7 +138354,7 @@ save_
 save_MZ_product_ion
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_product_ion'
 
@@ -138515,7 +138545,7 @@ save_
 save_MZ_product_ion_annotation
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MZ_product_ion_annotation'
 
@@ -138677,7 +138707,7 @@ save_
 save_MS_chromatogram_list
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MS_chromatogram_list'
 
@@ -138920,7 +138950,7 @@ save_
 save_MS_chromatogram_experiment
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MS_chromatogram_experiment'
 
@@ -139051,7 +139081,7 @@ save_
 save_MS_chromatogram_software
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MS_chromatogram_software'
 
@@ -139182,7 +139212,7 @@ save_
 save_MS_chromatogram_param
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MS_chromatogram_param'
 
@@ -139313,7 +139343,7 @@ save_
 save_MS_chromatogram_ion
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MS_chromatogram_ion'
 
@@ -139504,7 +139534,7 @@ save_
 save_MS_chrom_ion_annotation
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'MS_chrom_ion_annotation'
 
@@ -139665,7 +139695,7 @@ save_
 save_Software_specific_info_list
    _category.description
 ;
-              category description not available
+BEING WRITTEN
 ;
    _category.id                   'Software_specific_info_list'
 
@@ -139813,7 +139843,7 @@ save_
 save_Software_specific_info
    _category.description
 ;
-              category description not available
+BEING WRITTEN
 ;
    _category.id                   'Software_specific_info'
 
@@ -139915,7 +139945,7 @@ save_
 save_Software_applied_list
    _category.description
 ;
-              category description not available
+BEING WRITTEN
 ;
    _category.id                   'Software_applied_list'
 
@@ -140078,7 +140108,7 @@ save_
 save_Software_applied_methods
    _category.description
 ;
-              category description not available
+BEING WRITTEN
 ;
    _category.id                   'Software_applied_methods'
 
@@ -140510,7 +140540,7 @@ save_
 save_Software_applied_history
    _category.description
 ;
-              category description not available
+BEING WRITTEN
 ;
    _category.id                   'Software_applied_history'
 
@@ -140673,7 +140703,7 @@ save_
 save_History
    _category.description
 ;
-NOT AVAILABLE
+BEING WRITTEN
 ;
    _category.id                   'History'
 
