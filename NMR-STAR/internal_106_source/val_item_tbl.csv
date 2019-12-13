@@ -403,7 +403,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 4010,assembly,_Assembly_type.Sf_ID,,INTEGER,int,NOT NULL,,Assembly_type,Sf_ID,Y,?,4,?,,,,Y,N
 4020,assembly,_Assembly_type.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assembly_type,Entry_ID,Y,?,3,?,,,,,N
 4030,assembly,_Assembly_type.Assembly_ID,,INTEGER,int,NOT NULL,Y,Assembly_type,Assembly_ID,Y,?,5,?,,,,,N
-4040,assembly,_Entity_assembly.ID,,INTEGER,int,NOT NULL,Y,Entity_assembly,ID,Y,?,6,?,,,,,N
+4040,assembly,_Entity_assembly.ID,Y,INTEGER,int,NOT NULL,Y,Entity_assembly,ID,Y,?,6,?,,,,,N
 4050,assembly,_Entity_assembly.Entity_assembly_name,,VARCHAR(127),line,,,Entity_assembly,Entity_assembly_name,Y,?,0,?,,,,,N
 4060,assembly,_Entity_assembly.Entity_ID,,INTEGER,int,NOT NULL,,Entity_assembly,Entity_ID,Y,?,7,?,,,,,N
 4070,assembly,_Entity_assembly.Entity_label,,VARCHAR(127),framecode,,,Entity_assembly,Entity_label,Y,?,8,?,,,,,N
@@ -499,8 +499,8 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 4970,assembly,_Assembly_systematic_name.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assembly_systematic_name,Entry_ID,Y,?,3,?,,,,,N
 4980,assembly,_Assembly_systematic_name.Assembly_ID,,INTEGER,int,NOT NULL,Y,Assembly_systematic_name,Assembly_ID,Y,?,5,?,,,,,N
 4990,assembly,_Assembly_interaction.ID,,INTEGER,int,NOT NULL,Y,Assembly_interaction,ID,Y,?,6,?,,,,,N
-5000,assembly,_Assembly_interaction.Entity_assembly_ID_1,,INTEGER,int,NOT NULL,,Assembly_interaction,Entity_assembly_ID_1,Y,?,0,?,,,,,N
-5010,assembly,_Assembly_interaction.Entity_assembly_ID_2,,INTEGER,int,NOT NULL,,Assembly_interaction,Entity_assembly_ID_2,Y,?,0,?,,,,,N
+5000,assembly,_Assembly_interaction.Entity_assembly_ID_1,Y,INTEGER,int,NOT NULL,,Assembly_interaction,Entity_assembly_ID_1,Y,?,0,?,,,,,N
+5010,assembly,_Assembly_interaction.Entity_assembly_ID_2,Y,INTEGER,int,NOT NULL,,Assembly_interaction,Entity_assembly_ID_2,Y,?,0,?,,,,,N
 5020,assembly,_Assembly_interaction.Mol_interaction_type,N,VARCHAR(127),line,NOT NULL,,Assembly_interaction,Mol_interaction_type,Y,?,0,?,,,,,N
 5030,assembly,_Assembly_interaction.Sf_ID,,INTEGER,int,NOT NULL,,Assembly_interaction,Sf_ID,Y,?,4,?,,,,Y,N
 5040,assembly,_Assembly_interaction.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assembly_interaction,Entry_ID,Y,?,3,?,,,,,N
