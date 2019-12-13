@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-12-11
+#  version date -  2019-12-13
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.3.0
+    _dictionary.version         3.2.3.1
 
      loop_
        _dictionary_history.version
@@ -726,19 +726,19 @@ Categories that capture the data from a MS chromatogram.
 'software_specific_saveframes'
 'inclusive_group'
 ;
-BEING WRITTEN
+Categories that capture a block of text written out by software tools as 'save frames'. A NEF specific data structure used to capture software output that may not meet STAR specifications.
 ;
 
 'applied_software'
 'inclusive_group'
 ;
-BEING WRITTEN
+Categories that capture methods and scripts used by software reported in an entry.
 ;
 
 'applied_software_history'
 'inclusive_group'
 ;
-BEING WRITTEN
+Categories that capture the software workflow used to produce the reported data.
 ;
 
      stop_
@@ -137274,7 +137274,7 @@ save_
 save_MZ_ratio_data_list
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_ratio_data_list category provide the links to information relavent to a mass spec experiment and other meta data for the reported results of the experiment.
 ;
    _category.id                   'MZ_ratio_data_list'
 
@@ -137600,7 +137600,7 @@ save_
 save_MZ_ratio_experiment
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_ratio_experiment category provide links to the mass spect experiment description and the samples used.
 ;
    _category.id                   'MZ_ratio_experiment'
 
@@ -137731,7 +137731,7 @@ save_
 save_MZ_ratio_software
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_ratio_software category provide pointers to the software and methods used to derive the data reported in the save frame.
 ;
    _category.id                   'MZ_ratio_software'
 
@@ -137870,7 +137870,7 @@ save_
 save_MZ_ratio_spectrum_param
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_ratio_spectrum_param category describe the paramerters and their values used to carry out the described mass spec experiment.
 ;
    _category.id                   'MZ_ratio_spectrum_param'
 
@@ -138001,7 +138001,7 @@ save_
 save_MZ_precursor_ion
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_precursor_ion category provide information on the precursor ions observed in the mass spec experiment.
 ;
    _category.id                   'MZ_precursor_ion'
 
@@ -138192,7 +138192,7 @@ save_
 save_MZ_precursor_ion_annotation
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_precursor_ion_annotation category provide comments and other annotations for precursor ions observed in a mass spec experiment.
 ;
    _category.id                   'MZ_precursor_ion_annotation'
 
@@ -138354,7 +138354,7 @@ save_
 save_MZ_product_ion
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_product_ion category provide information on product ions observed in a mass spec experiment.
 ;
    _category.id                   'MZ_product_ion'
 
@@ -138545,7 +138545,7 @@ save_
 save_MZ_product_ion_annotation
    _category.description
 ;
-BEING WRITTEN
+Items in the MZ_product_ion_annotation category provide comments and other annotations for product ions observed in a mass spec experiment.
 ;
    _category.id                   'MZ_product_ion_annotation'
 
@@ -138707,7 +138707,7 @@ save_
 save_MS_chromatogram_list
    _category.description
 ;
-BEING WRITTEN
+Items in the MS_chromatogram_list category provide meta data about a chromatographic experiment carried out to separate compounds for mass spectral analysis.
 ;
    _category.id                   'MS_chromatogram_list'
 
@@ -138950,7 +138950,7 @@ save_
 save_MS_chromatogram_experiment
    _category.description
 ;
-BEING WRITTEN
+Items in the MS_chromatogram_experiment category provide pointers to the experimental details and samples used in the chromatographic separation.
 ;
    _category.id                   'MS_chromatogram_experiment'
 
@@ -139081,7 +139081,7 @@ save_
 save_MS_chromatogram_software
    _category.description
 ;
-BEING WRITTEN
+Items in the MS_chromatogram_software  category provide pointers to the software and methods used to carry out a chromatographic separation experiment.
 ;
    _category.id                   'MS_chromatogram_software'
 
@@ -139212,7 +139212,7 @@ save_
 save_MS_chromatogram_param
    _category.description
 ;
-BEING WRITTEN
+Items in the MS_chromatogram_param category provide the parameters and their values used to carry out a chromatographic separation experiment.
 ;
    _category.id                   'MS_chromatogram_param'
 
@@ -139343,7 +139343,7 @@ save_
 save_MS_chromatogram_ion
    _category.description
 ;
-BEING WRITTEN
+Items in the MS_chromatogram_ion category desribe the ions generated by the chromatographic experiment.
 ;
    _category.id                   'MS_chromatogram_ion'
 
@@ -139534,7 +139534,7 @@ save_
 save_MS_chrom_ion_annotation
    _category.description
 ;
-BEING WRITTEN
+Items in the MS_chrom_ion_annotation category provide comments and other annotations regarding ions generated by the chromatographic experiment.
 ;
    _category.id                   'MS_chrom_ion_annotation'
 
@@ -139695,7 +139695,7 @@ save_
 save_Software_specific_info_list
    _category.description
 ;
-BEING WRITTEN
+Items in the software_specific_info_list category provide meta data specific to software used to generate data in the entry.
 ;
    _category.id                   'Software_specific_info_list'
 
@@ -139843,7 +139843,7 @@ save_
 save_Software_specific_info
    _category.description
 ;
-BEING WRITTEN
+Items in the software_specific_info category provide pointers to the software descriptions for software used to generate data in the entry.
 ;
    _category.id                   'Software_specific_info'
 
@@ -139945,7 +139945,7 @@ save_
 save_Software_applied_list
    _category.description
 ;
-BEING WRITTEN
+Items in the software_applied_list category provide meta data regarding a list of software used to generate data in the entry.
 ;
    _category.id                   'Software_applied_list'
 
@@ -140108,7 +140108,7 @@ save_
 save_Software_applied_methods
    _category.description
 ;
-BEING WRITTEN
+Items in the software_applied_methods category provide links to the methods used in running a software package and/or scripts used to drive software.
 ;
    _category.id                   'Software_applied_methods'
 
@@ -140540,7 +140540,7 @@ save_
 save_Software_applied_history
    _category.description
 ;
-BEING WRITTEN
+Items in the software_applied_history category provide meta data about a software workflow used to derive data reported in the entry.
 ;
    _category.id                   'Software_applied_history'
 
@@ -140703,7 +140703,7 @@ save_
 save_History
    _category.description
 ;
-BEING WRITTEN
+Items in the history category provide the order in which software packages were used to derive the data reported in the entry.
 ;
    _category.id                   'History'
 

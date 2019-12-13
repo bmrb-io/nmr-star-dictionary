@@ -115,9 +115,9 @@ category_group,other_constraints,Categories that capture values for other kinds 
 category_group,org_constr_file_comment,Categories that capture the comments extracted from one or more original constraint files.
 category_group,MS_MZ_data,Categories that capture the MZ data from a mass spectrometry experiment.
 category_group,MS_chromatogram,Categories that capture the data from a MS chromatogram.
-category_group,software_specific_saveframes,BEING WRITTEN
-category_group,applied_software,BEING WRITTEN
-category_group,applied_software_history,BEING WRITTEN
+category_group,software_specific_saveframes,Categories that capture a block of text written out by software tools as 'save frames'. A NEF specific data structure used to capture software output that may not meet STAR specifications.
+category_group,applied_software,Categories that capture methods and scripts used by software reported in an entry.
+category_group,applied_software_history,Categories that capture the software workflow used to produce the reported data.
 item_category,Entry_interview,Items in the entry_interview category capture information from a depositor about the data that is in the entry.
 item_category,Deposited_data_files,Items in the deposited_data_files category define the name and syntax for the author deposited atomic coordinate file and flags for the validation and precheck functions.
 item_category,Upload_data,Items in the upload_data category define the names and syntax for author deposited files containing quantitative data or other information.
@@ -560,24 +560,24 @@ item_category,Other_constraint_list,Items in the other_constraint_list category 
 item_category,Other_constraint_expt,Items in the other_constraint_expt category provide pointers to the NMR experiments and samples used to collect the data for a set of reported constraints.
 item_category,Other_constraint_software,Items in the other_constraint_software category provide pointers to the software category and methods category where descriptions of software applications and methods can be found.
 item_category,Org_constr_file_comment,Items in the org_constr_file_comment provide a place to capture comments extracted from parsed original deposited constraint files.
-item_category,MZ_ratio_data_list,BEING WRITTEN
-item_category,MZ_ratio_experiment,BEING WRITTEN
-item_category,MZ_ratio_software,BEING WRITTEN
-item_category,MZ_ratio_spectrum_param,BEING WRITTEN
-item_category,MZ_precursor_ion,BEING WRITTEN
-item_category,MZ_precursor_ion_annotation,BEING WRITTEN
-item_category,MZ_product_ion,BEING WRITTEN
-item_category,MZ_product_ion_annotation,BEING WRITTEN
-item_category,MS_chromatogram_list,BEING WRITTEN
-item_category,MS_chromatogram_experiment,BEING WRITTEN
-item_category,MS_chromatogram_software,BEING WRITTEN
-item_category,MS_chromatogram_param,BEING WRITTEN
-item_category,MS_chromatogram_ion,BEING WRITTEN
-item_category,MS_chrom_ion_annotation,BEING WRITTEN
-item_category,Software_specific_info_list,BEING WRITTEN
-item_category,Software_specific_info,BEING WRITTEN
-item_category,Software_applied_list,BEING WRITTEN
-item_category,Software_applied_methods,BEING WRITTEN
-item_category,Software_applied_history,BEING WRITTEN
-item_category,History,BEING WRITTEN
+item_category,MZ_ratio_data_list,Items in the MZ_ratio_data_list category provide the links to information relavent to a mass spec experiment and other meta data for the reported results of the experiment.
+item_category,MZ_ratio_experiment,Items in the MZ_ratio_experiment category provide links to the mass spect experiment description and the samples used.
+item_category,MZ_ratio_software,Items in the MZ_ratio_software category provide pointers to the software and methods used to derive the data reported in the save frame.
+item_category,MZ_ratio_spectrum_param,Items in the MZ_ratio_spectrum_param category describe the paramerters and their values used to carry out the described mass spec experiment.
+item_category,MZ_precursor_ion,Items in the MZ_precursor_ion category provide information on the precursor ions observed in the mass spec experiment.
+item_category,MZ_precursor_ion_annotation,Items in the MZ_precursor_ion_annotation category provide comments and other annotations for precursor ions observed in a mass spec experiment.
+item_category,MZ_product_ion,Items in the MZ_product_ion category provide information on product ions observed in a mass spec experiment.
+item_category,MZ_product_ion_annotation,Items in the MZ_product_ion_annotation category provide comments and other annotations for product ions observed in a mass spec experiment.
+item_category,MS_chromatogram_list,Items in the MS_chromatogram_list category provide meta data about a chromatographic experiment carried out to separate compounds for mass spectral analysis.
+item_category,MS_chromatogram_experiment,Items in the MS_chromatogram_experiment category provide pointers to the experimental details and samples used in the chromatographic separation.
+item_category,MS_chromatogram_software,Items in the MS_chromatogram_software  category provide pointers to the software and methods used to carry out a chromatographic separation experiment.
+item_category,MS_chromatogram_param,Items in the MS_chromatogram_param category provide the parameters and their values used to carry out a chromatographic separation experiment.
+item_category,MS_chromatogram_ion,Items in the MS_chromatogram_ion category desribe the ions generated by the chromatographic experiment.
+item_category,MS_chrom_ion_annotation,Items in the MS_chrom_ion_annotation category provide comments and other annotations regarding ions generated by the chromatographic experiment.
+item_category,Software_specific_info_list,Items in the software_specific_info_list category provide meta data specific to software used to generate data in the entry.
+item_category,Software_specific_info,Items in the software_specific_info category provide pointers to the software descriptions for software used to generate data in the entry.
+item_category,Software_applied_list,Items in the software_applied_list category provide meta data regarding a list of software used to generate data in the entry.
+item_category,Software_applied_methods,Items in the software_applied_methods category provide links to the methods used in running a software package and/or scripts used to drive software.
+item_category,Software_applied_history,Items in the software_applied_history category provide meta data about a software workflow used to derive data reported in the entry.
+item_category,History,Items in the history category provide the order in which software packages were used to derive the data reported in the entry.
 Table_end,?,?
