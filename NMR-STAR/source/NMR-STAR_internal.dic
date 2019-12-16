@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-12-13
+#  version date -  2019-12-16
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.3.2
+    _dictionary.version         3.2.4.0
 
      loop_
        _dictionary_history.version
@@ -721,6 +721,12 @@ Categories that capture the MZ data from a mass spectrometry experiment.
 'inclusive_group'
 ;
 Categories that capture the data from a MS chromatogram.
+;
+
+'experimental_data_derivation_links'
+'inclusive_group'
+;
+Categories that capture the links between derived data and the source data used in the derivation.
 ;
 
 'software_specific_saveframes'
@@ -4514,6 +4520,8 @@ BMRB accession number for this entry
   '_MS_chromatogram_param.Entry_ID'                      'MS_chromatogram_param'         yes
   '_MS_chromatogram_ion.Entry_ID'                        'MS_chromatogram_ion'           yes
   '_MS_chrom_ion_annotation.Entry_ID'                    'MS_chrom_ion_annotation'       yes
+  '_Experimental_data_link_list.Entry_ID'                'Experimental_data_link_list'                       yes
+  '_Experimental_data_link.Entry_ID'                     'Experimental_data_link'        yes
   '_Software_specific_info_list.Entry_ID'                'Software_specific_info_list'                       yes
   '_Software_specific_info.Entry_ID'                     'Software_specific_info'        yes
   '_Software_applied_list.Entry_ID'                      'Software_applied_list'         yes
@@ -4829,6 +4837,8 @@ BMRB accession number for this entry
   '_MS_chromatogram_param.Entry_ID'                      '_Entry.ID'
   '_MS_chromatogram_ion.Entry_ID'                        '_Entry.ID'
   '_MS_chrom_ion_annotation.Entry_ID'                    '_Entry.ID'
+  '_Experimental_data_link_list.Entry_ID'                '_Entry.ID'
+  '_Experimental_data_link.Entry_ID'                     '_Entry.ID'
   '_Software_specific_info_list.Entry_ID'                '_Entry.ID'
   '_Software_specific_info.Entry_ID'                     '_Entry.ID'
   '_Software_applied_list.Entry_ID'                      '_Entry.ID'
@@ -135763,6 +135773,22 @@ constraint.
 
 save_
 
+save__Peak_constraint_link.Constraint_ID_item_category
+
+   _item_description.description
+;
+The item category for the constraint kind of constraint that has been derived 
+from the linked experimental data values.
+;
+
+   _item.name                                  '_Peak_constraint_link.Constraint_ID_item_category'
+   _item.category_id                           'Peak_constraint_link'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
 save__Peak_constraint_link.Constraint_ID
 
    _item_description.description
@@ -139688,6 +139714,443 @@ Pointer to '_MS_chromatogram_list.ID'
 
    _item.name                                  '_MS_chrom_ion_annotation.MS_chromatogram_list_ID'
    _item.category_id                           'MS_chrom_ion_annotation'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save_Experimental_data_link_list
+   _category.description
+;
+Items in the Experimental_data_link_list category provide meta data specific to the linked data in the save frame.
+;
+   _category.id                   'Experimental_data_link_list'
+
+   loop_
+     _category_key.name
+
+     '_Experimental_data_link_list.Entry_ID'
+     '_Experimental_data_link_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'experimental_data_derivation_links'
+
+   stop_
+
+save_
+
+save__Experimental_data_link_list.Sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the save frame
+;
+
+   _item.name                                  '_Experimental_data_link_list.Sf_category'
+   _item.category_id                           'Experimental_data_link_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save__Experimental_data_link_list.Sf_framecode
+
+   _item_description.description
+;
+A label for the save frame that describes in very brief terms the information 
+contained in the save frame.
+;
+
+   _item.name                                  '_Experimental_data_link_list.Sf_framecode'
+   _item.category_id                           'Experimental_data_link_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Experimental_data_link_list.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Experimental_data_link_list.Entry_ID'
+   _item.category_id                           'Experimental_data_link_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save__Experimental_data_link_list.Sf_ID
+
+   _item_description.description
+;
+An interger value that is the unique identifier for the save frame that 
+applies across the archive.  This value is not stable and may be reassigned each 
+time the data are loaded into a database system.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Experimental_data_link_list.Sf_ID'                   'Experimental_data_link_list'             yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+   ?      ?
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link_list.ID
+
+   _item_description.description
+;
+Unique identifier for the reported list of linked spectral peaks and constraints.
+;
+
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Experimental_data_link_list.ID'                      'Experimental_data_link_list'             yes
+  '_Experimental_data_link.Experimental_data_link_list_ID'                               'Experimental_data_link'        yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+  '_Experimental_data_link.Experimental_data_link_list_ID'                               '_Experimental_data_link_list.ID'
+
+  stop_
+
+  _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link_list.Name
+
+   _item_description.description
+;
+A name assigned to the save frame.
+;
+
+   _item.name                                  '_Experimental_data_link_list.Name'
+   _item.category_id                           'Experimental_data_link_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Experimental_data_link_list.Details
+
+   _item_description.description
+;
+The 'details' item is used to provide additional information about the 
+data reported in the save frame.
+;
+
+   _item.name                                  '_Experimental_data_link_list.Details'
+   _item.category_id                           'Experimental_data_link_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'text'
+
+
+save_
+
+save_Experimental_data_link
+   _category.description
+;
+Items in the Experimental_data_link category provide the pointers to both the source data and the data derived from the source data.
+;
+   _category.id                   'Experimental_data_link'
+
+   loop_
+     _category_key.name
+
+     '_Experimental_data_link.ID'
+     '_Experimental_data_link.Entry_ID'
+     '_Experimental_data_link.Experimental_data_link_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'experimental_data_derivation_links'
+
+   stop_
+
+save_
+
+save__Experimental_data_link.ID
+
+   _item_description.description
+;
+Unique identifier for the linked spectral peak and constraint.
+;
+
+   _item.name                                  '_Experimental_data_link.ID'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link.Source_expt_data_list_Sf_framecode
+
+   _item_description.description
+;
+A pointer to the Sf_framecode for the save frame where the spectral peak 
+list is found.
+;
+
+   _item.name                                  '_Experimental_data_link.Source_expt_data_list_Sf_framecode'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Experimental_data_link.Source_expt_data_list_Sf_category
+
+   _item_description.description
+;
+The category for the spectral peak list. This value is the same for all 
+spectral peak list save frames.
+;
+
+   _item.name                                  '_Experimental_data_link.Source_expt_data_list_Sf_category'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save__Experimental_data_link.Source_expt_data_list_ID
+
+   _item_description.description
+;
+A pointer to the unique ID for the save frame of category 'spectral_peak_list'.
+;
+
+   _item.name                                  '_Experimental_data_link.Source_expt_data_list_ID'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link.Source_expt_data_list_label
+
+   _item_description.description
+;
+A label for the save frame for the experimental data that is being linked 
+to the derived structural constraint.
+;
+
+   _item.name                                  '_Experimental_data_link.Source_expt_data_list_label'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Experimental_data_link.Source_expt_data_item_category
+
+   _item_description.description
+;
+The item or tag category (table name) where the linked experimental data 
+item is located.
+;
+
+   _item.name                                  '_Experimental_data_link.Source_expt_data_item_category'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Experimental_data_link.Source_expt_data_ID
+
+   _item_description.description
+;
+A pointer to the tag '_Peak.ID' in the specified spectral peak list save frame.
+;
+
+   _item.name                                  '_Experimental_data_link.Source_expt_data_ID'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link.Derived_data_Sf_framecode
+
+   _item_description.description
+;
+A pointer to the Sf_framecode for the save frame where the linked constraint 
+is found.
+;
+
+   _item.name                                  '_Experimental_data_link.Derived_data_Sf_framecode'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Experimental_data_link.Derived_data_Sf_category
+
+   _item_description.description
+;
+The category for the constraint save frame where the linked constraint is found.
+;
+
+   _item.name                                  '_Experimental_data_link.Derived_data_Sf_category'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save__Experimental_data_link.Derived_data_list_ID
+
+   _item_description.description
+;
+A pointer to the unique ID for the save frame of the category for the linked 
+constraint.
+;
+
+   _item.name                                  '_Experimental_data_link.Derived_data_list_ID'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link.Derived_data_list_label
+
+   _item_description.description
+;
+A label for the save frame where the constraint linked to the experimental 
+data is located.
+;
+
+   _item.name                                  '_Experimental_data_link.Derived_data_list_label'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Experimental_data_link.Derived_data_item_category
+
+   _item_description.description
+;
+The item or tag category (table name) where the linked constraint data 
+item is located.
+;
+
+   _item.name                                  '_Experimental_data_link.Derived_data_item_category'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
+save__Experimental_data_link.Derived_data_ID
+
+   _item_description.description
+;
+A pointer to the tag that is the unique ID for the linked constraint.
+;
+
+   _item.name                                  '_Experimental_data_link.Derived_data_ID'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Experimental_data_link_list.Sf_ID'
+;
+
+   _item.name                                  '_Experimental_data_link.Sf_ID'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Experimental_data_link.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Experimental_data_link.Entry_ID'
+   _item.category_id                           'Experimental_data_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save__Experimental_data_link.Experimental_data_link_list_ID
+
+   _item_description.description
+;
+Pointer to '_Experimental_data_link_list.ID'
+;
+
+   _item.name                                  '_Experimental_data_link.Experimental_data_link_list_ID'
+   _item.category_id                           'Experimental_data_link'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 

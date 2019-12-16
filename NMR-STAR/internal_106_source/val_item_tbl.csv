@@ -403,7 +403,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 4010,assembly,_Assembly_type.Sf_ID,,INTEGER,int,NOT NULL,,Assembly_type,Sf_ID,Y,?,4,?,,,,Y,N
 4020,assembly,_Assembly_type.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assembly_type,Entry_ID,Y,?,3,?,,,,,N
 4030,assembly,_Assembly_type.Assembly_ID,,INTEGER,int,NOT NULL,Y,Assembly_type,Assembly_ID,Y,?,5,?,,,,,N
-4040,assembly,_Entity_assembly.ID,Y,INTEGER,int,NOT NULL,Y,Entity_assembly,ID,Y,?,6,?,,,,,N
+4040,assembly,_Entity_assembly.ID,,INTEGER,int,NOT NULL,Y,Entity_assembly,ID,Y,?,6,?,,,,,N
 4050,assembly,_Entity_assembly.Entity_assembly_name,,VARCHAR(127),line,,,Entity_assembly,Entity_assembly_name,Y,?,0,?,,,,,N
 4060,assembly,_Entity_assembly.Entity_ID,,INTEGER,int,NOT NULL,,Entity_assembly,Entity_ID,Y,?,7,?,,,,,N
 4070,assembly,_Entity_assembly.Entity_label,,VARCHAR(127),framecode,,,Entity_assembly,Entity_label,Y,?,8,?,,,,,N
@@ -6431,260 +6431,284 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 64290,peak_constraint_links,_Peak_constraint_link.Constraint_Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Peak_constraint_link,Constraint_Sf_framecode,Y,?,0,?,,,,,N
 64300,peak_constraint_links,_Peak_constraint_link.Constraint_Sf_category,Y,VARCHAR(127),code,NOT NULL,,Peak_constraint_link,Constraint_Sf_category,Y,?,0,?,,,,,N
 64310,peak_constraint_links,_Peak_constraint_link.Constraint_list_ID,,INTEGER,int,NOT NULL,,Peak_constraint_link,Constraint_list_ID,Y,?,0,?,,,,,N
-64320,peak_constraint_links,_Peak_constraint_link.Constraint_ID,,INTEGER,int,NOT NULL,,Peak_constraint_link,Constraint_ID,Y,?,0,?,,,,,N
-64330,peak_constraint_links,_Peak_constraint_link.Sf_ID,,INTEGER,int,NOT NULL,,Peak_constraint_link,Sf_ID,Y,?,4,?,,,,Y,N
-64340,peak_constraint_links,_Peak_constraint_link.Entry_ID,,CHAR(12),code,NOT NULL,Y,Peak_constraint_link,Entry_ID,Y,?,3,?,,,,,N
-64350,peak_constraint_links,_Peak_constraint_link.Peak_constraint_link_list_ID,,INTEGER,int,NOT NULL,Y,Peak_constraint_link,Peak_constraint_link_list_ID,Y,?,5,?,,,,,N
-64360,SAXS_constraints,_SAXS_constraint_list.Sf_category,,VARCHAR(127),code,NOT NULL,,SAXS_constraint_list,Sf_category,N,?,1,?,,,,,N
-64370,SAXS_constraints,_SAXS_constraint_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_list,Sf_framecode,N,SAXS_constraint_list_1,2,?,,,,,N
-64380,SAXS_constraints,_SAXS_constraint_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint_list,Entry_ID,N,?,3,?,,,,,N
-64390,SAXS_constraints,_SAXS_constraint_list.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_list,Sf_ID,N,?,4,?,,,,Y,N
-64400,SAXS_constraints,_SAXS_constraint_list.ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_list,ID,N,?,5,?,,,,,N
-64410,SAXS_constraints,_SAXS_constraint_list.Name,,VARCHAR(127),line,,,SAXS_constraint_list,Name,N,?,0,?,,,,,N
-64420,SAXS_constraints,_SAXS_constraint_list.Data_file_name,,VARCHAR(127),line,,,SAXS_constraint_list,Data_file_name,N,?,0,?,,,,Y,N
-64430,SAXS_constraints,_SAXS_constraint_list.Sample_condition_list_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_list,Sample_condition_list_ID,N,?,7,?,,,,,N
-64440,SAXS_constraints,_SAXS_constraint_list.Sample_condition_list_label,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_list,Sample_condition_list_label,N,?,8,?,,,,,N
-64450,SAXS_constraints,_SAXS_constraint_list.Details,,TEXT,text,,,SAXS_constraint_list,Details,N,?,0,?,,,,,N
-64460,SAXS_constraints,_SAXS_constraint_list.Text_data_format,,VARCHAR(31),line,,,SAXS_constraint_list,Text_data_format,N,?,0,?,,,,,N
-64470,SAXS_constraints,_SAXS_constraint_list.Text_data,,TEXT,text,,,SAXS_constraint_list,Text_data,N,?,0,?,,,,,N
-64480,SAXS_constraints,_SAXS_constraint_expt.Experiment_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_expt,Experiment_ID,Y,?,7,?,,,,,N
-64490,SAXS_constraints,_SAXS_constraint_expt.Experiment_name,,VARCHAR(127),line,,,SAXS_constraint_expt,Experiment_name,Y,?,0,?,,,,,N
-64500,SAXS_constraints,_SAXS_constraint_expt.Sample_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_expt,Sample_ID,Y,?,7,?,,,,,N
-64510,SAXS_constraints,_SAXS_constraint_expt.Sample_label,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_expt,Sample_label,Y,?,8,?,,,,,N
-64520,SAXS_constraints,_SAXS_constraint_expt.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_expt,Sf_ID,Y,?,4,?,,,,Y,N
-64530,SAXS_constraints,_SAXS_constraint_expt.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint_expt,Entry_ID,Y,?,3,?,,,,,N
-64540,SAXS_constraints,_SAXS_constraint_expt.SAXS_constraint_list_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_expt,SAXS_constraint_list_ID,Y,?,5,?,,,,,N
-64550,SAXS_constraints,_SAXS_constraint_software.Software_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_software,Software_ID,Y,?,7,?,,,,,N
-64560,SAXS_constraints,_SAXS_constraint_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_software,Software_label,Y,?,8,?,,,,,N
-64570,SAXS_constraints,_SAXS_constraint_software.Method_ID,,INTEGER,int,,,SAXS_constraint_software,Method_ID,Y,?,7,?,,,,,N
-64580,SAXS_constraints,_SAXS_constraint_software.Method_label,,VARCHAR(127),framecode,,,SAXS_constraint_software,Method_label,Y,?,8,?,,,,,N
-64590,SAXS_constraints,_SAXS_constraint_software.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_software,Sf_ID,Y,?,4,?,,,,Y,N
-64600,SAXS_constraints,_SAXS_constraint_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint_software,Entry_ID,Y,?,3,?,,,,,N
-64610,SAXS_constraints,_SAXS_constraint_software.SAXS_constraint_list_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_software,SAXS_constraint_list_ID,Y,?,5,?,,,,,N
-64620,SAXS_constraints,_SAXS_constraint.ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint,ID,Y,?,6,?,,,,,N
-64630,SAXS_constraints,_SAXS_constraint.Q_value,,FLOAT,float,,,SAXS_constraint,Q_value,Y,?,0,?,,,,,N
-64640,SAXS_constraints,_SAXS_constraint.Intensity_val,,FLOAT,float,,,SAXS_constraint,Intensity_val,Y,?,0,?,,,,,N
-64650,SAXS_constraints,_SAXS_constraint.Intensity_val_err,,FLOAT,float,,,SAXS_constraint,Intensity_val_err,Y,?,0,?,,,,,N
-64660,SAXS_constraints,_SAXS_constraint.Weight_val,,FLOAT,float,,,SAXS_constraint,Weight_val,Y,?,0,?,,,,,N
-64670,SAXS_constraints,_SAXS_constraint.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint,Sf_ID,Y,?,4,?,,,,Y,N
-64680,SAXS_constraints,_SAXS_constraint.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint,Entry_ID,Y,?,3,?,,,,,N
-64690,SAXS_constraints,_SAXS_constraint.SAXS_constraint_list_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint,SAXS_constraint_list_ID,Y,?,5,?,,,,,N
-64700,other_constraints,_Other_constraint_list.Sf_category,,VARCHAR(31),code,NOT NULL,,Other_constraint_list,Sf_category,N,?,1,?,,,,,N
-64710,other_constraints,_Other_constraint_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Other_constraint_list,Sf_framecode,N,?,2,?,,,,,N
-64720,other_constraints,_Other_constraint_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_constraint_list,Entry_ID,N,?,3,?,,,,,N
-64730,other_constraints,_Other_constraint_list.Sf_ID,,INTEGER,int,NOT NULL,,Other_constraint_list,Sf_ID,N,?,4,?,,,,Y,N
-64740,other_constraints,_Other_constraint_list.ID,,INTEGER,int,NOT NULL,Y,Other_constraint_list,ID,N,?,5,?,,,,,N
-64750,other_constraints,_Other_constraint_list.Name,,VARCHAR(127),line,,,Other_constraint_list,Name,N,?,0,?,,,,,N
-64760,other_constraints,_Other_constraint_list.Details,,TEXT,text,,,Other_constraint_list,Details,N,?,0,?,,,,,N
-64770,other_constraints,_Other_constraint_list.Entity_assembly_ID,,INTEGER,int,NOT NULL,,Other_constraint_list,Entity_assembly_ID,N,?,0,?,,,,,N
-64780,other_constraints,_Other_constraint_list.Entity_ID,,INTEGER,int,NOT NULL,,Other_constraint_list,Entity_ID,N,?,0,?,,,,,N
-64790,other_constraints,_Other_constraint_list.Type,,VARCHAR(127),line,NOT NULL,,Other_constraint_list,Type,N,?,0,?,,,,,N
-64800,other_constraints,_Other_constraint_list.Subtype,,VARCHAR(127),line,NOT NULL,,Other_constraint_list,Subtype,N,?,0,?,,,,,N
-64810,other_constraints,_Other_constraint_list.File_name,,VARCHAR(127),line,,,Other_constraint_list,File_name,N,?,0,?,,,,,N
-64820,other_constraints,_Other_constraint_list.File_format,,VARCHAR(127),line,NOT NULL,,Other_constraint_list,File_format,N,?,0,?,,,,,N
-64830,other_constraints,_Other_constraint_list.Constraint_file_ID,,INTEGER,int,,,Other_constraint_list,Constraint_file_ID,N,?,0,?,,,,,N
-64840,other_constraints,_Other_constraint_list.Block_ID,,INTEGER,int,,,Other_constraint_list,Block_ID,N,?,0,?,,,,,N
-64850,other_constraints,_Other_constraint_list.Text_data_format,,VARCHAR(127),line,,,Other_constraint_list,Text_data_format,N,?,0,?,,,,,N
-64860,other_constraints,_Other_constraint_list.Text_data,,TEXT,text,NOT NULL,,Other_constraint_list,Text_data,N,?,0,?,,,,,N
-64870,other_constraints,_Other_constraint_expt.Experiment_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_expt,Experiment_ID,Y,?,7,?,,,,,N
-64880,other_constraints,_Other_constraint_expt.Experiment_name,,VARCHAR(127),line,,,Other_constraint_expt,Experiment_name,Y,?,0,?,,,,,N
-64890,other_constraints,_Other_constraint_expt.Method_ID,,INTEGER,int,,,Other_constraint_expt,Method_ID,Y,?,7,?,,,,,N
-64900,other_constraints,_Other_constraint_expt.Method_label,,VARCHAR(127),framecode,,,Other_constraint_expt,Method_label,Y,?,8,?,,,,,N
-64910,other_constraints,_Other_constraint_expt.Sample_ID,,INTEGER,int,,,Other_constraint_expt,Sample_ID,Y,?,7,?,,,,,N
-64920,other_constraints,_Other_constraint_expt.Sample_label,,VARCHAR(127),framecode,,,Other_constraint_expt,Sample_label,Y,?,8,?,,,,,N
-64930,other_constraints,_Other_constraint_expt.Sample_state,N,VARCHAR(31),line,,,Other_constraint_expt,Sample_state,Y,?,0,?,,,,,N
-64940,other_constraints,_Other_constraint_expt.Sf_ID,,INTEGER,int,NOT NULL,,Other_constraint_expt,Sf_ID,Y,?,4,?,,,,Y,N
-64950,other_constraints,_Other_constraint_expt.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_constraint_expt,Entry_ID,Y,?,3,?,,,,,N
-64960,other_constraints,_Other_constraint_expt.Other_constraint_list_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_expt,Other_constraint_list_ID,Y,?,5,?,,,,,N
-64970,other_constraints,_Other_constraint_software.Software_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_software,Software_ID,Y,?,7,?,,,,,N
-64980,other_constraints,_Other_constraint_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,Other_constraint_software,Software_label,Y,?,8,?,,,,,N
-64990,other_constraints,_Other_constraint_software.Method_ID,,INTEGER,int,,,Other_constraint_software,Method_ID,Y,?,7,?,,,,,N
-65000,other_constraints,_Other_constraint_software.Method_label,,VARCHAR(127),framecode,,,Other_constraint_software,Method_label,Y,?,8,?,,,,,N
-65010,other_constraints,_Other_constraint_software.Sf_ID,,INTEGER,int,NOT NULL,,Other_constraint_software,Sf_ID,Y,?,4,?,,,,Y,N
-65020,other_constraints,_Other_constraint_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_constraint_software,Entry_ID,Y,?,3,?,,,,,N
-65030,other_constraints,_Other_constraint_software.Other_constraint_list_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_software,Other_constraint_list_ID,Y,?,5,?,,,,,N
-65040,org_constr_file_comment,_Org_constr_file_comment.Sf_category,,VARCHAR(127),code,,,Org_constr_file_comment,Sf_category,N,?,1,?,,,,,N
-65050,org_constr_file_comment,_Org_constr_file_comment.Sf_framecode,,VARCHAR(127),framecode,,,Org_constr_file_comment,Sf_framecode,N,?,2,?,,,,,N
-65060,org_constr_file_comment,_Org_constr_file_comment.Entry_ID,,CHAR(12),code,NOT NULL,Y,Org_constr_file_comment,Entry_ID,N,?,3,?,,,,,N
-65070,org_constr_file_comment,_Org_constr_file_comment.Sf_ID,,INTEGER,int,,,Org_constr_file_comment,Sf_ID,N,?,4,?,,,,Y,N
-65080,org_constr_file_comment,_Org_constr_file_comment.ID,,INTEGER,int,NOT NULL,Y,Org_constr_file_comment,ID,N,?,5,?,,,,,N
-65090,org_constr_file_comment,_Org_constr_file_comment.Constraint_file_ID,,INTEGER,int,,,Org_constr_file_comment,Constraint_file_ID,N,?,0,?,,,,,N
-65100,org_constr_file_comment,_Org_constr_file_comment.Block_ID,,INTEGER,int,,,Org_constr_file_comment,Block_ID,N,?,0,?,,,,,N
-65110,org_constr_file_comment,_Org_constr_file_comment.Details,,TEXT,text,,,Org_constr_file_comment,Details,N,?,0,?,,,,,N
-65120,org_constr_file_comment,_Org_constr_file_comment.Comment,,TEXT,text,,,Org_constr_file_comment,Comment,N,?,0,?,,,,,N
-65130,MS_MZ_data,_MZ_ratio_data_list.Sf_category,,VARCHAR(127),code,NOT NULL,,MZ_ratio_data_list,Sf_category,N,?,1,?,,,,,N
-65140,MS_MZ_data,_MZ_ratio_data_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,MZ_ratio_data_list,Sf_framecode,N,?,2,?,,,,,N
-65150,MS_MZ_data,_MZ_ratio_data_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_data_list,Entry_ID,N,?,3,?,,,,,N
-65160,MS_MZ_data,_MZ_ratio_data_list.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_data_list,Sf_ID,N,?,4,?,,,,Y,N
-65170,MS_MZ_data,_MZ_ratio_data_list.ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_data_list,ID,N,?,5,?,,,,,N
-65180,MS_MZ_data,_MZ_ratio_data_list.Name,,VARCHAR(127),line,,,MZ_ratio_data_list,Name,N,?,0,?,,,,,N
-65190,MS_MZ_data,_MZ_ratio_data_list.Sample_condition_list_ID,,INTEGER,int,NOT NULL,,MZ_ratio_data_list,Sample_condition_list_ID,N,?,7,?,,,,,N
-65200,MS_MZ_data,_MZ_ratio_data_list.Sample_condition_list_label,,VARCHAR(127),framecode,NOT NULL,,MZ_ratio_data_list,Sample_condition_list_label,N,?,8,?,,,,,N
-65210,MS_MZ_data,_MZ_ratio_data_list.Mass_spec_ref_compd_set_ID,,INTEGER,int,,,MZ_ratio_data_list,Mass_spec_ref_compd_set_ID,N,?,0,?,,,,,N
-65220,MS_MZ_data,_MZ_ratio_data_list.Mass_spec_ref_compd_set_label,,VARCHAR(127),framecode,,,MZ_ratio_data_list,Mass_spec_ref_compd_set_label,N,?,0,?,,,,,N
-65230,MS_MZ_data,_MZ_ratio_data_list.Mass_spec_ref_compd_ID,,INTEGER,int,,,MZ_ratio_data_list,Mass_spec_ref_compd_ID,N,?,0,?,,,,,N
-65240,MS_MZ_data,_MZ_ratio_data_list.MZ_error_units,,VARCHAR(31),code,,,MZ_ratio_data_list,MZ_error_units,N,?,0,?,,,,,N
-65250,MS_MZ_data,_MZ_ratio_data_list.Intensity_units,,VARCHAR(31),code,,,MZ_ratio_data_list,Intensity_units,N,?,0,?,,,,,N
-65260,MS_MZ_data,_MZ_ratio_data_list.Error_derivation_method,,VARCHAR(127),line,,,MZ_ratio_data_list,Error_derivation_method,N,?,0,?,,,,,N
-65270,MS_MZ_data,_MZ_ratio_data_list.Details,,TEXT,text,,,MZ_ratio_data_list,Details,N,?,0,?,,,,,N
-65280,MS_MZ_data,_MZ_ratio_data_list.Text_data_format,,VARCHAR(31),code,,,MZ_ratio_data_list,Text_data_format,N,?,0,?,,,,,N
-65290,MS_MZ_data,_MZ_ratio_data_list.Text_data,,TEXT,text,,,MZ_ratio_data_list,Text_data,N,?,0,?,,,,,N
-65300,MS_MZ_data,_MZ_ratio_experiment.Experiment_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_experiment,Experiment_ID,Y,?,7,?,,,,,N
-65310,MS_MZ_data,_MZ_ratio_experiment.Experiment_name,,VARCHAR(127),line,,,MZ_ratio_experiment,Experiment_name,Y,?,0,?,,,,,N
-65320,MS_MZ_data,_MZ_ratio_experiment.Sample_ID,,INTEGER,int,,,MZ_ratio_experiment,Sample_ID,Y,?,7,?,,,,,N
-65330,MS_MZ_data,_MZ_ratio_experiment.Sample_label,,VARCHAR(127),framecode,,,MZ_ratio_experiment,Sample_label,Y,?,8,?,,,,,N
-65340,MS_MZ_data,_MZ_ratio_experiment.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_experiment,Sf_ID,Y,?,4,?,,,,Y,N
-65350,MS_MZ_data,_MZ_ratio_experiment.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_experiment,Entry_ID,Y,?,3,?,,,,,N
-65360,MS_MZ_data,_MZ_ratio_experiment.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_experiment,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
-65370,MS_MZ_data,_MZ_ratio_software.Software_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_software,Software_ID,Y,?,7,?,,,,,N
-65380,MS_MZ_data,_MZ_ratio_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,MZ_ratio_software,Software_label,Y,?,8,?,,,,,N
-65390,MS_MZ_data,_MZ_ratio_software.Method_ID,,INTEGER,int,,,MZ_ratio_software,Method_ID,Y,?,7,?,,,,,N
-65400,MS_MZ_data,_MZ_ratio_software.Method_label,,VARCHAR(127),framecode,,,MZ_ratio_software,Method_label,Y,?,8,?,,,,,N
-65410,MS_MZ_data,_MZ_ratio_software.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_software,Sf_ID,Y,?,4,?,,,,Y,N
-65420,MS_MZ_data,_MZ_ratio_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_software,Entry_ID,Y,?,3,?,,,,,N
-65430,MS_MZ_data,_MZ_ratio_software.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_software,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
-65440,MS_MZ_data,_MZ_ratio_spectrum_param.ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_spectrum_param,ID,Y,?,0,?,,,,,N
-65450,MS_MZ_data,_MZ_ratio_spectrum_param.Name,,VARCHAR(127),line,NOT NULL,,MZ_ratio_spectrum_param,Name,Y,?,0,?,,,,,N
-65460,MS_MZ_data,_MZ_ratio_spectrum_param.Value,,VARCHAR(127),line,NOT NULL,,MZ_ratio_spectrum_param,Value,Y,?,0,?,,,,,N
-65470,MS_MZ_data,_MZ_ratio_spectrum_param.Units,,VARCHAR(31),code,,,MZ_ratio_spectrum_param,Units,Y,?,0,?,,,,,N
-65480,MS_MZ_data,_MZ_ratio_spectrum_param.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_spectrum_param,Sf_ID,Y,?,4,?,,,,Y,N
-65490,MS_MZ_data,_MZ_ratio_spectrum_param.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_spectrum_param,Entry_ID,Y,?,3,?,,,,,N
-65500,MS_MZ_data,_MZ_ratio_spectrum_param.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_spectrum_param,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
-65510,MS_MZ_data,_MZ_precursor_ion.ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion,ID,Y,?,6,?,,,,,N
-65520,MS_MZ_data,_MZ_precursor_ion.MZ_ratio,,FLOAT,float,NOT NULL,,MZ_precursor_ion,MZ_ratio,Y,?,0,?,,,,,N
-65530,MS_MZ_data,_MZ_precursor_ion.MZ_ratio_err,,FLOAT,float,,,MZ_precursor_ion,MZ_ratio_err,Y,?,0,?,,,,,N
-65540,MS_MZ_data,_MZ_precursor_ion.Intensity,,FLOAT,float,,,MZ_precursor_ion,Intensity,Y,?,0,?,,,,,N
-65550,MS_MZ_data,_MZ_precursor_ion.Relative_intensity,,FLOAT,float,,,MZ_precursor_ion,Relative_intensity,Y,?,0,?,,,,,N
-65560,MS_MZ_data,_MZ_precursor_ion.S_N_ratio,,FLOAT,float,,,MZ_precursor_ion,S_N_ratio,Y,?,0,?,,,,,N
-65570,MS_MZ_data,_MZ_precursor_ion.Full_width_half_maximum,,FLOAT,float,,,MZ_precursor_ion,Full_width_half_maximum,Y,?,0,?,,,,,N
-65580,MS_MZ_data,_MZ_precursor_ion.Sf_ID,,INTEGER,int,NOT NULL,,MZ_precursor_ion,Sf_ID,Y,?,4,?,,,,Y,N
-65590,MS_MZ_data,_MZ_precursor_ion.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_precursor_ion,Entry_ID,Y,?,3,?,,,,,N
-65600,MS_MZ_data,_MZ_precursor_ion.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
-65610,MS_MZ_data,_MZ_precursor_ion_annotation.ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion_annotation,ID,Y,?,0,?,,,,,N
-65620,MS_MZ_data,_MZ_precursor_ion_annotation.MZ_precursor_ion_ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion_annotation,MZ_precursor_ion_ID,Y,?,0,?,,,,,N
-65630,MS_MZ_data,_MZ_precursor_ion_annotation.Entity_ID,,INTEGER,int,,,MZ_precursor_ion_annotation,Entity_ID,Y,?,0,?,,,,,N
-65640,MS_MZ_data,_MZ_precursor_ion_annotation.Comp_index_ID,,INTEGER,int,,,MZ_precursor_ion_annotation,Comp_index_ID,Y,?,0,?,,,,,N
-65650,MS_MZ_data,_MZ_precursor_ion_annotation.Comp_ID,,CHAR(12),code,,,MZ_precursor_ion_annotation,Comp_ID,Y,?,0,?,,,,,N
-65660,MS_MZ_data,_MZ_precursor_ion_annotation.Chemical_composition,,VARCHAR(127),line,,,MZ_precursor_ion_annotation,Chemical_composition,Y,?,0,?,,,,,N
-65670,MS_MZ_data,_MZ_precursor_ion_annotation.Sf_ID,,INTEGER,int,NOT NULL,,MZ_precursor_ion_annotation,Sf_ID,Y,?,4,?,,,,Y,N
-65680,MS_MZ_data,_MZ_precursor_ion_annotation.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_precursor_ion_annotation,Entry_ID,Y,?,3,?,,,,,N
-65690,MS_MZ_data,_MZ_precursor_ion_annotation.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion_annotation,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
-65700,MS_MZ_data,_MZ_product_ion.ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion,ID,Y,?,6,?,,,,,N
-65710,MS_MZ_data,_MZ_product_ion.MZ_ratio,,FLOAT,float,NOT NULL,,MZ_product_ion,MZ_ratio,Y,?,0,?,,,,,N
-65720,MS_MZ_data,_MZ_product_ion.MZ_ratio_err,,FLOAT,float,,,MZ_product_ion,MZ_ratio_err,Y,?,0,?,,,,,N
-65730,MS_MZ_data,_MZ_product_ion.Intensity,,FLOAT,float,,,MZ_product_ion,Intensity,Y,?,0,?,,,,,N
-65740,MS_MZ_data,_MZ_product_ion.Relative_intensity,,FLOAT,float,,,MZ_product_ion,Relative_intensity,Y,?,0,?,,,,,N
-65750,MS_MZ_data,_MZ_product_ion.S_N_ratio,,FLOAT,float,,,MZ_product_ion,S_N_ratio,Y,?,0,?,,,,,N
-65760,MS_MZ_data,_MZ_product_ion.Full_width_half_maximum,,FLOAT,float,,,MZ_product_ion,Full_width_half_maximum,Y,?,0,?,,,,,N
-65770,MS_MZ_data,_MZ_product_ion.Sf_ID,,INTEGER,int,NOT NULL,,MZ_product_ion,Sf_ID,Y,?,4,?,,,,Y,N
-65780,MS_MZ_data,_MZ_product_ion.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_product_ion,Entry_ID,Y,?,3,?,,,,,N
-65790,MS_MZ_data,_MZ_product_ion.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
-65800,MS_MZ_data,_MZ_product_ion_annotation.ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion_annotation,ID,Y,?,0,?,,,,,N
-65810,MS_MZ_data,_MZ_product_ion_annotation.MZ_product_ion_ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion_annotation,MZ_product_ion_ID,Y,?,0,?,,,,,N
-65820,MS_MZ_data,_MZ_product_ion_annotation.Entity_ID,,INTEGER,int,,,MZ_product_ion_annotation,Entity_ID,Y,?,0,?,,,,,N
-65830,MS_MZ_data,_MZ_product_ion_annotation.Comp_index_ID,,INTEGER,int,,,MZ_product_ion_annotation,Comp_index_ID,Y,?,0,?,,,,,N
-65840,MS_MZ_data,_MZ_product_ion_annotation.Comp_ID,,CHAR(12),code,,,MZ_product_ion_annotation,Comp_ID,Y,?,0,?,,,,,N
-65850,MS_MZ_data,_MZ_product_ion_annotation.Chemical_composition,,VARCHAR(127),line,,,MZ_product_ion_annotation,Chemical_composition,Y,?,0,?,,,,,N
-65860,MS_MZ_data,_MZ_product_ion_annotation.Sf_ID,,INTEGER,int,NOT NULL,,MZ_product_ion_annotation,Sf_ID,Y,?,4,?,,,,Y,N
-65870,MS_MZ_data,_MZ_product_ion_annotation.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_product_ion_annotation,Entry_ID,Y,?,3,?,,,,,N
-65880,MS_MZ_data,_MZ_product_ion_annotation.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion_annotation,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
-65890,MS_chromatogram,_MS_chromatogram_list.Sf_category,,VARCHAR(127),code,NOT NULL,,MS_chromatogram_list,Sf_category,N,?,1,?,,,,,N
-65900,MS_chromatogram,_MS_chromatogram_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,MS_chromatogram_list,Sf_framecode,N,?,2,?,,,,,N
-65910,MS_chromatogram,_MS_chromatogram_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_list,Entry_ID,N,?,3,?,,,,,N
-65920,MS_chromatogram,_MS_chromatogram_list.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_list,Sf_ID,N,?,4,?,,,,Y,N
-65930,MS_chromatogram,_MS_chromatogram_list.ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_list,ID,N,?,5,?,,,,,N
-65940,MS_chromatogram,_MS_chromatogram_list.Name,,VARCHAR(127),line,,,MS_chromatogram_list,Name,N,?,0,?,,,,,N
-65950,MS_chromatogram,_MS_chromatogram_list.Sample_condition_list_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_list,Sample_condition_list_ID,N,?,7,?,,,,,N
-65960,MS_chromatogram,_MS_chromatogram_list.Sample_condition_list_label,,VARCHAR(127),framecode,NOT NULL,,MS_chromatogram_list,Sample_condition_list_label,N,?,8,?,,,,,N
-65970,MS_chromatogram,_MS_chromatogram_list.Details,,TEXT,text,,,MS_chromatogram_list,Details,N,?,0,?,,,,,N
-65980,MS_chromatogram,_MS_chromatogram_list.Text_data_format,N,VARCHAR(31),code,,,MS_chromatogram_list,Text_data_format,N,?,0,?,,,,,N
-65990,MS_chromatogram,_MS_chromatogram_list.Text_data,,TEXT,text,,,MS_chromatogram_list,Text_data,N,?,0,?,,,,,N
-66000,MS_chromatogram,_MS_chromatogram_experiment.Experiment_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_experiment,Experiment_ID,Y,?,7,?,,,,,N
-66010,MS_chromatogram,_MS_chromatogram_experiment.Experiment_name,,VARCHAR(127),line,NOT NULL,,MS_chromatogram_experiment,Experiment_name,Y,?,0,?,,,,,N
-66020,MS_chromatogram,_MS_chromatogram_experiment.Sample_ID,,INTEGER,int,,,MS_chromatogram_experiment,Sample_ID,Y,?,7,?,,,,,N
-66030,MS_chromatogram,_MS_chromatogram_experiment.Sample_label,,VARCHAR(127),framecode,,,MS_chromatogram_experiment,Sample_label,Y,?,8,?,,,,,N
-66040,MS_chromatogram,_MS_chromatogram_experiment.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_experiment,Sf_ID,Y,?,4,?,,,,Y,N
-66050,MS_chromatogram,_MS_chromatogram_experiment.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_experiment,Entry_ID,Y,?,3,?,,,,,N
-66060,MS_chromatogram,_MS_chromatogram_experiment.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_experiment,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
-66070,MS_chromatogram,_MS_chromatogram_software.Software_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_software,Software_ID,Y,?,7,?,,,,,N
-66080,MS_chromatogram,_MS_chromatogram_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,MS_chromatogram_software,Software_label,Y,?,8,?,,,,,N
-66090,MS_chromatogram,_MS_chromatogram_software.Method_ID,,INTEGER,int,,,MS_chromatogram_software,Method_ID,Y,?,7,?,,,,,N
-66100,MS_chromatogram,_MS_chromatogram_software.Method_label,,VARCHAR(127),framecode,,,MS_chromatogram_software,Method_label,Y,?,8,?,,,,,N
-66110,MS_chromatogram,_MS_chromatogram_software.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_software,Sf_ID,Y,?,4,?,,,,Y,N
-66120,MS_chromatogram,_MS_chromatogram_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_software,Entry_ID,Y,?,3,?,,,,,N
-66130,MS_chromatogram,_MS_chromatogram_software.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_software,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
-66140,MS_chromatogram,_MS_chromatogram_param.ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_param,ID,Y,?,0,?,,,,,N
-66150,MS_chromatogram,_MS_chromatogram_param.Name,,VARCHAR(127),line,NOT NULL,,MS_chromatogram_param,Name,Y,?,0,?,,,,,N
-66160,MS_chromatogram,_MS_chromatogram_param.Value,,VARCHAR(127),line,NOT NULL,,MS_chromatogram_param,Value,Y,?,0,?,,,,,N
-66170,MS_chromatogram,_MS_chromatogram_param.Units,,VARCHAR(31),code,,,MS_chromatogram_param,Units,Y,?,0,?,,,,,N
-66180,MS_chromatogram,_MS_chromatogram_param.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_param,Sf_ID,Y,?,4,?,,,,Y,N
-66190,MS_chromatogram,_MS_chromatogram_param.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_param,Entry_ID,Y,?,3,?,,,,,N
-66200,MS_chromatogram,_MS_chromatogram_param.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_param,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
-66210,MS_chromatogram,_MS_chromatogram_ion.ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_ion,ID,Y,?,6,?,,,,,N
-66220,MS_chromatogram,_MS_chromatogram_ion.MZ_ratio,,FLOAT,float,NOT NULL,,MS_chromatogram_ion,MZ_ratio,Y,?,0,?,,,,,N
-66230,MS_chromatogram,_MS_chromatogram_ion.MZ_ratio_err,,FLOAT,float,,,MS_chromatogram_ion,MZ_ratio_err,Y,?,0,?,,,,,N
-66240,MS_chromatogram,_MS_chromatogram_ion.MZ_Intensity,,FLOAT,float,NOT NULL,,MS_chromatogram_ion,MZ_Intensity,Y,?,0,?,,,,,N
-66250,MS_chromatogram,_MS_chromatogram_ion.MZ_relative_intensity,,FLOAT,float,,,MS_chromatogram_ion,MZ_relative_intensity,Y,?,0,?,,,,,N
-66260,MS_chromatogram,_MS_chromatogram_ion.S_N_ratio,,FLOAT,float,,,MS_chromatogram_ion,S_N_ratio,Y,?,0,?,,,,,N
-66270,MS_chromatogram,_MS_chromatogram_ion.Full_width_half_maximum,,FLOAT,float,,,MS_chromatogram_ion,Full_width_half_maximum,Y,?,0,?,,,,,N
-66280,MS_chromatogram,_MS_chromatogram_ion.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_ion,Sf_ID,Y,?,4,?,,,,Y,N
-66290,MS_chromatogram,_MS_chromatogram_ion.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_ion,Entry_ID,Y,?,3,?,,,,,N
-66300,MS_chromatogram,_MS_chromatogram_ion.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_ion,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
-66310,MS_chromatogram,_MS_chrom_ion_annotation.ID,,INTEGER,int,NOT NULL,Y,MS_chrom_ion_annotation,ID,Y,?,0,?,,,,,N
-66320,MS_chromatogram,_MS_chrom_ion_annotation.MS_chromatogram_ion_ID,,INTEGER,int,NOT NULL,,MS_chrom_ion_annotation,MS_chromatogram_ion_ID,Y,?,0,?,,,,,N
-66330,MS_chromatogram,_MS_chrom_ion_annotation.Entity_ID,,INTEGER,int,,,MS_chrom_ion_annotation,Entity_ID,Y,?,0,?,,,,,N
-66340,MS_chromatogram,_MS_chrom_ion_annotation.Comp_index_ID,,INTEGER,int,,,MS_chrom_ion_annotation,Comp_index_ID,Y,?,0,?,,,,,N
-66350,MS_chromatogram,_MS_chrom_ion_annotation.Comp_ID,,CHAR(12),code,,,MS_chrom_ion_annotation,Comp_ID,Y,?,0,?,,,,,N
-66360,MS_chromatogram,_MS_chrom_ion_annotation.Chemical_composition,,VARCHAR(127),line,,,MS_chrom_ion_annotation,Chemical_composition,Y,?,0,?,,,,,N
-66370,MS_chromatogram,_MS_chrom_ion_annotation.Sf_ID,,INTEGER,int,NOT NULL,,MS_chrom_ion_annotation,Sf_ID,Y,?,4,?,,,,Y,N
-66380,MS_chromatogram,_MS_chrom_ion_annotation.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chrom_ion_annotation,Entry_ID,Y,?,3,?,,,,,N
-66390,MS_chromatogram,_MS_chrom_ion_annotation.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chrom_ion_annotation,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
-66400,software_specific_saveframes,_Software_specific_info_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Software_specific_info_list,Sf_category,N,?,1,?,,,,,N
-66410,software_specific_saveframes,_Software_specific_info_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Software_specific_info_list,Sf_framecode,N,?,2,?,,,,,N
-66420,software_specific_saveframes,_Software_specific_info_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_specific_info_list,Entry_ID,N,?,3,?,,,,,N
-66430,software_specific_saveframes,_Software_specific_info_list.Sf_ID,,INTEGER,int,NOT NULL,,Software_specific_info_list,Sf_ID,N,?,4,?,,,,Y,N
-66440,software_specific_saveframes,_Software_specific_info_list.ID,,INTEGER,int,NOT NULL,Y,Software_specific_info_list,ID,N,?,5,?,,,,,N
-66450,software_specific_saveframes,_Software_specific_info_list.Name,,VARCHAR(127),line,,,Software_specific_info_list,Name,N,?,0,?,,,,,N
-66460,software_specific_saveframes,_Software_specific_info.Software_saveframe_ID,,INTEGER,int,NOT NULL,Y,Software_specific_info,Software_saveframe_ID,Y,?,1,?,,,,,N
-66470,software_specific_saveframes,_Software_specific_info.Software_saveframe,,TEXT,text,NOT NULL,,Software_specific_info,Software_saveframe,Y,?,2,?,,,,,N
-66480,software_specific_saveframes,_Software_specific_info.Sf_ID,,INTEGER,int,NOT NULL,,Software_specific_info,Sf_ID,Y,?,4,?,,,,Y,N
-66490,software_specific_saveframes,_Software_specific_info.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_specific_info,Entry_ID,Y,?,3,?,,,,,N
-66500,software_specific_saveframes,_Software_specific_info.Software_specific_info_list_ID,,INTEGER,int,NOT NULL,Y,Software_specific_info,Software_specific_info_list_ID,Y,?,5,?,,,,,N
-66510,applied_software,_Software_applied_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Software_applied_list,Sf_category,N,?,1,?,,,,,N
-66520,applied_software,_Software_applied_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Software_applied_list,Sf_framecode,N,?,2,?,,,,,N
-66530,applied_software,_Software_applied_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_applied_list,Entry_ID,N,?,3,?,,,,,N
-66540,applied_software,_Software_applied_list.Sf_ID,,INTEGER,int,NOT NULL,,Software_applied_list,Sf_ID,N,?,4,?,,,,Y,N
-66550,applied_software,_Software_applied_list.ID,,INTEGER,int,NOT NULL,Y,Software_applied_list,ID,N,?,5,?,,,,,N
-66560,applied_software,_Software_applied_list.Name,,VARCHAR(127),line,,,Software_applied_list,Name,N,?,0,?,,,,,N
-66570,applied_software,_Software_applied_list.Details,,TEXT,text,,,Software_applied_list,Details,N,?,0,?,,,,,N
-66580,applied_software,_Software_applied_methods.Software_ID,,INTEGER,int,NOT NULL,Y,Software_applied_methods,Software_ID,Y,?,7,?,,,,,N
-66590,applied_software,_Software_applied_methods.Software_label,,VARCHAR(127),framecode,NOT NULL,,Software_applied_methods,Software_label,Y,?,8,?,,,,,N
-66600,applied_software,_Software_applied_methods.Methods_ID,,INTEGER,int,,,Software_applied_methods,Methods_ID,Y,?,7,?,,,,,N
-66610,applied_software,_Software_applied_methods.Methods_label,,VARCHAR(127),framecode,,,Software_applied_methods,Methods_label,Y,?,8,?,,,,,N
-66620,applied_software,_Software_applied_methods.Software_name,N,VARCHAR(127),line,NOT NULL,,Software_applied_methods,Software_name,Y,?,0,?,,,,,N
-66630,applied_software,_Software_applied_methods.Script_name,,VARCHAR(127),line,,,Software_applied_methods,Script_name,Y,?,0,?,,,,,N
-66640,applied_software,_Software_applied_methods.Script,,TEXT,text,,,Software_applied_methods,Script,Y,?,0,?,,,,,N
-66650,applied_software,_Software_applied_methods.Software_specific_info,,TEXT,text,,,Software_applied_methods,Software_specific_info,Y,?,0,?,,,,,N
-66660,applied_software,_Software_applied_methods.Sf_ID,,INTEGER,int,NOT NULL,,Software_applied_methods,Sf_ID,Y,?,4,?,,,,Y,N
-66670,applied_software,_Software_applied_methods.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_applied_methods,Entry_ID,Y,?,3,?,,,,,N
-66680,applied_software,_Software_applied_methods.Software_applied_list_ID,,INTEGER,int,NOT NULL,Y,Software_applied_methods,Software_applied_list_ID,Y,?,5,?,,,,,N
-66690,applied_software_history,_Software_applied_history.Sf_category,,VARCHAR(127),code,NOT NULL,,Software_applied_history,Sf_category,N,?,1,?,,,,,N
-66700,applied_software_history,_Software_applied_history.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Software_applied_history,Sf_framecode,N,?,2,?,,,,,N
-66710,applied_software_history,_Software_applied_history.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_applied_history,Entry_ID,N,?,3,?,,,,,N
-66720,applied_software_history,_Software_applied_history.Sf_ID,,INTEGER,int,NOT NULL,,Software_applied_history,Sf_ID,N,?,4,?,,,,Y,N
-66730,applied_software_history,_Software_applied_history.ID,,INTEGER,int,NOT NULL,Y,Software_applied_history,ID,N,?,5,?,,,,,N
-66740,applied_software_history,_Software_applied_history.Name,,VARCHAR(127),line,,,Software_applied_history,Name,N,?,0,?,,,,,N
-66750,applied_software_history,_Software_applied_history.Details,,TEXT,text,,,Software_applied_history,Details,N,?,0,?,,,,,N
-66760,applied_software_history,_History.Run_number,,INTEGER,int,NOT NULL,Y,History,Run_number,Y,?,0,?,,,,,N
-66770,applied_software_history,_History.Software_ID,,INTEGER,int,NOT NULL,Y,History,Software_ID,Y,?,7,?,,,,,N
-66780,applied_software_history,_History.Software_label,,VARCHAR(127),framecode,NOT NULL,,History,Software_label,Y,?,8,?,,,,,N
-66790,applied_software_history,_History.Method_ID,,INTEGER,int,,,History,Method_ID,Y,?,7,?,,,,,N
-66800,applied_software_history,_History.Method_label,,VARCHAR(127),framecode,,,History,Method_label,Y,?,8,?,,,,,N
-66810,applied_software_history,_History.Software_name,N,VARCHAR(127),line,NOT NULL,,History,Software_name,Y,?,0,?,,,,,N
-66820,applied_software_history,_History.Software_version,,VARCHAR(127),line,,,History,Software_version,Y,?,0,?,,,,,N
-66830,applied_software_history,_History.Script_name,,VARCHAR(127),line,,,History,Script_name,Y,?,0,?,,,,,N
-66840,applied_software_history,_History.Script,,TEXT,text,,,History,Script,Y,?,0,?,,,,,N
-66850,applied_software_history,_History.Sf_ID,,INTEGER,int,NOT NULL,,History,Sf_ID,Y,?,4,?,,,,Y,N
-66860,applied_software_history,_History.Entry_ID,,CHAR(12),code,NOT NULL,Y,History,Entry_ID,Y,?,3,?,,,,,N
-66870,applied_software_history,_History.Software_applied_history_ID,,INTEGER,int,NOT NULL,Y,History,Software_applied_history_ID,Y,?,5,?,,,,,N
+64320,peak_constraint_links,_Peak_constraint_link.Constraint_ID_item_category,,VARCHAR(127),line,,,Peak_constraint_link,Constraint_ID_item_category,Y,?,0,?,,,,,N
+64330,peak_constraint_links,_Peak_constraint_link.Constraint_ID,,INTEGER,int,NOT NULL,,Peak_constraint_link,Constraint_ID,Y,?,0,?,,,,,N
+64340,peak_constraint_links,_Peak_constraint_link.Sf_ID,,INTEGER,int,NOT NULL,,Peak_constraint_link,Sf_ID,Y,?,4,?,,,,Y,N
+64350,peak_constraint_links,_Peak_constraint_link.Entry_ID,,CHAR(12),code,NOT NULL,Y,Peak_constraint_link,Entry_ID,Y,?,3,?,,,,,N
+64360,peak_constraint_links,_Peak_constraint_link.Peak_constraint_link_list_ID,,INTEGER,int,NOT NULL,Y,Peak_constraint_link,Peak_constraint_link_list_ID,Y,?,5,?,,,,,N
+64370,SAXS_constraints,_SAXS_constraint_list.Sf_category,,VARCHAR(127),code,NOT NULL,,SAXS_constraint_list,Sf_category,N,?,1,?,,,,,N
+64380,SAXS_constraints,_SAXS_constraint_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_list,Sf_framecode,N,SAXS_constraint_list_1,2,?,,,,,N
+64390,SAXS_constraints,_SAXS_constraint_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint_list,Entry_ID,N,?,3,?,,,,,N
+64400,SAXS_constraints,_SAXS_constraint_list.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_list,Sf_ID,N,?,4,?,,,,Y,N
+64410,SAXS_constraints,_SAXS_constraint_list.ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_list,ID,N,?,5,?,,,,,N
+64420,SAXS_constraints,_SAXS_constraint_list.Name,,VARCHAR(127),line,,,SAXS_constraint_list,Name,N,?,0,?,,,,,N
+64430,SAXS_constraints,_SAXS_constraint_list.Data_file_name,,VARCHAR(127),line,,,SAXS_constraint_list,Data_file_name,N,?,0,?,,,,Y,N
+64440,SAXS_constraints,_SAXS_constraint_list.Sample_condition_list_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_list,Sample_condition_list_ID,N,?,7,?,,,,,N
+64450,SAXS_constraints,_SAXS_constraint_list.Sample_condition_list_label,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_list,Sample_condition_list_label,N,?,8,?,,,,,N
+64460,SAXS_constraints,_SAXS_constraint_list.Details,,TEXT,text,,,SAXS_constraint_list,Details,N,?,0,?,,,,,N
+64470,SAXS_constraints,_SAXS_constraint_list.Text_data_format,,VARCHAR(31),line,,,SAXS_constraint_list,Text_data_format,N,?,0,?,,,,,N
+64480,SAXS_constraints,_SAXS_constraint_list.Text_data,,TEXT,text,,,SAXS_constraint_list,Text_data,N,?,0,?,,,,,N
+64490,SAXS_constraints,_SAXS_constraint_expt.Experiment_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_expt,Experiment_ID,Y,?,7,?,,,,,N
+64500,SAXS_constraints,_SAXS_constraint_expt.Experiment_name,,VARCHAR(127),line,,,SAXS_constraint_expt,Experiment_name,Y,?,0,?,,,,,N
+64510,SAXS_constraints,_SAXS_constraint_expt.Sample_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_expt,Sample_ID,Y,?,7,?,,,,,N
+64520,SAXS_constraints,_SAXS_constraint_expt.Sample_label,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_expt,Sample_label,Y,?,8,?,,,,,N
+64530,SAXS_constraints,_SAXS_constraint_expt.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_expt,Sf_ID,Y,?,4,?,,,,Y,N
+64540,SAXS_constraints,_SAXS_constraint_expt.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint_expt,Entry_ID,Y,?,3,?,,,,,N
+64550,SAXS_constraints,_SAXS_constraint_expt.SAXS_constraint_list_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_expt,SAXS_constraint_list_ID,Y,?,5,?,,,,,N
+64560,SAXS_constraints,_SAXS_constraint_software.Software_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_software,Software_ID,Y,?,7,?,,,,,N
+64570,SAXS_constraints,_SAXS_constraint_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_software,Software_label,Y,?,8,?,,,,,N
+64580,SAXS_constraints,_SAXS_constraint_software.Method_ID,,INTEGER,int,,,SAXS_constraint_software,Method_ID,Y,?,7,?,,,,,N
+64590,SAXS_constraints,_SAXS_constraint_software.Method_label,,VARCHAR(127),framecode,,,SAXS_constraint_software,Method_label,Y,?,8,?,,,,,N
+64600,SAXS_constraints,_SAXS_constraint_software.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_software,Sf_ID,Y,?,4,?,,,,Y,N
+64610,SAXS_constraints,_SAXS_constraint_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint_software,Entry_ID,Y,?,3,?,,,,,N
+64620,SAXS_constraints,_SAXS_constraint_software.SAXS_constraint_list_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_software,SAXS_constraint_list_ID,Y,?,5,?,,,,,N
+64630,SAXS_constraints,_SAXS_constraint.ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint,ID,Y,?,6,?,,,,,N
+64640,SAXS_constraints,_SAXS_constraint.Q_value,,FLOAT,float,,,SAXS_constraint,Q_value,Y,?,0,?,,,,,N
+64650,SAXS_constraints,_SAXS_constraint.Intensity_val,,FLOAT,float,,,SAXS_constraint,Intensity_val,Y,?,0,?,,,,,N
+64660,SAXS_constraints,_SAXS_constraint.Intensity_val_err,,FLOAT,float,,,SAXS_constraint,Intensity_val_err,Y,?,0,?,,,,,N
+64670,SAXS_constraints,_SAXS_constraint.Weight_val,,FLOAT,float,,,SAXS_constraint,Weight_val,Y,?,0,?,,,,,N
+64680,SAXS_constraints,_SAXS_constraint.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint,Sf_ID,Y,?,4,?,,,,Y,N
+64690,SAXS_constraints,_SAXS_constraint.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint,Entry_ID,Y,?,3,?,,,,,N
+64700,SAXS_constraints,_SAXS_constraint.SAXS_constraint_list_ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint,SAXS_constraint_list_ID,Y,?,5,?,,,,,N
+64710,other_constraints,_Other_constraint_list.Sf_category,,VARCHAR(31),code,NOT NULL,,Other_constraint_list,Sf_category,N,?,1,?,,,,,N
+64720,other_constraints,_Other_constraint_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Other_constraint_list,Sf_framecode,N,?,2,?,,,,,N
+64730,other_constraints,_Other_constraint_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_constraint_list,Entry_ID,N,?,3,?,,,,,N
+64740,other_constraints,_Other_constraint_list.Sf_ID,,INTEGER,int,NOT NULL,,Other_constraint_list,Sf_ID,N,?,4,?,,,,Y,N
+64750,other_constraints,_Other_constraint_list.ID,,INTEGER,int,NOT NULL,Y,Other_constraint_list,ID,N,?,5,?,,,,,N
+64760,other_constraints,_Other_constraint_list.Name,,VARCHAR(127),line,,,Other_constraint_list,Name,N,?,0,?,,,,,N
+64770,other_constraints,_Other_constraint_list.Details,,TEXT,text,,,Other_constraint_list,Details,N,?,0,?,,,,,N
+64780,other_constraints,_Other_constraint_list.Entity_assembly_ID,,INTEGER,int,NOT NULL,,Other_constraint_list,Entity_assembly_ID,N,?,0,?,,,,,N
+64790,other_constraints,_Other_constraint_list.Entity_ID,,INTEGER,int,NOT NULL,,Other_constraint_list,Entity_ID,N,?,0,?,,,,,N
+64800,other_constraints,_Other_constraint_list.Type,,VARCHAR(127),line,NOT NULL,,Other_constraint_list,Type,N,?,0,?,,,,,N
+64810,other_constraints,_Other_constraint_list.Subtype,,VARCHAR(127),line,NOT NULL,,Other_constraint_list,Subtype,N,?,0,?,,,,,N
+64820,other_constraints,_Other_constraint_list.File_name,,VARCHAR(127),line,,,Other_constraint_list,File_name,N,?,0,?,,,,,N
+64830,other_constraints,_Other_constraint_list.File_format,,VARCHAR(127),line,NOT NULL,,Other_constraint_list,File_format,N,?,0,?,,,,,N
+64840,other_constraints,_Other_constraint_list.Constraint_file_ID,,INTEGER,int,,,Other_constraint_list,Constraint_file_ID,N,?,0,?,,,,,N
+64850,other_constraints,_Other_constraint_list.Block_ID,,INTEGER,int,,,Other_constraint_list,Block_ID,N,?,0,?,,,,,N
+64860,other_constraints,_Other_constraint_list.Text_data_format,,VARCHAR(127),line,,,Other_constraint_list,Text_data_format,N,?,0,?,,,,,N
+64870,other_constraints,_Other_constraint_list.Text_data,,TEXT,text,NOT NULL,,Other_constraint_list,Text_data,N,?,0,?,,,,,N
+64880,other_constraints,_Other_constraint_expt.Experiment_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_expt,Experiment_ID,Y,?,7,?,,,,,N
+64890,other_constraints,_Other_constraint_expt.Experiment_name,,VARCHAR(127),line,,,Other_constraint_expt,Experiment_name,Y,?,0,?,,,,,N
+64900,other_constraints,_Other_constraint_expt.Method_ID,,INTEGER,int,,,Other_constraint_expt,Method_ID,Y,?,7,?,,,,,N
+64910,other_constraints,_Other_constraint_expt.Method_label,,VARCHAR(127),framecode,,,Other_constraint_expt,Method_label,Y,?,8,?,,,,,N
+64920,other_constraints,_Other_constraint_expt.Sample_ID,,INTEGER,int,,,Other_constraint_expt,Sample_ID,Y,?,7,?,,,,,N
+64930,other_constraints,_Other_constraint_expt.Sample_label,,VARCHAR(127),framecode,,,Other_constraint_expt,Sample_label,Y,?,8,?,,,,,N
+64940,other_constraints,_Other_constraint_expt.Sample_state,N,VARCHAR(31),line,,,Other_constraint_expt,Sample_state,Y,?,0,?,,,,,N
+64950,other_constraints,_Other_constraint_expt.Sf_ID,,INTEGER,int,NOT NULL,,Other_constraint_expt,Sf_ID,Y,?,4,?,,,,Y,N
+64960,other_constraints,_Other_constraint_expt.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_constraint_expt,Entry_ID,Y,?,3,?,,,,,N
+64970,other_constraints,_Other_constraint_expt.Other_constraint_list_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_expt,Other_constraint_list_ID,Y,?,5,?,,,,,N
+64980,other_constraints,_Other_constraint_software.Software_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_software,Software_ID,Y,?,7,?,,,,,N
+64990,other_constraints,_Other_constraint_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,Other_constraint_software,Software_label,Y,?,8,?,,,,,N
+65000,other_constraints,_Other_constraint_software.Method_ID,,INTEGER,int,,,Other_constraint_software,Method_ID,Y,?,7,?,,,,,N
+65010,other_constraints,_Other_constraint_software.Method_label,,VARCHAR(127),framecode,,,Other_constraint_software,Method_label,Y,?,8,?,,,,,N
+65020,other_constraints,_Other_constraint_software.Sf_ID,,INTEGER,int,NOT NULL,,Other_constraint_software,Sf_ID,Y,?,4,?,,,,Y,N
+65030,other_constraints,_Other_constraint_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_constraint_software,Entry_ID,Y,?,3,?,,,,,N
+65040,other_constraints,_Other_constraint_software.Other_constraint_list_ID,,INTEGER,int,NOT NULL,Y,Other_constraint_software,Other_constraint_list_ID,Y,?,5,?,,,,,N
+65050,org_constr_file_comment,_Org_constr_file_comment.Sf_category,,VARCHAR(127),code,,,Org_constr_file_comment,Sf_category,N,?,1,?,,,,,N
+65060,org_constr_file_comment,_Org_constr_file_comment.Sf_framecode,,VARCHAR(127),framecode,,,Org_constr_file_comment,Sf_framecode,N,?,2,?,,,,,N
+65070,org_constr_file_comment,_Org_constr_file_comment.Entry_ID,,CHAR(12),code,NOT NULL,Y,Org_constr_file_comment,Entry_ID,N,?,3,?,,,,,N
+65080,org_constr_file_comment,_Org_constr_file_comment.Sf_ID,,INTEGER,int,,,Org_constr_file_comment,Sf_ID,N,?,4,?,,,,Y,N
+65090,org_constr_file_comment,_Org_constr_file_comment.ID,,INTEGER,int,NOT NULL,Y,Org_constr_file_comment,ID,N,?,5,?,,,,,N
+65100,org_constr_file_comment,_Org_constr_file_comment.Constraint_file_ID,,INTEGER,int,,,Org_constr_file_comment,Constraint_file_ID,N,?,0,?,,,,,N
+65110,org_constr_file_comment,_Org_constr_file_comment.Block_ID,,INTEGER,int,,,Org_constr_file_comment,Block_ID,N,?,0,?,,,,,N
+65120,org_constr_file_comment,_Org_constr_file_comment.Details,,TEXT,text,,,Org_constr_file_comment,Details,N,?,0,?,,,,,N
+65130,org_constr_file_comment,_Org_constr_file_comment.Comment,,TEXT,text,,,Org_constr_file_comment,Comment,N,?,0,?,,,,,N
+65140,MS_MZ_data,_MZ_ratio_data_list.Sf_category,,VARCHAR(127),code,NOT NULL,,MZ_ratio_data_list,Sf_category,N,?,1,?,,,,,N
+65150,MS_MZ_data,_MZ_ratio_data_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,MZ_ratio_data_list,Sf_framecode,N,?,2,?,,,,,N
+65160,MS_MZ_data,_MZ_ratio_data_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_data_list,Entry_ID,N,?,3,?,,,,,N
+65170,MS_MZ_data,_MZ_ratio_data_list.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_data_list,Sf_ID,N,?,4,?,,,,Y,N
+65180,MS_MZ_data,_MZ_ratio_data_list.ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_data_list,ID,N,?,5,?,,,,,N
+65190,MS_MZ_data,_MZ_ratio_data_list.Name,,VARCHAR(127),line,,,MZ_ratio_data_list,Name,N,?,0,?,,,,,N
+65200,MS_MZ_data,_MZ_ratio_data_list.Sample_condition_list_ID,,INTEGER,int,NOT NULL,,MZ_ratio_data_list,Sample_condition_list_ID,N,?,7,?,,,,,N
+65210,MS_MZ_data,_MZ_ratio_data_list.Sample_condition_list_label,,VARCHAR(127),framecode,NOT NULL,,MZ_ratio_data_list,Sample_condition_list_label,N,?,8,?,,,,,N
+65220,MS_MZ_data,_MZ_ratio_data_list.Mass_spec_ref_compd_set_ID,,INTEGER,int,,,MZ_ratio_data_list,Mass_spec_ref_compd_set_ID,N,?,0,?,,,,,N
+65230,MS_MZ_data,_MZ_ratio_data_list.Mass_spec_ref_compd_set_label,,VARCHAR(127),framecode,,,MZ_ratio_data_list,Mass_spec_ref_compd_set_label,N,?,0,?,,,,,N
+65240,MS_MZ_data,_MZ_ratio_data_list.Mass_spec_ref_compd_ID,,INTEGER,int,,,MZ_ratio_data_list,Mass_spec_ref_compd_ID,N,?,0,?,,,,,N
+65250,MS_MZ_data,_MZ_ratio_data_list.MZ_error_units,,VARCHAR(31),code,,,MZ_ratio_data_list,MZ_error_units,N,?,0,?,,,,,N
+65260,MS_MZ_data,_MZ_ratio_data_list.Intensity_units,,VARCHAR(31),code,,,MZ_ratio_data_list,Intensity_units,N,?,0,?,,,,,N
+65270,MS_MZ_data,_MZ_ratio_data_list.Error_derivation_method,,VARCHAR(127),line,,,MZ_ratio_data_list,Error_derivation_method,N,?,0,?,,,,,N
+65280,MS_MZ_data,_MZ_ratio_data_list.Details,,TEXT,text,,,MZ_ratio_data_list,Details,N,?,0,?,,,,,N
+65290,MS_MZ_data,_MZ_ratio_data_list.Text_data_format,,VARCHAR(31),code,,,MZ_ratio_data_list,Text_data_format,N,?,0,?,,,,,N
+65300,MS_MZ_data,_MZ_ratio_data_list.Text_data,,TEXT,text,,,MZ_ratio_data_list,Text_data,N,?,0,?,,,,,N
+65310,MS_MZ_data,_MZ_ratio_experiment.Experiment_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_experiment,Experiment_ID,Y,?,7,?,,,,,N
+65320,MS_MZ_data,_MZ_ratio_experiment.Experiment_name,,VARCHAR(127),line,,,MZ_ratio_experiment,Experiment_name,Y,?,0,?,,,,,N
+65330,MS_MZ_data,_MZ_ratio_experiment.Sample_ID,,INTEGER,int,,,MZ_ratio_experiment,Sample_ID,Y,?,7,?,,,,,N
+65340,MS_MZ_data,_MZ_ratio_experiment.Sample_label,,VARCHAR(127),framecode,,,MZ_ratio_experiment,Sample_label,Y,?,8,?,,,,,N
+65350,MS_MZ_data,_MZ_ratio_experiment.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_experiment,Sf_ID,Y,?,4,?,,,,Y,N
+65360,MS_MZ_data,_MZ_ratio_experiment.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_experiment,Entry_ID,Y,?,3,?,,,,,N
+65370,MS_MZ_data,_MZ_ratio_experiment.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_experiment,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
+65380,MS_MZ_data,_MZ_ratio_software.Software_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_software,Software_ID,Y,?,7,?,,,,,N
+65390,MS_MZ_data,_MZ_ratio_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,MZ_ratio_software,Software_label,Y,?,8,?,,,,,N
+65400,MS_MZ_data,_MZ_ratio_software.Method_ID,,INTEGER,int,,,MZ_ratio_software,Method_ID,Y,?,7,?,,,,,N
+65410,MS_MZ_data,_MZ_ratio_software.Method_label,,VARCHAR(127),framecode,,,MZ_ratio_software,Method_label,Y,?,8,?,,,,,N
+65420,MS_MZ_data,_MZ_ratio_software.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_software,Sf_ID,Y,?,4,?,,,,Y,N
+65430,MS_MZ_data,_MZ_ratio_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_software,Entry_ID,Y,?,3,?,,,,,N
+65440,MS_MZ_data,_MZ_ratio_software.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_software,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
+65450,MS_MZ_data,_MZ_ratio_spectrum_param.ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_spectrum_param,ID,Y,?,0,?,,,,,N
+65460,MS_MZ_data,_MZ_ratio_spectrum_param.Name,,VARCHAR(127),line,NOT NULL,,MZ_ratio_spectrum_param,Name,Y,?,0,?,,,,,N
+65470,MS_MZ_data,_MZ_ratio_spectrum_param.Value,,VARCHAR(127),line,NOT NULL,,MZ_ratio_spectrum_param,Value,Y,?,0,?,,,,,N
+65480,MS_MZ_data,_MZ_ratio_spectrum_param.Units,,VARCHAR(31),code,,,MZ_ratio_spectrum_param,Units,Y,?,0,?,,,,,N
+65490,MS_MZ_data,_MZ_ratio_spectrum_param.Sf_ID,,INTEGER,int,NOT NULL,,MZ_ratio_spectrum_param,Sf_ID,Y,?,4,?,,,,Y,N
+65500,MS_MZ_data,_MZ_ratio_spectrum_param.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_ratio_spectrum_param,Entry_ID,Y,?,3,?,,,,,N
+65510,MS_MZ_data,_MZ_ratio_spectrum_param.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_ratio_spectrum_param,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
+65520,MS_MZ_data,_MZ_precursor_ion.ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion,ID,Y,?,6,?,,,,,N
+65530,MS_MZ_data,_MZ_precursor_ion.MZ_ratio,,FLOAT,float,NOT NULL,,MZ_precursor_ion,MZ_ratio,Y,?,0,?,,,,,N
+65540,MS_MZ_data,_MZ_precursor_ion.MZ_ratio_err,,FLOAT,float,,,MZ_precursor_ion,MZ_ratio_err,Y,?,0,?,,,,,N
+65550,MS_MZ_data,_MZ_precursor_ion.Intensity,,FLOAT,float,,,MZ_precursor_ion,Intensity,Y,?,0,?,,,,,N
+65560,MS_MZ_data,_MZ_precursor_ion.Relative_intensity,,FLOAT,float,,,MZ_precursor_ion,Relative_intensity,Y,?,0,?,,,,,N
+65570,MS_MZ_data,_MZ_precursor_ion.S_N_ratio,,FLOAT,float,,,MZ_precursor_ion,S_N_ratio,Y,?,0,?,,,,,N
+65580,MS_MZ_data,_MZ_precursor_ion.Full_width_half_maximum,,FLOAT,float,,,MZ_precursor_ion,Full_width_half_maximum,Y,?,0,?,,,,,N
+65590,MS_MZ_data,_MZ_precursor_ion.Sf_ID,,INTEGER,int,NOT NULL,,MZ_precursor_ion,Sf_ID,Y,?,4,?,,,,Y,N
+65600,MS_MZ_data,_MZ_precursor_ion.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_precursor_ion,Entry_ID,Y,?,3,?,,,,,N
+65610,MS_MZ_data,_MZ_precursor_ion.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
+65620,MS_MZ_data,_MZ_precursor_ion_annotation.ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion_annotation,ID,Y,?,0,?,,,,,N
+65630,MS_MZ_data,_MZ_precursor_ion_annotation.MZ_precursor_ion_ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion_annotation,MZ_precursor_ion_ID,Y,?,0,?,,,,,N
+65640,MS_MZ_data,_MZ_precursor_ion_annotation.Entity_ID,,INTEGER,int,,,MZ_precursor_ion_annotation,Entity_ID,Y,?,0,?,,,,,N
+65650,MS_MZ_data,_MZ_precursor_ion_annotation.Comp_index_ID,,INTEGER,int,,,MZ_precursor_ion_annotation,Comp_index_ID,Y,?,0,?,,,,,N
+65660,MS_MZ_data,_MZ_precursor_ion_annotation.Comp_ID,,CHAR(12),code,,,MZ_precursor_ion_annotation,Comp_ID,Y,?,0,?,,,,,N
+65670,MS_MZ_data,_MZ_precursor_ion_annotation.Chemical_composition,,VARCHAR(127),line,,,MZ_precursor_ion_annotation,Chemical_composition,Y,?,0,?,,,,,N
+65680,MS_MZ_data,_MZ_precursor_ion_annotation.Sf_ID,,INTEGER,int,NOT NULL,,MZ_precursor_ion_annotation,Sf_ID,Y,?,4,?,,,,Y,N
+65690,MS_MZ_data,_MZ_precursor_ion_annotation.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_precursor_ion_annotation,Entry_ID,Y,?,3,?,,,,,N
+65700,MS_MZ_data,_MZ_precursor_ion_annotation.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_precursor_ion_annotation,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
+65710,MS_MZ_data,_MZ_product_ion.ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion,ID,Y,?,6,?,,,,,N
+65720,MS_MZ_data,_MZ_product_ion.MZ_ratio,,FLOAT,float,NOT NULL,,MZ_product_ion,MZ_ratio,Y,?,0,?,,,,,N
+65730,MS_MZ_data,_MZ_product_ion.MZ_ratio_err,,FLOAT,float,,,MZ_product_ion,MZ_ratio_err,Y,?,0,?,,,,,N
+65740,MS_MZ_data,_MZ_product_ion.Intensity,,FLOAT,float,,,MZ_product_ion,Intensity,Y,?,0,?,,,,,N
+65750,MS_MZ_data,_MZ_product_ion.Relative_intensity,,FLOAT,float,,,MZ_product_ion,Relative_intensity,Y,?,0,?,,,,,N
+65760,MS_MZ_data,_MZ_product_ion.S_N_ratio,,FLOAT,float,,,MZ_product_ion,S_N_ratio,Y,?,0,?,,,,,N
+65770,MS_MZ_data,_MZ_product_ion.Full_width_half_maximum,,FLOAT,float,,,MZ_product_ion,Full_width_half_maximum,Y,?,0,?,,,,,N
+65780,MS_MZ_data,_MZ_product_ion.Sf_ID,,INTEGER,int,NOT NULL,,MZ_product_ion,Sf_ID,Y,?,4,?,,,,Y,N
+65790,MS_MZ_data,_MZ_product_ion.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_product_ion,Entry_ID,Y,?,3,?,,,,,N
+65800,MS_MZ_data,_MZ_product_ion.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
+65810,MS_MZ_data,_MZ_product_ion_annotation.ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion_annotation,ID,Y,?,0,?,,,,,N
+65820,MS_MZ_data,_MZ_product_ion_annotation.MZ_product_ion_ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion_annotation,MZ_product_ion_ID,Y,?,0,?,,,,,N
+65830,MS_MZ_data,_MZ_product_ion_annotation.Entity_ID,,INTEGER,int,,,MZ_product_ion_annotation,Entity_ID,Y,?,0,?,,,,,N
+65840,MS_MZ_data,_MZ_product_ion_annotation.Comp_index_ID,,INTEGER,int,,,MZ_product_ion_annotation,Comp_index_ID,Y,?,0,?,,,,,N
+65850,MS_MZ_data,_MZ_product_ion_annotation.Comp_ID,,CHAR(12),code,,,MZ_product_ion_annotation,Comp_ID,Y,?,0,?,,,,,N
+65860,MS_MZ_data,_MZ_product_ion_annotation.Chemical_composition,,VARCHAR(127),line,,,MZ_product_ion_annotation,Chemical_composition,Y,?,0,?,,,,,N
+65870,MS_MZ_data,_MZ_product_ion_annotation.Sf_ID,,INTEGER,int,NOT NULL,,MZ_product_ion_annotation,Sf_ID,Y,?,4,?,,,,Y,N
+65880,MS_MZ_data,_MZ_product_ion_annotation.Entry_ID,,CHAR(12),code,NOT NULL,Y,MZ_product_ion_annotation,Entry_ID,Y,?,3,?,,,,,N
+65890,MS_MZ_data,_MZ_product_ion_annotation.MZ_ratio_data_list_ID,,INTEGER,int,NOT NULL,Y,MZ_product_ion_annotation,MZ_ratio_data_list_ID,Y,?,5,?,,,,,N
+65900,MS_chromatogram,_MS_chromatogram_list.Sf_category,,VARCHAR(127),code,NOT NULL,,MS_chromatogram_list,Sf_category,N,?,1,?,,,,,N
+65910,MS_chromatogram,_MS_chromatogram_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,MS_chromatogram_list,Sf_framecode,N,?,2,?,,,,,N
+65920,MS_chromatogram,_MS_chromatogram_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_list,Entry_ID,N,?,3,?,,,,,N
+65930,MS_chromatogram,_MS_chromatogram_list.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_list,Sf_ID,N,?,4,?,,,,Y,N
+65940,MS_chromatogram,_MS_chromatogram_list.ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_list,ID,N,?,5,?,,,,,N
+65950,MS_chromatogram,_MS_chromatogram_list.Name,,VARCHAR(127),line,,,MS_chromatogram_list,Name,N,?,0,?,,,,,N
+65960,MS_chromatogram,_MS_chromatogram_list.Sample_condition_list_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_list,Sample_condition_list_ID,N,?,7,?,,,,,N
+65970,MS_chromatogram,_MS_chromatogram_list.Sample_condition_list_label,,VARCHAR(127),framecode,NOT NULL,,MS_chromatogram_list,Sample_condition_list_label,N,?,8,?,,,,,N
+65980,MS_chromatogram,_MS_chromatogram_list.Details,,TEXT,text,,,MS_chromatogram_list,Details,N,?,0,?,,,,,N
+65990,MS_chromatogram,_MS_chromatogram_list.Text_data_format,N,VARCHAR(31),code,,,MS_chromatogram_list,Text_data_format,N,?,0,?,,,,,N
+66000,MS_chromatogram,_MS_chromatogram_list.Text_data,,TEXT,text,,,MS_chromatogram_list,Text_data,N,?,0,?,,,,,N
+66010,MS_chromatogram,_MS_chromatogram_experiment.Experiment_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_experiment,Experiment_ID,Y,?,7,?,,,,,N
+66020,MS_chromatogram,_MS_chromatogram_experiment.Experiment_name,,VARCHAR(127),line,NOT NULL,,MS_chromatogram_experiment,Experiment_name,Y,?,0,?,,,,,N
+66030,MS_chromatogram,_MS_chromatogram_experiment.Sample_ID,,INTEGER,int,,,MS_chromatogram_experiment,Sample_ID,Y,?,7,?,,,,,N
+66040,MS_chromatogram,_MS_chromatogram_experiment.Sample_label,,VARCHAR(127),framecode,,,MS_chromatogram_experiment,Sample_label,Y,?,8,?,,,,,N
+66050,MS_chromatogram,_MS_chromatogram_experiment.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_experiment,Sf_ID,Y,?,4,?,,,,Y,N
+66060,MS_chromatogram,_MS_chromatogram_experiment.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_experiment,Entry_ID,Y,?,3,?,,,,,N
+66070,MS_chromatogram,_MS_chromatogram_experiment.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_experiment,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
+66080,MS_chromatogram,_MS_chromatogram_software.Software_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_software,Software_ID,Y,?,7,?,,,,,N
+66090,MS_chromatogram,_MS_chromatogram_software.Software_label,,VARCHAR(127),framecode,NOT NULL,,MS_chromatogram_software,Software_label,Y,?,8,?,,,,,N
+66100,MS_chromatogram,_MS_chromatogram_software.Method_ID,,INTEGER,int,,,MS_chromatogram_software,Method_ID,Y,?,7,?,,,,,N
+66110,MS_chromatogram,_MS_chromatogram_software.Method_label,,VARCHAR(127),framecode,,,MS_chromatogram_software,Method_label,Y,?,8,?,,,,,N
+66120,MS_chromatogram,_MS_chromatogram_software.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_software,Sf_ID,Y,?,4,?,,,,Y,N
+66130,MS_chromatogram,_MS_chromatogram_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_software,Entry_ID,Y,?,3,?,,,,,N
+66140,MS_chromatogram,_MS_chromatogram_software.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_software,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
+66150,MS_chromatogram,_MS_chromatogram_param.ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_param,ID,Y,?,0,?,,,,,N
+66160,MS_chromatogram,_MS_chromatogram_param.Name,,VARCHAR(127),line,NOT NULL,,MS_chromatogram_param,Name,Y,?,0,?,,,,,N
+66170,MS_chromatogram,_MS_chromatogram_param.Value,,VARCHAR(127),line,NOT NULL,,MS_chromatogram_param,Value,Y,?,0,?,,,,,N
+66180,MS_chromatogram,_MS_chromatogram_param.Units,,VARCHAR(31),code,,,MS_chromatogram_param,Units,Y,?,0,?,,,,,N
+66190,MS_chromatogram,_MS_chromatogram_param.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_param,Sf_ID,Y,?,4,?,,,,Y,N
+66200,MS_chromatogram,_MS_chromatogram_param.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_param,Entry_ID,Y,?,3,?,,,,,N
+66210,MS_chromatogram,_MS_chromatogram_param.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_param,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
+66220,MS_chromatogram,_MS_chromatogram_ion.ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_ion,ID,Y,?,6,?,,,,,N
+66230,MS_chromatogram,_MS_chromatogram_ion.MZ_ratio,,FLOAT,float,NOT NULL,,MS_chromatogram_ion,MZ_ratio,Y,?,0,?,,,,,N
+66240,MS_chromatogram,_MS_chromatogram_ion.MZ_ratio_err,,FLOAT,float,,,MS_chromatogram_ion,MZ_ratio_err,Y,?,0,?,,,,,N
+66250,MS_chromatogram,_MS_chromatogram_ion.MZ_Intensity,,FLOAT,float,NOT NULL,,MS_chromatogram_ion,MZ_Intensity,Y,?,0,?,,,,,N
+66260,MS_chromatogram,_MS_chromatogram_ion.MZ_relative_intensity,,FLOAT,float,,,MS_chromatogram_ion,MZ_relative_intensity,Y,?,0,?,,,,,N
+66270,MS_chromatogram,_MS_chromatogram_ion.S_N_ratio,,FLOAT,float,,,MS_chromatogram_ion,S_N_ratio,Y,?,0,?,,,,,N
+66280,MS_chromatogram,_MS_chromatogram_ion.Full_width_half_maximum,,FLOAT,float,,,MS_chromatogram_ion,Full_width_half_maximum,Y,?,0,?,,,,,N
+66290,MS_chromatogram,_MS_chromatogram_ion.Sf_ID,,INTEGER,int,NOT NULL,,MS_chromatogram_ion,Sf_ID,Y,?,4,?,,,,Y,N
+66300,MS_chromatogram,_MS_chromatogram_ion.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chromatogram_ion,Entry_ID,Y,?,3,?,,,,,N
+66310,MS_chromatogram,_MS_chromatogram_ion.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chromatogram_ion,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
+66320,MS_chromatogram,_MS_chrom_ion_annotation.ID,,INTEGER,int,NOT NULL,Y,MS_chrom_ion_annotation,ID,Y,?,0,?,,,,,N
+66330,MS_chromatogram,_MS_chrom_ion_annotation.MS_chromatogram_ion_ID,,INTEGER,int,NOT NULL,,MS_chrom_ion_annotation,MS_chromatogram_ion_ID,Y,?,0,?,,,,,N
+66340,MS_chromatogram,_MS_chrom_ion_annotation.Entity_ID,,INTEGER,int,,,MS_chrom_ion_annotation,Entity_ID,Y,?,0,?,,,,,N
+66350,MS_chromatogram,_MS_chrom_ion_annotation.Comp_index_ID,,INTEGER,int,,,MS_chrom_ion_annotation,Comp_index_ID,Y,?,0,?,,,,,N
+66360,MS_chromatogram,_MS_chrom_ion_annotation.Comp_ID,,CHAR(12),code,,,MS_chrom_ion_annotation,Comp_ID,Y,?,0,?,,,,,N
+66370,MS_chromatogram,_MS_chrom_ion_annotation.Chemical_composition,,VARCHAR(127),line,,,MS_chrom_ion_annotation,Chemical_composition,Y,?,0,?,,,,,N
+66380,MS_chromatogram,_MS_chrom_ion_annotation.Sf_ID,,INTEGER,int,NOT NULL,,MS_chrom_ion_annotation,Sf_ID,Y,?,4,?,,,,Y,N
+66390,MS_chromatogram,_MS_chrom_ion_annotation.Entry_ID,,CHAR(12),code,NOT NULL,Y,MS_chrom_ion_annotation,Entry_ID,Y,?,3,?,,,,,N
+66400,MS_chromatogram,_MS_chrom_ion_annotation.MS_chromatogram_list_ID,,INTEGER,int,NOT NULL,Y,MS_chrom_ion_annotation,MS_chromatogram_list_ID,Y,?,5,?,,,,,N
+66410,experimental_data_derivation_links,_Experimental_data_link_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Experimental_data_link_list,Sf_category,N,?,1,?,,,,,N
+66420,experimental_data_derivation_links,_Experimental_data_link_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Experimental_data_link_list,Sf_framecode,N,?,2,?,,,,,N
+66430,experimental_data_derivation_links,_Experimental_data_link_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Experimental_data_link_list,Entry_ID,N,?,3,?,,,,,N
+66440,experimental_data_derivation_links,_Experimental_data_link_list.Sf_ID,,INTEGER,int,NOT NULL,,Experimental_data_link_list,Sf_ID,N,?,4,?,,,,Y,N
+66450,experimental_data_derivation_links,_Experimental_data_link_list.ID,,INTEGER,int,NOT NULL,Y,Experimental_data_link_list,ID,N,?,5,?,,,,,N
+66460,experimental_data_derivation_links,_Experimental_data_link_list.Name,,VARCHAR(127),line,,,Experimental_data_link_list,Name,N,?,0,?,,,,,N
+66470,experimental_data_derivation_links,_Experimental_data_link_list.Details,,TEXT,text,,,Experimental_data_link_list,Details,N,?,0,?,,,,,N
+66480,experimental_data_derivation_links,_Experimental_data_link.ID,,INTEGER,int,NOT NULL,Y,Experimental_data_link,ID,Y,?,6,?,,,,,N
+66490,experimental_data_derivation_links,_Experimental_data_link.Source_expt_data_list_Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Experimental_data_link,Source_expt_data_list_Sf_framecode,Y,?,0,?,,,,,N
+66500,experimental_data_derivation_links,_Experimental_data_link.Source_expt_data_list_Sf_category,,VARCHAR(127),code,NOT NULL,,Experimental_data_link,Source_expt_data_list_Sf_category,Y,?,0,?,,,,,N
+66510,experimental_data_derivation_links,_Experimental_data_link.Source_expt_data_list_ID,,INTEGER,int,NOT NULL,,Experimental_data_link,Source_expt_data_list_ID,Y,?,0,?,,,,,N
+66520,experimental_data_derivation_links,_Experimental_data_link.Source_expt_data_list_label,,VARCHAR(127),framecode,,,Experimental_data_link,Source_expt_data_list_label,Y,?,0,?,,,,,N
+66530,experimental_data_derivation_links,_Experimental_data_link.Source_expt_data_item_category,,VARCHAR(127),line,,,Experimental_data_link,Source_expt_data_item_category,Y,?,0,?,,,,,N
+66540,experimental_data_derivation_links,_Experimental_data_link.Source_expt_data_ID,,INTEGER,int,NOT NULL,,Experimental_data_link,Source_expt_data_ID,Y,?,0,?,,,,,N
+66550,experimental_data_derivation_links,_Experimental_data_link.Derived_data_Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Experimental_data_link,Derived_data_Sf_framecode,Y,?,0,?,,,,,N
+66560,experimental_data_derivation_links,_Experimental_data_link.Derived_data_Sf_category,,VARCHAR(127),code,NOT NULL,,Experimental_data_link,Derived_data_Sf_category,Y,?,0,?,,,,,N
+66570,experimental_data_derivation_links,_Experimental_data_link.Derived_data_list_ID,,INTEGER,int,NOT NULL,,Experimental_data_link,Derived_data_list_ID,Y,?,0,?,,,,,N
+66580,experimental_data_derivation_links,_Experimental_data_link.Derived_data_list_label,,VARCHAR(127),framecode,,,Experimental_data_link,Derived_data_list_label,Y,?,0,?,,,,,N
+66590,experimental_data_derivation_links,_Experimental_data_link.Derived_data_item_category,,VARCHAR(127),line,,,Experimental_data_link,Derived_data_item_category,Y,?,0,?,,,,,N
+66600,experimental_data_derivation_links,_Experimental_data_link.Derived_data_ID,,INTEGER,int,NOT NULL,,Experimental_data_link,Derived_data_ID,Y,?,0,?,,,,,N
+66610,experimental_data_derivation_links,_Experimental_data_link.Sf_ID,,INTEGER,int,NOT NULL,,Experimental_data_link,Sf_ID,Y,?,4,?,,,,Y,N
+66620,experimental_data_derivation_links,_Experimental_data_link.Entry_ID,,CHAR(12),code,NOT NULL,Y,Experimental_data_link,Entry_ID,Y,?,3,?,,,,,N
+66630,experimental_data_derivation_links,_Experimental_data_link.Experimental_data_link_list_ID,,INTEGER,int,NOT NULL,Y,Experimental_data_link,Experimental_data_link_list_ID,Y,?,5,?,,,,,N
+66640,software_specific_saveframes,_Software_specific_info_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Software_specific_info_list,Sf_category,N,?,1,?,,,,,N
+66650,software_specific_saveframes,_Software_specific_info_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Software_specific_info_list,Sf_framecode,N,?,2,?,,,,,N
+66660,software_specific_saveframes,_Software_specific_info_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_specific_info_list,Entry_ID,N,?,3,?,,,,,N
+66670,software_specific_saveframes,_Software_specific_info_list.Sf_ID,,INTEGER,int,NOT NULL,,Software_specific_info_list,Sf_ID,N,?,4,?,,,,Y,N
+66680,software_specific_saveframes,_Software_specific_info_list.ID,,INTEGER,int,NOT NULL,Y,Software_specific_info_list,ID,N,?,5,?,,,,,N
+66690,software_specific_saveframes,_Software_specific_info_list.Name,,VARCHAR(127),line,,,Software_specific_info_list,Name,N,?,0,?,,,,,N
+66700,software_specific_saveframes,_Software_specific_info.Software_saveframe_ID,,INTEGER,int,NOT NULL,Y,Software_specific_info,Software_saveframe_ID,Y,?,1,?,,,,,N
+66710,software_specific_saveframes,_Software_specific_info.Software_saveframe,,TEXT,text,NOT NULL,,Software_specific_info,Software_saveframe,Y,?,2,?,,,,,N
+66720,software_specific_saveframes,_Software_specific_info.Sf_ID,,INTEGER,int,NOT NULL,,Software_specific_info,Sf_ID,Y,?,4,?,,,,Y,N
+66730,software_specific_saveframes,_Software_specific_info.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_specific_info,Entry_ID,Y,?,3,?,,,,,N
+66740,software_specific_saveframes,_Software_specific_info.Software_specific_info_list_ID,,INTEGER,int,NOT NULL,Y,Software_specific_info,Software_specific_info_list_ID,Y,?,5,?,,,,,N
+66750,applied_software,_Software_applied_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Software_applied_list,Sf_category,N,?,1,?,,,,,N
+66760,applied_software,_Software_applied_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Software_applied_list,Sf_framecode,N,?,2,?,,,,,N
+66770,applied_software,_Software_applied_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_applied_list,Entry_ID,N,?,3,?,,,,,N
+66780,applied_software,_Software_applied_list.Sf_ID,,INTEGER,int,NOT NULL,,Software_applied_list,Sf_ID,N,?,4,?,,,,Y,N
+66790,applied_software,_Software_applied_list.ID,,INTEGER,int,NOT NULL,Y,Software_applied_list,ID,N,?,5,?,,,,,N
+66800,applied_software,_Software_applied_list.Name,,VARCHAR(127),line,,,Software_applied_list,Name,N,?,0,?,,,,,N
+66810,applied_software,_Software_applied_list.Details,,TEXT,text,,,Software_applied_list,Details,N,?,0,?,,,,,N
+66820,applied_software,_Software_applied_methods.Software_ID,,INTEGER,int,NOT NULL,Y,Software_applied_methods,Software_ID,Y,?,7,?,,,,,N
+66830,applied_software,_Software_applied_methods.Software_label,,VARCHAR(127),framecode,NOT NULL,,Software_applied_methods,Software_label,Y,?,8,?,,,,,N
+66840,applied_software,_Software_applied_methods.Methods_ID,,INTEGER,int,,,Software_applied_methods,Methods_ID,Y,?,7,?,,,,,N
+66850,applied_software,_Software_applied_methods.Methods_label,,VARCHAR(127),framecode,,,Software_applied_methods,Methods_label,Y,?,8,?,,,,,N
+66860,applied_software,_Software_applied_methods.Software_name,N,VARCHAR(127),line,NOT NULL,,Software_applied_methods,Software_name,Y,?,0,?,,,,,N
+66870,applied_software,_Software_applied_methods.Script_name,,VARCHAR(127),line,,,Software_applied_methods,Script_name,Y,?,0,?,,,,,N
+66880,applied_software,_Software_applied_methods.Script,,TEXT,text,,,Software_applied_methods,Script,Y,?,0,?,,,,,N
+66890,applied_software,_Software_applied_methods.Software_specific_info,,TEXT,text,,,Software_applied_methods,Software_specific_info,Y,?,0,?,,,,,N
+66900,applied_software,_Software_applied_methods.Sf_ID,,INTEGER,int,NOT NULL,,Software_applied_methods,Sf_ID,Y,?,4,?,,,,Y,N
+66910,applied_software,_Software_applied_methods.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_applied_methods,Entry_ID,Y,?,3,?,,,,,N
+66920,applied_software,_Software_applied_methods.Software_applied_list_ID,,INTEGER,int,NOT NULL,Y,Software_applied_methods,Software_applied_list_ID,Y,?,5,?,,,,,N
+66930,applied_software_history,_Software_applied_history.Sf_category,,VARCHAR(127),code,NOT NULL,,Software_applied_history,Sf_category,N,?,1,?,,,,,N
+66940,applied_software_history,_Software_applied_history.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Software_applied_history,Sf_framecode,N,?,2,?,,,,,N
+66950,applied_software_history,_Software_applied_history.Entry_ID,,CHAR(12),code,NOT NULL,Y,Software_applied_history,Entry_ID,N,?,3,?,,,,,N
+66960,applied_software_history,_Software_applied_history.Sf_ID,,INTEGER,int,NOT NULL,,Software_applied_history,Sf_ID,N,?,4,?,,,,Y,N
+66970,applied_software_history,_Software_applied_history.ID,,INTEGER,int,NOT NULL,Y,Software_applied_history,ID,N,?,5,?,,,,,N
+66980,applied_software_history,_Software_applied_history.Name,,VARCHAR(127),line,,,Software_applied_history,Name,N,?,0,?,,,,,N
+66990,applied_software_history,_Software_applied_history.Details,,TEXT,text,,,Software_applied_history,Details,N,?,0,?,,,,,N
+67000,applied_software_history,_History.Run_number,,INTEGER,int,NOT NULL,Y,History,Run_number,Y,?,0,?,,,,,N
+67010,applied_software_history,_History.Software_ID,,INTEGER,int,NOT NULL,Y,History,Software_ID,Y,?,7,?,,,,,N
+67020,applied_software_history,_History.Software_label,,VARCHAR(127),framecode,NOT NULL,,History,Software_label,Y,?,8,?,,,,,N
+67030,applied_software_history,_History.Method_ID,,INTEGER,int,,,History,Method_ID,Y,?,7,?,,,,,N
+67040,applied_software_history,_History.Method_label,,VARCHAR(127),framecode,,,History,Method_label,Y,?,8,?,,,,,N
+67050,applied_software_history,_History.Software_name,N,VARCHAR(127),line,NOT NULL,,History,Software_name,Y,?,0,?,,,,,N
+67060,applied_software_history,_History.Software_version,,VARCHAR(127),line,,,History,Software_version,Y,?,0,?,,,,,N
+67070,applied_software_history,_History.Script_name,,VARCHAR(127),line,,,History,Script_name,Y,?,0,?,,,,,N
+67080,applied_software_history,_History.Script,,TEXT,text,,,History,Script,Y,?,0,?,,,,,N
+67090,applied_software_history,_History.Sf_ID,,INTEGER,int,NOT NULL,,History,Sf_ID,Y,?,4,?,,,,Y,N
+67100,applied_software_history,_History.Entry_ID,,CHAR(12),code,NOT NULL,Y,History,Entry_ID,Y,?,3,?,,,,,N
+67110,applied_software_history,_History.Software_applied_history_ID,,INTEGER,int,NOT NULL,Y,History,Software_applied_history_ID,Y,?,5,?,,,,,N
 TBL_END,,,,,,,,,,,,,,,,,,?
