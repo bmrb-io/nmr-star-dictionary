@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-12-17
+#  version date -  2019-12-18
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -120,7 +120,7 @@ Categories that provide a list of references as a simple unparsed citations.
 'chem_comp'
 'inclusive_group'
 ;
-Categories that describe chemical components of entities and molecular assemblies.
+Categories that describe chemical components of entities and molecular assemblies (e.g., ligands, metal ions, cofactors).
 ;
 
 'entity'
@@ -150,13 +150,13 @@ Categories that describe subsystems of a molecular assembly.
 'natural_source'
 'inclusive_group'
 ;
-Categories that describe the organism or other body found in nature that produces a molecular entity.
+Categories that describe the organism or other body found in nature that produces a molecular entity described in an entry.
 ;
 
 'experimental_source'
 'inclusive_group'
 ;
-Categories that describe the system used to produce a molecular entity for scientific experiments.
+Categories that describe the system used to produce a molecular entity for scientific experiments carried out to generated data for an entry.
 ;
 
 'sample'
@@ -174,7 +174,7 @@ Categories that describe the experimental conditions used in conducting individu
 'molecule_purity'
 'inclusive_group'
 ;
-Categories that describe the measured purity of the molecular entity.
+Categories that describe the measured purity of a molecular entity in a sample.
 ;
 
 'software'
@@ -186,7 +186,7 @@ Categories that describe computer software.
 'method'
 'inclusive_group'
 ;
-Categories that describe software or physical methods used to produce a product.
+Categories that describe software or physical methods used to produce a product or data.
 ;
 
 'Mass_spectrometer'
@@ -198,7 +198,7 @@ Categories that describe a mass spectrometer.
 'Mass_spectrometer_list'
 'inclusive_group'
 ;
-Categories that describe a list of mass spectrometers and their properties.
+Categories that describe a list of mass spectrometers and properties of the spectrometers listed.
 ;
 
 'Mass_spec_ref_compd'
@@ -42889,6 +42889,10 @@ Names for NMR experiments commonly found in the literature.
      _item_enumeration.value
      _item_enumeration.detail
 
+   '1D 1H'    ?
+   '1D 13C'    ?
+   '1D 15N'    ?
+   '1D 31P'    ?
    '2D 1H-15N HSQC'    ?
    '2D 1H-15N HSQC NH2 only'    ?
    '2D 1H-13C HSQC'    ?
