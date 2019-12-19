@@ -59292,6 +59292,60 @@ Sample conditions label
 
 save_
 
+save__Spectral_peak_list.Chem_shift_reference_ID
+
+   _Interface.Tag                  '_Spectral_peak_list.Chem_shift_reference_ID'
+
+   _Interface.Category              'Spectral_peak_list'
+
+   _Interface.Description
+;
+Pointer to '_Chem_shift_reference.ID'
+;
+
+   _Interface.Adit_item_view_name
+;
+Chem shift reference ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Spectral_peak_list.Chem_shift_reference_label
+
+   _Interface.Tag                  '_Spectral_peak_list.Chem_shift_reference_label'
+
+   _Interface.Category              'Spectral_peak_list'
+
+   _Interface.Description
+;
+Pointer to a  'chemical shift reference list.'  This is the section where the chemical shift referencing standards are described.
+;
+
+   _Interface.Adit_item_view_name
+;
+Chem shift reference list name
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Spectral_peak_list.Experiment_ID
 
    _Interface.Tag                  '_Spectral_peak_list.Experiment_ID'
@@ -75743,12 +75797,12 @@ save__Chem_shift_perturbation_list.Chem_shift_ref_set_label
 
    _Interface.Description
 ;
-Pointer to a save frame of the category 'chemical_shift_reference.'  This is the save frame where the chemical shift referencing standards are described.
+Pointer to a  'chemical shift reference list.'  This is the section where the chemical shift referencing standards are described.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Chem shift ref set label
+Chem shift reference list name
 ;
 
    loop_
