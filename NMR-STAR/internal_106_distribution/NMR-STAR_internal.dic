@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.4.2
+    _dictionary.version         3.2.5.0
 
      loop_
        _dictionary_history.version
@@ -47765,6 +47765,7 @@ reference values from other save frames of this category in an entry.
   '_Chem_shift_ref.Chem_shift_reference_ID'              'Chem_shift_ref'                yes
   '_Assigned_chem_shift_list.Chem_shift_reference_ID'                                    'Assigned_chem_shift_list'      yes
   '_Chem_shifts_calc_type.Chem_shift_reference_ID'                                       'Chem_shifts_calc_type'         yes
+  '_Spectral_peak_list.Chem_shift_reference_ID'          'Spectral_peak_list'            yes
   '_Chem_shift_perturbation_list.Chem_shift_ref_set_ID'                                  'Chem_shift_perturbation_list'                      yes
 
   stop_
@@ -47776,6 +47777,7 @@ reference values from other save frames of this category in an entry.
   '_Chem_shift_ref.Chem_shift_reference_ID'              '_Chem_shift_reference.ID'
   '_Assigned_chem_shift_list.Chem_shift_reference_ID'                                    '_Chem_shift_reference.ID'
   '_Chem_shifts_calc_type.Chem_shift_reference_ID'                                       '_Chem_shift_reference.ID'
+  '_Spectral_peak_list.Chem_shift_reference_ID'          '_Chem_shift_reference.ID'
   '_Chem_shift_perturbation_list.Chem_shift_ref_set_ID'                                  '_Chem_shift_reference.ID'
 
   stop_
@@ -54648,6 +54650,36 @@ the NMR spectrum from which the peak list originated.
 ;
 
    _item.name                                  '_Spectral_peak_list.Sample_condition_list_label'
+   _item.category_id                           'Spectral_peak_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save__Spectral_peak_list.Chem_shift_reference_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_shift_reference.ID'
+;
+
+   _item.name                                  '_Spectral_peak_list.Chem_shift_reference_ID'
+   _item.category_id                           'Spectral_peak_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Spectral_peak_list.Chem_shift_reference_label
+
+   _item_description.description
+;
+Pointer to a save frame of category chem_shift_reference.
+;
+
+   _item.name                                  '_Spectral_peak_list.Chem_shift_reference_label'
    _item.category_id                           'Spectral_peak_list'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
