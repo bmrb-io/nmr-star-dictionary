@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2019-12-18
+#  version date -  2019-12-19
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.4.1
+    _dictionary.version         3.2.4.2
 
      loop_
        _dictionary_history.version
@@ -1446,9 +1446,7 @@ save__Entry_interview.BMRB_deposition
 Check this box, if you are depositing NMR experimental data to be archived 
 at the BioMagResBank.  With this box checked, after clicking on the 'Save Changes' 
 button, you will be asked to enter additional information regarding the data 
-submitted. Files containing the data sets should be uploaded by filling out 
-the form found by clicking on the 'Deposit data files' link in the frame on the 
-left of the screen.
+submitted. Files con
 ;
 
    _item.name                                  '_Entry_interview.BMRB_deposition'
@@ -1474,8 +1472,7 @@ save__Entry_interview.View_mode
 The 'view mode' buttons are used to select between a view of the PDB or 
 the BMRB deposition requirements. The majority of the information you enter will 
 apply to both a PDB and a BMRB deposition. When in the PDB view mode, a deposition 
-can be submitted to PDB and when in the BMRB view mode, a deposition can be 
-submitted to BMRB.
+can be submitted to
 ;
 
    _item.name                                  '_Entry_interview.View_mode'
@@ -3619,7 +3616,7 @@ save__Study.Name
 Descriptive name given to a 'study' where a study is a collection of entries 
 containing data for a set of related molecular systems or for a single molecular 
 system but published in more than one citation (i.e. chemical shifts in one 
-publication and atomic coordinates in another and relaxation studies in a third).
+publication and atomi
 ;
 
    _item.name                                  '_Study.Name'
@@ -3689,7 +3686,7 @@ save__Study.Details
 Text information relevant to the study are entered as a value for this 
 tag.  This tag is often used to include information that cannot be associated with 
 a specific tag in the save frame but is important for the entry. The information 
-entered must supplement information already present.
+entered must supplem
 ;
 
    _item.name                                  '_Study.Details'
@@ -5049,7 +5046,7 @@ save__Entry.Origination
 The value to this tag defines who entered the original data into the database. 
  Entries taken from the literature and entered by BMRB staff are marked 
 'BMRB.'  Entries supplied by authors are marked 'author' and entries taken from 
-the PDB will be marked 'PDB.'
+the PDB will be marked '
 ;
 
    _item.name                                  '_Entry.Origination'
@@ -5470,7 +5467,7 @@ save__Entry.Dep_release_code_coordinates
 Select the status or terms to be applied for the release of the atomic 
 coordinate data to the public. Depositors are encourage to make their data available 
 to the public as quickly as possible.  However, requests may be made to hold 
-the data for a limited period of time up to one year.
+the data for a limited
 ;
 
    _item.name                                  '_Entry.Dep_release_code_coordinates'
@@ -5510,7 +5507,7 @@ save__Entry.Dep_release_code_nmr_constraints
 Select the status or terms to be applied for the release of the NMR constraint 
 data to the public. Depositors are encourage to make their data available 
 to the public as quickly as possible.  However, requests may be made to hold the 
-data for a limited period of time up to one year.
+data for a limited pe
 ;
 
    _item.name                                  '_Entry.Dep_release_code_nmr_constraints'
@@ -5550,7 +5547,7 @@ save__Entry.Dep_release_code_chemical_shifts
 Select the status or terms to be applied for the release of the NMR chemical 
 shift data to the public. Depositors are encourage to make their data available 
 to the public as quickly as possible.  However, requests may be made to hold 
-the data for a limited period of time up to one year.
+the data for a limite
 ;
 
    _item.name                                  '_Entry.Dep_release_code_chemical_shifts'
@@ -5590,7 +5587,7 @@ save__Entry.Dep_release_code_nmr_exptl
 Select the status or terms to be applied for the release of the NMR experimental 
 data to the public. Depositors are encourage to make their data available 
 to the public as quickly as possible.  However, requests may be made to hold 
-the data for a limited period of time up to one year.
+the data for a limited
 ;
 
    _item.name                                  '_Entry.Dep_release_code_nmr_exptl'
@@ -5630,9 +5627,7 @@ save__Entry.Dep_release_code_sequence
 Select the status or terms to be applied for the prerelease of the sequence 
 information for the biopolymers to the public. Although the atomic coordinate 
 and other data may be placed 'on hold', immediate release of the polymer sequence 
-data will allow others, including the structural genomics centers, to identify 
-polymers that have been studied and to select other targets reducing duplicate 
-effort.
+data will allow oth
 ;
 
    _item.name                                  '_Entry.Dep_release_code_sequence'
@@ -7336,7 +7331,7 @@ Department and institution where the contact person works.
      _item_examples.case
 
 ;
-Chemistry Dept., Rutgers Univ.
+Rutgers Univ.
 ;
 
    stop_
@@ -10125,8 +10120,7 @@ save__Citation.Journal_abbrev
 Standard abbreviation for journals used by the Chemical Abstract Services. 
  Depositors are required to provide a value for this field.  If the data in 
 the deposition are related to a JBNMR paper, the value must be 'J. Biol. NMR' to 
-alert the BMRB annotators so that the deposition is properly processed.  If the 
-depositor truly does not know the journal a value of 'not known' is acceptable.
+alert the BMRB annotato
 ;
 
    _item.name                                  '_Citation.Journal_abbrev'
@@ -12235,7 +12229,7 @@ save__Citation.Details
 Additional information relevant to the data in the current save frame or 
 to a specific data item is entered as a value to this tag.  The information entered 
 must supplement information already present.  Whenever possible data should 
-associated with specific data tags and not included in the value to a '_Details' tag.
+associated with specif
 ;
 
    _item.name                                  '_Citation.Details'
@@ -14377,7 +14371,7 @@ save__Entity_assembly.Entity_label
 This value points to the section of the entry where the chemical description 
 is given for all assembly components of this type.  For a homodimer a chemical 
 description of the monomer is given only once and is pointed to by this value 
-although the assembly contains two monomers.
+although the assembly
 ;
 
    _item.name                                  '_Entity_assembly.Entity_label'
@@ -15185,8 +15179,7 @@ save__Bond.Auth_entity_assembly_ID_1
 Enter the name given to the biopolymer or ligand as a component of the 
 molecular system where the first atom in the bond is located. For complex systems 
 that have many components, this might be something like 'alpha chain 1' or 'heme 
-3'. A pull down list of the names assigned to the molecular system components 
-in the section above is provided.
+3'. A pull down list
 ;
 
    _item.name                                  '_Bond.Auth_entity_assembly_ID_1'
@@ -15212,8 +15205,7 @@ save__Bond.Auth_entity_assembly_name_1
 Enter the name given to the biopolymer or ligand as a component of the 
 molecular system where the first atom in the bond is located. For complex systems 
 that have many components, this might be something like 'alpha chain 1' or 'heme 
-3'. A pull down list of the names assigned to the molecular system components 
-in the section above is provided.
+3'. A pull down list
 ;
 
    _item.name                                  '_Bond.Auth_entity_assembly_name_1'
@@ -15262,7 +15254,7 @@ save__Bond.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Bond.Auth_seq_ID_1'
@@ -15336,8 +15328,7 @@ save__Bond.Auth_entity_assembly_ID_2
 Enter the name given to the biopolymer or ligand as a component of the 
 molecular system where the second atom in the bond is located. For complex systems 
 that have many components, this might be something like 'alpha chain 1' or 'heme 
-3'. A pull down list of the names assigned to the molecular system components 
-in the section above is provided.
+3'. A pull down list
 ;
 
    _item.name                                  '_Bond.Auth_entity_assembly_ID_2'
@@ -15363,8 +15354,7 @@ save__Bond.Auth_entity_assembly_name_2
 Enter the name given to the biopolymer or ligand as a component of the 
 molecular system where the second atom in the bond is located. For complex systems 
 that have many components, this might be something like 'alpha chain 1' or 'heme 
-3'. A pull down list of the names assigned to the molecular system components 
-in the section above is provided.
+3'. A pull down list
 ;
 
    _item.name                                  '_Bond.Auth_entity_assembly_name_2'
@@ -15413,7 +15403,7 @@ save__Bond.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Bond.Auth_seq_ID_2'
@@ -15703,7 +15693,7 @@ save__Entity_deleted_atom.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Entity_deleted_atom.Auth_entity_assembly_ID'
@@ -15721,7 +15711,7 @@ save__Entity_deleted_atom.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Entity_deleted_atom.Auth_seq_ID'
@@ -16903,7 +16893,7 @@ save__Chem_comp_assembly.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Chem_comp_assembly.Auth_entity_assembly_ID'
@@ -16938,7 +16928,7 @@ save__Chem_comp_assembly.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Chem_comp_assembly.Auth_seq_ID'
@@ -18304,7 +18294,7 @@ save__Atom.Type_symbol
 The code used to identify the atom specie(s) representing this atom type. 
 Normally this code is the element symbol. The code may be composed of any character 
 except an underline with the additional proviso that digits designate an 
-oxidation state and must be followed by a + or - character.
+oxidation state and must
 ;
 
    _item.name                                  '_Atom.Type_symbol'
@@ -21073,8 +21063,7 @@ save__Assembly_subsystem.Molecular_mass
 The approximate mass of the system as defined by the authors and is intended 
 to approximate the sum of the masses of all of the atoms in the system.  No 
 attempt  is made to define the mass at a specific pH value, in terms of the protonation 
- state of any pH titratable groups, or according to the incorporation 
-of isotopes.
+ state of any
 ;
 
    _item.name                                  '_Assembly_subsystem.Molecular_mass'
@@ -21100,7 +21089,7 @@ save__Assembly_subsystem.Details
 Additional information relevant to the data in the current save frame or 
 to a specific data item is entered as a value to this tag.  The information entered 
 must supplement information already present.  Whenever possible data should 
-associated with specific data tags and not included in the value to a '_Details' tag.
+associated with specif
 ;
 
    _item.name                                  '_Assembly_subsystem.Details'
@@ -22901,8 +22890,7 @@ save__Entity.Src_method
 The method by which the sample for the entity was produced. Entities isolated 
 directly from natural sources (tissues, soil samples, etc.) are expected 
 to have further information in the entity natural source category. Entities isolated 
-from genetically manipulated sources are expected to have further information 
-in the entity experimental source category.
+from genetically ma
 ;
 
    _item.name                                  '_Entity.Src_method'
@@ -27823,7 +27811,7 @@ save__Entity_experimental_src.Host_org_subvariant
 In the hierarchy of organism nomenclature, the name or code designating 
 a subvariant of the organism used to express the entity. These may specific hosts 
 designed with mutations to knock out proteases or other enzymes deleterious to 
-the production of the entity.
+the production of the
 ;
 
    _item.name                                  '_Entity_experimental_src.Host_org_subvariant'
@@ -27841,7 +27829,7 @@ save__Entity_experimental_src.Host_org_organ
 Cell lines used as hosts in producing macromolecules often originate from 
 a particular organ (e.g. chinese hamster ovary cells).  If this is true for the 
 system used in this study please enter the name of the organ that was the source 
-for the cell line used.
+for the cell line us
 ;
 
    _item.name                                  '_Entity_experimental_src.Host_org_organ'
@@ -28199,7 +28187,7 @@ save__Entity_experimental_src.Details
 Additional information relevant to the data in the current save frame or 
 to a specific data item is entered as a value to this tag.  The information entered 
 must supplement information already present.  Whenever possible data should 
-associated with specific data tags and not included in the value to a '_Details' tag.
+associated with specif
 ;
 
    _item.name                                  '_Entity_experimental_src.Details'
@@ -28986,8 +28974,7 @@ save__Chem_comp.One_letter_code
 For standard polymer components, the one-letter code for the component. 
 If there is not a standard one-letter code for this component, or if this is a 
 non-polymer component, the one-letter code should be given as 'X'. This code may 
-be preceded by a '+' character to indicate that the component is a modification 
-of a standard component.
+be preceded by a '+' ch
 ;
 
    _item.name                                  '_Chem_comp.One_letter_code'
@@ -29005,8 +28992,7 @@ save__Chem_comp.Three_letter_code
 For standard polymer components, the three-letter code for the component. 
 If there is not a standard three-letter code for this component, or if this is 
 a non-polymer component, the three-letter code should be given as 'UNK'. This 
-code may be preceded by a '+' character to indicate that the component is a modification 
-of a standard component.
+code may be preceded by
 ;
 
    _item.name                                  '_Chem_comp.Three_letter_code'
@@ -29919,7 +29905,7 @@ save__Chem_comp.Details
 Additional text information that is relevant to the data in the current 
 save frame or to a specific data item in the save frame.  This tag is often used 
 to include information that cannot be associated with a specific tag in the save 
-frame, but is important.
+frame, but is importa
 ;
 
    _item.name                                  '_Chem_comp.Details'
@@ -34942,7 +34928,7 @@ save__Sample_component_atom_isotope.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Sample_component_atom_isotope.Auth_entity_assembly_ID'
@@ -34960,7 +34946,7 @@ save__Sample_component_atom_isotope.Auth_entity_ID
 An alternative identifier for Entity_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to 
-correspond to the value for Entity_ID.
+correspond to the value
 ;
 
    _item.name                                  '_Sample_component_atom_isotope.Auth_entity_ID'
@@ -34978,7 +34964,7 @@ save__Sample_component_atom_isotope.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Sample_component_atom_isotope.Auth_seq_ID'
@@ -44459,7 +44445,7 @@ save__NMR_experiment_file.Name
 The name of the file containing information relevant to the NMR experiment. 
  Multiple files can be listed.  These files might include the time-domain (raw) 
 data for the NMR experiment, the pulse sequence for the experiment, and parameters 
-for acquiring and processing the data.
+for acquiring an
 ;
 
    _item.name                                  '_NMR_experiment_file.Name'
@@ -48385,7 +48371,7 @@ save__Chem_shift_ref.Indirect_shift_ratio
 The Chi value used in calculating the chemical shift referencing values 
 for nuclei that are referenced indirectly.  The values used should be those recommended 
 by the IUPAC Taskforce on the deposition of data to the public databases 
-(Markley, et al.  Pure and Appl. Chem. 70, 117-142 (1998).
+(Markley, et al.  Pure
 ;
 
    _item.name                                  '_Chem_shift_ref.Indirect_shift_ratio'
@@ -48412,7 +48398,7 @@ save__Chem_shift_ref.External_ref_loc
 External chemical shift references are defined as either located within 
 the sample (e.g., as a capillary) or external to the sample and are inserted into 
 the spectrometer before, after, or both before and after the sample containing 
-the molecular system studied in the entry.
+the molecular system s
 ;
 
    _item.name                                  '_Chem_shift_ref.External_ref_loc'
@@ -49904,7 +49890,7 @@ save__Atom_chem_shift.Ambiguity_code
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Atom_chem_shift.Ambiguity_code'
@@ -49992,7 +49978,7 @@ save__Atom_chem_shift.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Atom_chem_shift.Auth_entity_assembly_ID'
@@ -50035,7 +50021,7 @@ save__Atom_chem_shift.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Atom_chem_shift.Auth_seq_ID'
@@ -50441,8 +50427,7 @@ save__Ambiguous_atom_chem_shift.Ambiguous_shift_set_ID
 An integer value that defines a set of chemical shifts that form a mutually 
 ambiguous group. For ambiguity codes of 4 or 5, various combinations of assigned 
 chemical shifts may form sets where the chemical shift assignments are not 
-specifically known, but it is known that the chemical shifts belong to one atom 
-in the set.
+specifically known, but
 ;
 
    _item.name                                  '_Ambiguous_atom_chem_shift.Ambiguous_shift_set_ID'
@@ -51684,7 +51669,7 @@ save__Theoretical_chem_shift.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_chem_shift.Auth_entity_assembly_ID'
@@ -51717,7 +51702,7 @@ save__Theoretical_chem_shift.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_chem_shift.Auth_seq_ID'
@@ -52870,7 +52855,7 @@ save__Coupling_constant.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Coupling_constant.Auth_entity_assembly_ID_1'
@@ -52905,7 +52890,7 @@ save__Coupling_constant.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Coupling_constant.Auth_seq_ID_1'
@@ -52979,7 +52964,7 @@ save__Coupling_constant.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Coupling_constant.Auth_entity_assembly_ID_2'
@@ -53014,7 +52999,7 @@ save__Coupling_constant.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Coupling_constant.Auth_seq_ID_2'
@@ -54183,7 +54168,7 @@ save__Theoretical_coupling_constant.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_coupling_constant.Auth_entity_assembly_ID_1'
@@ -54201,7 +54186,7 @@ save__Theoretical_coupling_constant.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_coupling_constant.Auth_seq_ID_1'
@@ -54275,7 +54260,7 @@ save__Theoretical_coupling_constant.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_coupling_constant.Auth_entity_assembly_ID_2'
@@ -54293,7 +54278,7 @@ save__Theoretical_coupling_constant.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_coupling_constant.Auth_seq_ID_2'
@@ -55043,7 +55028,7 @@ save__Spectral_dim.Magnetization_linkage_ID
 The magnetization linkage ID is used to designate dimensions of a multidimensional 
 NMR experiment where the nuclei observed in the dimensions are directly 
 linked by a one bond scalar coupling. For example, the amide proton and amide 
-nitrogen in an 1H-15N HSQC experiment.
+nitrogen in an 1H-15N
 ;
 
    _item.name                                  '_Spectral_dim.Magnetization_linkage_ID'
@@ -55175,7 +55160,7 @@ save__Spectral_dim.Absolute_peak_positions
 A flag determining whether peak positions are given as absolute_peak_positions. 
 If yes, peaks are shown at correct unaliased positions whether this is 
 within the acquisition window or not. If no, peaks are shown in the acquisition 
-window, whether this is the correct value or not.
+window, whether this is
 ;
 
    _item.name                                  '_Spectral_dim.Absolute_peak_positions'
@@ -56534,7 +56519,7 @@ save__Assigned_peak_chem_shift.Ambiguity_code
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Assigned_peak_chem_shift.Ambiguity_code'
@@ -56585,7 +56570,7 @@ save__Assigned_peak_chem_shift.Auth_entity_ID
 An alternative identifier for Entity_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to 
-correspond to the value for Entity_ID.
+correspond to the value
 ;
 
    _item.name                                  '_Assigned_peak_chem_shift.Auth_entity_ID'
@@ -56603,7 +56588,7 @@ save__Assigned_peak_chem_shift.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Assigned_peak_chem_shift.Auth_seq_ID'
@@ -56653,7 +56638,7 @@ save__Assigned_peak_chem_shift.Auth_ambiguity_code
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Assigned_peak_chem_shift.Auth_ambiguity_code'
@@ -57932,7 +57917,7 @@ save__Peak_row_format.Ambiguity_code_1
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_1'
@@ -58056,7 +58041,7 @@ save__Peak_row_format.Ambiguity_code_2
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_2'
@@ -58180,7 +58165,7 @@ save__Peak_row_format.Ambiguity_code_3
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_3'
@@ -58304,7 +58289,7 @@ save__Peak_row_format.Ambiguity_code_4
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_4'
@@ -58428,7 +58413,7 @@ save__Peak_row_format.Ambiguity_code_5
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_5'
@@ -58552,7 +58537,7 @@ save__Peak_row_format.Ambiguity_code_6
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_6'
@@ -58676,7 +58661,7 @@ save__Peak_row_format.Ambiguity_code_7
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_7'
@@ -58800,7 +58785,7 @@ save__Peak_row_format.Ambiguity_code_8
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_8'
@@ -58924,7 +58909,7 @@ save__Peak_row_format.Ambiguity_code_9
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_9'
@@ -59048,7 +59033,7 @@ save__Peak_row_format.Ambiguity_code_10
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_10'
@@ -59172,7 +59157,7 @@ save__Peak_row_format.Ambiguity_code_11
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_11'
@@ -59296,7 +59281,7 @@ save__Peak_row_format.Ambiguity_code_12
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_12'
@@ -59420,7 +59405,7 @@ save__Peak_row_format.Ambiguity_code_13
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_13'
@@ -59544,7 +59529,7 @@ save__Peak_row_format.Ambiguity_code_14
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_14'
@@ -59668,7 +59653,7 @@ save__Peak_row_format.Ambiguity_code_15
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Ambiguity_code_15'
@@ -59702,7 +59687,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_1'
@@ -59752,7 +59737,7 @@ save__Peak_row_format.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_1'
@@ -59802,7 +59787,7 @@ save__Peak_row_format.Auth_ambiguity_code_1
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_1'
@@ -59836,7 +59821,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_2'
@@ -59886,7 +59871,7 @@ save__Peak_row_format.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_2'
@@ -59936,7 +59921,7 @@ save__Peak_row_format.Auth_ambiguity_code_2
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_2'
@@ -59970,7 +59955,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_3
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_3'
@@ -60020,7 +60005,7 @@ save__Peak_row_format.Auth_seq_ID_3
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_3'
@@ -60070,7 +60055,7 @@ save__Peak_row_format.Auth_ambiguity_code_3
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_3'
@@ -60104,7 +60089,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_4
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_4'
@@ -60154,7 +60139,7 @@ save__Peak_row_format.Auth_seq_ID_4
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_4'
@@ -60204,7 +60189,7 @@ save__Peak_row_format.Auth_ambiguity_code_4
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_4'
@@ -60238,7 +60223,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_5
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_5'
@@ -60288,7 +60273,7 @@ save__Peak_row_format.Auth_seq_ID_5
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_5'
@@ -60338,7 +60323,7 @@ save__Peak_row_format.Auth_ambiguity_code_5
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_5'
@@ -60372,7 +60357,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_6
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_6'
@@ -60422,7 +60407,7 @@ save__Peak_row_format.Auth_seq_ID_6
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_6'
@@ -60472,7 +60457,7 @@ save__Peak_row_format.Auth_ambiguity_code_6
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_6'
@@ -60506,7 +60491,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_7
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_7'
@@ -60556,7 +60541,7 @@ save__Peak_row_format.Auth_seq_ID_7
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_7'
@@ -60606,7 +60591,7 @@ save__Peak_row_format.Auth_ambiguity_code_7
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_7'
@@ -60640,7 +60625,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_8
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_8'
@@ -60690,7 +60675,7 @@ save__Peak_row_format.Auth_seq_ID_8
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_8'
@@ -60740,7 +60725,7 @@ save__Peak_row_format.Auth_ambiguity_code_8
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_8'
@@ -60774,7 +60759,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_9
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_9'
@@ -60824,7 +60809,7 @@ save__Peak_row_format.Auth_seq_ID_9
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_9'
@@ -60874,7 +60859,7 @@ save__Peak_row_format.Auth_ambiguity_code_9
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_9'
@@ -60908,7 +60893,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_10
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_10'
@@ -60958,7 +60943,7 @@ save__Peak_row_format.Auth_seq_ID_10
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_10'
@@ -61008,7 +60993,7 @@ save__Peak_row_format.Auth_ambiguity_code_10
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_10'
@@ -61042,7 +61027,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_11
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_11'
@@ -61092,7 +61077,7 @@ save__Peak_row_format.Auth_seq_ID_11
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_11'
@@ -61142,7 +61127,7 @@ save__Peak_row_format.Auth_ambiguity_code_11
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_11'
@@ -61176,7 +61161,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_12
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_12'
@@ -61226,7 +61211,7 @@ save__Peak_row_format.Auth_seq_ID_12
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_12'
@@ -61276,7 +61261,7 @@ save__Peak_row_format.Auth_ambiguity_code_12
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_12'
@@ -61310,7 +61295,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_13
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_13'
@@ -61360,7 +61345,7 @@ save__Peak_row_format.Auth_seq_ID_13
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_13'
@@ -61410,7 +61395,7 @@ save__Peak_row_format.Auth_ambiguity_code_13
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_13'
@@ -61444,7 +61429,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_14
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_14'
@@ -61494,7 +61479,7 @@ save__Peak_row_format.Auth_seq_ID_14
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_14'
@@ -61544,7 +61529,7 @@ save__Peak_row_format.Auth_ambiguity_code_14
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_14'
@@ -61578,7 +61563,7 @@ save__Peak_row_format.Auth_entity_assembly_ID_15
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Peak_row_format.Auth_entity_assembly_ID_15'
@@ -61628,7 +61613,7 @@ save__Peak_row_format.Auth_seq_ID_15
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Peak_row_format.Auth_seq_ID_15'
@@ -61678,7 +61663,7 @@ save__Peak_row_format.Auth_ambiguity_code_15
 Ambiguity codes are used to define chemical shifts that have not been assigned 
 to specific atoms in the molecule studied.  Ambiguity in chemical shifts 
 may exist at several different levels, stereospecific ambiguity, intra and inter 
-residue ambiguities, etc.
+residue ambiguities, e
 ;
 
    _item.name                                  '_Peak_row_format.Auth_ambiguity_code_15'
@@ -64815,7 +64800,7 @@ save__Isotope_effect.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Isotope_effect.Auth_entity_assembly_ID'
@@ -64833,7 +64818,7 @@ save__Isotope_effect.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Isotope_effect.Auth_seq_ID'
@@ -65147,7 +65132,7 @@ save__Isotope_label_pattern.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Isotope_label_pattern.Auth_entity_assembly_ID'
@@ -65165,7 +65150,7 @@ save__Isotope_label_pattern.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Isotope_label_pattern.Auth_seq_ID'
@@ -66136,7 +66121,7 @@ save__Chem_shift_perturbation.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Chem_shift_perturbation.Auth_entity_assembly_ID'
@@ -66154,7 +66139,7 @@ save__Chem_shift_perturbation.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Chem_shift_perturbation.Auth_seq_ID'
@@ -67184,7 +67169,7 @@ save__CS_anisotropy.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_CS_anisotropy.Auth_entity_assembly_ID'
@@ -67202,7 +67187,7 @@ save__CS_anisotropy.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_CS_anisotropy.Auth_seq_ID'
@@ -68482,7 +68467,7 @@ save__RDC.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_RDC.Auth_entity_assembly_ID_1'
@@ -68500,7 +68485,7 @@ save__RDC.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_RDC.Auth_seq_ID_1'
@@ -68574,7 +68559,7 @@ save__RDC.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_RDC.Auth_entity_assembly_ID_2'
@@ -68592,7 +68577,7 @@ save__RDC.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_RDC.Auth_seq_ID_2'
@@ -69798,7 +69783,7 @@ save__Dipolar_coupling.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Dipolar_coupling.Auth_entity_assembly_ID_1'
@@ -69816,7 +69801,7 @@ save__Dipolar_coupling.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Dipolar_coupling.Auth_seq_ID_1'
@@ -69890,7 +69875,7 @@ save__Dipolar_coupling.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Dipolar_coupling.Auth_entity_assembly_ID_2'
@@ -69908,7 +69893,7 @@ save__Dipolar_coupling.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Dipolar_coupling.Auth_seq_ID_2'
@@ -70875,7 +70860,7 @@ save__Spectral_density.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Spectral_density.Auth_entity_assembly_ID'
@@ -70893,7 +70878,7 @@ save__Spectral_density.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Spectral_density.Auth_seq_ID'
@@ -71783,7 +71768,7 @@ save__Other_data.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Other_data.Auth_entity_assembly_ID'
@@ -71801,7 +71786,7 @@ save__Other_data.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Other_data.Auth_seq_ID'
@@ -72761,7 +72746,7 @@ save__Chemical_rate.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Chemical_rate.Auth_entity_assembly_ID'
@@ -72779,7 +72764,7 @@ save__Chemical_rate.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Chemical_rate.Auth_seq_ID'
@@ -73724,7 +73709,7 @@ save__H_exch_rate.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_H_exch_rate.Auth_entity_assembly_ID'
@@ -73742,7 +73727,7 @@ save__H_exch_rate.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_H_exch_rate.Auth_seq_ID'
@@ -74667,7 +74652,7 @@ save__H_exch_protection_factor.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_H_exch_protection_factor.Auth_entity_assembly_ID'
@@ -74685,7 +74670,7 @@ save__H_exch_protection_factor.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_H_exch_protection_factor.Auth_seq_ID'
@@ -75814,7 +75799,7 @@ save__Homonucl_NOE.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Homonucl_NOE.Auth_entity_assembly_ID_1'
@@ -75832,7 +75817,7 @@ save__Homonucl_NOE.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Homonucl_NOE.Auth_seq_ID_1'
@@ -75906,7 +75891,7 @@ save__Homonucl_NOE.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Homonucl_NOE.Auth_entity_assembly_ID_2'
@@ -75924,7 +75909,7 @@ save__Homonucl_NOE.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Homonucl_NOE.Auth_seq_ID_2'
@@ -77337,7 +77322,7 @@ save__Heteronucl_NOE.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Heteronucl_NOE.Auth_entity_assembly_ID_1'
@@ -77355,7 +77340,7 @@ save__Heteronucl_NOE.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Heteronucl_NOE.Auth_seq_ID_1'
@@ -77429,7 +77414,7 @@ save__Heteronucl_NOE.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Heteronucl_NOE.Auth_entity_assembly_ID_2'
@@ -77447,7 +77432,7 @@ save__Heteronucl_NOE.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Heteronucl_NOE.Auth_seq_ID_2'
@@ -78886,7 +78871,7 @@ save__Theoretical_heteronucl_NOE.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_heteronucl_NOE.Auth_entity_assembly_ID_1'
@@ -78904,7 +78889,7 @@ save__Theoretical_heteronucl_NOE.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_heteronucl_NOE.Auth_seq_ID_1'
@@ -78978,7 +78963,7 @@ save__Theoretical_heteronucl_NOE.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_heteronucl_NOE.Auth_entity_assembly_ID_2'
@@ -78996,7 +78981,7 @@ save__Theoretical_heteronucl_NOE.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_heteronucl_NOE.Auth_seq_ID_2'
@@ -79991,7 +79976,7 @@ save__T1.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_T1.Auth_entity_assembly_ID'
@@ -80009,7 +79994,7 @@ save__T1.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_T1.Auth_seq_ID'
@@ -80980,7 +80965,7 @@ save__Theoretical_T1.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_T1.Auth_entity_assembly_ID'
@@ -80998,7 +80983,7 @@ save__Theoretical_T1.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_T1.Auth_seq_ID'
@@ -82070,7 +82055,7 @@ save__T1rho.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_T1rho.Auth_entity_assembly_ID'
@@ -82088,7 +82073,7 @@ save__T1rho.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_T1rho.Auth_seq_ID'
@@ -83160,7 +83145,7 @@ save__T2.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_T2.Auth_entity_assembly_ID'
@@ -83178,7 +83163,7 @@ save__T2.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_T2.Auth_seq_ID'
@@ -84250,7 +84235,7 @@ save__Theoretical_T2.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_T2.Auth_entity_assembly_ID'
@@ -84268,7 +84253,7 @@ save__Theoretical_T2.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_T2.Auth_seq_ID'
@@ -85468,7 +85453,7 @@ save__Auto_relaxation.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Auto_relaxation.Auth_entity_assembly_ID'
@@ -85486,7 +85471,7 @@ save__Auto_relaxation.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Auto_relaxation.Auth_seq_ID'
@@ -86687,7 +86672,7 @@ save__Theoretical_auto_relaxation.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_auto_relaxation.Auth_entity_assembly_ID'
@@ -86705,7 +86690,7 @@ save__Theoretical_auto_relaxation.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_auto_relaxation.Auth_seq_ID'
@@ -87782,7 +87767,7 @@ save__Dipole_dipole_relax.Auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Dipole_dipole_relax.Auth_entity_assembly_ID_1'
@@ -87800,7 +87785,7 @@ save__Dipole_dipole_relax.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Dipole_dipole_relax.Auth_seq_ID_1'
@@ -87874,7 +87859,7 @@ save__Dipole_dipole_relax.Auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Dipole_dipole_relax.Auth_entity_assembly_ID_2'
@@ -87892,7 +87877,7 @@ save__Dipole_dipole_relax.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Dipole_dipole_relax.Auth_seq_ID_2'
@@ -89281,7 +89266,7 @@ save__Cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_1'
@@ -89299,7 +89284,7 @@ save__Cross_correlation_DD.Dipole_1_auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_1_auth_seq_ID_1'
@@ -89373,7 +89358,7 @@ save__Cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_2'
@@ -89391,7 +89376,7 @@ save__Cross_correlation_DD.Dipole_1_auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_1_auth_seq_ID_2'
@@ -89465,7 +89450,7 @@ save__Cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_1'
@@ -89483,7 +89468,7 @@ save__Cross_correlation_DD.Dipole_2_auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_2_auth_seq_ID_1'
@@ -89557,7 +89542,7 @@ save__Cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_2'
@@ -89575,7 +89560,7 @@ save__Cross_correlation_DD.Dipole_2_auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_DD.Dipole_2_auth_seq_ID_2'
@@ -90964,7 +90949,7 @@ save__Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_1'
@@ -90982,7 +90967,7 @@ save__Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_1'
@@ -91056,7 +91041,7 @@ save__Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_entity_assembly_ID_2'
@@ -91074,7 +91059,7 @@ save__Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_1_auth_seq_ID_2'
@@ -91148,7 +91133,7 @@ save__Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_1'
@@ -91166,7 +91151,7 @@ save__Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_1'
@@ -91240,7 +91225,7 @@ save__Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_entity_assembly_ID_2'
@@ -91258,7 +91243,7 @@ save__Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Dipole_2_auth_seq_ID_2'
@@ -92646,7 +92631,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.Dipole_auth_entity_assembly_ID_1'
@@ -92664,7 +92649,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.Dipole_auth_seq_ID_1'
@@ -92738,7 +92723,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.Dipole_auth_entity_assembly_ID_2'
@@ -92756,7 +92741,7 @@ save__Cross_correlation_D_CSA.Dipole_auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.Dipole_auth_seq_ID_2'
@@ -92830,7 +92815,7 @@ save__Cross_correlation_D_CSA.CSA_auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.CSA_auth_entity_assembly_ID_1'
@@ -92848,7 +92833,7 @@ save__Cross_correlation_D_CSA.CSA_auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.CSA_auth_seq_ID_1'
@@ -92922,7 +92907,7 @@ save__Cross_correlation_D_CSA.CSA_auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.CSA_auth_entity_assembly_ID_2'
@@ -92940,7 +92925,7 @@ save__Cross_correlation_D_CSA.CSA_auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Cross_correlation_D_CSA.CSA_auth_seq_ID_2'
@@ -94281,7 +94266,7 @@ save__Order_param.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Order_param.Auth_entity_assembly_ID'
@@ -94299,7 +94284,7 @@ save__Order_param.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Order_param.Auth_seq_ID'
@@ -95182,7 +95167,7 @@ save__PH_titr_result.Atm_obs_auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_PH_titr_result.Atm_obs_auth_entity_assembly_ID'
@@ -95200,7 +95185,7 @@ save__PH_titr_result.Atm_obs_auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_PH_titr_result.Atm_obs_auth_seq_ID'
@@ -95410,7 +95395,7 @@ save__PH_titr_result.Atm_titr_auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_PH_titr_result.Atm_titr_auth_entity_assembly_ID'
@@ -95428,7 +95413,7 @@ save__PH_titr_result.Atm_titr_auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_PH_titr_result.Atm_titr_auth_seq_ID'
@@ -96880,7 +96865,7 @@ save__D_H_fractionation_factor.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_D_H_fractionation_factor.Auth_entity_assembly_ID'
@@ -96898,7 +96883,7 @@ save__D_H_fractionation_factor.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_D_H_fractionation_factor.Auth_seq_ID'
@@ -97807,7 +97792,7 @@ save__Binding_result.Atm_obs_auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Binding_result.Atm_obs_auth_seq_ID'
@@ -99311,7 +99296,7 @@ save__Deduced_secd_struct_exptl.Auth_seq_ID_start
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Deduced_secd_struct_exptl.Auth_seq_ID_start'
@@ -99329,7 +99314,7 @@ save__Deduced_secd_struct_exptl.Auth_seq_ID_end
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Deduced_secd_struct_exptl.Auth_seq_ID_end'
@@ -99717,7 +99702,7 @@ save__Deduced_secd_struct_feature.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Deduced_secd_struct_feature.Auth_entity_assembly_ID'
@@ -99735,7 +99720,7 @@ save__Deduced_secd_struct_feature.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Deduced_secd_struct_feature.Auth_seq_ID'
@@ -100685,7 +100670,7 @@ save__Deduced_H_bond.Heavy_atom_auth_entity_assembly_ID_1
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Deduced_H_bond.Heavy_atom_auth_entity_assembly_ID_1'
@@ -100703,7 +100688,7 @@ save__Deduced_H_bond.Heavy_atom_auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Deduced_H_bond.Heavy_atom_auth_seq_ID_1'
@@ -100777,7 +100762,7 @@ save__Deduced_H_bond.Heavy_atom_auth_entity_assembly_ID_2
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Deduced_H_bond.Heavy_atom_auth_entity_assembly_ID_2'
@@ -100795,7 +100780,7 @@ save__Deduced_H_bond.Heavy_atom_auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Deduced_H_bond.Heavy_atom_auth_seq_ID_2'
@@ -100974,7 +100959,7 @@ save__Deduced_H_bond.H_atom_auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Deduced_H_bond.H_atom_auth_entity_assembly_ID'
@@ -100992,7 +100977,7 @@ save__Deduced_H_bond.H_atom_auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Deduced_H_bond.H_atom_auth_seq_ID'
@@ -101280,7 +101265,7 @@ save__Conformer_stat_list.Conformer_ensemble_only
 Check this box if your atomic coordinate file contains data for an ensemble 
 of structures, where one structure from the ensemble will be designated as 
 a representative structure. All of the members of the ensemble have been calculated 
-using the same method.
+using the same metho
 ;
 
    _item.name                                  '_Conformer_stat_list.Conformer_ensemble_only'
@@ -101299,9 +101284,7 @@ save__Conformer_stat_list.Both_ensemble_and_rep_conformer
 Select this box if your atomic coordinate file contains data for an ensemble 
 of conformers and a representative conformer derived using a method different 
 from that used for the other conformers in the file.  An example would be a 
-file that contains an ensemble of conformers calculated from the NMR constraints 
-and one conformer that was derived as an averaged minimized structure from the 
-other conformers in the file.
+file that contains an en
 ;
 
    _item.name                                  '_Conformer_stat_list.Both_ensemble_and_rep_conformer'
@@ -101669,9 +101652,7 @@ save__Conformer_stat_list_ens.Stats_not_available
 Depositors are strongly encouraged to enter a few statistical parameters 
 that described the deposited ensemble of conformers. If this information cannot 
 be entered at the time of deposition, check the box provided. After checking the 
-box and clicking on the 'save' button, the statistical fields will no longer 
-be marked mandatory and you will be able to complete and submit your deposition 
-without providing this information.
+box and clicking on t
 ;
 
    _item.name                                  '_Conformer_stat_list_ens.Stats_not_available'
@@ -102707,8 +102688,7 @@ save__Conformer_stat_list_rep.Stats_not_available
 Depositors are strongly encouraged to enter a few statistical parameters 
 regarding the deposited representative conformer. If these data are not available, 
 please check the box provided. After checking the box and clicking on the 'save' 
-button, the statistical fields will no longer be marked as mandatovy and you 
-will be able to complete and submit your deposition.
+button, the statis
 ;
 
    _item.name                                  '_Conformer_stat_list_rep.Stats_not_available'
@@ -105751,7 +105731,7 @@ save__Atom_site.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
   loop_
@@ -106703,7 +106683,7 @@ save__Terminal_residue.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Terminal_residue.Auth_seq_ID'
@@ -107114,7 +107094,7 @@ save__Rep_conf.Auth_entity_assembly_ID
 An alternative identifier for entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Rep_conf.Auth_entity_assembly_ID'
@@ -107140,7 +107120,7 @@ save__Rep_conf.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Rep_conf.Auth_seq_ID'
@@ -107593,9 +107573,7 @@ save__Constraint_stat_list.Stats_not_available
 Depositors are strongly encouraged to enter a few statistical parameters 
 describing the constraints used to calculate the deposited conformers. If these 
 data are not available, please check the box provided. After checking the box 
-and clicking on the 'save' button, the fields for entering constraint statistics 
-will not be marked as mandatory and you will be able to complete your depositions 
-without providing this information.
+and clicking on the 'sav
 ;
 
    _item.name                                  '_Constraint_stat_list.Stats_not_available'
@@ -107959,7 +107937,7 @@ save__Constraint_stat_list.NOE_medium_range_tot_num
 Provide the total count of the NOE values that represent interactions between 
 residues defined as 'medium-range' or relatively close in the sequence of 
 the biopolymer chain (|i-j| < 5). For proteins, these NOEs are often used to define 
-secondary structure.
+secondary structure
 ;
 
    _item.name                                  '_Constraint_stat_list.NOE_medium_range_tot_num'
@@ -108241,7 +108219,7 @@ save__Constraint_stat_list.ROE_medium_range_tot_num
 Provide the total count of the NOE values that represent interactions between 
 residues defined as 'medium-range' or relatively close in the sequence of 
 the biopolymer chain (|i-j| < 5). For proteins, these NOEs are often used to define 
-secondary structure.
+secondary structure
 ;
 
    _item.name                                  '_Constraint_stat_list.ROE_medium_range_tot_num'
@@ -109269,8 +109247,7 @@ save__Constraint_stat_list_ens.Constraint_stats_not_available
 Depositors are strongly encouraged to provide a few statistics related 
 to the constraints used to calculate the ensemble of conformers and the conformer 
 ensemble. If the statistics are not available, the box provided can be checked 
-and the constraint statistics page saved. This will remove the mandatory requirement 
-to enter the statistical data.
+and the constraint stat
 ;
 
    _item.name                                  '_Constraint_stat_list_ens.Constraint_stats_not_available'
@@ -111945,7 +111922,7 @@ save__Angular_order_param.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Angular_order_param.Auth_seq_ID'
@@ -112670,7 +112647,7 @@ save__Tertiary_struct.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Tertiary_struct.Auth_seq_ID'
@@ -114167,7 +114144,7 @@ save__Secondary_struct.Auth_seq_ID_start
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Secondary_struct.Auth_seq_ID_start'
@@ -114193,7 +114170,7 @@ save__Secondary_struct.Auth_seq_ID_end
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Secondary_struct.Auth_seq_ID_end'
@@ -114952,7 +114929,7 @@ save__Bond_annotation.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Bond_annotation.Auth_seq_ID_1'
@@ -115051,7 +115028,7 @@ save__Bond_annotation.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Bond_annotation.Auth_seq_ID_2'
@@ -115828,7 +115805,7 @@ save__Structure_interaction.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Structure_interaction.Auth_seq_ID_1'
@@ -115927,7 +115904,7 @@ save__Structure_interaction.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Structure_interaction.Auth_seq_ID_2'
@@ -116458,7 +116435,7 @@ save__Other_struct_feature.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Other_struct_feature.Auth_seq_ID'
@@ -117610,7 +117587,7 @@ save__Tensor.Auth_entity_assembly_ID
 An alternative identifier for Entity_assembly_ID that may be provided by 
 an author in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not 
-need to correspond to the value for Entity_assembly_ID.
+need to correspond to
 ;
 
    _item.name                                  '_Tensor.Auth_entity_assembly_ID'
@@ -117628,7 +117605,7 @@ save__Tensor.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Tensor.Auth_seq_ID'
@@ -118325,7 +118302,7 @@ save__Interatomic_dist.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Interatomic_dist.Auth_seq_ID_1'
@@ -118408,7 +118385,7 @@ save__Interatomic_dist.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Interatomic_dist.Auth_seq_ID_2'
@@ -119386,7 +119363,7 @@ save__Gen_dist_constraint.Combination_ID
 An identifier for a constraint item combination within a distance constraint. 
 Constraint items with the same Constraint.combination_id must be part of 
 the same constraint. When calculating a constraint they are AND-ed together, while 
-contributions with different constraint.Combination_id (or none) are OR-ed.
+contributions with di
 ;
 
    _item.name                                  '_Gen_dist_constraint.Combination_ID'
@@ -120320,9 +120297,7 @@ save__Gen_dist_constraint.Auth_asym_ID_1
 An alternative identifier for Asym_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to correspond 
-to the value for Asym_ID. This item is provided as a place holder for 
-information extracted from distance constraint files generated by various software 
-applications.
+to the value f
 ;
 
    _item.name                                  '_Gen_dist_constraint.Auth_asym_ID_1'
@@ -120363,7 +120338,7 @@ save__Gen_dist_constraint.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Gen_dist_constraint.Auth_seq_ID_1'
@@ -120492,9 +120467,7 @@ save__Gen_dist_constraint.Auth_asym_ID_2
 An alternative identifier for Asym_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to correspond 
-to the value for Asym_ID. This item is provided as a place holder for 
-information extracted from distance constraint files generated by various software 
-applications.
+to the value f
 ;
 
    _item.name                                  '_Gen_dist_constraint.Auth_asym_ID_2'
@@ -120535,7 +120508,7 @@ save__Gen_dist_constraint.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Gen_dist_constraint.Auth_seq_ID_2'
@@ -122496,9 +122469,7 @@ save__Dist_constraint.Auth_asym_ID
 An alternative identifier for Asym_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental 
 data.  Note that the value is not required to be a number and does not need to correspond 
-to the value for Asym_ID. This item is provided as a place holder for 
-information extracted from distance constraint files generated by various software 
-applications.
+to the value f
 ;
 
    _item.name                                  '_Dist_constraint.Auth_asym_ID'
@@ -122541,7 +122512,7 @@ save__Dist_constraint.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Dist_constraint.Auth_seq_ID'
@@ -124217,7 +124188,7 @@ save__Floating_chirality.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Floating_chirality.Auth_seq_ID_1'
@@ -124331,7 +124302,7 @@ save__Floating_chirality.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Floating_chirality.Auth_seq_ID_2'
@@ -125275,7 +125246,7 @@ save__Torsion_angle_constraint.Combination_ID
 An identifier for a constraint item combination within a dihedral constraint. 
 Constraint items with the same constraint_.Combination_id must be part of 
 the same constraint. When calculating a constraint they are AND-ed together, while 
-contributions with different constraint.Combination_id (or none) are OR-ed.
+contributions with d
 ;
 
    _item.name                                  '_Torsion_angle_constraint.Combination_ID'
@@ -126679,7 +126650,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Torsion_angle_constraint.Auth_seq_ID_1'
@@ -126846,7 +126817,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Torsion_angle_constraint.Auth_seq_ID_2'
@@ -127013,7 +126984,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_3
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Torsion_angle_constraint.Auth_seq_ID_3'
@@ -127180,7 +127151,7 @@ save__Torsion_angle_constraint.Auth_seq_ID_4
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_Torsion_angle_constraint.Auth_seq_ID_4'
@@ -128282,7 +128253,7 @@ save__RDC_constraint_list.Tensor_auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_RDC_constraint_list.Tensor_auth_seq_ID'
@@ -128927,7 +128898,7 @@ save__RDC_constraint.Combination_ID
 An identifier for a constraint item combination within an RDC constraint. 
 Constraint items with the same constraint.Combination_id must be part of the 
 same constraint. When calculating a constraint they are AND-ed together, while contributions 
-with different constraint.combination_id (or none) are OR-ed.
+with differ
 ;
 
    _item.name                                  '_RDC_constraint.Combination_ID'
@@ -129814,7 +129785,7 @@ save__RDC_constraint.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_RDC_constraint.Auth_seq_ID_1'
@@ -129981,7 +129952,7 @@ save__RDC_constraint.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_RDC_constraint.Auth_seq_ID_2'
@@ -131998,7 +131969,7 @@ save__J_three_bond_constraint.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_J_three_bond_constraint.Auth_seq_ID_1'
@@ -132112,7 +132083,7 @@ save__J_three_bond_constraint.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_J_three_bond_constraint.Auth_seq_ID_2'
@@ -132226,7 +132197,7 @@ save__J_three_bond_constraint.Auth_seq_ID_3
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_J_three_bond_constraint.Auth_seq_ID_3'
@@ -132340,7 +132311,7 @@ save__J_three_bond_constraint.Auth_seq_ID_4
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_J_three_bond_constraint.Auth_seq_ID_4'
@@ -133891,7 +133862,7 @@ save__CA_CB_constraint.Auth_seq_ID_1
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_CA_CB_constraint.Auth_seq_ID_1'
@@ -134005,7 +133976,7 @@ save__CA_CB_constraint.Auth_seq_ID_2
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_CA_CB_constraint.Auth_seq_ID_2'
@@ -134119,7 +134090,7 @@ save__CA_CB_constraint.Auth_seq_ID_3
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_CA_CB_constraint.Auth_seq_ID_3'
@@ -134233,7 +134204,7 @@ save__CA_CB_constraint.Auth_seq_ID_4
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_CA_CB_constraint.Auth_seq_ID_4'
@@ -134347,7 +134318,7 @@ save__CA_CB_constraint.Auth_seq_ID_5
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_CA_CB_constraint.Auth_seq_ID_5'
@@ -135345,7 +135316,7 @@ save__H_chem_shift_constraint.Auth_seq_ID
 An alternative identifier for Seq_ID that may be provided by an author 
 in order to match that used in the publication that describes the experimental data. 
  Note that the value is not required to be a number and does not need to correspond 
-to the value for Seq_ID or Comp_index_ID.
+to the value fo
 ;
 
    _item.name                                  '_H_chem_shift_constraint.Auth_seq_ID'
