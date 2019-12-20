@@ -75527,12 +75527,12 @@ save__Chem_shift_perturbation_list.Sf_framecode
 
    _Interface.Description
 ;
-A label for the save frame that describes in very brief terms the information contained in the save frame.
+A name for the save frame that describes in very brief terms the chemical shift perturbation data set.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Label for chemical shift differences caused by molecular interactions
+Name assigned to the chemical shift perturbation data set
 ;
 
    loop_
@@ -75608,7 +75608,7 @@ save__Chem_shift_perturbation_list.ID
 
    _Interface.Description
 ;
-An integer value that uniquely identifies this save frame of molecular interaction information from other save frames of this category in an entry.
+An integer value that uniquely identifies this save frame of chemical shift perturbation information from other save frames of this category in an entry.
 ;
 
    _Interface.Adit_item_view_name
@@ -75635,12 +75635,12 @@ save__Chem_shift_perturbation_list.Name
 
    _Interface.Description
 ;
-A name for the data set that describes in very brief terms the information contained in the data set.
+A name for the data set that describes in very brief terms the chemical shift perturbation data deposited.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Name for chemical shift differences caused by molecular interactions
+Chemical shift perturbation data set name
 ;
 
    loop_
@@ -75721,7 +75721,7 @@ Pointer to '_Sample_condition_list.ID'
 
    _Interface.Adit_item_view_name
 ;
-Sample conditions ID
+Sample conditions set name
 ;
 
    loop_
@@ -75743,12 +75743,12 @@ save__Chem_shift_perturbation_list.Sample_condition_list_label
 
    _Interface.Description
 ;
-Pointer to a save frame of the category 'sample_conditions'
+Name for the set of sample conditions relavent to this set of chemical shift perturbation data.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Sample conditions label
+Sample conditions set name
 ;
 
    loop_
@@ -75775,7 +75775,7 @@ Pointer to '_Chem_shift_reference.ID'
 
    _Interface.Adit_item_view_name
 ;
-Chem shift ref set ID
+Chem shift reference list name
 ;
 
    loop_
@@ -75797,7 +75797,7 @@ save__Chem_shift_perturbation_list.Chem_shift_ref_set_label
 
    _Interface.Description
 ;
-Pointer to a  'chemical shift reference list.'  This is the section where the chemical shift referencing standards are described.
+Name for the 'chemical shift reference list' relevant to this set of chemical shift perturbation data. This is the section where the chemical shift referencing standards are described.
 ;
 
    _Interface.Adit_item_view_name
@@ -75824,7 +75824,7 @@ save__Chem_shift_perturbation_list.Details
 
    _Interface.Description
 ;
-Text providing additional information regarding the set of molecular interaction data and their derivation.
+Text providing additional information regarding the set of chemical shift perturbation data and their derivation.
 ;
 
    _Interface.Adit_item_view_name
@@ -75851,7 +75851,7 @@ save__Chem_shift_perturbation_list.Text_data_format
 
    _Interface.Description
 ;
-The data format used to represent the chemical shift data for molecular interaction observations as ASCII text in the text block that is the value to the '_Assigned_chem_shift.Text_data' tag.
+The data format used to represent the chemical shift perturbation data as ASCII text data file uploaded for this deposition.
 ;
 
    _Interface.Adit_item_view_name
@@ -75905,7 +75905,7 @@ save__Chem_shift_perturbation_experiment.Experiment_ID
 
    _Interface.Description
 ;
-Pointer to an experiment in the list of experiments described in the experiment section of the deposition.
+Name for an experiment in the list of experiments described in the experiment section of the deposition.
 ;
 
    _Interface.Adit_item_view_name
@@ -75932,7 +75932,7 @@ save__Chem_shift_perturbation_experiment.Experiment_name
 
    _Interface.Description
 ;
-Pointer to an experiment in the list of experiments described in the experiment section of the deposition.
+Name for an experiment in the list of experiments described in the experiment section of the deposition.
 ;
 
    _Interface.Adit_item_view_name
@@ -75964,7 +75964,7 @@ Pointer to '_Sample.ID'
 
    _Interface.Adit_item_view_name
 ;
-Sample ID
+Sample name
 ;
 
    loop_
@@ -75991,7 +75991,7 @@ Pointer to a save frame of the category 'sample'
 
    _Interface.Adit_item_view_name
 ;
-Sample label
+Sample name
 ;
 
    loop_
@@ -76018,7 +76018,7 @@ Physical state of the sample either anisotropic or isotropic.
 
    _Interface.Adit_item_view_name
 ;
-Sample state
+Sample physical state
 ;
 
    loop_
@@ -76148,12 +76148,12 @@ save__Chem_shift_perturbation_software.Software_label
 
    _Interface.Description
 ;
-Pointer to a save frame of the category 'software'
+Name of the software used to derive the chemical shift perturbation data set.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Software label
+Software name
 ;
 
    loop_
@@ -76202,12 +76202,12 @@ save__Chem_shift_perturbation_software.Method_label
 
    _Interface.Description
 ;
-Pointer to a save frame of the category 'method'
+Pointer to a save frame where the software method used is described.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Method label
+Method name
 ;
 
    loop_
