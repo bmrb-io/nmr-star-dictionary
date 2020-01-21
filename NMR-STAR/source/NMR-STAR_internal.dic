@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-01-09
+#  version date -  2020-01-21
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.5.0
+    _dictionary.version         3.2.6.0
 
      loop_
        _dictionary_history.version
@@ -34180,8 +34180,9 @@ save__Sample_component.Mol_common_name
 
    _item_description.description
 ;
-Enter the common name for a component of the sample.  Include molecules 
-under study as well as buffers and salts.
+Enter the name for a component of the sample.  Include molecules under 
+study (the assembly, or entities and ligands) as well as buffers, salts, reducing 
+agents, anti-bacterial agents, etc.
 ;
 
    _item.name                                  '_Sample_component.Mol_common_name'
@@ -37788,7 +37789,7 @@ A name assigned to the save frame.
 
    _item.name                                  '_Method.Name'
    _item.category_id                           'Method'
-   _item.mandatory_code                         no
+   _item.mandatory_code                         yes
    _item_type.code                             'line'
 
 
@@ -40833,6 +40834,21 @@ instruments listed in the entry.
   stop_
 
   _item_type.code                             'int'
+
+
+save_
+
+save__Xray_instrument.Name
+
+   _item_description.description
+;
+The name for the X-ray instrument used to collect the reported data.
+;
+
+   _item.name                                  '_Xray_instrument.Name'
+   _item.category_id                           'Xray_instrument'
+   _item.mandatory_code                         yes
+   _item_type.code                             'line'
 
 
 save_
@@ -84580,6 +84596,44 @@ data for this save frame.
 
 save_
 
+save__Auto_relaxation_list.Common_relaxation_type_name
+
+   _item_description.description
+;
+Common term used for the type of relaxation phenomena reported.
+;
+
+   _item.name                                  '_Auto_relaxation_list.Common_relaxation_type_name'
+   _item.category_id                           'Auto_relaxation_list'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   R1    ?
+   R2    ?
+   R1rho    ?
+   'ZQ relaxation'    ?
+   'longitudinal spin order'    ?
+   'single quantum antiphase'    ?
+   'DQ relaxation'    ?
+
+   stop_
+
+   loop_
+     _item_examples.case
+
+;
+R1/T1
+;
+
+   stop_
+
+save_
+
 save__Auto_relaxation_list.Sample_condition_list_ID
 
    _item_description.description
@@ -84708,44 +84762,6 @@ a high level of precision.
 
 ;
 60.777824
-;
-
-   stop_
-
-save_
-
-save__Auto_relaxation_list.Common_relaxation_type_name
-
-   _item_description.description
-;
-Common term used for the type of relaxation phenomena reported.
-;
-
-   _item.name                                  '_Auto_relaxation_list.Common_relaxation_type_name'
-   _item.category_id                           'Auto_relaxation_list'
-   _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   no
-   _item_type.code                             'code'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   R1    ?
-   R2    ?
-   R1rho    ?
-   'ZQ relaxation'    ?
-   'longitudinal spin order'    ?
-   'single quantum antiphase'    ?
-   'DQ relaxation'    ?
-
-   stop_
-
-   loop_
-     _item_examples.case
-
-;
-R1
 ;
 
    stop_

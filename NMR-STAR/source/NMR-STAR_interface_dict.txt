@@ -26576,12 +26576,12 @@ save__Entity_experimental_src.Entity_label
 
    _Interface.Description
 ;
-Pointer to a save frame of the category 'entity.'  This is the label assigned to the molecular entity by the author when completing the molecular entity portion of the deposition.
+This is the name assigned to the molecular entity by the author when completing the molecular entity portion of the deposition.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Name for a molecular entity
+Name for a molecular entity in the entry
 ;
 
    loop_
@@ -33412,7 +33412,7 @@ Provide a name for the sample that uniquely identifies this sample from the othe
 
    _Interface.Adit_item_view_name
 ;
-Sample label
+Sample name
 ;
 
    loop_
@@ -34325,7 +34325,7 @@ save__Sample_component.Isotopic_labeling
 
    _Interface.Description
 ;
-If the molecule was isotopically labeled, provide a description of the labeling using the format recommended by the IUPAC/IUBMB/IUPAB Interunion Task Group. Commonly used labeling patterns are provide in the pull down list in the IUPAC format.  If a diffe
+If the molecule was isotopically labeled, provide a description of the labeling using the format recommended by the IUPAC/IUBMB/IUPAB Interunion Task Group. Commonly used labeling patterns are provided in the pull down list in the IUPAC format.  If you cannot find the pattern used in the list, please enter the labeling following the IUPAC format as closely as possible.
 ;
 
    _Interface.Adit_item_view_name
@@ -41513,6 +41513,33 @@ save__Xray_instrument.ID
    _Interface.Adit_item_view_name
 ;
 ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Xray_instrument.Name
+
+   _Interface.Tag                  '_Xray_instrument.Name'
+
+   _Interface.Category              'Xray_instrument'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Name
 ;
 
    loop_
@@ -101825,7 +101852,7 @@ save__Auto_relaxation_list.Name
 
    _Interface.Description
 ;
-A name for the data set that describes in very brief terms the information contained in the data set.
+A name for the data set that describes in very brief terms the T1/R1, T2/R2, T1rho, or other relaxation data being reported.
 ;
 
    _Interface.Adit_item_view_name
@@ -101865,6 +101892,33 @@ Deposited data file name
 
 ;
 ?
+;
+
+   stop_
+
+save_
+
+save__Auto_relaxation_list.Common_relaxation_type_name
+
+   _Interface.Tag                  '_Auto_relaxation_list.Common_relaxation_type_name'
+
+   _Interface.Category              'Auto_relaxation_list'
+
+   _Interface.Description
+;
+The type of relaxation parameter reported (e.g., R1/T1, R2/T2, etc.).
+;
+
+   _Interface.Adit_item_view_name
+;
+Reported relaxation data type
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+R1/T1
 ;
 
    stop_
@@ -102027,33 +102081,6 @@ Actual spectrometer frequency used expressed at high precision
 
 ;
 60.777824
-;
-
-   stop_
-
-save_
-
-save__Auto_relaxation_list.Common_relaxation_type_name
-
-   _Interface.Tag                  '_Auto_relaxation_list.Common_relaxation_type_name'
-
-   _Interface.Category              'Auto_relaxation_list'
-
-   _Interface.Description
-;
-Common term used for the type of relaxation phenomena reported.
-;
-
-   _Interface.Adit_item_view_name
-;
-Common term used for relaxation
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-R1
 ;
 
    stop_
