@@ -3248,7 +3248,7 @@ save__Entry.Experimental_method_subtype
 
    _Interface.Description
 ;
-Enter the type of NMR method used (e.g., solution, solid-state (powder), theoretical, etc.).
+Enter the type of NMR method used (e.g., solution, solid-state, theoretical, etc.).
 ;
 
    _Interface.Adit_item_view_name
@@ -5408,12 +5408,12 @@ save__Contact_person.ORCID
 
    _Interface.Description
 ;
-Unique researcher identifier (Open Researcher and Contributor ID).
+Unique personal identifier (Open Researcher and Contributor ID).
 ;
 
    _Interface.Adit_item_view_name
 ;
-ORCID
+ORCID (personal identifier)
 ;
 
    loop_
@@ -5462,7 +5462,7 @@ save__Contact_person.Given_name
 
    _Interface.Description
 ;
-The name given to the contact person at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
+The name given to the contact person at birth or currently used by the author for publication purposes.  Can be an initial, for example, if the author uses a second name as a full name when publishing.
 ;
 
    _Interface.Adit_item_view_name
@@ -5570,7 +5570,7 @@ save__Contact_person.Department_and_institution
 
    _Interface.Description
 ;
-Institution where the contact person works.
+Institution where the contact person currently works.
 ;
 
    _Interface.Adit_item_view_name
@@ -5597,7 +5597,7 @@ save__Contact_person.Country
 
    _Interface.Description
 ;
-The country in the mailing address of the author of the entry to whom correspondence should be addresed.
+The country where the contact person currently works.
 ;
 
    _Interface.Adit_item_view_name
@@ -5624,7 +5624,7 @@ save__Contact_person.State_province
 
    _Interface.Description
 ;
-The state or province for the address of the contact person.
+The state or province where the contact person currently works.
 ;
 
    _Interface.Adit_item_view_name
@@ -5651,7 +5651,7 @@ save__Contact_person.City
 
    _Interface.Description
 ;
-The city in the mailing address of the author of the entry to whom correspondence should be addresed.
+The city where the contact person currently works.
 ;
 
    _Interface.Adit_item_view_name
@@ -5678,7 +5678,7 @@ save__Contact_person.Postal_code
 
    _Interface.Description
 ;
-The postal code or zip code for the address of the contact person to whom correspondence should be addressed.
+The postal code or zip code for the location where the contact person currently works.
 ;
 
    _Interface.Adit_item_view_name
@@ -6002,7 +6002,7 @@ save__Entry_author.Given_name
 
    _Interface.Description
 ;
-The name given to the author at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
+The name given to the author at birth or currently used by the author for publication purposes.  Can be an initial, for example,  if the author uses a second name as a full name when publishing.
 ;
 
    _Interface.Adit_item_view_name
@@ -7946,7 +7946,7 @@ save__Citation.Class
 
    _Interface.Description
 ;
-Keyword defining the citation as the key citation for the entry or a citation used as a referenece in the entry.
+Keyword defining the citation as either the citation for the entry or a citation used as a referenece in the entry.
 ;
 
    _Interface.Adit_item_view_name
@@ -8135,7 +8135,7 @@ save__Citation.Status
 
    _Interface.Description
 ;
-Status for the current publication (in preparation submitted in press published).
+Current status for the publication (in preparation, submitted, in press, published).
 ;
 
    _Interface.Adit_item_view_name
@@ -8162,7 +8162,7 @@ save__Citation.Type
 
    _Interface.Description
 ;
-Descriptive word that defines the kind of publication reported (journal; book; thesis; etc.).
+The kind of publication reported (journal; book; thesis; etc.).
 ;
 
    _Interface.Adit_item_view_name
@@ -8977,7 +8977,7 @@ Enter a number that defines the position of the author's name in the list of aut
 
    _Interface.Adit_item_view_name
 ;
-Author order
+Author order designation
 ;
 
    loop_
@@ -8999,7 +8999,7 @@ save__Citation_author.Given_name
 
    _Interface.Description
 ;
-The name given to the author at birth or currently used by the author for publication purposes.  Can be an initial if the author uses a second name as a full name when publishing.
+The name given to the author at birth or currently used by the author for publication purposes.  Can be an initial,for example, if the author uses a second name as a full name when publishing.
 ;
 
    _Interface.Adit_item_view_name
@@ -10430,7 +10430,7 @@ save__Assembly.Organic_ligands
 
    _Interface.Description
 ;
-Enter the total number of organic ligands known to exist in the full molecular system.
+Enter the total number of organic ligands known to exist in the full molecular system. For example, there are four hemes in hemoglobin.
 ;
 
    _Interface.Adit_item_view_name
@@ -10457,7 +10457,7 @@ save__Assembly.Metal_ions
 
    _Interface.Description
 ;
-Enter the total number of metal ions known to exist in the molecular system
+Enter the total number of metal ions known to exist in the molecular system.
 ;
 
    _Interface.Adit_item_view_name
@@ -10484,7 +10484,7 @@ save__Assembly.Non_standard_bonds
 
    _Interface.Description
 ;
-Select 'yes', if the molecular assembly contains covalent bonds such as cross-linking disulfide bonds, non-standard residue-residue bonds, ligand-residue bonds, or metal coordination bonds, etc.
+Select 'yes', if the molecular assembly contains covalent bonds such as cross-linking disulfide bonds, non-standard residue-residue bonds, ligand-residue chemical bonds, or metal coordination bonds, etc.
 ;
 
    _Interface.Adit_item_view_name
@@ -10511,7 +10511,7 @@ save__Assembly.Ambiguous_conformational_states
 
    _Interface.Description
 ;
-Answer 'yes', if the molecule contains multiple conformational states (e.g., cis/trans isomerization at one or more proline residues or ligands undergoing conformational equilibria).
+Answer 'yes', if the molecule contains multiple conformational states (e.g., cis/trans isomerization at one or more proline residues, ligands undergoing conformational equilibria, a biopolymer is exchanging between two conformational states).
 ;
 
    _Interface.Adit_item_view_name
@@ -10889,7 +10889,7 @@ save__Entity_assembly.ID
 
    _Interface.Description
 ;
-Unique identifier for each component in the entity assembly. If the ID values in the interface become non-sequential, they will be properly ordered during annotation at BMRB.
+Unique integer identifier for each component in the entity assembly. If the ID values in the interface become non-sequential, they will be properly ordered during annotation at BMRB.
 ;
 
    _Interface.Adit_item_view_name
@@ -10970,7 +10970,7 @@ save__Entity_assembly.Entity_label
 
    _Interface.Description
 ;
-This value points to the section of the entry where the chemical description is given for all assembly components of this type.  For a homodimer a chemical description of the monomer is given only once and is pointed to by this value although the assembly
+This value enter should match a value entered for one of the molecular entities. For a homodimer a chemical description of the monomer is given only once as a molecular entity and is pointed to by this value twice, once by each monomer listed in the molecular assembly.
 ;
 
    _Interface.Adit_item_view_name
@@ -11051,7 +11051,7 @@ save__Entity_assembly.Experimental_data_reported
 
    _Interface.Description
 ;
-Select 'yes' if experimental data are provided for this particular component in the system. Data are usually, but not always, provided for the biopolymers in the system, but are often not provided for metal ligands.
+Select 'yes' if experimental data are provided for this particular component in the system. Data are usually, but not always, provided for the biopolymers in the system.
 ;
 
    _Interface.Adit_item_view_name
@@ -11078,7 +11078,7 @@ save__Entity_assembly.Physical_state
 
    _Interface.Description
 ;
-An enumerated list of descriptive terms used to define the conformational state of the component of the assembly.
+Select a value from the enumerated list of terms that best describes the physical state of the component of the assembly.
 ;
 
    _Interface.Adit_item_view_name
@@ -11105,7 +11105,7 @@ save__Entity_assembly.Conformational_isomer
 
    _Interface.Description
 ;
-For biopolymers or ligands, does the indicated component of the system represent an observed conformational isomer of another component of the system.  For example, component one may represent a polypeptide chain with proline 34 in the cis conformation an
+For biopolymers or ligands, does the indicated component of the system represent an observed conformational isomer of another component of the system.  For example, component one may represent a polypeptide chain in an unfolded conformation and component two may represent the folded polypeptide.
 ;
 
    _Interface.Adit_item_view_name
@@ -11132,7 +11132,7 @@ save__Entity_assembly.Chemical_exchange_state
 
    _Interface.Description
 ;
-A flag indicating whether the component of the system is in chemical exchange with another component of the system. Check 'yes' if the component is in chemical exchange with another component in the system, for example ligands that are present in both the
+A flag indicating whether the component of the system is in chemical exchange with another component of the system. Check 'yes' if the component is in chemical exchange with another component in the system, for example ligands that are present in both the bound and unbound state.
 ;
 
    _Interface.Adit_item_view_name
@@ -21014,7 +21014,7 @@ save__Entity.Sf_framecode
 
    _Interface.Description
 ;
-Enter a brief name for the molecule.  Please do NOT include organism names or descriptions for the function of the molecule.  The name defines a unique chemical entity (a biopolymer or organic or inorganic ligand including metal ions).  There may be many
+Enter a brief name for the molecule.  Please do NOT include organism names or descriptions for the function of the molecule.  The name defines a unique chemical entity (a biopolymer or organic or inorganic ligand including metal ions).  There may be many unique molecular entities that need to be entered in the deposition.
 ;
 
    _Interface.Adit_item_view_name
@@ -21149,12 +21149,12 @@ save__Entity.Name
 
    _Interface.Description
 ;
-A brief name commonly used for the entity.
+A brief name commonly used for the molecualr entity.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Entity name
+Molecular entity name
 ;
 
    loop_
@@ -21338,19 +21338,19 @@ save__Entity.Polymer_seq_one_letter_code
 
    _Interface.Description
 ;
-Provide the complete sequence of a protein or nucleic acid as it existed in the NMR tube expressed using the one-letter code for standard residues and an X for non-standard residues. Include residues for cloning tags, etc. and for all residues even when e
+Provide the complete sequence of a protein, nucleic acid, or polycarbohidride as it existed in the NMR tube expressed using the one-letter code for standard residues and an X for non-standard residues. Include residues for cloning tags, etc. and for all residues even when data are not provided.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Enter the complete polymer sequence (one-letter code). Include all cloning artifacts, his tags, and disordered residues. The sequence must represent the complete polymer as found in the NMR tube.
+Enter the complete polymer sequence (one-letter code, X for non-standard residues).
 ;
 
    loop_
      _Interface_example.Example
 
 ;
-HHHHHHAFGCRESWQAKCLPHNMVIXSDF
+HHHHHHAFGCXESWQAKCLPHNMVIXSDF
 ;
 
    stop_
@@ -21446,12 +21446,12 @@ save__Entity.Ambiguous_conformational_states
 
    _Interface.Description
 ;
-Please indicate by answering yes or no if the molecule exists in multiple conformational states that have not been or cannot be clearly defined.  In some cases, proteins have been found to exhibit multiple peaks for a single proton or carbon atom that may
+Please answer yes, if the molecule exists in multiple conformational states as studied in the NMR tube.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Ambiguous conformational states are present
+Entity exists in multiple conformational states
 ;
 
    loop_
