@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-01-22
+#  version date -  2020-01-30
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.6.0
+    _dictionary.version         3.2.6.1
 
      loop_
        _dictionary_history.version
@@ -3841,7 +3841,7 @@ A word or brief phrase that can be used to describe or classify the study.
      _item_examples.case
 
 ;
-NMR structure
+IDP RNA Interaction
 ;
 
    stop_
@@ -3976,7 +3976,7 @@ BMRB accession number for an entry that is a member of the study.
      _item_examples.case
 
 ;
-4398
+20345
 ;
 
    stop_
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.6.0'
+   _item_default.value            '3.2.6.1'
 
    loop_
      _item_enumeration.value
@@ -5749,7 +5749,7 @@ to update.
      _item_examples.case
 
 ;
-4011
+17896
 ;
 
    stop_
@@ -5773,7 +5773,7 @@ to replace.
      _item_examples.case
 
 ;
-4159
+7569
 ;
 
    stop_
@@ -12216,7 +12216,7 @@ Calendar year when the article was published.
      _item_examples.case
 
 ;
-2003
+2020
 ;
 
    stop_
@@ -12536,7 +12536,7 @@ A single word or very brief phrase that characterizes the citation.
      _item_examples.case
 
 ;
-NMR
+conformational stability
 ;
 
    stop_
@@ -14498,9 +14498,9 @@ state of the component of the assembly.
    native    'The entity in the assembly is in a biologically native state usually in a folded conformation'
    denatured    'The entity in the assembly is in a non-native state usually caused by the addition of denaturing agents like urea or guanidine hydrochloride'
    'molten globule'    'A state somewhere between a native folded state and an unfolded state caused by environmental effects like pH or temperature'
-   unfolded    'The entity in the assembly is in a state where little or no secondary structure exists but is not an IDP'
-   'intrinsically disordered'    'The entity in the assembly is considered an intrinsically disorder biopolymer where the native state involves little organized secondary structure'
-   'partially disordered'    'The entity in the assembly contains regions of disordered structure but is not fully unfolded or fully disordered'
+   unfolded    'The entity in the assembly is in a state where little or no secondary structure exists but is not an IDP/IDR'
+   'intrinsically disordered'    'The entity in the assembly is considered an intrinsically disorder biopolymer (IDP) where the native state involves little organized secondary structure'
+   'partially disordered'    'The entity in the assembly contains regions of disordered structure (IDR) but is not fully unfolded or fully disordered'
    na    'The physical state of the entity in the assembly is an unknown physical state or may be in exchange between different physical states'
 
    stop_
@@ -22975,6 +22975,14 @@ Enzyme Commission number
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
+   loop_
+     _item_examples.case
+
+;
+3.1.3.5.3
+;
+
+   stop_
 
 save_
 
@@ -23005,6 +23013,14 @@ Formula mass in daltons of the entity.
    _item.mandatory_code                         no
    _item_type.code                             'float'
 
+   loop_
+     _item_examples.case
+
+;
+10325
+;
+
+   stop_
 
 save_
 
@@ -41167,6 +41183,14 @@ A name assigned to the save frame.
    _item.mandatory_code                         no
    _item_type.code                             'line'
 
+   loop_
+     _item_examples.case
+
+;
+Bruker 600 two
+;
+
+   stop_
 
 save_
 
@@ -47633,6 +47657,14 @@ The name of the site where the computing platform is located or hosted.
    _item.mandatory_code                         yes
    _item_type.code                             'line'
 
+   loop_
+     _item_examples.case
+
+;
+Univ. of Wisconsin
+;
+
+   stop_
 
 save_
 
@@ -76516,7 +76548,7 @@ Pointer to '_Experiment.ID'
      _item_examples.case
 
 ;
-5
+1H-15N heteronuclear NOE
 ;
 
    stop_
@@ -78061,14 +78093,6 @@ Pointer to '_Experiment.ID'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 
-   loop_
-     _item_examples.case
-
-;
-5
-;
-
-   stop_
 
 save_
 
@@ -137846,14 +137870,6 @@ Pointer to a save frame of the category 'software'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
 
-   loop_
-     _item_examples.case
-
-;
-Software label
-;
-
-   stop_
 
 save_
 
