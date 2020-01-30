@@ -79,8 +79,7 @@ Components are very tightly bound
 ;
     'Slow exchange'                
 ;
-Would expect to observe separate resonances for the bound and free components
-of the system.
+Would expect to observe separate resonances for the bound and free components of the system.
 ;
     'Intermediate exchange'        
 ;
@@ -89,13 +88,11 @@ May not observe signals from the component or signals may be quite broad.
     'Fast exchange'
 
 ;
-On the NMR time scale$ a single averaged signal will be observed for the
-components in the bound and free state.
+On the NMR time scale$ a single averaged signal will be observed for the components in the bound and free state.
 ;
     'No interaction'
 ;
-The components exist in the sample but do not interact (i.e.$ a molecule that
-is exchanging between a native and an unfolded conformation).
+The components exist in the sample but do not interact (i.e.$ a molecule that is exchanging between a native and an unfolded conformation).
 ;
      na
 ;
@@ -177,13 +174,11 @@ Thiols are not present in the system.
 ;
      'not available'    
 ;
-The oxidation state of the thiols could not be extracted from the literature
-or was not provided by the authors of the entry.
+The oxidation state of the thiols could not be extracted from the literature or was not provided by the authors of the entry.
 ;
      unknown     
 ;
-The author reported that the oxidation state of the thiols is
-unknown.
+The author reported that the oxidation state of the thiols is unknown.
 ;
      'not reported'                      .
      'free and disulfide bound'          .
@@ -223,8 +218,7 @@ Interresidue ambiguities (Lys 12 vs. Lys 27)
 ;
            6
 ;
-Chemical shift ambiguity is between atoms that are located on
-different entities within the molecular assembly
+Chemical shift ambiguity is between atoms that are located on different entities within the molecular assembly
 ;
            9                
 ;
@@ -968,18 +962,15 @@ save__Chem_shift_ref.Atom_group
      'methylene protons'                .
       nitrogen                        
 ;
-There is only one nitrogen nucleus or all nitrogen nuclei are magnetically 
-equivalent
+There is only one nitrogen nucleus or all nitrogen nuclei are magnetically equivalent
 ;
      phosphorus
 ;
-There is only one phosphorus nucleus or all phosphorus nuclei are magnetically 
-equivalent.
+There is only one phosphorus nucleus or all phosphorus nuclei are magnetically equivalent.
 ;
      protons                         
 ;
-There is only one proton nucleus or all proton nuclei are magnetically 
-equivalent
+There is only one proton nucleus or all proton nuclei are magnetically equivalent
 ;
 
 
@@ -2917,8 +2908,7 @@ A manuscript has been submitted for publication.
 ;
      'in press'
 ;
-A manuscript has been accepted for publication$ but has not yet appeared in
-press.
+A manuscript has been accepted for publication$ but has not yet appeared in press.
 ;
      published
 ;
@@ -2930,8 +2920,7 @@ A published article has been retracted by the authors or journal.
 ;
      na
 ;
-The status of the citation is not available. This value is for older entries where
-the status can not be determined but should not be allowed for current entries.
+The status of the citation is not available. This value is for older entries where the status can not be determined but should not be allowed for current entries.
 ;
 
     stop_
@@ -2949,13 +2938,11 @@ save__Citation.Type
  'book chapter'        .
   thesis
 ;
-A document written and published as a requirement for a degree or other
-scholarly endeavor (e.g.$ senior$ masters$ or doctoral thesis)
+A document written and published as a requirement for a degree or other scholarly endeavor (e.g.$ senior$ masters$ or doctoral thesis)
 ;
   abstract    
 ;
-A brief text describing the contents of a presentation$ oral$$ poster$ or
-other$ given at a conference or other formal gathering.          
+A brief text describing the contents of a presentation$ oral$$ poster$ or other$ given at a conference or other formal gathering.
 ;
  'personal communication'  
 ;
@@ -2963,8 +2950,7 @@ The BMRB entry is the only known published source for the data.
 ;
  internet    
 ;
-The data were only found published on the internet and no other publication is 
-available.
+The data were only found published on the internet and no other publication is available.
 ;
      'BMRB only'
 ;
@@ -3197,9 +3183,7 @@ save__Constraint_stat_list.NOE_dist_averaging_method
 
      r-6       
 ;
-R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all
-combinations of distance constraints between  atoms i in set 1 and atoms j in
-set 2.
+R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
 ;
      r-3       
 ;
@@ -3239,9 +3223,7 @@ save__Constraint_stat_list.ROE_dist_averaging_method
 
      r-6       
 ;
-R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all
-combinations of distance constraints between  atoms i in set 1 and atoms j in
-set 2.
+R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
 ;
      r-3       
 ;
@@ -3588,29 +3570,21 @@ save__Datum.Type
 
      'distance constraints'                  
 ;
-NOE distance constraints between two sets of atoms in which each set has at
-least one atom. Multiple atoms in one set should be represented by a standard
-single pseudoatom. If this is not possible then the constraint having such a set of 
-atoms should be considered an ambiguous NOE distance constraint for this 
-purpose.
-E.g. restaint between
+NOE distance constraints between two sets of atoms in which each set has at least one atom. Multiple atoms in one set should be represented by a standard single pseudoatom. If this is not possible then the constraint having such a set of atoms should be considered an ambiguous NOE distance constraint for this
+purpose. E.g. restaint between
 ( Chain A Residue number 1 Residue name LEU Atom name QD) and
 ( Chain A Residue number 1 Residue name LEU Atom name HA)
 ;
 
      'ambiguous distance constraints'
 ;
-Any NOE distance constraint that has at least one set of atoms that can not
-be represented by a standard single pseudoatom.
-E.g. restaint between
+Any NOE distance constraint that has at least one set of atoms that can not be represented by a standard single pseudoatom. E.g. restaint between
 ( Chain (A or B) Residue number 1 Residue name LEU Atom name HB2) and
 ( Chain A        Residue number 1 Residue name LEU Atom name HA)
 ;
      'hydrogen bond distance constraints'        
 ;
-Distance constraints to constraint a hydrogen bond.
-Often two distance constraints for one hydrogen bond in order to set the bond 
-length as well as the directionality of the bond.
+Distance constraints to constraint a hydrogen bond. Often two distance constraints for one hydrogen bond in order to set the bond length as well as the directionality of the bond.
 ;
      'torsion angle constraints'                 
 ;
@@ -3622,8 +3596,7 @@ Chemical shift of e.g. a proton or carbon nucleus implemented as a constraint.
 ;
      'symmetry constraints'                      
 ;
-Restraining (or constraining) symmetry between multiple copies of (part of) 
-similar structures.
+Restraining (or constraining) symmetry between multiple copies of (part of) similar structures.
 ;
    '19F chemical shifts'                .
    '6Li chemical shifts'                .
@@ -3992,8 +3965,7 @@ Obtained from the native organism that produces the biomolecule in nature.
 
      'chemical synthesis'
 ;
-Select this option if the molecule was generated primarily by chemical
-synthesis techniques.
+Select this option if the molecule was generated primarily by chemical synthesis techniques.
 ;
 
      'cell free synthesis'
@@ -4018,10 +3990,7 @@ Select this option if the molecule was obtained from a collaborator.
 
      'obtained from a vendor'
 ;
-Select this option if the molecule was obtained from a
-commercial vendor or academic unit that produces materials
-as a service.  DO NOT select this option if the material was provided
-by an academic or industrial research collaborator.
+Select this option if the molecule was obtained from a commercial vendor or academic unit that produces materials as a service.  DO NOT select this option if the material was provided by an academic or industrial research collaborator.
 ;
        na
 ;
@@ -4389,32 +4358,27 @@ save__Entity.Polymer_type
      cyclic-pseudo-peptide                      .
     'polypeptide(L)'             
 ;
-A polypeptide with a majority of amino acids
-in the L configuration
+A polypeptide with a majority of amino acid in the L configuration
 ;
     'polydeoxyribonucleotide'                    DNA
     'polyribonucleotide'                         RNA
     'polydeoxyribonucleotide/polyribonucleotide hybrid'      
 ;
-A nucleic acid containing a combination of DNA and
-RNA monomers
+A nucleic acid containing a combination of DNA and RNA monomers
 ;
 
     'polypeptide(D)'             
 ;
-A polypeptide with a majority of amino acids
-in the D configuration
+A polypeptide with a majority of amino acids in the D configuration
 ;
 
     'polysaccharide(D)'   
 ;
-A carbohydrate with the majority of the monomers
-having a D configuration
+A carbohydrate with the majority of the monomers having a D configuration
 ;
     'polysaccharide(L)'   
 ;
-A carbohydrate with the majority of the monomers
-having an L configuration
+A carbohydrate with the majority of the monomers having an L configuration
 ;
 
      other                                   .
@@ -4438,13 +4402,11 @@ Thiols are not present in the system.
 ;
      'not available'    
 ;
-The oxidation state of the thiols could not be extracted from the literature
-or was not provided by the authors of the entry.
+The oxidation state of the thiols could not be extracted from the literature or was not provided by the authors of the entry.
 ;
      unknown     
 ;
-The author reported that the oxidation state of the thiols is
-unknown.
+The author reported that the oxidation state of the thiols is unknown.
 ;
      'not reported'                      .
      'free and disulfide bound'          .
@@ -4466,21 +4428,15 @@ save__Entity.Type
     non-polymer         'Ligand$ metal ion$ or other non-polymeric molecule'
     water               
 ;
-Water is defined as a special case. Multiple water molecules may be components
-of the molecular assembly$ but are not assigned unique entity_assembly_ID values.
+Water is defined as a special case. Multiple water molecules may be components of the molecular assembly$ but are not assigned unique entity_assembly_ID values.
 ;
     aggregate           
 ;
-Used where a large number of molecules are reported as part of a molecular
-assembly$ but are not listed individually as components of the assembly and are not
-assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to
-represent the aggregate number of molecules of a specific compound.
+Used where a large number of molecules are reported as part of a molecular assembly$ but are not listed individually as components of the assembly and are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to represent the aggregate number of molecules of a specific compound.
 ;
     solvent
 ;
-Applies to compounds other than water that are part of molecular assembly$ but
-are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is
-used to represent all molecules of a specific compound.
+Applies to compounds other than water that are part of molecular assembly$ but are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to represent all molecules of a specific compound.
 ;
 
    stop_
@@ -4728,8 +4684,7 @@ save__Entry.Dep_release_code_sequence
    'Release now'         'Release sequence information in status reports immediately'
    'Hold for release'    
 ;
-Conceal sequence information in status reports until coordinate data are
-released
+Conceal sequence information in status reports until coordinate data are released
 ;
 
     stop_
@@ -4892,8 +4847,7 @@ Release the entry one year from the BMRB submission date.
 ;
      'At a specific future date'   
 ;
-Release the entry on the date specified but not later than one year from
-submission.
+Release the entry on the date specified but not later than one year from submission.
 ;
    stop_
 
@@ -4938,14 +4892,12 @@ save__Entry.Version_type
 
   original           
 ;
-The molecular system and reported data have not been deposited in the past by
-these authors.
+The molecular system and reported data have not been deposited in the past by these authors.
 ;
 
   update
 ;
-The existing data in the entry with this BMRB accession number has been
-updated.
+The existing data in the entry with this BMRB accession number has been updated.
 ;
 
   obsolete
@@ -4964,15 +4916,13 @@ save__Experiment_file.Content
 
       'NMR experiment directory'
 ;
-Contains variety of files for acquiring and processing the NMR experimental
-data
+Contains variety of files for acquiring and processing the NMR experimental data
 ;
       'Time-domain (raw spectral data)'         .
 
       'Pulse sequence image file'
 ;
-jpeg$ gif$ or other file type that is an image of the pulse sequence
-as shown as a figure in many publications
+jpeg$ gif$ or other file type that is an image of the pulse sequence as shown as a figure in many publications
 ;
 
       'Pulse sequence'                          .
@@ -5175,51 +5125,37 @@ save__Gen_dist_constraint_list.Potential_type
    log-harmonic
 
 ;
-
 Parameters: target_value, target_value_error
-
 ;
 
    parabolic
 
 ;
-
 Parameters: target_value, target_value_error
 Formula: E = k(r-target_value)**2
-
 ;
 
    square-well-parabolic
 
 ;
-
-Parameters: upper_limit, lower_limit 
-(optionally: target_value, target_value_error)
+Parameters: upper_limit, lower_limit (optionally: target_value, target_value_error)
 
 Formula:
 E = k(r-upper_limit)**\2 for r > upper_limit
 E = k(r-lower_limit)**2 for r < lower_limit
-
 ;
 
    square-well-parabolic-linear
 
 ;
-
 Parameters: upper_limit, lower_limit, upper_linear_limit, lower_linear_limit, (optional: target_value, target_value_error)
 
 Formula:
-
 If upper_limit = u, upper_linear_limit = u2, lower_limit = l, lower_linear_limit = l2:
-
 E = 2k(u2-u)(r - (u2+u)/2) for r > u2
-
 E = k(r-u)**2 for u < r < u2
-
 E = k(r-l)**2 for l > r > l2
-
 E = 2k(l2-l)(r - (l2+l)/2) for r < l2
-
 ;
 
    upper-bound-parabolic              
@@ -6020,15 +5956,13 @@ save__NMR_experiment_file.Type
 
       'NMR experiment directory'
 ;
-Contains variety of files for acquiring and processing the NMR experimental
-data
+Contains variety of files for acquiring and processing the NMR experimental data
 ;
       'Time-domain (raw spectral data)'         .
 
       'Pulse sequence image file'
 ;
-jpeg$ gif$ or other file type that is an image of the pulse sequence
-as shown as a figure in many publications
+jpeg$ gif$ or other file type that is an image of the pulse sequence as shown as a figure in many publications
 ;
 
       'Pulse sequence'                          .
@@ -6741,9 +6675,7 @@ save__Release.Type
     update        
 
 ;
-Additional releases of the entry that involve changes in the
-reported quantitative data$ dictionary changes$ or other revisions
-that represent non-trivial changes in the entry.
+Additional releases of the entry that involve changes in the reported quantitative data$ dictionary changes$ or other revisions that represent non-trivial changes in the entry.
 ;
 
      revision     'not used now as it is redundant with update aa all revisions are updates'
@@ -6787,11 +6719,7 @@ Derived from conformers that fit experimental data
 ;
       theoretical                             
 ;
-The coordinates represent a theoretical chemical system.   They may be derived
-from an experimental coordinate set$ but have been constructed for use in
-carrying out theoretical calculations or for other purposes that have specific
-requirements that necessitate the use of non-standard atoms or other
-conditions.
+The coordinates represent a theoretical chemical system. They may be derived from an experimental coordinate set$ but have been constructed for use in carrying out theoretical calculations or for other purposes that have specific requirements that necessitate the use of non-standard atoms or other conditions.
 ;
      stop_
 
@@ -6955,20 +6883,17 @@ save__Sample_condition_variable.Type
 
   pH                    
 ;
-Glass electrode pH meter reading for solution in water.
-No unit is required
+Glass electrode pH meter reading for solution in water. No unit is required.
 ;
 
   pH*                   
 ;
-Uncorrected pH meter reading for solution in D2O
-No unit is required
+Uncorrected pH meter reading for solution in D2O. No unit is required.
 ;
 
   pD                    
 ;
-Reading for a D2O solution measured with a glass electrode filled with D2O
-No unit is required
+Reading for a D2O solution measured with a glass electrode filled with D2O. No unit is required.
 ;
 
   temperature           
@@ -6983,11 +6908,7 @@ Preferred unit is bar (10^5 Pa)
 
   'ionic strength' 
 ;
-I = 1/2 of the summation of C(i) times Z(i)^2$ where the 
-summation is taken over all of the different ions (i) in a 
-solution$ multiplying the molarity C(i) by the square of 
-the charge Z(i). 
-Preferred unit is M (mol/l)
+I = 1/2 of the summation of C(i) times Z(i)^2$ where the summation is taken over all of the different ions (i) in a solution$ multiplying the molarity C(i) by the square of the charge Z(i). Preferred unit is M (mol/l)
 ;
 
   viscosity
@@ -7000,15 +6921,12 @@ kinematic viscosity is m^2/s or (m^2) x (s^-1)
 
   'dielectric constant' 
 ;
-Pure water at 298 K has a dielectric 
-constant of 78.54.
-No unit is required.
+Pure water at 298 K has a dielectric constant of 78.54. No unit is required.
 ;
 
   'temperature controller setting'
 ;
-For solid-state experiments$ this is the temperature setting on the
-NMR spectrometer control unit.
+For solid-state experiments$ this is the temperature setting on the NMR spectrometer control unit.
 ;
 
 #  'calibration agent'
