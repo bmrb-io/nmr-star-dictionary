@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-01-30
+#  version date -  2020-02-10
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.6.1
+    _dictionary.version         3.2.7.1
 
      loop_
        _dictionary_history.version
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.6.1'
+   _item_default.value            '3.2.7.1'
 
    loop_
      _item_enumeration.value
@@ -5250,7 +5250,7 @@ the value to this tag.
    _item.name                                  '_Entry.Experimental_method'
    _item.category_id                           'Entry'
    _item.mandatory_code                         yes
-   _pdbx_item_enumeration_details.closed_flag   no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
    _item_default.value            'NMR'
 
@@ -5285,7 +5285,7 @@ theoretical, etc.).
    _item.name                                  '_Entry.Experimental_method_subtype'
    _item.category_id                           'Entry'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   no
+   _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
    _item_default.value            'solution'
 
@@ -14102,17 +14102,11 @@ Unique identifier for each component in the entity assembly.
   '_Dipole_dipole_relax.Entity_assembly_ID_1'            'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Entity_assembly_ID_2'            'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                                  'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                                  'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                                  'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                                  'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                      'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                      'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                      'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                      'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_1'                                 'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_2'                                 'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_entity_assembly_ID_1'                                    'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_entity_assembly_ID_2'                                    'Cross_correlation_D_CSA'       yes
   '_Order_param.Entity_assembly_ID'                      'Order_param'                   yes
   '_PH_titr_result.Atm_obs_entity_assembly_ID'           'PH_titr_result'                yes
   '_PH_titr_result.Atm_titr_entity_assembly_ID'          'PH_titr_result'                yes
@@ -14232,17 +14226,11 @@ Unique identifier for each component in the entity assembly.
   '_Dipole_dipole_relax.Entity_assembly_ID_1'            '_Entity_assembly.ID'
   '_Dipole_dipole_relax.Entity_assembly_ID_2'            '_Entity_assembly.ID'
   '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                                  '_Entity_assembly.ID'
-  '_Cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                                  '_Entity_assembly.ID'
   '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                                  '_Entity_assembly.ID'
-  '_Cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                                  '_Entity_assembly.ID'
   '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_1'                      '_Entity_assembly.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_1_entity_assembly_ID_2'                      '_Entity_assembly.ID'
   '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_1'                      '_Entity_assembly.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_2_entity_assembly_ID_2'                      '_Entity_assembly.ID'
   '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_1'                                 '_Entity_assembly.ID'
-  '_Cross_correlation_D_CSA.Dipole_entity_assembly_ID_2'                                 '_Entity_assembly.ID'
   '_Cross_correlation_D_CSA.CSA_entity_assembly_ID_1'                                    '_Entity_assembly.ID'
-  '_Cross_correlation_D_CSA.CSA_entity_assembly_ID_2'                                    '_Entity_assembly.ID'
   '_Order_param.Entity_assembly_ID'                      '_Entity_assembly.ID'
   '_PH_titr_result.Atm_obs_entity_assembly_ID'           '_Entity_assembly.ID'
   '_PH_titr_result.Atm_titr_entity_assembly_ID'          '_Entity_assembly.ID'
@@ -18014,17 +18002,11 @@ assembly.
   '_Dipole_dipole_relax.Assembly_atom_ID_1'              'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Assembly_atom_ID_2'              'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                                    'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                                    'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                                    'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                                    'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                        'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                        'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                        'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                        'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_1'                                   'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_2'                                   'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_assembly_atom_ID_1'                                      'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_assembly_atom_ID_2'                                      'Cross_correlation_D_CSA'       yes
   '_Order_param.Assembly_atom_ID'                        'Order_param'                   yes
   '_PH_titr_result.Atm_obs_assembly_atom_ID'             'PH_titr_result'                yes
   '_PH_titr_result.Atm_titr_assembly_atom_ID'            'PH_titr_result'                yes
@@ -18123,17 +18105,11 @@ assembly.
   '_Dipole_dipole_relax.Assembly_atom_ID_1'              '_Atom.Assembly_atom_ID'
   '_Dipole_dipole_relax.Assembly_atom_ID_2'              '_Atom.Assembly_atom_ID'
   '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                                    '_Atom.Assembly_atom_ID'
-  '_Cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                                    '_Atom.Assembly_atom_ID'
   '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                                    '_Atom.Assembly_atom_ID'
-  '_Cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                                    '_Atom.Assembly_atom_ID'
   '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_1'                        '_Atom.Assembly_atom_ID'
-  '_Theoretical_cross_correlation_DD.Dipole_1_assembly_atom_ID_2'                        '_Atom.Assembly_atom_ID'
   '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_1'                        '_Atom.Assembly_atom_ID'
-  '_Theoretical_cross_correlation_DD.Dipole_2_assembly_atom_ID_2'                        '_Atom.Assembly_atom_ID'
   '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_1'                                   '_Atom.Assembly_atom_ID'
-  '_Cross_correlation_D_CSA.Dipole_assembly_atom_ID_2'                                   '_Atom.Assembly_atom_ID'
   '_Cross_correlation_D_CSA.CSA_assembly_atom_ID_1'                                      '_Atom.Assembly_atom_ID'
-  '_Cross_correlation_D_CSA.CSA_assembly_atom_ID_2'                                      '_Atom.Assembly_atom_ID'
   '_Order_param.Assembly_atom_ID'                        '_Atom.Assembly_atom_ID'
   '_PH_titr_result.Atm_obs_assembly_atom_ID'             '_Atom.Assembly_atom_ID'
   '_PH_titr_result.Atm_titr_assembly_atom_ID'            '_Atom.Assembly_atom_ID'
@@ -22097,17 +22073,11 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Dipole_dipole_relax.Entity_ID_1'                     'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Entity_ID_2'                     'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_entity_ID_1'           'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_entity_ID_2'           'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_entity_ID_1'           'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_entity_ID_2'           'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_1'                               'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_2'                               'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_1'                               'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_2'                               'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_entity_ID_1'          'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_entity_ID_2'          'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_entity_ID_1'             'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_entity_ID_2'             'Cross_correlation_D_CSA'       yes
   '_Order_param.Entity_ID'                               'Order_param'                   yes
   '_PH_titr_result.Atm_obs_entity_ID'                    'PH_titr_result'                yes
   '_PH_titr_result.Atm_titr_entity_ID'                   'PH_titr_result'                yes
@@ -22250,17 +22220,11 @@ An integer value that is the unique identifier for the entity within the entry.
   '_Dipole_dipole_relax.Entity_ID_1'                     '_Entity.ID'
   '_Dipole_dipole_relax.Entity_ID_2'                     '_Entity.ID'
   '_Cross_correlation_DD.Dipole_1_entity_ID_1'           '_Entity.ID'
-  '_Cross_correlation_DD.Dipole_1_entity_ID_2'           '_Entity.ID'
   '_Cross_correlation_DD.Dipole_2_entity_ID_1'           '_Entity.ID'
-  '_Cross_correlation_DD.Dipole_2_entity_ID_2'           '_Entity.ID'
   '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_1'                               '_Entity.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_1_entity_ID_2'                               '_Entity.ID'
   '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_1'                               '_Entity.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_2_entity_ID_2'                               '_Entity.ID'
   '_Cross_correlation_D_CSA.Dipole_entity_ID_1'          '_Entity.ID'
-  '_Cross_correlation_D_CSA.Dipole_entity_ID_2'          '_Entity.ID'
   '_Cross_correlation_D_CSA.CSA_entity_ID_1'             '_Entity.ID'
-  '_Cross_correlation_D_CSA.CSA_entity_ID_2'             '_Entity.ID'
   '_Order_param.Entity_ID'                               '_Entity.ID'
   '_PH_titr_result.Atm_obs_entity_ID'                    '_Entity.ID'
   '_PH_titr_result.Atm_titr_entity_ID'                   '_Entity.ID'
@@ -24124,17 +24088,11 @@ Unique ID for the compound in the entity
   '_Dipole_dipole_relax.Comp_index_ID_1'                 'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Comp_index_ID_2'                 'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_1'                                       'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_comp_index_ID_2'                                       'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_comp_index_ID_1'                                       'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                                  'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_1'                           'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_2'                           'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_comp_index_ID_1'                           'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                      'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_comp_index_ID_1'                                      'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_comp_index_ID_2'                                      'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_comp_index_ID_1'         'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_comp_index_ID_2'         'Cross_correlation_D_CSA'       yes
   '_Order_param.Comp_index_ID'                           'Order_param'                   yes
   '_PH_titr_result.Atm_obs_comp_index_ID'                'PH_titr_result'                yes
   '_PH_titr_result.Atm_titr_comp_index_ID'               'PH_titr_result'                yes
@@ -24266,17 +24224,11 @@ Unique ID for the compound in the entity
   '_Dipole_dipole_relax.Comp_index_ID_1'                 '_Entity_comp_index.ID'
   '_Dipole_dipole_relax.Comp_index_ID_2'                 '_Entity_comp_index.ID'
   '_Cross_correlation_DD.Dipole_1_comp_index_ID_1'                                       '_Entity_comp_index.ID'
-  '_Cross_correlation_DD.Dipole_1_comp_index_ID_2'                                       '_Entity_comp_index.ID'
   '_Cross_correlation_DD.Dipole_2_comp_index_ID_1'                                       '_Entity_comp_index.ID'
-  '_Cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                                  '_Entity_comp_index.ID'
   '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_1'                           '_Entity_comp_index.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_1_comp_index_ID_2'                           '_Entity_comp_index.ID'
   '_Theoretical_cross_correlation_DD.Dipole_2_comp_index_ID_1'                           '_Entity_comp_index.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_2_chem_comp_index_ID_2'                      '_Entity_comp_index.ID'
   '_Cross_correlation_D_CSA.Dipole_comp_index_ID_1'                                      '_Entity_comp_index.ID'
-  '_Cross_correlation_D_CSA.Dipole_comp_index_ID_2'                                      '_Entity_comp_index.ID'
   '_Cross_correlation_D_CSA.CSA_comp_index_ID_1'         '_Entity_comp_index.ID'
-  '_Cross_correlation_D_CSA.CSA_comp_index_ID_2'         '_Entity_comp_index.ID'
   '_Order_param.Comp_index_ID'                           '_Entity_comp_index.ID'
   '_PH_titr_result.Atm_obs_comp_index_ID'                '_Entity_comp_index.ID'
   '_PH_titr_result.Atm_titr_comp_index_ID'               '_Entity_comp_index.ID'
@@ -24578,17 +24530,11 @@ that the sequence numbers must progress in increasing numerical order.
   '_Dipole_dipole_relax.Seq_ID_1'                        'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Seq_ID_2'                        'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_seq_ID_1'              'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_seq_ID_2'              'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_seq_ID_1'              'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_seq_ID_2'              'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_1'                                  'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_2'                                  'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_1'                                  'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_2'                                  'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_seq_ID_1'             'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_seq_ID_2'             'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_seq_ID_1'                'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_seq_ID_2'                'Cross_correlation_D_CSA'       yes
   '_Order_param.Seq_ID'                                  'Order_param'                   yes
   '_PH_titr_result.Atm_obs_seq_ID'                       'PH_titr_result'                yes
   '_PH_titr_result.Atm_titr_seq_ID'                      'PH_titr_result'                yes
@@ -24704,17 +24650,11 @@ that the sequence numbers must progress in increasing numerical order.
   '_Dipole_dipole_relax.Seq_ID_1'                        '_Entity_poly_seq.Num'
   '_Dipole_dipole_relax.Seq_ID_2'                        '_Entity_poly_seq.Num'
   '_Cross_correlation_DD.Dipole_1_seq_ID_1'              '_Entity_poly_seq.Num'
-  '_Cross_correlation_DD.Dipole_1_seq_ID_2'              '_Entity_poly_seq.Num'
   '_Cross_correlation_DD.Dipole_2_seq_ID_1'              '_Entity_poly_seq.Num'
-  '_Cross_correlation_DD.Dipole_2_seq_ID_2'              '_Entity_poly_seq.Num'
   '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_1'                                  '_Entity_poly_seq.Num'
-  '_Theoretical_cross_correlation_DD.Dipole_1_seq_ID_2'                                  '_Entity_poly_seq.Num'
   '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_1'                                  '_Entity_poly_seq.Num'
-  '_Theoretical_cross_correlation_DD.Dipole_2_seq_ID_2'                                  '_Entity_poly_seq.Num'
   '_Cross_correlation_D_CSA.Dipole_seq_ID_1'             '_Entity_poly_seq.Num'
-  '_Cross_correlation_D_CSA.Dipole_seq_ID_2'             '_Entity_poly_seq.Num'
   '_Cross_correlation_D_CSA.CSA_seq_ID_1'                '_Entity_poly_seq.Num'
-  '_Cross_correlation_D_CSA.CSA_seq_ID_2'                '_Entity_poly_seq.Num'
   '_Order_param.Seq_ID'                                  '_Entity_poly_seq.Num'
   '_PH_titr_result.Atm_obs_seq_ID'                       '_Entity_poly_seq.Num'
   '_PH_titr_result.Atm_titr_seq_ID'                      '_Entity_poly_seq.Num'
@@ -28501,17 +28441,11 @@ components in the entry.
   '_Dipole_dipole_relax.Comp_ID_1'                       'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Comp_ID_2'                       'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_comp_ID_1'             'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_comp_ID_2'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_comp_ID_1'             'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_comp_ID_2'             'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_comp_ID_1'            'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_comp_ID_2'            'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_comp_ID_1'               'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_comp_ID_2'               'Cross_correlation_D_CSA'       yes
   '_Order_param.Comp_ID'                                 'Order_param'                   yes
   '_PH_titr_result.Atm_obs_comp_ID'                      'PH_titr_result'                yes
   '_PH_titr_result.Atm_titr_comp_ID'                     'PH_titr_result'                yes
@@ -28653,17 +28587,11 @@ components in the entry.
   '_Dipole_dipole_relax.Comp_ID_1'                       '_Chem_comp.ID'
   '_Dipole_dipole_relax.Comp_ID_2'                       '_Chem_comp.ID'
   '_Cross_correlation_DD.Dipole_1_comp_ID_1'             '_Chem_comp.ID'
-  '_Cross_correlation_DD.Dipole_1_comp_ID_2'             '_Chem_comp.ID'
   '_Cross_correlation_DD.Dipole_2_comp_ID_1'             '_Chem_comp.ID'
-  '_Cross_correlation_DD.Dipole_2_comp_ID_2'             '_Chem_comp.ID'
   '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_1'                                 '_Chem_comp.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_1_comp_ID_2'                                 '_Chem_comp.ID'
   '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_1'                                 '_Chem_comp.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_2_comp_ID_2'                                 '_Chem_comp.ID'
   '_Cross_correlation_D_CSA.Dipole_comp_ID_1'            '_Chem_comp.ID'
-  '_Cross_correlation_D_CSA.Dipole_comp_ID_2'            '_Chem_comp.ID'
   '_Cross_correlation_D_CSA.CSA_comp_ID_1'               '_Chem_comp.ID'
-  '_Cross_correlation_D_CSA.CSA_comp_ID_2'               '_Chem_comp.ID'
   '_Order_param.Comp_ID'                                 '_Chem_comp.ID'
   '_PH_titr_result.Atm_obs_comp_ID'                      '_Chem_comp.ID'
   '_PH_titr_result.Atm_titr_comp_ID'                     '_Chem_comp.ID'
@@ -31514,17 +31442,11 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Dipole_dipole_relax.Atom_ID_1'                       'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Atom_ID_2'                       'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_atom_ID_1'             'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_atom_ID_2'             'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_atom_ID_1'             'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_atom_ID_2'             'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_1'                                 'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_2'                                 'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_atom_ID_1'            'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_atom_ID_2'            'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_atom_ID_1'               'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_atom_ID_2'               'Cross_correlation_D_CSA'       yes
   '_Order_param.Atom_ID'                                 'Order_param'                   yes
   '_PH_titr_result.Atm_obs_atom_ID'                      'PH_titr_result'                yes
   '_PH_titr_result.Atm_titr_atom_ID'                     'PH_titr_result'                yes
@@ -31644,17 +31566,11 @@ each monomer in the CHEM_COMP_ATOM list.
   '_Dipole_dipole_relax.Atom_ID_1'                       '_Chem_comp_atom.Atom_ID'
   '_Dipole_dipole_relax.Atom_ID_2'                       '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_DD.Dipole_1_atom_ID_1'             '_Chem_comp_atom.Atom_ID'
-  '_Cross_correlation_DD.Dipole_1_atom_ID_2'             '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_DD.Dipole_2_atom_ID_1'             '_Chem_comp_atom.Atom_ID'
-  '_Cross_correlation_DD.Dipole_2_atom_ID_2'             '_Chem_comp_atom.Atom_ID'
   '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_1'                                 '_Chem_comp_atom.Atom_ID'
-  '_Theoretical_cross_correlation_DD.Dipole_1_atom_ID_2'                                 '_Chem_comp_atom.Atom_ID'
   '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_1'                                 '_Chem_comp_atom.Atom_ID'
-  '_Theoretical_cross_correlation_DD.Dipole_2_atom_ID_2'                                 '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_D_CSA.Dipole_atom_ID_1'            '_Chem_comp_atom.Atom_ID'
-  '_Cross_correlation_D_CSA.Dipole_atom_ID_2'            '_Chem_comp_atom.Atom_ID'
   '_Cross_correlation_D_CSA.CSA_atom_ID_1'               '_Chem_comp_atom.Atom_ID'
-  '_Cross_correlation_D_CSA.CSA_atom_ID_2'               '_Chem_comp_atom.Atom_ID'
   '_Order_param.Atom_ID'                                 '_Chem_comp_atom.Atom_ID'
   '_PH_titr_result.Atm_obs_atom_ID'                      '_Chem_comp_atom.Atom_ID'
   '_PH_titr_result.Atm_titr_atom_ID'                     '_Chem_comp_atom.Atom_ID'
@@ -63061,17 +62977,11 @@ Unique identifier for the specified resonance.
   '_Dipole_dipole_relax.Resonance_ID_1'                  'Dipole_dipole_relax'           yes
   '_Dipole_dipole_relax.Resonance_ID_2'                  'Dipole_dipole_relax'           yes
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_1'                                        'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_1_Resonance_ID_2'                                        'Cross_correlation_DD'          yes
   '_Cross_correlation_DD.Dipole_2_Resonance_ID_1'                                        'Cross_correlation_DD'          yes
-  '_Cross_correlation_DD.Dipole_2_Resonance_ID_2'                                        'Cross_correlation_DD'          yes
   '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_1'                            'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_2'                            'Theoretical_cross_correlation_DD'                  yes
   '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_1'                            'Theoretical_cross_correlation_DD'                  yes
-  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_2'                            'Theoretical_cross_correlation_DD'                  yes
   '_Cross_correlation_D_CSA.Dipole_resonance_ID_1'                                       'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.Dipole_resonance_ID_2'                                       'Cross_correlation_D_CSA'       yes
   '_Cross_correlation_D_CSA.CSA_resonance_ID_1'          'Cross_correlation_D_CSA'       yes
-  '_Cross_correlation_D_CSA.CSA_resonance_ID_2'          'Cross_correlation_D_CSA'       yes
   '_Order_param.Resonance_ID'                            'Order_param'                   yes
   '_D_H_fractionation_factor.Resonance_ID'               'D_H_fractionation_factor'      yes
   '_Binding_result.Resonance_ID'                         'Binding_result'                yes
@@ -63141,17 +63051,11 @@ Unique identifier for the specified resonance.
   '_Dipole_dipole_relax.Resonance_ID_1'                  '_Resonance.ID'
   '_Dipole_dipole_relax.Resonance_ID_2'                  '_Resonance.ID'
   '_Cross_correlation_DD.Dipole_1_Resonance_ID_1'                                        '_Resonance.ID'
-  '_Cross_correlation_DD.Dipole_1_Resonance_ID_2'                                        '_Resonance.ID'
   '_Cross_correlation_DD.Dipole_2_Resonance_ID_1'                                        '_Resonance.ID'
-  '_Cross_correlation_DD.Dipole_2_Resonance_ID_2'                                        '_Resonance.ID'
   '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_1'                            '_Resonance.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_1_Resonance_ID_2'                            '_Resonance.ID'
   '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_1'                            '_Resonance.ID'
-  '_Theoretical_cross_correlation_DD.Dipole_2_Resonance_ID_2'                            '_Resonance.ID'
   '_Cross_correlation_D_CSA.Dipole_resonance_ID_1'                                       '_Resonance.ID'
-  '_Cross_correlation_D_CSA.Dipole_resonance_ID_2'                                       '_Resonance.ID'
   '_Cross_correlation_D_CSA.CSA_resonance_ID_1'          '_Resonance.ID'
-  '_Cross_correlation_D_CSA.CSA_resonance_ID_2'          '_Resonance.ID'
   '_Order_param.Resonance_ID'                            '_Resonance.ID'
   '_D_H_fractionation_factor.Resonance_ID'               '_Resonance.ID'
   '_Binding_result.Resonance_ID'                         '_Resonance.ID'
@@ -89562,14 +89466,6 @@ to the value fo
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
-   loop_
-     _item_examples.case
-
-;
--3
-;
-
-   stop_
 
 save_
 
@@ -89586,14 +89482,6 @@ in order to match that used in the publication that describes the experimental d
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
-   loop_
-     _item_examples.case
-
-;
-DPN
-;
-
-   stop_
 
 save_
 
@@ -89610,14 +89498,6 @@ in order to match that used in the publication that describes the experimental d
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
-   loop_
-     _item_examples.case
-
-;
-HB1
-;
-
-   stop_
 
 save_
 
