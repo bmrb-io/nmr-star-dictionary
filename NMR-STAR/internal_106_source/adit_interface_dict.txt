@@ -5867,7 +5867,7 @@ save__Contact_person.Role
 
    _Interface.Description
 ;
-Select the role that best describes this person's function in the project.
+Select the role that best describes this person's function in the project. At least one contact person must be a 'Principle Investigator'.
 ;
 
    _Interface.Adit_item_view_name
@@ -37071,33 +37071,6 @@ Software ID
 
 save_
 
-save__Task.Software_module
-
-   _Interface.Tag                  '_Task.Software_module'
-
-   _Interface.Category              'Task'
-
-   _Interface.Description
-;
-The name for a module of the software tool used to carry out the task.
-;
-
-   _Interface.Adit_item_view_name
-;
-Software module name
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Task.Task
 
    _Interface.Tag                  '_Task.Task'
@@ -37119,6 +37092,33 @@ Task
 
 ;
 chemical shift assignments
+;
+
+   stop_
+
+save_
+
+save__Task.Software_module
+
+   _Interface.Tag                  '_Task.Software_module'
+
+   _Interface.Category              'Task'
+
+   _Interface.Description
+;
+The name for a module of the software tool used to carry out the task.
+;
+
+   _Interface.Adit_item_view_name
+;
+Software module name
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
 ;
 
    stop_
@@ -43653,6 +43653,60 @@ Time-domain data provided
 
 ;
 yes
+;
+
+   stop_
+
+save_
+
+save__Experiment.NUS_flag
+
+   _Interface.Tag                  '_Experiment.NUS_flag'
+
+   _Interface.Category              'Experiment'
+
+   _Interface.Description
+;
+Enter 'yes' if non-uniform spectral sampling was used to collect the data in the experiment.
+;
+
+   _Interface.Adit_item_view_name
+;
+Was NUS used
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+yes
+;
+
+   stop_
+
+save_
+
+save__Experiment.Interleaved_flag
+
+   _Interface.Tag                  '_Experiment.Interleaved_flag'
+
+   _Interface.Category              'Experiment'
+
+   _Interface.Description
+;
+Enter 'yes' if spectral interleaving was used to collect the data in the experiment.
+;
+
+   _Interface.Adit_item_view_name
+;
+Was spectral interleaving used
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+no
 ;
 
    stop_
