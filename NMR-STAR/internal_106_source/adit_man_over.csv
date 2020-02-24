@@ -302,8 +302,16 @@ TBL_BEGIN,,,,,,,?
 90362,chem_comp,Chem_comp,_Chem_comp.Aromatic,Y,Assembly,_Assembly.Metal_ions,[1-9]+
 90362,chem_comp,Chem_comp,_Chem_comp.Formula,Y,Assembly,_Assembly.Organic_ligands,[1-9]+
 90362,chem_comp,Chem_comp,_Chem_comp.Formula,Y,Assembly,_Assembly.Metal_ions,[1-9]+
-90363,conformer_statistics,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
-90374,representative_conformer,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
+90363,chem_comp,Chem_comp,_Chem_comp.Image_file_name,Y,Upload_data,_Upload_data.Data_file_content_type,Image file.*
+90363,chem_comp,Chem_comp,_Chem_comp.Image_file_format,Y,Upload_data,_Upload_data.Data_file_content_type,Image file.*
+90364,chem_comp,Chem_comp,*,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
+90364,chem_comp,Chem_comp,_Chem_comp.PDB_code,N,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
+90364,chem_comp,Chem_comp,_Chem_comp.Name,Y,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
+90364,chem_comp,Chem_comp,_Chem_comp.Paramagnetic,Y,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
+90364,chem_comp,Chem_comp,_Chem_comp.Aromatic,Y,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
+90364,chem_comp,Chem_comp,_Chem_comp.Details,N,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
+90365,conformer_statistics,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
+90370,representative_conformer,*,*,H,Entry_interview,_Entry_interview.PDB_deposition,yes
 90380,conformer_family_coord_set,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
 90390,constraint_statistics,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
 90392,chem_shift_reference,*,*,N,Entry_interview,_Entry_interview.PDB_deposition,yes
@@ -798,20 +806,6 @@ TBL_BEGIN,,,,,,,?
 95790,constraint_statistics,Constraint_stat_list_rep,_Constraint_stat_list_rep.Dipolar_1H_15N_rmsd_err,H,Constraint_stat_list_rep,_Constraint_stat_list_rep.Constraint_stats_not_available,yes
 95800,constraint_statistics,Constraint_stat_list_rep,_Constraint_stat_list_rep.Dipolar_13C_13C_rmsd,H,Constraint_stat_list_rep,_Constraint_stat_list_rep.Constraint_stats_not_available,yes
 95810,constraint_statistics,Constraint_stat_list_rep,_Constraint_stat_list_rep.Dipolar_13C_13C_rmsd_err,H,Constraint_stat_list_rep,_Constraint_stat_list_rep.Constraint_stats_not_available,yes
-95820,chem_comp,Chem_comp_common_name,*,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95830,chem_comp,Chem_comp_systematic_name,*,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95840,chem_comp,Chem_comp_SMILES,*,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95850,chem_comp,Chem_comp,_Chem_comp.InChI_code,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95860,chem_comp,Chem_comp,_Chem_comp.Type,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95880,chem_comp,Chem_comp,_Chem_comp.Std_deriv_one_letter_code,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95890,chem_comp,Chem_comp,_Chem_comp.Std_deriv_three_letter_code,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95900,chem_comp,Chem_comp,_Chem_comp.Std_deriv_BMRB_code,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95910,chem_comp,Chem_comp,_Chem_comp.Std_deriv_PDB_code,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95920,chem_comp,Chem_comp,_Chem_comp.Std_deriv_chem_comp_name,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95930,chem_comp,Chem_comp,_Chem_comp.Formal_charge,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95940,chem_comp,Chem_comp,_Chem_comp.Formula,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95950,chem_comp,Chem_comp,_Chem_comp.Formula_weight,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
-95960,chem_comp,Chem_comp,_Chem_comp.Topo_file_name,H,Chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]
 96010,entity,Entity,_Entity.Ambiguous_conformational_states,N,Entry_interview,_Entry_interview.PDB_deposition,yes
 96020,entity,Entity,_Entity.Ambiguous_chem_comp_sites,N,Entry_interview,_Entry_interview.PDB_deposition,yes
 96030,entity,Entity,_Entity.Nstd_monomer,N,Entry_interview,_Entry_interview.PDB_deposition,yes
@@ -936,8 +930,6 @@ TBL_BEGIN,,,,,,,?
 97220,deposited_data_files,Deposited_data_files,_Deposited_data_files.Atomic_coordinate_file_name,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
 97230,deposited_data_files,Deposited_data_files,_Deposited_data_files.Atomic_coordinate_file_syntax,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
 97235,deposited_data_files,Deposited_data_files,_Deposited_data_files.Constraint_file_name,Y,Entry_interview,_Entry_interview.PDB_deposition,yes
-97240,chem_comp,Chem_comp,_Chem_comp.Image_file_name,Y,Upload_data,_Upload_data.Data_file_Sf_category,Image
-97250,chem_comp,Chem_comp,_Chem_comp.Image_file_format,Y,Upload_data,_Upload_data.Data_file_Sf_category,Image
 97252,assigned_chemical_shifts,*,*,H,Entry_interview,_Entry_interview.Assigned_chem_shifts,no
 97253,spectral_peak_list,*,*,H,Entry_interview,_Entry_interview.Spectral_peak_lists,no
 97254,coupling_constants,*,*,H,Entry_interview,_Entry_interview.Coupling_constants,no
