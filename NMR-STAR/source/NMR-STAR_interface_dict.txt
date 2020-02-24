@@ -10970,12 +10970,12 @@ save__Entity_assembly.Entity_label
 
    _Interface.Description
 ;
-The value entered should match a value entered previously for one of the molecular entities. For a homodimer a chemical description of the monomer is given only once as a molecular entity and is pointed to by this value twice, once by each monomer listed in the molecular assembly.
+The value entered should match a value entered previously for one of the molecular entities or ligands. For a homodimer a chemical description of the monomer is given only once as a molecular entity and is pointed to by this value twice, once by each monomer listed in the molecular assembly.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Molecular entity name to assign to this assembly component
+Molecular entity or ligand name to assign to this assembly component
 ;
 
    loop_
@@ -75735,6 +75735,33 @@ Chemical shift perturbation data set name
 
 save_
 
+save__Chem_shift_perturbation_list.Data_file_name
+
+   _Interface.Tag                  '_Chem_shift_perturbation_list.Data_file_name'
+
+   _Interface.Category              'Chem_shift_perturbation_list'
+
+   _Interface.Description
+;
+The name of the file submitted with this depostion that contains the chemical shift perturbation data.
+;
+
+   _Interface.Adit_item_view_name
+;
+Deposited data file name
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Chem_shift_perturbation_list.Type
 
    _Interface.Tag                  '_Chem_shift_perturbation_list.Type'
@@ -75762,20 +75789,47 @@ Type
 
 save_
 
-save__Chem_shift_perturbation_list.Data_file_name
+save__Chem_shift_perturbation_list.Entity_assembly_ID
 
-   _Interface.Tag                  '_Chem_shift_perturbation_list.Data_file_name'
+   _Interface.Tag                  '_Chem_shift_perturbation_list.Entity_assembly_ID'
 
    _Interface.Category              'Chem_shift_perturbation_list'
 
    _Interface.Description
 ;
-The name of the file submitted with this depostion that contains the chemical shift perturbation data.
+?
 ;
 
    _Interface.Adit_item_view_name
 ;
-Deposited data file name
+Entity assembly ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_shift_perturbation_list.Titrated_entity_assembly_name
+
+   _Interface.Tag                  '_Chem_shift_perturbation_list.Titrated_entity_assembly_name'
+
+   _Interface.Category              'Chem_shift_perturbation_list'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Titrated entity assembly name
 ;
 
    loop_
@@ -76640,6 +76694,60 @@ save__Chem_shift_perturbation.Atom_isotope_number
    _Interface.Adit_item_view_name
 ;
 Atom isotope number
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_shift_perturbation.Titration_value
+
+   _Interface.Tag                  '_Chem_shift_perturbation.Titration_value'
+
+   _Interface.Category              'Chem_shift_perturbation'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Titration value
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Chem_shift_perturbation.Titration_value_err
+
+   _Interface.Tag                  '_Chem_shift_perturbation.Titration_value_err'
+
+   _Interface.Category              'Chem_shift_perturbation'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Titration value err
 ;
 
    loop_

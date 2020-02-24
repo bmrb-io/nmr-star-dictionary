@@ -945,6 +945,7 @@ save__Chem_shift_perturbation_list.Type
     'ligand binding'                    .
     'ligand fragment binding'           .
     'paramagnetic ligand binding'       .
+    'temperature titration'             .
 
     stop_
 
@@ -2999,6 +3000,20 @@ Windows New Technology operating system
 
 save_
 
+save__Computing_platform.Name
+
+  loop_
+     _Item_enumeration.Value
+     _Item_enumeration.Description
+ 
+   'CHTC'                    'Condor High Through-put Computing'
+   'NMRbox'                   .
+   'Open Science Grid'        .
+
+  stop_
+
+save_
+
 save__Conformer_family_coord_set_expt.Sample_state
 
   loop_
@@ -4830,23 +4845,14 @@ save__Entry.Release_request
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-     'Immediately'                 
-;
-Release the entry as soon as processing is complete.
-;
-     'On publication'              
-;
-Release the entry at the time the related manuscript is published.
-;
-     'In one year'                 
-;
-Release the entry one year from the BMRB submission date.
-;
-     'At a specific future date'   
-;
-Release the entry on the date specified but not later than one year from submission.
-;
-   stop_
+   'Release now'            'Release immediately'
+   'Hold for publication'   'Hold until primary citation is published'
+   'Hold for 4 weeks'       'Hold for 4 weeks'
+   'Hold for 8 weeks'       'Hold for 8 weeks'
+   'Hold for 6 months'      'Hold for 6 months'
+   'Hold for 1 year'        'Hold for 1 year'
+
+  stop_
 
 save_
 
@@ -4929,6 +4935,7 @@ jpeg$ gif$ or other file type that is an image of the pulse sequence as shown as
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
    'Acquisition parameters'    .
    'Processing parameters'     .
+   'NUS schedule'             'non-uniform sampling schedule'
     na                         .
 
     stop_

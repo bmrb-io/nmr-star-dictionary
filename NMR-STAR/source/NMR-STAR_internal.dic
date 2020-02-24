@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-02-20
+#  version date -  2020-02-24
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.8.0
+    _dictionary.version         3.2.9.0
 
      loop_
        _dictionary_history.version
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.8.0'
+   _item_default.value            '3.2.9.0'
 
    loop_
      _item_enumeration.value
@@ -5915,10 +5915,12 @@ The condition choosen by the author for the release of the entry.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Immediately    ?
-   'On publication'    ?
-   'In one year'    ?
-   'At a specific future date'    ?
+   'Release now'    'Release immediately'
+   'Hold for publication'    'Hold until primary citation is published'
+   'Hold for 4 weeks'    'Hold for 4 weeks'
+   'Hold for 8 weeks'    'Hold for 8 weeks'
+   'Hold for 6 months'    'Hold for 6 months'
+   'Hold for 1 year'    'Hold for 1 year'
 
    stop_
 
@@ -14075,6 +14077,7 @@ Unique identifier for each component in the entity assembly.
   '_Spin_system.Entity_assembly_ID'                      'Spin_system'                   yes
   '_Isotope_effect.Entity_assembly_ID'                   'Isotope_effect'                yes
   '_Isotope_label_pattern.Entity_assembly_ID'            'Isotope_label_pattern'         yes
+  '_Chem_shift_perturbation_list.Entity_assembly_ID'                                     'Chem_shift_perturbation_list'                      yes
   '_Chem_shift_perturbation.Entity_assembly_ID'          'Chem_shift_perturbation'       yes
   '_CS_anisotropy.Entity_assembly_ID'                    'CS_anisotropy'                 yes
   '_RDC.Entity_assembly_ID_1'                            'RDC'                           yes
@@ -14199,6 +14202,7 @@ Unique identifier for each component in the entity assembly.
   '_Spin_system.Entity_assembly_ID'                      '_Entity_assembly.ID'
   '_Isotope_effect.Entity_assembly_ID'                   '_Entity_assembly.ID'
   '_Isotope_label_pattern.Entity_assembly_ID'            '_Entity_assembly.ID'
+  '_Chem_shift_perturbation_list.Entity_assembly_ID'                                     '_Entity_assembly.ID'
   '_Chem_shift_perturbation.Entity_assembly_ID'          '_Entity_assembly.ID'
   '_CS_anisotropy.Entity_assembly_ID'                    '_Entity_assembly.ID'
   '_RDC.Entity_assembly_ID_1'                            '_Entity_assembly.ID'
@@ -43750,6 +43754,7 @@ The kind of data contained in the file.
    'Spectral image'    ?
    'Acquisition parameters'    ?
    'Processing parameters'    ?
+   'NUS schedule'    'non-uniform sampling schedule'
    na    ?
 
    stop_
@@ -47593,7 +47598,18 @@ The name of the computing platform.
    _item.name                                  '_Computing_platform.Name'
    _item.category_id                           'Computing_platform'
    _item.mandatory_code                         yes
+   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   CHTC    'Condor High Through-put Computing'
+   NMRbox    ?
+   'Open Science Grid'    ?
+
+   stop_
 
    loop_
      _item_examples.case
@@ -65473,6 +65489,22 @@ A name assigned to the save frame.
 
 save_
 
+save__Chem_shift_perturbation_list.Data_file_name
+
+   _item_description.description
+;
+The name of the file submitted with this depostion that contains the quantitative 
+data for this save frame.
+;
+
+   _item.name                                  '_Chem_shift_perturbation_list.Data_file_name'
+   _item.category_id                           'Chem_shift_perturbation_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+
+save_
+
 save__Chem_shift_perturbation_list.Type
 
    _item_description.description
@@ -65494,21 +65526,37 @@ The type of chemical shift perturbation reported.
    'ligand binding'    ?
    'ligand fragment binding'    ?
    'paramagnetic ligand binding'    ?
+   'temperature titration'    ?
 
    stop_
 
 
 save_
 
-save__Chem_shift_perturbation_list.Data_file_name
+save__Chem_shift_perturbation_list.Entity_assembly_ID
 
    _item_description.description
 ;
-The name of the file submitted with this depostion that contains the quantitative 
-data for this save frame.
+Pointer to '_Entity_assembly.ID'
 ;
 
-   _item.name                                  '_Chem_shift_perturbation_list.Data_file_name'
+   _item.name                                  '_Chem_shift_perturbation_list.Entity_assembly_ID'
+   _item.category_id                           'Chem_shift_perturbation_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Chem_shift_perturbation_list.Titrated_entity_assembly_name
+
+   _item_description.description
+;
+The name of the assembly component that was titrated to generate the chemical 
+shift perturbation.
+;
+
+   _item.name                                  '_Chem_shift_perturbation_list.Titrated_entity_assembly_name'
    _item.category_id                           'Chem_shift_perturbation_list'
    _item.mandatory_code                         no
    _item_type.code                             'line'
@@ -66090,6 +66138,39 @@ or any of its related tags.
    _item.category_id                           'Chem_shift_perturbation'
    _item.mandatory_code                         no
    _item_type.code                             'int'
+
+
+save_
+
+save__Chem_shift_perturbation.Titration_value
+
+   _item_description.description
+;
+The value for the parameter titrated in the chemical shift perturbation 
+study. This might be concentration for a molecular interation study (e.g. protein-protein 
+interaction, lingand binding, or fragment study) or temperature for a 
+temperature study.
+;
+
+   _item.name                                  '_Chem_shift_perturbation.Titration_value'
+   _item.category_id                           'Chem_shift_perturbation'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Chem_shift_perturbation.Titration_value_err
+
+   _item_description.description
+;
+The error in the value for the parameter that was titrated.
+;
+
+   _item.name                                  '_Chem_shift_perturbation.Titration_value_err'
+   _item.category_id                           'Chem_shift_perturbation'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
 
 
 save_
