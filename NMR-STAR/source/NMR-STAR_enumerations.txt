@@ -4355,11 +4355,7 @@ save__Entity.Polymer_type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-     cyclic-pseudo-peptide                      .
-    'polypeptide(L)'             
-;
-A polypeptide with a majority of amino acid in the L configuration
-;
+    'polypeptide(L)'                             L-protein
     'polydeoxyribonucleotide'                    DNA
     'polyribonucleotide'                         RNA
     'polydeoxyribonucleotide/polyribonucleotide hybrid'      
@@ -4380,6 +4376,7 @@ A carbohydrate with the majority of the monomers having a D configuration
 ;
 A carbohydrate with the majority of the monomers having an L configuration
 ;
+     cyclic-pseudo-peptide                      .
 
      other                                   .
 
@@ -4957,6 +4954,10 @@ save__Experiment.Name
       '2D DQF-COSY'                 .
       '2D 1H-1H COSY'               .
       '2D 1H-1H NOESY'              .
+      'T1/R1 relaxation'            .
+      'T1rho/R1rho relaxation'      .
+      'T2/R2 relaxation'            .
+      '1H-15N heteronoe'            .
       '3D CBCA(CO)NH'               .
       '3D C(CO)NH'                  .
       '3D HNCO'                     .
@@ -4978,18 +4979,26 @@ save__Experiment.Name
       '3D HN(COCA)CB'               .
       '15N-(1H) NOE'                .
       '13C-(1H) NOE'                .
-       DARR                         .
-      '2D DARR'                     .
-      'CANcoCX DARR'                .
-      'NCOCX DARR'                  .
-      'NCACX DARR'                  .
-      'FS-REDOR'                    .
-      '2D TEDOR'                    .
-      'CN TEDOR'                    .
-      '2D 13C/13C PDSD'             .
-      '2D 13C/13C TOBSY'            .
-      '2D HBCBCGCDCEHE'             .
-      '2D HBCBCGCDHD'               .
+       DARR                         SSNMR
+      '2D DARR'                     SSNMR
+      'CANcoCX DARR'                SSNMR
+      'NCACX'                       SSNMR
+      'NCOCX'                       SSNMR
+      'CONCA'                       SSNMR
+      'NCOCX DARR'                  SSNMR
+      'NCACX DARR'                  SSNMR
+      'FS-REDOR'                    SSNMR
+      '2D TEDOR'                    SSNMR
+      'CN TEDOR'                    SSNMR
+      '2D 13C/13C PDSD'             SSNMR
+      '2D 13C/13C TOBSY'            SSNMR
+      '2D HBCBCGCDCEHE'             SSNMR
+      '2D HBCBCGCDHD'               SSNMR
+      '2D 13C-detected CORD'        SSNMR
+      '2D 13C-detected NCA'         SSNMR
+      '1H-detected (H)NH HETCOR'    SSNMR
+      '3D RNCSA'                    SSNMR
+      '3D ROCSA'                    SSNMR  
 
   stop_
 
@@ -7581,6 +7590,7 @@ save__Software.Name
     HYPER            .
     IMP              .
     InsightII        .
+    I-PINE           .
     Jellyfish        .
     KdCalc           .
     LarmorCa         .
