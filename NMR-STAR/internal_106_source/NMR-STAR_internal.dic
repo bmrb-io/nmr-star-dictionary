@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-02-24
+#  version date -  2020-02-25
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.9.1
+    _dictionary.version         3.2.10.0
 
      loop_
        _dictionary_history.version
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.9.1'
+   _item_default.value            '3.2.10.0'
 
    loop_
      _item_enumeration.value
@@ -25052,6 +25052,30 @@ of the polymer where the alternate residue or chemical compound is located.
 
 ;
 27
+;
+
+   stop_
+
+save_
+
+save__Entity_comp_index_alt.Auth_comp_name
+
+   _item_description.description
+;
+Author supplied name or code for the alternate residue found at the defined 
+sequence position.
+;
+
+   _item.name                                  '_Entity_comp_index_alt.Auth_comp_name'
+   _item.category_id                           'Entity_comp_index_alt'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
+
+   loop_
+     _item_examples.case
+
+;
+ALA
 ;
 
    stop_
