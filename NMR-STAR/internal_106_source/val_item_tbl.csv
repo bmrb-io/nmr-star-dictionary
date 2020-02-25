@@ -116,7 +116,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 1140,entry_information,_Entry.Original_release_date,,DATETIME year to day,yyyy-mm-dd,,,Entry,Original_release_date,N,?,0,?,,,,,N
 1150,entry_information,_Entry.Origination,,VARCHAR(31),line,NOT NULL,,Entry,Origination,N,author,0,?,,,,,N
 1160,entry_information,_Entry.Format_name,Y,VARCHAR(127),line,,,Entry,Format_name,N,?,0,?,,,,,N
-1170,entry_information,_Entry.NMR_STAR_version,N,VARCHAR(31),line,NOT NULL,,Entry,NMR_STAR_version,N,3.2.10.0,0,?,,,,,N
+1170,entry_information,_Entry.NMR_STAR_version,N,VARCHAR(31),line,NOT NULL,,Entry,NMR_STAR_version,N,3.2.10.1,0,?,,,,,N
 1180,entry_information,_Entry.NMR_STAR_dict_location,,VARCHAR(255),line,,,Entry,NMR_STAR_dict_location,N,?,0,?,,,,,N
 1190,entry_information,_Entry.Original_NMR_STAR_version,N,VARCHAR(31),line,,,Entry,Original_NMR_STAR_version,N,?,0,?,,,,,N
 1200,entry_information,_Entry.Experimental_method,Y,VARCHAR(127),line,NOT NULL,,Entry,Experimental_method,N,NMR,0,?,,,,,N
@@ -794,11 +794,11 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 7920,entity,_Entity.Target_identifier,,VARCHAR(31),line,,,Entity,Target_identifier,N,?,0,?,,,,,N
 7930,entity,_Entity.Polymer_author_defined_seq,,TEXT,text,,,Entity,Polymer_author_defined_seq,N,?,0,?,,,,,N
 7940,entity,_Entity.Polymer_author_seq_details,,TEXT,text,,,Entity,Polymer_author_seq_details,N,?,0,?,,,,,N
-7950,entity,_Entity.Ambiguous_conformational_states,,BOOLEAN,yes_no,,,Entity,Ambiguous_conformational_states,N,no,0,?,,,,,N
-7960,entity,_Entity.Ambiguous_chem_comp_sites,,BOOLEAN,yes_no,,,Entity,Ambiguous_chem_comp_sites,N,no,0,?,,,,,N
-7970,entity,_Entity.Nstd_monomer,,BOOLEAN,yes_no,,,Entity,Nstd_monomer,N,no,0,?,,,,,N
-7980,entity,_Entity.Nstd_chirality,,BOOLEAN,yes_no,,,Entity,Nstd_chirality,N,no,0,?,,,,,N
-7990,entity,_Entity.Nstd_linkage,,BOOLEAN,yes_no,,,Entity,Nstd_linkage,N,no,0,?,,,,,N
+7950,entity,_Entity.Ambiguous_conformational_states,,BOOLEAN,yes_no,,,Entity,Ambiguous_conformational_states,N,?,0,?,,,,,N
+7960,entity,_Entity.Ambiguous_chem_comp_sites,,BOOLEAN,yes_no,,,Entity,Ambiguous_chem_comp_sites,N,?,0,?,,,,,N
+7970,entity,_Entity.Nstd_monomer,,BOOLEAN,yes_no,,,Entity,Nstd_monomer,N,?,0,?,,,,,N
+7980,entity,_Entity.Nstd_chirality,,BOOLEAN,yes_no,,,Entity,Nstd_chirality,N,?,0,?,,,,,N
+7990,entity,_Entity.Nstd_linkage,,BOOLEAN,yes_no,,,Entity,Nstd_linkage,N,?,0,?,,,,,N
 8000,entity,_Entity.Nonpolymer_comp_ID,,CHAR(12),code,,,Entity,Nonpolymer_comp_ID,N,?,7,?,,,,,N
 8010,entity,_Entity.Nonpolymer_comp_label,,VARCHAR(127),framecode,,,Entity,Nonpolymer_comp_label,N,?,8,?,,,,,N
 8020,entity,_Entity.Number_of_monomers,,INTEGER,int,,,Entity,Number_of_monomers,N,?,0,?,,,,,N
