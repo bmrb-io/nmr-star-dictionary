@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-02-25
+#  version date -  2020-02-26
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.10.1
+    _dictionary.version         3.2.10.2
 
      loop_
        _dictionary_history.version
@@ -444,31 +444,31 @@ Categories that capture theoretical heteronuclear NOE values and links to the so
 'heteronucl_T1_relaxation'
 'inclusive_group'
 ;
-Categories that capture heteronuclear T1 relaxation values and links to the samples, sample conditions, NMR experiments, and other information about how the data were derived.
+Categories that capture heteronuclear T1/R1 relaxation values and links to the samples, sample conditions, NMR experiments, and other information about how the data were derived.
 ;
 
 'theoretical_heteronucl_T1_relaxation'
 'inclusive_group'
 ;
-Categories that capture theoretical heteronuclear T1 relaxation values and links to the software, samples, sample conditions, NMR experiments, and other information about how the data were derived.
+Categories that capture theoretical heteronuclear T1/R1 relaxation values and links to the software, samples, sample conditions, NMR experiments, and other information about how the data were derived.
 ;
 
 'heteronucl_T1rho_relaxation'
 'inclusive_group'
 ;
-Categories that capture heteronuclear T1rho relaxation values and links to the samples, sample conditions, NMR experiments, and other information about how the data were derived.
+Categories that capture heteronuclear T1rho/R1rho relaxation values and links to the samples, sample conditions, NMR experiments, and other information about how the data were derived.
 ;
 
 'heteronucl_T2_relaxation'
 'inclusive_group'
 ;
-Categories that capture heteronuclear T2 relaxation values and links to the samples, sample conditions, NMR experiments, and other information about how the data were derived.
+Categories that capture heteronuclear T2/R2 relaxation values and links to the samples, sample conditions, NMR experiments, and other information about how the data were derived.
 ;
 
 'theoretical_heteronucl_T2_relaxation'
 'inclusive_group'
 ;
-Categories that capture theoretical heteronuclear T2 relaxation values and links to the software, samples, sample conditions, NMR experiments, and other information about how the data were derived.
+Categories that capture theoretical heteronuclear T2/R2 relaxation values and links to the software, samples, sample conditions, NMR experiments, and other information about how the data were derived.
 ;
 
 'auto_relaxation'
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.10.0'
+   _item_default.value            '3.2.10.1'
 
    loop_
      _item_enumeration.value

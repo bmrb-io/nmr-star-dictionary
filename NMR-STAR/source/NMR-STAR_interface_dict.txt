@@ -10516,7 +10516,7 @@ Answer 'yes', if the molecule contains multiple conformational states (e.g., cis
 
    _Interface.Adit_item_view_name
 ;
-Are there ambiguous conformational states in the biopolymers or ligands
+Are there biopolymers or ligands in conformational exchange
 ;
 
    loop_
@@ -11105,12 +11105,12 @@ save__Entity_assembly.Conformational_isomer
 
    _Interface.Description
 ;
-For biopolymers or ligands, does the indicated component of the system represent an observed conformational isomer of another component of the system.  For example, component one may represent a polypeptide chain in an unfolded conformation and component two may represent the folded polypeptide.
+For biopolymers or ligands, does the indicated component involved in conformational exchange with another component of the system.  For example, component one may represent a protein chain in an unfolded conformation and component two may represent the folded protein.
 ;
 
    _Interface.Adit_item_view_name
 ;
-NMR observable conformational isomer
+Under going conformational exchange
 ;
 
    loop_
@@ -75797,12 +75797,12 @@ save__Chem_shift_perturbation_list.Type
 
    _Interface.Description
 ;
-?
+Enter the type of chemical shift perturbation that is being reported. This might be a ligand binding study, the interaction between two biopolymers, or a temperature study, for example.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Type
+The type of CSP reported
 ;
 
    loop_
@@ -75824,12 +75824,12 @@ save__Chem_shift_perturbation_list.Entity_assembly_ID
 
    _Interface.Description
 ;
-?
+If the interactions between two components of the molecular assembly were studied, specify the molecular assembly component (ligand or biopolymer) named in the molecular assembly section above that was titrated in the study.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Entity assembly ID
+Molecular assembly component titrated
 ;
 
    loop_

@@ -181,17 +181,19 @@ assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Name,MM
 assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Name,MM
 assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Paramagnetic,VV
 assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Paramagnetic,VV
+chem_comp,_Chem_comp.Name,*,chem_comp,_Chem_comp.Paramagnetic,VV
 assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Aromatic,VV
 assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Aromatic,VV
+chem_comp,_Chem_comp.Name,*,chem_comp,_Chem_comp.Aromatic,VV
 assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Formula,OO
 assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Formula,OO
 deposited_data_files,_Upload_data.Data_file_content_type,Image file.*,chem_comp,_Chem_comp.Image_file_name,OO
 deposited_data_files,_Upload_data.Data_file_content_type,Image file.*,chem_comp,_Chem_comp.Image_file_format,OO
-chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9],chem_comp,_Chem_comp.PDB_code,OO
-chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9],chem_comp,_Chem_comp.Name,MM
-chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9],chem_comp,_Chem_comp.Paramagnetic,VV
-chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9],chem_comp,_Chem_comp.Aromatic,VV
-chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9],chem_comp,_Chem_comp.Details,OO
+chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]+,chem_comp,_Chem_comp.PDB_code,OO
+chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]+,chem_comp,_Chem_comp.Name,MM
+chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]+,chem_comp,_Chem_comp.Paramagnetic,VV
+chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]+,chem_comp,_Chem_comp.Aromatic,VV
+chem_comp,_Chem_comp.PDB_code,[A-Za-z0-9]+,chem_comp,_Chem_comp.Details,OO
 entity,_Entity.Type,non-polymer,entity,_Entity.Polymer_seq_one_letter_code,OO
 entity,_Entity.Type,non-polymer,entity,_Entity.Fragment,OO
 entity,_Entity.Type,non-polymer,entity,_Entity.Mutation,OO
