@@ -217,7 +217,10 @@ TBL_BEGIN,,,,,,,?
 97020,experimental_source,Entity_experimental_src,_Entity_experimental_src.Vendor_name,H,Entity_experimental_src,_Entity_experimental_src.Production_method,(chemical synthesis)|(purified from the natural source)|(enzymatic semisynthesis)|(reverse transcriptase)|(obtained from a vendor)
 97285,experiment_list,Experiment_file,*,H,Experiment,_Experiment.Raw_data_flag,no
 97290,experiment_list,Experiment_file,*,O,Experiment,_Experiment.Raw_data_flag,yes
-10000,chem_shift_reference,*,*,H,Entry_interview,_Entry_interview.Assigned_chem_shifts,no
+99990,chem_shift_reference,*,*,H,Entry_interview,_Entry_interview.Assigned_chem_shifts,no
+99995,chem_shift_reference,*,*,O,Entry_interview,_Entry_interview.Chem_shift_isotope_effect,yes
+99995,chem_shift_reference,*,*,O,Entry_interview,_Entry_interview.Chem_shift_perturbation,yes
+99995,chem_shift_reference,*,*,O,Entry_interview,_Entry_interview.Theoretical_chem_shifts,yes
 10000,assigned_chemical_shifts,*,*,H,Entry_interview,_Entry_interview.Assigned_chem_shifts,no
 10000,spectral_peak_list,*,*,H,Entry_interview,_Entry_interview.Spectral_peak_lists,no
 10000,coupling_constants,*,*,H,Entry_interview,_Entry_interview.Coupling_constants,no
