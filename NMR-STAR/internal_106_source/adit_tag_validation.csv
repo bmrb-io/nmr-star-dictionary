@@ -1,6 +1,5 @@
 Control Sf category,Control tag,Flag Value,Sf category,Tag,validateFlgs
 TBL_BEGIN,,,,,?
-entry_information,_Contact_person.Address_2,*,entry_information,_Contact_person.Address_3,II
 citations,_Citation.Type,journal,citations,_Citation.Journal_abbrev,MM
 citations,_Citation.Type,journal,citations,_Citation.Journal_name_full,OM
 citations,_Citation.Type,journal,citations,_Citation.Journal_volume,MM
@@ -56,9 +55,6 @@ citations,_Citation.Type,*,citations,_Citation.Year,MM
 citations,_Citation.Type,*,citations,_Citation.Details,OO
 citations,_Citation.Type,personal communication,citations,_Citation.Page_first,OM
 citations,_Citation.Type,personal communication,citations,_Citation.Page_last,OM
-citations,_Citation.PubMed_ID,*,citations,_Citation.Name,OO
-citations,_Citation.PubMed_ID,*,citations,_Citation.Class,VV
-citations,_Citation.PubMed_ID,*,citations,_Citation.PubMed_ID,MM
 citations,_Citation.Type,*,citations,_Citation_keyword.Keyword,OO
 citations,_Citation.Type,*,citations,_Citation_keyword.Sf_ID,II
 citations,_Citation.Type,*,citations,_Citation_keyword.Entry_ID,OO
@@ -72,6 +68,8 @@ citations,_Citation.Type,(book)|(book chapter),citations,_Citation_editor.Family
 citations,_Citation.Type,*,citations,_Citation_editor.Sf_ID,II
 citations,_Citation.Type,*,citations,_Citation_editor.Entry_ID,II
 citations,_Citation.Type,*,citations,_Citation_editor.Citation_ID,OO
+citations,_Citation.PubMed_ID,*,citations,_Citation.Class,VV
+citations,_Citation.PubMed_ID,*,citations,_Citation.PubMed_ID,MM
 assembly,_Assembly.Non_standard_bonds,yes,assembly,_Bond.ID,OO
 assembly,_Assembly.Non_standard_bonds,yes,assembly,_Bond.Type,OO
 assembly,_Assembly.Non_standard_bonds,yes,assembly,_Bond.Value_order,OO
@@ -168,24 +166,20 @@ natural_source,_Entity_natural_src.Type,no natural source,natural_source,_Entity
 experimental_source,_Entity_experimental_src.Production_method,recombinant technology,experimental_source,_Entity_experimental_src.Host_org_scientific_name,OO
 experimental_source,_Entity_experimental_src.Production_method,recombinant technology,experimental_source,_Entity_experimental_src.Vector_type,OO
 experimental_source,_Entity_experimental_src.Production_method,recombinant technology,experimental_source,_Entity_experimental_src.Vector_name,OO
-entry_interview,_Entry_interview.Ligands,yes,chem_comp,_Chem_comp.Name,MM
-entry_interview,_Entry_interview.Non_standard_residues,yes,chem_comp,_Chem_comp.Name,MM
 entity,_Entity.Nstd_monomer,yes,chem_comp,_Chem_comp.Name,MM
-entry_interview,_Entry_interview.Ligands,yes,chem_comp,_Chem_comp.Paramagnetic,VV
-entry_interview,_Entry_interview.Non_standard_residues,yes,chem_comp,_Chem_comp.Paramagnetic,VV
 entity,_Entity.Nstd_monomer,yes,chem_comp,_Chem_comp.Paramagnetic,VV
-entry_interview,_Entry_interview.Ligands,yes,chem_comp,_Chem_comp.Aromatic,VV
-entry_interview,_Entry_interview.Non_standard_residues,yes,chem_comp,_Chem_comp.Aromatic,VV
 entity,_Entity.Nstd_monomer,yes,chem_comp,_Chem_comp.Aromatic,VV
-assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Name,MM
-assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Name,MM
-assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Paramagnetic,VV
-assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Paramagnetic,VV
+entity,_Entity.Nstd_monomer,yes,chem_comp,_Chem_comp.Formula,OO
 chem_comp,_Chem_comp.Name,*,chem_comp,_Chem_comp.Paramagnetic,VV
-assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Aromatic,VV
-assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Aromatic,VV
 chem_comp,_Chem_comp.Name,*,chem_comp,_Chem_comp.Aromatic,VV
+chem_comp,_Chem_comp.Name,*,chem_comp,_Chem_comp.Formula,OO
+assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Name,MM
+assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Paramagnetic,VV
+assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Aromatic,VV
 assembly,_Assembly.Organic_ligands,[1-9]+,chem_comp,_Chem_comp.Formula,OO
+assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Name,MM
+assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Paramagnetic,VV
+assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Aromatic,VV
 assembly,_Assembly.Metal_ions,[1-9]+,chem_comp,_Chem_comp.Formula,OO
 deposited_data_files,_Upload_data.Data_file_content_type,Image file.*,chem_comp,_Chem_comp.Image_file_name,OO
 deposited_data_files,_Upload_data.Data_file_content_type,Image file.*,chem_comp,_Chem_comp.Image_file_format,OO

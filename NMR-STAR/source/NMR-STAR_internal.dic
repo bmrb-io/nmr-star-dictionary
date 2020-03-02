@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-02-26
+#  version date -  2020-03-02
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.10.2
+    _dictionary.version         3.2.10.3
 
      loop_
        _dictionary_history.version
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.10.1'
+   _item_default.value            '3.2.10.2'
 
    loop_
      _item_enumeration.value
@@ -27558,7 +27558,6 @@ The laboratory method used to obtain the biopolymers studied.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            'recombinant technology'
 
    loop_
      _item_enumeration.value
@@ -41689,7 +41688,9 @@ The name or acronym used to describe the model of the spectrometer.
    AM    "from Bruker"
    AMX    "from Bruker"
    ARX    'from Bruker'
-   Avance    "from Bruker"
+   AVANCE    "from Bruker"
+   'AVANCE III'    "from Bruker"
+   'AVANCE NEO'    "from Bruker"
    DMX    "from Bruker"
    DPX    "from Bruker"
    DRX    "from Bruker"
@@ -64175,6 +64176,14 @@ The units for the isotope chemical shift effect.
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
+   loop_
+     _item_examples.case
+
+;
+ppm
+;
+
+   stop_
 
 save_
 
