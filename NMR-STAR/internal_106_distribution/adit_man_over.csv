@@ -1,10 +1,17 @@
 Order of operation,Sf category,Tag category,Tag,Override view value,Conditional tag category,Conditional tag,Override value
 TBL_BEGIN,,,,,,,?
-1,citations,Citation,_Citation.Class,H,_Citation,_Citation.Class,*
-1,citations,Citation,_Citation.DOI,N,_Citation,_Citation.DOI,*
+1,citations,Citation,_Citation.Class,H,_Citation,_Citation.Status,*
 1,citations,Citation,_Citation.Status,N,_Citation,_Citation.Status,*
-1,citations,Citation,_Citation.Type,N,_Citation,_Citation.Type,*
-1,citations,Citation,_Citation.Journal_abbrev,N,_Citation,_Citation.Journal_abbrev,*
+1,citations,Citation,_Citation.Type,N,_Citation,_Citation.Status,*
+1,citations,Citation,_Citation.Journal_abbrev,N,_Citation,_Citation.Status,*
+1,citations,Citation,_Citation.DOI,N,_Citation,_Citation.Status,*
+1,citations,Citation_author,*,N,_Citation,_Citation.Status,*
+
+2,entry_information,Entry,_Entry.Special_processing_instructions,H,Entry,_Entry.ID,*
+2,entry_information,Entry,_Entry.Replace_BMRB_accession_code,H,Entry,_Entry.ID,*
+2,entry_information,Entry,_Entry.Replace_BMRB_accession_code,H,Entry,_Entry.ID,*
+2,entry_information,Entry,_Entry.Release_request,H,Entry,_Entry.ID,*
+
 
 1120,citations,Citation,_Citation.Journal_abbrev,Y,Citation,_Citation.Type,journal
 1130,citations,Citation,_Citation.Journal_name_full,H,Citation,_Citation.Type,journal
