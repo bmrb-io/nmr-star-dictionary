@@ -4914,6 +4914,33 @@ Assigned restart ID
 
 save_
 
+save__Entry.Citation_DOI
+
+   _Interface.Tag                  '_Entry.Citation_DOI'
+
+   _Interface.Category              'Entry'
+
+   _Interface.Description
+;
+Enter the digital object identifier assigned to the citation to link with these uploaded data.
+;
+
+   _Interface.Adit_item_view_name
+;
+Digital object identifier for the citation
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+10.1000/182
+;
+
+   stop_
+
+save_
+
 save__Entry.Selected_BMRbig_ID
 
    _Interface.Tag                  '_Entry.Selected_BMRbig_ID'
@@ -4922,7 +4949,7 @@ save__Entry.Selected_BMRbig_ID
 
    _Interface.Description
 ;
-Link uploaded data to an existing BMRbig ID
+Enter an existing BMRbig ID (e.g. BMRbig-20569) to link to these uploaded data.
 ;
 
    _Interface.Adit_item_view_name
@@ -4949,12 +4976,12 @@ save__Entry.Selected_BMRB_ID
 
    _Interface.Description
 ;
-Link uploaded data to existing BMRB ID
+Enter an existing BMRB ID (e.g. 50345) to link to these uploaded data.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Uploaded data related to BMRB ID
+Link uploaded data to BMRB ID
 ;
 
    loop_
@@ -4976,12 +5003,12 @@ save__Entry.Selected_PDB_ID
 
    _Interface.Description
 ;
-Link uploaded data to existing PDB ID
+Enter an existing PDB ID (e.g. 956Y) to which these uploaded data have a relationship.
 ;
 
    _Interface.Adit_item_view_name
 ;
-Uploaded data related to PDB ID
+Relate uploaded data to PDB ID
 ;
 
    loop_
