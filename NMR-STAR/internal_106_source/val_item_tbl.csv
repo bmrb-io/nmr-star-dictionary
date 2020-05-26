@@ -116,7 +116,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 1140,entry_information,_Entry.Original_release_date,,DATETIME year to day,yyyy-mm-dd,,,Entry,Original_release_date,N,?,0,?,,,,,N
 1150,entry_information,_Entry.Origination,,VARCHAR(31),line,NOT NULL,,Entry,Origination,N,author,0,?,,,,,N
 1160,entry_information,_Entry.Format_name,Y,VARCHAR(127),line,,,Entry,Format_name,N,?,0,?,,,,,N
-1170,entry_information,_Entry.NMR_STAR_version,N,VARCHAR(31),line,NOT NULL,,Entry,NMR_STAR_version,N,3.2.10.3,0,?,,,,,N
+1170,entry_information,_Entry.NMR_STAR_version,N,VARCHAR(31),line,NOT NULL,,Entry,NMR_STAR_version,N,3.2.10.4,0,?,,,,,N
 1180,entry_information,_Entry.NMR_STAR_dict_location,,VARCHAR(255),line,,,Entry,NMR_STAR_dict_location,N,?,0,?,,,,,N
 1190,entry_information,_Entry.Original_NMR_STAR_version,N,VARCHAR(31),line,,,Entry,Original_NMR_STAR_version,N,?,0,?,,,,,N
 1200,entry_information,_Entry.Experimental_method,Y,VARCHAR(127),line,NOT NULL,,Entry,Experimental_method,N,NMR,0,?,,,,,N
@@ -3673,8 +3673,8 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 36710,heteronucl_T2_relaxation,_Heteronucl_T2_list.Data_file_name,,VARCHAR(127),line,,,Heteronucl_T2_list,Data_file_name,N,?,0,?,,,,Y,N
 36720,heteronucl_T2_relaxation,_Heteronucl_T2_list.Sample_condition_list_ID,,INTEGER,int,NOT NULL,,Heteronucl_T2_list,Sample_condition_list_ID,N,?,7,?,,,,,N
 36730,heteronucl_T2_relaxation,_Heteronucl_T2_list.Sample_condition_list_label,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_T2_list,Sample_condition_list_label,N,?,8,?,,,,,N
-36740,heteronucl_T2_relaxation,_Heteronucl_T2_list.Temp_calibration_method,N,VARCHAR(255),text,,,Heteronucl_T2_list,Temp_calibration_method,N,?,0,?,,,,,N
-36750,heteronucl_T2_relaxation,_Heteronucl_T2_list.Temp_control_method,N,VARCHAR(255),text,,,Heteronucl_T2_list,Temp_control_method,N,?,0,?,,,,,N
+36740,heteronucl_T2_relaxation,_Heteronucl_T2_list.Temp_calibration_method,N,VARCHAR(255),line,,,Heteronucl_T2_list,Temp_calibration_method,N,?,0,?,,,,,N
+36750,heteronucl_T2_relaxation,_Heteronucl_T2_list.Temp_control_method,N,VARCHAR(255),line,,,Heteronucl_T2_list,Temp_control_method,N,?,0,?,,,,,N
 36760,heteronucl_T2_relaxation,_Heteronucl_T2_list.Spectrometer_frequency_1H,,FLOAT,float,NOT NULL,,Heteronucl_T2_list,Spectrometer_frequency_1H,N,?,0,?,,,,,N
 36770,heteronucl_T2_relaxation,_Heteronucl_T2_list.T2_coherence_type,N,VARCHAR(31),line,NOT NULL,,Heteronucl_T2_list,T2_coherence_type,N,?,0,?,,,,,N
 36780,heteronucl_T2_relaxation,_Heteronucl_T2_list.T2_val_units,N,VARCHAR(15),code,NOT NULL,,Heteronucl_T2_list,T2_val_units,N,?,0,?,,,,,N
