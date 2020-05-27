@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-05-26
+#  version date -  2020-05-27
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2..1.1-BMRbig
+    _dictionary.version         3.2..2.1-BMRbig
 
      loop_
        _dictionary_history.version
@@ -84,13 +84,13 @@ Many corrections and suggestions provided by PDBj-BMRB implemented.
 'deposited_data_files'
 'inclusive_group'
 ;
-Categories that capture information about the data files that are uploaded for depositions.
+Categories that capture information about the data files that are uploaded.
 ;
 
 'entry_interview'
 'inclusive_group'
 ;
-Categories that record an overview of the information to be deposited by an author.
+Categories that record an overview of the information to be uploaded by an author.
 ;
 
 'study_list'
@@ -102,7 +102,7 @@ Categories that describe a study of a molecular system that includes data from o
 'entry_information'
 'inclusive_group'
 ;
-Categories that describe an entry.
+Categories that describe the uploaded data.
 ;
 
 'citations'
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2..1.1-BMRbig'
+   _item_default.value            '3.2..2.1-BMRbig'
 
    loop_
      _item_enumeration.value
@@ -6742,11 +6742,35 @@ The digital object identifier assigned to the citation.
 
 save_
 
+save__Entry.Citation_PubMed_ID
+
+   _item_description.description
+;
+The identification code assigned to the linked publication by PubMed.
+;
+
+   _item.name                                  '_Entry.Citation_PubMed_ID'
+   _item.category_id                           'Entry'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+12815265
+;
+
+   stop_
+
+save_
+
 save__Entry.Selected_BMRbig_ID
 
    _item_description.description
 ;
-The BMRbig ID linked by the depositor to the uploaded data.
+The BMRbig ID linked to the uploaded data by the person  carrying out the 
+upload.
 ;
 
    _item.name                                  '_Entry.Selected_BMRbig_ID'
@@ -6761,7 +6785,7 @@ save__Entry.Selected_BMRB_ID
 
    _item_description.description
 ;
-The BMRB ID linked by the depositor to the uploaded data.
+The BMRB ID linked to the uploaded data by the person  carrying out the upload.
 ;
 
    _item.name                                  '_Entry.Selected_BMRB_ID'
@@ -6776,7 +6800,7 @@ save__Entry.Selected_PDB_ID
 
    _item_description.description
 ;
-The PDB ID linked by the depositor to the uploaded data.
+The PDB ID linked to the uploaded data by the person  carrying out the upload.
 ;
 
    _item.name                                  '_Entry.Selected_PDB_ID'
