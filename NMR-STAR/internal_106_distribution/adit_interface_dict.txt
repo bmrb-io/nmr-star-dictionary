@@ -445,7 +445,7 @@ Check this box, if you are depositing one or more sets of assigned chemical shif
 
    _Interface.Adit_item_view_name
 ;
-Assigned NMR chemical shifts
+Non-NMR data include in upload (Yes/No)?
 ;
 
    loop_
@@ -472,7 +472,7 @@ Check this box, if you are submitting one or more sets of scalar coupling (homon
 
    _Interface.Adit_item_view_name
 ;
-Scalar coupling constants
+X-ray
 ;
 
    loop_
@@ -499,7 +499,7 @@ Check this box, if you are submitting one or more sets of chemical shift isotope
 
    _Interface.Adit_item_view_name
 ;
-Chemical shift isotope effect
+EM (including cryo-EM)
 ;
 
    loop_
@@ -526,7 +526,7 @@ Check this box, if you are submitting one or more sets of chemical shift perturb
 
    _Interface.Adit_item_view_name
 ;
-Chemical shift perturbation data
+SAXS
 ;
 
    loop_
@@ -553,7 +553,7 @@ Check this box, if you are submitting one or more sets of auto relaxation values
 
    _Interface.Adit_item_view_name
 ;
-Auto relaxation parameters
+Fluorescence
 ;
 
    loop_
@@ -580,7 +580,7 @@ Check this box, if you are submitting one or more sets of tensor data.
 
    _Interface.Adit_item_view_name
 ;
-Tensor data
+Mass spectrometry
 ;
 
    loop_
@@ -607,7 +607,7 @@ Check this box, if you are submitting one or more sets of interatomic distance d
 
    _Interface.Adit_item_view_name
 ;
-Interatomic distance data
+EPR
 ;
 
    loop_
@@ -634,7 +634,7 @@ Check this box, if you are submitting one or more sets of chemical shift anisotr
 
    _Interface.Adit_item_view_name
 ;
-Chemical shift anisotropy
+IR
 ;
 
    loop_
@@ -661,7 +661,7 @@ If you are depositing one or more sets of heteronuclear NOE data, check this box
 
    _Interface.Adit_item_view_name
 ;
-Heteronuclear NOEs
+Molecular dynamics trajectory
 ;
 
    loop_
@@ -688,7 +688,7 @@ If you are depositing T1 (R1) relaxation values, check this box.
 
    _Interface.Adit_item_view_name
 ;
-T1 (R1) NMR relaxation data
+Molecular movies
 ;
 
    loop_
@@ -715,7 +715,7 @@ Check this box, if you are depositing one or more sets of T2 (R2) relaxation dat
 
    _Interface.Adit_item_view_name
 ;
-T2 (R2) NMR relaxation data
+Other (not listed above)
 ;
 
    loop_
@@ -742,7 +742,7 @@ Check this box, if you are depositing files containing T1rho (R1rho) relaxation 
 
    _Interface.Adit_item_view_name
 ;
-T1rho (R1rho) NMR relaxation data
+Other kinds of data not listed
 ;
 
    loop_
@@ -1444,7 +1444,7 @@ Check this box, if you are submitting one or more spectral density factor data s
 
    _Interface.Adit_item_view_name
 ;
-Spectral density factors
+NMR processed spectral data
 ;
 
    loop_
@@ -1471,7 +1471,7 @@ If you are submitting time-domain data files (raw spectral data), check this box
 
    _Interface.Adit_item_view_name
 ;
-Time-domain data (raw spectral data)
+NMR time-domain data (raw spectral data)
 ;
 
    loop_
@@ -1898,7 +1898,7 @@ save__Upload_data.Data_file_ID
 
    _Interface.Description
 ;
-Unique code assigned to the file being uploaded by the depositor and that contains data that will be incorporated into this entry.
+Unique code assigned to the file being uploaded by the depositor and that contains data that will be incorporated into this upload.
 ;
 
    _Interface.Adit_item_view_name
@@ -1952,19 +1952,19 @@ save__Upload_data.Data_file_content_type
 
    _Interface.Description
 ;
-Select the kinds of data included in the uploaded file.
+The uploaded data file contains non-NMR biophysiical data..
 ;
 
    _Interface.Adit_item_view_name
 ;
-Data file content description
+Upload contains non-NMR data (Yes/No)
 ;
 
    loop_
      _Interface_example.Example
 
 ;
-T1 relaxation
+yes
 ;
 
    stop_
@@ -3950,7 +3950,7 @@ save__Entry.Release_request
 
    _Interface.Description
 ;
-Select the condition under which the entry can be released to the public.
+Select the condition under which the upload can be released to the public.
 ;
 
    _Interface.Adit_item_view_name
@@ -3962,7 +3962,7 @@ Upload release request
      _Interface_example.Example
 
 ;
-Immediate; On publication; Specific date; One year hold
+Release now
 ;
 
    stop_
