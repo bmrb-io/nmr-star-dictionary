@@ -7,7 +7,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 50,entry_interview,_Entry_interview.ID,,INTEGER,int,NOT NULL,Y,Entry_interview,ID,N,?,5,?,,,,Y,N
 60,entry_interview,_Entry_interview.PDB_deposition,,BOOLEAN,yes_no,,,Entry_interview,PDB_deposition,N,?,0,?,,,,Y,N
 70,entry_interview,_Entry_interview.BMRB_deposition,,BOOLEAN,yes_no,,,Entry_interview,BMRB_deposition,N,?,0,?,,,,Y,N
-80,entry_interview,_Entry_interview.View_mode,Y,VARCHAR(15),code,,,Entry_interview,View_mode,N,BMRB Only,0,?,,,,Y,N
+80,entry_interview,_Entry_interview.View_mode,Y,VARCHAR(15),code,,,Entry_interview,View_mode,N,?,0,?,,,,Y,N
 90,entry_interview,_Entry_interview.Use_previous_BMRB_entry,,BOOLEAN,yes_no,,,Entry_interview,Use_previous_BMRB_entry,N,no,0,?,,,,Y,N
 100,entry_interview,_Entry_interview.Previous_BMRB_entry_used,,VARCHAR(15),code,,,Entry_interview,Previous_BMRB_entry_used,N,?,0,?,,,,Y,N
 110,entry_interview,_Entry_interview.Previous_BMRB_entry_owner,,BOOLEAN,yes_no,,,Entry_interview,Previous_BMRB_entry_owner,N,no,0,?,,,,Y,N
@@ -108,19 +108,19 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 1060,entry_information,_Entry.Sf_ID,,INTEGER,int,NOT NULL,,Entry,Sf_ID,N,?,4,?,,,,Y,N
 1070,entry_information,_Entry.ID,,CHAR(12),code,NOT NULL,Y,Entry,ID,N,?,3,?,,,,,N
 1080,entry_information,_Entry.Title,,TEXT,text,NOT NULL,,Entry,Title,N,?,0,?,,,,,N
-1090,entry_information,_Entry.Type,Y,VARCHAR(127),line,NOT NULL,,Entry,Type,N,macromolecule,0,?,,,,,N
-1100,entry_information,_Entry.Version_type,Y,VARCHAR(31),line,NOT NULL,,Entry,Version_type,N,original,0,?,,,,,N
+1090,entry_information,_Entry.Type,Y,VARCHAR(127),line,NOT NULL,,Entry,Type,N,?,0,?,,,,,N
+1100,entry_information,_Entry.Version_type,Y,VARCHAR(31),line,NOT NULL,,Entry,Version_type,N,?,0,?,,,,,N
 1110,entry_information,_Entry.Submission_date,,DATETIME year to day,yyyy-mm-dd,NOT NULL,,Entry,Submission_date,N,?,0,?,,,,,N
 1120,entry_information,_Entry.Accession_date,,DATETIME year to day,yyyy-mm-dd,NOT NULL,,Entry,Accession_date,N,?,0,?,,,,,N
 1130,entry_information,_Entry.Last_release_date,,DATETIME year to day,yyyy-mm-dd,,,Entry,Last_release_date,N,?,0,?,,,,,N
 1140,entry_information,_Entry.Original_release_date,,DATETIME year to day,yyyy-mm-dd,,,Entry,Original_release_date,N,?,0,?,,,,,N
-1150,entry_information,_Entry.Origination,,VARCHAR(31),line,NOT NULL,,Entry,Origination,N,author,0,?,,,,,N
+1150,entry_information,_Entry.Origination,,VARCHAR(31),line,NOT NULL,,Entry,Origination,N,?,0,?,,,,,N
 1160,entry_information,_Entry.Format_name,Y,VARCHAR(127),line,,,Entry,Format_name,N,?,0,?,,,,,N
-1170,entry_information,_Entry.NMR_STAR_version,N,VARCHAR(31),line,NOT NULL,,Entry,NMR_STAR_version,N,3.2.2.4-BMRbig,0,?,,,,,N
+1170,entry_information,_Entry.NMR_STAR_version,N,VARCHAR(31),line,NOT NULL,,Entry,NMR_STAR_version,N,3.2.2.5-BMRbig,0,?,,,,,N
 1180,entry_information,_Entry.NMR_STAR_dict_location,,VARCHAR(255),line,,,Entry,NMR_STAR_dict_location,N,?,0,?,,,,,N
 1190,entry_information,_Entry.Original_NMR_STAR_version,N,VARCHAR(31),line,,,Entry,Original_NMR_STAR_version,N,?,0,?,,,,,N
-1200,entry_information,_Entry.Experimental_method,Y,VARCHAR(127),line,NOT NULL,,Entry,Experimental_method,N,NMR,0,?,,,,,N
-1210,entry_information,_Entry.Experimental_method_subtype,Y,VARCHAR(31),line,,,Entry,Experimental_method_subtype,N,solution,0,?,,,,,N
+1200,entry_information,_Entry.Experimental_method,Y,VARCHAR(127),line,NOT NULL,,Entry,Experimental_method,N,?,0,?,,,,,N
+1210,entry_information,_Entry.Experimental_method_subtype,Y,VARCHAR(31),line,,,Entry,Experimental_method_subtype,N,?,0,?,,,,,N
 1220,entry_information,_Entry.Source_data_format,,VARCHAR(127),line,,,Entry,Source_data_format,N,?,0,?,,,,,N
 1230,entry_information,_Entry.Source_data_format_version,,VARCHAR(127),line,,,Entry,Source_data_format_version,N,?,0,?,,,,,N
 1240,entry_information,_Entry.Generated_software_name,,VARCHAR(127),line,,,Entry,Generated_software_name,N,?,0,?,,,,,N
@@ -222,8 +222,8 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 2200,entry_information,_Contact_person.Address_3,,VARCHAR(127),line,,,Contact_person,Address_3,Y,?,0,?,,,,Y,N
 2210,entry_information,_Contact_person.Phone_number,,VARCHAR(31),phone,NOT NULL,,Contact_person,Phone_number,Y,?,0,?,,,,Y,N
 2220,entry_information,_Contact_person.FAX_number,,VARCHAR(31),fax,,,Contact_person,FAX_number,Y,?,0,?,,,,Y,N
-2230,entry_information,_Contact_person.Role,Y,VARCHAR(127),line,,,Contact_person,Role,Y,principal investigator,0,?,,,,Y,N
-2240,entry_information,_Contact_person.Organization_type,Y,VARCHAR(31),line,,,Contact_person,Organization_type,Y,academic,0,?,,,,Y,N
+2230,entry_information,_Contact_person.Role,Y,VARCHAR(127),line,,,Contact_person,Role,Y,?,0,?,,,,Y,N
+2240,entry_information,_Contact_person.Organization_type,Y,VARCHAR(31),line,,,Contact_person,Organization_type,Y,?,0,?,,,,Y,N
 2250,entry_information,_Contact_person.Sf_ID,,INTEGER,int,NOT NULL,,Contact_person,Sf_ID,Y,?,4,?,,,,Y,N
 2260,entry_information,_Contact_person.Entry_ID,,CHAR(12),code,NOT NULL,Y,Contact_person,Entry_ID,Y,?,3,?,,,,Y,N
 2270,entry_information,_Entry_author.Ordinal,,INTEGER,int,NOT NULL,Y,Entry_author,Ordinal,Y,?,6,?,,,,,N
@@ -294,19 +294,19 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 2920,entry_information,_Audit.Sf_ID,,INTEGER,int,NOT NULL,,Audit,Sf_ID,Y,?,4,?,,,,Y,N
 2930,entry_information,_Audit.Entry_ID,,CHAR(12),code,NOT NULL,Y,Audit,Entry_ID,Y,?,3,?,,,,Y,N
 2940,citations,_Citation.Sf_category,,VARCHAR(127),code,NOT NULL,,Citation,Sf_category,N,?,1,?,,,,,N
-2950,citations,_Citation.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Citation,Sf_framecode,N,entry_citation,2,?,,,,,N
+2950,citations,_Citation.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Citation,Sf_framecode,N,?,2,?,,,,,N
 2960,citations,_Citation.Entry_ID,,CHAR(12),code,NOT NULL,Y,Citation,Entry_ID,N,?,3,?,,,,,N
 2970,citations,_Citation.Sf_ID,,INTEGER,int,NOT NULL,,Citation,Sf_ID,N,?,4,?,,,,Y,N
 2980,citations,_Citation.ID,,INTEGER,int,NOT NULL,Y,Citation,ID,N,?,5,?,,,,,N
 2990,citations,_Citation.Name,,VARCHAR(127),line,,,Citation,Name,N,?,0,?,,,,,N
-3000,citations,_Citation.Class,Y,VARCHAR(31),line,NOT NULL,,Citation,Class,N,entry citation,0,?,,,,,N
+3000,citations,_Citation.Class,Y,VARCHAR(31),line,NOT NULL,,Citation,Class,N,?,0,?,,,,,N
 3010,citations,_Citation.CAS_abstract_code,,VARCHAR(31),code,,,Citation,CAS_abstract_code,N,?,0,?,,,,,N
 3020,citations,_Citation.MEDLINE_UI_code,,VARCHAR(31),code,,,Citation,MEDLINE_UI_code,N,?,0,?,,,,,N
 3030,citations,_Citation.PubMed_ID,,CHAR(12),code,,,Citation,PubMed_ID,N,?,0,?,,,,,N
 3040,citations,_Citation.DOI,,VARCHAR(127),line,,,Citation,DOI,N,?,0,?,,,,,N
 3050,citations,_Citation.Full_citation,,TEXT,text,,,Citation,Full_citation,N,?,0,?,,,,,N
 3060,citations,_Citation.Title,,TEXT,text,,,Citation,Title,N,?,0,?,,,,,N
-3070,citations,_Citation.Status,Y,VARCHAR(31),line,,,Citation,Status,N,in preparation,0,?,,,,,N
+3070,citations,_Citation.Status,Y,VARCHAR(31),line,,,Citation,Status,N,?,0,?,,,,,N
 3080,citations,_Citation.Type,Y,VARCHAR(31),line,,,Citation,Type,N,?,0,?,,,,,N
 3090,citations,_Citation.Journal_abbrev,N,VARCHAR(127),line,,,Citation,Journal_abbrev,N,?,0,?,,,,,N
 3100,citations,_Citation.Journal_name_full,,VARCHAR(127),line,,,Citation,Journal_name_full,N,?,0,?,,,,,N
@@ -412,12 +412,12 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 4100,assembly,_Entity_assembly.Entity_assembly_name,,VARCHAR(127),line,,,Entity_assembly,Entity_assembly_name,Y,?,0,?,,,,,N
 4110,assembly,_Entity_assembly.Entity_ID,,INTEGER,int,NOT NULL,,Entity_assembly,Entity_ID,Y,?,7,?,,,,,N
 4120,assembly,_Entity_assembly.Entity_label,,VARCHAR(127),framecode,,,Entity_assembly,Entity_label,Y,?,8,?,,,,,N
-4130,assembly,_Entity_assembly.Asym_ID,,CHAR(12),code,,,Entity_assembly,Asym_ID,Y,A,0,?,,,,,N
+4130,assembly,_Entity_assembly.Asym_ID,,CHAR(12),code,,,Entity_assembly,Asym_ID,Y,?,0,?,,,,,N
 4140,assembly,_Entity_assembly.PDB_chain_ID,,VARCHAR(15),code,,,Entity_assembly,PDB_chain_ID,Y,?,0,?,,,,,N
 4150,assembly,_Entity_assembly.Experimental_data_reported,,BOOLEAN,yes_no,,,Entity_assembly,Experimental_data_reported,Y,?,0,?,,,,,N
-4160,assembly,_Entity_assembly.Physical_state,N,VARCHAR(127),line,,,Entity_assembly,Physical_state,Y,native,0,?,,,,,N
-4170,assembly,_Entity_assembly.Conformational_isomer,,BOOLEAN,yes_no,,,Entity_assembly,Conformational_isomer,Y,no,0,?,,,,,N
-4180,assembly,_Entity_assembly.Chemical_exchange_state,,BOOLEAN,yes_no,,,Entity_assembly,Chemical_exchange_state,Y,no,0,?,,,,,N
+4160,assembly,_Entity_assembly.Physical_state,N,VARCHAR(127),line,,,Entity_assembly,Physical_state,Y,?,0,?,,,,,N
+4170,assembly,_Entity_assembly.Conformational_isomer,,BOOLEAN,yes_no,,,Entity_assembly,Conformational_isomer,Y,?,0,?,,,,,N
+4180,assembly,_Entity_assembly.Chemical_exchange_state,,BOOLEAN,yes_no,,,Entity_assembly,Chemical_exchange_state,Y,?,0,?,,,,,N
 4190,assembly,_Entity_assembly.Magnetic_equivalence_group_code,,VARCHAR(15),code,,,Entity_assembly,Magnetic_equivalence_group_code,Y,?,0,?,,,,,N
 4200,assembly,_Entity_assembly.Role,,VARCHAR(127),line,,,Entity_assembly,Role,Y,?,0,?,,,,,N
 4210,assembly,_Entity_assembly.Details,,TEXT,text,,,Entity_assembly,Details,Y,?,0,?,,,,,N
@@ -481,7 +481,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 4790,assembly,_Struct_asym.Sf_ID,,INTEGER,int,NOT NULL,,Struct_asym,Sf_ID,Y,?,4,?,,,,Y,N
 4800,assembly,_Struct_asym.Entry_ID,,CHAR(12),code,NOT NULL,Y,Struct_asym,Entry_ID,Y,?,3,?,,,,,N
 4810,assembly,_Struct_asym.Assembly_ID,,INTEGER,int,NOT NULL,Y,Struct_asym,Assembly_ID,Y,?,5,?,,,,,N
-4820,assembly,_Assembly_db_link.Author_supplied,,BOOLEAN,yes_no,NOT NULL,,Assembly_db_link,Author_supplied,Y,yes,0,?,,,,,N
+4820,assembly,_Assembly_db_link.Author_supplied,,BOOLEAN,yes_no,NOT NULL,,Assembly_db_link,Author_supplied,Y,?,0,?,,,,,N
 4830,assembly,_Assembly_db_link.Database_code,N,VARCHAR(127),line,NOT NULL,Y,Assembly_db_link,Database_code,Y,?,0,?,,,,,N
 4840,assembly,_Assembly_db_link.Accession_code,,VARCHAR(31),code,NOT NULL,Y,Assembly_db_link,Accession_code,Y,?,0,?,,,,,N
 4850,assembly,_Assembly_db_link.Entry_mol_code,,VARCHAR(127),line,,,Assembly_db_link,Entry_mol_code,Y,?,0,?,,,,,N
@@ -789,7 +789,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 7870,entity,_Entity.ID,,INTEGER,int,NOT NULL,Y,Entity,ID,N,?,5,?,,,,,N
 7880,entity,_Entity.BMRB_code,,VARCHAR(15),code,,,Entity,BMRB_code,N,?,0,?,,,,,N
 7890,entity,_Entity.Name,,VARCHAR(127),line,NOT NULL,,Entity,Name,N,?,0,?,,,,,N
-7900,entity,_Entity.Type,Y,VARCHAR(127),line,,,Entity,Type,N,polymer,0,?,,,,,N
+7900,entity,_Entity.Type,Y,VARCHAR(127),line,,,Entity,Type,N,?,0,?,,,,,N
 7910,entity,_Entity.Polymer_common_type,Y,VARCHAR(31),line,,,Entity,Polymer_common_type,N,?,0,?,,,,,N
 7920,entity,_Entity.Polymer_type,Y,VARCHAR(31),line,,,Entity,Polymer_type,N,?,0,?,,,,,N
 7930,entity,_Entity.Polymer_type_details,,TEXT,text,,,Entity,Polymer_type_details,N,?,0,?,,,,,N
@@ -807,8 +807,8 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 8050,entity,_Entity.Nonpolymer_comp_ID,,CHAR(12),code,,,Entity,Nonpolymer_comp_ID,N,?,7,?,,,,,N
 8060,entity,_Entity.Nonpolymer_comp_label,,VARCHAR(127),framecode,,,Entity,Nonpolymer_comp_label,N,?,8,?,,,,,N
 8070,entity,_Entity.Number_of_monomers,,INTEGER,int,,,Entity,Number_of_monomers,N,?,0,?,,,,,N
-8080,entity,_Entity.Number_of_nonpolymer_components,,INTEGER,int,,,Entity,Number_of_nonpolymer_components,N,1,0,?,,,,,N
-8090,entity,_Entity.Paramagnetic,,BOOLEAN,yes_no,,,Entity,Paramagnetic,N,no,0,?,,,,,N
+8080,entity,_Entity.Number_of_nonpolymer_components,,INTEGER,int,,,Entity,Number_of_nonpolymer_components,N,?,0,?,,,,,N
+8090,entity,_Entity.Paramagnetic,,BOOLEAN,yes_no,,,Entity,Paramagnetic,N,?,0,?,,,,,N
 8100,entity,_Entity.Thiol_state,N,VARCHAR(127),line,,,Entity,Thiol_state,N,?,0,?,,,,,N
 8110,entity,_Entity.Src_method,,VARCHAR(127),line,,,Entity,Src_method,N,?,0,?,,,,,N
 8120,entity,_Entity.Parent_entity_ID,,INTEGER,int,,,Entity,Parent_entity_ID,N,?,0,?,,,,,N
@@ -823,7 +823,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 8210,entity,_Entity.DB_query_date,,DATETIME year to day,yyyy-mm-dd,,,Entity,DB_query_date,N,?,0,?,,,,,N
 8220,entity,_Entity.DB_query_revised_last_date,,DATETIME year to day,yyyy-mm-dd,,,Entity,DB_query_revised_last_date,N,?,0,?,,,,,N
 8230,entity,_Entity_db_link.Ordinal,,INTEGER,int,,,Entity_db_link,Ordinal,Y,?,0,?,,,,,N
-8240,entity,_Entity_db_link.Author_supplied,,BOOLEAN,yes_no,,,Entity_db_link,Author_supplied,Y,yes,0,?,,,,,N
+8240,entity,_Entity_db_link.Author_supplied,,BOOLEAN,yes_no,,,Entity_db_link,Author_supplied,Y,?,0,?,,,,,N
 8250,entity,_Entity_db_link.Database_code,N,VARCHAR(127),line,NOT NULL,Y,Entity_db_link,Database_code,Y,?,0,?,,,,,N
 8260,entity,_Entity_db_link.Accession_code,,VARCHAR(31),line,NOT NULL,Y,Entity_db_link,Accession_code,Y,?,0,?,,,,,N
 8270,entity,_Entity_db_link.Entry_mol_code,,VARCHAR(127),line,,,Entity_db_link,Entry_mol_code,Y,?,0,?,,,,,N
@@ -935,7 +935,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 9330,natural_source,_Entity_natural_src.Entity_label,,VARCHAR(127),framecode,NOT NULL,,Entity_natural_src,Entity_label,Y,?,8,?,,,,,N
 9340,natural_source,_Entity_natural_src.Entity_chimera_segment_ID,,INTEGER,int,,,Entity_natural_src,Entity_chimera_segment_ID,Y,?,0,?,,,,,N
 9350,natural_source,_Entity_natural_src.NCBI_taxonomy_ID,,CHAR(12),code,,,Entity_natural_src,NCBI_taxonomy_ID,Y,?,0,?,,,,,N
-9360,natural_source,_Entity_natural_src.Type,N,VARCHAR(31),line,,,Entity_natural_src,Type,Y,organism,0,?,,,,,N
+9360,natural_source,_Entity_natural_src.Type,N,VARCHAR(31),line,,,Entity_natural_src,Type,Y,?,0,?,,,,,N
 9370,natural_source,_Entity_natural_src.Common,,BOOLEAN,yes_no,,,Entity_natural_src,Common,Y,?,0,?,,,,,N
 9380,natural_source,_Entity_natural_src.Organism_name_scientific,N,VARCHAR(127),line,,,Entity_natural_src,Organism_name_scientific,Y,?,0,?,,,,,N
 9390,natural_source,_Entity_natural_src.Organism_name_common,,VARCHAR(127),line,,,Entity_natural_src,Organism_name_common,Y,?,0,?,,,,,N
@@ -1012,7 +1012,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 10100,experimental_source,_Entity_experimental_src.Host_org_gene,,VARCHAR(127),line,,,Entity_experimental_src,Host_org_gene,Y,?,0,?,,,,,Y
 10110,experimental_source,_Entity_experimental_src.Host_org_culture_collection,,VARCHAR(127),line,,,Entity_experimental_src,Host_org_culture_collection,Y,?,0,?,,,,,Y
 10120,experimental_source,_Entity_experimental_src.Host_org_ATCC_number,,VARCHAR(127),line,,,Entity_experimental_src,Host_org_ATCC_number,Y,?,0,?,,,,,N
-10130,experimental_source,_Entity_experimental_src.Vector_type,N,VARCHAR(127),line,,,Entity_experimental_src,Vector_type,Y,plasmid,0,?,,,,,N
+10130,experimental_source,_Entity_experimental_src.Vector_type,N,VARCHAR(127),line,,,Entity_experimental_src,Vector_type,Y,?,0,?,,,,,N
 10140,experimental_source,_Entity_experimental_src.PDBview_host_org_vector_name,,VARCHAR(127),line,,,Entity_experimental_src,PDBview_host_org_vector_name,Y,?,0,?,,,,,N
 10150,experimental_source,_Entity_experimental_src.PDBview_plasmid_name,,VARCHAR(127),line,,,Entity_experimental_src,PDBview_plasmid_name,Y,?,0,?,,,,,N
 10160,experimental_source,_Entity_experimental_src.Vector_name,,VARCHAR(127),line,,,Entity_experimental_src,Vector_name,Y,?,0,?,,,,,N
@@ -1243,15 +1243,15 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 12410,chem_comp,_Chem_comp_citation.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_comp_citation,Entry_ID,Y,?,3,?,,,,,N
 12420,chem_comp,_Chem_comp_citation.Comp_ID,,CHAR(12),code,NOT NULL,Y,Chem_comp_citation,Comp_ID,Y,?,5,?,,,,,N
 12430,sample,_Sample.Sf_category,,VARCHAR(127),code,NOT NULL,,Sample,Sf_category,N,?,1,?,,,,,N
-12440,sample,_Sample.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Sample,Sf_framecode,N,sample_1,2,?,,,,,N
+12440,sample,_Sample.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Sample,Sf_framecode,N,?,2,?,,,,,N
 12450,sample,_Sample.Entry_ID,,CHAR(12),code,NOT NULL,Y,Sample,Entry_ID,N,?,3,?,,,,,N
 12460,sample,_Sample.Sf_ID,,INTEGER,int,NOT NULL,,Sample,Sf_ID,N,?,4,?,,,,Y,N
 12470,sample,_Sample.ID,,INTEGER,int,NOT NULL,Y,Sample,ID,N,?,5,?,,,,,N
 12480,sample,_Sample.Name,,VARCHAR(127),line,,,Sample,Name,N,?,0,?,,,,,N
-12490,sample,_Sample.Type,N,VARCHAR(127),line,NOT NULL,,Sample,Type,N,solution,0,?,,,,,N
+12490,sample,_Sample.Type,N,VARCHAR(127),line,NOT NULL,,Sample,Type,N,?,0,?,,,,,N
 12500,sample,_Sample.Sub_type,,VARCHAR(127),line,,,Sample,Sub_type,N,?,0,?,,,,,N
 12510,sample,_Sample.Details,,TEXT,text,,,Sample,Details,N,?,0,?,,,,,N
-12520,sample,_Sample.Aggregate_sample_number,,INTEGER,int,,,Sample,Aggregate_sample_number,N,1,0,?,,,,,N
+12520,sample,_Sample.Aggregate_sample_number,,INTEGER,int,,,Sample,Aggregate_sample_number,N,?,0,?,,,,,N
 12530,sample,_Sample.Solvent_system,N,VARCHAR(127),line,,,Sample,Solvent_system,N,?,0,?,,,,,N
 12540,sample,_Sample.Preparation_date,,DATETIME year to day,yyyy-mm-dd,,,Sample,Preparation_date,N,?,0,?,,,,,N
 12550,sample,_Sample.Preparation_expiration_date,,DATETIME year to day,yyyy-mm-dd,,,Sample,Preparation_expiration_date,N,?,0,?,,,,,N
@@ -1322,7 +1322,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 13200,sample,_Sample_citation.Entry_ID,,CHAR(12),code,NOT NULL,Y,Sample_citation,Entry_ID,Y,?,3,?,,,,,N
 13210,sample,_Sample_citation.Sample_ID,,INTEGER,int,NOT NULL,Y,Sample_citation,Sample_ID,Y,?,5,?,,,,,N
 13220,sample_conditions,_Sample_condition_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Sample_condition_list,Sf_category,N,?,1,?,,,,,N
-13230,sample_conditions,_Sample_condition_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Sample_condition_list,Sf_framecode,N,sample_conditions_1,2,?,,,,,N
+13230,sample_conditions,_Sample_condition_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Sample_condition_list,Sf_framecode,N,?,2,?,,,,,N
 13240,sample_conditions,_Sample_condition_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Sample_condition_list,Entry_ID,N,?,3,?,,,,,N
 13250,sample_conditions,_Sample_condition_list.Sf_ID,,INTEGER,int,NOT NULL,,Sample_condition_list,Sf_ID,N,?,4,?,,,,Y,N
 13260,sample_conditions,_Sample_condition_list.ID,,INTEGER,int,NOT NULL,Y,Sample_condition_list,ID,N,?,5,?,,,,,N
@@ -1348,7 +1348,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 13460,molecule_purity,_Entity_purity_list.Details,,TEXT,text,,,Entity_purity_list,Details,N,?,0,?,,,,,N
 13470,molecule_purity,_Entity_purity.ID,,INTEGER,int,NOT NULL,Y,Entity_purity,ID,Y,?,6,?,,,,,N
 13480,molecule_purity,_Entity_purity.Sample_ID,,INTEGER,int,,,Entity_purity,Sample_ID,Y,?,7,?,,,,,N
-13490,molecule_purity,_Entity_purity.Sample_label,,VARCHAR(127),framecode,,,Entity_purity,Sample_label,Y,sample_1,8,?,,,,,N
+13490,molecule_purity,_Entity_purity.Sample_label,,VARCHAR(127),framecode,,,Entity_purity,Sample_label,Y,?,8,?,,,,,N
 13500,molecule_purity,_Entity_purity.Entity_ID,,INTEGER,int,NOT NULL,,Entity_purity,Entity_ID,Y,?,7,?,,,,,N
 13510,molecule_purity,_Entity_purity.Entity_label,,VARCHAR(127),framecode,NOT NULL,,Entity_purity,Entity_label,Y,?,8,?,,,,,N
 13520,molecule_purity,_Entity_purity.Val,,FLOAT,float,NOT NULL,,Entity_purity,Val,Y,?,0,?,,,,,N
@@ -1579,7 +1579,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 15770,NMR_spectrometer_list,_NMR_spectrometer_list.ID,,INTEGER,int,NOT NULL,Y,NMR_spectrometer_list,ID,N,?,5,?,,,,,N
 15780,NMR_spectrometer_list,_NMR_spectrometer_list.Name,,VARCHAR(127),line,,,NMR_spectrometer_list,Name,N,?,0,?,,,,,N
 15790,NMR_spectrometer_list,_NMR_spectrometer_view.ID,,INTEGER,int,NOT NULL,Y,NMR_spectrometer_view,ID,Y,?,6,?,,,,,N
-15800,NMR_spectrometer_list,_NMR_spectrometer_view.Name,,VARCHAR(127),line,NOT NULL,Y,NMR_spectrometer_view,Name,Y,spectrometer_1,0,?,,,,,N
+15800,NMR_spectrometer_list,_NMR_spectrometer_view.Name,,VARCHAR(127),line,NOT NULL,Y,NMR_spectrometer_view,Name,Y,?,0,?,,,,,N
 15810,NMR_spectrometer_list,_NMR_spectrometer_view.Manufacturer,N,VARCHAR(127),line,NOT NULL,,NMR_spectrometer_view,Manufacturer,Y,?,0,?,,,,,N
 15820,NMR_spectrometer_list,_NMR_spectrometer_view.Model,N,VARCHAR(127),line,NOT NULL,,NMR_spectrometer_view,Model,Y,?,0,?,,,,,N
 15830,NMR_spectrometer_list,_NMR_spectrometer_view.Serial_number,,VARCHAR(127),line,,,NMR_spectrometer_view,Serial_number,Y,?,0,?,,,,,N
@@ -1637,7 +1637,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 16350,experiment_list,_Experiment.EMR_expt_label,,VARCHAR(127),framecode,,,Experiment,EMR_expt_label,Y,?,8,?,,,,,N
 16360,experiment_list,_Experiment.Sample_ID,,INTEGER,int,,,Experiment,Sample_ID,Y,?,7,?,,,,,N
 16370,experiment_list,_Experiment.Sample_label,,VARCHAR(127),framecode,,,Experiment,Sample_label,Y,?,8,?,,,,,N
-16380,experiment_list,_Experiment.Sample_state,N,VARCHAR(31),line,,,Experiment,Sample_state,Y,isotropic,0,?,,,,,N
+16380,experiment_list,_Experiment.Sample_state,N,VARCHAR(31),line,,,Experiment,Sample_state,Y,?,0,?,,,,,N
 16390,experiment_list,_Experiment.Sample_volume,,FLOAT,float,,,Experiment,Sample_volume,Y,?,0,?,,,,,N
 16400,experiment_list,_Experiment.Sample_volume_units,,VARCHAR(31),line,,,Experiment,Sample_volume_units,Y,?,0,?,,,,,N
 16410,experiment_list,_Experiment.Sample_condition_list_ID,,INTEGER,int,,,Experiment,Sample_condition_list_ID,Y,?,7,?,,,,,N
@@ -1684,7 +1684,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 16820,NMR_spectrometer_expt,_NMR_spec_expt.Name,Y,VARCHAR(127),line,NOT NULL,,NMR_spec_expt,Name,N,?,0,?,,,,,N
 16830,NMR_spectrometer_expt,_NMR_spec_expt.Type,N,VARCHAR(127),line,,,NMR_spec_expt,Type,N,?,0,?,,,,,N
 16840,NMR_spectrometer_expt,_NMR_spec_expt.Sample_volume,,FLOAT,float,,,NMR_spec_expt,Sample_volume,N,?,0,?,,,,,N
-16850,NMR_spectrometer_expt,_NMR_spec_expt.Sample_volume_units,N,VARCHAR(15),code,,,NMR_spec_expt,Sample_volume_units,N,uL,0,?,,,,,N
+16850,NMR_spectrometer_expt,_NMR_spec_expt.Sample_volume_units,N,VARCHAR(15),code,,,NMR_spec_expt,Sample_volume_units,N,?,0,?,,,,,N
 16860,NMR_spectrometer_expt,_NMR_spec_expt.NMR_tube_type,N,VARCHAR(31),line,,,NMR_spec_expt,NMR_tube_type,N,?,0,?,,,,,N
 16870,NMR_spectrometer_expt,_NMR_spec_expt.Sample_spinning_rate,,FLOAT,float,,,NMR_spec_expt,Sample_spinning_rate,N,?,0,?,,,,,N
 16880,NMR_spectrometer_expt,_NMR_spec_expt.Sample_angle,,FLOAT,float,,,NMR_spec_expt,Sample_angle,N,?,0,?,,,,,N
@@ -1866,7 +1866,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 18640,computing_platform,_Computing_platform.Site_reference_ID,,INTEGER,int,,,Computing_platform,Site_reference_ID,N,?,0,?,,,,,N
 18650,computing_platform,_Computing_platform.Details,,TEXT,text,,,Computing_platform,Details,N,?,0,?,,,,,N
 18660,chem_shift_reference,_Chem_shift_reference.Sf_category,,VARCHAR(127),code,NOT NULL,,Chem_shift_reference,Sf_category,N,?,1,?,,,,,N
-18670,chem_shift_reference,_Chem_shift_reference.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_reference,Sf_framecode,N,chemical_shift_reference_1,2,?,,,,,N
+18670,chem_shift_reference,_Chem_shift_reference.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_reference,Sf_framecode,N,?,2,?,,,,,N
 18680,chem_shift_reference,_Chem_shift_reference.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_shift_reference,Entry_ID,N,?,3,?,,,,,N
 18690,chem_shift_reference,_Chem_shift_reference.Sf_ID,,INTEGER,int,NOT NULL,,Chem_shift_reference,Sf_ID,N,?,4,?,,,,Y,N
 18700,chem_shift_reference,_Chem_shift_reference.ID,,INTEGER,int,NOT NULL,Y,Chem_shift_reference,ID,N,?,5,?,,,,,N
@@ -1874,8 +1874,8 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 18720,chem_shift_reference,_Chem_shift_reference.Proton_shifts_flag,Y,VARCHAR(31),line,,,Chem_shift_reference,Proton_shifts_flag,N,?,0,?,,,,Y,N
 18730,chem_shift_reference,_Chem_shift_reference.Carbon_shifts_flag,Y,VARCHAR(31),line,,,Chem_shift_reference,Carbon_shifts_flag,N,?,0,?,,,,Y,N
 18740,chem_shift_reference,_Chem_shift_reference.Nitrogen_shifts_flag,Y,VARCHAR(31),line,,,Chem_shift_reference,Nitrogen_shifts_flag,N,?,0,?,,,,Y,N
-18750,chem_shift_reference,_Chem_shift_reference.Phosphorus_shifts_flag,Y,VARCHAR(31),line,,,Chem_shift_reference,Phosphorus_shifts_flag,N,no,0,?,,,,Y,N
-18760,chem_shift_reference,_Chem_shift_reference.Other_shifts_flag,,BOOLEAN,yes_no,,,Chem_shift_reference,Other_shifts_flag,N,no,0,?,,,,Y,N
+18750,chem_shift_reference,_Chem_shift_reference.Phosphorus_shifts_flag,Y,VARCHAR(31),line,,,Chem_shift_reference,Phosphorus_shifts_flag,N,?,0,?,,,,Y,N
+18760,chem_shift_reference,_Chem_shift_reference.Other_shifts_flag,,BOOLEAN,yes_no,,,Chem_shift_reference,Other_shifts_flag,N,?,0,?,,,,Y,N
 18770,chem_shift_reference,_Chem_shift_reference.Details,,TEXT,text,,,Chem_shift_reference,Details,N,?,0,?,,,,,N
 18780,chem_shift_reference,_Chem_shift_ref.Atom_type,Y,VARCHAR(15),code,NOT NULL,Y,Chem_shift_ref,Atom_type,Y,?,0,?,,,,,N
 18790,chem_shift_reference,_Chem_shift_ref.Atom_isotope_number,,INTEGER,int,NOT NULL,Y,Chem_shift_ref,Atom_isotope_number,Y,?,0,?,,,,,N
@@ -1889,7 +1889,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 18870,chem_shift_reference,_Chem_shift_ref.Chem_shift_val,,FLOAT,float,NOT NULL,,Chem_shift_ref,Chem_shift_val,Y,?,0,?,,,,,N
 18880,chem_shift_reference,_Chem_shift_ref.Ref_method,Y,VARCHAR(127),line,,,Chem_shift_ref,Ref_method,Y,?,0,?,,,,,N
 18890,chem_shift_reference,_Chem_shift_ref.Ref_type,Y,VARCHAR(127),line,,,Chem_shift_ref,Ref_type,Y,?,0,?,,,,,N
-18900,chem_shift_reference,_Chem_shift_ref.Indirect_shift_ratio,,FLOAT,float,,,Chem_shift_ref,Indirect_shift_ratio,Y,1,0,?,,,,,N
+18900,chem_shift_reference,_Chem_shift_ref.Indirect_shift_ratio,,FLOAT,float,,,Chem_shift_ref,Indirect_shift_ratio,Y,?,0,?,,,,,N
 18910,chem_shift_reference,_Chem_shift_ref.External_ref_loc,N,VARCHAR(127),line,,,Chem_shift_ref,External_ref_loc,Y,?,0,?,,,,,N
 18920,chem_shift_reference,_Chem_shift_ref.External_ref_sample_geometry,N,VARCHAR(127),line,,,Chem_shift_ref,External_ref_sample_geometry,Y,?,0,?,,,,,N
 18930,chem_shift_reference,_Chem_shift_ref.External_ref_axis,N,VARCHAR(127),line,,,Chem_shift_ref,External_ref_axis,Y,?,0,?,,,,,N
@@ -1903,7 +1903,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 19010,chem_shift_reference,_Chem_shift_ref.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_shift_ref,Entry_ID,Y,?,3,?,,,,,N
 19020,chem_shift_reference,_Chem_shift_ref.Chem_shift_reference_ID,,INTEGER,int,NOT NULL,Y,Chem_shift_ref,Chem_shift_reference_ID,Y,?,5,?,,,,,N
 19030,assigned_chemical_shifts,_Assigned_chem_shift_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Assigned_chem_shift_list,Sf_category,N,?,1,?,,,,,N
-19040,assigned_chemical_shifts,_Assigned_chem_shift_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Assigned_chem_shift_list,Sf_framecode,N,assigned_chem_shift_list_1,2,?,,,,,N
+19040,assigned_chemical_shifts,_Assigned_chem_shift_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Assigned_chem_shift_list,Sf_framecode,N,?,2,?,,,,,N
 19050,assigned_chemical_shifts,_Assigned_chem_shift_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Assigned_chem_shift_list,Entry_ID,N,?,3,?,,,,,N
 19060,assigned_chemical_shifts,_Assigned_chem_shift_list.Sf_ID,,INTEGER,int,NOT NULL,,Assigned_chem_shift_list,Sf_ID,N,?,4,?,,,,Y,N
 19070,assigned_chemical_shifts,_Assigned_chem_shift_list.ID,,INTEGER,int,NOT NULL,Y,Assigned_chem_shift_list,ID,N,?,5,?,,,,,N
@@ -2013,7 +2013,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 20110,chem_shifts_calc_type,_Chem_shifts_calc_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_shifts_calc_software,Entry_ID,Y,?,3,?,,,,,N
 20120,chem_shifts_calc_type,_Chem_shifts_calc_software.Chem_shifts_calc_type_ID,,INTEGER,int,NOT NULL,Y,Chem_shifts_calc_software,Chem_shifts_calc_type_ID,Y,?,5,?,,,,,N
 20130,theoretical_chem_shifts,_Theoretical_chem_shift_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Theoretical_chem_shift_list,Sf_category,N,?,1,?,,,,,N
-20140,theoretical_chem_shifts,_Theoretical_chem_shift_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_chem_shift_list,Sf_framecode,N,theoretical_chem_shift_list_1,2,?,,,,,N
+20140,theoretical_chem_shifts,_Theoretical_chem_shift_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_chem_shift_list,Sf_framecode,N,?,2,?,,,,,N
 20150,theoretical_chem_shifts,_Theoretical_chem_shift_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_chem_shift_list,Entry_ID,N,?,3,?,,,,,N
 20160,theoretical_chem_shifts,_Theoretical_chem_shift_list.Sf_ID,,INTEGER,int,NOT NULL,,Theoretical_chem_shift_list,Sf_ID,N,?,4,?,,,,Y,N
 20170,theoretical_chem_shifts,_Theoretical_chem_shift_list.ID,,INTEGER,int,NOT NULL,Y,Theoretical_chem_shift_list,ID,N,?,5,?,,,,,N
@@ -2057,7 +2057,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 20550,theoretical_chem_shifts,_Theoretical_chem_shift.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_chem_shift,Entry_ID,Y,?,3,?,,,,,N
 20560,theoretical_chem_shifts,_Theoretical_chem_shift.Theoretical_chem_shift_list_ID,,INTEGER,int,NOT NULL,Y,Theoretical_chem_shift,Theoretical_chem_shift_list_ID,Y,?,5,?,,,,,N
 20570,coupling_constants,_Coupling_constant_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Coupling_constant_list,Sf_category,N,?,1,?,,,,,N
-20580,coupling_constants,_Coupling_constant_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Coupling_constant_list,Sf_framecode,N,coupling_constant_list_1,2,?,,,,,N
+20580,coupling_constants,_Coupling_constant_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Coupling_constant_list,Sf_framecode,N,?,2,?,,,,,N
 20590,coupling_constants,_Coupling_constant_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Coupling_constant_list,Entry_ID,N,?,3,?,,,,,N
 20600,coupling_constants,_Coupling_constant_list.Sf_ID,,INTEGER,int,NOT NULL,,Coupling_constant_list,Sf_ID,N,?,4,?,,,,Y,N
 20610,coupling_constants,_Coupling_constant_list.ID,,INTEGER,int,NOT NULL,Y,Coupling_constant_list,ID,N,?,5,?,,,,,N
@@ -2127,7 +2127,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 21250,coupling_constants,_Coupling_constant.Entry_ID,,CHAR(12),code,NOT NULL,Y,Coupling_constant,Entry_ID,Y,?,3,?,,,,,N
 21260,coupling_constants,_Coupling_constant.Coupling_constant_list_ID,,INTEGER,int,NOT NULL,Y,Coupling_constant,Coupling_constant_list_ID,Y,?,5,?,,,,,N
 21270,theoretical_coupling_constants,_Theoretical_coupling_constant_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Theoretical_coupling_constant_list,Sf_category,N,?,1,?,,,,,N
-21280,theoretical_coupling_constants,_Theoretical_coupling_constant_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_coupling_constant_list,Sf_framecode,N,coupling_constant_list_1,2,?,,,,,N
+21280,theoretical_coupling_constants,_Theoretical_coupling_constant_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_coupling_constant_list,Sf_framecode,N,?,2,?,,,,,N
 21290,theoretical_coupling_constants,_Theoretical_coupling_constant_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_coupling_constant_list,Entry_ID,N,?,3,?,,,,,N
 21300,theoretical_coupling_constants,_Theoretical_coupling_constant_list.Sf_ID,,INTEGER,int,NOT NULL,,Theoretical_coupling_constant_list,Sf_ID,N,?,4,?,,,,Y,N
 21310,theoretical_coupling_constants,_Theoretical_coupling_constant_list.ID,,INTEGER,int,NOT NULL,Y,Theoretical_coupling_constant_list,ID,N,?,5,?,,,,,N
@@ -2195,7 +2195,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 21930,theoretical_coupling_constants,_Theoretical_coupling_constant.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_coupling_constant,Entry_ID,Y,?,3,?,,,,,N
 21940,theoretical_coupling_constants,_Theoretical_coupling_constant.Theoretical_coupling_constant_list_ID,,INTEGER,int,NOT NULL,Y,Theoretical_coupling_constant,Theoretical_coupling_constant_list_ID,Y,?,5,?,,,,,N
 21950,spectral_peak_list,_Spectral_peak_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Spectral_peak_list,Sf_category,N,?,1,?,,,,,N
-21960,spectral_peak_list,_Spectral_peak_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Spectral_peak_list,Sf_framecode,N,spectral_peak_list_1,2,?,,,,,N
+21960,spectral_peak_list,_Spectral_peak_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Spectral_peak_list,Sf_framecode,N,?,2,?,,,,,N
 21970,spectral_peak_list,_Spectral_peak_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Spectral_peak_list,Entry_ID,N,?,3,?,,,,,N
 21980,spectral_peak_list,_Spectral_peak_list.Sf_ID,,INTEGER,int,NOT NULL,,Spectral_peak_list,Sf_ID,N,?,4,?,,,,Y,N
 21990,spectral_peak_list,_Spectral_peak_list.ID,,INTEGER,int,NOT NULL,Y,Spectral_peak_list,ID,N,?,5,?,,,,,N
@@ -2731,7 +2731,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 27290,resonance_linker,_Spin_system_link.Entry_ID,,CHAR(12),code,NOT NULL,Y,Spin_system_link,Entry_ID,Y,?,3,?,,,,,N
 27300,resonance_linker,_Spin_system_link.Resonance_linker_list_ID,,INTEGER,int,NOT NULL,Y,Spin_system_link,Resonance_linker_list_ID,Y,?,5,?,,,,,N
 27310,chem_shift_isotope_effect,_Chem_shift_isotope_effect_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Chem_shift_isotope_effect_list,Sf_category,N,?,1,?,,,,,N
-27320,chem_shift_isotope_effect,_Chem_shift_isotope_effect_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_isotope_effect_list,Sf_framecode,N,chem_shift_isotope_effect_list_1,2,?,,,,,N
+27320,chem_shift_isotope_effect,_Chem_shift_isotope_effect_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_isotope_effect_list,Sf_framecode,N,?,2,?,,,,,N
 27330,chem_shift_isotope_effect,_Chem_shift_isotope_effect_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_shift_isotope_effect_list,Entry_ID,N,?,3,?,,,,,N
 27340,chem_shift_isotope_effect,_Chem_shift_isotope_effect_list.Sf_ID,,INTEGER,int,NOT NULL,,Chem_shift_isotope_effect_list,Sf_ID,N,?,4,?,,,,Y,N
 27350,chem_shift_isotope_effect,_Chem_shift_isotope_effect_list.ID,,INTEGER,int,NOT NULL,Y,Chem_shift_isotope_effect_list,ID,N,?,5,?,,,,,N
@@ -2806,7 +2806,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 28040,chem_shift_isotope_effect,_Isotope_label_pattern.Entry_ID,,CHAR(12),code,NOT NULL,Y,Isotope_label_pattern,Entry_ID,Y,?,3,?,,,,,N
 28050,chem_shift_isotope_effect,_Isotope_label_pattern.Chem_shift_isotope_effect_list_ID,,INTEGER,int,NOT NULL,Y,Isotope_label_pattern,Chem_shift_isotope_effect_list_ID,Y,?,5,?,,,,,N
 28060,chem_shift_perturbation,_Chem_shift_perturbation_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Chem_shift_perturbation_list,Sf_category,N,?,1,?,,,,,N
-28070,chem_shift_perturbation,_Chem_shift_perturbation_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_perturbation_list,Sf_framecode,N,mol_interaction_chem_shift_list_1,2,?,,,,,N
+28070,chem_shift_perturbation,_Chem_shift_perturbation_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_perturbation_list,Sf_framecode,N,?,2,?,,,,,N
 28080,chem_shift_perturbation,_Chem_shift_perturbation_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_shift_perturbation_list,Entry_ID,N,?,3,?,,,,,N
 28090,chem_shift_perturbation,_Chem_shift_perturbation_list.Sf_ID,,INTEGER,int,NOT NULL,,Chem_shift_perturbation_list,Sf_ID,N,?,4,?,,,,Y,N
 28100,chem_shift_perturbation,_Chem_shift_perturbation_list.ID,,INTEGER,int,NOT NULL,Y,Chem_shift_perturbation_list,ID,N,?,5,?,,,,,N
@@ -2862,7 +2862,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 28600,chem_shift_perturbation,_Chem_shift_perturbation.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_shift_perturbation,Entry_ID,Y,?,3,?,,,,,N
 28610,chem_shift_perturbation,_Chem_shift_perturbation.Chem_shift_perturbation_list_ID,,INTEGER,int,NOT NULL,Y,Chem_shift_perturbation,Chem_shift_perturbation_list_ID,Y,?,5,?,,,,,N
 28620,chem_shift_anisotropy,_Chem_shift_anisotropy.Sf_category,,VARCHAR(127),code,NOT NULL,,Chem_shift_anisotropy,Sf_category,N,?,1,?,,,,,N
-28630,chem_shift_anisotropy,_Chem_shift_anisotropy.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_anisotropy,Sf_framecode,N,chem_shift_anisotropy_list_1,2,?,,,,,N
+28630,chem_shift_anisotropy,_Chem_shift_anisotropy.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chem_shift_anisotropy,Sf_framecode,N,?,2,?,,,,,N
 28640,chem_shift_anisotropy,_Chem_shift_anisotropy.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chem_shift_anisotropy,Entry_ID,N,?,3,?,,,,,N
 28650,chem_shift_anisotropy,_Chem_shift_anisotropy.Sf_ID,,INTEGER,int,NOT NULL,,Chem_shift_anisotropy,Sf_ID,N,?,4,?,,,,Y,N
 28660,chem_shift_anisotropy,_Chem_shift_anisotropy.ID,,INTEGER,int,NOT NULL,Y,Chem_shift_anisotropy,ID,N,?,5,?,,,,,N
@@ -2918,7 +2918,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 29160,chem_shift_anisotropy,_CS_anisotropy.Entry_ID,,CHAR(12),code,NOT NULL,Y,CS_anisotropy,Entry_ID,Y,?,3,?,,,,,N
 29170,chem_shift_anisotropy,_CS_anisotropy.Chem_shift_anisotropy_ID,,INTEGER,int,NOT NULL,Y,CS_anisotropy,Chem_shift_anisotropy_ID,Y,?,5,?,,,,,N
 29180,RDCs,_RDC_list.Sf_category,,VARCHAR(127),code,NOT NULL,,RDC_list,Sf_category,N,?,1,?,,,,,N
-29190,RDCs,_RDC_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,RDC_list,Sf_framecode,N,RDC_list_1,2,?,,,,,N
+29190,RDCs,_RDC_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,RDC_list,Sf_framecode,N,?,2,?,,,,,N
 29200,RDCs,_RDC_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,RDC_list,Entry_ID,N,?,3,?,,,,,N
 29210,RDCs,_RDC_list.Sf_ID,,INTEGER,int,NOT NULL,,RDC_list,Sf_ID,N,?,4,?,,,,Y,N
 29220,RDCs,_RDC_list.ID,,INTEGER,int,NOT NULL,Y,RDC_list,ID,N,?,5,?,,,,,N
@@ -2994,7 +2994,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 29920,RDCs,_RDC.Entry_ID,,CHAR(12),code,NOT NULL,Y,RDC,Entry_ID,Y,?,3,?,,,,,N
 29930,RDCs,_RDC.RDC_list_ID,,INTEGER,int,NOT NULL,Y,RDC,RDC_list_ID,Y,?,5,?,,,,,N
 29940,dipolar_couplings,_Dipolar_coupling_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Dipolar_coupling_list,Sf_category,N,?,1,?,,,,,N
-29950,dipolar_couplings,_Dipolar_coupling_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Dipolar_coupling_list,Sf_framecode,N,dipolar_coupling_list_1,2,?,,,,,N
+29950,dipolar_couplings,_Dipolar_coupling_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Dipolar_coupling_list,Sf_framecode,N,?,2,?,,,,,N
 29960,dipolar_couplings,_Dipolar_coupling_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Dipolar_coupling_list,Entry_ID,N,?,3,?,,,,,N
 29970,dipolar_couplings,_Dipolar_coupling_list.Sf_ID,,INTEGER,int,NOT NULL,,Dipolar_coupling_list,Sf_ID,N,?,4,?,,,,Y,N
 29980,dipolar_couplings,_Dipolar_coupling_list.ID,,INTEGER,int,NOT NULL,Y,Dipolar_coupling_list,ID,N,?,5,?,,,,,N
@@ -3066,7 +3066,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 30640,dipolar_couplings,_Dipolar_coupling.Entry_ID,,CHAR(12),code,NOT NULL,Y,Dipolar_coupling,Entry_ID,Y,?,3,?,,,,,N
 30650,dipolar_couplings,_Dipolar_coupling.Dipolar_coupling_list_ID,,INTEGER,int,NOT NULL,Y,Dipolar_coupling,Dipolar_coupling_list_ID,Y,?,5,?,,,,,N
 30660,spectral_density_values,_Spectral_density_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Spectral_density_list,Sf_category,N,?,1,?,,,,,N
-30670,spectral_density_values,_Spectral_density_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Spectral_density_list,Sf_framecode,N,spectral_density_list_1,2,?,,,,,N
+30670,spectral_density_values,_Spectral_density_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Spectral_density_list,Sf_framecode,N,?,2,?,,,,,N
 30680,spectral_density_values,_Spectral_density_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Spectral_density_list,Entry_ID,N,?,3,?,,,,,N
 30690,spectral_density_values,_Spectral_density_list.Sf_ID,,INTEGER,int,NOT NULL,,Spectral_density_list,Sf_ID,N,?,4,?,,,,Y,N
 30700,spectral_density_values,_Spectral_density_list.ID,,INTEGER,int,NOT NULL,Y,Spectral_density_list,ID,N,?,5,?,,,,,N
@@ -3167,7 +3167,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 31650,other_data_types,_Other_data.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_data,Entry_ID,Y,?,3,?,,,,,N
 31660,other_data_types,_Other_data.Other_data_type_list_ID,,INTEGER,int,NOT NULL,Y,Other_data,Other_data_type_list_ID,Y,?,5,?,,,,,N
 31670,chemical_rates,_Chemical_rate_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Chemical_rate_list,Sf_category,N,?,1,?,,,,,N
-31680,chemical_rates,_Chemical_rate_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chemical_rate_list,Sf_framecode,N,kinetic_rates,2,?,,,,,N
+31680,chemical_rates,_Chemical_rate_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Chemical_rate_list,Sf_framecode,N,?,2,?,,,,,N
 31690,chemical_rates,_Chemical_rate_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chemical_rate_list,Entry_ID,N,?,3,?,,,,,N
 31700,chemical_rates,_Chemical_rate_list.Sf_ID,,INTEGER,int,NOT NULL,,Chemical_rate_list,Sf_ID,N,?,4,?,,,,Y,N
 31710,chemical_rates,_Chemical_rate_list.ID,,INTEGER,int,NOT NULL,Y,Chemical_rate_list,ID,N,?,5,?,,,,,N
@@ -3219,7 +3219,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 32170,chemical_rates,_Chemical_rate.Entry_ID,,CHAR(12),code,NOT NULL,Y,Chemical_rate,Entry_ID,Y,?,3,?,,,,,N
 32180,chemical_rates,_Chemical_rate.Chemical_rate_list_ID,,INTEGER,int,NOT NULL,Y,Chemical_rate,Chemical_rate_list_ID,Y,?,5,?,,,,,N
 32190,H_exch_rates,_H_exch_rate_list.Sf_category,,VARCHAR(127),code,NOT NULL,,H_exch_rate_list,Sf_category,N,?,1,?,,,,,N
-32200,H_exch_rates,_H_exch_rate_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,H_exch_rate_list,Sf_framecode,N,H_exch_rate_list_1,2,?,,,,,N
+32200,H_exch_rates,_H_exch_rate_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,H_exch_rate_list,Sf_framecode,N,?,2,?,,,,,N
 32210,H_exch_rates,_H_exch_rate_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,H_exch_rate_list,Entry_ID,N,?,3,?,,,,,N
 32220,H_exch_rates,_H_exch_rate_list.Sf_ID,,INTEGER,int,NOT NULL,,H_exch_rate_list,Sf_ID,N,?,4,?,,,,Y,N
 32230,H_exch_rates,_H_exch_rate_list.ID,,INTEGER,int,NOT NULL,Y,H_exch_rate_list,ID,N,?,5,?,,,,,N
@@ -3269,7 +3269,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 32670,H_exch_rates,_H_exch_rate.Entry_ID,,CHAR(12),code,NOT NULL,Y,H_exch_rate,Entry_ID,Y,?,3,?,,,,,N
 32680,H_exch_rates,_H_exch_rate.H_exch_rate_list_ID,,INTEGER,int,NOT NULL,Y,H_exch_rate,H_exch_rate_list_ID,Y,?,5,?,,,,,N
 32690,H_exch_protection_factors,_H_exch_protection_factor_list.Sf_category,,VARCHAR(127),code,NOT NULL,,H_exch_protection_factor_list,Sf_category,N,?,1,?,,,,,N
-32700,H_exch_protection_factors,_H_exch_protection_factor_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,H_exch_protection_factor_list,Sf_framecode,N,H_exch_protection_factor_list_1,2,?,,,,,N
+32700,H_exch_protection_factors,_H_exch_protection_factor_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,H_exch_protection_factor_list,Sf_framecode,N,?,2,?,,,,,N
 32710,H_exch_protection_factors,_H_exch_protection_factor_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,H_exch_protection_factor_list,Entry_ID,N,?,3,?,,,,,N
 32720,H_exch_protection_factors,_H_exch_protection_factor_list.Sf_ID,,INTEGER,int,NOT NULL,,H_exch_protection_factor_list,Sf_ID,N,?,4,?,,,,Y,N
 32730,H_exch_protection_factors,_H_exch_protection_factor_list.ID,,INTEGER,int,NOT NULL,Y,H_exch_protection_factor_list,ID,N,?,5,?,,,,,N
@@ -3319,7 +3319,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 33170,H_exch_protection_factors,_H_exch_protection_factor.Entry_ID,,CHAR(12),code,NOT NULL,Y,H_exch_protection_factor,Entry_ID,Y,?,3,?,,,,,N
 33180,H_exch_protection_factors,_H_exch_protection_factor.H_exch_protection_factor_list_ID,,INTEGER,int,NOT NULL,Y,H_exch_protection_factor,H_exch_protection_factor_list_ID,Y,?,5,?,,,,,N
 33190,homonucl_NOEs,_Homonucl_NOE_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Homonucl_NOE_list,Sf_category,N,?,1,?,,,,,N
-33200,homonucl_NOEs,_Homonucl_NOE_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Homonucl_NOE_list,Sf_framecode,N,homonuclear_NOE_list_1,2,?,,,,,N
+33200,homonucl_NOEs,_Homonucl_NOE_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Homonucl_NOE_list,Sf_framecode,N,?,2,?,,,,,N
 33210,homonucl_NOEs,_Homonucl_NOE_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Homonucl_NOE_list,Entry_ID,N,?,3,?,,,,,N
 33220,homonucl_NOEs,_Homonucl_NOE_list.Sf_ID,,INTEGER,int,NOT NULL,,Homonucl_NOE_list,Sf_ID,N,?,4,?,,,,Y,N
 33230,homonucl_NOEs,_Homonucl_NOE_list.ID,,INTEGER,int,NOT NULL,Y,Homonucl_NOE_list,ID,N,?,5,?,,,,,N
@@ -3385,7 +3385,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 33830,homonucl_NOEs,_Homonucl_NOE.Entry_ID,,CHAR(12),code,NOT NULL,Y,Homonucl_NOE,Entry_ID,Y,?,3,?,,,,,N
 33840,homonucl_NOEs,_Homonucl_NOE.Homonucl_NOE_list_ID,,INTEGER,int,NOT NULL,Y,Homonucl_NOE,Homonucl_NOE_list_ID,Y,?,5,?,,,,,N
 33850,heteronucl_NOEs,_Heteronucl_NOE_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Heteronucl_NOE_list,Sf_category,N,?,1,?,,,,,N
-33860,heteronucl_NOEs,_Heteronucl_NOE_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_NOE_list,Sf_framecode,N,heteronuclear_noe_list_1,2,?,,,,,N
+33860,heteronucl_NOEs,_Heteronucl_NOE_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_NOE_list,Sf_framecode,N,?,2,?,,,,,N
 33870,heteronucl_NOEs,_Heteronucl_NOE_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Heteronucl_NOE_list,Entry_ID,N,?,3,?,,,,,N
 33880,heteronucl_NOEs,_Heteronucl_NOE_list.Sf_ID,,INTEGER,int,NOT NULL,,Heteronucl_NOE_list,Sf_ID,N,?,4,?,,,,Y,N
 33890,heteronucl_NOEs,_Heteronucl_NOE_list.ID,,INTEGER,int,NOT NULL,Y,Heteronucl_NOE_list,ID,N,?,5,?,,,,,N
@@ -3450,7 +3450,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 34480,heteronucl_NOEs,_Heteronucl_NOE.Entry_ID,,CHAR(12),code,NOT NULL,Y,Heteronucl_NOE,Entry_ID,Y,?,3,?,,,,,N
 34490,heteronucl_NOEs,_Heteronucl_NOE.Heteronucl_NOE_list_ID,,INTEGER,int,NOT NULL,Y,Heteronucl_NOE,Heteronucl_NOE_list_ID,Y,?,5,?,,,,,N
 34500,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Theoretical_heteronucl_NOE_list,Sf_category,N,?,1,?,,,,,N
-34510,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_heteronucl_NOE_list,Sf_framecode,N,heteronuclear_noe_list_1,2,?,,,,,N
+34510,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_heteronucl_NOE_list,Sf_framecode,N,?,2,?,,,,,N
 34520,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_heteronucl_NOE_list,Entry_ID,N,?,3,?,,,,,N
 34530,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE_list.Sf_ID,,INTEGER,int,NOT NULL,,Theoretical_heteronucl_NOE_list,Sf_ID,N,?,4,?,,,,Y,N
 34540,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE_list.ID,,INTEGER,int,NOT NULL,Y,Theoretical_heteronucl_NOE_list,ID,N,?,5,?,,,,,N
@@ -3515,7 +3515,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 35130,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_heteronucl_NOE,Entry_ID,Y,?,3,?,,,,,N
 35140,theoretical_heteronucl_NOEs,_Theoretical_heteronucl_NOE.Theoretical_heteronucl_NOE_list_ID,,INTEGER,int,NOT NULL,Y,Theoretical_heteronucl_NOE,Theoretical_heteronucl_NOE_list_ID,Y,?,5,?,,,,,N
 35150,heteronucl_T1_relaxation,_Heteronucl_T1_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Heteronucl_T1_list,Sf_category,N,?,1,?,,,,,N
-35160,heteronucl_T1_relaxation,_Heteronucl_T1_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_T1_list,Sf_framecode,N,heteronuclear_T1_list_1,2,?,,,,,N
+35160,heteronucl_T1_relaxation,_Heteronucl_T1_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_T1_list,Sf_framecode,N,?,2,?,,,,,N
 35170,heteronucl_T1_relaxation,_Heteronucl_T1_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Heteronucl_T1_list,Entry_ID,N,?,3,?,,,,,N
 35180,heteronucl_T1_relaxation,_Heteronucl_T1_list.Sf_ID,,INTEGER,int,NOT NULL,,Heteronucl_T1_list,Sf_ID,N,?,4,?,,,,Y,N
 35190,heteronucl_T1_relaxation,_Heteronucl_T1_list.ID,,INTEGER,int,NOT NULL,Y,Heteronucl_T1_list,ID,N,?,5,?,,,,,N
@@ -3565,7 +3565,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 35630,heteronucl_T1_relaxation,_T1.Entry_ID,,CHAR(12),code,NOT NULL,Y,T1,Entry_ID,Y,?,3,?,,,,,N
 35640,heteronucl_T1_relaxation,_T1.Heteronucl_T1_list_ID,,INTEGER,int,NOT NULL,Y,T1,Heteronucl_T1_list_ID,Y,?,5,?,,,,,N
 35650,theoretical_heteronucl_T1_relaxation,_Theoretical_heteronucl_T1_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Theoretical_heteronucl_T1_list,Sf_category,N,?,1,?,,,,,N
-35660,theoretical_heteronucl_T1_relaxation,_Theoretical_heteronucl_T1_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_heteronucl_T1_list,Sf_framecode,N,heteronuclear_T1_list_1,2,?,,,,,N
+35660,theoretical_heteronucl_T1_relaxation,_Theoretical_heteronucl_T1_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_heteronucl_T1_list,Sf_framecode,N,?,2,?,,,,,N
 35670,theoretical_heteronucl_T1_relaxation,_Theoretical_heteronucl_T1_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_heteronucl_T1_list,Entry_ID,N,?,3,?,,,,,N
 35680,theoretical_heteronucl_T1_relaxation,_Theoretical_heteronucl_T1_list.Sf_ID,,INTEGER,int,NOT NULL,,Theoretical_heteronucl_T1_list,Sf_ID,N,?,4,?,,,,Y,N
 35690,theoretical_heteronucl_T1_relaxation,_Theoretical_heteronucl_T1_list.ID,,INTEGER,int,NOT NULL,Y,Theoretical_heteronucl_T1_list,ID,N,?,5,?,,,,,N
@@ -3615,7 +3615,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 36130,theoretical_heteronucl_T1_relaxation,_Theoretical_T1.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_T1,Entry_ID,Y,?,3,?,,,,,N
 36140,theoretical_heteronucl_T1_relaxation,_Theoretical_T1.Theoretical_heteronucl_T1_list_ID,,INTEGER,int,NOT NULL,Y,Theoretical_T1,Theoretical_heteronucl_T1_list_ID,Y,?,5,?,,,,,N
 36150,heteronucl_T1rho_relaxation,_Heteronucl_T1rho_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Heteronucl_T1rho_list,Sf_category,N,?,1,?,,,,,N
-36160,heteronucl_T1rho_relaxation,_Heteronucl_T1rho_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_T1rho_list,Sf_framecode,N,heteronuclear_T1rho_list_1,2,?,,,,,N
+36160,heteronucl_T1rho_relaxation,_Heteronucl_T1rho_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_T1rho_list,Sf_framecode,N,?,2,?,,,,,N
 36170,heteronucl_T1rho_relaxation,_Heteronucl_T1rho_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Heteronucl_T1rho_list,Entry_ID,N,?,3,?,,,,,N
 36180,heteronucl_T1rho_relaxation,_Heteronucl_T1rho_list.Sf_ID,,INTEGER,int,NOT NULL,,Heteronucl_T1rho_list,Sf_ID,N,?,4,?,,,,Y,N
 36190,heteronucl_T1rho_relaxation,_Heteronucl_T1rho_list.ID,,INTEGER,int,NOT NULL,Y,Heteronucl_T1rho_list,ID,N,?,5,?,,,,,N
@@ -3670,7 +3670,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 36680,heteronucl_T1rho_relaxation,_T1rho.Entry_ID,,CHAR(12),code,NOT NULL,Y,T1rho,Entry_ID,Y,?,3,?,,,,,N
 36690,heteronucl_T1rho_relaxation,_T1rho.Heteronucl_T1rho_list_ID,,INTEGER,int,NOT NULL,Y,T1rho,Heteronucl_T1rho_list_ID,Y,?,5,?,,,,,N
 36700,heteronucl_T2_relaxation,_Heteronucl_T2_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Heteronucl_T2_list,Sf_category,N,?,1,?,,,,,N
-36710,heteronucl_T2_relaxation,_Heteronucl_T2_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_T2_list,Sf_framecode,N,heteronuclear_T2_list_1,2,?,,,,,N
+36710,heteronucl_T2_relaxation,_Heteronucl_T2_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Heteronucl_T2_list,Sf_framecode,N,?,2,?,,,,,N
 36720,heteronucl_T2_relaxation,_Heteronucl_T2_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Heteronucl_T2_list,Entry_ID,N,?,3,?,,,,,N
 36730,heteronucl_T2_relaxation,_Heteronucl_T2_list.Sf_ID,,INTEGER,int,NOT NULL,,Heteronucl_T2_list,Sf_ID,N,?,4,?,,,,Y,N
 36740,heteronucl_T2_relaxation,_Heteronucl_T2_list.ID,,INTEGER,int,NOT NULL,Y,Heteronucl_T2_list,ID,N,?,5,?,,,,,N
@@ -3725,7 +3725,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 37230,heteronucl_T2_relaxation,_T2.Entry_ID,,CHAR(12),code,NOT NULL,Y,T2,Entry_ID,Y,?,3,?,,,,,N
 37240,heteronucl_T2_relaxation,_T2.Heteronucl_T2_list_ID,,INTEGER,int,NOT NULL,Y,T2,Heteronucl_T2_list_ID,Y,?,5,?,,,,,N
 37250,theoretical_heteronucl_T2_relaxation,_Theoretical_heteronucl_T2_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Theoretical_heteronucl_T2_list,Sf_category,N,?,1,?,,,,,N
-37260,theoretical_heteronucl_T2_relaxation,_Theoretical_heteronucl_T2_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_heteronucl_T2_list,Sf_framecode,N,heteronuclear_T2_list_1,2,?,,,,,N
+37260,theoretical_heteronucl_T2_relaxation,_Theoretical_heteronucl_T2_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_heteronucl_T2_list,Sf_framecode,N,?,2,?,,,,,N
 37270,theoretical_heteronucl_T2_relaxation,_Theoretical_heteronucl_T2_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_heteronucl_T2_list,Entry_ID,N,?,3,?,,,,,N
 37280,theoretical_heteronucl_T2_relaxation,_Theoretical_heteronucl_T2_list.Sf_ID,,INTEGER,int,NOT NULL,,Theoretical_heteronucl_T2_list,Sf_ID,N,?,4,?,,,,Y,N
 37290,theoretical_heteronucl_T2_relaxation,_Theoretical_heteronucl_T2_list.ID,,INTEGER,int,NOT NULL,Y,Theoretical_heteronucl_T2_list,ID,N,?,5,?,,,,,N
@@ -3780,7 +3780,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 37780,theoretical_heteronucl_T2_relaxation,_Theoretical_T2.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_T2,Entry_ID,Y,?,3,?,,,,,N
 37790,theoretical_heteronucl_T2_relaxation,_Theoretical_T2.Theoretical_heteronucl_T2_list_ID,,INTEGER,int,NOT NULL,Y,Theoretical_T2,Theoretical_heteronucl_T2_list_ID,Y,?,5,?,,,,,N
 37800,auto_relaxation,_Auto_relaxation_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Auto_relaxation_list,Sf_category,N,?,1,?,,,,,N
-37810,auto_relaxation,_Auto_relaxation_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Auto_relaxation_list,Sf_framecode,N,auto_relaxation_list_1,2,?,,,,,N
+37810,auto_relaxation,_Auto_relaxation_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Auto_relaxation_list,Sf_framecode,N,?,2,?,,,,,N
 37820,auto_relaxation,_Auto_relaxation_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Auto_relaxation_list,Entry_ID,N,?,3,?,,,,,N
 37830,auto_relaxation,_Auto_relaxation_list.Sf_ID,,INTEGER,int,NOT NULL,,Auto_relaxation_list,Sf_ID,N,?,4,?,,,,Y,N
 37840,auto_relaxation,_Auto_relaxation_list.ID,,INTEGER,int,NOT NULL,Y,Auto_relaxation_list,ID,N,?,5,?,,,,,N
@@ -3839,7 +3839,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 38370,auto_relaxation,_Auto_relaxation.Entry_ID,,CHAR(12),code,NOT NULL,Y,Auto_relaxation,Entry_ID,Y,?,3,?,,,,,N
 38380,auto_relaxation,_Auto_relaxation.Auto_relaxation_list_ID,,INTEGER,int,NOT NULL,Y,Auto_relaxation,Auto_relaxation_list_ID,Y,?,5,?,,,,,N
 38390,theoretical_auto_relaxation,_Theoretical_auto_relaxation_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Theoretical_auto_relaxation_list,Sf_category,N,?,1,?,,,,,N
-38400,theoretical_auto_relaxation,_Theoretical_auto_relaxation_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_auto_relaxation_list,Sf_framecode,N,auto_relaxation_list_1,2,?,,,,,N
+38400,theoretical_auto_relaxation,_Theoretical_auto_relaxation_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_auto_relaxation_list,Sf_framecode,N,?,2,?,,,,,N
 38410,theoretical_auto_relaxation,_Theoretical_auto_relaxation_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_auto_relaxation_list,Entry_ID,N,?,3,?,,,,,N
 38420,theoretical_auto_relaxation,_Theoretical_auto_relaxation_list.Sf_ID,,INTEGER,int,NOT NULL,,Theoretical_auto_relaxation_list,Sf_ID,N,?,4,?,,,,Y,N
 38430,theoretical_auto_relaxation,_Theoretical_auto_relaxation_list.ID,,INTEGER,int,NOT NULL,Y,Theoretical_auto_relaxation_list,ID,N,?,5,?,,,,,N
@@ -3898,7 +3898,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 38960,theoretical_auto_relaxation,_Theoretical_auto_relaxation.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_auto_relaxation,Entry_ID,Y,?,3,?,,,,,N
 38970,theoretical_auto_relaxation,_Theoretical_auto_relaxation.Theoretical_auto_relaxation_list_ID,,INTEGER,int,NOT NULL,Y,Theoretical_auto_relaxation,Theoretical_auto_relaxation_list_ID,Y,?,5,?,,,,,N
 38980,dipole_dipole_relaxation,_Dipole_dipole_relax_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Dipole_dipole_relax_list,Sf_category,N,?,1,?,,,,,N
-38990,dipole_dipole_relaxation,_Dipole_dipole_relax_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Dipole_dipole_relax_list,Sf_framecode,N,dipole_dipole_relaxation_list_1,2,?,,,,,N
+38990,dipole_dipole_relaxation,_Dipole_dipole_relax_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Dipole_dipole_relax_list,Sf_framecode,N,?,2,?,,,,,N
 39000,dipole_dipole_relaxation,_Dipole_dipole_relax_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Dipole_dipole_relax_list,Entry_ID,N,?,3,?,,,,,N
 39010,dipole_dipole_relaxation,_Dipole_dipole_relax_list.Sf_ID,,INTEGER,int,NOT NULL,,Dipole_dipole_relax_list,Sf_ID,N,?,4,?,,,,Y,N
 39020,dipole_dipole_relaxation,_Dipole_dipole_relax_list.ID,,INTEGER,int,NOT NULL,Y,Dipole_dipole_relax_list,ID,N,?,5,?,,,,,N
@@ -3961,7 +3961,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 39590,dipole_dipole_relaxation,_Dipole_dipole_relax.Entry_ID,,CHAR(12),code,NOT NULL,Y,Dipole_dipole_relax,Entry_ID,Y,?,3,?,,,,,N
 39600,dipole_dipole_relaxation,_Dipole_dipole_relax.Dipole_dipole_relax_list_ID,,INTEGER,int,NOT NULL,Y,Dipole_dipole_relax,Dipole_dipole_relax_list_ID,Y,?,5,?,,,,,N
 39610,dipole_dipole_cross_correlations,_Cross_correlation_DD_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Cross_correlation_DD_list,Sf_category,N,?,1,?,,,,,N
-39620,dipole_dipole_cross_correlations,_Cross_correlation_DD_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Cross_correlation_DD_list,Sf_framecode,N,DD_cross_correlation_relaxation_list_1,2,?,,,,,N
+39620,dipole_dipole_cross_correlations,_Cross_correlation_DD_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Cross_correlation_DD_list,Sf_framecode,N,?,2,?,,,,,N
 39630,dipole_dipole_cross_correlations,_Cross_correlation_DD_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Cross_correlation_DD_list,Entry_ID,N,?,3,?,,,,,N
 39640,dipole_dipole_cross_correlations,_Cross_correlation_DD_list.Sf_ID,,INTEGER,int,NOT NULL,,Cross_correlation_DD_list,Sf_ID,N,?,4,?,,,,Y,N
 39650,dipole_dipole_cross_correlations,_Cross_correlation_DD_list.ID,,INTEGER,int,NOT NULL,Y,Cross_correlation_DD_list,ID,N,?,5,?,,,,,N
@@ -4052,7 +4052,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 40500,dipole_dipole_cross_correlations,_Cross_correlation_DD.Entry_ID,,CHAR(12),code,NOT NULL,Y,Cross_correlation_DD,Entry_ID,Y,?,3,?,,,,,N
 40510,dipole_dipole_cross_correlations,_Cross_correlation_DD.Cross_correlation_DD_list_ID,,INTEGER,int,NOT NULL,Y,Cross_correlation_DD,Cross_correlation_DD_list_ID,Y,?,5,?,,,,,N
 40520,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Theoretical_cross_correlation_DD_list,Sf_category,N,?,1,?,,,,,N
-40530,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_cross_correlation_DD_list,Sf_framecode,N,DD_cross_correlation_relaxation_list_1,2,?,,,,,N
+40530,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Theoretical_cross_correlation_DD_list,Sf_framecode,N,?,2,?,,,,,N
 40540,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_cross_correlation_DD_list,Entry_ID,N,?,3,?,,,,,N
 40550,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD_list.Sf_ID,,INTEGER,int,NOT NULL,,Theoretical_cross_correlation_DD_list,Sf_ID,N,?,4,?,,,,Y,N
 40560,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD_list.ID,,INTEGER,int,NOT NULL,Y,Theoretical_cross_correlation_DD_list,ID,N,?,5,?,,,,,N
@@ -4143,7 +4143,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 41410,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD.Entry_ID,,CHAR(12),code,NOT NULL,Y,Theoretical_cross_correlation_DD,Entry_ID,Y,?,3,?,,,,,N
 41420,theoretical_dipole_dipole_cross_correlations,_Theoretical_cross_correlation_DD.Theoretical_cross_correlation_DD_list_ID,,INTEGER,int,NOT NULL,Y,Theoretical_cross_correlation_DD,Theoretical_cross_correlation_DD_list_ID,Y,?,5,?,,,,,N
 41430,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Cross_correlation_D_CSA_list,Sf_category,N,?,1,?,,,,,N
-41440,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Cross_correlation_D_CSA_list,Sf_framecode,N,D_CSA_cross_correlation_relaxation_list_1,2,?,,,,,N
+41440,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Cross_correlation_D_CSA_list,Sf_framecode,N,?,2,?,,,,,N
 41450,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Cross_correlation_D_CSA_list,Entry_ID,N,?,3,?,,,,,N
 41460,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA_list.Sf_ID,,INTEGER,int,NOT NULL,,Cross_correlation_D_CSA_list,Sf_ID,N,?,4,?,,,,Y,N
 41470,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA_list.ID,,INTEGER,int,NOT NULL,Y,Cross_correlation_D_CSA_list,ID,N,?,5,?,,,,,N
@@ -4234,7 +4234,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 42320,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA.Entry_ID,,CHAR(12),code,NOT NULL,Y,Cross_correlation_D_CSA,Entry_ID,Y,?,3,?,,,,,N
 42330,dipole_CSA_cross_correlations,_Cross_correlation_D_CSA.Cross_correlation_D_CSA_list_ID,,INTEGER,int,NOT NULL,Y,Cross_correlation_D_CSA,Cross_correlation_D_CSA_list_ID,Y,?,5,?,,,,,N
 42340,order_parameters,_Order_parameter_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Order_parameter_list,Sf_category,N,?,1,?,,,,,N
-42350,order_parameters,_Order_parameter_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Order_parameter_list,Sf_framecode,N,order_parameter_list_1,2,?,,,,,N
+42350,order_parameters,_Order_parameter_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Order_parameter_list,Sf_framecode,N,?,2,?,,,,,N
 42360,order_parameters,_Order_parameter_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Order_parameter_list,Entry_ID,N,?,3,?,,,,,N
 42370,order_parameters,_Order_parameter_list.Sf_ID,,INTEGER,int,NOT NULL,,Order_parameter_list,Sf_ID,N,?,4,?,,,,Y,N
 42380,order_parameters,_Order_parameter_list.ID,,INTEGER,int,NOT NULL,Y,Order_parameter_list,ID,N,?,5,?,,,,,N
@@ -4304,7 +4304,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 43020,order_parameters,_Order_param.Entry_ID,,CHAR(12),code,NOT NULL,Y,Order_param,Entry_ID,Y,?,3,?,,,,,N
 43030,order_parameters,_Order_param.Order_parameter_list_ID,,INTEGER,int,NOT NULL,Y,Order_param,Order_parameter_list_ID,Y,?,5,?,,,,,N
 43040,pH_titration,_PH_titration_list.Sf_category,,VARCHAR(127),code,NOT NULL,,PH_titration_list,Sf_category,N,?,1,?,,,,,N
-43050,pH_titration,_PH_titration_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,PH_titration_list,Sf_framecode,N,pH_titration_list_1,2,?,,,,,N
+43050,pH_titration,_PH_titration_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,PH_titration_list,Sf_framecode,N,?,2,?,,,,,N
 43060,pH_titration,_PH_titration_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,PH_titration_list,Entry_ID,N,?,3,?,,,,,N
 43070,pH_titration,_PH_titration_list.Sf_ID,,INTEGER,int,NOT NULL,,PH_titration_list,Sf_ID,N,?,4,?,,,,Y,N
 43080,pH_titration,_PH_titration_list.ID,,INTEGER,int,NOT NULL,Y,PH_titration_list,ID,N,?,5,?,,,,,N
@@ -4372,7 +4372,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 43700,pH_titration,_PH_titr_result.Entry_ID,,CHAR(12),code,NOT NULL,Y,PH_titr_result,Entry_ID,Y,?,3,?,,,,,N
 43710,pH_titration,_PH_titr_result.PH_titration_list_ID,,INTEGER,int,NOT NULL,Y,PH_titr_result,PH_titration_list_ID,Y,?,5,?,,,,,N
 43720,pH_param_list,_PH_param_list.Sf_category,,VARCHAR(127),code,NOT NULL,,PH_param_list,Sf_category,N,?,1,?,,,,,N
-43730,pH_param_list,_PH_param_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,PH_param_list,Sf_framecode,N,pH_parameter_list_1,2,?,,,,,N
+43730,pH_param_list,_PH_param_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,PH_param_list,Sf_framecode,N,?,2,?,,,,,N
 43740,pH_param_list,_PH_param_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,PH_param_list,Entry_ID,N,?,3,?,,,,,N
 43750,pH_param_list,_PH_param_list.Sf_ID,,INTEGER,int,NOT NULL,,PH_param_list,Sf_ID,N,?,4,?,,,,Y,N
 43760,pH_param_list,_PH_param_list.ID,,INTEGER,int,NOT NULL,Y,PH_param_list,ID,N,?,5,?,,,,,N
@@ -4394,7 +4394,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 43920,pH_param_list,_PH_param.Entry_ID,,CHAR(12),code,NOT NULL,Y,PH_param,Entry_ID,Y,?,3,?,,,,,N
 43930,pH_param_list,_PH_param.PH_param_list_ID,,INTEGER,int,NOT NULL,Y,PH_param,PH_param_list_ID,Y,?,5,?,,,,,N
 43940,D_H_fractionation_factors,_D_H_fractionation_factor_list.Sf_category,,VARCHAR(127),code,NOT NULL,,D_H_fractionation_factor_list,Sf_category,N,?,1,?,,,,,N
-43950,D_H_fractionation_factors,_D_H_fractionation_factor_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,D_H_fractionation_factor_list,Sf_framecode,N,D_H_fractionation_factor_list_1,2,?,,,,,N
+43950,D_H_fractionation_factors,_D_H_fractionation_factor_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,D_H_fractionation_factor_list,Sf_framecode,N,?,2,?,,,,,N
 43960,D_H_fractionation_factors,_D_H_fractionation_factor_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,D_H_fractionation_factor_list,Entry_ID,N,?,3,?,,,,,N
 43970,D_H_fractionation_factors,_D_H_fractionation_factor_list.Sf_ID,,INTEGER,int,NOT NULL,,D_H_fractionation_factor_list,Sf_ID,N,?,4,?,,,,Y,N
 43980,D_H_fractionation_factors,_D_H_fractionation_factor_list.ID,,INTEGER,int,NOT NULL,Y,D_H_fractionation_factor_list,ID,N,?,5,?,,,,,N
@@ -4440,7 +4440,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 44380,D_H_fractionation_factors,_D_H_fractionation_factor.Entry_ID,,CHAR(12),code,NOT NULL,Y,D_H_fractionation_factor,Entry_ID,Y,?,3,?,,,,,N
 44390,D_H_fractionation_factors,_D_H_fractionation_factor.D_H_fractionation_factor_list_ID,,INTEGER,int,NOT NULL,Y,D_H_fractionation_factor,D_H_fractionation_factor_list_ID,Y,?,5,?,,,,,N
 44400,binding_data,_Binding_value_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Binding_value_list,Sf_category,N,?,1,?,,,,,N
-44410,binding_data,_Binding_value_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Binding_value_list,Sf_framecode,N,binding_constants,2,?,,,,,N
+44410,binding_data,_Binding_value_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Binding_value_list,Sf_framecode,N,?,2,?,,,,,N
 44420,binding_data,_Binding_value_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Binding_value_list,Entry_ID,N,?,3,?,,,,,N
 44430,binding_data,_Binding_value_list.Sf_ID,,INTEGER,int,NOT NULL,,Binding_value_list,Sf_ID,N,?,4,?,,,,Y,N
 44440,binding_data,_Binding_value_list.ID,,INTEGER,int,NOT NULL,Y,Binding_value_list,ID,N,?,5,?,,,,,N
@@ -4501,7 +4501,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 44990,binding_data,_Binding_partners.Entry_ID,,CHAR(12),code,NOT NULL,Y,Binding_partners,Entry_ID,Y,?,3,?,,,,,N
 45000,binding_data,_Binding_partners.Binding_value_list_ID,,INTEGER,int,NOT NULL,Y,Binding_partners,Binding_value_list_ID,Y,?,5,?,,,,,N
 45010,binding_param_list,_Binding_param_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Binding_param_list,Sf_category,N,?,1,?,,,,,N
-45020,binding_param_list,_Binding_param_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Binding_param_list,Sf_framecode,N,binding_parameter,2,?,,,,,N
+45020,binding_param_list,_Binding_param_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Binding_param_list,Sf_framecode,N,?,2,?,,,,,N
 45030,binding_param_list,_Binding_param_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Binding_param_list,Entry_ID,N,?,3,?,,,,,N
 45040,binding_param_list,_Binding_param_list.Sf_ID,,INTEGER,int,NOT NULL,,Binding_param_list,Sf_ID,N,?,4,?,,,,Y,N
 45050,binding_param_list,_Binding_param_list.ID,,INTEGER,int,NOT NULL,Y,Binding_param_list,ID,N,?,5,?,,,,,N
@@ -4526,7 +4526,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 45240,binding_param_list,_Binding_param.Entry_ID,,CHAR(12),code,NOT NULL,Y,Binding_param,Entry_ID,Y,?,3,?,,,,,N
 45250,binding_param_list,_Binding_param.Binding_param_list_ID,,INTEGER,int,NOT NULL,Y,Binding_param,Binding_param_list_ID,Y,?,5,?,,,,,N
 45260,deduced_secd_struct_features,_Deduced_secd_struct_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Deduced_secd_struct_list,Sf_category,N,?,1,?,,,,,N
-45270,deduced_secd_struct_features,_Deduced_secd_struct_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Deduced_secd_struct_list,Sf_framecode,N,secondary_structure_feature_list_1,2,?,,,,,N
+45270,deduced_secd_struct_features,_Deduced_secd_struct_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Deduced_secd_struct_list,Sf_framecode,N,?,2,?,,,,,N
 45280,deduced_secd_struct_features,_Deduced_secd_struct_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Deduced_secd_struct_list,Entry_ID,N,?,3,?,,,,,N
 45290,deduced_secd_struct_features,_Deduced_secd_struct_list.Sf_ID,,INTEGER,int,NOT NULL,,Deduced_secd_struct_list,Sf_ID,N,?,4,?,,,,Y,N
 45300,deduced_secd_struct_features,_Deduced_secd_struct_list.ID,,INTEGER,int,NOT NULL,Y,Deduced_secd_struct_list,ID,N,?,5,?,,,,,N
@@ -4592,7 +4592,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 45900,deduced_secd_struct_features,_Deduced_secd_struct_feature.Entry_ID,,CHAR(12),code,NOT NULL,Y,Deduced_secd_struct_feature,Entry_ID,Y,?,3,?,,,,,N
 45910,deduced_secd_struct_features,_Deduced_secd_struct_feature.Deduced_secd_struct_list_ID,,INTEGER,int,NOT NULL,Y,Deduced_secd_struct_feature,Deduced_secd_struct_list_ID,Y,?,5,?,,,,,N
 45920,deduced_hydrogen_bonds,_Deduced_H_bond_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Deduced_H_bond_list,Sf_category,N,?,1,?,,,,,N
-45930,deduced_hydrogen_bonds,_Deduced_H_bond_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Deduced_H_bond_list,Sf_framecode,N,deduced_H_bond_list_1,2,?,,,,,N
+45930,deduced_hydrogen_bonds,_Deduced_H_bond_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Deduced_H_bond_list,Sf_framecode,N,?,2,?,,,,,N
 45940,deduced_hydrogen_bonds,_Deduced_H_bond_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Deduced_H_bond_list,Entry_ID,N,?,3,?,,,,,N
 45950,deduced_hydrogen_bonds,_Deduced_H_bond_list.Sf_ID,,INTEGER,int,NOT NULL,,Deduced_H_bond_list,Sf_ID,N,?,4,?,,,,Y,N
 45960,deduced_hydrogen_bonds,_Deduced_H_bond_list.ID,,INTEGER,int,NOT NULL,Y,Deduced_H_bond_list,ID,N,?,5,?,,,,,N
@@ -4660,14 +4660,14 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 46580,deduced_hydrogen_bonds,_Deduced_H_bond.Entry_ID,,CHAR(12),code,NOT NULL,Y,Deduced_H_bond,Entry_ID,Y,?,3,?,,,,,N
 46590,deduced_hydrogen_bonds,_Deduced_H_bond.Deduced_hydrogen_bond_list_ID,,INTEGER,int,NOT NULL,Y,Deduced_H_bond,Deduced_hydrogen_bond_list_ID,Y,?,5,?,,,,,N
 46600,conformer_statistics,_Conformer_stat_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Conformer_stat_list,Sf_category,N,?,1,?,,,,,N
-46610,conformer_statistics,_Conformer_stat_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Conformer_stat_list,Sf_framecode,N,conformer_statistics,2,?,,,,,N
+46610,conformer_statistics,_Conformer_stat_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Conformer_stat_list,Sf_framecode,N,?,2,?,,,,,N
 46620,conformer_statistics,_Conformer_stat_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Conformer_stat_list,Entry_ID,N,?,3,?,,,,,N
 46630,conformer_statistics,_Conformer_stat_list.Sf_ID,,INTEGER,int,NOT NULL,,Conformer_stat_list,Sf_ID,N,?,4,?,,,,Y,N
 46640,conformer_statistics,_Conformer_stat_list.ID,,INTEGER,int,NOT NULL,Y,Conformer_stat_list,ID,N,?,5,?,,,,,N
 46650,conformer_statistics,_Conformer_stat_list.Name,,VARCHAR(127),line,,,Conformer_stat_list,Name,N,?,0,?,,,,,N
-46660,conformer_statistics,_Conformer_stat_list.Conformer_ensemble_only,,BOOLEAN,yes_no,NOT NULL,,Conformer_stat_list,Conformer_ensemble_only,N,no,0,?,,,,Y,N
-46670,conformer_statistics,_Conformer_stat_list.Both_ensemble_and_rep_conformer,,BOOLEAN,yes_no,NOT NULL,,Conformer_stat_list,Both_ensemble_and_rep_conformer,N,no,0,?,,,,Y,N
-46680,conformer_statistics,_Conformer_stat_list.Representative_conformer_only,,BOOLEAN,yes_no,NOT NULL,,Conformer_stat_list,Representative_conformer_only,N,no,0,?,,,,Y,N
+46660,conformer_statistics,_Conformer_stat_list.Conformer_ensemble_only,,BOOLEAN,yes_no,NOT NULL,,Conformer_stat_list,Conformer_ensemble_only,N,?,0,?,,,,Y,N
+46670,conformer_statistics,_Conformer_stat_list.Both_ensemble_and_rep_conformer,,BOOLEAN,yes_no,NOT NULL,,Conformer_stat_list,Both_ensemble_and_rep_conformer,N,?,0,?,,,,Y,N
+46680,conformer_statistics,_Conformer_stat_list.Representative_conformer_only,,BOOLEAN,yes_no,NOT NULL,,Conformer_stat_list,Representative_conformer_only,N,?,0,?,,,,Y,N
 46690,conformer_statistics,_Conformer_stat_list.Data_file_name,,VARCHAR(127),line,,,Conformer_stat_list,Data_file_name,N,?,0,?,,,,Y,N
 46700,conformer_statistics,_Conformer_stat_list.Text_data_format,,VARCHAR(31),line,,,Conformer_stat_list,Text_data_format,N,?,0,?,,,,,N
 46710,conformer_statistics,_Conformer_stat_list.Text_data,,TEXT,text,,,Conformer_stat_list,Text_data,N,?,0,?,,,,,N
@@ -4683,7 +4683,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 46810,conformer_statistics,_Conformer_stat_list.Rep_conformer_selection_criteria,N,TEXT,text,,,Conformer_stat_list,Rep_conformer_selection_criteria,N,?,0,?,,,,,N
 46820,conformer_statistics,_Conformer_stat_list.Statistical_struct_param_details,,TEXT,text,,,Conformer_stat_list,Statistical_struct_param_details,N,?,0,?,,,,,N
 46830,conformer_statistics,_Conformer_stat_list.Details,,TEXT,text,,,Conformer_stat_list,Details,N,?,0,?,,,,,N
-46840,conformer_statistics,_Conformer_stat_list_ens.Stats_not_available,,BOOLEAN,yes_no,,,Conformer_stat_list_ens,Stats_not_available,Y,no,0,?,,,,,N
+46840,conformer_statistics,_Conformer_stat_list_ens.Stats_not_available,,BOOLEAN,yes_no,,,Conformer_stat_list_ens,Stats_not_available,Y,?,0,?,,,,,N
 46850,conformer_statistics,_Conformer_stat_list_ens.Ramachan_most_favored_pct,,FLOAT,float,,,Conformer_stat_list_ens,Ramachan_most_favored_pct,Y,?,0,?,,,,,N
 46860,conformer_statistics,_Conformer_stat_list_ens.Ramachan_allowed_pct,,FLOAT,float,,,Conformer_stat_list_ens,Ramachan_allowed_pct,Y,?,0,?,,,,,N
 46870,conformer_statistics,_Conformer_stat_list_ens.Ramachan_gen_allowed_pct,,FLOAT,float,,,Conformer_stat_list_ens,Ramachan_gen_allowed_pct,Y,?,0,?,,,,,N
@@ -4736,7 +4736,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 47340,conformer_statistics,_Conformer_stat_list_ens.Sf_ID,,INTEGER,int,NOT NULL,,Conformer_stat_list_ens,Sf_ID,Y,?,4,?,,,,Y,N
 47350,conformer_statistics,_Conformer_stat_list_ens.Entry_ID,,CHAR(12),code,NOT NULL,Y,Conformer_stat_list_ens,Entry_ID,Y,?,3,?,,,,,N
 47360,conformer_statistics,_Conformer_stat_list_ens.Conformer_stat_list_ID,,INTEGER,int,NOT NULL,Y,Conformer_stat_list_ens,Conformer_stat_list_ID,Y,?,5,?,,,,,N
-47370,conformer_statistics,_Conformer_stat_list_rep.Stats_not_available,,BOOLEAN,yes_no,,,Conformer_stat_list_rep,Stats_not_available,Y,no,0,?,,,,,N
+47370,conformer_statistics,_Conformer_stat_list_rep.Stats_not_available,,BOOLEAN,yes_no,,,Conformer_stat_list_rep,Stats_not_available,Y,?,0,?,,,,,N
 47380,conformer_statistics,_Conformer_stat_list_rep.Ramachan_most_favored_pct,,FLOAT,float,,,Conformer_stat_list_rep,Ramachan_most_favored_pct,Y,?,0,?,,,,,N
 47390,conformer_statistics,_Conformer_stat_list_rep.Ramachan_allowed_pct,,FLOAT,float,,,Conformer_stat_list_rep,Ramachan_allowed_pct,Y,?,0,?,,,,,N
 47400,conformer_statistics,_Conformer_stat_list_rep.Ramachan_gen_allowed_pct,,FLOAT,float,,,Conformer_stat_list_rep,Ramachan_gen_allowed_pct,Y,?,0,?,,,,,N
@@ -4780,7 +4780,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 47780,conformer_statistics,_Conf_stats_software.Entry_ID,,CHAR(12),code,NOT NULL,Y,Conf_stats_software,Entry_ID,Y,?,3,?,,,,,N
 47790,conformer_statistics,_Conf_stats_software.Conformer_stat_list_ID,,INTEGER,int,NOT NULL,Y,Conf_stats_software,Conformer_stat_list_ID,Y,?,5,?,,,,,N
 47800,conformer_family_coord_set,_Conformer_family_coord_set.Sf_category,,VARCHAR(127),code,NOT NULL,,Conformer_family_coord_set,Sf_category,N,?,1,?,,,,,N
-47810,conformer_family_coord_set,_Conformer_family_coord_set.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Conformer_family_coord_set,Sf_framecode,N,ensemble_coordinates,2,?,,,,,N
+47810,conformer_family_coord_set,_Conformer_family_coord_set.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,Conformer_family_coord_set,Sf_framecode,N,?,2,?,,,,,N
 47820,conformer_family_coord_set,_Conformer_family_coord_set.Entry_ID,,CHAR(12),code,NOT NULL,Y,Conformer_family_coord_set,Entry_ID,N,?,3,?,,,,,N
 47830,conformer_family_coord_set,_Conformer_family_coord_set.Sf_ID,,INTEGER,int,NOT NULL,,Conformer_family_coord_set,Sf_ID,N,?,4,?,,,,Y,N
 47840,conformer_family_coord_set,_Conformer_family_coord_set.ID,,INTEGER,int,NOT NULL,Y,Conformer_family_coord_set,ID,N,?,5,?,,,,,N
@@ -4977,7 +4977,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 49750,constraint_statistics,_Constraint_stat_list.Details,,TEXT,text,,,Constraint_stat_list,Details,N,?,0,?,,,,,N
 49760,constraint_statistics,_Constraint_stat_list.Text_data_format,,VARCHAR(31),line,,,Constraint_stat_list,Text_data_format,N,?,0,?,,,,,N
 49770,constraint_statistics,_Constraint_stat_list.Text_data,,TEXT,text,,,Constraint_stat_list,Text_data,N,?,0,?,,,,,N
-49780,constraint_statistics,_Constraint_stat_list.Stats_not_available,,BOOLEAN,yes_no,,,Constraint_stat_list,Stats_not_available,N,no,0,?,,,,,N
+49780,constraint_statistics,_Constraint_stat_list.Stats_not_available,,BOOLEAN,yes_no,,,Constraint_stat_list,Stats_not_available,N,?,0,?,,,,,N
 49790,constraint_statistics,_Constraint_stat_list.NOE_interproton_dist_evaluation,N,VARCHAR(127),line,,,Constraint_stat_list,NOE_interproton_dist_evaluation,N,?,0,?,,,,,N
 49800,constraint_statistics,_Constraint_stat_list.NOE_pseudoatom_corrections,,BOOLEAN,yes_no,,,Constraint_stat_list,NOE_pseudoatom_corrections,N,?,0,?,,,,,N
 49810,constraint_statistics,_Constraint_stat_list.NOE_dist_averaging_method,N,VARCHAR(127),line,,,Constraint_stat_list,NOE_dist_averaging_method,N,?,0,?,,,,,N
@@ -5064,7 +5064,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 50620,constraint_statistics,_Constraint_stat_list.Constraints_per_residue_avg,,FLOAT,float,,,Constraint_stat_list,Constraints_per_residue_avg,N,?,0,?,,,,,N
 50630,constraint_statistics,_Constraint_stat_list.Constr_violations_per_residue_avg,,FLOAT,float,,,Constraint_stat_list,Constr_violations_per_residue_avg,N,?,0,?,,,,,N
 50640,constraint_statistics,_Constraint_stat_list.Dist_constr_violat_stat_calc_method,N,VARCHAR(127),line,,,Constraint_stat_list,Dist_constr_violat_stat_calc_method,N,?,0,?,,,,,N
-50650,constraint_statistics,_Constraint_stat_list_ens.Constraint_stats_not_available,,BOOLEAN,yes_no,,,Constraint_stat_list_ens,Constraint_stats_not_available,Y,no,0,?,,,,,N
+50650,constraint_statistics,_Constraint_stat_list_ens.Constraint_stats_not_available,,BOOLEAN,yes_no,,,Constraint_stat_list_ens,Constraint_stats_not_available,Y,?,0,?,,,,,N
 50660,constraint_statistics,_Constraint_stat_list_ens.Dist_constraint_violation_max,,FLOAT,float,,,Constraint_stat_list_ens,Dist_constraint_violation_max,Y,?,0,?,,,,,N
 50670,constraint_statistics,_Constraint_stat_list_ens.Upper_dist_constr_violat_max,,FLOAT,float,,,Constraint_stat_list_ens,Upper_dist_constr_violat_max,Y,?,0,?,,,,,N
 50680,constraint_statistics,_Constraint_stat_list_ens.Lower_dist_constr_violat_max,,FLOAT,float,,,Constraint_stat_list_ens,Lower_dist_constr_violat_max,Y,?,0,?,,,,,N
@@ -5103,7 +5103,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 51010,constraint_statistics,_Constraint_stat_list_ens.Sf_ID,,INTEGER,int,NOT NULL,,Constraint_stat_list_ens,Sf_ID,Y,?,4,?,,,,Y,N
 51020,constraint_statistics,_Constraint_stat_list_ens.Entry_ID,,CHAR(12),code,NOT NULL,Y,Constraint_stat_list_ens,Entry_ID,Y,?,3,?,,,,,N
 51030,constraint_statistics,_Constraint_stat_list_ens.Constraint_stat_list_ID,,INTEGER,int,NOT NULL,Y,Constraint_stat_list_ens,Constraint_stat_list_ID,Y,?,5,?,,,,,N
-51040,constraint_statistics,_Constraint_stat_list_rep.Constraint_stats_not_available,,BOOLEAN,yes_no,,,Constraint_stat_list_rep,Constraint_stats_not_available,Y,no,0,?,,,,,N
+51040,constraint_statistics,_Constraint_stat_list_rep.Constraint_stats_not_available,,BOOLEAN,yes_no,,,Constraint_stat_list_rep,Constraint_stats_not_available,Y,?,0,?,,,,,N
 51050,constraint_statistics,_Constraint_stat_list_rep.Dist_constraint_viol_max,,FLOAT,float,,,Constraint_stat_list_rep,Dist_constraint_viol_max,Y,?,0,?,,,,,N
 51060,constraint_statistics,_Constraint_stat_list_rep.Upper_dist_constr_violat_max,,FLOAT,float,,,Constraint_stat_list_rep,Upper_dist_constr_violat_max,Y,?,0,?,,,,,N
 51070,constraint_statistics,_Constraint_stat_list_rep.Lower_dist_constr_violat_max,,FLOAT,float,,,Constraint_stat_list_rep,Lower_dist_constr_violat_max,Y,?,0,?,,,,,N
@@ -5427,7 +5427,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 54250,other_struct_features,_Other_struct_feature.Entry_ID,,CHAR(12),code,NOT NULL,Y,Other_struct_feature,Entry_ID,Y,?,3,?,,,,,N
 54260,other_struct_features,_Other_struct_feature.Other_struct_feature_list_ID,,INTEGER,int,NOT NULL,Y,Other_struct_feature,Other_struct_feature_list_ID,Y,?,5,?,,,,,N
 54270,tensor,_Tensor_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Tensor_list,Sf_category,N,?,1,?,,,,,N
-54280,tensor,_Tensor_list.Sf_framecode,,VARCHAR(127),framecode,,,Tensor_list,Sf_framecode,N,Tensor_data_1,2,?,,,,,N
+54280,tensor,_Tensor_list.Sf_framecode,,VARCHAR(127),framecode,,,Tensor_list,Sf_framecode,N,?,2,?,,,,,N
 54290,tensor,_Tensor_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Tensor_list,Entry_ID,N,?,3,?,,,,,N
 54300,tensor,_Tensor_list.Sf_ID,,INTEGER,int,NOT NULL,,Tensor_list,Sf_ID,N,?,4,?,,,,Y,N
 54310,tensor,_Tensor_list.ID,,INTEGER,int,NOT NULL,Y,Tensor_list,ID,N,?,5,?,,,,,N
@@ -5496,7 +5496,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 54940,tensor,_Tensor.Entry_ID,,CHAR(12),code,NOT NULL,Y,Tensor,Entry_ID,Y,?,3,?,,,,,N
 54950,tensor,_Tensor.Tensor_list_ID,,INTEGER,int,NOT NULL,Y,Tensor,Tensor_list_ID,Y,?,5,?,,,,,N
 54960,interatomic_distance,_Interatomic_distance_list.Sf_category,,VARCHAR(127),code,NOT NULL,,Interatomic_distance_list,Sf_category,N,?,1,?,,,,,N
-54970,interatomic_distance,_Interatomic_distance_list.Sf_framecode,,VARCHAR(127),framecode,,,Interatomic_distance_list,Sf_framecode,N,Interatomic_distance_data_1,2,?,,,,,N
+54970,interatomic_distance,_Interatomic_distance_list.Sf_framecode,,VARCHAR(127),framecode,,,Interatomic_distance_list,Sf_framecode,N,?,2,?,,,,,N
 54980,interatomic_distance,_Interatomic_distance_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,Interatomic_distance_list,Entry_ID,N,?,3,?,,,,,N
 54990,interatomic_distance,_Interatomic_distance_list.Sf_ID,,INTEGER,int,NOT NULL,,Interatomic_distance_list,Sf_ID,N,?,4,?,,,,Y,N
 55000,interatomic_distance,_Interatomic_distance_list.ID,,INTEGER,int,NOT NULL,Y,Interatomic_distance_list,ID,N,?,5,?,,,,,N
@@ -6452,7 +6452,7 @@ TBL_BEGIN,,,,,,,,,,,,,,,,,,?
 64500,peak_constraint_links,_Peak_constraint_link.Entry_ID,,CHAR(12),code,NOT NULL,Y,Peak_constraint_link,Entry_ID,Y,?,3,?,,,,,N
 64510,peak_constraint_links,_Peak_constraint_link.Peak_constraint_link_list_ID,,INTEGER,int,NOT NULL,Y,Peak_constraint_link,Peak_constraint_link_list_ID,Y,?,5,?,,,,,N
 64520,SAXS_constraints,_SAXS_constraint_list.Sf_category,,VARCHAR(127),code,NOT NULL,,SAXS_constraint_list,Sf_category,N,?,1,?,,,,,N
-64530,SAXS_constraints,_SAXS_constraint_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_list,Sf_framecode,N,SAXS_constraint_list_1,2,?,,,,,N
+64530,SAXS_constraints,_SAXS_constraint_list.Sf_framecode,,VARCHAR(127),framecode,NOT NULL,,SAXS_constraint_list,Sf_framecode,N,?,2,?,,,,,N
 64540,SAXS_constraints,_SAXS_constraint_list.Entry_ID,,CHAR(12),code,NOT NULL,Y,SAXS_constraint_list,Entry_ID,N,?,3,?,,,,,N
 64550,SAXS_constraints,_SAXS_constraint_list.Sf_ID,,INTEGER,int,NOT NULL,,SAXS_constraint_list,Sf_ID,N,?,4,?,,,,Y,N
 64560,SAXS_constraints,_SAXS_constraint_list.ID,,INTEGER,int,NOT NULL,Y,SAXS_constraint_list,ID,N,?,5,?,,,,,N

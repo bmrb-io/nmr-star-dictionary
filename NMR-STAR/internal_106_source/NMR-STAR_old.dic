@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.2.4-BMRbig
+    _dictionary.version         3.2.2.5-BMRbig
 
      loop_
        _dictionary_history.version
@@ -1480,7 +1480,6 @@ can be submitted to
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'code'
-   _item_default.value            'BMRB Only'
 
    loop_
      _item_enumeration.value
@@ -4894,7 +4893,6 @@ The BMRB entry type with respect to the type of molecular system studied.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'macromolecule'
 
    loop_
      _item_enumeration.value
@@ -4924,7 +4922,6 @@ or an updated version.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'original'
 
    loop_
      _item_enumeration.value
@@ -5053,7 +5050,6 @@ the PDB will be marked '
    _item.category_id                           'Entry'
    _item.mandatory_code                         yes
    _item_type.code                             'line'
-   _item_default.value            'author'
 
    loop_
      _item_examples.case
@@ -5102,7 +5098,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.2.4-BMRbig'
+   _item_default.value            '3.2.2.5-BMRbig'
 
    loop_
      _item_enumeration.value
@@ -5252,7 +5248,6 @@ the value to this tag.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'NMR'
 
    loop_
      _item_enumeration.value
@@ -5287,7 +5282,6 @@ theoretical, etc.).
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'solution'
 
    loop_
      _item_enumeration.value
@@ -7671,7 +7665,6 @@ The role of this author in the project depositing this data.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'principal investigator'
 
    loop_
      _item_enumeration.value
@@ -7706,7 +7699,6 @@ The organization type to which this author is affiliated.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'academic'
 
    loop_
      _item_enumeration.value
@@ -9790,7 +9782,6 @@ A label that uniquely identifies the citation from other citations in the entry.
    _item.category_id                           'Citation'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'entry_citation'
 
    loop_
      _item_examples.case
@@ -9978,7 +9969,6 @@ used as a referenece in the entry.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'entry citation'
 
    loop_
      _item_enumeration.value
@@ -10130,7 +10120,6 @@ Status for the current publication (in preparation submitted in press published)
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'in preparation'
 
    loop_
      _item_enumeration.value
@@ -14562,7 +14551,6 @@ state of the component of the assembly.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            'native'
 
    loop_
      _item_enumeration.value
@@ -14601,7 +14589,6 @@ isomer of another component of the system.
    _item.category_id                           'Entity_assembly'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
    loop_
      _item_examples.case
@@ -14626,7 +14613,6 @@ with another component of the system.
    _item.category_id                           'Entity_assembly'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
    loop_
      _item_examples.case
@@ -16142,7 +16128,6 @@ Flag indicating if the database accession number was supplied by the author .
    _item.category_id                           'Assembly_db_link'
    _item.mandatory_code                         yes
    _item_type.code                             'yes_no'
-   _item_default.value            'yes'
 
    loop_
      _item_examples.case
@@ -22413,7 +22398,6 @@ Entities are of two types: polymer or non-polymer.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'polymer'
 
    loop_
      _item_enumeration.value
@@ -22857,7 +22841,6 @@ enter the number of components that exist in the non-polymer entity.
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
    _item_type.code                             'int'
-   _item_default.value            '1'
 
    loop_
      _item_examples.case
@@ -22881,7 +22864,6 @@ A boolean flag that indicates the paramagnetic state of the entity.
    _item.category_id                           'Entity'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
 
 save_
@@ -23201,7 +23183,6 @@ author (yes) or obtained through another method (no).
    _item.category_id                           'Entity_db_link'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'yes'
 
    loop_
      _item_examples.case
@@ -26190,7 +26171,6 @@ natural source or multiple natural sources.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            'organism'
 
    loop_
      _item_enumeration.value
@@ -28091,7 +28071,6 @@ for the production of a biological molecule studied in the entry.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            'plasmid'
 
    loop_
      _item_enumeration.value
@@ -33432,7 +33411,6 @@ in the entry.
    _item.category_id                           'Sample'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'sample_1'
 
 
 save_
@@ -33654,7 +33632,6 @@ of the sample.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            'solution'
 
    loop_
      _item_enumeration.value
@@ -33754,7 +33731,6 @@ in category _Sample_component.
    _item.category_id                           'Sample'
    _item.mandatory_code                         no
    _item_type.code                             'int'
-   _item_default.value            '1'
 
    loop_
      _item_examples.case
@@ -35244,7 +35220,6 @@ within an entry.
    _item.category_id                           'Sample_condition_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'sample_conditions_1'
 
    loop_
      _item_examples.case
@@ -35986,7 +35961,6 @@ Pointer to a save frame of the category sample.
    _item.category_id                           'Entity_purity'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
-   _item_default.value            'sample_1'
 
 
 save_
@@ -41694,7 +41668,6 @@ to reference the spectromer in later sections of the deposition.
    _item.category_id                           'NMR_spectrometer_view'
    _item.mandatory_code                         yes
    _item_type.code                             'line'
-   _item_default.value            'spectrometer_1'
 
    loop_
      _item_examples.case
@@ -43284,7 +43257,6 @@ and solid for solid-state studies).
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            'isotropic'
 
    loop_
      _item_enumeration.value
@@ -44167,7 +44139,6 @@ Provide the units appropriate for the sample volume.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'code'
-   _item_default.value            'uL'
 
    loop_
      _item_enumeration.value
@@ -47852,7 +47823,6 @@ shift data.
    _item.category_id                           'Chem_shift_reference'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'chemical_shift_reference_1'
 
 
 save_
@@ -48047,7 +48017,6 @@ Please indicate yes or no, if you are depositing 31P chemical shifts.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   yes
    _item_type.code                             'line'
-   _item_default.value            'no'
 
    loop_
      _item_enumeration.value
@@ -48074,7 +48043,6 @@ If you are depositing chemical shifts for a nuclei other than 1H, 13C,
    _item.category_id                           'Chem_shift_reference'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
 
 save_
@@ -48535,7 +48503,6 @@ by the IUPAC Taskforce on the deposition of data to the public databases
    _item.category_id                           'Chem_shift_ref'
    _item.mandatory_code                         no
    _item_type.code                             'float'
-   _item_default.value            '1'
 
    loop_
      _item_examples.case
@@ -48864,7 +48831,6 @@ chemical shifts.
    _item.category_id                           'Assigned_chem_shift_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'assigned_chem_shift_list_1'
 
 
 save_
@@ -51239,7 +51205,6 @@ contained in the save frame.
    _item.category_id                           'Theoretical_chem_shift_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'theoretical_chem_shift_list_1'
 
 
 save_
@@ -52023,7 +51988,6 @@ constants..
    _item.category_id                           'Coupling_constant_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'coupling_constant_list_1'
 
 
 save_
@@ -53335,7 +53299,6 @@ constants..
    _item.category_id                           'Theoretical_coupling_constant_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'coupling_constant_list_1'
 
 
 save_
@@ -54613,7 +54576,6 @@ A descriptive label that uniquely identifies this list of spectral peaks.
    _item.category_id                           'Spectral_peak_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'spectral_peak_list_1'
 
 
 save_
@@ -64081,7 +64043,6 @@ contained in the save frame.
    _item.category_id                           'Chem_shift_isotope_effect_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'chem_shift_isotope_effect_list_1'
 
 
 save_
@@ -65497,7 +65458,6 @@ contained in the save frame.
    _item.category_id                           'Chem_shift_perturbation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'mol_interaction_chem_shift_list_1'
 
 
 save_
@@ -66551,7 +66511,6 @@ contained in the save frame.
    _item.category_id                           'Chem_shift_anisotropy'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'chem_shift_anisotropy_list_1'
 
 
 save_
@@ -67599,7 +67558,6 @@ contained in the save frame.
    _item.category_id                           'RDC_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'RDC_list_1'
 
 
 save_
@@ -68989,7 +68947,6 @@ contained in the save frame.
    _item.category_id                           'Dipolar_coupling_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'dipolar_coupling_list_1'
 
 
 save_
@@ -70305,7 +70262,6 @@ contained in the save frame.
    _item.category_id                           'Spectral_density_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'spectral_density_list_1'
 
 
 save_
@@ -72198,7 +72154,6 @@ contained in the save frame.
    _item.category_id                           'Chemical_rate_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'kinetic_rates'
 
 
 save_
@@ -73176,7 +73131,6 @@ contained in the save frame.
    _item.category_id                           'H_exch_rate_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'H_exch_rate_list_1'
 
 
 save_
@@ -74139,7 +74093,6 @@ contained in the save frame.
    _item.category_id                           'H_exch_protection_factor_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'H_exch_protection_factor_list_1'
 
 
 save_
@@ -75082,7 +75035,6 @@ contained in the save frame.
    _item.category_id                           'Homonucl_NOE_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'homonuclear_NOE_list_1'
 
 
 save_
@@ -76321,7 +76273,6 @@ contained in the save frame.
    _item.category_id                           'Heteronucl_NOE_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'heteronuclear_noe_list_1'
 
 
 save_
@@ -77868,7 +77819,6 @@ contained in the save frame.
    _item.category_id                           'Theoretical_heteronucl_NOE_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'heteronuclear_noe_list_1'
 
 
 save_
@@ -79409,7 +79359,6 @@ contained in the save frame.
    _item.category_id                           'Heteronucl_T1_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'heteronuclear_T1_list_1'
 
 
 save_
@@ -80398,7 +80347,6 @@ contained in the save frame.
    _item.category_id                           'Theoretical_heteronucl_T1_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'heteronuclear_T1_list_1'
 
 
 save_
@@ -81387,7 +81335,6 @@ contained in the save frame.
    _item.category_id                           'Heteronucl_T1rho_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'heteronuclear_T1rho_list_1'
 
 
 save_
@@ -82477,7 +82424,6 @@ contained in the save frame.
    _item.category_id                           'Heteronucl_T2_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'heteronuclear_T2_list_1'
 
 
 save_
@@ -83567,7 +83513,6 @@ contained in the save frame.
    _item.category_id                           'Theoretical_heteronucl_T2_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'heteronuclear_T2_list_1'
 
 
 save_
@@ -84657,7 +84602,6 @@ contained in the save frame.
    _item.category_id                           'Auto_relaxation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'auto_relaxation_list_1'
 
 
 save_
@@ -85875,7 +85819,6 @@ contained in the save frame.
    _item.category_id                           'Theoretical_auto_relaxation_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'auto_relaxation_list_1'
 
 
 save_
@@ -87094,7 +87037,6 @@ contained in the save frame.
    _item.category_id                           'Dipole_dipole_relax_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'dipole_dipole_relaxation_list_1'
 
 
 save_
@@ -88281,7 +88223,6 @@ contained in the save frame.
    _item.category_id                           'Cross_correlation_DD_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'DD_cross_correlation_relaxation_list_1'
 
 
 save_
@@ -89940,7 +89881,6 @@ contained in the save frame.
    _item.category_id                           'Theoretical_cross_correlation_DD_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'DD_cross_correlation_relaxation_list_1'
 
 
 save_
@@ -91623,7 +91563,6 @@ contained in the save frame.
    _item.category_id                           'Cross_correlation_D_CSA_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'D_CSA_cross_correlation_relaxation_list_1'
 
 
 save_
@@ -93305,7 +93244,6 @@ contained in the save frame.
    _item.category_id                           'Order_parameter_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'order_parameter_list_1'
 
 
 save_
@@ -94664,7 +94602,6 @@ contained in the save frame.
    _item.category_id                           'PH_titration_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'pH_titration_list_1'
 
 
 save_
@@ -95945,7 +95882,6 @@ contained in the save frame.
    _item.category_id                           'PH_param_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'pH_parameter_list_1'
 
 
 save_
@@ -96383,7 +96319,6 @@ contained in the save frame.
    _item.category_id                           'D_H_fractionation_factor_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'D_H_fractionation_factor_list_1'
 
 
 save_
@@ -97263,7 +97198,6 @@ contained in the save frame.
    _item.category_id                           'Binding_value_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'binding_constants'
 
 
 save_
@@ -98410,7 +98344,6 @@ contained in the save frame.
    _item.category_id                           'Binding_param_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'binding_parameter'
 
 
 save_
@@ -98873,7 +98806,6 @@ contained in the save frame.
    _item.category_id                           'Deduced_secd_struct_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'secondary_structure_feature_list_1'
 
 
 save_
@@ -100100,7 +100032,6 @@ contained in the save frame.
    _item.category_id                           'Deduced_H_bond_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'deduced_H_bond_list_1'
 
 
 save_
@@ -101373,7 +101304,6 @@ contained in the save frame.
    _item.category_id                           'Conformer_stat_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'conformer_statistics'
 
 
 save_
@@ -101488,7 +101418,6 @@ using the same metho
    _item.category_id                           'Conformer_stat_list'
    _item.mandatory_code                         yes
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
 
 save_
@@ -101507,7 +101436,6 @@ file that contains an en
    _item.category_id                           'Conformer_stat_list'
    _item.mandatory_code                         yes
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
 
 save_
@@ -101524,7 +101452,6 @@ structure.
    _item.category_id                           'Conformer_stat_list'
    _item.mandatory_code                         yes
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
 
 save_
@@ -101875,7 +101802,6 @@ box and clicking on t
    _item.category_id                           'Conformer_stat_list_ens'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
    loop_
      _item_examples.case
@@ -102911,7 +102837,6 @@ button, the statis
    _item.category_id                           'Conformer_stat_list_rep'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
    loop_
      _item_examples.case
@@ -103687,7 +103612,6 @@ contained in the save frame.
    _item.category_id                           'Conformer_family_coord_set'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'ensemble_coordinates'
 
 
 save_
@@ -107796,7 +107720,6 @@ and clicking on the 'sav
    _item.category_id                           'Constraint_stat_list'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
    loop_
      _item_examples.case
@@ -109470,7 +109393,6 @@ and the constraint stat
    _item.category_id                           'Constraint_stat_list_ens'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
    loop_
      _item_examples.case
@@ -110148,7 +110070,6 @@ constraints and the coordinates for the deposited representative conformer.
    _item.category_id                           'Constraint_stat_list_rep'
    _item.mandatory_code                         no
    _item_type.code                             'yes_no'
-   _item_default.value            'no'
 
 
 save_
@@ -116782,7 +116703,6 @@ contained in the save frame.
    _item.category_id                           'Tensor_list'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
-   _item_default.value            'Tensor_data_1'
 
 
 save_
@@ -117985,7 +117905,6 @@ contained in the save frame.
    _item.category_id                           'Interatomic_distance_list'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
-   _item_default.value            'Interatomic_distance_data_1'
 
    loop_
      _item_examples.case
@@ -136092,7 +136011,6 @@ contained in the save frame.
    _item.category_id                           'SAXS_constraint_list'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
-   _item_default.value            'SAXS_constraint_list_1'
 
 
 save_
