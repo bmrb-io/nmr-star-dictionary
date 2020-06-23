@@ -44766,6 +44766,33 @@ Chromatographic column label
 
 save_
 
+save__Experiment.Details
+
+   _Interface.Tag                  '_Experiment.Details'
+
+   _Interface.Category              'Experiment'
+
+   _Interface.Description
+;
+Enter additional descriptive information or list of parameters used to carry out the experiment.
+;
+
+   _Interface.Adit_item_view_name
+;
+Additional experimental details
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Experiment.Sf_ID
 
    _Interface.Tag                  '_Experiment.Sf_ID'
@@ -46278,6 +46305,33 @@ Acquisition dimension ID
 
 save_
 
+save__Spectral_acq_param.Spectral_dim
+
+   _Interface.Tag                  '_Spectral_acq_param.Spectral_dim'
+
+   _Interface.Category              'Spectral_acq_param'
+
+   _Interface.Description
+;
+Spectral dimension observed nucleus
+;
+
+   _Interface.Adit_item_view_name
+;
+Spectral dimension observed nucleus
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Spectral_acq_param.Name
 
    _Interface.Tag                  '_Spectral_acq_param.Name'
@@ -46305,33 +46359,6 @@ Detected nucleus
 
 save_
 
-save__Spectral_acq_param.Spectral_dim
-
-   _Interface.Tag                  '_Spectral_acq_param.Spectral_dim'
-
-   _Interface.Category              'Spectral_acq_param'
-
-   _Interface.Description
-;
-Spectral dimension number
-;
-
-   _Interface.Adit_item_view_name
-;
-Spectral dimension number
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Spectral_acq_param.Val
 
    _Interface.Tag                  '_Spectral_acq_param.Val'
@@ -46346,6 +46373,60 @@ Value for the NMR spectral acquisition parameter.
    _Interface.Adit_item_view_name
 ;
 Spectrometer carrier frequency
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Spectral_acq_param.Val_err
+
+   _Interface.Tag                  '_Spectral_acq_param.Val_err'
+
+   _Interface.Category              'Spectral_acq_param'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Val err
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Spectral_acq_param.Val_range
+
+   _Interface.Tag                  '_Spectral_acq_param.Val_range'
+
+   _Interface.Category              'Spectral_acq_param'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Val range
 ;
 
    loop_
@@ -47412,33 +47493,6 @@ Processing dimension ID
 
 save_
 
-save__Spectral_processing_param.Name
-
-   _Interface.Tag                  '_Spectral_processing_param.Name'
-
-   _Interface.Category              'Spectral_processing_param'
-
-   _Interface.Description
-;
-Name for a NMR spectral processing parameter.
-;
-
-   _Interface.Adit_item_view_name
-;
-Exponential factor
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Spectral_processing_param.Spectral_dim
 
    _Interface.Tag                  '_Spectral_processing_param.Spectral_dim'
@@ -47466,6 +47520,33 @@ Spectral dimension number
 
 save_
 
+save__Spectral_processing_param.Name
+
+   _Interface.Tag                  '_Spectral_processing_param.Name'
+
+   _Interface.Category              'Spectral_processing_param'
+
+   _Interface.Description
+;
+Name for a NMR spectral processing parameter.
+;
+
+   _Interface.Adit_item_view_name
+;
+Exponential factor
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Spectral_processing_param.Val
 
    _Interface.Tag                  '_Spectral_processing_param.Val'
@@ -47480,6 +47561,60 @@ Value for the NMR spectral processing parameter.
    _Interface.Adit_item_view_name
 ;
 Gaussian factor
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Spectral_processing_param.Val_err
+
+   _Interface.Tag                  '_Spectral_processing_param.Val_err'
+
+   _Interface.Category              'Spectral_processing_param'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Val err
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Spectral_processing_param.Val_range
+
+   _Interface.Tag                  '_Spectral_processing_param.Val_range'
+
+   _Interface.Category              'Spectral_processing_param'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Val range
 ;
 
    loop_
@@ -60723,6 +60858,33 @@ Figure of merit
 
 save_
 
+save__Peak.Type
+
+   _Interface.Tag                  '_Peak.Type'
+
+   _Interface.Category              'Peak'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Type
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Peak.Restraint
 
    _Interface.Tag                  '_Peak.Restraint'
@@ -61538,6 +61700,411 @@ save__Peak_char.Spectral_peak_list_ID
    _Interface.Tag                  '_Peak_char.Spectral_peak_list_ID'
 
    _Interface.Category              'Peak_char'
+
+   _Interface.Description
+;
+Pointer to '_Spectral_peak_list.ID'
+;
+
+   _Interface.Adit_item_view_name
+;
+Spectral peak list ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.ID
+
+   _Interface.Tag                  '_Peak_coupling.ID'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Peak_ID
+
+   _Interface.Tag                  '_Peak_coupling.Peak_ID'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Peak ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Spectral_dim_ID
+
+   _Interface.Tag                  '_Peak_coupling.Spectral_dim_ID'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Spectral dim ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Multiplet_component_ID
+
+   _Interface.Tag                  '_Peak_coupling.Multiplet_component_ID'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Multiplet component ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Type
+
+   _Interface.Tag                  '_Peak_coupling.Type'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Type
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Coupling_val
+
+   _Interface.Tag                  '_Peak_coupling.Coupling_val'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Coupling val
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Coupling_val_err
+
+   _Interface.Tag                  '_Peak_coupling.Coupling_val_err'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Coupling val err
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Strong_coupling_effect_val
+
+   _Interface.Tag                  '_Peak_coupling.Strong_coupling_effect_val'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Strong coupling effect val
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Strong_coupling_effect_val_err
+
+   _Interface.Tag                  '_Peak_coupling.Strong_coupling_effect_val_err'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Strong coupling effect val err
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Intensity_val
+
+   _Interface.Tag                  '_Peak_coupling.Intensity_val'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Intensity val
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Intensity_val_err
+
+   _Interface.Tag                  '_Peak_coupling.Intensity_val_err'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Intensity val err
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Partner_coupling_peak_ID
+
+   _Interface.Tag                  '_Peak_coupling.Partner_coupling_peak_ID'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Partner coupling peak ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Sf_ID
+
+   _Interface.Tag                  '_Peak_coupling.Sf_ID'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+Pointer to '_Spectral_peak_list.Sf_ID'
+;
+
+   _Interface.Adit_item_view_name
+;
+Sf ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Entry_ID
+
+   _Interface.Tag                  '_Peak_coupling.Entry_ID'
+
+   _Interface.Category              'Peak_coupling'
+
+   _Interface.Description
+;
+Pointer to '_Entry.ID'
+;
+
+   _Interface.Adit_item_view_name
+;
+Entry ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__Peak_coupling.Spectral_peak_list_ID
+
+   _Interface.Tag                  '_Peak_coupling.Spectral_peak_list_ID'
+
+   _Interface.Category              'Peak_coupling'
 
    _Interface.Description
 ;

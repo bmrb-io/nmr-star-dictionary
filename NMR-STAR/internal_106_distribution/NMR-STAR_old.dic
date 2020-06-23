@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-05-26
+#  version date -  2020-06-23
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.10.4
+    _dictionary.version         3.2.12.0
 
      loop_
        _dictionary_history.version
@@ -5102,7 +5102,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.10.4'
+   _item_default.value            '3.2.12.4'
 
    loop_
      _item_enumeration.value
@@ -42905,6 +42905,8 @@ Names for NMR experiments commonly found in the literature.
    CONCA    SSNMR
    'NCOCX DARR'    SSNMR
    'NCACX DARR'    SSNMR
+   PAIN    SSNMR
+   PAR    SSNMR
    FS-REDOR    SSNMR
    '2D TEDOR'    SSNMR
    'CN TEDOR'    SSNMR
@@ -43616,6 +43618,22 @@ Pointer to a save frame of category 'chromatographic_column'.
    _item.category_id                           'Experiment'
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
+
+
+save_
+
+save__Experiment.Details
+
+   _item_description.description
+;
+Additional information describing the experiment and/or list of parameters 
+used to carry out the experiment.
+;
+
+   _item.name                                  '_Experiment.Details'
+   _item.category_id                           'Experiment'
+   _item.mandatory_code                         no
+   _item_type.code                             'text'
 
 
 save_
@@ -44789,6 +44807,21 @@ in the list.
 
 save_
 
+save__Spectral_acq_param.Spectral_dim
+
+   _item_description.description
+;
+The nucleus of the spectral dimension where the parameter value is applied.
+;
+
+   _item.name                                  '_Spectral_acq_param.Spectral_dim'
+   _item.category_id                           'Spectral_acq_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
 save__Spectral_acq_param.Name
 
    _item_description.description
@@ -44822,21 +44855,6 @@ detected in the experiment.
 
 save_
 
-save__Spectral_acq_param.Spectral_dim
-
-   _item_description.description
-;
-The number of the spectral dimension where the parameter value is applied.
-;
-
-   _item.name                                  '_Spectral_acq_param.Spectral_dim'
-   _item.category_id                           'Spectral_acq_param'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
 save__Spectral_acq_param.Val
 
    _item_description.description
@@ -44848,6 +44866,36 @@ Value for the NMR spectral acquisition parameter.
    _item.category_id                           'Spectral_acq_param'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
+
+
+save_
+
+save__Spectral_acq_param.Val_err
+
+   _item_description.description
+;
+The error in the reported spectral acquisition parameter value.
+;
+
+   _item.name                                  '_Spectral_acq_param.Val_err'
+   _item.category_id                           'Spectral_acq_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Spectral_acq_param.Val_range
+
+   _item_description.description
+;
+The reported value range used for the spectral acquisition parameter.
+;
+
+   _item.name                                  '_Spectral_acq_param.Val_range'
+   _item.category_id                           'Spectral_acq_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
 
 
 save_
@@ -45637,6 +45685,21 @@ The spectral dimension in which the processing parameter was applied.
 
 save_
 
+save__Spectral_processing_param.Spectral_dim
+
+   _item_description.description
+;
+The number of the spectral dimension where the parameter value is applied.
+;
+
+   _item.name                                  '_Spectral_processing_param.Spectral_dim'
+   _item.category_id                           'Spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
 save__Spectral_processing_param.Name
 
    _item_description.description
@@ -45669,21 +45732,6 @@ Name for a NMR spectral processing parameter.
 
 save_
 
-save__Spectral_processing_param.Spectral_dim
-
-   _item_description.description
-;
-The number of the spectral dimension where the parameter value is applied.
-;
-
-   _item.name                                  '_Spectral_processing_param.Spectral_dim'
-   _item.category_id                           'Spectral_processing_param'
-   _item.mandatory_code                         no
-   _item_type.code                             'int'
-
-
-save_
-
 save__Spectral_processing_param.Val
 
    _item_description.description
@@ -45695,6 +45743,36 @@ Value for the NMR spectral processing parameter.
    _item.category_id                           'Spectral_processing_param'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
+
+
+save_
+
+save__Spectral_processing_param.Val_err
+
+   _item_description.description
+;
+Error in the reported value for the spectral processing parameter.
+;
+
+   _item.name                                  '_Spectral_processing_param.Val_err'
+   _item.category_id                           'Spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Spectral_processing_param.Val_range
+
+   _item_description.description
+;
+Reported range for the spectral processing parameter.
+;
+
+   _item.name                                  '_Spectral_processing_param.Val_range'
+   _item.category_id                           'Spectral_processing_param'
+   _item.mandatory_code                         no
+   _item_type.code                             'line'
 
 
 save_
@@ -51312,7 +51390,7 @@ Pointer to '_Representative_conformer.ID'
 
    _item.name                                  '_Theoretical_chem_shift_list.Model_atomic_coordinates_ID'
    _item.category_id                           'Theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
@@ -51343,7 +51421,7 @@ Pointer to '_Tensor_list.ID'
 
    _item.name                                  '_Theoretical_chem_shift_list.Tensor_list_ID'
    _item.category_id                           'Theoretical_chem_shift_list'
-   _item.mandatory_code                         yes
+   _item.mandatory_code                         no
    _item_type.code                             'int'
 
 
@@ -54569,6 +54647,7 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Spectral_peak_list.Sf_ID'                            'Spectral_peak_list'            yes
+  '_Peak_coupling.Sf_ID'                                 'Peak_coupling'                 yes
 
   stop_
 
@@ -54576,7 +54655,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-   ?      ?
+  '_Peak_coupling.Sf_ID'                                 '_Spectral_peak_list.Sf_ID'
 
   stop_
 
@@ -54604,6 +54683,7 @@ Spectral peak list ID
   '_Peak.Spectral_peak_list_ID'                          'Peak'                          yes
   '_Peak_general_char.Spectral_peak_list_ID'             'Peak_general_char'             yes
   '_Peak_char.Spectral_peak_list_ID'                     'Peak_char'                     yes
+  '_Peak_coupling.Spectral_peak_list_ID'                 'Peak_coupling'                 yes
   '_Assigned_peak_chem_shift.Spectral_peak_list_ID'                                      'Assigned_peak_chem_shift'      yes
   '_Peak_row_format.Spectral_peak_list_ID'               'Peak_row_format'               yes
   '_Spectral_transition.Spectral_peak_list_ID'           'Spectral_transition'           yes
@@ -54625,6 +54705,7 @@ Spectral peak list ID
   '_Peak.Spectral_peak_list_ID'                          '_Spectral_peak_list.ID'
   '_Peak_general_char.Spectral_peak_list_ID'             '_Spectral_peak_list.ID'
   '_Peak_char.Spectral_peak_list_ID'                     '_Spectral_peak_list.ID'
+  '_Peak_coupling.Spectral_peak_list_ID'                 '_Spectral_peak_list.ID'
   '_Assigned_peak_chem_shift.Spectral_peak_list_ID'                                      '_Spectral_peak_list.ID'
   '_Peak_row_format.Spectral_peak_list_ID'               '_Spectral_peak_list.ID'
   '_Spectral_transition.Spectral_peak_list_ID'           '_Spectral_peak_list.ID'
@@ -54994,6 +55075,7 @@ spectrum.
   '_Spectral_dim_transfer.Spectral_dim_ID_1'             'Spectral_dim_transfer'         yes
   '_Spectral_dim_transfer.Spectral_dim_ID_2'             'Spectral_dim_transfer'         yes
   '_Peak_char.Spectral_dim_ID'                           'Peak_char'                     yes
+  '_Peak_coupling.Spectral_dim_ID'                       'Peak_coupling'                 yes
   '_Assigned_peak_chem_shift.Spectral_dim_ID'            'Assigned_peak_chem_shift'      yes
   '_Spectral_transition_char.Spectral_dim_ID'            'Spectral_transition_char'      yes
   '_Assigned_spectral_transition.Spectral_dim_ID'                                        'Assigned_spectral_transition'                      yes
@@ -55007,6 +55089,7 @@ spectrum.
   '_Spectral_dim_transfer.Spectral_dim_ID_1'             '_Spectral_dim.ID'
   '_Spectral_dim_transfer.Spectral_dim_ID_2'             '_Spectral_dim.ID'
   '_Peak_char.Spectral_dim_ID'                           '_Spectral_dim.ID'
+  '_Peak_coupling.Spectral_dim_ID'                       '_Spectral_dim.ID'
   '_Assigned_peak_chem_shift.Spectral_dim_ID'            '_Spectral_dim.ID'
   '_Spectral_transition_char.Spectral_dim_ID'            '_Spectral_dim.ID'
   '_Assigned_spectral_transition.Spectral_dim_ID'                                        '_Spectral_dim.ID'
@@ -55737,6 +55820,8 @@ Unique identifier for the spectral peak.
   '_Peak.ID'                                             'Peak'                          yes
   '_Peak_general_char.Peak_ID'                           'Peak_general_char'             yes
   '_Peak_char.Peak_ID'                                   'Peak_char'                     yes
+  '_Peak_coupling.Peak_ID'                               'Peak_coupling'                 yes
+  '_Peak_coupling.Partner_coupling_peak_ID'              'Peak_coupling'                 yes
   '_Assigned_peak_chem_shift.Peak_ID'                    'Assigned_peak_chem_shift'      yes
   '_Peak_row_format.ID'                                  'Peak_row_format'               yes
   '_Peak_row_format.Peak_ID'                             'Peak_row_format'               yes
@@ -55756,6 +55841,8 @@ Unique identifier for the spectral peak.
 
   '_Peak_general_char.Peak_ID'                           '_Peak.ID'
   '_Peak_char.Peak_ID'                                   '_Peak.ID'
+  '_Peak_coupling.Peak_ID'                               '_Peak.ID'
+  '_Peak_coupling.Partner_coupling_peak_ID'              '_Peak.ID'
   '_Assigned_peak_chem_shift.Peak_ID'                    '_Peak.ID'
   '_Peak_row_format.ID'                                  '_Peak.ID'
   '_Peak_row_format.Peak_ID'                             '_Peak.ID'
@@ -55786,6 +55873,35 @@ that the peak listed represents a real piece of data.
    _item.category_id                           'Peak'
    _item.mandatory_code                         no
    _item_type.code                             'float'
+
+
+save_
+
+save__Peak.Type
+
+   _item_description.description
+;
+A code that describes the scalar coupling characteristics of the peak.
+;
+
+   _item.name                                  '_Peak.Type'
+   _item.category_id                           'Peak'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s    singlet
+   d    doublet
+   dd    'doublet of doublets'
+   dt    'doublet of triplets'
+   t    triplet
+   m    multiple
+
+   stop_
 
 
 save_
@@ -56358,6 +56474,273 @@ Pointer to '_Spectral_peak_list.ID'
 
    _item.name                                  '_Peak_char.Spectral_peak_list_ID'
    _item.category_id                           'Peak_char'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save_Peak_coupling
+   _category.description
+;
+Items in the peak_coupling category provide quantitative information about the scalar coupling observed through the peak splitting.
+;
+   _category.id                   'Peak_coupling'
+
+   loop_
+     _category_key.name
+
+     '_Peak_coupling.ID'
+     '_Peak_coupling.Entry_ID'
+     '_Peak_coupling.Spectral_peak_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'spectral_peak_list'
+
+   stop_
+
+save_
+
+save__Peak_coupling.ID
+
+   _item_description.description
+;
+Unique identifier for the reported scalar coupling values.
+;
+
+   _item.name                                  '_Peak_coupling.ID'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Peak_coupling.Peak_ID
+
+   _item_description.description
+;
+Pointer to '_Peak.ID'
+;
+
+   _item.name                                  '_Peak_coupling.Peak_ID'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Peak_coupling.Spectral_dim_ID
+
+   _item_description.description
+;
+Pointer to '_Spectral_dim.ID'
+;
+
+   _item.name                                  '_Peak_coupling.Spectral_dim_ID'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Peak_coupling.Multiplet_component_ID
+
+   _item_description.description
+;
+An identifier for the set of peaks for nuclei involved in the observed coupling.
+;
+
+   _item.name                                  '_Peak_coupling.Multiplet_component_ID'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Peak_coupling.Type
+
+   _item_description.description
+;
+A code that describes the type of coupling pattern observed for the NMR 
+spectral peak.
+;
+
+   _item.name                                  '_Peak_coupling.Type'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   no
+   _item_type.code                             'code'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   s    singlet
+   d    doublet
+   dd    'doublet of doublets'
+   dt    'doublet of triplets'
+   t    triplet
+   m    multiple
+
+   stop_
+
+
+save_
+
+save__Peak_coupling.Coupling_val
+
+   _item_description.description
+;
+The observed scalar coupling value.
+;
+
+   _item.name                                  '_Peak_coupling.Coupling_val'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Peak_coupling.Coupling_val_err
+
+   _item_description.description
+;
+The error in the observed scalar coupling value.
+;
+
+   _item.name                                  '_Peak_coupling.Coupling_val_err'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Peak_coupling.Strong_coupling_effect_val
+
+   _item_description.description
+;
+A measure of relative intensities for the transitions in the peak coupling 
+pattern that reports on the strength of the coupling between nuclei.
+;
+
+   _item.name                                  '_Peak_coupling.Strong_coupling_effect_val'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Peak_coupling.Strong_coupling_effect_val_err
+
+   _item_description.description
+;
+The error in the coupling effect strength value.
+;
+
+   _item.name                                  '_Peak_coupling.Strong_coupling_effect_val_err'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Peak_coupling.Intensity_val
+
+   _item_description.description
+;
+The coupled transition intensity value.
+;
+
+   _item.name                                  '_Peak_coupling.Intensity_val'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Peak_coupling.Intensity_val_err
+
+   _item_description.description
+;
+The error in the coupled transition intensity value.
+;
+
+   _item.name                                  '_Peak_coupling.Intensity_val_err'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'float'
+
+
+save_
+
+save__Peak_coupling.Partner_coupling_peak_ID
+
+   _item_description.description
+;
+Pointer to '_Peak.ID'
+;
+
+   _item.name                                  '_Peak_coupling.Partner_coupling_peak_ID'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Peak_coupling.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Spectral_peak_list.Sf_ID'
+;
+
+   _item.name                                  '_Peak_coupling.Sf_ID'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Peak_coupling.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_Peak_coupling.Entry_ID'
+   _item.category_id                           'Peak_coupling'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save__Peak_coupling.Spectral_peak_list_ID
+
+   _item_description.description
+;
+Pointer to '_Spectral_peak_list.ID'
+;
+
+   _item.name                                  '_Peak_coupling.Spectral_peak_list_ID'
+   _item.category_id                           'Peak_coupling'
    _item.mandatory_code                         yes
    _item_type.code                             'int'
 

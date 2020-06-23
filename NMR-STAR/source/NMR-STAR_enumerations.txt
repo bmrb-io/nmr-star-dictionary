@@ -4994,6 +4994,8 @@ save__Experiment.Name
       'CONCA'                       SSNMR
       'NCOCX DARR'                  SSNMR
       'NCACX DARR'                  SSNMR
+       PAIN                         SSNMR
+       PAR                          SSNMR
       'FS-REDOR'                    SSNMR
       '2D TEDOR'                    SSNMR
       'CN TEDOR'                    SSNMR
@@ -6445,6 +6447,41 @@ save__Other_data_experiment.Sample_state
     solid            .
 
     stop_
+
+save_
+
+save__Peak.Type
+
+  loop_
+     _Item_enumeration.Value
+     _Item_enumeration.Description
+
+    s     singlet
+    d     doublet
+    dd   'doublet of doublets'
+    dt   'doublet of triplets'
+    t     triplet
+    m     multiple
+
+  stop_
+
+save_
+
+
+save__Peak_coupling.Type
+
+  loop_
+     _Item_enumeration.Value
+     _Item_enumeration.Description
+
+    s     singlet
+    d     doublet
+    dd   'doublet of doublets'
+    dt   'doublet of triplets'
+    t     triplet
+    m     multiple
+
+  stop_
 
 save_
 
