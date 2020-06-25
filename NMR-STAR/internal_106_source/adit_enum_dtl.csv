@@ -2848,62 +2848,86 @@ TBL_BEGIN,?,?,?
 131,2,1D 13C,enumeration_text
 131,3,1D 15N,enumeration_text
 131,4,1D 31P,enumeration_text
-131,5,2D 1H-15N HSQC,enumeration_text
-131,6,2D 1H-15N HSQC NH2 only,enumeration_text
-131,7,2D 1H-13C HSQC,enumeration_text
-131,8,2D 1H-13C HSQC aliphatic,enumeration_text
-131,9,2D 1H-13C HSQC aromatic,enumeration_text
-131,10,2D 1H-1H TOCSY,enumeration_text
-131,11,2D DQF-COSY,enumeration_text
-131,12,2D 1H-1H COSY,enumeration_text
-131,13,2D 1H-1H NOESY,enumeration_text
-131,14,T1/R1 relaxation,enumeration_text
-131,15,T1rho/R1rho relaxation,enumeration_text
-131,16,T2/R2 relaxation,enumeration_text
-131,17,1H-15N heteronoe,enumeration_text
-131,18,3D CBCA(CO)NH,enumeration_text
-131,19,3D C(CO)NH,enumeration_text
-131,20,3D HNCO,enumeration_text
-131,21,3D HNCA,enumeration_text
-131,22,3D HNCACB,enumeration_text
-131,23,3D HBHA(CO)NH,enumeration_text
-131,24,3D HN(CO)CA,enumeration_text
-131,25,3D H(CCO)NH,enumeration_text
-131,26,3D HCCH-TOCSY,enumeration_text
-131,27,3D HNHA,enumeration_text
-131,28,3D 1H-15N NOESY,enumeration_text
-131,29,3D 1H-15N TOCSY,enumeration_text
-131,30,3D 1H-13C NOESY,enumeration_text
-131,31,3D 1H-13C NOESY aliphatic,enumeration_text
-131,32,3D 1H-13C NOESY aromatic,enumeration_text
-131,33,3D HNHB,enumeration_text
-131,34,3D HCCH-COSY,enumeration_text
-131,35,3D HCACO,enumeration_text
-131,36,3D HN(COCA)CB,enumeration_text
-131,37,15N-(1H) NOE,enumeration_text
-131,38,13C-(1H) NOE,enumeration_text
-131,39,DARR,SSNMR
-131,40,2D DARR,SSNMR
-131,41,CANcoCX DARR,SSNMR
-131,42,NCACX,SSNMR
-131,43,NCOCX,SSNMR
-131,44,CONCA,SSNMR
-131,45,NCOCX DARR,SSNMR
-131,46,NCACX DARR,SSNMR
-131,47,PAIN,SSNMR
-131,48,PAR,SSNMR
-131,49,FS-REDOR,SSNMR
-131,50,2D TEDOR,SSNMR
-131,51,CN TEDOR,SSNMR
-131,52,2D 13C/13C PDSD,SSNMR
-131,53,2D 13C/13C TOBSY,SSNMR
-131,54,2D HBCBCGCDCEHE,SSNMR
-131,55,2D HBCBCGCDHD,SSNMR
-131,56,2D 13C-detected CORD,SSNMR
-131,57,2D 13C-detected NCA,SSNMR
-131,58,1H-detected (H)NH HETCOR,SSNMR
-131,59,3D RNCSA,SSNMR
-131,60,3D ROCSA,SSNMR
+131,5,2D 1H-13C HMQC,enumeration_text
+131,6,2D 1H-15N HSQC,enumeration_text
+131,7,2D 1H-15N HSQC NH2 only,enumeration_text
+131,8,2D 1H-15N TROSY,enumeration_text
+131,9,2D 1H-13C HSQC,enumeration_text
+131,10,2D 1H-13C HSQC/HMQC,enumeration_text
+131,11,2D 1H-13C HSQC aliphatic,enumeration_text
+131,12,2D 1H-13C HSQC aromatic,enumeration_text
+131,13,2D 1H-1H TOCSY,enumeration_text
+131,14,2D 1H-1H ROESY,enumeration_text
+131,15,2D DQF-COSY,enumeration_text
+131,16,2D 1H-1H COSY,enumeration_text
+131,17,2D 1H-1H NOESY,enumeration_text
+131,18,2D (HB)CB(CGCD)HD,enumeration_text
+131,19,T1/R1 relaxation,enumeration_text
+131,20,T1rho/R1rho relaxation,enumeration_text
+131,21,T2/R2 relaxation,enumeration_text
+131,22,1H-15N heteronoe,enumeration_text
+131,23,JR NOESY,enumeration_text
+131,24,L-PROSY NOESY,enumeration_text
+131,25,3D CBCACONH,enumeration_text
+131,26,3D CBCA(CO)NH,enumeration_text
+131,27,3D CBCANH,enumeration_text
+131,28,3D C(CO)NH,enumeration_text
+131,29,3D HNCO,enumeration_text
+131,30,3D HNCA,enumeration_text
+131,31,3D HBHANH,enumeration_text
+131,32,3D HNCACB,enumeration_text
+131,33,3D HN(CA)CO,enumeration_text
+131,34,3D HNCACO,enumeration_text
+131,35,3D HBHA(CO)NH,enumeration_text
+131,36,3D HN(CO)CA,enumeration_text
+131,37,3D HN(CO)CACB,enumeration_text
+131,38,3D CCH-TOCSY,enumeration_text
+131,39,3D H(CCO)NH,enumeration_text
+131,40,3D HCCH-TOCSY,enumeration_text
+131,41,3D (H)CCH-TOCSY,enumeration_text
+131,42,3D 15N-separated NOESY,enumeration_text
+131,43,3D 13C-separated NOESY,enumeration_text
+131,44,3D 1H-15N NOESY,enumeration_text
+131,45,3D 1H-15N TOCSY,enumeration_text
+131,46,3D 1H-13C NOESY,enumeration_text
+131,47,3D 1H-13C NOESY aliphatic,enumeration_text
+131,48,3D 1H-13C NOESY aromatic,enumeration_text
+131,49,3D HNHA,enumeration_text
+131,50,3D HNHB,enumeration_text
+131,51,3D HCCH-COSY,enumeration_text
+131,52,3D HCACO,enumeration_text
+131,53,3D HN(COCA)CB,enumeration_text
+131,54,4D CC NOESY,enumeration_text
+131,55,4D 13C-separated NOESY,enumeration_text
+131,56,5D APSY CBCACONH,enumeration_text
+131,57,5D APSY HACACONH,enumeration_text
+131,58,5D HN(CA)CONH,enumeration_text
+131,59,15N-(1H) NOE,enumeration_text
+131,60,13C-(1H) NOE,enumeration_text
+131,61,DARR,SSNMR
+131,62,2D DARR,SSNMR
+131,63,2D 13C-13C DARR,SSNMR
+131,64,CANcoCX,SSNMR
+131,65,NCACX,SSNMR
+131,66,NCOCX,SSNMR
+131,67,CONCA,SSNMR
+131,68,3D NCOCX,SSNMR
+131,69,3D NCACX,SSNMR
+131,70,PAIN,SSNMR
+131,71,PAR,SSNMR
+131,72,15N-1H solid-state de-HETCOR,SSNMR
+131,73,FS-REDOR,SSNMR
+131,74,2D 15N-13C TEDOR,SSNMR
+131,75,CN TEDOR,SSNMR
+131,76,2D 13C/13C PDSD,SSNMR
+131,77,2D 13C/13C TOBSY,SSNMR
+131,78,2D HBCBCGCDCEHE,SSNMR
+131,79,2D HBCBCGCDHD,SSNMR
+131,80,2D 13C-detected CORD,SSNMR
+131,81,2D 13C-detected NCA,SSNMR
+131,82,1H-detected (H)NH HETCOR,SSNMR
+131,83,3D RNCSA,SSNMR
+131,84,3D ROCSA,SSNMR
 132,1,isotropic,enumeration_text
 132,2,anisotropic,enumeration_text
 304,1,RDC_constraints,enumeration_text
