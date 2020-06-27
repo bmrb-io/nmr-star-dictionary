@@ -4060,7 +4060,7 @@ TBL_BEGIN,?,?,?
 113,15,ATSAS,enumeration_text
 113,16,AUREMOL,enumeration_text
 113,17,AutoAssign,enumeration_text
-113,18,AutoStructure,enumeration_text
+113,18,AutoStruct,enumeration_text
 113,19,AVS,enumeration_text
 113,20,AZARA,enumeration_text
 113,21,BATMAN,"small molecule"
@@ -4172,111 +4172,110 @@ TBL_BEGIN,?,?,?
 113,127,NMRbox,enumeration_text
 113,128,NMRCOMPASS,enumeration_text
 113,129,NMRDraw,enumeration_text
-113,130,NMRPipe,enumeration_text
-113,131,NMRFAM-SPARKY,enumeration_text
-113,132,NMRFx Analyst,enumeration_text
-113,133,NMRFx Processor,enumeration_text
-113,134,NMRFx Structure,enumeration_text
-113,135,nmrglue,enumeration_text
-113,136,NmrLineGuru,enumeration_text
-113,137,NMRmix,"small molecule"
-113,138,NMRPipe,enumeration_text
-113,139,nmrstarlib,enumeration_text
-113,140,NMRView,enumeration_text
-113,141,NMRViewJ,enumeration_text
-113,142,nmr_wash,enumeration_text
-113,143,NOAH,enumeration_text
-113,144,NOEID,enumeration_text
-113,145,NUCFIT,enumeration_text
-113,146,nus-tool,enumeration_text
-113,147,NUTS,enumeration_text
-113,148,OPAL,enumeration_text
-113,149,Open Babel,enumeration_text
-113,150,OpenMM,enumeration_text
-113,151,OpenVnmrJ,enumeration_text
-113,152,OSPREY,enumeration_text
-113,153,PALES,enumeration_text
-113,154,PANAV,enumeration_text
-113,155,ParmEd,enumeration_text
-113,156,PDBStat,enumeration_text
-113,157,PEAKY,enumeration_text
-113,158,PECAN,enumeration_text
-113,159,PINE,enumeration_text
-113,160,PiNT,enumeration_text
-113,161,PIPP,enumeration_text
-113,162,PISTACHIO,enumeration_text
-113,163,PLUQ,enumeration_text
-113,164,POISSON-GENERATOR,enumeration_text
-113,165,PONDEROSA,enumeration_text
-113,166,PPM/PPM_ONE,enumeration_text
-113,167,Procheck,enumeration_text
-113,168,ProcheckNMR,enumeration_text
-113,169,P-ROI,enumeration_text
-113,170,PROMEGA,enumeration_text
-113,171,PRONTO,enumeration_text
-113,172,PROSA,enumeration_text
-113,173,PROTEIN-DYNAMICS,enumeration_text
-113,174,PSVS,enumeration_text
-113,175,PyMOL,enumeration_text
-113,176,PyNMR-STAR,enumeration_text
-113,177,PyShifts,enumeration_text
-113,178,Qhull,enumeration_text
-113,179,QUEEN,enumeration_text
-113,180,RASMOL,enumeration_text
-113,181,raw,enumeration_text
-113,182,RCI,enumeration_text
-113,183,RDC-PANDA/Analytic,enumeration_text
-113,184,REDCAT,enumeration_text
-113,185,REDCRAFT,enumeration_text
-113,186,Relax,enumeration_text
-113,187,RESCUE,enumeration_text
-113,188,RNAstructure,enumeration_text
-113,189,rNMR,"small molecule"
-113,190,RNMRTK,enumeration_text
-113,191,Rosetta,enumeration_text
-113,192,RUNER,enumeration_text
-113,193,SANE,enumeration_text
-113,194,SEER,enumeration_text
-113,195,SHIFTS,enumeration_text
-113,196,ShiftX,enumeration_text
-113,197,ShiftX2,enumeration_text
-113,198,SHIMpanzee,enumeration_text
-113,199,SIMPSON,enumeration_text
-113,200,SMILE,enumeration_text
-113,201,SPARKY,enumeration_text
-113,202,SPARTA,enumeration_text
-113,203,SPARTA+,enumeration_text
-113,204,SpinDrops,enumeration_text
-113,205,SPSCAN,enumeration_text
-113,206,ssNake,enumeration_text
-113,207,SSP,enumeration_text
-113,208,SYBYL,enumeration_text
-113,209,TALOS,enumeration_text
-113,210,TALOS+,enumeration_text
-113,211,TALOS-N,enumeration_text
-113,212,tameNMR,enumeration_text
-113,213,Tensor2,enumeration_text
-113,214,tiger,enumeration_text
-113,215,TINKER,enumeration_text
-113,216,TITAN,enumeration_text
-113,217,TOPSPIN,enumeration_text
-113,218,TREND,enumeration_text
-113,219,TRIPOS,enumeration_text
-113,220,UXNMR,enumeration_text
-113,221,VMD,enumeration_text
-113,222,VMD-Xplor,enumeration_text
-113,223,VNMR,enumeration_text
-113,224,VNMRj,enumeration_text
-113,225,Wattos,enumeration_text
-113,226,WhatIF,enumeration_text
-113,227,XDrawChem,enumeration_text
-113,228,XEASY,enumeration_text
-113,229,Xipp,enumeration_text
-113,230,X-PLOR,enumeration_text
-113,231,X-PLOR NIH,enumeration_text
-113,232,XSSP,enumeration_text
-113,233,xwinnmr,enumeration_text
-113,234,xyza2pipe,enumeration_text
+113,130,NMRFAM-SPARKY,enumeration_text
+113,131,NMRFx Analyst,enumeration_text
+113,132,NMRFx Processor,enumeration_text
+113,133,NMRFx Structure,enumeration_text
+113,134,nmrglue,enumeration_text
+113,135,NmrLineGuru,enumeration_text
+113,136,NMRmix,"small molecule"
+113,137,NMRPipe,enumeration_text
+113,138,nmrstarlib,enumeration_text
+113,139,NMRView,enumeration_text
+113,140,NMRViewJ,enumeration_text
+113,141,nmr_wash,enumeration_text
+113,142,NOAH,enumeration_text
+113,143,NOEID,enumeration_text
+113,144,NUCFIT,enumeration_text
+113,145,nus-tool,enumeration_text
+113,146,NUTS,enumeration_text
+113,147,OPAL,enumeration_text
+113,148,Open Babel,enumeration_text
+113,149,OpenMM,enumeration_text
+113,150,OpenVnmrJ,enumeration_text
+113,151,OSPREY,enumeration_text
+113,152,PALES,enumeration_text
+113,153,PANAV,enumeration_text
+113,154,ParmEd,enumeration_text
+113,155,PDBStat,enumeration_text
+113,156,PEAKY,enumeration_text
+113,157,PECAN,enumeration_text
+113,158,PINE,enumeration_text
+113,159,PiNT,enumeration_text
+113,160,PIPP,enumeration_text
+113,161,PISTACHIO,enumeration_text
+113,162,PLUQ,enumeration_text
+113,163,POISSON-GENERATOR,enumeration_text
+113,164,PONDEROSA,enumeration_text
+113,165,PPM/PPM_ONE,enumeration_text
+113,166,Procheck,enumeration_text
+113,167,ProcheckNMR,enumeration_text
+113,168,P-ROI,enumeration_text
+113,169,PROMEGA,enumeration_text
+113,170,PRONTO,enumeration_text
+113,171,PROSA,enumeration_text
+113,172,PROTEIN-DYNAMICS,enumeration_text
+113,173,PSVS,enumeration_text
+113,174,PyMOL,enumeration_text
+113,175,PyNMR-STAR,enumeration_text
+113,176,PyShifts,enumeration_text
+113,177,Qhull,enumeration_text
+113,178,QUEEN,enumeration_text
+113,179,RASMOL,enumeration_text
+113,180,raw,enumeration_text
+113,181,RCI,enumeration_text
+113,182,RDC-PANDA/Analytic,enumeration_text
+113,183,REDCAT,enumeration_text
+113,184,REDCRAFT,enumeration_text
+113,185,Relax,enumeration_text
+113,186,RESCUE,enumeration_text
+113,187,RNAstructure,enumeration_text
+113,188,rNMR,"small molecule"
+113,189,RNMRTK,enumeration_text
+113,190,Rosetta,enumeration_text
+113,191,RUNER,enumeration_text
+113,192,SANE,enumeration_text
+113,193,SEER,enumeration_text
+113,194,SHIFTS,enumeration_text
+113,195,ShiftX,enumeration_text
+113,196,ShiftX2,enumeration_text
+113,197,SHIMpanzee,enumeration_text
+113,198,SIMPSON,enumeration_text
+113,199,SMILE,enumeration_text
+113,200,SPARKY,enumeration_text
+113,201,SPARTA,enumeration_text
+113,202,SPARTA+,enumeration_text
+113,203,SpinDrops,enumeration_text
+113,204,SPSCAN,enumeration_text
+113,205,ssNake,enumeration_text
+113,206,SSP,enumeration_text
+113,207,SYBYL,enumeration_text
+113,208,TALOS,enumeration_text
+113,209,TALOS+,enumeration_text
+113,210,TALOS-N,enumeration_text
+113,211,tameNMR,enumeration_text
+113,212,Tensor2,enumeration_text
+113,213,tiger,enumeration_text
+113,214,TINKER,enumeration_text
+113,215,TITAN,enumeration_text
+113,216,TOPSPIN,enumeration_text
+113,217,TREND,enumeration_text
+113,218,TRIPOS,enumeration_text
+113,219,UXNMR,enumeration_text
+113,220,VMD,enumeration_text
+113,221,VMD-Xplor,enumeration_text
+113,222,VNMR,enumeration_text
+113,223,VNMRj,enumeration_text
+113,224,Wattos,enumeration_text
+113,225,WhatIF,enumeration_text
+113,226,XDrawChem,enumeration_text
+113,227,XEASY,enumeration_text
+113,228,Xipp,enumeration_text
+113,229,X-PLOR,enumeration_text
+113,230,X-PLOR NIH,enumeration_text
+113,231,XSSP,enumeration_text
+113,232,xwinnmr,enumeration_text
+113,233,xyza2pipe,enumeration_text
 111,1,4DSPOT,enumeration_text
 111,2,ABACUS,enumeration_text
 111,3,ADAPT-NMR,enumeration_text
@@ -4294,7 +4293,7 @@ TBL_BEGIN,?,?,?
 111,15,ATSAS,enumeration_text
 111,16,AUREMOL,enumeration_text
 111,17,AutoAssign,enumeration_text
-111,18,AutoStructure,enumeration_text
+111,18,AutoStruct,enumeration_text
 111,19,AVS,enumeration_text
 111,20,AZARA,enumeration_text
 111,21,BATMAN,"small molecule"
@@ -4779,7 +4778,7 @@ TBL_BEGIN,?,?,?
 114,7,(AURELIA) - Neidig$ Geyer$ Gorler$ Antz$ Saffrich$ Beneicke$ Kalbitzer,enumeration_text
 114,8,(AUREMOL) - Bruker Biospin,enumeration_text
 114,9,(AutoAssign) - Zimmerman$ Moseley$ Kulikowski and Montelione,enumeration_text
-114,10,(AutoStructure) - Huang$ Tejero$ Powers and Montelione,enumeration_text
+114,10,(AutoStruct) - Huang$ Tejero$ Powers and Montelione,enumeration_text
 114,11,(AVS) - Moseley and Montelione,enumeration_text
 114,12,(AZARA) - Boucher,enumeration_text
 114,13,(CANDID) - Herrmann$ Guntert and Wuthrich,enumeration_text

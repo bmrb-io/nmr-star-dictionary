@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-06-24
+#  version date -  2020-06-26
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.12.1
+    _dictionary.version         3.2.13.0
 
      loop_
        _dictionary_history.version
@@ -4186,6 +4186,7 @@ time the data are loaded into a database system.
       _item.mandatory_code
 
   '_Entry.Sf_ID'                                         'Entry'                         yes
+  '_BMRbig_link.Sf_ID'                                   'BMRbig_link'                   yes
 
   stop_
 
@@ -4193,7 +4194,7 @@ time the data are loaded into a database system.
       _item_linked.child_name
       _item_linked.parent_name
 
-   ?      ?
+  '_BMRbig_link.Sf_ID'                                   '_Entry.Sf_ID'
 
   stop_
 
@@ -4224,6 +4225,7 @@ BMRB accession number for this entry
   '_Data_set.Entry_ID'                                   'Data_set'                      yes
   '_Datum.Entry_ID'                                      'Datum'                         yes
   '_Release.Entry_ID'                                    'Release'                       yes
+  '_BMRbig_link.Entry_ID'                                'BMRbig_link'                   yes
   '_Related_entries.Entry_ID'                            'Related_entries'               yes
   '_Matched_entries.Entry_ID'                            'Matched_entries'               yes
   '_Auxiliary_files.Entry_ID'                            'Auxiliary_files'               yes
@@ -4541,6 +4543,7 @@ BMRB accession number for this entry
   '_Data_set.Entry_ID'                                   '_Entry.ID'
   '_Datum.Entry_ID'                                      '_Entry.ID'
   '_Release.Entry_ID'                                    '_Entry.ID'
+  '_BMRbig_link.Entry_ID'                                '_Entry.ID'
   '_Related_entries.Entry_ID'                            '_Entry.ID'
   '_Matched_entries.Entry_ID'                            '_Entry.ID'
   '_Auxiliary_files.Entry_ID'                            '_Entry.ID'
@@ -5102,7 +5105,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.12.0'
+   _item_default.value            '3.2.12.1'
 
    loop_
      _item_enumeration.value
@@ -9072,6 +9075,86 @@ Pointer to '_Entry.ID'
 
    _item.name                                  '_Release.Entry_ID'
    _item.category_id                           'Release'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+
+save_
+
+save_BMRbig_link
+   _category.description
+;
+Items in the BMRbig_link category define BMRbig uploads that contain data to be included in a BMRB entry or linked to a BMRB entry.
+;
+   _category.id                   'BMRbig_link'
+   _category.mandatory_code       yes
+
+   loop_
+     _category_key.name
+
+     '_BMRbig_link.BMRbig_ID'
+     '_BMRbig_link.Entry_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'entry_information'
+
+   stop_
+
+save_
+
+save__BMRbig_link.BMRbig_ID
+
+   _item_description.description
+;
+The unique identifier for a BMRbig upload that contains data that is to 
+be included in the BMRB entry or linked to the BMRB entry.
+;
+
+   _item.name                                  '_BMRbig_link.BMRbig_ID'
+   _item.category_id                           'BMRbig_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'code'
+
+   loop_
+     _item_examples.case
+
+;
+BMRbig156
+;
+
+   stop_
+
+save_
+
+save__BMRbig_link.Sf_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.Sf_ID'
+;
+
+   _item.name                                  '_BMRbig_link.Sf_ID'
+   _item.category_id                           'BMRbig_link'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__BMRbig_link.Entry_ID
+
+   _item_description.description
+;
+Pointer to '_Entry.ID'
+;
+
+   _item.name                                  '_BMRbig_link.Entry_ID'
+   _item.category_id                           'BMRbig_link'
    _item.mandatory_code                         yes
    _item_type.code                             'code'
 
@@ -36229,7 +36312,7 @@ in the entry.
    ATSAS    ?
    AUREMOL    ?
    AutoAssign    ?
-   AutoStructure    ?
+   AutoStruct    ?
    AVS    ?
    AZARA    ?
    BATMAN    'small molecule'
@@ -36734,7 +36817,7 @@ The name of the software defined by the author or provider of the software.
    ATSAS    ?
    AUREMOL    ?
    AutoAssign    ?
-   AutoStructure    ?
+   AutoStruct    ?
    AVS    ?
    AZARA    ?
    BATMAN    'small molecule'
@@ -36846,7 +36929,6 @@ The name of the software defined by the author or provider of the software.
    NMRbox    ?
    NMRCOMPASS    ?
    NMRDraw    ?
-   NMRPipe    ?
    NMRFAM-SPARKY    ?
    'NMRFx Analyst'    ?
    'NMRFx Processor'    ?
@@ -37062,7 +37144,7 @@ Commercial or academic supplier of the software product.
    '(AURELIA) - Neidig, Geyer, Gorler, Antz, Saffrich, Beneicke, Kalbitzer'    ?
    '(AUREMOL) - Bruker Biospin'    ?
    '(AutoAssign) - Zimmerman, Moseley, Kulikowski and Montelione'    ?
-   '(AutoStructure) - Huang, Tejero, Powers and Montelione'    ?
+   '(AutoStruct) - Huang, Tejero, Powers and Montelione'    ?
    '(AVS) - Moseley and Montelione'    ?
    '(AZARA) - Boucher'    ?
    '(CANDID) - Herrmann, Guntert and Wuthrich'    ?
