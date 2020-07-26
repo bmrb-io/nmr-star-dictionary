@@ -33,6 +33,8 @@ Plan (not yet a real plan, laying out issues and what needs to be carried out, n
  * Make completed production dictionary branch publicly available
  * Make development dictionary branch publicly available
  * Create history file documenting changes between versions of the dictionary (should this be included in 	dictionary or made a separate file?)
+  * Eldon votes for separate file
+  * Jon leans towards a separate file?
  * Establish a process and plans for regular dictionary releases and entry remediation
    * Release official new version every 3-6 months
    * Issues to address with dictionary updates that might be required between major updates
