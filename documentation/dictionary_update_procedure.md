@@ -1,50 +1,49 @@
 NMR-STAR Dictionary Development Plan and BMRB Entry Remediation (2020-07-20)
 
 Goals:
-    • Establish a regular process for updating and release of new NMR-STAR dictionary versions
-        ◦ Define methods for ensuring that a new dictionary version can be put into production without 
-            ▪ breaking anything from deposition to the database
-    • Establish plans for regular remediation of BMRB entries to conform with the most recent production
-        ◦ NMR-STAR dictionary
-        ◦ When there is a change that requires remediation of existing entries, we'd want to somehow do it 	without needing to manually check 15,000 NMR-STAR files
-    • Long-term goal of meeting NIH requirements for database certification 
+* Establish a regular process for updating and release of new NMR-STAR dictionary versions
+  * Define methods for ensuring that a new dictionary version can be put into production without breaking anything from deposition to the database
+  * Establish plans for regular remediation of BMRB entries to conform with the most recent production
+    * NMR-STAR dictionary
+    * When there is a change that requires remediation of existing entries, we'd want to somehow do it 	without needing to manually check 15,000 NMR-STAR files
+  * Long-term goal of meeting NIH requirements for database certification 
 
 Plan:
-    • Define pre-production dictionary version to be finalized
-    • Implement pre-production NMR-STAR dictionary branch
-    • Dictionary dependent processes to update with pre-production dictionary
-        ◦ BMRBdep 
-        ◦ Entry validation pipeline
-        ◦ Relational database
-        ◦ Format conversion tools
-        ◦ Template generation tools
-        ◦ Remediation of BMRB entry format (15K+ released and on-hold)
-    • Remediate 15K+ released and on-hold BMRB entries to the pre-production dictionary defined format
-        ◦ This may involve triaging the entries and updating in batches
-            ▪ Difficulties found during the process upgrades and entry remediation may require that the pre-production dictionary be modified
-    • A final release of all BMRB entries along with the final production dictionary
-    • Complete BioSTAR DDL
-    • Complete software to generate NMR-STAR dictionary using BioSTAR DDL specification
-    • Make completed production dictionary branch publicly available
-    • Make development dictionary branch publicly available
-    • Create history file documenting changes between versions of the dictionary (should this be included in 	dictionary or made a separate file?)
-    • Establish a process and plans for regular dictionary releases and entry remediation
-        ◦ Release official new version every 3-6 months
-        ◦ Issues to address with dictionary updates that might be required between major updates
-            ▪ Discovery of significant dictionary issues
-                • BMRBdep problems that require immediate update
-                • Entry validation problem solutions
-                • Relational database construction and/or loading problem solutions
-            ▪ Accommodating depositors with new kinds of data that needs ‘immediate’ release
-    • Publish NMR-STAR dictionary paper
-        ◦ Focus only on NMR-STAR?
-        ◦ Include description of BioSTAR DDL or put this into a separate paper
+* Define pre-production dictionary version to be finalized
+ * Implement pre-production NMR-STAR dictionary branch
+ * Dictionary dependent processes to update with pre-production dictionary
+   * BMRBdep 
+   * Entry validation pipeline
+   * Relational database
+   * Format conversion tools
+   * Template generation tools
+   * Remediation of BMRB entry format (15K+ released and on-hold)
+ * Remediate 15K+ released and on-hold BMRB entries to the pre-production dictionary defined format
+   * This may involve triaging the entries and updating in batches
+ * Difficulties found during the process upgrades and entry remediation may require that the pre-production dictionary be modified
+ * A final release of all BMRB entries along with the final production dictionary
+ * Complete BioSTAR DDL
+ * Complete software to generate NMR-STAR dictionary using BioSTAR DDL specification
+ * Make completed production dictionary branch publicly available
+ * Make development dictionary branch publicly available
+ * Create history file documenting changes between versions of the dictionary (should this be included in 	dictionary or made a separate file?)
+ * Establish a process and plans for regular dictionary releases and entry remediation
+   * Release official new version every 3-6 months
+   * Issues to address with dictionary updates that might be required between major updates
+     * Discovery of significant dictionary issues
+       * BMRBdep problems that require immediate update
+       * Entry validation problem solutions
+       * Relational database construction and/or loading problem solutions
+     * Accommodating depositors with new kinds of data that needs ‘immediate’ release
+ * Publish NMR-STAR dictionary paper
+   * Focus only on NMR-STAR?
+   * Include description of BioSTAR DDL or put this into a separate paper
 
 Future dictionary development (future major releases):
-    • Dictionary development issues
-        ◦ Chemical shift perturbation
-        ◦ Screening
-        ◦ Tensors 
-        ◦ Relaxation
-        ◦ Techniques other than NMR
-    • Adding tag/category examples
+* Dictionary development issues
+  * Chemical shift perturbation
+  * Screening
+  * Tensors 
+  * Relaxation
+  * Techniques other than NMR
+* Adding tag/category examples
