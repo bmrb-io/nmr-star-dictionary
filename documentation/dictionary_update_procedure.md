@@ -8,7 +8,7 @@ Goals:
     * When there is a change that requires remediation of existing entries, we'd want to somehow do it 	without needing to manually check 15,000 NMR-STAR files
   * Long-term goal of meeting NIH requirements for database certification 
 
-Plan:
+Plan (not yet a real plan, laying out issues and what needs to be carried out, next step will be to define action items, prioritize items, and organize as a plan with an approximate time-line):
 * Define pre-production dictionary version to be finalized
  * Implement pre-production NMR-STAR dictionary branch
  * Dictionary dependent processes to update with pre-production dictionary
