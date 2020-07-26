@@ -20,6 +20,12 @@ Plan:
    * Remediation of BMRB entry format (15K+ released and on-hold)
  * Remediate 15K+ released and on-hold BMRB entries to the pre-production dictionary defined format
    * This may involve triaging the entries and updating in batches
+   * Need to eliminate all of the >200 issues that Dimitri finds when loading the database
+   * All T1/R1 and similar relaxation data needs to be mapped from unique
+   * Big issue is how to validate that data has not been lost or corrupted in carrying out the remediation?
+    * File diffs do not work for sure
+    * Can an effective data value comparison can be written?
+    * Would remediation be carried out on released entry files or pre-release files that contain contact   person information?
  * Difficulties found during the process upgrades and entry remediation may require that the pre-production dictionary be modified
  * A final release of all BMRB entries along with the final production dictionary
  * Complete BioSTAR DDL
@@ -37,7 +43,7 @@ Plan:
      * Accommodating depositors with new kinds of data that needs ‘immediate’ release
  * Publish NMR-STAR dictionary paper
    * Focus only on NMR-STAR?
-   * Include description of BioSTAR DDL or put this into a separate paper
+   * Include description of BioSTAR DDL or put this into a separate paper?
 
 Future dictionary development (future major releases):
 * Dictionary development issues
@@ -47,3 +53,5 @@ Future dictionary development (future major releases):
   * Relaxation
   * Techniques other than NMR
 * Adding tag/category examples
+* Improve tag definitions (make more verbose, clearer to those not familiar with NMR-STAR, STAR, and mmCIF/pdbx)
+* Obtain from RCSB or write code to validate relational model/parent-child relationships
