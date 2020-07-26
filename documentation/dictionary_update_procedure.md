@@ -10,6 +10,7 @@ Goals:
 
 Plan (not yet a real plan, laying out issues and what needs to be carried out, next step will be to define action items, prioritize items, and organize as a plan with an approximate time-line):
 * Define pre-production dictionary version to be finalized
+ * No tag renaming will be carried out with this version - causes too many downstream issues with relational database and validation tools
  * Implement pre-production NMR-STAR dictionary branch
  * Dictionary dependent processes to update with pre-production dictionary
    * BMRBdep 
