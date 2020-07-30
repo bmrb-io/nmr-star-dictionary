@@ -35,17 +35,17 @@ Plan (not yet a real plan, laying out issues and what needs to be carried out, n
  * Make development dictionary branch publicly available
  * Create history file documenting changes between versions of the dictionary (should this be included in 	dictionary or made a separate file?)
    * Questions to discuss before deciding on path forward
-    * Who are the stakeholders in need of a dictionary 'history' (CCPN and wwPDB partners and BMRB)?
-    * What are the stakeholder's needs (historical comments, documentation of updates for maintaining their software, parsable format to aid programmatic analysis and use in updating software)?
-    * What format/style should be used for history document (NMR-STAR, other)?
-    * Is the mmCIF/pdbx format/style sufficient?
-    * How can the various forms of the past dictionary versions be used to generate a 'history'?
-    * How best to append the 'history' going forward?
+     * Who are the stakeholders in need of a dictionary 'history' (CCPN and wwPDB partners and BMRB)?
+     * What are the stakeholder's needs (historical comments, documentation of updates for maintaining their software, parsable format to aid programmatic analysis and use in updating software)?
+     * What format/style should be used for history document (NMR-STAR, other)?
+     * Is the mmCIF/pdbx format/style sufficient?
+     * How can the various forms of the past dictionary versions be used to generate a 'history'?
+     * How best to append the 'history' going forward?
    * Current forms of past versions of the dictionary that are available
-    * Oldest versions of dictionary that are available are probably versions of the Excel spreadsheet stored in directories on Eldon's laptop(s)
-    * At some point the dictionary was being committed to a cvs repository
-    * Later a svn repository was being used. I believe but am not sure if the cvs repository was loaded into the svn repository
-    * Recently (starting in 2019) the dictionary versions have been committed to a GitHub repository
+     * Oldest versions of dictionary that are available are probably versions of the Excel spreadsheet stored in directories on Eldon's laptop(s)
+     * At some point the dictionary was being committed to a cvs repository
+     * Later a svn repository was being used. I believe but am not sure if the cvs repository was loaded into the svn repository
+     * Recently (starting in 2019) the dictionary versions have been committed to a GitHub repository
    * Eldon votes for separate file
    * Jon leans towards a separate file?
    * Michael leans towards a separate file?
