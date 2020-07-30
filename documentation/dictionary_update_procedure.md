@@ -24,9 +24,8 @@ Plan (not yet a real plan, laying out issues and what needs to be carried out, n
    * Need to eliminate all of the >200 issues that Dimitri finds when loading the database
    * All T1/R1 and similar relaxation data needs to be mapped from unique
    * Big issue is how to validate that data has not been lost or corrupted in carrying out the remediation?
-    * File diffs do not work for sure
-    * Can an effective data value comparison can be written?
-    * Would remediation be carried out on released entry files or pre-release files that contain contact   person information?
+    * ~File diffs do not work for sure~ - PyNMR-STAR has an extensively tested diff function which compares '.' equal to '?', doesn't care about spaces, and such. The issue is just that if we're deleteting/adding/remapping tags, it takes a manual look to ensure that the changes were correct.
+    * Would remediation be carried out on released entry files or pre-release files that contain contact person information?
  * Difficulties found during the process upgrades and entry remediation may require that the pre-production dictionary be modified
  * A final release of all BMRB entries along with the final production dictionary
  * Complete BioSTAR DDL
@@ -36,16 +35,18 @@ Plan (not yet a real plan, laying out issues and what needs to be carried out, n
  * Create history file documenting changes between versions of the dictionary (should this be included in 	dictionary or made a separate file?)
    * Questions to discuss before deciding on path forward
      * Who are the stakeholders in need of a dictionary 'history' (CCPN and wwPDB partners and BMRB)?
+       * Bruce Johnson and other software developers
      * What are the stakeholder's needs (historical comments, documentation of updates for maintaining their software, parsable format to aid programmatic analysis and use in updating software)?
+       * Human readable format describing concisely what changes occured, and a link to a separate "migration" document with tips if the changes are not backwards-compatible
      * What format/style should be used for history document (NMR-STAR, other)?
      * Is the mmCIF/pdbx format/style sufficient?
+      * As an overview, but a more detailed document with links to commits and a description of breaking changes would be even better
      * How can the various forms of the past dictionary versions be used to generate a 'history'?
+      * This is an extremely difficult task to do well. I (JW) propose instead focusing on doing a good job from now going forward.
      * How best to append the 'history' going forward?
    * Current forms of past versions of the dictionary that are available
      * Oldest versions of dictionary that are available are probably versions of the Excel spreadsheet stored in directories on Eldon's laptop(s)
-     * At some point the dictionary was being committed to a cvs repository
-     * Later a svn repository was being used. I believe but am not sure if the cvs repository was loaded into the svn repository
-     * Recently (starting in 2019) the dictionary versions have been committed to a GitHub repository
+     * The SVN repository was converted to this Git repo, and the history goes back to 2014. I wouldn't delete them, but I don't know it's worth effort trying to get the older versions into this repo, especially considering that diffing them is essentially useless due to the ID changes on every line in the file with previous releases
    * Eldon votes for separate file
    * Jon leans towards a separate file?
    * Michael agrees with Jon?
