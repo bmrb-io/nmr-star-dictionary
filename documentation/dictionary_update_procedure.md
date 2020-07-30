@@ -48,7 +48,7 @@ Plan (not yet a real plan, laying out issues and what needs to be carried out, n
      * Recently (starting in 2019) the dictionary versions have been committed to a GitHub repository
    * Eldon votes for separate file
    * Jon leans towards a separate file?
-   * Michael leans towards a separate file?
+   * Michael agrees with Jon?
    * 
  * Establish a process and plans for regular dictionary releases and entry remediation
    * Release official new version every 3-6 months
