@@ -43,6 +43,10 @@ Plan (not yet a real plan, laying out issues and what needs to be carried out, n
       * As an overview, but a more detailed document with links to commits and a description of breaking changes would be even better
      * How can the various forms of the past dictionary versions be used to generate a 'history'?
       * This is an extremely difficult task to do well. I (JW) propose instead focusing on doing a good job from now going forward.
+      * With regard to content, would documenting at these levels be enough? Could probably do this without problem of linecount issue. Tag mandatory, data typing, and definition edits would be additional documentation that might be easily handled. Enumeration updates and other edits that involve parsing other files would be much more difficult.
+        * Save frame addition/deletion
+        * loop addition/deletion (tag category edits)
+        * tag addition/deletion
      * How best to append the 'history' going forward?
    * Current forms of past versions of the dictionary that are available
      * Oldest versions of dictionary that are available are probably versions of the Excel spreadsheet stored in directories on Eldon's laptop(s)
