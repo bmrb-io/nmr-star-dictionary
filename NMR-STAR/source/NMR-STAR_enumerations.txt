@@ -114,9 +114,9 @@ save__Assembly_systematic_name.Naming_system
    'CAS registry number'                         .
     BMRB                                         .
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
-   Pfam    ?
-   Swiss-Prot    ?
-   MEROPS    ?
+   Pfam                                          .
+   Swiss-Prot                                    .
+   MEROPS                                        .
 
    stop_
 
@@ -283,6 +283,9 @@ save__Auto_relaxation_list.Common_relaxation_type_name
       R1                                    .
       R2                                    .
       R1rho                                 .
+      T1                                    .
+      T2                                    .
+      T1rho                                 .
      'ZQ relaxation'                        .
      'longitudinal spin order'              .
      'single quantum antiphase'             .
@@ -298,8 +301,8 @@ save__Auto_relaxation_list.Relaxation_coherence_type
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-   Iz               'R1    longitudinal'
-   Sz               'R1    longitudinal'
+   Iz               'R1/T1    longitudinal'
+   Sz               'R1/T1    longitudinal'
 
    (I+)+(I-)        'R1rho or R2      transverse'
    (S+)+(S-)        'R1rho or R2      transverse'
@@ -340,6 +343,11 @@ save__Auto_relaxation_list.Relaxation_val_units
          us-1          .
          ns-1          .
          ps-1          .
+         s           .
+         ms          .
+         us          .
+         ns          .
+         ps          .
 
     stop_
 
@@ -367,6 +375,9 @@ save__Auto_relaxation_list.Temp_calibration_method
 
     methanol                    MeOH
    'monoethylene glycol'        MEG
+   'solid lead nitrate"         .
+   'KBr adamantane blend'       .
+   'Na5[TmDOTP]                 .
    'no calibration applied'     .
 
    stop_
@@ -1173,6 +1184,19 @@ save__Chem_shift_reference.Nitrogen_shifts_flag
     no     .
     yes    .
    'yes with IUPAC referencing'     .
+
+   stop_
+
+save_
+
+save__Chem_shift_reference.Fluorine_shifts_flag
+
+   loop_
+       _Item_enumeration.Value
+       _Item_enumeration.Description
+
+    no     .
+    yes    .
 
    stop_
 
@@ -3894,11 +3918,11 @@ save__Entity_db_link.Database_code
     SP             .
     UNP            .
 # PDBj-BMRB: Added NCBI, tRNADB and HUGO.
-   NCBI    ?
-   HUGO    'HUGO Gene Nomenclature Committee'
-   tRNADB    'transfer RNA database'
+   NCBI            .
+   HUGO           'HUGO Gene Nomenclature Committee'
+   tRNADB         'transfer RNA database'
 # PDBj-BMRB: BMRB(withdrawn) expresses withdrawn accession code referring to current BMRB release status.
-   BMRB(withdrawn)    ?
+   BMRB(withdrawn)    .
 
   stop_
 
@@ -3968,49 +3992,18 @@ save__Entity_experimental_src.Production_method
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    'recombinant technology'
-;
-?
-;
-
-     'purified from the natural source'
-;
-Obtained from the native organism that produces the biomolecule in nature.
-;
-
-     'chemical synthesis'
-;
-Select this option if the molecule was generated primarily by chemical synthesis techniques.
-;
-
-     'cell free synthesis'
-;
-?
-;
-
-     'enzymatic semisynthesis'
-;
-?
-;
-
-     'reverse transcriptase'
-;
-Method used to synthesize RNA.
-;
-
-     'obtained from a collaborator'
-;
-Select this option if the molecule was obtained from a collaborator.
-;
-
-     'obtained from a vendor'
+    'recombinant technology'                 .
+    'purified from the natural source'      'Obtained from the native organism that produces the biomolecule in nature.'
+    'chemical synthesis'                    'Select this option if the molecule was generated primarily by chemical synthesis techniques.'
+    'cell free synthesis'                    .
+    'enzymatic semisynthesis'                .
+    'reverse transcriptase'                 'Method used to synthesize RNA.'
+    'obtained from a collaborator'          'Select this option if the molecule was obtained from a collaborator.'
+    'obtained from a vendor'
 ;
 Select this option if the molecule was obtained from a commercial vendor or academic unit that produces materials as a service.  DO NOT select this option if the material was provided by an academic or industrial research collaborator.
 ;
-       na
-;
-not available
-;
+       na                                   'not available'
 
   stop_
 
@@ -4300,7 +4293,7 @@ save__Entity_natural_src.Tissue
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    skin         ?
+    skin         .
 # gather from current entries
 
 
@@ -5452,6 +5445,9 @@ save__Heteronucl_T1rho_list.Temp_calibration_method
 
      methanol                    .
     "monoethylene glycol"        .
+    'solid lead nitrate"         .
+    'KBr adamantane blend'       .
+    'Na5[TmDOTP]                 .
     "no calibration applied"     .
 
    stop_
@@ -5536,9 +5532,13 @@ save__Heteronucl_T2_list.Temp_calibration_method
       _Item_enumeration.Description
 
 
-    methanol                          .
-   "monoethylene glycol"              .
-   "no calibration applied"           .
+    methanol                    .
+   "monoethylene glycol"        .
+   'solid lead nitrate"         .
+   'KBr adamantane blend'       .
+   'Na5[TmDOTP]                 .
+   'no calibration applied'     .
+
    stop_
 
 save_
@@ -5565,86 +5565,161 @@ save__History.Software_name
        _Item_enumeration.Value
        _Item_enumeration.Description
 
+    3DNA             .
+    4D-CHAINS        .
+    ABACUS           .
+    ADAPT-NMR        .
     AMBER            .
+    ANALYSIS        'CcpNMR Analysis'
     AngleSearch      .
     ANSIG            .
-    Analysis         .
     AQUA             .
     ARIA             .
+    ARIA2            .
+    ATHNOS-CANDID    .
     AURELIA          .
+    AS-DP            .
+    ATNOS            .
+    ATSAS            .
     AUREMOL          .
     AutoAssign       .
-    AutoStructure    .
+    AutoDep          .
+    AutoStruct       .
     AVS              .
     AZARA            .
-    BIRDER           .
+    BATMAN          'small molecule'
+    calRW            .
+    CANDID           .
     CARA             .
-    CAPP             .
-    CING             .
+    CATIA            .
     CcpNMR           .
+    CH3Shift         .
+    Chimera          .
+    CING             .
+   'CLUSTAL W/X'     .
     CNS              .
     CNSSOLVE         .
-    CORMA            .
+    CoMD/NMR         .
+    COMPASS          .
+   'CONNJURST'       .
+   'CONNJURWB'       .
+    CORMA                             .
+   'CPMG-Fit (Korzhnev)'              .
+   'CPMGFit (Palmer)'                 .
     CSI              .
     CS-Rosetta       .
     CURVES           .
     CYANA            .
-    DGII             .
+    DANGLE           .
     DIAMOD           .
     DISCOVER         .
     DYANA            .
     DYNAMO           .
-    EMBOSS           .
-    FANTOM           .
-    Felix            .
+    FASTModelFree    .
+    FMCGUI           .
+    FuDA             .
     GARANT           .
     Gaussian         .
     GIFA             .
+    GISSMO                          'small molecule'
+    GROMACS          .
+    GROMOS           .
+    GUARDD           .
     HADDOCK          .
     HYPER            .
-    InsightII        .
+    istHMS           .
+    j-UNIO           .
+    MAGRO            .
     MARDIGRAS        .
+    MARS             .
+    MD2NOE           .
+    Mathematica      .
+    MATLAB           .
+    MDAnalysis       .
+    MddNMR           .
+   'MestReNova'      .
+    MetaboAnalystR                   'small molecule'
+    MetScape                         'small molecule'
     ModelFree        .
     Molmol           .
+    MolProbity       .
     MORASS           .
-    NDEE             .
+    MoSART           .
+    MVAPACK                           'small molecule'
+    NAMD             .
+    NESSY            .
+    NMRbox           .
     NMRDraw          .
+    NMRest           .
+    NMRFAM-SPARKY    .
+    NMRFx            .
+   'NMRFx Analyst'   .
+   'NMRFx Processor' .
+   'NMRFx Structure' .
+    nmrglue          .
     NMRPipe          .
+    NMRspy           .
     NMRView          .
+    NMRViewJ         .
     NOAH             .
-    NOEID            .
-    NUCFIT           .
-    NUTS             .
+    nus-tool         .
+    Olivia           .
     OPAL             .
+    OPALp            .
+    Origin           .
+    PALES            .
+    PDBStat          .
     PECAN            .
     PINE             .
     PIPP             .
     PISTACHIO        .
+    PONDEROSA        .
     Procheck         .
     ProcheckNMR      .
-    P-ROI            .
     PRONTO           .
     PROSA            .
     PSVS             .
+    PyMOL            .
+    qMDD             .
     QUEEN            .
+    REDCAT           .
+    REDCRAFT         .
     Relax            .
-    RESCUE           .
+    RNAstructure     .
+    rNMR                              'small molecule'
+    RNMRTK           .
+    Rosetta          .
     SANE             .
+    SCRUB            .
+    SHIFTS           .
+    ShiftX           .
+    ShiftX2          .
+    SMILE            .
     SPARKY           .
     SPARTA           .
     SPARTA+          .
     SPSCAN           .
     SYBYL            .
     TALOS            .
+    TALOS+           .
+    TALOS-N          .
+    TANSY            .
+    Tensor           .
+    TINKER           .
     TOPSPIN          .
+    UNIO             .
+    UNIO-MATCH       .
     UXNMR            .
+    VMD              .
+    VMD-Xplor        .
     VNMR             .
+    VNMRj            .
     WhatIF           .
-    Wattos           .
     XEASY            .
     X-PLOR           .
    'X-PLOR NIH'      .
     xwinnmr          .
+    YASARA           .
 
     stop_
 
@@ -5699,11 +5774,11 @@ save__Local_structure_quality.Type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    'not observed'                            ?
-    'not well defined'                        ?
-    'low restraint density'                   ?
-    'well defined'                            ?
-    'high restraint density'                  ?
+    'not observed'                            .
+    'not well defined'                        .
+    'low restraint density'                   .
+    'well defined'                            .
+    'high restraint density'                  .
 
   stop_
 
@@ -5933,11 +6008,11 @@ save__Model_type.Type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-     'experimental ensemble member'                    ?
-     'representative lowest energy'                    ?
-     'representative closest to the mean'              ?
-     'representative average minimized'                ?
-     'representative lowest overall target function'   ?
+     'experimental ensemble member'                    .
+     'representative lowest energy'                    .
+     'representative closest to the mean'              .
+     'representative average minimized'                .
+     'representative lowest overall target function'   .
 
   stop_
 
@@ -6091,6 +6166,9 @@ save_
 
 #    methanol                    .
 #   'monoethylene glycol'        .
+#   'solid lead nitrate"         .
+#   'KBr adamantane blend'       .
+#   'Na5[TmDOTP]                 .
 #   'no calibration applied'     .
 
 #   stop_
@@ -6344,7 +6422,6 @@ save__Order_param.Model_fit
 
  # No internal model-free motions:
 
-          ?                                                .
          'Rex'                                             .
 
  # Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
@@ -7134,6 +7211,7 @@ save__Sample.Type
     liposome                          .
     membrane                          .
     micelle                           .
+    nano-disc                         .
    'lyophilized powder'
 ;
 Solid-state lyophilized powder sample
@@ -7410,7 +7488,6 @@ save__Software_applied_methods.Software_name
     NMRbox           .
     NMRDraw          .
     NMRest           .
-    NMRPipe          .
     NMRFAM-SPARKY    .
     NMRFx            .
    'NMRFx Analyst'   .
@@ -7577,7 +7654,6 @@ save__Software.Name
     NMRbox           .
     NMRDraw          .
     NMRest           .
-    NMRPipe          .
     NMRFAM-SPARKY    .
     NMRFx            .
    'NMRFx Analyst'   .
@@ -7744,7 +7820,6 @@ save__Software.Sf_framecode
     NMRbox           .
     NMRDraw          .
     NMRest           .
-    NMRPipe          .
     NMRFAM-SPARKY    .
     NMRFx            .
    'NMRFx Analyst'   .
@@ -8217,34 +8292,6 @@ save__Theoretical_auto_relaxation_list.Rex_units
 
 save_
 
-save__Theoretical_auto_relaxation_list.Temp_calibration_method
-
-    loop_
-      _Item_enumeration.Value
-      _Item_enumeration.Description
-
-    methanol                    MeOH
-   'monoethylene glycol'        MEG
-   'no calibration applied'     .
-
-   stop_
-
-save_
-
-save__Theoretical_auto_relaxation_list.Temp_control_method
-
-    loop_
-      _Item_enumeration.Value
-      _Item_enumeration.Description
-
-    'single scan interleaving'                                             .
-    'temperature compensation block'                                       .
-    'single scan interleaving and temperature compensation block'          .
-    'no temperature control applied'                                       .
-
-   stop_
-
-save_
 
 save__Theoretical_coupling_constant_experiment.Sample_state
 
@@ -8440,33 +8487,6 @@ save__Theoretical_heteronucl_T2_list.T2_val_units
 
 save_
 
-save__Theoretical_heteronucl_T2_list.Temp_calibration_method
-
-    loop_
-      _Item_enumeration.Value
-      _Item_enumeration.Description
-
-
-    methanol                          .
-   "monoethylene glycol"              .
-   "no calibration applied"           .
-   stop_
-
-save_
-
-save__Theoretical_heteronucl_T2_list.Temp_control_method
-
-    loop_
-      _Item_enumeration.Value
-      _Item_enumeration.Description
-
-    'single scan interleaving'           .
-    'temperature compensation block'     .
-    'no temperature control applied'     .
-
-   stop_
-
-save_
 
 save__Torsion_angle_constraint_list.Constraint_type
 

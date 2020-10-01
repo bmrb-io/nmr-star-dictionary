@@ -1,6 +1,6 @@
 data_mmcif_nmr-star.dic
 
-#  version date -  2020-07-16
+#  version date -  2020-10-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -21,7 +21,7 @@ data_mmcif_nmr-star.dic
 
     _dictionary.title           mmcif_nmr-star.dic
     _dictionary.datablock_id    mmcif_nmr-star.dic
-    _dictionary.version         3.2.13.2
+    _dictionary.version         3.2.14.0
 
      loop_
        _dictionary_history.version
@@ -27647,14 +27647,14 @@ The laboratory method used to obtain the biopolymers studied.
      _item_enumeration.detail
 
    'recombinant technology'    ?
-   'purified from the natural source'    ?
-   'chemical synthesis'    ?
+   'purified from the natural source'    'Obtained from the native organism that produces the biomolecule in nature.'
+   'chemical synthesis'    'Select this option if the molecule was generated primarily by chemical synthesis techniques.'
    'cell free synthesis'    ?
    'enzymatic semisynthesis'    ?
-   'reverse transcriptase'    ?
-   'obtained from a collaborator'    ?
+   'reverse transcriptase'    'Method used to synthesize RNA.'
+   'obtained from a collaborator'    'Select this option if the molecule was obtained from a collaborator.'
    'obtained from a vendor'    ?
-   na    ?
+   na    'not available'
 
    stop_
 
@@ -33673,6 +33673,7 @@ of the sample.
    liposome    ?
    membrane    ?
    micelle    ?
+   nano-disc    ?
    'lyophilized powder'    ?
    'oriented membrane film'    ?
    'fibrous protein'    ?
@@ -36381,7 +36382,6 @@ in the entry.
    NMRbox    ?
    NMRDraw    ?
    NMRest    ?
-   NMRPipe    ?
    NMRFAM-SPARKY    ?
    NMRFx    ?
    'NMRFx Analyst'    ?
@@ -36809,7 +36809,6 @@ The name of the software defined by the author or provider of the software.
    NMRbox    ?
    NMRDraw    ?
    NMRest    ?
-   NMRPipe    ?
    NMRFAM-SPARKY    ?
    NMRFx    ?
    'NMRFx Analyst'    ?
@@ -47872,7 +47871,9 @@ reference values from other save frames of this category in an entry.
   '_Assigned_chem_shift_list.Chem_shift_reference_ID'                                    'Assigned_chem_shift_list'      yes
   '_Chem_shifts_calc_type.Chem_shift_reference_ID'                                       'Chem_shifts_calc_type'         yes
   '_Spectral_peak_list.Chem_shift_reference_ID'          'Spectral_peak_list'            yes
+  '_Chem_shift_isotope_effect_list.Chem_shift_reference_ID'                              'Spectral_peak_list'            yes
   '_Chem_shift_perturbation_list.Chem_shift_ref_set_ID'                                  'Chem_shift_perturbation_list'                      yes
+  '_Other_data_type_list.Chem_shift_reference_ID'                                        'Spectral_peak_list'            yes
 
   stop_
 
@@ -47884,7 +47885,9 @@ reference values from other save frames of this category in an entry.
   '_Assigned_chem_shift_list.Chem_shift_reference_ID'                                    '_Chem_shift_reference.ID'
   '_Chem_shifts_calc_type.Chem_shift_reference_ID'                                       '_Chem_shift_reference.ID'
   '_Spectral_peak_list.Chem_shift_reference_ID'          '_Chem_shift_reference.ID'
+  '_Chem_shift_isotope_effect_list.Chem_shift_reference_ID'                              '_Chem_shift_reference.ID'
   '_Chem_shift_perturbation_list.Chem_shift_ref_set_ID'                                  '_Chem_shift_reference.ID'
+  '_Other_data_type_list.Chem_shift_reference_ID'                                        '_Chem_shift_reference.ID'
 
   stop_
 
@@ -47983,6 +47986,83 @@ Please indicate yes or no, if you are depositing 15N chemical shifts.
 
    stop_
 
+
+save_
+
+save_Chem_shift_reference
+   _category.description
+;
+Items in the chem_shift_reference category define a set of chemical shift referencing parameters.
+;
+   _category.id                   'Chem_shift_reference'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Chem_shift_reference.Entry_ID'
+     '_Chem_shift_reference.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shift_reference'
+
+   stop_
+
+save_
+
+save__Chem_shift_reference.Fluorine_shifts_flag
+
+   _item_description.description
+;
+Please indicate yes or no, if you are depositing 19F chemical shifts.
+;
+
+   _item.name                                  '_Chem_shift_reference.Fluorine_shifts_flag'
+   _item.category_id                           'Chem_shift_reference'
+   _item.mandatory_code                         no
+   _pdbx_item_enumeration_details.closed_flag   yes
+   _item_type.code                             'line'
+
+   loop_
+     _item_enumeration.value
+     _item_enumeration.detail
+
+   no    ?
+   yes    ?
+
+   stop_
+
+
+save_
+
+save_Chem_shift_reference
+   _category.description
+;
+Items in the chem_shift_reference category define a set of chemical shift referencing parameters.
+;
+   _category.id                   'Chem_shift_reference'
+   _category.mandatory_code       no
+
+   loop_
+     _category_key.name
+
+     '_Chem_shift_reference.Entry_ID'
+     '_Chem_shift_reference.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shift_reference'
+
+   stop_
 
 save_
 
@@ -55739,21 +55819,6 @@ Items in the peak category define the identification code for the peaks in an NM
      'spectral_peak_list'
 
    stop_
-
-save_
-
-save__Peak.Index_ID
-
-   _item_description.description
-;
-An integer value that is an unique identified for the row in the peak tabel.
-;
-
-   _item.name                                  '_Peak.Index_ID'
-   _item.category_id                           'Peak'
-   _item.mandatory_code                         yes
-   _item_type.code                             'int'
-
 
 save_
 
@@ -64486,6 +64551,86 @@ Pointer to a save frame of the category 'sample_conditions'
 
 save_
 
+save_Chem_shift_isotope_effect_list
+   _category.description
+;
+Items in the chem_shift_isotope_effect_list category provide information about a list of reported chemical shift values that measure the effects of isotopic substitutions in a molecular entity.
+;
+   _category.id                   'Chem_shift_isotope_effect_list'
+
+   loop_
+     _category_key.name
+
+     '_Chem_shift_isotope_effect_list.Entry_ID'
+     '_Chem_shift_isotope_effect_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shift_isotope_effect'
+
+   stop_
+
+save_
+
+save__Chem_shift_isotope_effect_list.Chem_shift_reference_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_shift_reference.ID'
+;
+
+   _item.name                                  '_Chem_shift_isotope_effect_list.Chem_shift_reference_ID'
+   _item.category_id                           'Chem_shift_isotope_effect_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Chem_shift_isotope_effect_list.Chem_shift_reference_label
+
+   _item_description.description
+;
+Pointer to a save frame of category chem_shift_reference.
+;
+
+   _item.name                                  '_Chem_shift_isotope_effect_list.Chem_shift_reference_label'
+   _item.category_id                           'Chem_shift_isotope_effect_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save_Chem_shift_isotope_effect_list
+   _category.description
+;
+Items in the chem_shift_isotope_effect_list category provide information about a list of reported chemical shift values that measure the effects of isotopic substitutions in a molecular entity.
+;
+   _category.id                   'Chem_shift_isotope_effect_list'
+
+   loop_
+     _category_key.name
+
+     '_Chem_shift_isotope_effect_list.Entry_ID'
+     '_Chem_shift_isotope_effect_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'chem_shift_isotope_effect'
+
+   stop_
+
+save_
+
 save__Chem_shift_isotope_effect_list.Isotope_effect_type
 
    _item_description.description
@@ -71703,6 +71848,86 @@ Pointer to a save frame of the category 'sample_conditions'
    _item.mandatory_code                         yes
    _item_type.code                             'framecode'
 
+
+save_
+
+save_Other_data_type_list
+   _category.description
+;
+Items in the other_data_type_list category provide information about a list of reported data that do not fit in any of the data categories that are specifically defined in the dictionary.
+;
+   _category.id                   'Other_data_type_list'
+
+   loop_
+     _category_key.name
+
+     '_Other_data_type_list.Entry_ID'
+     '_Other_data_type_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'other_data_types'
+
+   stop_
+
+save_
+
+save__Other_data_type_list.Chem_shift_reference_ID
+
+   _item_description.description
+;
+Pointer to '_Chem_shift_reference.ID'
+;
+
+   _item.name                                  '_Other_data_type_list.Chem_shift_reference_ID'
+   _item.category_id                           'Other_data_type_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
+
+
+save_
+
+save__Other_data_type_list.Chem_shift_reference_label
+
+   _item_description.description
+;
+Pointer to a save frame of category chem_shift_reference.
+;
+
+   _item.name                                  '_Other_data_type_list.Chem_shift_reference_label'
+   _item.category_id                           'Other_data_type_list'
+   _item.mandatory_code                         no
+   _item_type.code                             'framecode'
+
+
+save_
+
+save_Other_data_type_list
+   _category.description
+;
+Items in the other_data_type_list category provide information about a list of reported data that do not fit in any of the data categories that are specifically defined in the dictionary.
+;
+   _category.id                   'Other_data_type_list'
+
+   loop_
+     _category_key.name
+
+     '_Other_data_type_list.Entry_ID'
+     '_Other_data_type_list.ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'other_data_types'
+
+   stop_
 
 save_
 
@@ -81835,6 +82060,8 @@ to collect the experimental data.
 
    methanol    ?
    'monoethylene glycol'    ?
+   'solid lead nitrate"         .'    ?
+   .    ?
    'no calibration applied'    ?
 
    stop_
@@ -82901,6 +83128,8 @@ to collect the experimental data.
 
    methanol    ?
    'monoethylene glycol'    ?
+   'solid lead nitrate"         .'    ?
+   .    ?
    'no calibration applied'    ?
 
    stop_
@@ -83986,16 +84215,6 @@ to collect the experimental data.
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'text'
 
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   methanol    ?
-   'monoethylene glycol'    ?
-   'no calibration applied'    ?
-
-   stop_
-
 
 save_
 
@@ -84012,16 +84231,6 @@ caused by the long spin-lock pulse.
    _item.mandatory_code                         no
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'text'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   'single scan interleaving'    ?
-   'temperature compensation block'    ?
-   'no temperature control applied'    ?
-
-   stop_
 
 
 save_
@@ -85051,6 +85260,9 @@ Common term used for the type of relaxation phenomena reported.
    R1    ?
    R2    ?
    R1rho    ?
+   T1    ?
+   T2    ?
+   T1rho    ?
    'ZQ relaxation'    ?
    'longitudinal spin order'    ?
    'single quantum antiphase'    ?
@@ -85120,6 +85332,8 @@ to collect the experimental data.
 
    methanol    MeOH
    'monoethylene glycol'    MEG
+   'solid lead nitrate"         .'    ?
+   .    ?
    'no calibration applied'    ?
 
    stop_
@@ -85220,8 +85434,8 @@ A code describing the spin(s) involved in the measured relaxation coherence.
      _item_enumeration.value
      _item_enumeration.detail
 
-   Iz    'R1    longitudinal'
-   Sz    'R1    longitudinal'
+   Iz    'R1/T1    longitudinal'
+   Sz    'R1/T1    longitudinal'
    (I+)+(I-)    'R1rho or R2      transverse'
    (S+)+(S-)    'R1rho or R2      transverse'
    I+    'R1rho or R2      transverse'
@@ -85277,6 +85491,11 @@ The units used for the reported relaxation values.
    us-1    ?
    ns-1    ?
    ps-1    ?
+   s    ?
+   ms    ?
+   us    ?
+   ns    ?
+   ps    ?
 
    stop_
 
@@ -86291,18 +86510,7 @@ to collect the experimental data.
    _item.name                                  '_Theoretical_auto_relaxation_list.Temp_calibration_method'
    _item.category_id                           'Theoretical_auto_relaxation_list'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'text'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   methanol    MeOH
-   'monoethylene glycol'    MEG
-   'no calibration applied'    ?
-
-   stop_
 
 
 save_
@@ -86318,19 +86526,7 @@ caused by the long spin-lock pulse.
    _item.name                                  '_Theoretical_auto_relaxation_list.Temp_control_method'
    _item.category_id                           'Theoretical_auto_relaxation_list'
    _item.mandatory_code                         no
-   _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'text'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   'single scan interleaving'    ?
-   'temperature compensation block'    ?
-   'single scan interleaving and temperature compensation block'    ?
-   'no temperature control applied'    ?
-
-   stop_
 
 
 save_
@@ -90252,7 +90448,7 @@ save__Theoretical_cross_correlation_DD_list.ID
 
    _item_description.description
 ;
-Unique identifier for the list of cross-correlation values.
+Unique identifier for the list of theoretical cross-correlation values.
 ;
 
   loop_
@@ -90769,7 +90965,7 @@ save__Theoretical_cross_correlation_DD.ID
 
    _item_description.description
 ;
-Unique identifier for the observed cross-correlation value.
+Unique identifier for the theoretical cross-correlation value.
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.ID'
@@ -91328,7 +91524,7 @@ save__Theoretical_cross_correlation_DD.Val
 
    _item_description.description
 ;
-The cross-correlation dipole-dipole relaxation value.
+The theoretical cross-correlation dipole-dipole relaxation value.
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Val'
@@ -91343,8 +91539,8 @@ save__Theoretical_cross_correlation_DD.Val_err
 
    _item_description.description
 ;
-The estimated error in the reported cross-correlation dipole-dipole relaxation 
-value.
+The estimated error in the reported theoretical cross-correlation dipole-dipole 
+relaxation value.
 ;
 
    _item.name                                  '_Theoretical_cross_correlation_DD.Val_err'
@@ -94575,7 +94771,6 @@ The model used to fit the experimental data.
      _item_enumeration.value
      _item_enumeration.detail
 
-   ?    ?
    Rex    ?
    S2    ?
    'S2, te'    ?
@@ -106332,6 +106527,74 @@ Author's atom name.
    _item.mandatory_code                         no
    _item_type.code                             'atcode'
 
+
+save_
+
+save_Atom_site
+   _category.description
+;
+Data items in the atom_site category record details about the atom sites in a macromolecular structure, such as the positional coordinates, atomic displacement parameters, magnetic moments and directions.
+;
+   _category.id                   'Atom_site'
+
+   loop_
+     _category_key.name
+
+     '_Atom_site.ID'
+     '_Atom_site.Entry_ID'
+     '_Atom_site.Conformer_family_coord_set_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'conformer_family_coord_set'
+
+   stop_
+
+save_
+
+save__Atom_site.Ambiguous_atom_name
+
+   _item_description.description
+;
+A field used to map IUPAC atom nomenclature used in structure to ambiguous 
+atom names used in restraints for calculating the structure.
+;
+
+   _item.name                                  '_Atom_site.Ambiguous_atom_name'
+   _item.category_id                           'Atom_site'
+   _item.mandatory_code                         no
+   _item_type.code                             'atcode'
+
+
+save_
+
+save_Atom_site
+   _category.description
+;
+Data items in the atom_site category record details about the atom sites in a macromolecular structure, such as the positional coordinates, atomic displacement parameters, magnetic moments and directions.
+;
+   _category.id                   'Atom_site'
+
+   loop_
+     _category_key.name
+
+     '_Atom_site.ID'
+     '_Atom_site.Entry_ID'
+     '_Atom_site.Conformer_family_coord_set_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'conformer_family_coord_set'
+
+   stop_
 
 save_
 
@@ -120733,6 +120996,208 @@ PDB atom name.
 ;
 CD1
 ;
+
+   stop_
+
+save_
+
+save_Gen_dist_constraint
+   _category.description
+;
+Items in the gen_dist_constraint category define the atoms associated with a specific distance constraint value.
+;
+   _category.id                   'Gen_dist_constraint'
+
+   loop_
+     _category_key.name
+
+     '_Gen_dist_constraint.Index_ID'
+     '_Gen_dist_constraint.Entry_ID'
+     '_Gen_dist_constraint.Gen_dist_constraint_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
+
+   stop_
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_model_num_1
+
+   _item_description.description
+;
+Original PDB model number.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_model_num_1'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_strand_ID_1
+
+   _item_description.description
+;
+Original PDB strand id.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_strand_ID_1'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_residue_no_1
+
+   _item_description.description
+;
+Original PDB residue number.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_residue_no_1'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_residue_name_1
+
+   _item_description.description
+;
+Original PDB residue name.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_residue_name_1'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_atom_name_1
+
+   _item_description.description
+;
+Original PDB atom name.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_atom_name_1'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_model_num_2
+
+   _item_description.description
+;
+Original PDB model number.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_model_num_2'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'int'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_strand_ID_2
+
+   _item_description.description
+;
+Original PDB strand id.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_strand_ID_2'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_residue_no_2
+
+   _item_description.description
+;
+Original PDB residue number.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_residue_no_2'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_residue_name_2
+
+   _item_description.description
+;
+Original PDB residue name.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_residue_name_2'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save__Gen_dist_constraint.Original_PDB_atom_name_2
+
+   _item_description.description
+;
+Original PDB atom name.
+;
+
+   _item.name                                  '_Gen_dist_constraint.Original_PDB_atom_name_2'
+   _item.category_id                           'Gen_dist_constraint'
+   _item.mandatory_code                         no
+   _item_type.code                             'code'
+
+
+save_
+
+save_Gen_dist_constraint
+   _category.description
+;
+Items in the gen_dist_constraint category define the atoms associated with a specific distance constraint value.
+;
+   _category.id                   'Gen_dist_constraint'
+
+   loop_
+     _category_key.name
+
+     '_Gen_dist_constraint.Index_ID'
+     '_Gen_dist_constraint.Entry_ID'
+     '_Gen_dist_constraint.Gen_dist_constraint_list_ID'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'general_distance_constraints'
 
    stop_
 
@@ -136378,24 +136843,10 @@ applies across the archive.  This value is not stable and may be reassigned each
 time the data are loaded into a database system.
 ;
 
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_SAXS_constraint_list.Sf_ID'                          'SAXS_constraint_list'          yes
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-   ?      ?
-
-  stop_
-
-  _item_type.code                             'int'
+   _item.name                                  '_SAXS_constraint_list.Sf_ID'
+   _item.category_id                           'SAXS_constraint_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
 
 
 save_
@@ -137031,24 +137482,10 @@ applies across the archive.  This value is not stable and may be reassigned each
 time the data are loaded into a database system.
 ;
 
-  loop_
-      _item.name
-      _item.category_id
-      _item.mandatory_code
-
-  '_Other_constraint_list.Sf_ID'                         'Other_constraint_list'         yes
-
-  stop_
-
-  loop_
-      _item_linked.child_name
-      _item_linked.parent_name
-
-   ?      ?
-
-  stop_
-
-  _item_type.code                             'int'
+   _item.name                                  '_Other_constraint_list.Sf_ID'
+   _item.category_id                           'Other_constraint_list'
+   _item.mandatory_code                         yes
+   _item_type.code                             'int'
 
 
 save_
@@ -141199,7 +141636,6 @@ The name of a software application.
    NMRbox    ?
    NMRDraw    ?
    NMRest    ?
-   NMRPipe    ?
    NMRFAM-SPARKY    ?
    NMRFx    ?
    'NMRFx Analyst'    ?
@@ -141647,86 +142083,161 @@ The name of a software application.
      _item_enumeration.value
      _item_enumeration.detail
 
+   3DNA    ?
+   4D-CHAINS    ?
+   ABACUS    ?
+   ADAPT-NMR    ?
    AMBER    ?
+   ANALYSIS    'CcpNMR Analysis'
    AngleSearch    ?
    ANSIG    ?
-   Analysis    ?
    AQUA    ?
    ARIA    ?
+   ARIA2    ?
+   ATHNOS-CANDID    ?
    AURELIA    ?
+   AS-DP    ?
+   ATNOS    ?
+   ATSAS    ?
    AUREMOL    ?
    AutoAssign    ?
-   AutoStructure    ?
+   AutoDep    ?
+   AutoStruct    ?
    AVS    ?
    AZARA    ?
-   BIRDER    ?
+   BATMAN    'small molecule'
+   calRW    ?
+   CANDID    ?
    CARA    ?
-   CAPP    ?
-   CING    ?
+   CATIA    ?
    CcpNMR    ?
+   CH3Shift    ?
+   Chimera    ?
+   CING    ?
+   'CLUSTAL W/X'    ?
    CNS    ?
    CNSSOLVE    ?
+   CoMD/NMR    ?
+   COMPASS    ?
+   CONNJURST    ?
+   CONNJURWB    ?
    CORMA    ?
+   'CPMG-Fit (Korzhnev)'    ?
+   'CPMGFit (Palmer)'    ?
    CSI    ?
    CS-Rosetta    ?
    CURVES    ?
    CYANA    ?
-   DGII    ?
+   DANGLE    ?
    DIAMOD    ?
    DISCOVER    ?
    DYANA    ?
    DYNAMO    ?
-   EMBOSS    ?
-   FANTOM    ?
-   Felix    ?
+   FASTModelFree    ?
+   FMCGUI    ?
+   FuDA    ?
    GARANT    ?
    Gaussian    ?
    GIFA    ?
+   GISSMO    'small molecule'
+   GROMACS    ?
+   GROMOS    ?
+   GUARDD    ?
    HADDOCK    ?
    HYPER    ?
-   InsightII    ?
+   istHMS    ?
+   j-UNIO    ?
+   MAGRO    ?
    MARDIGRAS    ?
+   MARS    ?
+   MD2NOE    ?
+   Mathematica    ?
+   MATLAB    ?
+   MDAnalysis    ?
+   MddNMR    ?
+   MestReNova    ?
+   MetaboAnalystR    'small molecule'
+   MetScape    'small molecule'
    ModelFree    ?
    Molmol    ?
+   MolProbity    ?
    MORASS    ?
-   NDEE    ?
+   MoSART    ?
+   MVAPACK    'small molecule'
+   NAMD    ?
+   NESSY    ?
+   NMRbox    ?
    NMRDraw    ?
+   NMRest    ?
+   NMRFAM-SPARKY    ?
+   NMRFx    ?
+   'NMRFx Analyst'    ?
+   'NMRFx Processor'    ?
+   'NMRFx Structure'    ?
+   nmrglue    ?
    NMRPipe    ?
+   NMRspy    ?
    NMRView    ?
+   NMRViewJ    ?
    NOAH    ?
-   NOEID    ?
-   NUCFIT    ?
-   NUTS    ?
+   nus-tool    ?
+   Olivia    ?
    OPAL    ?
+   OPALp    ?
+   Origin    ?
+   PALES    ?
+   PDBStat    ?
    PECAN    ?
    PINE    ?
    PIPP    ?
    PISTACHIO    ?
+   PONDEROSA    ?
    Procheck    ?
    ProcheckNMR    ?
-   P-ROI    ?
    PRONTO    ?
    PROSA    ?
    PSVS    ?
+   PyMOL    ?
+   qMDD    ?
    QUEEN    ?
+   REDCAT    ?
+   REDCRAFT    ?
    Relax    ?
-   RESCUE    ?
+   RNAstructure    ?
+   rNMR    'small molecule'
+   RNMRTK    ?
+   Rosetta    ?
    SANE    ?
+   SCRUB    ?
+   SHIFTS    ?
+   ShiftX    ?
+   ShiftX2    ?
+   SMILE    ?
    SPARKY    ?
    SPARTA    ?
    SPARTA+    ?
    SPSCAN    ?
    SYBYL    ?
    TALOS    ?
+   TALOS+    ?
+   TALOS-N    ?
+   TANSY    ?
+   Tensor    ?
+   TINKER    ?
    TOPSPIN    ?
+   UNIO    ?
+   UNIO-MATCH    ?
    UXNMR    ?
+   VMD    ?
+   VMD-Xplor    ?
    VNMR    ?
+   VNMRj    ?
    WhatIF    ?
-   Wattos    ?
    XEASY    ?
    X-PLOR    ?
    'X-PLOR NIH'    ?
    xwinnmr    ?
+   YASARA    ?
 
    stop_
 

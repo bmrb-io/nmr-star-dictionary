@@ -2720,6 +2720,7 @@ save_<chem_shift_reference>
   _Chem_shift_reference.Proton_shifts_flag                @
   _Chem_shift_reference.Carbon_shifts_flag                @
   _Chem_shift_reference.Nitrogen_shifts_flag              @
+  _Chem_shift_reference.Fluorine_shifts_flag              @
   _Chem_shift_reference.Phosphorus_shifts_flag            @
   _Chem_shift_reference.Other_shifts_flag                 @
   _Chem_shift_reference.Details                           @
@@ -3218,7 +3219,6 @@ save_<spectral_peak_list>
   stop_
 
   loop_
-     _Peak.Index_ID                       
      _Peak.ID                             
      _Peak.Figure_of_merit                
      _Peak.Type                           
@@ -3228,7 +3228,7 @@ save_<spectral_peak_list>
      _Peak.Entry_ID                       
      _Peak.Spectral_peak_list_ID          
 
-    @ @ @ @ @   @ @ @ @ 
+    @ @ @ @ @   @ @ @ 
 
   stop_
 
@@ -3792,6 +3792,8 @@ save_<chem_shift_isotope_effect>
   _Chem_shift_isotope_effect_list.Data_file_name                       @
   _Chem_shift_isotope_effect_list.Sample_condition_list_ID             @
   _Chem_shift_isotope_effect_list.Sample_condition_list_label          @
+  _Chem_shift_isotope_effect_list.Chem_shift_reference_ID              @
+  _Chem_shift_isotope_effect_list.Chem_shift_reference_label           @
   _Chem_shift_isotope_effect_list.Isotope_effect_type                  @
   _Chem_shift_isotope_effect_list.Isotope_effect_val_units             @
   _Chem_shift_isotope_effect_list.Details                              @
@@ -4319,6 +4321,8 @@ save_<other_data_types>
   _Other_data_type_list.Data_file_name                       @
   _Other_data_type_list.Sample_condition_list_ID             @
   _Other_data_type_list.Sample_condition_list_label          @
+  _Other_data_type_list.Chem_shift_reference_ID              @
+  _Other_data_type_list.Chem_shift_reference_label           @
   _Other_data_type_list.Details                              @
   _Other_data_type_list.Text_data_format                     @
   _Other_data_type_list.Text_data                            @
@@ -6690,12 +6694,13 @@ save_<conformer_family_coord_set>
      _Atom_site.Auth_atom_ID                           
      _Atom_site.Auth_alt_ID                            
      _Atom_site.Auth_atom_name                         
+     _Atom_site.Ambiguous_atom_name                    
      _Atom_site.Details                                
      _Atom_site.Sf_ID                                  
      _Atom_site.Entry_ID                               
      _Atom_site.Conformer_family_coord_set_ID          
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ 
 
   stop_
 
@@ -7646,6 +7651,16 @@ save_<general_distance_constraints>
      _Gen_dist_constraint.PDB_residue_no_2                     
      _Gen_dist_constraint.PDB_residue_name_2                   
      _Gen_dist_constraint.PDB_atom_name_2                      
+     _Gen_dist_constraint.Original_PDB_model_num_1             
+     _Gen_dist_constraint.Original_PDB_strand_ID_1             
+     _Gen_dist_constraint.Original_PDB_residue_no_1            
+     _Gen_dist_constraint.Original_PDB_residue_name_1          
+     _Gen_dist_constraint.Original_PDB_atom_name_1             
+     _Gen_dist_constraint.Original_PDB_model_num_2             
+     _Gen_dist_constraint.Original_PDB_strand_ID_2             
+     _Gen_dist_constraint.Original_PDB_residue_no_2            
+     _Gen_dist_constraint.Original_PDB_residue_name_2          
+     _Gen_dist_constraint.Original_PDB_atom_name_2             
      _Gen_dist_constraint.Auth_entity_assembly_ID_1            
      _Gen_dist_constraint.Auth_asym_ID_1                       
      _Gen_dist_constraint.Auth_chain_ID_1                      
@@ -7666,7 +7681,7 @@ save_<general_distance_constraints>
      _Gen_dist_constraint.Entry_ID                             
      _Gen_dist_constraint.Gen_dist_constraint_list_ID          
 
-    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ 
+    @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ @ @ @   @ @ 
 
   stop_
 
