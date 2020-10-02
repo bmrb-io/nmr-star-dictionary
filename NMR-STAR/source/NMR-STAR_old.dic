@@ -5105,7 +5105,7 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.mandatory_code                         yes
    _pdbx_item_enumeration_details.closed_flag   no
    _item_type.code                             'line'
-   _item_default.value            '3.2.13.2'
+   _item_default.value            '3.2.14.0'
 
    loop_
      _item_enumeration.value
@@ -47871,9 +47871,9 @@ reference values from other save frames of this category in an entry.
   '_Assigned_chem_shift_list.Chem_shift_reference_ID'                                    'Assigned_chem_shift_list'      yes
   '_Chem_shifts_calc_type.Chem_shift_reference_ID'                                       'Chem_shifts_calc_type'         yes
   '_Spectral_peak_list.Chem_shift_reference_ID'          'Spectral_peak_list'            yes
-  '_Chem_shift_isotope_effect_list.Chem_shift_reference_ID'                              'Spectral_peak_list'            yes
+  '_Chem_shift_isotope_effect_list.Chem_shift_reference_ID'                              'Chem_shift_isotope_effect_list'                    yes
   '_Chem_shift_perturbation_list.Chem_shift_ref_set_ID'                                  'Chem_shift_perturbation_list'                      yes
-  '_Other_data_type_list.Chem_shift_reference_ID'                                        'Spectral_peak_list'            yes
+  '_Other_data_type_list.Chem_shift_reference_ID'                                        'Other_data_type_list'          yes
 
   stop_
 
@@ -47989,32 +47989,6 @@ Please indicate yes or no, if you are depositing 15N chemical shifts.
 
 save_
 
-save_Chem_shift_reference
-   _category.description
-;
-Items in the chem_shift_reference category define a set of chemical shift referencing parameters.
-;
-   _category.id                   'Chem_shift_reference'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Chem_shift_reference.Entry_ID'
-     '_Chem_shift_reference.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_reference'
-
-   stop_
-
-save_
-
 save__Chem_shift_reference.Fluorine_shifts_flag
 
    _item_description.description
@@ -48037,32 +48011,6 @@ Please indicate yes or no, if you are depositing 19F chemical shifts.
 
    stop_
 
-
-save_
-
-save_Chem_shift_reference
-   _category.description
-;
-Items in the chem_shift_reference category define a set of chemical shift referencing parameters.
-;
-   _category.id                   'Chem_shift_reference'
-   _category.mandatory_code       no
-
-   loop_
-     _category_key.name
-
-     '_Chem_shift_reference.Entry_ID'
-     '_Chem_shift_reference.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_reference'
-
-   stop_
 
 save_
 
@@ -64551,31 +64499,6 @@ Pointer to a save frame of the category 'sample_conditions'
 
 save_
 
-save_Chem_shift_isotope_effect_list
-   _category.description
-;
-Items in the chem_shift_isotope_effect_list category provide information about a list of reported chemical shift values that measure the effects of isotopic substitutions in a molecular entity.
-;
-   _category.id                   'Chem_shift_isotope_effect_list'
-
-   loop_
-     _category_key.name
-
-     '_Chem_shift_isotope_effect_list.Entry_ID'
-     '_Chem_shift_isotope_effect_list.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_isotope_effect'
-
-   stop_
-
-save_
-
 save__Chem_shift_isotope_effect_list.Chem_shift_reference_ID
 
    _item_description.description
@@ -64603,31 +64526,6 @@ Pointer to a save frame of category chem_shift_reference.
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
-
-save_
-
-save_Chem_shift_isotope_effect_list
-   _category.description
-;
-Items in the chem_shift_isotope_effect_list category provide information about a list of reported chemical shift values that measure the effects of isotopic substitutions in a molecular entity.
-;
-   _category.id                   'Chem_shift_isotope_effect_list'
-
-   loop_
-     _category_key.name
-
-     '_Chem_shift_isotope_effect_list.Entry_ID'
-     '_Chem_shift_isotope_effect_list.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'chem_shift_isotope_effect'
-
-   stop_
 
 save_
 
@@ -71851,31 +71749,6 @@ Pointer to a save frame of the category 'sample_conditions'
 
 save_
 
-save_Other_data_type_list
-   _category.description
-;
-Items in the other_data_type_list category provide information about a list of reported data that do not fit in any of the data categories that are specifically defined in the dictionary.
-;
-   _category.id                   'Other_data_type_list'
-
-   loop_
-     _category_key.name
-
-     '_Other_data_type_list.Entry_ID'
-     '_Other_data_type_list.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'other_data_types'
-
-   stop_
-
-save_
-
 save__Other_data_type_list.Chem_shift_reference_ID
 
    _item_description.description
@@ -71903,31 +71776,6 @@ Pointer to a save frame of category chem_shift_reference.
    _item.mandatory_code                         no
    _item_type.code                             'framecode'
 
-
-save_
-
-save_Other_data_type_list
-   _category.description
-;
-Items in the other_data_type_list category provide information about a list of reported data that do not fit in any of the data categories that are specifically defined in the dictionary.
-;
-   _category.id                   'Other_data_type_list'
-
-   loop_
-     _category_key.name
-
-     '_Other_data_type_list.Entry_ID'
-     '_Other_data_type_list.ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'other_data_types'
-
-   stop_
 
 save_
 
@@ -106530,32 +106378,6 @@ Author's atom name.
 
 save_
 
-save_Atom_site
-   _category.description
-;
-Data items in the atom_site category record details about the atom sites in a macromolecular structure, such as the positional coordinates, atomic displacement parameters, magnetic moments and directions.
-;
-   _category.id                   'Atom_site'
-
-   loop_
-     _category_key.name
-
-     '_Atom_site.ID'
-     '_Atom_site.Entry_ID'
-     '_Atom_site.Conformer_family_coord_set_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
-
-save_
-
 save__Atom_site.Ambiguous_atom_name
 
    _item_description.description
@@ -106569,32 +106391,6 @@ atom names used in restraints for calculating the structure.
    _item.mandatory_code                         no
    _item_type.code                             'atcode'
 
-
-save_
-
-save_Atom_site
-   _category.description
-;
-Data items in the atom_site category record details about the atom sites in a macromolecular structure, such as the positional coordinates, atomic displacement parameters, magnetic moments and directions.
-;
-   _category.id                   'Atom_site'
-
-   loop_
-     _category_key.name
-
-     '_Atom_site.ID'
-     '_Atom_site.Entry_ID'
-     '_Atom_site.Conformer_family_coord_set_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'conformer_family_coord_set'
-
-   stop_
 
 save_
 
@@ -121001,32 +120797,6 @@ CD1
 
 save_
 
-save_Gen_dist_constraint
-   _category.description
-;
-Items in the gen_dist_constraint category define the atoms associated with a specific distance constraint value.
-;
-   _category.id                   'Gen_dist_constraint'
-
-   loop_
-     _category_key.name
-
-     '_Gen_dist_constraint.Index_ID'
-     '_Gen_dist_constraint.Entry_ID'
-     '_Gen_dist_constraint.Gen_dist_constraint_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'general_distance_constraints'
-
-   stop_
-
-save_
-
 save__Gen_dist_constraint.Original_PDB_model_num_1
 
    _item_description.description
@@ -121174,32 +120944,6 @@ Original PDB atom name.
    _item.mandatory_code                         no
    _item_type.code                             'code'
 
-
-save_
-
-save_Gen_dist_constraint
-   _category.description
-;
-Items in the gen_dist_constraint category define the atoms associated with a specific distance constraint value.
-;
-   _category.id                   'Gen_dist_constraint'
-
-   loop_
-     _category_key.name
-
-     '_Gen_dist_constraint.Index_ID'
-     '_Gen_dist_constraint.Entry_ID'
-     '_Gen_dist_constraint.Gen_dist_constraint_list_ID'
-
-   stop_
-
-   loop_
-     _category_group.id
-
-     'inclusive_group'
-     'general_distance_constraints'
-
-   stop_
 
 save_
 
@@ -136843,10 +136587,24 @@ applies across the archive.  This value is not stable and may be reassigned each
 time the data are loaded into a database system.
 ;
 
-   _item.name                                  '_SAXS_constraint_list.Sf_ID'
-   _item.category_id                           'SAXS_constraint_list'
-   _item.mandatory_code                         yes
-   _item_type.code                             'int'
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_SAXS_constraint_list.Sf_ID'                          'SAXS_constraint_list'          yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+   ?      ?
+
+  stop_
+
+  _item_type.code                             'int'
 
 
 save_
@@ -137482,10 +137240,24 @@ applies across the archive.  This value is not stable and may be reassigned each
 time the data are loaded into a database system.
 ;
 
-   _item.name                                  '_Other_constraint_list.Sf_ID'
-   _item.category_id                           'Other_constraint_list'
-   _item.mandatory_code                         yes
-   _item_type.code                             'int'
+  loop_
+      _item.name
+      _item.category_id
+      _item.mandatory_code
+
+  '_Other_constraint_list.Sf_ID'                         'Other_constraint_list'         yes
+
+  stop_
+
+  loop_
+      _item_linked.child_name
+      _item_linked.parent_name
+
+   ?      ?
+
+  stop_
+
+  _item_type.code                             'int'
 
 
 save_
