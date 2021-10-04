@@ -370,15 +370,6 @@ save_<entry_information>
   stop_
 
   loop_
-     _BMRbig_link.BMRbig_ID          
-     _BMRbig_link.Sf_ID              
-     _BMRbig_link.Entry_ID           
-
-    "new data type"  2  1  
-
-  stop_
-
-  loop_
      _Related_entries.Database_name                    
      _Related_entries.Database_accession_code          
      _Related_entries.Relationship                     
@@ -2435,12 +2426,11 @@ save_<experiment_list>
      _Experiment.Chromatographic_system_label           
      _Experiment.Chromatographic_column_ID              
      _Experiment.Chromatographic_column_label           
-     _Experiment.Details                                
      _Experiment.Sf_ID                                  
      _Experiment.Entry_ID                               
      _Experiment.Experiment_list_ID                     
 
-    2  "Long string value"  yes  yes  yes    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  2  "Long string value"    2  "Long string value"  "String value"  110.234  "String value"    2  "Long string value"  110.234  110.234  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  2  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  "Possible multiline text"  2    1  2  
+    2  "Long string value"  yes  yes  yes    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  2  "Long string value"    2  "Long string value"  "String value"  110.234  "String value"    2  "Long string value"  110.234  110.234  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  2  "Long string value"    2  "Long string value"  2  "Long string value"  2    "Long string value"  2  "Long string value"  2  1    2  
 
   stop_
 
@@ -2520,17 +2510,15 @@ save_<NMR_spectrometer_expt>
   loop_
      _Spectral_acq_param.ID                                
      _Spectral_acq_param.Acquisition_dimension_ID          
-     _Spectral_acq_param.Spectral_dim                      
      _Spectral_acq_param.Name                              
+     _Spectral_acq_param.Spectral_dim                      
      _Spectral_acq_param.Val                               
-     _Spectral_acq_param.Val_err                           
-     _Spectral_acq_param.Val_range                         
      _Spectral_acq_param.Val_units                         
      _Spectral_acq_param.Sf_ID                             
      _Spectral_acq_param.Entry_ID                          
      _Spectral_acq_param.NMR_spec_expt_ID                  
 
-    2  2  "Short string value"  "Long string value"  "Short string value"    "Short string value"  "String value"  "Long string value"  2  1    2  
+    2  2  "Long string value"  2  "Short string value"    "Long string value"  2  1  2  
 
   stop_
 
@@ -2598,17 +2586,15 @@ save_<NMR_spectral_processing>
      _Spectral_processing_param.Previous_operation_ID               
      _Spectral_processing_param.ID                                  
      _Spectral_processing_param.Processing_dimension_ID             
-     _Spectral_processing_param.Spectral_dim                        
      _Spectral_processing_param.Name                                
+     _Spectral_processing_param.Spectral_dim                        
      _Spectral_processing_param.Val                                 
-     _Spectral_processing_param.Val_err                             
-     _Spectral_processing_param.Val_range                           
      _Spectral_processing_param.Val_units                           
      _Spectral_processing_param.Sf_ID                               
      _Spectral_processing_param.Entry_ID                            
      _Spectral_processing_param.NMR_spectral_processing_ID          
 
-    2  "Long string value"  2  2  2    2  2  "Long string value"  "Short string value"  "Short string value"    "String value"  "Short string value"  2  1  2    
+    2  "Long string value"  2  2  2    2  "Long string value"  2  "Short string value"  "Short string value"    2  1  2  
 
   stop_
 
@@ -2763,7 +2749,6 @@ save_<chem_shift_reference>
   _Chem_shift_reference.Proton_shifts_flag              "String value"
   _Chem_shift_reference.Carbon_shifts_flag              "String value"
   _Chem_shift_reference.Nitrogen_shifts_flag            "String value"
-  _Chem_shift_reference.Fluorine_shifts_flag            "String value"
   _Chem_shift_reference.Phosphorus_shifts_flag          "String value"
   _Chem_shift_reference.Other_shifts_flag               yes
   _Chem_shift_reference.Details                         "Possible multiline text"
@@ -3269,16 +3254,16 @@ save_<spectral_peak_list>
   stop_
 
   loop_
+     _Peak.Index_ID                       
      _Peak.ID                             
      _Peak.Figure_of_merit                
-     _Peak.Type                           
      _Peak.Restraint                      
      _Peak.Details                        
      _Peak.Sf_ID                          
      _Peak.Entry_ID                       
      _Peak.Spectral_peak_list_ID          
 
-    2  110.234  1  yes  "Long string value"    2  1  2  
+    2  2  110.234  yes  "Long string value"    2  1  2  
 
   stop_
 
@@ -3317,27 +3302,6 @@ save_<spectral_peak_list>
      _Peak_char.Spectral_peak_list_ID           
 
     2  2  110.234  110.234  110.234    110.234  "String value"  110.234  110.234  110.234    "Short string value"  110.234  110.234  110.234  "Possible multiline text"    2  2  1  2  
-
-  stop_
-
-  loop_
-     _Peak_coupling.ID                                      
-     _Peak_coupling.Peak_ID                                 
-     _Peak_coupling.Spectral_dim_ID                         
-     _Peak_coupling.Multiplet_component_ID                  
-     _Peak_coupling.Type                                    
-     _Peak_coupling.Coupling_val                            
-     _Peak_coupling.Coupling_val_err                        
-     _Peak_coupling.Strong_coupling_effect_val              
-     _Peak_coupling.Strong_coupling_effect_val_err          
-     _Peak_coupling.Intensity_val                           
-     _Peak_coupling.Intensity_val_err                       
-     _Peak_coupling.Partner_coupling_peak_ID                
-     _Peak_coupling.Sf_ID                                   
-     _Peak_coupling.Entry_ID                                
-     _Peak_coupling.Spectral_peak_list_ID                   
-
-    2  2  2  2  "Short string value"    110.234  110.234  110.234  110.234  110.234    110.234  2  2  1  2    
 
   stop_
 
@@ -3868,8 +3832,6 @@ save_<chem_shift_isotope_effect>
   _Chem_shift_isotope_effect_list.Data_file_name                       "Long string value"
   _Chem_shift_isotope_effect_list.Sample_condition_list_ID             2
   _Chem_shift_isotope_effect_list.Sample_condition_list_label          "Long string value"
-  _Chem_shift_isotope_effect_list.Chem_shift_reference_ID              2
-  _Chem_shift_isotope_effect_list.Chem_shift_reference_label           "Long string value"
   _Chem_shift_isotope_effect_list.Isotope_effect_type                  "Long string value"
   _Chem_shift_isotope_effect_list.Isotope_effect_val_units             "Short string value"
   _Chem_shift_isotope_effect_list.Details                              "Possible multiline text"
@@ -4397,8 +4359,6 @@ save_<other_data_types>
   _Other_data_type_list.Data_file_name                       "Long string value"
   _Other_data_type_list.Sample_condition_list_ID             2
   _Other_data_type_list.Sample_condition_list_label          "Long string value"
-  _Other_data_type_list.Chem_shift_reference_ID              2
-  _Other_data_type_list.Chem_shift_reference_label           "Long string value"
   _Other_data_type_list.Details                              "Possible multiline text"
   _Other_data_type_list.Text_data_format                     "String value"
   _Other_data_type_list.Text_data                            "Possible multiline text"
@@ -6794,13 +6754,12 @@ save_<conformer_family_coord_set>
      _Atom_site.Auth_atom_ID                           
      _Atom_site.Auth_alt_ID                            
      _Atom_site.Auth_atom_name                         
-     _Atom_site.Ambiguous_atom_name                    
      _Atom_site.Details                                
      _Atom_site.Sf_ID                                  
      _Atom_site.Entry_ID                               
      _Atom_site.Conformer_family_coord_set_ID          
 
-    2  2  2  2  2    2  2  2  1  1    "Short string value"  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    2  2  1  2  "Short string value"    1  2  "Short string value"  "Short string value"  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  "Short string value"  1  "Short string value"    "Short string value"  "Short string value"  1  "new data type"  "Possible multiline text"    2  1  2  
+    2  2  2  2  2    2  2  2  1  1    "Short string value"  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    2  2  1  2  "Short string value"    1  2  "Short string value"  "Short string value"  2    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    2  1  "Short string value"  1  "Short string value"    "Short string value"  "Short string value"  1  "Possible multiline text"  2    1  2  
 
   stop_
 
@@ -7771,16 +7730,6 @@ save_<general_distance_constraints>
      _Gen_dist_constraint.PDB_residue_no_2                     
      _Gen_dist_constraint.PDB_residue_name_2                   
      _Gen_dist_constraint.PDB_atom_name_2                      
-     _Gen_dist_constraint.Original_PDB_model_num_1             
-     _Gen_dist_constraint.Original_PDB_strand_ID_1             
-     _Gen_dist_constraint.Original_PDB_residue_no_1            
-     _Gen_dist_constraint.Original_PDB_residue_name_1          
-     _Gen_dist_constraint.Original_PDB_atom_name_1             
-     _Gen_dist_constraint.Original_PDB_model_num_2             
-     _Gen_dist_constraint.Original_PDB_strand_ID_2             
-     _Gen_dist_constraint.Original_PDB_residue_no_2            
-     _Gen_dist_constraint.Original_PDB_residue_name_2          
-     _Gen_dist_constraint.Original_PDB_atom_name_2             
      _Gen_dist_constraint.Auth_entity_assembly_ID_1            
      _Gen_dist_constraint.Auth_asym_ID_1                       
      _Gen_dist_constraint.Auth_chain_ID_1                      
@@ -7801,7 +7750,7 @@ save_<general_distance_constraints>
      _Gen_dist_constraint.Entry_ID                             
      _Gen_dist_constraint.Gen_dist_constraint_list_ID          
 
-    2  2  2  2  yes/no    2  2  2  2  2    1  1  "Short string value"  2  2    2  2  2  2  2    1  1  "Short string value"  2  2    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  2  2  "Short string value"    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  2  "Short string value"    "Short string value"  "Short string value"  "Short string value"  2  "Short string value"    "Short string value"  "Short string value"  "Short string value"  2  1    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    1  2  1  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  1  2    1  2  
+    2  2  2  2  yes/no    2  2  2  2  2    1  1  "Short string value"  2  2    2  2  2  2  2    1  1  "Short string value"  2  2    110.234  110.234  110.234  110.234  110.234    110.234  110.234  110.234  110.234  110.234    110.234  110.234  2  2  "Short string value"    2  "Short string value"  "Short string value"  "Short string value"  "Short string value"    "Short string value"  "Short string value"  2  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  2  1    "Short string value"  "Short string value"  "Short string value"  "Short string value"  "Short string value"    1  2  1  "Short string value"  "Short string value"    "Short string value"  "Short string value"  "Short string value"  1  2    1  2  
 
   stop_
 

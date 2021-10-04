@@ -73,15 +73,15 @@ save__Assembly_interaction.Mol_interaction_type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    'Extremely slow exchange'
+    'Extremely slow exchange'      
 ;
 Components are very tightly bound
 ;
-    'Slow exchange'
+    'Slow exchange'                
 ;
 Would expect to observe separate resonances for the bound and free components of the system.
 ;
-    'Intermediate exchange'
+    'Intermediate exchange'        
 ;
 May not observe signals from the component or signals may be quite broad.
 ;
@@ -114,9 +114,9 @@ save__Assembly_systematic_name.Naming_system
    'CAS registry number'                         .
     BMRB                                         .
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
-   Pfam                                          .
-   Swiss-Prot                                    .
-   MEROPS                                        .
+   Pfam    ?
+   Swiss-Prot    ?
+   MEROPS    ?
 
    stop_
 
@@ -152,7 +152,7 @@ save__Assembly_type.Type
       'protein-carbohydrate complex'           .
       'DNA-drug complex'                       .
       'DNA-RNA complex'                        .
-      'RNA-drug complex'                       .
+      'RNA-drug complex'                       . 
       'non-polymer'                            .
 
     stop_
@@ -161,22 +161,22 @@ save_
 
 save__Assembly.Thiol_state
 
-  loop_
+  loop_                       
      _Item_enumeration.Value
      _Item_enumeration.Description
 
      'all disulfide bound'       .
      'all other bound'           .
      'all free'                  .
-     'not present'
+     'not present'               
 ;
 Thiols are not present in the system.
 ;
-     'not available'
+     'not available'    
 ;
 The oxidation state of the thiols could not be extracted from the literature or was not provided by the authors of the entry.
 ;
-     unknown
+     unknown     
 ;
 The author reported that the oxidation state of the thiols is unknown.
 ;
@@ -196,23 +196,23 @@ save__Atom_chem_shift.Ambiguity_code
        _Item_enumeration.Value
        _Item_enumeration.Description
 
-           1
+           1                
 ;
 Unique$ not ambiguous
 ;
-           2
+           2 
 ;
-Ambiguity of geminal atoms or geminal groups
+Ambiguity of geminal atoms or geminal groups 
 ;
            3
 ;
-Aromatic atoms on opposite sides of the ring (e.g. Tyr HE1 and HE2 protons)
+Aromatic atoms on opposite sides of the ring (e.g. Tyr HE1 and HE2 protons)    
 ;
            4
 ;
 Intraresidue ambiguities (e.g. Lys HG and HD protons)
 ;
-           5
+           5                
 ;
 Interresidue ambiguities (Lys 12 vs. Lys 27)
 ;
@@ -220,7 +220,7 @@ Interresidue ambiguities (Lys 12 vs. Lys 27)
 ;
 Chemical shift ambiguity is between atoms that are located on different entities within the molecular assembly
 ;
-           9
+           9                
 ;
 Ambiguous$ but specific ambiguity not defined
 ;
@@ -269,7 +269,7 @@ save__Auto_relaxation_experiment.Sample_state
      isotropic            .
      anisotropic          .
      solid                .
-
+            
     stop_
 
 save_
@@ -283,9 +283,6 @@ save__Auto_relaxation_list.Common_relaxation_type_name
       R1                                    .
       R2                                    .
       R1rho                                 .
-      T1                                    .
-      T2                                    .
-      T1rho                                 .
      'ZQ relaxation'                        .
      'longitudinal spin order'              .
      'single quantum antiphase'             .
@@ -301,9 +298,9 @@ save__Auto_relaxation_list.Relaxation_coherence_type
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-   Iz               'R1/T1    longitudinal'
-   Sz               'R1/T1    longitudinal'
-
+   Iz               'R1    longitudinal'
+   Sz               'R1    longitudinal'
+                         
    (I+)+(I-)        'R1rho or R2      transverse'
    (S+)+(S-)        'R1rho or R2      transverse'
    I+               'R1rho or R2      transverse'
@@ -323,11 +320,11 @@ save__Auto_relaxation_list.Relaxation_coherence_type
    I-Sz             'single quantum antiphase'
    IzS+             'single quantum antiphase'
    IzS-             'single quantum antiphase'
-
+   
  (I+S+)+(I-S-)      'DQ relaxation'
    I+S+             'DQ relaxation'
    I-S-             'DQ relaxation'
-
+         
     stop_
 
 save_
@@ -343,12 +340,7 @@ save__Auto_relaxation_list.Relaxation_val_units
          us-1          .
          ns-1          .
          ps-1          .
-         s           .
-         ms          .
-         us          .
-         ns          .
-         ps          .
-
+             
     stop_
 
 save_
@@ -362,7 +354,7 @@ save__Auto_relaxation_list.Rex_units
          s-1        .
          ms-1       .
          us-1       .
-
+             
     stop_
 
 save_
@@ -375,9 +367,6 @@ save__Auto_relaxation_list.Temp_calibration_method
 
     methanol                    MeOH
    'monoethylene glycol'        MEG
-   'solid lead nitrate"         .
-   'KBr adamantane blend'       .
-   'Na5[TmDOTP]                 .
    'no calibration applied'     .
 
    stop_
@@ -410,14 +399,14 @@ save__Binding_experiment.Sample_state
 
   stop_
 
-save_
+save_ 
 
 save__Bond_annotation.Type
 
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
-
+ 
         amide                  .
         covalent               .
         directed               .   # N -> O
@@ -446,7 +435,7 @@ save__Bond_annotation.Value_order
        _Item_enumeration.Value
        _Item_enumeration.Description
 
-  sing           'single bond'
+  sing           'single bond' 
   doub           'double bond'
   trip           'triple bond'
   quad           'quadruple bond'
@@ -465,7 +454,7 @@ save__Bond.Type
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
-
+ 
         amide                  .
         covalent               .
         directed              'N -> O'
@@ -494,7 +483,7 @@ save__Bond.Value_order
        _Item_enumeration.Value
        _Item_enumeration.Description
 
-  sing           'single bond'
+  sing           'single bond' 
   doub           'double bond'
   trip           'triple bond'
   quad           'quadruple bond'
@@ -534,7 +523,7 @@ save__Chem_comp_atom.Chirality
      R      'rectus - right handed configuration'
      S      'sinister - left handed configuration'
      pro-R  'If substituted for a higher molecular weight entity will make the attached atom an R chiral center'
-     pro-S  'If substituted for a higher molecular weight entity will make the attached atom an S chiral center'
+     pro-S  'If substituted for a higher molecular weight entity will make the attached atom an S chiral center' 
 
    stop_
 
@@ -592,10 +581,10 @@ save__Chem_comp_bond.Type
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
-
+ 
         amide                  .
         covalent               .
-        directed               .
+        directed               .  
         disulfide              .
         ester                  .
         ether                  .
@@ -614,7 +603,7 @@ save__Chem_comp_bond.Value_order
        _Item_enumeration.Value
        _Item_enumeration.Description
 
-  SING           'single bond'
+  SING           'single bond' 
   DOUB           'double bond'
   TRIP           'triple bond'
   QUAD           'quadruple bond'
@@ -646,12 +635,12 @@ save__Chem_comp_db_link.Database_code
 
   loop_
      _Item_enumeration.Value
-     _Item_enumeration.Description
+     _Item_enumeration.Description        
 
     CDDC               .
     PDB               "PDB ligand library"
    'PubChem SID'      "NCBI PubChem substance ID"
-   'PubChem CID'      "NCBI PubChem chemical ID"
+   'PubChem CID'      "NCBI PubChem chemical ID" 
    'KEGG'             "Kyoto Encyclopedia of Genes and Genomes"
 
   stop_
@@ -664,7 +653,7 @@ save__Chem_comp_descriptor.Program
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-  ACD       'Advanced Chemistry Development'
+  ACD       'Advanced Chemistry Development' 
   OECHEM    'OpenEye OECHEM library'
   CACTVS    'CACTVS program library'
   DAYLIGHT  'Daylight program library'
@@ -783,7 +772,7 @@ save__Chem_comp.Formal_charge
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
    4-    .
    5-    .
-
+   
   stop_
 
 save_
@@ -812,7 +801,7 @@ save__Chem_comp.Processing_site
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-     EBI       .
+     EBI       .   
      MSD       .
      PDBE      .
      PDBJ      .
@@ -835,7 +824,7 @@ save__Chem_comp.Provenance
     stop_
 
 save_
-
+                                       
 save__Chem_comp.Release_status
 
    loop_
@@ -858,7 +847,7 @@ save__Chem_comp.Type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-      'D-PEPTIDE LINKING'                         .
+      'D-PEPTIDE LINKING'                         .      
       'L-PEPTIDE LINKING'                         .
       'D-PEPTIDE NH3 AMINO TERMINUS'              .
       'L-PEPTIDE NH3 AMINO TERMINUS'              .
@@ -960,19 +949,19 @@ save__Chem_shift_perturbation_list.Type
 
     stop_
 
-save_
+save_   
 
 save__Chem_shift_ref.Atom_group
 
    loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+     
      'methyl carbon'                    .
      'methyl carbons'                   .
      'methyl protons'                   .
      'methylene protons'                .
-      nitrogen
+      nitrogen                        
 ;
 There is only one nitrogen nucleus or all nitrogen nuclei are magnetically equivalent
 ;
@@ -980,7 +969,7 @@ There is only one nitrogen nucleus or all nitrogen nuclei are magnetically equiv
 ;
 There is only one phosphorus nucleus or all phosphorus nuclei are magnetically equivalent.
 ;
-     protons
+     protons                         
 ;
 There is only one proton nucleus or all proton nuclei are magnetically equivalent
 ;
@@ -1003,7 +992,7 @@ save__Chem_shift_ref.Atom_type
    N          .
    F          .
    P          .
-   Cd         .
+   Cd         . 
 
      stop_
 
@@ -1014,7 +1003,7 @@ save__Chem_shift_ref.Chem_shift_units
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
-
+ 
       ppm                 'parts per million'
       Hz                   Hertz
 # PDBj-BMRB: Added MHz and na by extraction from current BMRB database.
@@ -1079,32 +1068,32 @@ save__Chem_shift_ref.Mol_common_name
      _Item_enumeration.Description
 
 DSS                                  'H; C; and N methyl protons'
-TSP                                  'H; C; and N methyl protons'
-water                                'H protons'
+TSP                                  'H; C; and N methyl protons' 
+water                                'H protons' 
 DMSO                                 'H methyl protons'
 DMSO-d5                              'H methyl proton'
-DMSO-d6                              'H methyl deuterons'
+DMSO-d6                              'H methyl deuterons' 
 methanol                             'H methyl protons'
-TMS                                  'H methyl protons'
+TMS                                  'H methyl protons' 
 acetate                              'C methyl carbon'
 dioxane                              'C methylene carbons'
-'ammonium chloride'                  'N ammonium nitrogen'
-'[15N] ammonium chloride'            'N ammonium nitrogen'
+'ammonium chloride'                  'N ammonium nitrogen' 
+'[15N] ammonium chloride'            'N ammonium nitrogen' 
 'ammonium hydroxide'                 'N ammonium nitrogen'
-'ammonium nitrate'                   'N ammonium nitrogen'
+'ammonium nitrate'                   'N ammonium nitrogen' 
 '[15N] ammonium nitrate'             'N ammonium nitrogen'
 '[15N$ 15N] ammonium nitrate'        'N ammonium nitrogen'
 'ammonium nitrite'                   'N ammonium nitrogen'
 'ammonium sulfate'                   'N ammonium nitrogen'
-'[15N] ammonium sulfate'             'N ammonium nitrogen'
+'[15N] ammonium sulfate'             'N ammonium nitrogen' 
 'liquid anhydrous ammonia'           'N ammonium nitrogen'
 formamide                            'N ammonium nitrogen'
    'nitric acid'                      .
-'[15N] nitric acid'                  'N nitrogen'
+'[15N] nitric acid'                  'N nitrogen' 
 nitromethane                         'N nitro group'
-'[15N] nitromethane'                 'N nitro group'
+'[15N] nitromethane'                 'N nitro group' 
 urea                                 'N nitrogen'
-'phosphoric acid'                    'P phosphate'
+'phosphoric acid'                    'P phosphate' 
 'phosphoric acid (85%)'              'P phosphate'
 TMP                                  'P phosphate'
 'cadmium perchlorate'                'Cd cadmium'
@@ -1142,7 +1131,7 @@ save__Chem_shift_ref.Ref_method
    internal     .
    external     .
    na           .
-
+     
 
    stop_
 
@@ -1184,19 +1173,6 @@ save__Chem_shift_reference.Nitrogen_shifts_flag
     no     .
     yes    .
    'yes with IUPAC referencing'     .
-
-   stop_
-
-save_
-
-save__Chem_shift_reference.Fluorine_shifts_flag
-
-   loop_
-       _Item_enumeration.Value
-       _Item_enumeration.Description
-
-    no     .
-    yes    .
 
    stop_
 
@@ -1267,7 +1243,7 @@ save__Chem_shifts_calc_type.Quantum_mechanical_method
 
       GIAO        'Gauge-Independent Atomic Orbital'
       IGLO         .
-      CSGT        'Continuous Set of Gauge Transformations'
+      CSGT        'Continuous Set of Gauge Transformations' 
 
      stop_
 
@@ -1357,7 +1333,7 @@ save__Chemical_rate_experiment.Sample_state
 
   stop_
 
-save_
+save_ 
 
 save__Citation_author.Family_title
 
@@ -1372,7 +1348,7 @@ save__Citation_author.Family_title
       III              Third
       IV               Fourth
       V                Fifth
-
+      
     stop_
 
 save_
@@ -1390,7 +1366,7 @@ save__Citation_editor.Family_title
       III              Third
       IV               Fourth
       V                Fifth
-
+      
 
     stop_
 
@@ -1402,11 +1378,11 @@ save__Citation.Class
        _Item_enumeration.Value
        _Item_enumeration.Description
 
-    'entry citation'
+    'entry citation'       
 ;
 Citation where the reported data are described
 ;
-    'reference citation'
+    'reference citation'   
 ;
 Citation used as a reference in the entry
 ;
@@ -1431,7 +1407,7 @@ save__Citation.Journal_abbrev
     'Biophys. J.'                               .
     'Biopolymers'                               .
     'Cell'                                      .
-    'EMBO J.'                                   .
+    'EMBO J.'                                   . 
     'Eur. J. Biochem.'                          .
     'FEBS Lett.'                                .
     'Inorg. Chem.'                              .
@@ -1440,7 +1416,7 @@ save__Citation.Journal_abbrev
     'J. Biochem.'                               .
     'J. Biol. Chem.'                            .
     'J. Biol. Inorg. Chem.'                     .
-    'J. Biomol. NMR'                            .
+    'J. Biomol. NMR'                            .                      
     'J. Biomol. Struct. Dyn.'                   .
     'J. Inorg. Biochem.'                        .
     'J. Magn. Reson.'                           .
@@ -1460,18 +1436,18 @@ save__Citation.Journal_abbrev
     'Science'                                   .
     'Structure'                                 .
     'Structure (Cambridge$ MA$ U.S.)'           .
-      'Acc. Chem. Res.'                                                          .
-      'ACS Symp. Ser.'                                                           .
-      'Acta Biochim. Pol.'                                                       .
-      'Acta Chim. Slov.'                                                         .
-      'Acta Crystallogr., Sect. A: Found. Crystallogr.'                          .
-      'Acta Crystallogr., Sect. B: Struct. Sci.'                                 .
-      'Acta Crystallogr., Sect. C: Cryst. Struct. Commun.'                       .
+      'Acc. Chem. Res.'                                                          .                                                                                         
+      'ACS Symp. Ser.'                                                           .                                             
+      'Acta Biochim. Pol.'                                                       .                                         
+      'Acta Chim. Slov.'                                                         .                                           
+      'Acta Crystallogr., Sect. A: Found. Crystallogr.'                          .            
+      'Acta Crystallogr., Sect. B: Struct. Sci.'                                 .                   
+      'Acta Crystallogr., Sect. C: Cryst. Struct. Commun.'                       . 
       'Acta Crystallogr., Sect. D: Biol. Crystallogr.'                           .
-      'Acta Crystallogr., Sect. E: Struct. Rep. Online'                          .
-      'Acta Hydrochim. Hydrobiol.'                                               .
-      'Acta Mater.'                                                              .
-      'Acta Pharm. (Zagreb, Croatia)'                                            .
+      'Acta Crystallogr., Sect. E: Struct. Rep. Online'                          .             
+      'Acta Hydrochim. Hydrobiol.'                                               .                                  
+      'Acta Mater.'                                                              .                    
+      'Acta Pharm. (Zagreb, Croatia)'                                            .      
       'Acta Pharmacol. Sin.'                                                     .
       'Acta Phys. Pol., A'                                                       .
       'Acta Phys. Pol., B'                                                       .
@@ -2339,9 +2315,9 @@ save__Citation.Journal_abbrev
       'J. Solution Chem.'                                                        .
       'J. Steroid Biochem. Mol. Biol.'                                           .
       'J. Struct. Biol.'                                                         .
-      'J. Struct. Funct. Genomics'                                               .
-      'J. Struct. Chem.'                                                         .
-      'J. Supercond.'                                                            .
+      'J. Struct. Funct. Genomics'                                               .                              
+      'J. Struct. Chem.'                                                         .                
+      'J. Supercond.'                                                            .  
       'J. Supercrit. Fluids'                                                     .
       'J. Supramol. Chem.'                                                       .
       'J. Surfactants Deterg.'                                                   .
@@ -2922,8 +2898,8 @@ save__Citation.Status
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
-
-     'in preparation'
+ 
+     'in preparation'        
 ;
 A manuscript is being prepared but has not been submitted for publication.
 ;
@@ -2965,15 +2941,15 @@ save__Citation.Type
 ;
 A document written and published as a requirement for a degree or other scholarly endeavor (e.g.$ senior$ masters$ or doctoral thesis)
 ;
-  abstract
+  abstract    
 ;
 A brief text describing the contents of a presentation$ oral$$ poster$ or other$ given at a conference or other formal gathering.
 ;
- 'personal communication'
+ 'personal communication'  
 ;
 The BMRB entry is the only known published source for the data.
 ;
- internet
+ internet    
 ;
 The data were only found published on the internet and no other publication is available.
 ;
@@ -2995,23 +2971,23 @@ save__Computer.Operating_system
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-      IRIX
+      IRIX            
 ;
 Version of UNIX developed by SGI
 ;
-      UNIX
+      UNIX            
 ;
 Originally developed by AT&T and UC Berkeley
 ;
-      Linux
+      Linux           
 ;
 Linux Is Not Unix; but closely resembles it
 ;
-      DOS
+      DOS             
 ;
 Operating system used on many IBM and IBM compatible personal computers
 ;
-      NT
+      NT              
 ;
 Windows New Technology operating system
 ;
@@ -3029,7 +3005,7 @@ save__Computing_platform.Name
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+ 
    'CHTC'                    'Condor High Through-put Computing'
    'NMRbox'                   .
    'Open Science Grid'        .
@@ -3043,7 +3019,7 @@ save__Conformer_family_coord_set_expt.Sample_state
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+ 
    isotropic               .
    anisotropic             .
    solid                   .
@@ -3097,7 +3073,7 @@ save__Conformer_stat_list.Rep_conformer_selection_criteria
    'closest to the average'            .
    'lowest energy'                     .
    'fewest violations'                 .
-   'minimized average structure'       .
+   'minimized average structure'       . 
 
     stop_
 
@@ -3108,7 +3084,7 @@ save__Constraint_file.Constraint_subsubtype
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+ 
     ambi            .
     simple          .
 
@@ -3120,8 +3096,8 @@ save__Constraint_file.Constraint_subtype
 
   loop_
      _Item_enumeration.Value
-     _Item_enumeration.Description
-
+     _Item_enumeration.Description             
+ 
    'Not applicable'                 .
     NOE                             .
    'NOE buildup'                    .
@@ -3147,11 +3123,11 @@ save__Constraint_file.Constraint_type
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+ 
    'distance'                                         .
    'dipolar coupling'                                 .
    'protein dihedral angle'                           .
-   'nucleic acid dihedral angle'                      .
+   'nucleic acid dihedral angle'                      . 
    'coupling constant'                                .
    'chemical shift'                                   .
    'other angle'                                      .
@@ -3174,7 +3150,7 @@ save__Constraint_file.Software_name
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+ 
       AMBER          .
       ARIA           .
       CNS            .
@@ -3220,19 +3196,19 @@ save__Constraint_stat_list.NOE_dist_averaging_method
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-     r-6
+     r-6       
 ;
 R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
 ;
-     r-3
+     r-3       
 ;
 R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
 ;
-     sum
+     sum       
 ;
 R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
 ;
-     center
+     center    
 ;
 R= r1_center-r2_center$ X-PLOR formula 18.4.
 ;
@@ -3260,19 +3236,19 @@ save__Constraint_stat_list.ROE_dist_averaging_method
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-     r-6
+     r-6       
 ;
 R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
 ;
-     r-3
+     r-3       
 ;
 R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
 ;
-     sum
+     sum       
 ;
 R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
 ;
-     center
+     center    
 ;
 R= r1_center-r2_center$ X-PLOR formula 18.4.
 ;
@@ -3307,7 +3283,7 @@ save__Contact_person.Family_title
       III              Third
       IV               Fourth
       V                Fifth
-
+      
     stop_
 
 save_
@@ -3392,7 +3368,7 @@ save__Coupling_constant_list.Spectrometer_frequency_1H
 
   stop_
 
-save_
+save_ 
 
 #save__Cross_correlation_CSA_CSA_expt.Sample_state
 #
@@ -3514,7 +3490,7 @@ save__Data_set.Type
 
    assigned_chemical_shifts             .
    theoretical_chem_shifts              .
-   chem_shift_perturbation              .
+   chem_shift_perturbation              . 
    chemical_rates                       .
    coupling_constants                   .
    theoretical_coupling_constants       .
@@ -3607,7 +3583,7 @@ save__Datum.Type
      'deduced secondary structure values'       .
      'deduced hydrogen bonds'                   .
 
-     'distance constraints'
+     'distance constraints'                  
 ;
 NOE distance constraints between two sets of atoms in which each set has at least one atom. Multiple atoms in one set should be represented by a standard single pseudoatom. If this is not possible then the constraint having such a set of atoms should be considered an ambiguous NOE distance constraint for this
 purpose. E.g. restaint between
@@ -3621,19 +3597,19 @@ Any NOE distance constraint that has at least one set of atoms that can not be r
 ( Chain (A or B) Residue number 1 Residue name LEU Atom name HB2) and
 ( Chain A        Residue number 1 Residue name LEU Atom name HA)
 ;
-     'hydrogen bond distance constraints'
+     'hydrogen bond distance constraints'        
 ;
 Distance constraints to constraint a hydrogen bond. Often two distance constraints for one hydrogen bond in order to set the bond length as well as the directionality of the bond.
 ;
-     'torsion angle constraints'
+     'torsion angle constraints'                 
 ;
 Dihedral angle constraint
 ;
-    'chemical shift constraints'
+    'chemical shift constraints'                
 ;
 Chemical shift of e.g. a proton or carbon nucleus implemented as a constraint.
 ;
-     'symmetry constraints'
+     'symmetry constraints'                      
 ;
 Restraining (or constraining) symmetry between multiple copies of (part of) similar structures.
 ;
@@ -3647,7 +3623,7 @@ Restraining (or constraining) symmetry between multiple copies of (part of) simi
    '35Cl chemical shifts'               .
    '129Xe chemical shifts'              .
    '195Pt chemical shifts'              .
-
+     
     stop_
 
 save_
@@ -3702,7 +3678,7 @@ save__Deposited_data_files.Constraint_file_syntax
        ARIA       .
        CNS        .
        CYANA      .
-       DISCOVER   .
+       DISCOVER   .         
        X-PLOR     .
 
     stop_
@@ -3816,7 +3792,7 @@ save__EMR_expt.Sample_volume_units
      _Item_enumeration.Description
 
      ml        .
-
+ 
    stop_
 
 save_
@@ -3834,7 +3810,7 @@ save__Entity_assembly.Physical_state
  'intrinsically disordered'    'The entity in the assembly is considered an intrinsically disorder biopolymer (IDP) where the native state involves little organized secondary structure'
  'partially disordered'        'The entity in the assembly contains regions of disordered structure (IDR) but is not fully unfolded or fully disordered'
   na                           'The physical state of the entity in the assembly is an unknown physical state or may be in exchange between different physical states'
-
+ 
   stop_
 
 save_
@@ -3844,7 +3820,7 @@ save__Entity_bond.Type
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
-
+ 
         amide                  .
         covalent               .
         directed               .   # N -> O
@@ -3873,7 +3849,7 @@ save__Entity_bond.Value_order
        _Item_enumeration.Value
        _Item_enumeration.Description
 
-  sing           'single bond'
+  sing           'single bond' 
   doub           'double bond'
   trip           'triple bond'
   quad           'quadruple bond'
@@ -3918,16 +3894,16 @@ save__Entity_db_link.Database_code
     SP             .
     UNP            .
 # PDBj-BMRB: Added NCBI, tRNADB and HUGO.
-   NCBI            .
-   HUGO           'HUGO Gene Nomenclature Committee'
-   tRNADB         'transfer RNA database'
+   NCBI    ?
+   HUGO    'HUGO Gene Nomenclature Committee'
+   tRNADB    'transfer RNA database'
 # PDBj-BMRB: BMRB(withdrawn) expresses withdrawn accession code referring to current BMRB release status.
-   BMRB(withdrawn)    .
+   BMRB(withdrawn)    ?
 
   stop_
 
 save_
-
+               
 save__Entity_db_link.Entry_experimental_method
 
   loop_
@@ -3992,18 +3968,49 @@ save__Entity_experimental_src.Production_method
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    'recombinant technology'                 .
-    'purified from the natural source'      'Obtained from the native organism that produces the biomolecule in nature.'
-    'chemical synthesis'                    'Select this option if the molecule was generated primarily by chemical synthesis techniques.'
-    'cell free synthesis'                    .
-    'enzymatic semisynthesis'                .
-    'reverse transcriptase'                 'Method used to synthesize RNA.'
-    'obtained from a collaborator'          'Select this option if the molecule was obtained from a collaborator.'
-    'obtained from a vendor'
+    'recombinant technology'
+;
+?
+;                                  
+
+     'purified from the natural source'
+;
+Obtained from the native organism that produces the biomolecule in nature.
+;
+
+     'chemical synthesis'
+;
+Select this option if the molecule was generated primarily by chemical synthesis techniques.
+;
+
+     'cell free synthesis'
+;
+?
+;
+
+     'enzymatic semisynthesis'
+;
+?
+;
+
+     'reverse transcriptase'
+;
+Method used to synthesize RNA.
+;
+
+     'obtained from a collaborator'
+;
+Select this option if the molecule was obtained from a collaborator.
+;
+
+     'obtained from a vendor'
 ;
 Select this option if the molecule was obtained from a commercial vendor or academic unit that produces materials as a service.  DO NOT select this option if the material was provided by an academic or industrial research collaborator.
 ;
-       na                                   'not available'
+       na
+;
+not available
+;
 
   stop_
 
@@ -4031,16 +4038,16 @@ save__Entity_natural_src.Kingdom
      _Item_enumeration.Description
 
 
-      Metazoa
+      Metazoa      
 ;
 multi-cellular motile organisms that feed heterotrophically
 ;
       Fungi            .
-      Viridiplantae
+      Viridiplantae         
 ;
 multi-cellular organisms that feed by photosynthesis
 ;
-      Protista
+      Protista         
 ;
 protozoa and single-celled eukaryotic algae
 ;
@@ -4109,13 +4116,13 @@ save__Entity_natural_src.Organelle
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+ 
     chloroplast             .
    'endoplasmic reticulum'  .
    'golgi apparatus'        .
     mitochondria            .
     nucleus                 .
-    vacuole                 .
+    vacuole                 .   
    acrosome                 .
    autophagosome            .
    centriole                .
@@ -4140,7 +4147,7 @@ save__Entity_natural_src.Organelle
    nucleosome               .
    microtubule              .
    'cell membrane'          .
-
+ 
      stop_
 
 save_
@@ -4155,7 +4162,7 @@ save__Entity_natural_src.Organism_name_scientific
      'Escherichia coli'                             .
      'Mus musculus'                                 .
      'Rattus norvegicus'                            .
-     'Saccharomyces cerevisiae'                     .
+     'Saccharomyces cerevisiae'                     . 
      'Bos taurus'                                   .
      'Bos primigenius'                              .
      'Gallus gallus'                                .
@@ -4282,7 +4289,7 @@ save__Entity_natural_src.Superkingdom
      Viruses              .
      Other                .
      Unclassified         .
-
+               
   stop_
 
 save_
@@ -4293,10 +4300,10 @@ save__Entity_natural_src.Tissue
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    skin         .
-# gather from current entries
+    skin         ?
+# gather from current entries 
 
-
+ 
     stop_
 
 save_
@@ -4306,7 +4313,7 @@ save__Entity_natural_src.Type
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+     
        organism                     .
        virus                        .
        plasmid                      .
@@ -4351,7 +4358,7 @@ save__Entity.Polymer_common_type
     DNA                   .
     RNA                   .
    'DNA/RNA hybrid'       .
-    polysaccharide        .
+    polysaccharide        .             
 
    stop_
 
@@ -4366,21 +4373,21 @@ save__Entity.Polymer_type
     'polypeptide(L)'                             L-protein
     'polydeoxyribonucleotide'                    DNA
     'polyribonucleotide'                         RNA
-    'polydeoxyribonucleotide/polyribonucleotide hybrid'
+    'polydeoxyribonucleotide/polyribonucleotide hybrid'      
 ;
 A nucleic acid containing a combination of DNA and RNA monomers
 ;
 
-    'polypeptide(D)'
+    'polypeptide(D)'             
 ;
 A polypeptide with a majority of amino acids in the D configuration
 ;
 
-    'polysaccharide(D)'
+    'polysaccharide(D)'   
 ;
 A carbohydrate with the majority of the monomers having a D configuration
 ;
-    'polysaccharide(L)'
+    'polysaccharide(L)'   
 ;
 A carbohydrate with the majority of the monomers having an L configuration
 ;
@@ -4401,15 +4408,15 @@ save__Entity.Thiol_state
      'all disulfide bound'       .
      'all other bound'           .
      'all free'                  .
-     'not present'
+     'not present'               
 ;
 Thiols are not present in the system.
 ;
-     'not available'
+     'not available'    
 ;
 The oxidation state of the thiols could not be extracted from the literature or was not provided by the authors of the entry.
 ;
-     unknown
+     unknown     
 ;
 The author reported that the oxidation state of the thiols is unknown.
 ;
@@ -4431,11 +4438,11 @@ save__Entity.Type
 
     polymer             'A biological polymer (protein$ peptide$ nucleic acid$ etc.)'
     non-polymer         'Ligand$ metal ion$ or other non-polymeric molecule'
-    water
+    water               
 ;
 Water is defined as a special case. Multiple water molecules may be components of the molecular assembly$ but are not assigned unique entity_assembly_ID values.
 ;
-    aggregate
+    aggregate           
 ;
 Used where a large number of molecules are reported as part of a molecular assembly$ but are not listed individually as components of the assembly and are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to represent the aggregate number of molecules of a specific compound.
 ;
@@ -4462,7 +4469,7 @@ save__Entry_author.Family_title
       IV               Fourth
 # PDBj-BMRB: Added V.
       V                 Fifth
-
+      
     stop_
 
 save_
@@ -4495,17 +4502,17 @@ save__Entry_experimental_methods.Subtype
 
       solution              'Experiments using solution samples'
       solid-state           'Experiments using samples in the solid-state'
-
+   
     stop_
 
-save_
+save_ 
 
 save__Entry_interview.View_mode
 
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
-
+     
        PDB/BMRB        .
       'BMRB Only'      .
 
@@ -4521,7 +4528,7 @@ save__Entry_src.Organization_full_name
 
     "Accelerated Technologies Center for Gene to 3D Structure"                   .
     "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
-    "Architecture and Function of Biological Macromolecules Structure Genomics"  ASG
+    "Architecture and Function of Biological Macromolecules Structure Genomics"  ASG           
     "Atoms-to-Animals: The Immune Function Network"                              .
     "Bacterial targets at IGS-CNRS$ France"                                      .
     "Berkeley Structural Genomics Center"                                        BSGC
@@ -4550,7 +4557,7 @@ save__Entry_src.Organization_full_name
     "New York Structural Genomics Research Consortium"                           NYSGRC
     "New York Structural GenomiX Research Consortium"                            .
     "Northeast Structural Genomics Consortium"                                   .
-    "North West Structural Genomics Centre"                                      NWSGC
+    "North West Structural Genomics Centre"                                      NWSGC   
     "Nucleocytoplasmic Transport: a Target for Cellular Control"                 .
     "Ontario Centre for Structural Proteomics"                                   .
     "Oxford Protein Production Facility"                                         .
@@ -4575,7 +4582,7 @@ save__Entry_src.Organization_full_name
     "TB Structural Genomics Consortium"                                          .
     "Transcontinental EM Initiative for Membrane Protein Structure"              .
     "Transmembrane Protein Center"                                               .
-    "Yeast Structural Genomics"                                                  YSG
+    "Yeast Structural Genomics"                                                  YSG 
 
   stop_
 
@@ -4587,7 +4594,7 @@ save__Entry.Author_release_status_code
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-     REL    'Release'
+     REL    'Release' 
      HOLD   'On hold until yyyy-mm-dd'
      HPUB   'On hold until publication'
      OBS    'Entry has been obsoleted and replaced by another entry'
@@ -4641,7 +4648,7 @@ save__Entry.Dep_release_code_coordinates
    'Hold for 8 weeks'       'Hold for 8 weeks'
    'Hold for 6 months'      'Hold for 6 months'
    'Hold for 1 year'        'Hold for 1 year'
-
+     
    stop_
 
 save_
@@ -4687,7 +4694,7 @@ save__Entry.Dep_release_code_sequence
       _Item_enumeration.Description
 
    'Release now'         'Release sequence information in status reports immediately'
-   'Hold for release'
+   'Hold for release'    
 ;
 Conceal sequence information in status reports until coordinate data are released
 ;
@@ -4718,7 +4725,7 @@ save__Entry.Experimental_method_subtype
      solution              'Experiments using solution samples'
      solid-state           'Experiments using samples in the solid-state'
      theoretical           'Data derived from theoretical calculations'
-
+    
     stop_
 
 save_
@@ -4733,7 +4740,7 @@ save__Entry.Format_name
 
     stop_
 
-save_
+save_ 
 
 save__Entry.NMR_STAR_version
 
@@ -4833,7 +4840,7 @@ save__Entry.Original_NMR_STAR_version
 save_
 
 save__Entry.Release_request
-
+                    
   loop_
      _Item_enumeration.Value
      _Item_enumeration.Description
@@ -4886,7 +4893,7 @@ save__Entry.Version_type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-  original
+  original           
 ;
 The molecular system and reported data have not been deposited in the past by these authors.
 ;
@@ -4924,7 +4931,7 @@ jpeg$ gif$ or other file type that is an image of the pulse sequence as shown as
       'Pulse sequence'                          .
       'Pulse field gradient'                    .
       'Peak list'                               .
-      'Spectral image'                          .
+      'Spectral image'                          .       
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
    'Acquisition parameters'    .
    'Processing parameters'     .
@@ -4944,77 +4951,51 @@ save__Experiment.Name
       '1D 1H'                       .
       '1D 13C'                      .
       '1D 15N'                      .
-      '1D 31P'                      .
-      '2D 1H-13C HMQC'              .
+      '1D 31P'                      .                 
       '2D 1H-15N HSQC'              .
       '2D 1H-15N HSQC NH2 only'     .
-      '2D 1H-15N TROSY'             .
       '2D 1H-13C HSQC'              .
-      '2D 1H-13C HSQC/HMQC'         .
       '2D 1H-13C HSQC aliphatic'    .
-      '2D 1H-13C HSQC aromatic'     .
+      '2D 1H-13C HSQC aromatic'     .   
       '2D 1H-1H TOCSY'              .
-      '2D 1H-1H ROESY'              .
       '2D DQF-COSY'                 .
       '2D 1H-1H COSY'               .
       '2D 1H-1H NOESY'              .
-      '2D (HB)CB(CGCD)HD'           .
       'T1/R1 relaxation'            .
       'T1rho/R1rho relaxation'      .
       'T2/R2 relaxation'            .
       '1H-15N heteronoe'            .
-      'JR NOESY'                    .
-      'L-PROSY NOESY'               .
-      '3D CBCACONH'                 .
       '3D CBCA(CO)NH'               .
-      '3D CBCANH'                   .
       '3D C(CO)NH'                  .
       '3D HNCO'                     .
       '3D HNCA'                     .
-      '3D HBHANH'                   .
       '3D HNCACB'                   .
-      '3D HN(CA)CO'                 .
-      '3D HNCACO'                   .
       '3D HBHA(CO)NH'               .
       '3D HN(CO)CA'                 .
-      '3D HN(CO)CACB'               .
-      '3D CCH-TOCSY'                .
       '3D H(CCO)NH'                 .
       '3D HCCH-TOCSY'               .
-      '3D (H)CCH-TOCSY'             .
-      '3D 15N-separated NOESY'      .
-      '3D 13C-separated NOESY'      .
+      '3D HNHA'                     .
       '3D 1H-15N NOESY'             .
       '3D 1H-15N TOCSY'             .
       '3D 1H-13C NOESY'             .
       '3D 1H-13C NOESY aliphatic'   .
       '3D 1H-13C NOESY aromatic'    .
-      '3D HNHA'                     .
       '3D HNHB'                     .
       '3D HCCH-COSY'                .
       '3D HCACO'                    .
       '3D HN(COCA)CB'               .
-      '4D CC NOESY'                 .
-      '4D 13C-separated NOESY'      .
-      '5D APSY CBCACONH'            .
-      '5D APSY HACACONH'            .
-      '5D HN(CA)CONH'               .
       '15N-(1H) NOE'                .
       '13C-(1H) NOE'                .
        DARR                         SSNMR
       '2D DARR'                     SSNMR
-      '2D 13C-13C DARR'             SSNMR
-      'CANcoCX'                     SSNMR
+      'CANcoCX DARR'                SSNMR
       'NCACX'                       SSNMR
       'NCOCX'                       SSNMR
       'CONCA'                       SSNMR
-      '3D NCOCX'                    SSNMR
-      '3D NCACX'                    SSNMR
-       PAIN                         SSNMR
-       PAR                          SSNMR
-      '15N-1H solid-state de-HETCOR'  SSNMR
+      'NCOCX DARR'                  SSNMR
+      'NCACX DARR'                  SSNMR
       'FS-REDOR'                    SSNMR
-      '2D 15N-13C TEDOR'            SSNMR
+      '2D TEDOR'                    SSNMR
       'CN TEDOR'                    SSNMR
       '2D 13C/13C PDSD'             SSNMR
       '2D 13C/13C TOBSY'            SSNMR
@@ -5024,11 +5005,11 @@ save__Experiment.Name
       '2D 13C-detected NCA'         SSNMR
       '1H-detected (H)NH HETCOR'    SSNMR
       '3D RNCSA'                    SSNMR
-      '3D ROCSA'                    SSNMR
+      '3D ROCSA'                    SSNMR  
 
   stop_
 
-save_
+save_ 
 
 save__Experiment.Sample_state
 
@@ -5052,11 +5033,11 @@ save__Peak_constraint_link.Constraint_Sf_category
      RDC_constraints                         .
      general_distance_constraints            .
      distance_constraints                    .
-     torsion_angle_constraints               .
+     torsion_angle_constraints               . 
 
   stop_
 
-save_
+save_ 
 
 save__Peak_constraint_link.Spectral_peak_list_Sf_category
 
@@ -5070,7 +5051,7 @@ save__Peak_constraint_link.Spectral_peak_list_Sf_category
 
   stop_
 
-save_
+save_ 
 
 save__Force_constant.Term
 
@@ -5106,11 +5087,11 @@ save__Force_constant.Units
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-kcal/mol*A2        'bonds; distance; radius of gyration; planarity'
-kcal/mol*rad2      'angle or dihedral angle'
-kcal/mol*A4        "van der Waals"
-kcal/mol*Hz2       "dipolar coupling; scalar couplings; T1/T2; CSA"
-kcal/mol*ppm2      "Chemical shifts; pseudocontact shifts"
+kcal/mol*A2        'bonds; distance; radius of gyration; planarity'            
+kcal/mol*rad2      'angle or dihedral angle'              
+kcal/mol*A4        "van der Waals"                        
+kcal/mol*Hz2       "dipolar coupling; scalar couplings; T1/T2; CSA"    
+kcal/mol*ppm2      "Chemical shifts; pseudocontact shifts"          
 
      stop_
 
@@ -5193,19 +5174,19 @@ E = k(r-l)**2 for l > r > l2
 E = 2k(l2-l)(r - (l2+l)/2) for r < l2
 ;
 
-   upper-bound-parabolic
+   upper-bound-parabolic              
 ;
 can be derived from the two-sided versions given above
 ;
-   lower-bound-parabolic
+   lower-bound-parabolic              
 ;
 can be derived from the two-sided versions given above
 ;
-   upper-bound-parabolic-linear
+   upper-bound-parabolic-linear       
 ;
 can be derived from the two-sided versions given above
 ;
-   lower-bound-parabolic-linear
+   lower-bound-parabolic-linear       
 ;
 can be derived from the two-sided versions given above
 ;
@@ -5361,7 +5342,7 @@ save__Heteronucl_T1_list.T1_coherence_type
 
          Iz              .
          Sz              .
-
+                         
     stop_
 
 save_
@@ -5376,7 +5357,7 @@ save__Heteronucl_T1_list.T1_val_units
          s-1           .
          ms            .
          ms-1          .
-
+             
     stop_
 
 save_
@@ -5390,12 +5371,12 @@ save__Heteronucl_T1rho_experiment.Sample_state
     isotropic     .
     anisotropic   .
     solid         .
-
+    
     stop_
 
 save_
 
-save__Heteronucl_T1rho_list.Rex_units
+save__Heteronucl_T1rho_list.Rex_units  
 
     loop_
       _Item_enumeration.Value
@@ -5404,7 +5385,7 @@ save__Heteronucl_T1rho_list.Rex_units
          s-1        .
          ms-1       .
          us-1       .
-
+                         
     stop_
 
 save_
@@ -5417,7 +5398,7 @@ save__Heteronucl_T1rho_list.T1rho_coherence_type
 
          I(+$-)              'single quantum'
          S(+$-)              'single quantum'
-
+    
     stop_
 
 save_
@@ -5432,7 +5413,7 @@ save__Heteronucl_T1rho_list.T1rho_val_units
          ms-1          .
          s             .
          ms            .
-
+             
     stop_
 
 save_
@@ -5445,9 +5426,6 @@ save__Heteronucl_T1rho_list.Temp_calibration_method
 
      methanol                    .
     "monoethylene glycol"        .
-    'solid lead nitrate"         .
-    'KBr adamantane blend'       .
-    'Na5[TmDOTP]                 .
     "no calibration applied"     .
 
    stop_
@@ -5477,7 +5455,7 @@ save__Heteronucl_T2_experiment.Sample_state
      isotropic            .
      anisotropic          .
      solid                .
-
+            
     stop_
 
 save_
@@ -5491,7 +5469,7 @@ save__Heteronucl_T2_list.Rex_units
          s-1        .
          ms-1       .
          us-1       .
-
+             
     stop_
 
 save_
@@ -5505,7 +5483,7 @@ save__Heteronucl_T2_list.T2_coherence_type
 
          I(+$-)              'single quantum'
          S(+$-)              'single quantum'
-
+    
     stop_
 
 save_
@@ -5520,7 +5498,7 @@ save__Heteronucl_T2_list.T2_val_units
          ms-1          .
          s             .
          ms            .
-
+             
     stop_
 
 save_
@@ -5532,17 +5510,12 @@ save__Heteronucl_T2_list.Temp_calibration_method
       _Item_enumeration.Description
 
 
-    methanol                    .
-   "monoethylene glycol"        .
-   'solid lead nitrate"         .
-   'KBr adamantane blend'       .
-   'Na5[TmDOTP]                 .
-   'no calibration applied'     .
-
+    methanol                          .
+   "monoethylene glycol"              .
+   "no calibration applied"           .
    stop_
 
 save_
-
 
 save__Heteronucl_T2_list.Temp_control_method
 
@@ -5552,7 +5525,6 @@ save__Heteronucl_T2_list.Temp_control_method
 
     'single scan interleaving'           .
     'temperature compensation block'     .
-    'single scan interleaving and temperature compensation block'          .
     'no temperature control applied'     .
 
    stop_
@@ -5562,164 +5534,89 @@ save_
 save__History.Software_name
 
     loop_
-       _Item_enumeration.Value
+       _Item_enumeration.Value                         
        _Item_enumeration.Description
 
-    3DNA             .
-    4D-CHAINS        .
-    ABACUS           .
-    ADAPT-NMR        .
     AMBER            .
-    ANALYSIS        'CcpNMR Analysis'
     AngleSearch      .
     ANSIG            .
+    Analysis         .
     AQUA             .
     ARIA             .
-    ARIA2            .
-    ATHNOS-CANDID    .
     AURELIA          .
-    AS-DP            .
-    ATNOS            .
-    ATSAS            .
     AUREMOL          .
     AutoAssign       .
-    AutoDep          .
-    AutoStruct       .
+    AutoStructure    .
     AVS              .
     AZARA            .
-    BATMAN          'small molecule'
-    calRW            .
-    CANDID           .
+    BIRDER           .
     CARA             .
-    CATIA            .
-    CcpNMR           .
-    CH3Shift         .
-    Chimera          .
+    CAPP             .
     CING             .
-   'CLUSTAL W/X'     .
-    CNS              .
+    CcpNMR           .
+    CNS              .             
     CNSSOLVE         .
-    CoMD/NMR         .
-    COMPASS          .
-   'CONNJURST'       .
-   'CONNJURWB'       .
-    CORMA                             .
-   'CPMG-Fit (Korzhnev)'              .
-   'CPMGFit (Palmer)'                 .
+    CORMA            .
     CSI              .
     CS-Rosetta       .
     CURVES           .
     CYANA            .
-    DANGLE           .
+    DGII             .
     DIAMOD           .
     DISCOVER         .
     DYANA            .
     DYNAMO           .
-    FASTModelFree    .
-    FMCGUI           .
-    FuDA             .
+    EMBOSS           .
+    FANTOM           .
+    Felix            .
     GARANT           .
     Gaussian         .
     GIFA             .
-    GISSMO                          'small molecule'
-    GROMACS          .
-    GROMOS           .
-    GUARDD           .
     HADDOCK          .
     HYPER            .
-    istHMS           .
-    j-UNIO           .
-    MAGRO            .
+    InsightII        .
     MARDIGRAS        .
-    MARS             .
-    MD2NOE           .
-    Mathematica      .
-    MATLAB           .
-    MDAnalysis       .
-    MddNMR           .
-   'MestReNova'      .
-    MetaboAnalystR                   'small molecule'
-    MetScape                         'small molecule'
     ModelFree        .
     Molmol           .
-    MolProbity       .
     MORASS           .
-    MoSART           .
-    MVAPACK                           'small molecule'
-    NAMD             .
-    NESSY            .
-    NMRbox           .
+    NDEE             .
     NMRDraw          .
-    NMRest           .
-    NMRFAM-SPARKY    .
-    NMRFx            .
-   'NMRFx Analyst'   .
-   'NMRFx Processor' .
-   'NMRFx Structure' .
-    nmrglue          .
     NMRPipe          .
-    NMRspy           .
     NMRView          .
-    NMRViewJ         .
     NOAH             .
-    nus-tool         .
-    Olivia           .
+    NOEID            .
+    NUCFIT           .
+    NUTS             .
     OPAL             .
-    OPALp            .
-    Origin           .
-    PALES            .
-    PDBStat          .
     PECAN            .
     PINE             .
     PIPP             .
     PISTACHIO        .
-    PONDEROSA        .
     Procheck         .
-    ProcheckNMR      .
+    ProcheckNMR      .                       
+    P-ROI            .
     PRONTO           .
     PROSA            .
     PSVS             .
-    PyMOL            .
-    qMDD             .
     QUEEN            .
-    REDCAT           .
-    REDCRAFT         .
     Relax            .
-    RNAstructure     .
-    rNMR                              'small molecule'
-    RNMRTK           .
-    Rosetta          .
+    RESCUE           .
     SANE             .
-    SCRUB            .
-    SHIFTS           .
-    ShiftX           .
-    ShiftX2          .
-    SMILE            .
     SPARKY           .
     SPARTA           .
     SPARTA+          .
     SPSCAN           .
     SYBYL            .
     TALOS            .
-    TALOS+           .
-    TALOS-N          .
-    TANSY            .
-    Tensor           .
-    TINKER           .
     TOPSPIN          .
-    UNIO             .
-    UNIO-MATCH       .
     UXNMR            .
-    VMD              .
-    VMD-Xplor        .
     VNMR             .
-    VNMRj            .
     WhatIF           .
+    Wattos           .
     XEASY            .
     X-PLOR           .
    'X-PLOR NIH'      .
     xwinnmr          .
-    YASARA           .
 
     stop_
 
@@ -5735,7 +5632,7 @@ save__Homonucl_NOE_list.Homonuclear_NOE_val_type
     'peak height'             .
     'contour count'           .
      na                       .
-
+    
     stop_
 
 save_
@@ -5774,11 +5671,11 @@ save__Local_structure_quality.Type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    'not observed'                            .
-    'not well defined'                        .
-    'low restraint density'                   .
-    'well defined'                            .
-    'high restraint density'                  .
+    'not observed'                            ?
+    'not well defined'                        ?
+    'low restraint density'                   ?
+    'well defined'                            ?
+    'high restraint density'                  ?
 
   stop_
 
@@ -5932,7 +5829,7 @@ save_
 
  #        ''                                                .
  #        'Rex'                                             .
-
+ 
 # Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
 # such as Rex:
 
@@ -5940,7 +5837,7 @@ save_
   #       'S2$ te'                                           .
   #       'S2$ Rex'                                          .
   #       'S2$ te$ Rex'                                      .
-
+ 
 # Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
 
   #       'S2f$ S2$ ts'                                      .
@@ -5954,7 +5851,7 @@ save_
 
 #  stop_
 
-#save_
+#save_ 
 
 #save__Model_free_experiment.Sample_state
 
@@ -5968,7 +5865,7 @@ save_
 
 #  stop_
 
-#save_
+#save_ 
 
 #save__Model_free_list.Tau_e_val_units
 
@@ -5984,7 +5881,7 @@ save_
 
 #  stop_
 
-#save_
+#save_ 
 
 #save__Model_free_list.Tau_s_val_units
 
@@ -6000,7 +5897,7 @@ save_
 
 #  stop_
 
-#save_
+#save_ 
 
 save__Model_type.Type
 
@@ -6008,11 +5905,11 @@ save__Model_type.Type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-     'experimental ensemble member'                    .
-     'representative lowest energy'                    .
-     'representative closest to the mean'              .
-     'representative average minimized'                .
-     'representative lowest overall target function'   .
+     'experimental ensemble member'                    ?
+     'representative lowest energy'                    ?
+     'representative closest to the mean'              ?
+     'representative average minimized'                ?
+     'representative lowest overall target function'   ?
 
   stop_
 
@@ -6059,7 +5956,7 @@ save__MS_expt.Spectrum_type
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-      'single scan'           .
+      'single scan'           .  
        composite              .
        ramp                   .
 
@@ -6087,7 +5984,7 @@ jpeg$ gif$ or other file type that is an image of the pulse sequence as shown as
       'Pulse sequence'                          .
       'Pulse field gradient'                    .
       'Peak list'                               .
-      'Spectral image'                          .
+      'Spectral image'                          .       
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
    'Acquisition parameters'    .
    'Processing parameters'     .
@@ -6140,7 +6037,7 @@ save__NMR_spec_expt.NMR_tube_type
        Shigemi                      .
       'spherical microcell'         .
       'standard cylindrical'        .
-
+ 
     stop_
 
 save_
@@ -6166,9 +6063,6 @@ save_
 
 #    methanol                    .
 #   'monoethylene glycol'        .
-#   'solid lead nitrate"         .
-#   'KBr adamantane blend'       .
-#   'Na5[TmDOTP]                 .
 #   'no calibration applied'     .
 
 #   stop_
@@ -6237,7 +6131,7 @@ save__NMR_spectrometer_probe.Manufacturer
 
   stop_
 
-save_
+save_ 
 
 save__NMR_spectrometer_view.Field_strength
 
@@ -6275,7 +6169,7 @@ save__NMR_spectrometer_view.Field_strength
 
   stop_
 
-save_
+save_ 
 
 save__NMR_spectrometer_view.Manufacturer
 
@@ -6295,10 +6189,10 @@ save__NMR_spectrometer_view.Manufacturer
    Nicolet       .
    Home-built    .
    na            .
-
+   
   stop_
 
-save_
+save_ 
 
 save__NMR_spectrometer_view.Model
 
@@ -6331,8 +6225,8 @@ save__NMR_spectrometer_view.Model
 
   stop_
 
-save_
-
+save_ 
+                        
 save__NMR_spectrometer.Field_strength
 
   loop_
@@ -6355,7 +6249,7 @@ save__NMR_spectrometer.Field_strength
 
   stop_
 
-save_
+save_ 
 
 save__NMR_spectrometer.Manufacturer
 
@@ -6378,7 +6272,7 @@ save__NMR_spectrometer.Manufacturer
 
   stop_
 
-save_
+save_ 
 
 save__NMR_spectrometer.Model
 
@@ -6390,8 +6284,6 @@ save__NMR_spectrometer.Model
    AMX                      "from Bruker"
    ARX                      "from Bruker"
    Avance                   "from Bruker"
-  'AVANCE III'              "from Bruker"
-  'AVANCE NEO'              "from Bruker"
    CMX                      'from Bruker'
    DMX                      "from Bruker"
    DPX                      "from Bruker"
@@ -6412,7 +6304,7 @@ save__NMR_spectrometer.Model
 
   stop_
 
-save_
+save_ 
 
 save__Order_param.Model_fit
 
@@ -6422,8 +6314,9 @@ save__Order_param.Model_fit
 
  # No internal model-free motions:
 
+          ?                                                .
          'Rex'                                             .
-
+ 
  # Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
  # such as Rex:
 
@@ -6431,7 +6324,7 @@ save__Order_param.Model_fit
          'S2$ te'                                           .
          'S2$ Rex'                                          .
          'S2$ te$ Rex'                                      .
-
+ 
  # Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
 
          'S2f$ S2$ ts'                                      .
@@ -6445,7 +6338,7 @@ save__Order_param.Model_fit
 
   stop_
 
-save_
+save_ 
 
 save__Order_parameter_experiment.Sample_state
 
@@ -6459,7 +6352,7 @@ save__Order_parameter_experiment.Sample_state
 
   stop_
 
-save_
+save_ 
 
 save__Order_parameter_list.Rex_val_units
 
@@ -6473,7 +6366,7 @@ save__Order_parameter_list.Rex_val_units
 
   stop_
 
-save_
+save_ 
 
 save__Order_parameter_list.Tau_e_val_units
 
@@ -6489,7 +6382,7 @@ save__Order_parameter_list.Tau_e_val_units
 
   stop_
 
-save_
+save_ 
 
 save__Order_parameter_list.Tau_f_val_units
 
@@ -6505,7 +6398,7 @@ save__Order_parameter_list.Tau_f_val_units
 
   stop_
 
-save_
+save_ 
 
 save__Order_parameter_list.Tau_s_val_units
 
@@ -6521,7 +6414,7 @@ save__Order_parameter_list.Tau_s_val_units
 
   stop_
 
-save_
+save_ 
 
 save__Other_constraint_expt.Sample_state
 
@@ -6551,41 +6444,6 @@ save__Other_data_experiment.Sample_state
 
 save_
 
-save__Peak.Type
-
-  loop_
-     _Item_enumeration.Value
-     _Item_enumeration.Description
-
-    s     singlet
-    d     doublet
-    dd   'doublet of doublets'
-    dt   'doublet of triplets'
-    t     triplet
-    m     multiple
-
-  stop_
-
-save_
-
-
-save__Peak_coupling.Type
-
-  loop_
-     _Item_enumeration.Value
-     _Item_enumeration.Description
-
-    s     singlet
-    d     doublet
-    dd   'doublet of doublets'
-    dt   'doublet of triplets'
-    t     triplet
-    m     multiple
-
-  stop_
-
-save_
-
 save__Peak_char.Coupling_pattern
 
   loop_
@@ -6612,7 +6470,7 @@ save__Peak_char.Coupling_pattern
 
   stop_
 
-save_
+save_ 
 
 save__Peak_general_char.Measurement_method
 
@@ -6629,7 +6487,7 @@ save__Peak_general_char.Measurement_method
 
   stop_
 
-save_
+save_ 
 
 save__PH_param_list.Observed_NMR_param
 
@@ -6645,7 +6503,7 @@ save__PH_param_list.Observed_NMR_param
 
   stop_
 
-save_
+save_ 
 
 save__PH_titration_experiment.Sample_state
 
@@ -6659,7 +6517,7 @@ save__PH_titration_experiment.Sample_state
 
   stop_
 
-save_
+save_ 
 
 save__PH_titration_list.Expt_observed_param
 
@@ -6675,7 +6533,7 @@ save__PH_titration_list.Expt_observed_param
 
   stop_
 
-save_
+save_ 
 
 save__RDC_constraint_expt.Sample_state
 
@@ -6689,7 +6547,7 @@ save__RDC_constraint_expt.Sample_state
 
   stop_
 
-save_
+save_ 
 
 save__RDC_constraint_list.Constraint_type
 
@@ -6736,19 +6594,19 @@ E = k(r-l)**2 for l > r > l2
 E = 2k(l2-l)(r - (l2+l)/2) for r < l2
 ;
 
-   upper-bound-parabolic
+   upper-bound-parabolic              
 ;
 can be derived from the two-sided versions given above
 ;
-   lower-bound-parabolic
+   lower-bound-parabolic              
 ;
 can be derived from the two-sided versions given above
 ;
-   upper-bound-parabolic-linear
+   upper-bound-parabolic-linear       
 ;
 can be derived from the two-sided versions given above
 ;
-   lower-bound-parabolic-linear
+   lower-bound-parabolic-linear       
 ;
 can be derived from the two-sided versions given above
 ;
@@ -6769,14 +6627,14 @@ save__RDC_experiment.Sample_state
 
   stop_
 
-save_
+save_ 
 
 save__Reference.Class
 
     loop_
       _Item_enumeration.Value
       _Item_enumeration.Description
-
+      
      abstract          .
      book              .
      journal           .
@@ -6805,11 +6663,11 @@ save__Related_entries.Database_name
     PIR           'Protein Information Resource'
     REF           'NCBI Reference Sequence'
     SGD           'Saccharomyces Genome Database'
-    SP            'UniProtKB/Swiss-Prot'
+    SP            'UniProtKB/Swiss-Prot' 
 
   stop_
 
-save_
+save_ 
 
 save__Release.Format_type
 
@@ -6832,7 +6690,7 @@ save__Release.Type
 
     original      'First release of the data to the public.'
     na            'not available'
-    update
+    update        
 
 ;
 Additional releases of the entry that involve changes in the reported quantitative data$ dictionary changes$ or other revisions that represent non-trivial changes in the entry.
@@ -6859,7 +6717,7 @@ save__Rep_conf_refinement.Refine_method
      'torsion angle dynamics'                          .
       na                                               .
 
-     stop_
+     stop_               
 
 save_
 
@@ -6869,15 +6727,15 @@ save__Representative_conformer.Type
        _Item_enumeration.Value
        _Item_enumeration.Description
 
-     experimental
+     experimental                         
 ;
 Derived directly from experimental data
 ;
-    'derived experimentally'
+    'derived experimentally'          
 ;
 Derived from conformers that fit experimental data
 ;
-      theoretical
+      theoretical                             
 ;
 The coordinates represent a theoretical chemical system. They may be derived from an experimental coordinate set$ but have been constructed for use in carrying out theoretical calculations or for other purposes that have specific requirements that necessitate the use of non-standard atoms or other conditions.
 ;
@@ -6963,7 +6821,7 @@ save__Sample_component.Isotopic_labeling
      "[U-13C; U-15N]-Ura"                    'All uracil nucleotides labeled fully with both 13C and 15N'
      "[U-15N]-Leu"                           'Uniformly labeled 15N Leu residues'
      "[95% 13CA]-Trp"                        'All Trp residues labeled 95 percent with 13C in the CA position'
-#     "[U-98% 13C; NA-F$Y$W]"
+#     "[U-98% 13C; NA-F$Y$W]"                 
 #;
 #Uniformly labeled with 13C except for the Phe$ Tyr$ and Trp residues which are at natural abundance
 #;
@@ -7041,32 +6899,32 @@ save__Sample_condition_variable.Type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-  pH
+  pH                    
 ;
 Glass electrode pH meter reading for solution in water. No unit is required.
 ;
 
-  pH*
+  pH*                   
 ;
 Uncorrected pH meter reading for solution in D2O. No unit is required.
 ;
 
-  pD
+  pD                    
 ;
 Reading for a D2O solution measured with a glass electrode filled with D2O. No unit is required.
 ;
 
-  temperature
+  temperature           
 ;
 Preferred unit is Kelvin (K)
 ;
 
-  pressure
+  pressure         
 ;
 Preferred unit is bar (10^5 Pa)
 ;
 
-  'ionic strength'
+  'ionic strength' 
 ;
 I = 1/2 of the summation of C(i) times Z(i)^2$ where the summation is taken over all of the different ions (i) in a solution$ multiplying the molarity C(i) by the square of the charge Z(i). Preferred unit is M (mol/l)
 ;
@@ -7074,12 +6932,12 @@ I = 1/2 of the summation of C(i) times Z(i)^2$ where the summation is taken over
   viscosity
 ;
 dynamic viscosity is Pa.s which equals (kg) x (m^-1) x (s^-1)
-1 poise (P) is (g) x (cm^-1) x (s^-1)
+1 poise (P) is (g) x (cm^-1) x (s^-1) 
 1 centipoise (cP) is 10^-3 kg.m^-1.s^-1
 kinematic viscosity is m^2/s or (m^2) x (s^-1)
 ;
 
-  'dielectric constant'
+  'dielectric constant' 
 ;
 Pure water at 298 K has a dielectric constant of 78.54. No unit is required.
 ;
@@ -7106,23 +6964,23 @@ save__Sample_condition_variable.Val_units
 
            Pa           "Pascal$ 1 Pa = 1 N m^-2"
            bar          "bar$ 1 bar = 10^5 Pa"
-           atm
+           atm          
 ;
 atmosphere$ 1 atm = 1.01325 * 10^5 Pa$ atm is not a SI unit
 ;
 
-           mmHg
+           mmHg          
 ;
 millimetres of mercury$ 1 mmHg = 133.3224 Pa$ mmHg is not a SI unit
 ;
 
-           Torr
+           Torr          
 ;
 Torricelli$ 1 Torr = 133.322 Pa$ Torr is not a SI unit
 ;
            mbar         millibar
            K            Kelvin
-           C
+           C            
 ;
 Celsius
 1 degree Celcius equals 1 K but is always 273.150 lower.
@@ -7189,7 +7047,7 @@ save__Sample.Solvent_system
    methanol                   .
    "trifluoroacetic acid"     .
    "trifluoroethanol/water"   .
-
+   
   stop_
 
 save_
@@ -7211,12 +7069,11 @@ save__Sample.Type
     liposome                          .
     membrane                          .
     micelle                           .
-    nano-disc                         .
-   'lyophilized powder'
+   'lyophilized powder'               
 ;
 Solid-state lyophilized powder sample
 ;
-   'oriented membrane film'
+   'oriented membrane film'           
 ;
 Solid-state glass plate with a membrane film
 ;
@@ -7224,7 +7081,7 @@ Solid-state glass plate with a membrane film
 ;
 Solid-state fibrous protein
 ;
-   'polycrystalline powder'
+   'polycrystalline powder'           
 ;
 Solid-state micro crystal powder
 ;
@@ -7245,7 +7102,7 @@ save__SAXS_expt.Sample_volume_units
      _Item_enumeration.Description
 
      ml        .
-
+ 
    stop_
 
 save_
@@ -7253,66 +7110,66 @@ save_
 save__SG_project.Full_name_of_center
 
     loop_
-       _Item_enumeration.Value
+       _Item_enumeration.Value                         
        _Item_enumeration.Description
 
     "not applicable"                                                                 .
     "Accelerated Technologies Center for Gene to 3D Structure"                       .
     "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"        .
     "Atoms-to-Animals: The Immune Function Network"                                  .
-    "Architecture and Function of Biological Macromolecules Structure Genomics"      ASG
+    "Architecture and Function of Biological Macromolecules Structure Genomics"      ASG           
     'Bacterial targets at IGS-CNRS$ France'                                          .
-    "Berkeley Structural Genomics Center"                                            BSGC
-    "Center for Eukaryotic Structural Genomics"                                      CESG
+    "Berkeley Structural Genomics Center"                                            BSGC          
+    "Center for Eukaryotic Structural Genomics"                                      CESG          
     "Center for High-Throughput Structural Biology"                                  .
     "Center for Membrane Proteins of Infectious Diseases"                            .
     "Center for Structural Genomics of Infectious Diseases"                          .
     "Center for Structures of Membrane Proteins"                                     .
-    "Center for the X-ray Structure Determination of Human Transporters"             .
+    "Center for the X-ray Structure Determination of Human Transporters"             . 
     "Chaperone-Enabled Studies of Epigenetic Regulation Enzymes"                     .
     "Enzyme Discovery for Natural Product Biosynthesis"                              .
-    "GPCR Network"                                                                   .
+    "GPCR Network"                                                                   . 
     "Integrated Center for Structure and Function Innovation"                        .
     'Israel Structural Proteomics Center'                                            .
-    "Joint Center for Structural Genomics"                                           JCSG
+    "Joint Center for Structural Genomics"                                           JCSG          
     'Marseilles Structural Genomics Program @ AFMB'                                  .
     "Medical Structural Genomics of Pathogenic Protozoa"                             .
     "Membrane Protein Structural Biology Consortium"                                 .
-    "Membrane Protein Structures by Solution NMR"                                    .
+    "Membrane Protein Structures by Solution NMR"                                    . 
     "Midwest Center for Structural Genomics"                                         MCSG
-    "Mitochondrial Protein Partnership"                                              .
+    "Mitochondrial Protein Partnership"                                              . 
     'Montreal-Kingston Bacterial Structural Genomics Initiative'                     .
     'Mycobacterium Tuberculosis Structural Proteomics Project'                       .
     "New York Consortium on Membrane Protein Structure"                              .
-    "New York SGX Research Center for Structural Genomics"                           .
-    "New York Structural Genomics Research Consortium"                               NYSGRC
+    "New York SGX Research Center for Structural Genomics"                           . 
+    "New York Structural Genomics Research Consortium"                               NYSGRC        
     "New York Structural GenomiX Research Consortium"                                .
-    "Northeast Structural Genomics Consortium"                                       NESGC
+    "Northeast Structural Genomics Consortium"                                       NESGC 
     "North West Structural Genomics Centre"                                          NWSGC
-    "Nucleocytoplasmic Transport: a Target for Cellular Control"                     .
+    "Nucleocytoplasmic Transport: a Target for Cellular Control"                     .   
     "Ontario Centre for Structural Proteomics"                                       .
     'Oxford Protein Production Facility'                                             .
     'Paris-Sud Yeast Structural Genomics'                                            .
     "Partnership for Stem Cell Biology"                                              .
     "Partnership for T-Cell Biology"                                                 .
-    "Program for the Characterization of Secreted Effector Proteins"                 .
+    "Program for the Characterization of Secreted Effector Proteins"                 . 
     "Protein Structure Factory"                                                      PSF
     'RIKEN Structural Genomics/Proteomics Initiative'                                .
-    "Scottish Structural Proteomics Facility"                                        .
-    "Seattle Structural Genomics Center for Infectious Disease"                      .
-    "Southeast Collaboratory for Structural Genomics"                                SECSG
+    "Scottish Structural Proteomics Facility"                                        . 
+    "Seattle Structural Genomics Center for Infectious Disease"                      . 
+    "Southeast Collaboratory for Structural Genomics"                                SECSG         
     'Structural Genomics Consortium'                                                 .
-    "Structural Genomics Consortium for Research on Gene Expression"                 .
+    "Structural Genomics Consortium for Research on Gene Expression"                 . 
     "Structural Genomics of Pathogenic Protozoa Consortium"                          SGPPC
     'Structural Proteomics in Europe'                                                .
-    "Structural Proteomics in Europe 2"                                              .
+    "Structural Proteomics in Europe 2"                                              . 
     'Structure 2 Function Project'                                                   .
     "Structure, Dynamics and Activation Mechanisms of Chemokine Receptors"           .
     "Structure-Function Studies of Tight Junction Membrane Proteins"                 .
-    "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"   .
-    "TB Structural Genomics Consortium"                                              TBSGC
+    "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"   .     
+    "TB Structural Genomics Consortium"                                              TBSGC    
     "Transcontinental EM Initiative for Membrane Protein Structure"                  .
-    "Transmembrane Protein Center"                                                   .
+    "Transmembrane Protein Center"                                                   .  
     "Yeast Structural Genomics"                                                      YSG
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
    'Bijvoet Centre, Utrecht'                                                         .
@@ -7332,13 +7189,13 @@ save__SG_project.Full_name_of_center
    'Structural Molecular Biology Network'                                            .
    'University of Calcutta CU'                                                       .
    'University of Georgia'                                                           .
-
+   
     stop_
 
 save_
 
 save__SG_project.Initial_of_center
-
+                                        
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
@@ -7373,7 +7230,7 @@ save__SG_project.Initial_of_center
 save_
 
 save__SG_project.Project_name
-
+                                        
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
@@ -7399,164 +7256,242 @@ save_
 save__Software_applied_methods.Software_name
 
     loop_
-       _Item_enumeration.Value
+       _Item_enumeration.Value                         
        _Item_enumeration.Description
 
-    3DNA             .
-    4D-CHAINS        .
+    4DSPOT           .
     ABACUS           .
     ADAPT-NMR        .
+    ALMOST           .
     AMBER            .
-    ANALYSIS        'CcpNMR Analysis'
+    AmberTools       .
+    ANATOLIA         .
     AngleSearch      .
     ANSIG            .
     AQUA             .
     ARIA             .
-    ARIA2            .
-    ATHNOS-CANDID    .
+    ArShift          .
     AURELIA          .
-    AS-DP            .
-    ATNOS            .
+    ASDP             .
     ATSAS            .
     AUREMOL          .
     AutoAssign       .
-    AutoDep          .
-    AutoStruct       .
+    AutoStructure    .
     AVS              .
     AZARA            .
     BATMAN          'small molecule'
+    BIRDER           .
+    CAPP             .
     calRW            .
-    CANDID           .
+    calRW+           .
+    CambridgeCS      .
+    CAMERA           .
     CARA             .
     CATIA            .
-    CcpNMR           .
+   'CcpNmr Analysis'                  .
+   'CcpNmr Analysis Assign'           .
+   'CcpNmr ChemBuild'                 .
+   'CcpNmr Analysis Metabolomics'    'small molecule'
+   'CcpNmr Analysis Screen'          'small molecule'
     CH3Shift         .
+    CHEMEX           .
     Chimera          .
     CING             .
    'CLUSTAL W/X'     .
-    CNS              .
+   'Cluster 3.0'     .
+    CNS              .             
     CNSSOLVE         .
     CoMD/NMR         .
     COMPASS          .
-   'CONNJURST'       .
-   'CONNJURWB'       .
+   'CONNJUR Spectrum Translator'      .
+   'CONNJUR Workflow Builder'         .
     CORMA                             .
    'CPMG-Fit (Korzhnev)'              .
    'CPMGFit (Palmer)'                 .
+    CSCDP            .
+    CS-GAMDy         .
     CSI              .
     CS-Rosetta       .
     CURVES           .
     CYANA            .
+    CYRANGE          .
     DANGLE           .
+    DASHA            .
+   'data Chord Spectrum Analyst'      .
+   'data Chord Spectrum Miner'        .
+    DATAWARRIOR      .
+    DELTA            .
+    DGII             .
     DIAMOD           .
     DISCOVER         .
+   'DOSY Toolbox'    .
+    drawnmr          .
+    DSPACE           .
     DYANA            .
     DYNAMO           .
+    EISD             .
+    EMBOSS           .
+    ENSEMBLE         .
+    FANTOM           .
     FASTModelFree    .
-    FMCGUI           .
+    Felix            .
     FuDA             .
     GARANT           .
     Gaussian         .
+    Gctf             .
+    Geometric-Approximation          .
     GIFA             .
     GISSMO                          'small molecule'
+    GLOVE            .
+    GNAT             .
+    GOAP             .
+    GREMLIN          .
     GROMACS          .
     GROMOS           .
     GUARDD           .
     HADDOCK          .
+    hmsIST           .
+    HullRad          .
     HYPER            .
-    istHMS           .
-    j-UNIO           .
-    MAGRO            .
+    IMP              .
+    InsightII        .
+    Jellyfish        .
+    KdCalc           .
+    LarmorCa         .
+    LARMORD          .
+    localCIDER       .
     MARDIGRAS        .
-    MARS             .
     MD2NOE           .
-    Mathematica      .
-    MATLAB           .
     MDAnalysis       .
     MddNMR           .
-   'MestReNova'      .
+    MESMER           .
+   'MestReNova (Mnova)'               .
     MetaboAnalystR                   'small molecule'
     MetScape                         'small molecule'
+    MMTSB            .
     ModelFree        .
+    MODELLER         .
+    Module2          .
+    mol2sphere       .
+    Mollib           .
     Molmol           .
     MolProbity       .
     MORASS           .
     MoSART           .
+    MotionCor2       .
     MVAPACK                           'small molecule'
     NAMD             .
+    NDEE             .
     NESSY            .
+    NESTA-NMR        .
     NMRbox           .
+    NMRCOMPASS       .
     NMRDraw          .
-    NMRest           .
+    NMRPipe          .
     NMRFAM-SPARKY    .
-    NMRFx            .
    'NMRFx Analyst'   .
    'NMRFx Processor' .
    'NMRFx Structure' .
     nmrglue          .
+    NmrLineGuru      .
+    NMRmix                            'small molecule'
     NMRPipe          .
-    NMRspy           .
+    nmrstarlib       .
     NMRView          .
     NMRViewJ         .
+    nmr_wash         .
     NOAH             .
+    NOEID            .
+    NUCFIT           .
     nus-tool         .
-    Olivia           .
+    NUTS             .
     OPAL             .
-    OPALp            .
-    Origin           .
+   'Open Babel'      .
+    OpenMM'          .
+    OpenVnmrJ        .
+    OSPREY           .
     PALES            .
+    PANAV            .
+    ParmEd           .
     PDBStat          .
+    PEAKY            .
     PECAN            .
     PINE             .
+    PiNT             .
     PIPP             .
     PISTACHIO        .
+    PLUQ             .
+    POISSON-GENERATOR                   .
     PONDEROSA        .
+    PPM/PPM_ONE      .
     Procheck         .
-    ProcheckNMR      .
+    ProcheckNMR      .                       
+    P-ROI            .
+    PROMEGA          .
     PRONTO           .
     PROSA            .
+    PROTEIN-DYNAMICS .
     PSVS             .
     PyMOL            .
-    qMDD             .
+    PyNMR-STAR       .
+    PyShifts         .
+    Qhull            .
     QUEEN            .
+    RASMOL           .
+    raw              .
+    RCI              .
+    RDC-PANDA/Analytic                 .
     REDCAT           .
     REDCRAFT         .
     Relax            .
+    RESCUE           .
     RNAstructure     .
     rNMR                              'small molecule'
     RNMRTK           .
     Rosetta          .
+    RUNER            .
     SANE             .
-    SCRUB            .
+    SEER             .
     SHIFTS           .
     ShiftX           .
     ShiftX2          .
+    SHIMpanzee       .
+    SIMPSON          .
     SMILE            .
     SPARKY           .
     SPARTA           .
     SPARTA+          .
+    SpinDrops        .
     SPSCAN           .
+    ssNake           .
+    SSP              .
     SYBYL            .
     TALOS            .
     TALOS+           .
     TALOS-N          .
-    TANSY            .
-    Tensor           .
+    tameNMR          .
+    Tensor2          .
+    tiger            .
     TINKER           .
+    TITAN            .
     TOPSPIN          .
-    UNIO             .
-    UNIO-MATCH       .
+    TREND            .
+    TRIPOS           .
     UXNMR            .
     VMD              .
     VMD-Xplor        .
     VNMR             .
     VNMRj            .
+    Wattos           .
     WhatIF           .
+    XDrawChem        .
     XEASY            .
+    Xipp             .
     X-PLOR           .
    'X-PLOR NIH'      .
+    XSSP             .
     xwinnmr          .
-    YASARA           .
+    xyza2pipe        .
 
     stop_
 
@@ -7568,161 +7503,240 @@ save__Software.Name
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    3DNA             .
-    4D-CHAINS        .
+    4DSPOT           .
     ABACUS           .
     ADAPT-NMR        .
+    ALMOST           .
     AMBER            .
-    ANALYSIS        'CcpNMR Analysis'
+    AmberTools       .
+    ANATOLIA         .
     AngleSearch      .
     ANSIG            .
     AQUA             .
     ARIA             .
-    ARIA2            .
-    ATHNOS-CANDID    .
+    ArShift          .
     AURELIA          .
-    AS-DP            .
-    ATNOS            .
+    ASDP             .
     ATSAS            .
     AUREMOL          .
     AutoAssign       .
-    AutoDep          .
-    AutoStruct       .
+    AutoStructure    .
     AVS              .
     AZARA            .
     BATMAN          'small molecule'
+    BIRDER           .
+    CAPP             .
     calRW            .
-    CANDID           .
+    calRW+           .
+    CambridgeCS      .
+    CAMERA           .
     CARA             .
     CATIA            .
-    CcpNMR           .
+   'CcpNmr Analysis'                  .
+   'CcpNmr Analysis Assign'           .
+   'CcpNmr ChemBuild'                 .
+   'CcpNmr Analysis Metabolomics'    'small molecule'
+   'CcpNmr Analysis Screen'          'small molecule'
     CH3Shift         .
+    CHEMEX           .
     Chimera          .
     CING             .
    'CLUSTAL W/X'     .
-    CNS              .
+   'Cluster 3.0'     .
+    CNS              .             
     CNSSOLVE         .
     CoMD/NMR         .
     COMPASS          .
-   'CONNJURST'       .
-   'CONNJURWB'       .
+   'CONNJUR Spectrum Translator'      .
+   'CONNJUR Workflow Builder'         .
     CORMA                             .
    'CPMG-Fit (Korzhnev)'              .
    'CPMGFit (Palmer)'                 .
+    CSCDP            .
+    CS-GAMDy         .
     CSI              .
     CS-Rosetta       .
     CURVES           .
     CYANA            .
+    CYRANGE          .
     DANGLE           .
+    DASHA            .
+   'data Chord Spectrum Analyst'      .
+   'data Chord Spectrum Miner'        .
+    DATAWARRIOR      .
+    DELTA            .
+    DGII             .
     DIAMOD           .
     DISCOVER         .
+   'DOSY Toolbox'    .
+    drawnmr          .
+    DSPACE           .
     DYANA            .
     DYNAMO           .
+    EISD             .
+    EMBOSS           .
+    ENSEMBLE         .
+    FANTOM           .
     FASTModelFree    .
-    FMCGUI           .
+    Felix            .
     FuDA             .
     GARANT           .
     Gaussian         .
+    Gctf             .
+    Geometric-Approximation          .
     GIFA             .
     GISSMO                          'small molecule'
+    GLOVE            .
+    GNAT             .
+    GOAP             .
+    GREMLIN          .
     GROMACS          .
     GROMOS           .
     GUARDD           .
     HADDOCK          .
+    hmsIST           .
+    HullRad          .
     HYPER            .
-    istHMS           .
-    j-UNIO           .
-    MAGRO            .
+    IMP              .
+    InsightII        .
+    I-PINE           .
+    Jellyfish        .
+    KdCalc           .
+    LarmorCa         .
+    LARMORD          .
+    localCIDER       .
     MARDIGRAS        .
-    MARS             .
     MD2NOE           .
-    Mathematica      .
-    MATLAB           .
     MDAnalysis       .
     MddNMR           .
-   'MestReNova'      .
+    MESMER           .
+   'MestReNova (Mnova)'               .
     MetaboAnalystR                   'small molecule'
     MetScape                         'small molecule'
+    MMTSB            .
     ModelFree        .
+    MODELLER         .
+    Module2          .
+    mol2sphere       .
+    Mollib           .
     Molmol           .
     MolProbity       .
     MORASS           .
     MoSART           .
+    MotionCor2       .
     MVAPACK                           'small molecule'
     NAMD             .
+    NDEE             .
     NESSY            .
+    NESTA-NMR        .
     NMRbox           .
+    NMRCOMPASS       .
     NMRDraw          .
-    NMRest           .
+    NMRPipe          .
     NMRFAM-SPARKY    .
-    NMRFx            .
    'NMRFx Analyst'   .
    'NMRFx Processor' .
    'NMRFx Structure' .
     nmrglue          .
+    NmrLineGuru      .
+    NMRmix                            'small molecule'
     NMRPipe          .
-    NMRspy           .
+    nmrstarlib       .
     NMRView          .
     NMRViewJ         .
+    nmr_wash         .
     NOAH             .
+    NOEID            .
+    NUCFIT           .
     nus-tool         .
-    Olivia           .
+    NUTS             .
     OPAL             .
-    OPALp            .
-    Origin           .
+   'Open Babel'      .
+    OpenMM'          .
+    OpenVnmrJ        .
+    OSPREY           .
     PALES            .
+    PANAV            .
+    ParmEd           .
     PDBStat          .
+    PEAKY            .
     PECAN            .
     PINE             .
+    PiNT             .
     PIPP             .
     PISTACHIO        .
+    PLUQ             .
+    POISSON-GENERATOR                   .
     PONDEROSA        .
+    PPM/PPM_ONE      .
     Procheck         .
-    ProcheckNMR      .
+    ProcheckNMR      .                       
+    P-ROI            .
+    PROMEGA          .
     PRONTO           .
     PROSA            .
+    PROTEIN-DYNAMICS .
     PSVS             .
     PyMOL            .
-    qMDD             .
+    PyNMR-STAR       .
+    PyShifts         .
+    Qhull            .
     QUEEN            .
+    RASMOL           .
+    raw              .
+    RCI              .
+    RDC-PANDA/Analytic                 .
     REDCAT           .
     REDCRAFT         .
     Relax            .
+    RESCUE           .
     RNAstructure     .
     rNMR                              'small molecule'
     RNMRTK           .
     Rosetta          .
+    RUNER            .
     SANE             .
-    SCRUB            .
+    SEER             .
     SHIFTS           .
     ShiftX           .
     ShiftX2          .
+    SHIMpanzee       .
+    SIMPSON          .
     SMILE            .
     SPARKY           .
     SPARTA           .
     SPARTA+          .
+    SpinDrops        .
     SPSCAN           .
+    ssNake           .
+    SSP              .
     SYBYL            .
     TALOS            .
     TALOS+           .
     TALOS-N          .
-    TANSY            .
-    Tensor           .
+    tameNMR          .
+    Tensor2          .
+    tiger            .
     TINKER           .
+    TITAN            .
     TOPSPIN          .
-    UNIO             .
-    UNIO-MATCH       .
+    TREND            .
+    TRIPOS           .
     UXNMR            .
     VMD              .
     VMD-Xplor        .
     VNMR             .
     VNMRj            .
+    Wattos           .
     WhatIF           .
+    XDrawChem        .
     XEASY            .
+    Xipp             .
     X-PLOR           .
    'X-PLOR NIH'      .
+    XSSP             .
     xwinnmr          .
-    YASARA           .
+    xyza2pipe        .
 
   stop_
 
@@ -7734,170 +7748,248 @@ save__Software.Sf_framecode
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    3DNA             .
-    4D-CHAINS        .
+    4DSPOT           .
     ABACUS           .
     ADAPT-NMR        .
+    ALMOST           .
     AMBER            .
-    ANALYSIS        'CcpNMR Analysis'
+    AmberTools       .
+    ANATOLIA         .
     AngleSearch      .
     ANSIG            .
     AQUA             .
     ARIA             .
-    ARIA2            .
-    ATHNOS-CANDID    .
+    ArShift          .
     AURELIA          .
-    AS-DP            .
-    ATNOS            .
+    ASDP             .
     ATSAS            .
     AUREMOL          .
     AutoAssign       .
-    AutoDep          .
-    AutoStruct       .
+    AutoStructure    .
     AVS              .
     AZARA            .
     BATMAN          'small molecule'
+    BIRDER           .
+    CAPP             .
     calRW            .
-    CANDID           .
+    calRW+           .
+    CambridgeCS      .
+    CAMERA           .
     CARA             .
     CATIA            .
-    CcpNMR           .
+   'CcpNmr Analysis'                  .
+   'CcpNmr Analysis Assign'           .
+   'CcpNmr ChemBuild'                 .
+   'CcpNmr Analysis Metabolomics'    'small molecule'
+   'CcpNmr Analysis Screen'          'small molecule'
     CH3Shift         .
+    CHEMEX           .
     Chimera          .
     CING             .
    'CLUSTAL W/X'     .
-    CNS              .
+   'Cluster 3.0'     .
+    CNS              .             
     CNSSOLVE         .
     CoMD/NMR         .
     COMPASS          .
-   'CONNJURST'       .
-   'CONNJURWB'       .
+   'CONNJUR Spectrum Translator'      .
+   'CONNJUR Workflow Builder'         .
     CORMA                             .
    'CPMG-Fit (Korzhnev)'              .
    'CPMGFit (Palmer)'                 .
+    CSCDP            .
+    CS-GAMDy         .
     CSI              .
     CS-Rosetta       .
     CURVES           .
     CYANA            .
+    CYRANGE          .
     DANGLE           .
+    DASHA            .
+   'data Chord Spectrum Analyst'      .
+   'data Chord Spectrum Miner'        .
+    DATAWARRIOR      .
+    DELTA            .
+    DGII             .
     DIAMOD           .
     DISCOVER         .
+   'DOSY Toolbox'    .
+    drawnmr          .
+    DSPACE           .
     DYANA            .
     DYNAMO           .
+    EISD             .
+    EMBOSS           .
+    ENSEMBLE         .
+    FANTOM           .
     FASTModelFree    .
-    FMCGUI           .
+    Felix            .
     FuDA             .
     GARANT           .
     Gaussian         .
+    Gctf             .
+    Geometric-Approximation          .
     GIFA             .
     GISSMO                          'small molecule'
+    GLOVE            .
+    GNAT             .
+    GOAP             .
+    GREMLIN          .
     GROMACS          .
     GROMOS           .
     GUARDD           .
     HADDOCK          .
+    hmsIST           .
+    HullRad          .
     HYPER            .
-    istHMS           .
-    j-UNIO           .
-    MAGRO            .
+    IMP              .
+    InsightII        .
+    Jellyfish        .
+    KdCalc           .
+    LarmorCa         .
+    LARMORD          .
+    localCIDER       .
     MARDIGRAS        .
-    MARS             .
     MD2NOE           .
-    Mathematica      .
-    MATLAB           .
     MDAnalysis       .
     MddNMR           .
-   'MestReNova'      .
+    MESMER           .
+   'MestReNova (Mnova)'               .
     MetaboAnalystR                   'small molecule'
     MetScape                         'small molecule'
+    MMTSB            .
     ModelFree        .
+    MODELLER         .
+    Module2          .
+    mol2sphere       .
+    Mollib           .
     Molmol           .
     MolProbity       .
     MORASS           .
     MoSART           .
+    MotionCor2       .
     MVAPACK                           'small molecule'
     NAMD             .
+    NDEE             .
     NESSY            .
+    NESTA-NMR        .
     NMRbox           .
+    NMRCOMPASS       .
     NMRDraw          .
-    NMRest           .
+    NMRPipe          .
     NMRFAM-SPARKY    .
-    NMRFx            .
    'NMRFx Analyst'   .
    'NMRFx Processor' .
    'NMRFx Structure' .
     nmrglue          .
+    NmrLineGuru      .
+    NMRmix                            'small molecule'
     NMRPipe          .
-    NMRspy           .
+    nmrstarlib       .
     NMRView          .
     NMRViewJ         .
+    nmr_wash         .
     NOAH             .
+    NOEID            .
+    NUCFIT           .
     nus-tool         .
-    Olivia           .
+    NUTS             .
     OPAL             .
-    OPALp            .
-    Origin           .
+   'Open Babel'      .
+    OpenMM'          .
+    OpenVnmrJ        .
+    OSPREY           .
     PALES            .
+    PANAV            .
+    ParmEd           .
     PDBStat          .
+    PEAKY            .
     PECAN            .
     PINE             .
+    PiNT             .
     PIPP             .
     PISTACHIO        .
+    PLUQ             .
+    POISSON-GENERATOR                   .
     PONDEROSA        .
+    PPM/PPM_ONE      .
     Procheck         .
-    ProcheckNMR      .
+    ProcheckNMR      .                       
+    P-ROI            .
+    PROMEGA          .
     PRONTO           .
     PROSA            .
+    PROTEIN-DYNAMICS .
     PSVS             .
     PyMOL            .
-    qMDD             .
+    PyNMR-STAR       .
+    PyShifts         .
+    Qhull            .
     QUEEN            .
+    RASMOL           .
+    raw              .
+    RCI              .
+    RDC-PANDA/Analytic                 .
     REDCAT           .
     REDCRAFT         .
     Relax            .
+    RESCUE           .
     RNAstructure     .
     rNMR                              'small molecule'
     RNMRTK           .
     Rosetta          .
+    RUNER            .
     SANE             .
-    SCRUB            .
+    SEER             .
     SHIFTS           .
     ShiftX           .
     ShiftX2          .
+    SHIMpanzee       .
+    SIMPSON          .
     SMILE            .
     SPARKY           .
     SPARTA           .
     SPARTA+          .
+    SpinDrops        .
     SPSCAN           .
+    ssNake           .
+    SSP              .
     SYBYL            .
     TALOS            .
     TALOS+           .
     TALOS-N          .
-    TANSY            .
-    Tensor           .
+    tameNMR          .
+    Tensor2          .
+    tiger            .
     TINKER           .
+    TITAN            .
     TOPSPIN          .
-    UNIO             .
-    UNIO-MATCH       .
+    TREND            .
+    TRIPOS           .
     UXNMR            .
     VMD              .
     VMD-Xplor        .
     VNMR             .
     VNMRj            .
+    Wattos           .
     WhatIF           .
+    XDrawChem        .
     XEASY            .
+    Xipp             .
     X-PLOR           .
    'X-PLOR NIH'      .
+    XSSP             .
     xwinnmr          .
-    YASARA           .
+    xyza2pipe        .
 
-  stop_
+  stop_   
 
 save_
 
 save__Software.Type
 
     loop_
-       _Item_enumeration.Value
+       _Item_enumeration.Value                         
        _Item_enumeration.Description
 
     'NUS schedule generator'     .
@@ -7909,7 +8001,7 @@ save__Software.Type
 save_
 
 save__Spectral_acq_param.Name
-
+                                        
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
@@ -7919,7 +8011,7 @@ save__Spectral_acq_param.Name
           'acquisition time'                       .
           'mixing time'                            .
           'spectral width'                         .
-          'spectral folding'                       .
+          'spectral folding'                       . 
           'data point number'                      .
           'data point type'                        .
           'data point spacing'                     .
@@ -7929,7 +8021,7 @@ save__Spectral_acq_param.Name
 save_
 
 save__Spectral_density_experiment.Sample_state
-
+                                        
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
@@ -7943,7 +8035,7 @@ save__Spectral_density_experiment.Sample_state
 save_
 
 save__Spectral_dim_transfer.Type
-
+                                        
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
@@ -7962,7 +8054,7 @@ save_
 save__Spectral_dim.Sweep_width_units
 
     loop_
-       _Item_enumeration.Value
+       _Item_enumeration.Value                         
        _Item_enumeration.Description
 
       Hz           Hertz
@@ -7975,11 +8067,12 @@ save_
 save__Spectral_dim.Under_sampling_type
 
     loop_
-       _Item_enumeration.Value
+       _Item_enumeration.Value                         
        _Item_enumeration.Description
 
      aliased          .
      folded           .
+    
     'not observed'    .
 
    stop_
@@ -7987,7 +8080,7 @@ save__Spectral_dim.Under_sampling_type
 save_
 
 save__Spectral_peak_list.Experiment_class
-
+                                        
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
@@ -7999,7 +8092,7 @@ save__Spectral_peak_list.Experiment_class
 save_
 
 save__Spectral_peak_list.Experiment_type
-
+                                        
      loop_
        _Item_enumeration.Value
        _Item_enumeration.Description
@@ -8049,7 +8142,7 @@ save_
 save__Spin_system_link.Type
 
     loop_
-       _Item_enumeration.Value
+       _Item_enumeration.Value                         
        _Item_enumeration.Description
 
    identity          .
@@ -8075,7 +8168,7 @@ save__Study.Type
     'Interactions with different ligands'      .
 
 # PDBj-BMRB: Added the following enumerations by extraction from current BMRB database.
-
+    
     'Chemical shift mapping'                   .
     'NMR signal assignment'                    .
     'Protein-protein interaction'              .
@@ -8107,7 +8200,7 @@ save__Systematic_chem_shift_offset.Atom_type
    'backbone CA'                         .
    'backbone CB'                         .
     na                                   .
-
+ 
   stop_
 
 save_
@@ -8202,7 +8295,7 @@ save__Theoretical_auto_relaxation_experiment.Sample_state
      isotropic            .
      anisotropic          .
      solid                .
-
+            
     stop_
 
 save_
@@ -8233,7 +8326,7 @@ save__Theoretical_auto_relaxation_list.Relaxation_coherence_type
 
    Iz               'R1    longitudinal'
    Sz               'R1    longitudinal'
-
+                         
    (I+)+(I-)        'R1rho or R2      transverse'
    (S+)+(S-)        'R1rho or R2      transverse'
    I+               'R1rho or R2      transverse'
@@ -8253,11 +8346,11 @@ save__Theoretical_auto_relaxation_list.Relaxation_coherence_type
    I-Sz             'single quantum antiphase'
    IzS+             'single quantum antiphase'
    IzS-             'single quantum antiphase'
-
+   
  (I+S+)+(I-S-)      'DQ relaxation'
    I+S+             'DQ relaxation'
    I-S-             'DQ relaxation'
-
+         
     stop_
 
 save_
@@ -8273,7 +8366,7 @@ save__Theoretical_auto_relaxation_list.Relaxation_val_units
          us-1          .
          ns-1          .
          ps-1          .
-
+             
     stop_
 
 save_
@@ -8287,11 +8380,39 @@ save__Theoretical_auto_relaxation_list.Rex_units
          s-1        .
          ms-1       .
          us-1       .
-
+             
     stop_
 
 save_
 
+save__Theoretical_auto_relaxation_list.Temp_calibration_method
+
+    loop_
+      _Item_enumeration.Value
+      _Item_enumeration.Description
+
+    methanol                    MeOH
+   'monoethylene glycol'        MEG
+   'no calibration applied'     .
+
+   stop_
+
+save_
+
+save__Theoretical_auto_relaxation_list.Temp_control_method
+
+    loop_
+      _Item_enumeration.Value
+      _Item_enumeration.Description
+
+    'single scan interleaving'                                             .
+    'temperature compensation block'                                       .
+    'single scan interleaving and temperature compensation block'          .
+    'no temperature control applied'                                       .
+
+   stop_
+
+save_
 
 save__Theoretical_coupling_constant_experiment.Sample_state
 
@@ -8328,7 +8449,7 @@ save__Theoretical_coupling_constant_list.Spectrometer_frequency_1H
 
   stop_
 
-save_
+save_ 
 
 save__Theoretical_cross_correlation_DD_experiment.Sample_state
 
@@ -8410,7 +8531,7 @@ save__Theoretical_heteronucl_T1_list.T1_coherence_type
 
          Iz              'zero quantum$ longitudinal'
          Sz              'zero quantum$ longitudinal'
-
+                         
     stop_
 
 save_
@@ -8425,7 +8546,7 @@ save__Theoretical_heteronucl_T1_list.T1_val_units
          s-1           .
          ms            .
          ms-1          .
-
+             
     stop_
 
 save_
@@ -8439,7 +8560,7 @@ save__Theoretical_heteronucl_T2_experiment.Sample_state
      isotropic            .
      anisotropic          .
      solid                .
-
+            
     stop_
 
 save_
@@ -8453,7 +8574,7 @@ save__Theoretical_heteronucl_T2_list.Rex_units
          s-1        .
          ms-1       .
          us-1       .
-
+             
     stop_
 
 save_
@@ -8467,7 +8588,7 @@ save__Theoretical_heteronucl_T2_list.T2_coherence_type
 
          I(+$-)              .
          S(+$-)              .
-
+    
     stop_
 
 save_
@@ -8482,11 +8603,38 @@ save__Theoretical_heteronucl_T2_list.T2_val_units
          ms-1          .
          s             .
          ms            .
-
+             
     stop_
 
 save_
 
+save__Theoretical_heteronucl_T2_list.Temp_calibration_method
+
+    loop_
+      _Item_enumeration.Value
+      _Item_enumeration.Description
+
+
+    methanol                          .
+   "monoethylene glycol"              .
+   "no calibration applied"           .
+   stop_
+
+save_
+
+save__Theoretical_heteronucl_T2_list.Temp_control_method
+
+    loop_
+      _Item_enumeration.Value
+      _Item_enumeration.Description
+
+    'single scan interleaving'           .
+    'temperature compensation block'     .
+    'no temperature control applied'     .
+
+   stop_
+
+save_
 
 save__Torsion_angle_constraint_list.Constraint_type
 
@@ -8611,7 +8759,7 @@ save__Upload_data.Data_file_Sf_category
     theoretical_heteronucl_T1_relaxation        .
     heteronucl_T1rho_relaxation                 .
     heteronucl_T2_relaxation                    .
-    theoretical_heteronucl_T2_relaxation        .
+    theoretical_heteronucl_T2_relaxation        .   
     auto_relaxation                             .
     theoretical_auto_relaxation                 .
     dipole_dipole_relaxation                    .
@@ -8668,7 +8816,7 @@ save__Vendor.Name
     '(AURELIA) - Neidig$ Geyer$ Gorler$ Antz$ Saffrich$ Beneicke$ Kalbitzer'                                .
     '(AUREMOL) - Bruker Biospin'                                                                            .
     '(AutoAssign) - Zimmerman$ Moseley$ Kulikowski and Montelione'                                          .
-    '(AutoStruct) - Huang$ Tejero$ Powers and Montelione'                                                   .
+    '(AutoStructure) - Huang$ Tejero$ Powers and Montelione'                                                .
     '(AVS) - Moseley and Montelione'                                                                        .
     '(AZARA) - Boucher'                                                                                     .
     '(CANDID) - Herrmann$ Guntert and Wuthrich'                                                             .

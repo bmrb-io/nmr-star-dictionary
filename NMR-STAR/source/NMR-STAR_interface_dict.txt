@@ -7128,87 +7128,6 @@ Entry ID
 
 save_
 
-save__BMRbig_link.BMRbig_ID
-
-   _Interface.Tag                  '_BMRbig_link.BMRbig_ID'
-
-   _Interface.Category              'BMRbig_link'
-
-   _Interface.Description
-;
-Enter one or more BMRbig IDs that point to data that should be included or linked to this BMRB entry.
-;
-
-   _Interface.Adit_item_view_name
-;
-Enter a BMRbig ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-BMRbig156
-;
-
-   stop_
-
-save_
-
-save__BMRbig_link.Sf_ID
-
-   _Interface.Tag                  '_BMRbig_link.Sf_ID'
-
-   _Interface.Category              'BMRbig_link'
-
-   _Interface.Description
-;
-Pointer to '_Entry.Sf_ID'
-;
-
-   _Interface.Adit_item_view_name
-;
-Sf ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__BMRbig_link.Entry_ID
-
-   _Interface.Tag                  '_BMRbig_link.Entry_ID'
-
-   _Interface.Category              'BMRbig_link'
-
-   _Interface.Description
-;
-Pointer to '_Entry.ID'
-;
-
-   _Interface.Adit_item_view_name
-;
-Entry ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Related_entries.Database_name
 
    _Interface.Tag                  '_Related_entries.Database_name'
@@ -44847,33 +44766,6 @@ Chromatographic column label
 
 save_
 
-save__Experiment.Details
-
-   _Interface.Tag                  '_Experiment.Details'
-
-   _Interface.Category              'Experiment'
-
-   _Interface.Description
-;
-Enter additional descriptive information or list of parameters used to carry out the experiment.
-;
-
-   _Interface.Adit_item_view_name
-;
-Additional experimental details
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Experiment.Sf_ID
 
    _Interface.Tag                  '_Experiment.Sf_ID'
@@ -46386,33 +46278,6 @@ Acquisition dimension ID
 
 save_
 
-save__Spectral_acq_param.Spectral_dim
-
-   _Interface.Tag                  '_Spectral_acq_param.Spectral_dim'
-
-   _Interface.Category              'Spectral_acq_param'
-
-   _Interface.Description
-;
-Spectral dimension observed nucleus
-;
-
-   _Interface.Adit_item_view_name
-;
-Spectral dimension observed nucleus
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Spectral_acq_param.Name
 
    _Interface.Tag                  '_Spectral_acq_param.Name'
@@ -46440,6 +46305,33 @@ Detected nucleus
 
 save_
 
+save__Spectral_acq_param.Spectral_dim
+
+   _Interface.Tag                  '_Spectral_acq_param.Spectral_dim'
+
+   _Interface.Category              'Spectral_acq_param'
+
+   _Interface.Description
+;
+Spectral dimension number
+;
+
+   _Interface.Adit_item_view_name
+;
+Spectral dimension number
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Spectral_acq_param.Val
 
    _Interface.Tag                  '_Spectral_acq_param.Val'
@@ -46454,60 +46346,6 @@ Value for the NMR spectral acquisition parameter.
    _Interface.Adit_item_view_name
 ;
 Spectrometer carrier frequency
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Spectral_acq_param.Val_err
-
-   _Interface.Tag                  '_Spectral_acq_param.Val_err'
-
-   _Interface.Category              'Spectral_acq_param'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Val err
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Spectral_acq_param.Val_range
-
-   _Interface.Tag                  '_Spectral_acq_param.Val_range'
-
-   _Interface.Category              'Spectral_acq_param'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Val range
 ;
 
    loop_
@@ -47574,33 +47412,6 @@ Processing dimension ID
 
 save_
 
-save__Spectral_processing_param.Spectral_dim
-
-   _Interface.Tag                  '_Spectral_processing_param.Spectral_dim'
-
-   _Interface.Category              'Spectral_processing_param'
-
-   _Interface.Description
-;
-The spectral dimension number where the paramerter value is applied.
-;
-
-   _Interface.Adit_item_view_name
-;
-Spectral dimension number
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Spectral_processing_param.Name
 
    _Interface.Tag                  '_Spectral_processing_param.Name'
@@ -47628,6 +47439,33 @@ Exponential factor
 
 save_
 
+save__Spectral_processing_param.Spectral_dim
+
+   _Interface.Tag                  '_Spectral_processing_param.Spectral_dim'
+
+   _Interface.Category              'Spectral_processing_param'
+
+   _Interface.Description
+;
+The spectral dimension number where the paramerter value is applied.
+;
+
+   _Interface.Adit_item_view_name
+;
+Spectral dimension number
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Spectral_processing_param.Val
 
    _Interface.Tag                  '_Spectral_processing_param.Val'
@@ -47642,60 +47480,6 @@ Value for the NMR spectral processing parameter.
    _Interface.Adit_item_view_name
 ;
 Gaussian factor
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Spectral_processing_param.Val_err
-
-   _Interface.Tag                  '_Spectral_processing_param.Val_err'
-
-   _Interface.Category              'Spectral_processing_param'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Val err
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Spectral_processing_param.Val_range
-
-   _Interface.Tag                  '_Spectral_processing_param.Val_range'
-
-   _Interface.Category              'Spectral_processing_param'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Val range
 ;
 
    loop_
@@ -50666,33 +50450,6 @@ Please indicate if you are depositing 15N chemical shifts. If you have used the 
    _Interface.Adit_item_view_name
 ;
 15N chemical shifts deposited
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Chem_shift_reference.Fluorine_shifts_flag
-
-   _Interface.Tag                  '_Chem_shift_reference.Fluorine_shifts_flag'
-
-   _Interface.Category              'Chem_shift_reference'
-
-   _Interface.Description
-;
-Please indicate if you are depositing 19F chemical shifts.
-;
-
-   _Interface.Adit_item_view_name
-;
-19F chemical shifts deposited
 ;
 
    loop_
@@ -60885,6 +60642,33 @@ Spectral peak list ID
 
 save_
 
+save__Peak.Index_ID
+
+   _Interface.Tag                  '_Peak.Index_ID'
+
+   _Interface.Category              'Peak'
+
+   _Interface.Description
+;
+?
+;
+
+   _Interface.Adit_item_view_name
+;
+Index ID
+;
+
+   loop_
+     _Interface_example.Example
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save__Peak.ID
 
    _Interface.Tag                  '_Peak.ID'
@@ -60926,33 +60710,6 @@ A quantitative or qualitative value that provides a measure of certainty that th
    _Interface.Adit_item_view_name
 ;
 Figure of merit
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak.Type
-
-   _Interface.Tag                  '_Peak.Type'
-
-   _Interface.Category              'Peak'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Type
 ;
 
    loop_
@@ -61781,411 +61538,6 @@ save__Peak_char.Spectral_peak_list_ID
    _Interface.Tag                  '_Peak_char.Spectral_peak_list_ID'
 
    _Interface.Category              'Peak_char'
-
-   _Interface.Description
-;
-Pointer to '_Spectral_peak_list.ID'
-;
-
-   _Interface.Adit_item_view_name
-;
-Spectral peak list ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.ID
-
-   _Interface.Tag                  '_Peak_coupling.ID'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Peak_ID
-
-   _Interface.Tag                  '_Peak_coupling.Peak_ID'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Peak ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Spectral_dim_ID
-
-   _Interface.Tag                  '_Peak_coupling.Spectral_dim_ID'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Spectral dim ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Multiplet_component_ID
-
-   _Interface.Tag                  '_Peak_coupling.Multiplet_component_ID'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Multiplet component ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Type
-
-   _Interface.Tag                  '_Peak_coupling.Type'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Type
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Coupling_val
-
-   _Interface.Tag                  '_Peak_coupling.Coupling_val'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Coupling val
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Coupling_val_err
-
-   _Interface.Tag                  '_Peak_coupling.Coupling_val_err'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Coupling val err
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Strong_coupling_effect_val
-
-   _Interface.Tag                  '_Peak_coupling.Strong_coupling_effect_val'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Strong coupling effect val
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Strong_coupling_effect_val_err
-
-   _Interface.Tag                  '_Peak_coupling.Strong_coupling_effect_val_err'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Strong coupling effect val err
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Intensity_val
-
-   _Interface.Tag                  '_Peak_coupling.Intensity_val'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Intensity val
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Intensity_val_err
-
-   _Interface.Tag                  '_Peak_coupling.Intensity_val_err'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Intensity val err
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Partner_coupling_peak_ID
-
-   _Interface.Tag                  '_Peak_coupling.Partner_coupling_peak_ID'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Partner coupling peak ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Sf_ID
-
-   _Interface.Tag                  '_Peak_coupling.Sf_ID'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-Pointer to '_Spectral_peak_list.Sf_ID'
-;
-
-   _Interface.Adit_item_view_name
-;
-Sf ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Entry_ID
-
-   _Interface.Tag                  '_Peak_coupling.Entry_ID'
-
-   _Interface.Category              'Peak_coupling'
-
-   _Interface.Description
-;
-Pointer to '_Entry.ID'
-;
-
-   _Interface.Adit_item_view_name
-;
-Entry ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Peak_coupling.Spectral_peak_list_ID
-
-   _Interface.Tag                  '_Peak_coupling.Spectral_peak_list_ID'
-
-   _Interface.Category              'Peak_coupling'
 
    _Interface.Description
 ;
@@ -74466,60 +73818,6 @@ Sample conditions name
 
 save_
 
-save__Chem_shift_isotope_effect_list.Chem_shift_reference_ID
-
-   _Interface.Tag                  '_Chem_shift_isotope_effect_list.Chem_shift_reference_ID'
-
-   _Interface.Category              'Chem_shift_isotope_effect_list'
-
-   _Interface.Description
-;
-Pointer to '_Chem_shift_reference.ID'
-;
-
-   _Interface.Adit_item_view_name
-;
-Chem shift reference ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Chem_shift_isotope_effect_list.Chem_shift_reference_label
-
-   _Interface.Tag                  '_Chem_shift_isotope_effect_list.Chem_shift_reference_label'
-
-   _Interface.Category              'Chem_shift_isotope_effect_list'
-
-   _Interface.Description
-;
-The name assigned to a set of chemical shift refernce data entered earlier in the deposition process.
-;
-
-   _Interface.Adit_item_view_name
-;
-Chem shift reference list name
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Chem_shift_isotope_effect_list.Isotope_effect_type
 
    _Interface.Tag                  '_Chem_shift_isotope_effect_list.Isotope_effect_type'
@@ -85010,60 +84308,6 @@ Select from the pull down list the name assigned to a set of sample conditions e
    _Interface.Adit_item_view_name
 ;
 Sample conditions name
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Other_data_type_list.Chem_shift_reference_ID
-
-   _Interface.Tag                  '_Other_data_type_list.Chem_shift_reference_ID'
-
-   _Interface.Category              'Other_data_type_list'
-
-   _Interface.Description
-;
-Pointer to '_Chem_shift_reference.ID'
-;
-
-   _Interface.Adit_item_view_name
-;
-Chem shift reference ID
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Other_data_type_list.Chem_shift_reference_label
-
-   _Interface.Tag                  '_Other_data_type_list.Chem_shift_reference_label'
-
-   _Interface.Category              'Other_data_type_list'
-
-   _Interface.Description
-;
-The name assigned to a set of chemical shift refernce data entered earlier in the deposition process.
-;
-
-   _Interface.Adit_item_view_name
-;
-Chem shift reference list name
 ;
 
    loop_
@@ -132678,33 +131922,6 @@ Auth atom name
 
 save_
 
-save__Atom_site.Ambiguous_atom_name
-
-   _Interface.Tag                  '_Atom_site.Ambiguous_atom_name'
-
-   _Interface.Category              'Atom_site'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Ambiguous atom name
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__Atom_site.Details
 
    _Interface.Tag                  '_Atom_site.Details'
@@ -152625,276 +151842,6 @@ PDB atom name 2
 
 ;
 CD1
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_model_num_1
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_model_num_1'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB model num 1
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_strand_ID_1
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_strand_ID_1'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB strand ID 1
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_residue_no_1
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_residue_no_1'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB residue no 1
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_residue_name_1
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_residue_name_1'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB residue name 1
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_atom_name_1
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_atom_name_1'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB atom name 1
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_model_num_2
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_model_num_2'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB model num 2
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_strand_ID_2
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_strand_ID_2'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB strand ID 2
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_residue_no_2
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_residue_no_2'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB residue no 2
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_residue_name_2
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_residue_name_2'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB residue name 2
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
-;
-
-   stop_
-
-save_
-
-save__Gen_dist_constraint.Original_PDB_atom_name_2
-
-   _Interface.Tag                  '_Gen_dist_constraint.Original_PDB_atom_name_2'
-
-   _Interface.Category              'Gen_dist_constraint'
-
-   _Interface.Description
-;
-?
-;
-
-   _Interface.Adit_item_view_name
-;
-Original PDB atom name 2
-;
-
-   loop_
-     _Interface_example.Example
-
-;
-?
 ;
 
    stop_
