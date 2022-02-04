@@ -1,6 +1,6 @@
-
 data_item_types
-  save_item_types
+
+save_item_types
 
 ####################
 ## ITEM_TYPE_LIST ##
@@ -8,27 +8,27 @@ data_item_types
 #
 #
 #  The regular expressions defined here are not compliant
-#  with the POSIX 1003.2 standard as they include the 
+#  with the POSIX 1003.2 standard as they include the
 #  '\n' and '\t' special characters. These regular expressions
 #  have been tested using the version 0.12 of Richard Stallman's
-#  GNU regular expression libary in POSIX mode. 
+#  GNU regular expression libary in POSIX mode.
 #
-#                                                                            
-# For some data items, a standard syntax is assumed. The syntax is           
-#   described for each data item in the dictionary, but is summarized here:  
-#                                                                            
-#   Names:     The family name(s) followed by a comma, precedes the first    
-#              name(s) or initial(s).                                        
-#                                                                            
-#   Telephone numbers:                                                       
-#              The international code is given in brackets and any extension 
-#              number is preceded by 'ext'.                                  
-#                                                                            
-#   Dates:     In the form yyyy-mm-dd.                                       
-#                                                                            
+#
+# For some data items, a standard syntax is assumed. The syntax is
+#   described for each data item in the dictionary, but is summarized here:
+#
+#   Names:     The family name(s) followed by a comma, precedes the first
+#              name(s) or initial(s).
+#
+#   Telephone numbers:
+#              The international code is given in brackets and any extension
+#              number is preceded by 'ext'.
+#
+#   Dates:     In the form yyyy-mm-dd.
+#
 ##############################################################################
 
-
+    _item_types.sf_framecode item_types
      loop_
        _Item_type.Code
        _Item_type.Primitive_code
@@ -82,7 +82,7 @@ data_item_types
                int       numb
                '-?[0-9]+'
 ;
-              int item types are the subset of numbers that are the negative 
+              int item types are the subset of numbers that are the negative
                or positive integers.
 ;
                '(?:-?[0-9]*)?'
@@ -217,7 +217,7 @@ data_item_types
                int-range       numb
                '-?[0-9]+(--?[0-9]+)?'
 ;
-              int item types are the subset of numbers that are the negative 
+              int item types are the subset of numbers that are the negative
                or positive integers with optional range.
 ;
                '-?[0-9]+(--?[0-9]+)?'
@@ -233,7 +233,7 @@ data_item_types
            '-?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?(--?(([0-9]+)[.]?|([0-9]*[.][0-9]+))([(][0-9]+[)])?([eE][+-]?[0-9]+)?)?'
    ?
    NMR-STAR
-       
+
 #
                binary    char
 ;
@@ -248,8 +248,8 @@ data_item_types
 ;
                ?
 ;
-\n--CIF-BINARY-FORMAT-SECTION--\n\ 
-[][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*\ 
+\n--CIF-BINARY-FORMAT-SECTION--\n\
+[][ \n\t()_,.;:"&<>/\{}'`~!@#$%?+=*A-Za-z0-9|^-]*\
 \n--CIF-BINARY-FORMAT-SECTION----
 ;
     NMR-STAR
@@ -257,7 +257,7 @@ data_item_types
 # NMR-STAR additions
 
               framecode   char
-              '[.;:"&<>(){}'`~!$%A-Za-z0-9*|+-][_.;:"&<>(){}'`~!$%A-Za-z0-9*|+-]*' 
+              '[.;:"&<>(){}'`~!$%A-Za-z0-9*|+-][_.;:"&<>(){}'`~!$%A-Za-z0-9*|+-]*'
 ;
              A value that points to a save frame.
 ;
@@ -313,7 +313,7 @@ data_item_types
  26    'hours'                  hr    'hours'                                               NMR-STAR
  27    'minutes'                min   'minutes'                                             NMR-STAR
  28    'seconds'                s     'seconds'                                             NMR-STAR
- 29    'milliseconds            ms    'milliseconds'                                        NMR-STAR
+ 29    'milliseconds'           ms    'milliseconds'                                        NMR-STAR
  30    'microseconds'           us    'microseconds'                                        NMR-STAR
  31    'nanoseconds'            ns    'nanoseconds'                                         NMR-STAR
 #
@@ -328,21 +328,21 @@ data_item_types
 #
  37    'electrons_squared'      ?    'electrons squared'                                    NMR-STAR
 #
- 38    'electrons_per_nanometres_cubed'    ?    
+ 38    'electrons_per_nanometres_cubed'    ?
 ;
  electrons per nanometres cubed (meters * 10^( -9))^3
 ;
 NMR-STAR
 
 #
- 39    'electrons_per_angstroms_cubed'     ?    
+ 39    'electrons_per_angstroms_cubed'     ?
 ;
  electrons per angstroms  cubed (meters * 10^(-10))^3
 ;
 NMR-STAR
 
 #
- 40    'electrons_per_picometres_cubed'     ?    
+ 40    'electrons_per_picometres_cubed'     ?
 ;
  electrons per picometres cubed (meters * 10^(-12))^3
 ;
@@ -356,7 +356,7 @@ NMR-STAR
  43    'kilovolts'              ?    'kilovolts'                                      NMR-STAR
 
 #
- 44    'arbitrary'     ?    
+ 44    'arbitrary'     ?
 ;
  arbitrary system of units.
 ;
@@ -391,7 +391,7 @@ NMR-STAR
 #
  58    'millimolar'             mM    'molar / 1000'                                  NMR-STAR
 #
- 59    'megagrams_per_cubic_metre'       ?    'megagrams per cubic metre'             NMR-STAR 
+ 59    'megagrams_per_cubic_metre'       ?    'megagrams per cubic metre'             NMR-STAR
 #
  60    'pixels_per_millimetre'      ?    'pixels per millimetre'                      NMR-STAR
 #
@@ -429,7 +429,7 @@ NMR-STAR
 #   gyromagnetic ratio
 72   'Radian per second per Tesla' 	rad/S/T	'Radian per second per Tesla' 		NMR-STAR
 73   'Coulomb per kilogram'		C/kg	'Coulomb per kilogram'                  NMR-STAR
- 
+
 #  concentration units
 74   'molar'			M		'1 mol/L'				NMR-STAR
 75   'millimolar'		mM		'10E-3 mol/L'				NMR-STAR
@@ -507,7 +507,7 @@ NMR-STAR
      ?    'reciprocal_millimetres'   ?    'reciprocal_nanometres'    '*'   1.0E-06        NMR-STAR
      ?    'reciprocal_millimetres'   ?    'reciprocal_angstroms'     '*'   1.0E-07        NMR-STAR
      ?    'reciprocal_millimetres'   ?    'reciprocal_picometres'    '*'   1.0E-09        NMR-STAR
-# 
+#
      ?    'reciprocal_nanometres'    ?    'reciprocal_centimetres'   '*'   1.0E+07        NMR-STAR
      ?    'reciprocal_nanometres'    ?    'reciprocal_millimetres'   '*'   1.0E+06        NMR-STAR
      ?    'reciprocal_nanometres'    ?    'reciprocal_angstroms'     '*'   1.0E-01        NMR-STAR
@@ -565,7 +565,7 @@ NMR-STAR
      ?    'celsius'                  ?    'kelvins'                  '-'     273.0        NMR-STAR
      ?    'kelvins'                  ?    'celsius'                  '+'     273.0        NMR-STAR
 ###
- 
+
   stop_
 
 save_
