@@ -1,6 +1,6 @@
 data_NMR-STAR.dic
 
-#  version date -  2019-11-11
+#  version date -  2020-10-01
 
 
 # The majority of the following item type definitions and descriptions for units
@@ -13,20 +13,20 @@ data_NMR-STAR.dic
 
 
 
-    _datablock.id                          NMR-STAR.dic
-    _datablock.description
+    _Datablock.ID                          NMR-STAR.dic
+    _Datablock.Description
 ;
      This data block contains the NMR-STAR dictionary.
 ;
 
-    _dictionary.title           NMR-STAR.dic
-    _dictionary.datablock_id    NMR-STAR.dic
-    _dictionary.version         3.2.1.39
+    _Dictionary.Title           NMR-STAR.dic
+    _Dictionary.Datablock_id    NMR-STAR.dic
+    _Dictionary.Version         3.2.14.0
 
      loop_
-       _dictionary_history.version
-       _dictionary_history.update
-       _dictionary_history.revision
+       _Dictionary_history.Version
+       _Dictionary_history.Update
+       _Dictionary_history.Revision
                     
       3.0.6.22          2007-01-01
 ;
@@ -124,6 +124,24 @@ Categories that capture the torsion angle distance constraints used to calculate
 Categories that capture the residual dipolar coupling constraints used to calculate one or more conformers for a biomolecular system.
 ;
 
+'peak_constraint_links'
+'inclusive_group'
+;
+Categories that provide links between constraints and the experimental data used to derive the constraints.
+;
+
+'experimental_data_derivation_links'
+'inclusive_group'
+;
+Categories that capture the links between derived data and the source data used in the derivation.
+;
+
+'applied_software_history'
+'inclusive_group'
+;
+Categories that capture the software workflow used to produce the reported data.
+;
+
      stop_
 
 
@@ -179,7 +197,7 @@ save__entry.sf_category
 
    _item_description.description
 ;
-Category assigned to the information in the saveframe.
+Category assigned to the information in the save frame.
 ;
 
    _item.name                         '_entry.sf_category'
@@ -206,8 +224,8 @@ save__entry.sf_framecode
 
    _item_description.description
 ;
-STAR framecode for this saveframe.  The value is defined as 'entry_information' 
-for the entry information saveframe in each entry.
+STAR framecode for this save frame.  The value is defined as 'entry_information' 
+for the entry information save frame in each entry.
 ;
 
    _item.name                         '_entry.sf_framecode'
@@ -276,9 +294,9 @@ Version of NMR-STAR in which the current entry is formatted.
    _item.name                         '_entry.nmr_star_version'
    _item.category_id                  'entry'
    _item.mandatory_code                yes
-   _item.default_value                '3.2.1.39'
+   _item.default_value                '?'
    _pdbx_item_enumeration_details.flag              Y
-   _pdbx_item_enumeration_details.closed_flag       Y
+   _pdbx_item_enumeration_details.closed_flag       N
    _item_type.code                    'line'
    _item_units.code                   '?'
 
@@ -430,7 +448,7 @@ save__entry.generated_software_label
 
    _item_description.description
 ;
-Pointer to a saveframe of the category software.
+Pointer to a save frame of the category software.
 ;
 
    _item.name                         '_entry.generated_software_label'
@@ -705,7 +723,7 @@ save__assembly.sf_category
 
    _item_description.description
 ;
-Category assigned to the information in the saveframe.
+Category assigned to the information in the save frame.
 ;
 
    _item.name                         '_assembly.sf_category'
@@ -1400,7 +1418,7 @@ save__spectral_peak_list.sf_category
 
    _item_description.description
 ;
-Category definition for the information content of the saveframe
+Category definition for the information content of the save frame
 ;
 
    _item.name                         '_spectral_peak_list.sf_category'
@@ -1476,6 +1494,7 @@ Spectral peak list ID
   '_peak.spectral_peak_list_id'                          '_spectral_peak_list.id'
   '_peak_general_char.spectral_peak_list_id'             '_spectral_peak_list.id'
   '_peak_char.spectral_peak_list_id'                     '_spectral_peak_list.id'
+  '_peak_coupling.spectral_peak_list_id'                 '_spectral_peak_list.id'
   '_assigned_peak_chem_shift.spectral_peak_list_id'                                      '_spectral_peak_list.id'
   '_peak_row_format.spectral_peak_list_id'               '_spectral_peak_list.id'
   '_spectral_transition.spectral_peak_list_id'           '_spectral_peak_list.id'
@@ -1630,7 +1649,7 @@ save__spectral_peak_list.chemical_shift_list
 
    _item_description.description
 ;
-Pointer to a saveframe of the category 'Assigned_chem_shift_list'. Included 
+Pointer to a save frame of the category 'Assigned_chem_shift_list'. Included 
 for NEF compatibility.
 ;
 
@@ -1719,6 +1738,7 @@ spectrum.
   '_spectral_dim_transfer.spectral_dim_id_1'             '_spectral_dim.id'
   '_spectral_dim_transfer.spectral_dim_id_2'             '_spectral_dim.id'
   '_peak_char.spectral_dim_id'                           '_spectral_dim.id'
+  '_peak_coupling.spectral_dim_id'                       '_spectral_dim.id'
   '_assigned_peak_chem_shift.spectral_dim_id'            '_spectral_dim.id'
   '_spectral_transition_char.spectral_dim_id'            '_spectral_dim.id'
   '_assigned_spectral_transition.spectral_dim_id'                                        '_spectral_dim.id'
@@ -2095,7 +2115,7 @@ save_
 save_spectral_dim_transfer
    _category.description
 ;
-              category description not available
+Items in the spectral_dim_transfer describe the magnetization transfer path in the NMR spectrum that is the source of the peak list in the save frame.
 ;
    _category.id                   'spectral_dim_transfer'
 
@@ -2294,33 +2314,6 @@ Items in the peak category define the identification code for the peaks in an NM
 
 save_
 
-save__peak.index_id
-
-   _item_description.description
-;
-An integer value that is an unique identified for the row in the peak tabel.
-;
-
-   _item.name                         '_peak.index_id'
-   _item.category_id                  'peak'
-   _item.mandatory_code                yes
-   _item.default_value                '?'
-   _pdbx_item_enumeration_details.flag              N
-   _pdbx_item_enumeration_details.closed_flag       N
-   _item_type.code                    'int'
-   _item_units.code                   '?'
-
-   loop_
-     _item_examples.case
-
-;
-?
-;
-
-   stop_
-
-save_
-
 save__peak.id
 
    _item_description.description
@@ -2343,8 +2336,11 @@ Unique identifier for the spectral peak.
 
   '_peak_general_char.peak_id'                           '_peak.id'
   '_peak_char.peak_id'                                   '_peak.id'
+  '_peak_coupling.peak_id'                               '_peak.id'
+  '_peak_coupling.partner_coupling_peak_id'              '_peak.id'
   '_assigned_peak_chem_shift.peak_id'                    '_peak.id'
   '_peak_row_format.id'                                  '_peak.id'
+  '_peak_row_format.peak_id'                             '_peak.id'
   '_spectral_transition.peak_id'                         '_peak.id'
   '_spectral_transition_general_char.peak_id'            '_peak.id'
   '_spectral_transition_char.peak_id'                    '_peak.id'
@@ -2434,6 +2430,7 @@ Items in the peak_row_format category describe the characteristics and assignmen
      _category_key.name
 
      '_peak_row_format.id'
+     '_peak_row_format.peak_id'
      '_peak_row_format.entry_id'
      '_peak_row_format.spectral_peak_list_id'
 
@@ -2497,6 +2494,33 @@ Pointer to '_Peak.ID'
 ;
 
    _item.name                         '_peak_row_format.id'
+   _item.category_id                  'peak_row_format'
+   _item.mandatory_code                yes
+   _item.default_value                '?'
+   _pdbx_item_enumeration_details.flag              N
+   _pdbx_item_enumeration_details.closed_flag       N
+   _item_type.code                    'int'
+   _item_units.code                   '?'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__peak_row_format.peak_id
+
+   _item_description.description
+;
+Pointer to '_Peak.ID'
+;
+
+   _item.name                         '_peak_row_format.peak_id'
    _item.category_id                  'peak_row_format'
    _item.mandatory_code                yes
    _item.default_value                '?'
@@ -6488,7 +6512,7 @@ save_
 save_gen_dist_constraint_list
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint_list category provide information about a list of distance restraints.
 ;
    _category.id                   'gen_dist_constraint_list'
 
@@ -6527,7 +6551,7 @@ save__gen_dist_constraint_list.sf_category
 
    _item_description.description
 ;
-Category definition for the information content of the saveframe
+Category definition for the information content of the save frame
 ;
 
    _item.name                         '_gen_dist_constraint_list.sf_category'
@@ -6554,8 +6578,8 @@ save__gen_dist_constraint_list.sf_framecode
 
    _item_description.description
 ;
-A label for the saveframe that describes in very brief terms the information 
-contained in the saveframe.
+A label for the save frame that describes in very brief terms the information 
+contained in the save frame.
 ;
 
    _item.name                         '_gen_dist_constraint_list.sf_framecode'
@@ -6578,45 +6602,27 @@ contained in the saveframe.
 
 save_
 
-save__gen_dist_constraint_list.constraint_type
+save__gen_dist_constraint_list.nef_constraint_origin
 
    _item_description.description
 ;
-The type of reported distance constraint.
+The NEF defined origin of the distance constraint.
 ;
 
-   _item.name                         '_gen_dist_constraint_list.constraint_type'
+   _item.name                         '_gen_dist_constraint_list.nef_constraint_origin'
    _item.category_id                  'gen_dist_constraint_list'
-   _item.mandatory_code                yes
+   _item.mandatory_code                no
    _item.default_value                '?'
-   _pdbx_item_enumeration_details.flag              Y
+   _pdbx_item_enumeration_details.flag              N
    _pdbx_item_enumeration_details.closed_flag       N
    _item_type.code                    'line'
    _item_units.code                   '?'
 
    loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   NOE    'Distance constraints determined from NOE experiments'
-   'NOE build-up'    'Distance constraints determined from a series of NOE experiments with different mixing times'
-   'NOE not seen'    'Distance constraints supplied when an expected NOE was not observed'
-   ROE    'Distance constraints determined from ROE experiments'
-   'ROE build-up'    'Distance constraints determine from a series of ROE experiments with different mixing times'
-   'hydrogen bond'    'Hydrogen bond distance constraints'
-   'disulfide bond'    'Disulfide bond distance constraints'
-   'paramagnetic relaxation'    'Distance constraints determined from paramagnetic relaxation studies'
-   symmetry    'Distance constraint enforces symmetry - for example to enforce symmetry between monomers in a multimer'
-   'general distance'    'Specific distance constraint is not known'
-
-   stop_
-
-
-   loop_
      _item_examples.case
 
 ;
-NOE
+?
 ;
 
    stop_
@@ -6669,7 +6675,7 @@ save_
 save_gen_dist_constraint
    _category.description
 ;
-NOT AVAILABLE
+Items in the gen_dist_constraint category define the atoms associated with a specific distance constraint value.
 ;
    _category.id                   'gen_dist_constraint'
 
@@ -7266,7 +7272,7 @@ save__torsion_angle_constraint_list.sf_category
 
    _item_description.description
 ;
-Category definition for the information content of the saveframe
+Category definition for the information content of the save frame
 ;
 
    _item.name                         '_torsion_angle_constraint_list.sf_category'
@@ -7293,8 +7299,8 @@ save__torsion_angle_constraint_list.sf_framecode
 
    _item_description.description
 ;
-A label for the saveframe that describes in very brief terms the information 
-contained in the saveframe.
+A label for the save frame that describes in very brief terms the information 
+contained in the save frame.
 ;
 
    _item.name                         '_torsion_angle_constraint_list.sf_framecode'
@@ -7360,31 +7366,21 @@ The potential type used to model the dihedral constraints.
 
 save_
 
-save__torsion_angle_constraint_list.constraint_type
+save__torsion_angle_constraint_list.nef_constraint_origin
 
    _item_description.description
 ;
-The source of the constraints (e.g. 'noe'$ 'hbond'$ 'measured'.
+The NEF defined origin for the torsion or dihedral angle constraint.
 ;
 
-   _item.name                         '_torsion_angle_constraint_list.constraint_type'
+   _item.name                         '_torsion_angle_constraint_list.nef_constraint_origin'
    _item.category_id                  'torsion_angle_constraint_list'
    _item.mandatory_code                no
    _item.default_value                '?'
-   _pdbx_item_enumeration_details.flag              Y
+   _pdbx_item_enumeration_details.flag              N
    _pdbx_item_enumeration_details.closed_flag       N
    _item_type.code                    'line'
    _item_units.code                   '?'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   J-couplings    ?
-   'backbone chemical shifts'    ?
-
-   stop_
-
 
    loop_
      _item_examples.case
@@ -8240,7 +8236,7 @@ save__rdc_constraint_list.sf_category
 
    _item_description.description
 ;
-Category definition for the information content of the saveframe
+Category definition for the information content of the save frame
 ;
 
    _item.name                         '_rdc_constraint_list.sf_category'
@@ -8267,8 +8263,8 @@ save__rdc_constraint_list.sf_framecode
 
    _item_description.description
 ;
-A label for the saveframe that describes in very brief terms the information 
-contained in the saveframe.
+A label for the save frame that describes in very brief terms the information 
+contained in the save frame.
 ;
 
    _item.name                         '_rdc_constraint_list.sf_framecode'
@@ -8334,30 +8330,21 @@ The potential type used to model the residual dipolar coupling restraints.
 
 save_
 
-save__rdc_constraint_list.constraint_type
+save__rdc_constraint_list.nef_constraint_origin
 
    _item_description.description
 ;
-The source of the restraints (e.g. 'noe'$ 'hbond'$ 'measured'.
+The NEF defined origin for the RDC constraints in the save frame.
 ;
 
-   _item.name                         '_rdc_constraint_list.constraint_type'
+   _item.name                         '_rdc_constraint_list.nef_constraint_origin'
    _item.category_id                  'rdc_constraint_list'
    _item.mandatory_code                no
    _item.default_value                '?'
-   _pdbx_item_enumeration_details.flag              Y
+   _pdbx_item_enumeration_details.flag              N
    _pdbx_item_enumeration_details.closed_flag       N
-   _item_type.code                    'code'
+   _item_type.code                    'line'
    _item_units.code                   '?'
-
-   loop_
-     _item_enumeration.value
-     _item_enumeration.detail
-
-   RDC    ?
-
-   stop_
-
 
    loop_
      _item_examples.case
@@ -9132,7 +9119,7 @@ save_
 save_PEAK_CONSTRAINT_LINKS
    _category_group.description
 ;
-             Item category group description not available
+Categories that provide links between constraints and the experimental data used to derive the constraints.
 ;
 
    _category_group.id                    peak_constraint_links
@@ -9142,7 +9129,7 @@ save_
 save_peak_constraint_link_list
    _category.description
 ;
-              category description not available
+Items in the peak_constraint_link_list category provide the links between experimental data items and the derived constraints.
 ;
    _category.id                   'peak_constraint_link_list'
 
@@ -9235,7 +9222,7 @@ save_
 save_peak_constraint_link
    _category.description
 ;
-              category description not available
+Items in the peak_constraint_iink category provide the specific experimental data item and the derived constraint links.
 ;
    _category.id                   'peak_constraint_link'
 
@@ -9381,10 +9368,262 @@ A pointer to the tag that is the unique ID for the linked constraint.
 
 save_
 
+save_EXPERIMENTAL_DATA_DERIVATION_LINKS
+   _category_group.description
+;
+Categories that capture the links between derived data and the source data used in the derivation.
+;
+
+   _category_group.id                    experimental_data_derivation_links
+
+save_
+
+save_experimental_data_link_list
+   _category.description
+;
+Items in the Experimental_data_link_list category provide meta data specific to the linked data in the save frame.
+;
+   _category.id                   'experimental_data_link_list'
+
+   loop_
+     _category_key.name
+
+     '_experimental_data_link_list.entry_id'
+     '_experimental_data_link_list.id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'experimental_data_derivation_links'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__experimental_data_link_list.sf_category
+
+   _item_description.description
+;
+Category definition for the information content of the save frame
+;
+
+   _item.name                         '_experimental_data_link_list.sf_category'
+   _item.category_id                  'experimental_data_link_list'
+   _item.mandatory_code                yes
+   _item.default_value                '?'
+   _pdbx_item_enumeration_details.flag              N
+   _pdbx_item_enumeration_details.closed_flag       N
+   _item_type.code                    'code'
+   _item_units.code                   '?'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__experimental_data_link_list.sf_framecode
+
+   _item_description.description
+;
+A label for the save frame that describes in very brief terms the information 
+contained in the save frame.
+;
+
+   _item.name                         '_experimental_data_link_list.sf_framecode'
+   _item.category_id                  'experimental_data_link_list'
+   _item.mandatory_code                yes
+   _item.default_value                '?'
+   _pdbx_item_enumeration_details.flag              N
+   _pdbx_item_enumeration_details.closed_flag       N
+   _item_type.code                    'framecode'
+   _item_units.code                   '?'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save_experimental_data_link
+   _category.description
+;
+Items in the Experimental_data_link category provide the pointers to both the source data and the data derived from the source data.
+;
+   _category.id                   'experimental_data_link'
+
+   loop_
+     _category_key.name
+
+     '_experimental_data_link.id'
+     '_experimental_data_link.entry_id'
+     '_experimental_data_link.experimental_data_link_list_id'
+
+   stop_
+
+   loop_
+     _category_group.id
+
+     'inclusive_group'
+     'experimental_data_derivation_links'
+
+   stop_
+
+   loop_
+     _category_examples.detail
+     _category_examples.case
+
+;
+   ?
+;
+;
+   ?
+;
+
+   stop_
+
+save_
+
+save__experimental_data_link.source_expt_data_list_sf_framecode
+
+   _item_description.description
+;
+A pointer to the Sf_framecode for the save frame where the spectral peak 
+list is found.
+;
+
+   _item.name                         '_experimental_data_link.source_expt_data_list_sf_framecode'
+   _item.category_id                  'experimental_data_link'
+   _item.mandatory_code                yes
+   _item.default_value                '?'
+   _pdbx_item_enumeration_details.flag              N
+   _pdbx_item_enumeration_details.closed_flag       N
+   _item_type.code                    'framecode'
+   _item_units.code                   '?'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__experimental_data_link.source_expt_data_id
+
+   _item_description.description
+;
+A pointer to the tag '_Peak.ID' in the specified spectral peak list save frame.
+;
+
+   _item.name                         '_experimental_data_link.source_expt_data_id'
+   _item.category_id                  'experimental_data_link'
+   _item.mandatory_code                yes
+   _item.default_value                '?'
+   _pdbx_item_enumeration_details.flag              N
+   _pdbx_item_enumeration_details.closed_flag       N
+   _item_type.code                    'int'
+   _item_units.code                   '?'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__experimental_data_link.derived_data_sf_framecode
+
+   _item_description.description
+;
+A pointer to the Sf_framecode for the save frame where the linked constraint 
+is found.
+;
+
+   _item.name                         '_experimental_data_link.derived_data_sf_framecode'
+   _item.category_id                  'experimental_data_link'
+   _item.mandatory_code                yes
+   _item.default_value                '?'
+   _pdbx_item_enumeration_details.flag              N
+   _pdbx_item_enumeration_details.closed_flag       N
+   _item_type.code                    'framecode'
+   _item_units.code                   '?'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
+save__experimental_data_link.derived_data_id
+
+   _item_description.description
+;
+A pointer to the tag that is the unique ID for the linked constraint.
+;
+
+   _item.name                         '_experimental_data_link.derived_data_id'
+   _item.category_id                  'experimental_data_link'
+   _item.mandatory_code                yes
+   _item.default_value                '?'
+   _pdbx_item_enumeration_details.flag              N
+   _pdbx_item_enumeration_details.closed_flag       N
+   _item_type.code                    'int'
+   _item_units.code                   '?'
+
+   loop_
+     _item_examples.case
+
+;
+?
+;
+
+   stop_
+
+save_
+
 save_APPLIED_SOFTWARE_HISTORY
    _category_group.description
 ;
-             Item category group description not available
+Categories that capture the software workflow used to produce the reported data.
 ;
 
    _category_group.id                    applied_software_history
@@ -9394,7 +9633,7 @@ save_
 save_history
    _category.description
 ;
-              category description not available
+Items in the history category provide the order in which software packages were used to derive the data reported in the entry.
 ;
    _category.id                   'history'
 
