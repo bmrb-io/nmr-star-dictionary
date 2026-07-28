@@ -88,11 +88,11 @@ May not observe signals from the component or signals may be quite broad.
     'Fast exchange'
 
 ;
-On the NMR time scale$ a single averaged signal will be observed for the components in the bound and free state.
+On the NMR time scale, a single averaged signal will be observed for the components in the bound and free state.
 ;
     'No interaction'
 ;
-The components exist in the sample but do not interact (i.e.$ a molecule that is exchanging between a native and an unfolded conformation).
+The components exist in the sample but do not interact (i.e., a molecule that is exchanging between a native and an unfolded conformation).
 ;
      na
 ;
@@ -198,7 +198,7 @@ save__Atom_chem_shift.Ambiguity_code
 
            1
 ;
-Unique$ not ambiguous
+Unique, not ambiguous
 ;
            2
 ;
@@ -222,7 +222,7 @@ Chemical shift ambiguity is between atoms that are located on different entities
 ;
            9
 ;
-Ambiguous$ but specific ambiguity not defined
+Ambiguous, but specific ambiguity not defined
 ;
 
      stop_
@@ -529,8 +529,8 @@ save__Chem_comp_atom.Chirality
      _Item_enumeration.Description
 
      N      'atom is not a chiral center'
-     E      '(E)- alkene (German$ entgegen = opposite)'
-     Z      '(Z)- alkene (German$ zusammen = together)'
+     E      '(E)- alkene (German, entgegen = opposite)'
+     Z      '(Z)- alkene (German, zusammen = together)'
      R      'rectus - right handed configuration'
      S      'sinister - left handed configuration'
      pro-R  'If substituted for a higher molecular weight entity will make the attached atom an R chiral center'
@@ -547,8 +547,8 @@ save__Chem_comp_atom.Stereo_config
      _Item_enumeration.Description
 
      N      'atom is not a chiral center'
-     E      '(E)- alkene (German$ entgegen = opposite)'
-     Z      '(Z)- alkene (German$ zusammen = together)'
+     E      '(E)- alkene (German, entgegen = opposite)'
+     Z      '(Z)- alkene (German, zusammen = together)'
      R      'rectus - right handed configuration'
      S      'sinister - left handed configuration'
 
@@ -872,20 +872,20 @@ save__Chem_comp.Type
       'RNA OH 5 PRIME TERMINUS'                   .
       'DNA OH 3 PRIME TERMINUS'                   .
       'RNA OH 3 PRIME TERMINUS'                   .
-      'D-SACCHARIDE 1$4 AND 1$4 LINKING'          .
-      'L-SACCHARIDE 1$4 AND 1$4 LINKING'          .
-      'D-SACCHARIDE 1$4 AND 1$6 LINKING'          .
-      'L-SACCHARIDE 1$4 AND 1$6 LINKING'          .
+      'D-SACCHARIDE 1,4 AND 1,4 LINKING'          .
+      'L-SACCHARIDE 1,4 AND 1,4 LINKING'          .
+      'D-SACCHARIDE 1,4 AND 1,6 LINKING'          .
+      'L-SACCHARIDE 1,4 AND 1,6 LINKING'          .
       'L-SACCHARIDE'                              .
       'D-SACCHARIDE'                              .
       'SACCHARIDE'                                .
       'NON-POLYMER'                               .
       'PEPTIDE LINKING'                           .
       'PEPTIDE-LIKE'                              .
-      'L-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
-      'D-GAMMA-PEPTIDE$ C-DELTA LINKING'          .
-      'L-BETA-PEPTIDE$ C-GAMMA LINKING'           .
-      'D-BETA-PEPTIDE$ C-GAMMA LINKING'           .
+      'L-GAMMA-PEPTIDE, C-DELTA LINKING'          .
+      'D-GAMMA-PEPTIDE, C-DELTA LINKING'          .
+      'L-BETA-PEPTIDE, C-GAMMA LINKING'           .
+      'D-BETA-PEPTIDE, C-GAMMA LINKING'           .
       'OTHER'                                     .
 
    stop_
@@ -1093,7 +1093,7 @@ dioxane                              'C methylene carbons'
 'ammonium hydroxide'                 'N ammonium nitrogen'
 'ammonium nitrate'                   'N ammonium nitrogen'
 '[15N] ammonium nitrate'             'N ammonium nitrogen'
-'[15N$ 15N] ammonium nitrate'        'N ammonium nitrogen'
+'[15N, 15N] ammonium nitrate'        'N ammonium nitrogen'
 'ammonium nitrite'                   'N ammonium nitrogen'
 'ammonium sulfate'                   'N ammonium nitrogen'
 '[15N] ammonium sulfate'             'N ammonium nitrogen'
@@ -1459,7 +1459,7 @@ save__Citation.Journal_abbrev
     'RNA'                                       .
     'Science'                                   .
     'Structure'                                 .
-    'Structure (Cambridge$ MA$ U.S.)'           .
+    'Structure (Cambridge, MA, U.S.)'           .
       'Acc. Chem. Res.'                                                          .
       'ACS Symp. Ser.'                                                           .
       'Acta Biochim. Pol.'                                                       .
@@ -2933,7 +2933,7 @@ A manuscript has been submitted for publication.
 ;
      'in press'
 ;
-A manuscript has been accepted for publication$ but has not yet appeared in press.
+A manuscript has been accepted for publication, but has not yet appeared in press.
 ;
      published
 ;
@@ -2963,11 +2963,11 @@ save__Citation.Type
  'book chapter'        .
   thesis
 ;
-A document written and published as a requirement for a degree or other scholarly endeavor (e.g.$ senior$ masters$ or doctoral thesis)
+A document written and published as a requirement for a degree or other scholarly endeavor (e.g., senior, masters, or doctoral thesis)
 ;
   abstract
 ;
-A brief text describing the contents of a presentation$ oral$$ poster$ or other$ given at a conference or other formal gathering.
+A brief text describing the contents of a presentation, oral,, poster, or other, given at a conference or other formal gathering.
 ;
  'personal communication'
 ;
@@ -3222,19 +3222,19 @@ save__Constraint_stat_list.NOE_dist_averaging_method
 
      r-6
 ;
-R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
+R=(<Rij^-6>)^(-1/6), X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
 ;
      r-3
 ;
-R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
+R=(<Rij^-3>)^(-1/3), X-PLOR formula 18.2.
 ;
      sum
 ;
-R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
+R=(SUM(Rij^-6)/n_mono)^(-1/6), X-PLOR formula 18.3.
 ;
      center
 ;
-R= r1_center-r2_center$ X-PLOR formula 18.4.
+R= r1_center-r2_center, X-PLOR formula 18.4.
 ;
 
     stop_
@@ -3262,19 +3262,19 @@ save__Constraint_stat_list.ROE_dist_averaging_method
 
      r-6
 ;
-R=(<Rij^-6>)^(-1/6)$ X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
+R=(<Rij^-6>)^(-1/6), X-PLOR formula 18.1. Rij runs over all combinations of distance constraints between  atoms i in set 1 and atoms j in set 2.
 ;
      r-3
 ;
-R=(<Rij^-3>)^(-1/3)$ X-PLOR formula 18.2.
+R=(<Rij^-3>)^(-1/3), X-PLOR formula 18.2.
 ;
      sum
 ;
-R=(SUM(Rij^-6)/n_mono)^(-1/6)$ X-PLOR formula 18.3.
+R=(SUM(Rij^-6)/n_mono)^(-1/6), X-PLOR formula 18.3.
 ;
      center
 ;
-R= r1_center-r2_center$ X-PLOR formula 18.4.
+R= r1_center-r2_center, X-PLOR formula 18.4.
 ;
 
     stop_
@@ -4429,19 +4429,19 @@ save__Entity.Type
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    polymer             'A biological polymer (protein$ peptide$ nucleic acid$ etc.)'
-    non-polymer         'Ligand$ metal ion$ or other non-polymeric molecule'
+    polymer             'A biological polymer (protein, peptide, nucleic acid, etc.)'
+    non-polymer         'Ligand, metal ion, or other non-polymeric molecule'
     water
 ;
-Water is defined as a special case. Multiple water molecules may be components of the molecular assembly$ but are not assigned unique entity_assembly_ID values.
+Water is defined as a special case. Multiple water molecules may be components of the molecular assembly, but are not assigned unique entity_assembly_ID values.
 ;
     aggregate
 ;
-Used where a large number of molecules are reported as part of a molecular assembly$ but are not listed individually as components of the assembly and are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to represent the aggregate number of molecules of a specific compound.
+Used where a large number of molecules are reported as part of a molecular assembly, but are not listed individually as components of the assembly and are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to represent the aggregate number of molecules of a specific compound.
 ;
     solvent
 ;
-Applies to compounds other than water that are part of molecular assembly$ but are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to represent all molecules of a specific compound.
+Applies to compounds other than water that are part of molecular assembly, but are not assigned unique entity_assembly_ID values. One entity_assembly_ID value is used to represent all molecules of a specific compound.
 ;
 
    stop_
@@ -4520,10 +4520,10 @@ save__Entry_src.Organization_full_name
      _Item_enumeration.Description
 
     "Accelerated Technologies Center for Gene to 3D Structure"                   .
-    "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
+    "Assembly, Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"    .
     "Architecture and Function of Biological Macromolecules Structure Genomics"  ASG
     "Atoms-to-Animals: The Immune Function Network"                              .
-    "Bacterial targets at IGS-CNRS$ France"                                      .
+    "Bacterial targets at IGS-CNRS, France"                                      .
     "Berkeley Structural Genomics Center"                                        BSGC
     "Center for Eukaryotic Structural Genomics"                                  CESG
     "Center for High-Throughput Structural Biology"                              .
@@ -4569,7 +4569,7 @@ save__Entry_src.Organization_full_name
     "Structural Proteomics in Europe"                                            .
     "Structural Proteomics in Europe 2"                                          .
     "Structure 2 Function Project"                                               .
-    "Structure$ Dynamics and Activation Mechanisms of Chemokine Receptors"       .
+    "Structure, Dynamics and Activation Mechanisms of Chemokine Receptors"       .
     "Structure-Function Studies of Tight Junction Membrane Proteins"             .
     "Structures of Mtb Proteins Conferring Susceptibility to Known Mtb Inhibitors"  .
     "TB Structural Genomics Consortium"                                          .
@@ -4918,7 +4918,7 @@ Contains variety of files for acquiring and processing the NMR experimental data
 
       'Pulse sequence image file'
 ;
-jpeg$ gif$ or other file type that is an image of the pulse sequence as shown as a figure in many publications
+jpeg, gif, or other file type that is an image of the pulse sequence as shown as a figure in many publications
 ;
 
       'Pulse sequence'                          .
@@ -5415,8 +5415,8 @@ save__Heteronucl_T1rho_list.T1rho_coherence_type
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-         I(+$-)              'single quantum'
-         S(+$-)              'single quantum'
+         I(+,-)              'single quantum'
+         S(+,-)              'single quantum'
 
     stop_
 
@@ -5503,8 +5503,8 @@ save__Heteronucl_T2_list.T2_coherence_type
       _Item_enumeration.Description
 
 
-         I(+$-)              'single quantum'
-         S(+$-)              'single quantum'
+         I(+,-)              'single quantum'
+         S(+,-)              'single quantum'
 
     stop_
 
@@ -5933,24 +5933,24 @@ save_
  #        ''                                                .
  #        'Rex'                                             .
 
-# Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
+# Original Lipari-Szabo (Lipari and Szabo, 1982), plus additional params
 # such as Rex:
 
   #       'S2'                                               .
-  #       'S2$ te'                                           .
-  #       'S2$ Rex'                                          .
-  #       'S2$ te$ Rex'                                      .
+  #       'S2, te'                                           .
+  #       'S2, Rex'                                          .
+  #       'S2, te, Rex'                                      .
 
-# Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
+# Extended model-free (Clore et al., 1990), plus additional params such as Rex:
 
-  #       'S2f$ S2$ ts'                                      .
-  #       'S2f$ S2s$ ts'                                     .
-  #       'S2f$ tf$ S2$ ts'                                  .
-  #       'S2f$ tf$ S2s$ ts'                                 .
-  #       'S2f$ S2$ ts$ Rex'                                 .
-  #       'S2f$ S2s$ ts$ Rex'                                .
-  #       'S2f$ tf$ S2$ ts$ Rex'                             .
-  #       'S2f$ tf$ S2s$ ts$ Rex'                            .
+  #       'S2f, S2, ts'                                      .
+  #       'S2f, S2s, ts'                                     .
+  #       'S2f, tf, S2, ts'                                  .
+  #       'S2f, tf, S2s, ts'                                 .
+  #       'S2f, S2, ts, Rex'                                 .
+  #       'S2f, S2s, ts, Rex'                                .
+  #       'S2f, tf, S2, ts, Rex'                             .
+  #       'S2f, tf, S2s, ts, Rex'                            .
 
 #  stop_
 
@@ -6081,7 +6081,7 @@ Contains variety of files for acquiring and processing the NMR experimental data
 
       'Pulse sequence image file'
 ;
-jpeg$ gif$ or other file type that is an image of the pulse sequence as shown as a figure in many publications
+jpeg, gif, or other file type that is an image of the pulse sequence as shown as a figure in many publications
 ;
 
       'Pulse sequence'                          .
@@ -6424,24 +6424,24 @@ save__Order_param.Model_fit
 
          'Rex'                                             .
 
- # Original Lipari-Szabo (Lipari and Szabo$ 1982)$ plus additional params
+ # Original Lipari-Szabo (Lipari and Szabo, 1982), plus additional params
  # such as Rex:
 
          'S2'                                               .
-         'S2$ te'                                           .
-         'S2$ Rex'                                          .
-         'S2$ te$ Rex'                                      .
+         'S2, te'                                           .
+         'S2, Rex'                                          .
+         'S2, te, Rex'                                      .
 
- # Extended model-free (Clore et al.$ 1990)$ plus additional params such as Rex:
+ # Extended model-free (Clore et al., 1990), plus additional params such as Rex:
 
-         'S2f$ S2$ ts'                                      .
-         'S2f$ S2s$ ts'                                     .
-         'S2f$ tf$ S2$ ts'                                  .
-         'S2f$ tf$ S2s$ ts'                                 .
-         'S2f$ S2$ ts$ Rex'                                 .
-         'S2f$ S2s$ ts$ Rex'                                .
-         'S2f$ tf$ S2$ ts$ Rex'                             .
-         'S2f$ tf$ S2s$ ts$ Rex'                            .
+         'S2f, S2, ts'                                      .
+         'S2f, S2s, ts'                                     .
+         'S2f, tf, S2, ts'                                  .
+         'S2f, tf, S2s, ts'                                 .
+         'S2f, S2, ts, Rex'                                 .
+         'S2f, S2s, ts, Rex'                                .
+         'S2f, tf, S2, ts, Rex'                             .
+         'S2f, tf, S2s, ts, Rex'                            .
 
   stop_
 
@@ -6835,7 +6835,7 @@ save__Release.Type
     update
 
 ;
-Additional releases of the entry that involve changes in the reported quantitative data$ dictionary changes$ or other revisions that represent non-trivial changes in the entry.
+Additional releases of the entry that involve changes in the reported quantitative data, dictionary changes, or other revisions that represent non-trivial changes in the entry.
 ;
 
      revision     'not used now as it is redundant with update aa all revisions are updates'
@@ -6879,7 +6879,7 @@ Derived from conformers that fit experimental data
 ;
       theoretical
 ;
-The coordinates represent a theoretical chemical system. They may be derived from an experimental coordinate set$ but have been constructed for use in carrying out theoretical calculations or for other purposes that have specific requirements that necessitate the use of non-standard atoms or other conditions.
+The coordinates represent a theoretical chemical system. They may be derived from an experimental coordinate set, but have been constructed for use in carrying out theoretical calculations or for other purposes that have specific requirements that necessitate the use of non-standard atoms or other conditions.
 ;
      stop_
 
@@ -6953,7 +6953,7 @@ save__Sample_component.Isotopic_labeling
      "[U-13C; U-15N]"                        'Uniformly labeled with 13C and 15N at unknown percentages'
      "[U-100% 13C; U-100% 15N; U-80% 2H]"      .
      "[U-13C; U-15N; U-2H; 99% 1HD-Ile,Leu; 99% 1HG-Val]"  'Uniformly labeled with 13C and 15N and 2H with ILV methyls 1H labeled'
-     "[U-13C; U-15N; U-2H]"                  'Uniformly labeled with 13C$ 15N$ and 2H at unknown percentages'
+     "[U-13C; U-15N; U-2H]"                  'Uniformly labeled with 13C, 15N, and 2H at unknown percentages'
      "[U-100% 2H]"                           .
      "[U-99% 2H]"                            .
      "[U-2H]"                                .
@@ -6963,9 +6963,9 @@ save__Sample_component.Isotopic_labeling
      "[U-13C; U-15N]-Ura"                    'All uracil nucleotides labeled fully with both 13C and 15N'
      "[U-15N]-Leu"                           'Uniformly labeled 15N Leu residues'
      "[95% 13CA]-Trp"                        'All Trp residues labeled 95 percent with 13C in the CA position'
-#     "[U-98% 13C; NA-F$Y$W]"
+#     "[U-98% 13C; NA-F,Y,W]"
 #;
-#Uniformly labeled with 13C except for the Phe$ Tyr$ and Trp residues which are at natural abundance
+#Uniformly labeled with 13C except for the Phe, Tyr, and Trp residues which are at natural abundance
 #;
 
   stop_
@@ -7068,7 +7068,7 @@ Preferred unit is bar (10^5 Pa)
 
   'ionic strength'
 ;
-I = 1/2 of the summation of C(i) times Z(i)^2$ where the summation is taken over all of the different ions (i) in a solution$ multiplying the molarity C(i) by the square of the charge Z(i). Preferred unit is M (mol/l)
+I = 1/2 of the summation of C(i) times Z(i)^2, where the summation is taken over all of the different ions (i) in a solution, multiplying the molarity C(i) by the square of the charge Z(i). Preferred unit is M (mol/l)
 ;
 
   viscosity
@@ -7086,7 +7086,7 @@ Pure water at 298 K has a dielectric constant of 78.54. No unit is required.
 
   'temperature controller setting'
 ;
-For solid-state experiments$ this is the temperature setting on the NMR spectrometer control unit.
+For solid-state experiments, this is the temperature setting on the NMR spectrometer control unit.
 ;
 
 #  'calibration agent'
@@ -7104,21 +7104,21 @@ save__Sample_condition_variable.Val_units
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-           Pa           "Pascal$ 1 Pa = 1 N m^-2"
-           bar          "bar$ 1 bar = 10^5 Pa"
+           Pa           "Pascal, 1 Pa = 1 N m^-2"
+           bar          "bar, 1 bar = 10^5 Pa"
            atm
 ;
-atmosphere$ 1 atm = 1.01325 * 10^5 Pa$ atm is not a SI unit
+atmosphere, 1 atm = 1.01325 * 10^5 Pa, atm is not a SI unit
 ;
 
            mmHg
 ;
-millimetres of mercury$ 1 mmHg = 133.3224 Pa$ mmHg is not a SI unit
+millimetres of mercury, 1 mmHg = 133.3224 Pa, mmHg is not a SI unit
 ;
 
            Torr
 ;
-Torricelli$ 1 Torr = 133.322 Pa$ Torr is not a SI unit
+Torricelli, 1 Torr = 133.322 Pa, Torr is not a SI unit
 ;
            mbar         millibar
            K            Kelvin
@@ -7134,11 +7134,11 @@ unit of pH
 ;
              M
 ;
-Molar$ concentration unit for ionic strength
+Molar, concentration unit for ionic strength
 ;
             mM
 ;
-milimolar$ concentration unit for ionic strength
+milimolar, concentration unit for ionic strength
 ;
             P
 ;
@@ -7258,10 +7258,10 @@ save__SG_project.Full_name_of_center
 
     "not applicable"                                                                 .
     "Accelerated Technologies Center for Gene to 3D Structure"                       .
-    "Assembly$ Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"        .
+    "Assembly, Dynamics and Evolution of Cell-Cell and Cell-Matrix Adhesions"        .
     "Atoms-to-Animals: The Immune Function Network"                                  .
     "Architecture and Function of Biological Macromolecules Structure Genomics"      ASG
-    'Bacterial targets at IGS-CNRS$ France'                                          .
+    'Bacterial targets at IGS-CNRS, France'                                          .
     "Berkeley Structural Genomics Center"                                            BSGC
     "Center for Eukaryotic Structural Genomics"                                      CESG
     "Center for High-Throughput Structural Biology"                                  .
@@ -7381,8 +7381,8 @@ save__SG_project.Project_name
       'not applicable'                                                          .
       'Enzyme Function Initiative'                                              .
       'PSI:Biology'                                                             .
-      'PSI$ Protein Structure Initiative'                                       .
-      'NPPSFA$ National Project on Protein Structural and Functional Analyses'  .
+      'PSI, Protein Structure Initiative'                                       .
+      'NPPSFA, National Project on Protein Structural and Functional Analyses'  .
 # PDBj-BMRB: Added the following projects which contributed more than three entries in current BMRB database.
    SPINE                     .
    SPINE2                    .
@@ -8408,8 +8408,8 @@ save__Theoretical_heteronucl_T1_list.T1_coherence_type
       _Item_enumeration.Value
       _Item_enumeration.Description
 
-         Iz              'zero quantum$ longitudinal'
-         Sz              'zero quantum$ longitudinal'
+         Iz              'zero quantum, longitudinal'
+         Sz              'zero quantum, longitudinal'
 
     stop_
 
@@ -8465,8 +8465,8 @@ save__Theoretical_heteronucl_T2_list.T2_coherence_type
       _Item_enumeration.Description
 
 
-         I(+$-)              .
-         S(+$-)              .
+         I(+,-)              .
+         S(+,-)              .
 
     stop_
 
@@ -8659,65 +8659,65 @@ save__Vendor.Name
      _Item_enumeration.Value
      _Item_enumeration.Description
 
-    '(ACME) - Delaglio$ Zhengrong and Bax'                                                                  .
-    '(AMBER) - Case$ Darden$ Cheatham$ III$ Simmerling$ Wang$ Duke$ Luo$ ... and Kollman'                   .
+    '(ACME) - Delaglio, Zhengrong and Bax'                                                                  .
+    '(AMBER) - Case, Darden, Cheatham, III, Simmerling, Wang, Duke, Luo, ... and Kollman'                   .
     '(ANSIG) - Kraulis'                                                                                     .
     '(Analysis) - CCPN'                                                                                     .
-    '(AQUA) - Rullmann$ Doreleijers and Kaptein'                                                            .
-    "(ARIA) - Linge$ O'Donoghue and Nilges"                                                                 .
-    '(AURELIA) - Neidig$ Geyer$ Gorler$ Antz$ Saffrich$ Beneicke$ Kalbitzer'                                .
+    '(AQUA) - Rullmann, Doreleijers and Kaptein'                                                            .
+    "(ARIA) - Linge, O'Donoghue and Nilges"                                                                 .
+    '(AURELIA) - Neidig, Geyer, Gorler, Antz, Saffrich, Beneicke, Kalbitzer'                                .
     '(AUREMOL) - Bruker Biospin'                                                                            .
-    '(AutoAssign) - Zimmerman$ Moseley$ Kulikowski and Montelione'                                          .
-    '(AutoStruct) - Huang$ Tejero$ Powers and Montelione'                                                   .
+    '(AutoAssign) - Zimmerman, Moseley, Kulikowski and Montelione'                                          .
+    '(AutoStruct) - Huang, Tejero, Powers and Montelione'                                                   .
     '(AVS) - Moseley and Montelione'                                                                        .
     '(AZARA) - Boucher'                                                                                     .
-    '(CANDID) - Herrmann$ Guntert and Wuthrich'                                                             .
+    '(CANDID) - Herrmann, Guntert and Wuthrich'                                                             .
     '(CAPP) - Garrett'                                                                                      .
     '(CARA) - Keller and Wuthrich'                                                                          .
     '(CcpNMR) - CCPN'                                                                                       .
-    '(CNS) - Brunger$ Adams$ Clore$ Gros$ Nilges and Read'                                                  .
-    '(CS-Rosetta) - Shen$ Vernon$ Baker and Bax'                                                            .
-    '(CYANA) -  Guntert$ Mumenthaler and Wuthrich'                                                          .
+    '(CNS) - Brunger, Adams, Clore, Gros, Nilges and Read'                                                  .
+    '(CS-Rosetta) - Shen, Vernon, Baker and Bax'                                                            .
+    '(CYANA) -  Guntert, Mumenthaler and Wuthrich'                                                          .
     '(DGII) - Accelrys Software Inc.'                                                                       .
-    '(DIANA) - Guntert$ Braun and Wuthrich'                                                                 .
+    '(DIANA) - Guntert, Braun and Wuthrich'                                                                 .
     '(DISCOVER) - Accelrys Software Inc.'                                                                   .
     '(DSPACE) - Hare'                                                                                       .
-    '(DYANA) - Guntert$ Braun and Wuthrich'                                                                 .
+    '(DYANA) - Guntert, Braun and Wuthrich'                                                                 .
     '(DYNAMO) - Delaglio and Kuszewski'                                                                     .
-    '(EMBOSS - Rice$ Longden and Bleasby'                                                                   .
+    '(EMBOSS - Rice, Longden and Bleasby'                                                                   .
     '(FANTOM) - Braun'                                                                                      .
     '(Felix) - Accelrys Software Inc.'                                                                      .
-    '(GARANT) - Bartels$ Guntert$ Billeter and Wuthrich'                                                    .
-    '(Gaussian) - Gaussian$ Inc.'                                                                           .
+    '(GARANT) - Bartels, Guntert, Billeter and Wuthrich'                                                    .
+    '(Gaussian) - Gaussian, Inc.'                                                                           .
     '(GIFA) - Delsuc'                                                                                       .
     '(GROMOS) - van Gunsteren and Berendsen'                                                                .
     '(HADDOCK) - Alexandre Bonvin'                                                                          .
-    '(HYPER) - Tejero$ Monleon$ Celda$ Powers and Montelione'                                               .
+    '(HYPER) - Tejero, Monleon, Celda, Powers and Montelione'                                               .
     '(InsightII) -  Accelrys Software Inc.'                                                                 .
     '(ModelFree) - Palmer'                                                                                  .
-    '(Molmol) - Koradi$ Billeter and Wuthrich'                                                              .
+    '(Molmol) - Koradi, Billeter and Wuthrich'                                                              .
     '(MOLPROBITY) - Richardson'                                                                             .
     '(MORASS) - Luxon'                                                                                      .
     '(NDEE) - Roesch and Herrmann'                                                                          .
     '(NMRbox) - UConn Health Center'                                                                        .
-    '(NMRDraw) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'                                         .
-    '(NMRPipe) - Delaglio$ Grzesiek$ Vuister$ Zhu$ Pfeifer and Bax'                                         .
-    '(NMRView) - Johnson$ One Moon Scientific'                                                              .
+    '(NMRDraw) - Delaglio, Grzesiek, Vuister, Zhu, Pfeifer and Bax'                                         .
+    '(NMRPipe) - Delaglio, Grzesiek, Vuister, Zhu, Pfeifer and Bax'                                         .
+    '(NMRView) - Johnson, One Moon Scientific'                                                              .
     '(NUTS) - Acorn NMR Inc.'                                                                               .
-    '(OPAL) - Luginbuhl$ Guntert$ Billeter and Wuthrich'                                                    .
-    '(PECAN) - Eghbalnia$ Wang$ Bahrami$ Assadi$ and Markley'                                               .
-    '(PINE) - Bahrami$ Markley$ Assadi$ and Eghbalnia'                                                      . 
+    '(OPAL) - Luginbuhl, Guntert, Billeter and Wuthrich'                                                    .
+    '(PECAN) - Eghbalnia, Wang, Bahrami, Assadi, and Markley'                                               .
+    '(PINE) - Bahrami, Markley, Assadi, and Eghbalnia'                                                      . 
     '(PIPP) - Garrett'                                                                                      .
-    '(PISTACHIO) - Eghbalnia$ Bahrami$ Wang$ Assadi and Markley'                                            .
-    '(Procheck) - Laskowski$ MacArthur$ Smith$ Jones$ Hutchinson$ Morris$ Moss and Thornton'                .
+    '(PISTACHIO) - Eghbalnia, Bahrami, Wang, Assadi and Markley'                                            .
+    '(Procheck) - Laskowski, MacArthur, Smith, Jones, Hutchinson, Morris, Moss and Thornton'                .
     '(ProcheckNMR) - Laskowski and MacArthur'                                                               .
     '(P-ROI) - Kohda'                                                                                       .
-    '(PRONTO) - Kjur$ Andersen and Poulsen'                                                                 .
+    '(PRONTO) - Kjur, Andersen and Poulsen'                                                                 .
     '(PROSA) - Guntert'                                                                                     .
     '(PSVS) - Bhattacharya and Montelione'                                                                  .
-    '(QUEEN) - Nabuurs$ Spronk$ Krieger$ Maassen$ Vriend and Vuister'                                       .
+    '(QUEEN) - Nabuurs, Spronk, Krieger, Maassen, Vriend and Vuister'                                       .
     '(RESCUE) - Pons and Delsuc'                                                                            .
-    '(SANE) - Duggan$ Legge$ Dyson & Wright'                                                                .
+    '(SANE) - Duggan, Legge, Dyson & Wright'                                                                .
     '(SPARKY) - Goddard'                                                                                    .
     '(SPARTA) - Shen and Bax'                                                                               .
     '(SPARTA+) - Shen and Bax'                                                                              .
@@ -8725,7 +8725,7 @@ save__Vendor.Name
     '(STAPP) - Garrett'                                                                                     .
     '(Surflex-Dock) - Tripos'                                                                               .
     '(SYBYL) - Tripos'                                                                                      .
-    '(TALOS) - Cornilescu$ Delaglio and Bax'                                                                .
+    '(TALOS) - Cornilescu, Delaglio and Bax'                                                                .
     '(TINKER) - Ponder'                                                                                     .
     '(TOPSPIN) - Bruker Biospin'                                                                            .
     '(TRIAD) - Tripos'                                                                                      .
@@ -8736,7 +8736,7 @@ save__Vendor.Name
     '(Wattos) - Doreleijers'                                                                                .
     '(XEASY) - Bartels et al.'                                                                              .
     '(X-PLOR) - Brunger'                                                                                    .
-    '(X-PLOR NIH) - Schwieters$ Kuszewski$ Tjandra and Clore'                                               .
+    '(X-PLOR NIH) - Schwieters, Kuszewski, Tjandra and Clore'                                               .
     '(xwinnmr) - Bruker Biospin'                                                                            .
 
   stop_
