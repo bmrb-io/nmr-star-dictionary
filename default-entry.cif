@@ -1,0 +1,134 @@
+data_NEED_ACC_NUM
+# 
+_entry.id   NEED_ACC_NUM 
+
+_Deposited_data_files.ID   'nil'
+
+#
+#
+  _Sample_condition_list.Sf_category     sample_conditions
+  _Sample_condition_list.Sf_framecode      ?
+  _Sample_condition_list.Entry_ID          ?
+  _Sample_condition_list.SaveFrameId       ?
+  _Sample_condition_list.ID                ?
+  _Sample_condition_list.Details           ?
+
+loop_
+_Sample_condition_variable.Type 
+_Sample_condition_variable.Val 
+_Sample_condition_variable._sd_Val 
+_Sample_condition_variable.Val_err 
+_Sample_condition_variable._sd_Val_err 
+_Sample_condition_variable.Val_units 
+_Sample_condition_variable.SaveFrameId 
+_Sample_condition_variable.Entry_ID 
+_Sample_condition_variable.Sample_condition_list_ID 
+
+temperature          ?  ? ? ?  K    ? ? ? 
+pH                   ?  ? ? ?  pH   ? ? ? 
+pressure             ambient  ? ? ?  atm  ? ? ?
+'ionic strength'     ?  ? ? ?  M    ? ? ?
+
+# 
+# 
+  _Conformer_stat_list.Sf_category     conformer_statistics
+  _Conformer_stat_list.Sf_framecode     ?
+  _Conformer_stat_list.Entry_ID         ?
+  _Conformer_stat_list.SaveFrameId      ?
+  _Conformer_stat_list.ID               ?
+
+  loop_
+     _Conformer_ensemble_stats.Val_name                        
+     _Conformer_ensemble_stats.Val_units                       
+     _Conformer_ensemble_stats.Val                             
+     _Conformer_ensemble_stats.Val_err                         
+     _Conformer_ensemble_stats.SaveFrameId                           
+     _Conformer_ensemble_stats.Entry_ID                        
+     _Conformer_ensemble_stats.Conformer_stat_list_ID          
+
+     "all distance rms deviation"                       ? ? ? ? ? ?
+     "intraresidue distance rms deviation"              ? ? ? ? ? ?
+     "sequential distance rms deviation"                ? ? ? ? ? ?
+     "short range distance rms deviation"               ? ? ? ? ? ?
+     "long range distance rms deviation"                ? ? ? ? ? ?
+     "dihedral angle rms deviation"                     ? ? ? ? ? ?
+     "covalent bond rms deviation"                      ? ? ? ? ? ?
+     "bond angle rms deviation"                         ? ? ? ? ? ?
+     "impropers rms deviation"                          ? ? ? ? ? ?
+     "peptide planarity rms deviation"                  ? ? ? ? ? ?
+     "total energy value"                               ? ? ? ? ? ?
+     "bond energy value"                                ? ? ? ? ? ?
+     "angle energy value"                               ? ? ? ? ? ?
+     "impropers energy value"                           ? ? ? ? ? ?
+     "van der Waals energy value"                       ? ? ? ? ? ?
+     "NOE energy value"                                 ? ? ? ? ? ?
+     "torsional angle energy value"                     ? ? ? ? ? ?
+     "ncs energy value"                                 ? ? ? ? ? ?
+     "Lennard-Jones energy value"                       ? ? ? ? ? ?
+
+#
+#
+  _Representative_conformer.Sf_category     representative_conformer
+  _Representative_conformer.Sf_framecode     ?
+  _Representative_conformer.Entry_ID         ?
+  _Representative_conformer.SaveFrameId      ?
+  _Representative_conformer.ID               ?
+
+  loop_
+     _Rep_conformer_stats.Val_name                        
+     _Rep_conformer_stats.Val_units                       
+     _Rep_conformer_stats.Val                             
+     _Rep_conformer_stats.Val_err                         
+     _Rep_conformer_stats.SaveFrameId                           
+     _Rep_conformer_stats.Entry_ID                        
+     _Rep_conformer_stats.Conformer_stat_list_ID          
+
+     "intraresidue distance rms deviation"              ? ? ? ? ? ?
+     "sequential distance rms deviation"                ? ? ? ? ? ?
+     "short range distance rms deviation"               ? ? ? ? ? ?
+     "long range distance rms deviation"                ? ? ? ? ? ?
+     "dihedral angle rms deviation"                     ? ? ? ? ? ?
+     "covalent bond rms deviation"                      ? ? ? ? ? ?
+     "bond angle rms deviation"                         ? ? ? ? ? ?
+     "impropers rms deviation"                          ? ? ? ? ? ?
+     "peptide planarity rms deviation"                  ? ? ? ? ? ?
+     "total energy value"                               ? ? ? ? ? ?
+     "bond energy value"                                ? ? ? ? ? ?
+     "angle energy value"                               ? ? ? ? ? ?
+     "impropers energy value"                           ? ? ? ? ? ?
+     "van der Waals energy value"                       ? ? ? ? ? ?
+     "NOE energy value"                                 ? ? ? ? ? ?
+     "torsional angle energy value"                     ? ? ? ? ? ?
+     "ncs energy value"                                 ? ? ? ? ? ?
+     "Lennard-Jones energy value"                       ? ? ? ? ? ?
+
+#
+#
+  _Constraint_stat_list.Sf_category     constraint_statistics
+  _Constraint_stat_list.Sf_framecode     ?
+  _Constraint_stat_list.Entry_ID         ?
+  _Constraint_stat_list.SaveFrameId      ?
+  _Constraint_stat_list.ID               ?
+
+  loop_
+     _Constraint_statistic.Val_name                         
+     _Constraint_statistic.Val_units                        
+     _Constraint_statistic.Val                              
+     _Constraint_statistic.Val_err                          
+     _Constraint_statistic.SaveFrameId                            
+     _Constraint_statistic.Entry_ID                         
+     _Constraint_statistic.Constraint_stat_list_ID          
+
+  'NOE constraints total count'                            ? ? ? ? ? ? 
+  'NOE intraresidue constraints total count'               ? ? ? ? ? ? 
+  'NOE sequential constraints total count'                 ? ? ? ? ? ? 
+  'NOE medium range constraints total count'               ? ? ? ? ? ?  
+  'NOE long range constraints total count'                 ? ? ? ? ? ?  
+  'NOE constraints unique total count'                     ? ? ? ? ? ?  
+  'NOE intraresidue unique constraints total count'        ? ? ? ? ? ?         
+  'NOE sequential unique constraints total count'          ? ? ? ? ? ?         
+  'NOE medium range unique constraints total count'        ? ? ? ? ? ?         
+  'NOE long range unique constraints total count'          ? ? ? ? ? ?
+
+#
+#
